@@ -8,7 +8,7 @@ RUN rm -rf /usr/share/nginx/html/*
 RUN adduser -D -H -u 101 -s /sbin/nologin nginx || true
 
 # Copy custom nginx configuration
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY docker/nginx.conf /etc/nginx/nginx.conf
 
 # Copy static assets
 COPY index.html /usr/share/nginx/html/

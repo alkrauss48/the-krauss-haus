@@ -1,6 +1,6 @@
 # The Krauss Haus
 
-A digital hub for guests visiting the Krauss Haus, currently featuring our curated bar menus. This site serves as a central resource for visitors to access our seasonal cocktail offerings and will expand to include additional guest resources in the future.
+This repo is live at https://thekrausshaus.com. A digital hub for guests visiting the Krauss Haus, currently featuring our curated bar menus. This site serves as a central resource for visitors to access our seasonal cocktail offerings and will expand to include additional guest resources in the future.
 
 ## Features
 
@@ -32,7 +32,7 @@ Build and run the container:
 
 ```bash
 # Build the Docker image
-docker build -t krauss-haus .
+docker build -t krauss-haus -f docker/Dockerfile .
 
 # Run the container
 docker run -p 8080:80 krauss-haus
