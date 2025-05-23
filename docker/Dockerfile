@@ -21,7 +21,8 @@ RUN chown -R nginx:nginx /usr/share/nginx/html && \
     chown -R nginx:nginx /var/log/nginx && \
     chown -R nginx:nginx /etc/nginx/conf.d && \
     touch /var/run/nginx.pid && \
-    chown -R nginx:nginx /var/run/nginx.pid
+    chown -R nginx:nginx /var/run/nginx.pid && \
+    chmod -R 755 /var/run/nginx.pid
 
 # Expose port 80
 EXPOSE 80
@@ -29,5 +30,6 @@ EXPOSE 80
 # Switch to non-root user
 USER nginx
 
-# Start nginx
+# Start nginx with the official entrypoint script
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"] 
