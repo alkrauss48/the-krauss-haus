@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Krauss Haus">
+    <meta name="description" content="The Krauss Haus - A digital hub for guests featuring seasonal cocktail menus">
     <title>The Krauss Haus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,14 +11,34 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" role="banner">
         <p class="welcome-text">Welcome to the</p>
         <h1 class="title">Krauss Haus</h1>
     </header>
-    <main class="menu-container">
-        <a href="https://drive.google.com/file/d/1V1gGvneFkKRhT-7z9bADC0jlcfReEwj8/view?usp=drive_link" class="menu-link" aria-label="View Summer Menu" target="_blank" rel="noopener noreferrer"><span>Summer Menu</span></a>
-        <a href="https://drive.google.com/file/d/1-87w5Ons8AHVvtro2dxcOVGz_YP9ilCC/view?usp=drive_link" class="menu-link" aria-label="View Tiki Menu" target="_blank" rel="noopener noreferrer"><span>Tiki Menu</span></a>
-        <a href="https://drive.google.com/file/d/1yX5_TK5hSTsWRrqugowlTgp31yTKEAmm/view?usp=drive_link" class="menu-link" aria-label="View Winter Menu" target="_blank" rel="noopener noreferrer"><span>Winter Menu</span></a>
+    <main class="menu-container" role="main">
+        <nav aria-label="Menu Navigation">
+            <a href="https://drive.google.com/file/d/1V1gGvneFkKRhT-7z9bADC0jlcfReEwj8/view?usp=drive_link"
+               class="menu-link"
+               aria-label="View Summer Menu"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span>Summer Menu</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1-87w5Ons8AHVvtro2dxcOVGz_YP9ilCC/view?usp=drive_link"
+               class="menu-link"
+               aria-label="View Tiki Menu"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span>Tiki Menu</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1yX5_TK5hSTsWRrqugowlTgp31yTKEAmm/view?usp=drive_link"
+               class="menu-link"
+               aria-label="View Winter Menu"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span>Winter Menu</span>
+            </a>
+        </nav>
     </main>
 </body>
 </html>
