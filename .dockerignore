@@ -1,0 +1,22 @@
+# Version control
+.git
+.gitignore
+
+# Docker files
+.dockerignore
+Dockerfile
+
+# Development files
+README.md
+Makefile
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db 
