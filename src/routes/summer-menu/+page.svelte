@@ -4,7 +4,7 @@
 
   const featuredDrink = {
     title: "Pimm's Cup",
-    description: "Pimm's No. 1, fresh lemon juice, simple syrup, cucumber, mint, ginger beer",
+    description: "Pimm’s #1, sparkling lemonade, cucumber, orange, strawberry, mint.",
     imagePath: "/images/cocktails/summer/pimms-cup.png"
   };
 
@@ -23,17 +23,17 @@
       cocktails: [
         {
           title: "Spritz",
-          description: "Prosecco, Aperol, soda water",
+          description: "Prosecco, aperol, soda water, orange wedge.",
           imagePath: "/images/cocktails/summer/spritz.png"
         },
         {
           title: "Margarita",
-          description: "Tequila, fresh lime juice, Cointreau",
+          description: "Blanco tequila, cointreau, lime, agave nectar.",
           imagePath: "/images/cocktails/summer/margarita.png"
         },
         {
           title: "Moonwell",
-          description: "Gin, fresh lime juice, simple syrup, muddled blackberries",
+          description: "Light rum, elderflower liqueur, grenadine, sage bitters, lemon, soda water.",
           imagePath: "/images/cocktails/summer/moonwell.png"
         }
       ]
@@ -44,17 +44,17 @@
       cocktails: [
         {
           title: "Daiquiri",
-          description: "White rum, fresh lime juice, simple syrup",
+          description: "Light rum, lime, simple syrup.",
           imagePath: "/images/cocktails/summer/daiquiri.png"
         },
         {
           title: "Negroni",
-          description: "Gin, Campari, sweet vermouth",
+          description: "Gin, campari, sweet vermouth, orange twist.",
           imagePath: "/images/cocktails/summer/negroni.png"
         },
         {
           title: "Mint Julep",
-          description: "Bourbon, simple syrup, mint",
+          description: "Bourbon, simple syrup, mint.",
           imagePath: "/images/cocktails/summer/mint-julep.png"
         }
       ]
@@ -65,17 +65,17 @@
       cocktails: [
         {
           title: "Caipirinha",
-          description: "Cachaça, fresh lime juice, simple syrup",
+          description: "Cachaça, lime, sugar.",
           imagePath: "/images/cocktails/summer/caipirinha.png"
         },
         {
           title: "Jack Rose",
-          description: "Applejack, fresh lime juice, grenadine",
+          description: "Calvados, applejack, grenadine, lemon.",
           imagePath: "/images/cocktails/summer/jack-rose.png"
         },
         {
           title: "Loggy Cab",
-          description: "Mezcal, fresh lime juice, simple syrup, muddled cucumber",
+          description: "Gin, lime, sugar, soda water.",
           imagePath: "/images/cocktails/summer/loggy-cab.png"
         }
       ]
@@ -86,17 +86,17 @@
       cocktails: [
         {
           title: "Mojito",
-          description: "White rum, fresh lime juice, simple syrup, mint, soda water",
+          description: "Light rum, lime, sugar, mint, angostura bitters.",
           imagePath: "/images/cocktails/summer/mojito.png"
         },
         {
           title: "French 75",
-          description: "Gin, fresh lemon juice, simple syrup, champagne",
+          description: "Prosecco, gin, lemon, simple syrup.",
           imagePath: "/images/cocktails/summer/french-75.png"
         },
         {
           title: "Paper Plane",
-          description: "Bourbon, Aperol, Amaro Nonino, fresh lemon juice",
+          description: "Bourbon, amaro nonino, aperol, lemon.",
           imagePath: "/images/cocktails/summer/paper-plane.png"
         }
       ]
