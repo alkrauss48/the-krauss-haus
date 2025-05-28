@@ -1,20 +1,20 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
-	export let title;
-	export let description;
-	export let imagePath;
-	export let bgColors = ['#fecaca', '#fef3c7', '#dbeafe']; // Default pastel colors
-	export let variations = ''; // Optional variations text
-	export let ingredients = []; // Array of ingredient strings
+	export let title: string;
+	export let description: string;
+	export let imagePath: string;
+	export let bgColors: string[] = ['#fecaca', '#fef3c7', '#dbeafe']; // Default pastel colors
+	export let variations: string = ''; // Optional variations text
+	export let ingredients: string[] = []; // Array of ingredient strings
 
 	let showModal = false;
 
-	function toggleModal() {
+	function toggleModal(): void {
 		showModal = !showModal;
 	}
 
-	function handleKeydown(event) {
+	function handleKeydown(event: KeyboardEvent): void {
 		if (event.key === 'Escape' && showModal) {
 			showModal = false;
 		}
@@ -80,7 +80,7 @@
 			</div>
 			{#if ingredients.length > 0}
 				<ul class="space-y-3">
-					{#each ingredients as ingredient}
+					{#each ingredients as ingredient (ingredient)}
 						<li class="flex items-start">
 							<span class="text-amber-600 mr-2">•</span>
 							<span class="text-gray-700">{ingredient}</span>

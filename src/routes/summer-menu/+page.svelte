@@ -1,16 +1,38 @@
-<script>
+<script lang="ts">
 	import CocktailCard from '$lib/components/CocktailCard.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 
+	interface Cocktail {
+		title: string;
+		description: string;
+		imagePath: string;
+		ingredients?: string[];
+		variations?: string;
+	}
+
+	interface Category {
+		title: string;
+		bgColors: string[];
+		cocktails: Cocktail[];
+	}
+
+	interface SectionColors {
+		featured: string[];
+		mommy: string[];
+		daddy: string[];
+		cyrus: string[];
+		lucas: string[];
+	}
+
 	let showScrollTop = false;
 
-	function handleScroll() {
+	function handleScroll(): void {
 		showScrollTop = window.scrollY > 300;
 	}
 
-	function scrollToTop() {
+	function scrollToTop(): void {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
 
@@ -19,7 +41,7 @@
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
 
-	const featuredDrink = {
+	const featuredDrink: Cocktail = {
 		title: "Pimm's Cup",
 		description: "Pimm's #1, sparkling lemonade, cucumber, orange, strawberry, mint.",
 		imagePath: '/images/cocktails/summer/pimms-cup.png',
@@ -30,7 +52,7 @@
 		]
 	};
 
-	const sectionColors = {
+	const sectionColors: SectionColors = {
 		featured: ['#fecaca', '#fef3c7', '#dbeafe'], // Original pastel colors
 		mommy: ['#fae8ff', '#fce7f3', '#fdf2f8'], // Soft purples and pinks
 		daddy: ['#dbeafe', '#e0e7ff', '#ede9fe'], // Cool blues and purples
@@ -38,7 +60,7 @@
 		lucas: ['#fff7ed', '#ffedd5', '#fef3c7'] // Warm oranges and yellows
 	};
 
-	const categories = [
+	const categories: Category[] = [
 		{
 			title: "Mommy's Drinks",
 			bgColors: sectionColors.mommy,
@@ -59,7 +81,8 @@
 						'.75oz Lime',
 						'.25oz Agave nectar',
 						'Garnish: Lime wedge'
-					]
+					],
+					variations: 'Spicy'
 				},
 				{
 					title: 'Moonwell',
@@ -74,7 +97,8 @@
 						'1 dash Sage bitters',
 						'4oz Soda water',
 						'Garnish: Lemon wheel'
-					]
+					],
+					variations: "Valden's, Qweenanne's, Pounders', Troker's"
 				}
 			]
 		},
@@ -97,7 +121,8 @@
 					title: 'Negroni',
 					description: 'Gin, campari, sweet vermouth, orange twist.',
 					imagePath: '/images/cocktails/summer/negroni.png',
-					ingredients: ['1oz Gin', '1oz Campari', '1oz Sweet vermouth', 'Garnish: Orange twist']
+					ingredients: ['1oz Gin', '1oz Campari', '1oz Sweet vermouth', 'Garnish: Orange twist'],
+					variations: 'Mezcal'
 				},
 				{
 					title: 'Mint Julep',
@@ -186,7 +211,7 @@
 		}
 	];
 
-	function goBack() {
+	function goBack(): void {
 		goto('/');
 	}
 </script>
@@ -253,7 +278,7 @@
 				</div>
 			</section>
 
-			{#each categories as category, i}
+			{#each categories as category, i (category.title)}
 				<section class="relative" in:fly={{ y: 20, duration: 400, delay: 600 + i * 100 }}>
 					<!-- Category Header with decorative line -->
 					<div class="flex items-center mb-12">
@@ -264,7 +289,7 @@
 
 					<!-- Cocktail Grid -->
 					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{#each category.cocktails as cocktail, j}
+						{#each category.cocktails as cocktail, j (cocktail.title)}
 							<div in:fly={{ y: 20, duration: 400, delay: 700 + i * 100 + j * 50 }}>
 								<CocktailCard
 									title={cocktail.title}
