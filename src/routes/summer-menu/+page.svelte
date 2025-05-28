@@ -46,13 +46,15 @@
 				{
 					title: 'Margarita',
 					description: 'Blanco tequila, cointreau, lime, agave nectar.',
-					imagePath: '/images/cocktails/summer/margarita.png'
+					imagePath: '/images/cocktails/summer/margarita.png',
+					variations: 'Spicy'
 				},
 				{
 					title: 'Moonwell',
 					description:
 						'Light rum, elderflower liqueur, grenadine, sage bitters, lemon, soda water.',
-					imagePath: '/images/cocktails/summer/moonwell.png'
+					imagePath: '/images/cocktails/summer/moonwell.png',
+					variations: "Valden's, Qweenanne's, Pounders', Troker's"
 				}
 			]
 		},
@@ -68,7 +70,8 @@
 				{
 					title: 'Negroni',
 					description: 'Gin, campari, sweet vermouth, orange twist.',
-					imagePath: '/images/cocktails/summer/negroni.png'
+					imagePath: '/images/cocktails/summer/negroni.png',
+					variations: 'Mezcal'
 				},
 				{
 					title: 'Mint Julep',
@@ -205,6 +208,7 @@
 									description={cocktail.description}
 									imagePath={cocktail.imagePath}
 									bgColors={category.bgColors}
+									variations={cocktail.variations}
 								/>
 							</div>
 						{/each}
