@@ -1,10 +1,26 @@
 <script>
   import CocktailCard from '$lib/components/CocktailCard.svelte';
   import { goto } from '$app/navigation';
+  import { onMount } from 'svelte';
+
+  let showScrollTop = false;
+
+  function handleScroll() {
+    showScrollTop = window.scrollY > 300;
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  onMount(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
 
   const featuredDrink = {
     title: "Pimm's Cup",
-    description: "Pimm’s #1, sparkling lemonade, cucumber, orange, strawberry, mint.",
+    description: "Pimm's #1, sparkling lemonade, cucumber, orange, strawberry, mint.",
     imagePath: "/images/cocktails/summer/pimms-cup.png"
   };
 
@@ -125,12 +141,12 @@
       Back to Home
     </button>
 
-    <header class="text-center mb-12">
+    <header class="text-center mb-16">
       <h1 class="text-4xl font-bold text-gray-800 mb-4">Summer Menu</h1>
       <p class="text-gray-600">Refreshing cocktails for the warm season</p>
     </header>
 
-    <div class="space-y-16">
+    <div class="space-y-24">
       <!-- Featured Welcome Drink -->
       <section class="bg-white rounded-lg shadow-lg p-8 border border-amber-100 relative overflow-hidden">
         <div class="max-w-3xl mx-auto">
@@ -150,9 +166,16 @@
       </section>
 
       {#each categories as category}
-        <section>
-          <h2 class="text-3xl font-bold text-gray-800 mb-8">{category.title}</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section class="relative">
+          <!-- Category Header with decorative line -->
+          <div class="flex items-center mb-12">
+            <div class="flex-1 h-px bg-gray-200"></div>
+            <h2 class="text-3xl font-bold text-gray-800 px-8">{category.title}</h2>
+            <div class="flex-1 h-px bg-gray-200"></div>
+          </div>
+
+          <!-- Cocktail Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {#each category.cocktails as cocktail}
               <CocktailCard
                 title={cocktail.title}
@@ -166,4 +189,14 @@
       {/each}
     </div>
   </div>
+
+  <!-- Scroll to top button -->
+  <button
+    on:click={scrollToTop}
+    class="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:scale-110 cursor-pointer z-50 {showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}"
+    aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
 </main> 
