@@ -77,7 +77,7 @@
 		class="flex flex-col gap-4 w-full max-w-[320px] sm:max-w-[400px]"
 		aria-label="Menu Navigation"
 	>
-		<MenuLink href="/pdfs/summer-menu.pdf" label="Summer Menu" />
+		<MenuLink href="/summer-menu" label="Summer Menu" />
 		<MenuLink href="/pdfs/tiki-menu.pdf" label="Tiki Menu" />
 		<MenuLink href="/pdfs/winter-menu.pdf" label="Winter Menu" />
 	</nav>
