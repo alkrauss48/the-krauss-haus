@@ -11,18 +11,60 @@ This repo is live at https://thekrausshaus.com. A digital hub for guests visitin
 
 ## Technology Stack
 
-- **Frontend**: HTML5, CSS3
+- **Frontend**: SvelteKit, TailwindCSS
 - **Font**: Montserrat (Google Fonts)
 - **Hosting**: Nginx on Alpine Linux (Docker)
-- **Design**: Custom CSS with modern gradients and animations
+- **Design**: TailwindCSS with custom animations
 
 ## Development
 
-The site is built with vanilla HTML and CSS, focusing on simplicity and performance. The design features:
+The site is built with SvelteKit and TailwindCSS, focusing on simplicity and performance. The design features:
+
 - Rainbow gradient animations
 - Responsive layout
 - Interactive hover effects
 - Mobile-first approach
+
+### Getting Started
+
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, start the development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+This will start the development server at `http://localhost:5173`. The page will automatically reload when you make changes to the code.
+
+## Building
+
+To create a production version of the app:
+
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
+
+You can preview the production build with:
+
+```bash
+npm run preview
+# or
+yarn preview
+# or
+pnpm preview
+```
 
 ## Deployment
 
@@ -39,18 +81,6 @@ docker run -p 8080:80 krauss-haus
 ```
 
 The site will be available at `http://localhost:8080`
-
-### Local Development
-
-There are several ways to run the site locally:
-
-1. **Direct File Opening**: Simply open `index.html` in a web browser. No build process is required.
-
-2. **Python Web Server**: Use the included Makefile command to start a local development server:
-   ```bash
-   make serve
-   ```
-   This will start Python3's built-in HTTP server on port 8000. The site will be available at `http://localhost:8000`
 
 ## License
 
