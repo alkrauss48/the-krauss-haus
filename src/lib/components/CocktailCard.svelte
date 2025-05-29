@@ -85,7 +85,7 @@
 	}}
 	aria-label="View {title} details"
 >
-	<div class="h-64 relative">
+	<div class="h-64 relative w-full">
 		<!-- Pastel diagonal gradient background -->
 		<div
 			class="absolute inset-0 opacity-30"
@@ -106,7 +106,7 @@
 
 {#if showModal}
 	<div
-		class="fixed inset-0 bg-white/20 backdrop-blur-sm flex items-center justify-center z-40"
+		class="fixed inset-0 bg-gray-500/60 backdrop-blur-sm flex items-center justify-center z-40"
 		on:click={toggleModal}
 		on:keydown={(e) => e.key === 'Escape' && toggleModal()}
 		role="presentation"
