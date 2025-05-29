@@ -258,7 +258,7 @@
 				class="bg-white rounded-lg shadow-lg p-8 border border-amber-100 relative overflow-hidden"
 				in:fly={{ y: 20, duration: 400, delay: 500 }}
 			>
-				<div class="max-w-3xl mx-auto">
+				<div class="max-w-xl mx-auto">
 					<div class="text-center mb-8">
 						<h2 class="text-3xl font-medium text-gray-800 mb-2 tracking-wide">Welcome Drink</h2>
 						<p class="text-lg text-gray-600 font-light leading-relaxed">
