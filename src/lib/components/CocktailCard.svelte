@@ -9,15 +9,62 @@
 	export let ingredients: string[] = []; // Array of ingredient strings
 
 	let showModal = false;
+	let modalContent: HTMLElement;
+	let lastFocusedElement: HTMLElement | null = null;
+
+	function getFocusableElements(element: HTMLElement): HTMLElement[] {
+		return Array.from(
+			element.querySelectorAll(
+				'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+			)
+		) as HTMLElement[];
+	}
+
+	function handleTabKey(e: KeyboardEvent): void {
+		if (!showModal) return;
+
+		const focusableElements = getFocusableElements(modalContent);
+		const firstFocusableElement = focusableElements[0];
+		const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+		if (e.key === 'Tab') {
+			if (e.shiftKey) {
+				// If shift + tab and on first element, focus last element
+				if (document.activeElement === firstFocusableElement) {
+					e.preventDefault();
+					lastFocusableElement.focus();
+				}
+			} else {
+				// If tab and on last element, focus first element
+				if (document.activeElement === lastFocusableElement) {
+					e.preventDefault();
+					firstFocusableElement.focus();
+				}
+			}
+		}
+	}
 
 	function toggleModal(): void {
 		showModal = !showModal;
+		if (showModal) {
+			lastFocusedElement = document.activeElement as HTMLElement;
+			// Focus the first focusable element after a brief delay
+			setTimeout(() => {
+				const focusableElements = getFocusableElements(modalContent);
+				if (focusableElements.length > 0) {
+					focusableElements[0].focus();
+				}
+			}, 0);
+		} else {
+			lastFocusedElement?.focus();
+		}
 	}
 
 	function handleKeydown(event: KeyboardEvent): void {
 		if (event.key === 'Escape' && showModal) {
 			showModal = false;
 		}
+		handleTabKey(event);
 	}
 
 	// Add event listener when component mounts
@@ -27,9 +74,16 @@
 	});
 </script>
 
-<div
-	class="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col cursor-pointer"
+<button
+	class="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col cursor-pointer w-full text-left border-0 p-0 hover:shadow-lg transition-shadow duration-300"
 	on:click={toggleModal}
+	on:keydown={(e) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			toggleModal();
+		}
+	}}
+	aria-label="View {title} details"
 >
 	<div class="h-64 relative">
 		<!-- Pastel diagonal gradient background -->
@@ -48,26 +102,37 @@
 			</p>
 		{/if}
 	</div>
-</div>
+</button>
 
 {#if showModal}
 	<div
 		class="fixed inset-0 bg-white/20 backdrop-blur-sm flex items-center justify-center z-40"
 		on:click={toggleModal}
+		on:keydown={(e) => e.key === 'Escape' && toggleModal()}
+		role="presentation"
+		aria-label="Close modal"
 	>
 		<div
+			bind:this={modalContent}
 			class="bg-white rounded-lg p-8 max-w-md w-full mx-4 shadow-xl z-50"
 			on:click|stopPropagation
+			role="presentation"
+			aria-label="Cocktail details"
 		>
 			<div class="flex justify-between items-start mb-6">
 				<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
-				<button class="text-gray-400 hover:text-gray-600" on:click={toggleModal}>
+				<button
+					class="text-gray-400 hover:text-gray-600"
+					on:click={toggleModal}
+					aria-label="Close modal"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-6 w-6"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"
+						aria-hidden="true"
 					>
 						<path
 							stroke-linecap="round"
