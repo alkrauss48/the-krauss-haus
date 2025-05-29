@@ -1,30 +1,11 @@
 <script lang="ts">
 	import CocktailCard from '$lib/components/CocktailCard.svelte';
-	import { goto } from '$app/navigation';
-	import { onMount } from 'svelte';
+	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
+	import BackButton from '$lib/components/BackButton.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { featuredDrink, categories } from '$lib/data/summer-menu';
 	import type { Cocktail, Category } from '$lib/types/cocktails';
 	import { sectionColors } from '$lib/types/colors';
-
-	let showScrollTop = false;
-
-	function handleScroll(): void {
-		showScrollTop = window.scrollY > 300;
-	}
-
-	function scrollToTop(): void {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}
-
-	onMount(() => {
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	});
-
-	function goBack(): void {
-		goto('/');
-	}
 </script>
 
 <svelte:head>
@@ -38,25 +19,7 @@
 	out:fade={{ duration: 200 }}
 >
 	<div class="max-w-7xl mx-auto pb-8">
-		<button
-			on:click={goBack}
-			class="mb-8 flex items-center text-gray-600 hover:text-amber-600 transition-colors duration-200 group"
-			in:fly={{ x: -20, duration: 400, delay: 300 }}
-		>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				class="h-5 w-5 mr-2 transform group-hover:-translate-x-1 transition-transform duration-200"
-				viewBox="0 0 20 20"
-				fill="currentColor"
-			>
-				<path
-					fill-rule="evenodd"
-					d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-					clip-rule="evenodd"
-				/>
-			</svg>
-			Back to Home
-		</button>
+		<BackButton />
 
 		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
 			<h1 class="text-4xl font-bold text-gray-800 mb-4">Summer Menu</h1>
@@ -118,27 +81,5 @@
 		</div>
 	</div>
 
-	<!-- Scroll to top button -->
-	<button
-		on:click={scrollToTop}
-		class="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:scale-110 cursor-pointer z-30 {showScrollTop
-			? 'opacity-100 translate-y-0'
-			: 'opacity-0 translate-y-4 pointer-events-none'}"
-		aria-label="Scroll to top"
-	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="h-6 w-6 text-gray-600"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M5 10l7-7m0 0l7 7m-7-7v18"
-			/>
-		</svg>
-	</button>
+	<ScrollToTop />
 </main>
