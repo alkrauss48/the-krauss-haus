@@ -1,10 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import type { SectionColor } from '$lib/types/colors';
 
 	export let title: string;
 	export let description: string;
 	export let imagePath: string;
-	export let bgColors: string[] = ['#fecaca', '#fef3c7', '#dbeafe']; // Default pastel colors
+	export let bgColors: SectionColor = {
+		primary: '#fecaca',
+		secondary: '#fef3c7',
+		tertiary: '#dbeafe'
+	}; // Default pastel colors
 	export let variations: string = ''; // Optional variations text
 	export let ingredients: string[] = []; // Array of ingredient strings
 
@@ -89,7 +94,7 @@
 		<!-- Pastel diagonal gradient background -->
 		<div
 			class="absolute inset-0 opacity-30"
-			style="background: linear-gradient(135deg, {bgColors[0]} 0%, {bgColors[1]} 50%, {bgColors[2]} 100%);"
+			style="background: linear-gradient(135deg, {bgColors.primary} 0%, {bgColors.secondary} 50%, {bgColors.tertiary} 100%);"
 		></div>
 		<img src={imagePath} alt={title} class="w-full h-full object-contain p-4 relative z-10" />
 	</div>

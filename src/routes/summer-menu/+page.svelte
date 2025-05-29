@@ -3,28 +3,8 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
-
-	interface Cocktail {
-		title: string;
-		description: string;
-		imagePath: string;
-		ingredients?: string[];
-		variations?: string;
-	}
-
-	interface Category {
-		title: string;
-		bgColors: string[];
-		cocktails: Cocktail[];
-	}
-
-	interface SectionColors {
-		featured: string[];
-		mommy: string[];
-		daddy: string[];
-		cyrus: string[];
-		lucas: string[];
-	}
+	import type { Cocktail, Category } from '$lib/types/cocktails';
+	import { sectionColors } from '$lib/types/colors';
 
 	let showScrollTop = false;
 
@@ -50,14 +30,6 @@
 			'4oz sparkling lemonade',
 			'Garnish: orange, mint sprig, strawberry, cucumber'
 		]
-	};
-
-	const sectionColors: SectionColors = {
-		featured: ['#fecaca', '#fef3c7', '#dbeafe'], // Original pastel colors
-		mommy: ['#fae8ff', '#fce7f3', '#fdf2f8'], // Soft purples and pinks
-		daddy: ['#dbeafe', '#e0e7ff', '#ede9fe'], // Cool blues and purples
-		cyrus: ['#dcfce7', '#f0fdf4', '#ecfdf5'], // Fresh greens
-		lucas: ['#fff7ed', '#ffedd5', '#fef3c7'] // Warm oranges and yellows
 	};
 
 	const categories: Category[] = [
