@@ -3,6 +3,7 @@
 	import type { SectionColor } from '$lib/types/colors';
 
 	export let title: string;
+	export let subtitle: string = ''; // Optional subtitle
 	export let description: string;
 	export let imagePath: string;
 	export let bgColors: SectionColor = {
@@ -100,6 +101,9 @@
 	</div>
 	<div class="p-6 flex-1 flex flex-col">
 		<h3 class="text-xl font-bold text-gray-800 mb-2">{title}</h3>
+		{#if subtitle}
+			<p class="text-gray-600 italic mb-2 text-sm">{subtitle}</p>
+		{/if}
 		<p class="text-gray-600 flex-1">{description}</p>
 		{#if variations}
 			<p class="text-xs text-gray-500 mt-2 pt-2 border-t border-gray-50 font-light tracking-wide">

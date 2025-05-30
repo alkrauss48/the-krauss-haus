@@ -12,6 +12,7 @@ export const categories: Category[] = [
 		cocktails: [
 			{
 				title: 'Painkiller',
+				subtitle: 'A creamy, coconut paradise in a glass',
 				description: 'Demerara rum, pineapple, cream of coconut, orange, nutmeg.',
 				imagePath: '/images/cocktails/tiki/painkiller.png',
 				ingredients: [
@@ -24,6 +25,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Jungle Bird',
+				subtitle: 'A perfect balance of bitter and sweet',
 				description: 'Dark rum, campari, pineapple, lime, demarara syrup.',
 				imagePath: '/images/cocktails/tiki/jungle-bird.png',
 				ingredients: [
@@ -37,6 +39,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Ancient Mariner',
+				subtitle: 'A complex blend of spice and citrus',
 				description: 'Blended rum, demerara rum, allspice dram, lime, grapefruit, simple syrup.',
 				imagePath: '/images/cocktails/tiki/ancient-mariner.png',
 				ingredients: [
@@ -51,6 +54,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Hurricane',
+				subtitle: 'A powerful blend of rums with a tropical twist',
 				description: 'Jamaican rum, blended rum, fassionola, lemon.',
 				imagePath: '/images/cocktails/tiki/hurricane.png',
 				ingredients: [
@@ -75,6 +79,7 @@ export const categories: Category[] = [
 		cocktails: [
 			{
 				title: 'Mai Tai',
+				subtitle: 'The king of tiki drinks, complex and balanced',
 				description:
 					'Jamaican rum, blended rum, cachaca, orange curaçao, orgeat, lime, demerara syrup.',
 				imagePath: '/images/cocktails/tiki/mai-tai.png',
@@ -91,6 +96,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Three Dots and a Dash',
+				subtitle: 'A celebration of rum and spice',
 				description:
 					'Aged rhum agricole, demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
 				imagePath: '/images/cocktails/tiki/three-dots-and-a-dash.png',
@@ -108,6 +114,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Jet Pilot',
+				subtitle: 'A bold, spicy journey through the tropics',
 				description:
 					'Jamaican rum, overproof demerara rum, falernum, cinnamon syrup, lime, grapefruit, herbstura.',
 				imagePath: '/images/cocktails/tiki/jet-pilot.png',
@@ -126,6 +133,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: "Cobra's Fang",
+				subtitle: 'A dangerously smooth blend of rum and spice',
 				description: 'Overproof demerara rum, falernum, fassionola, lime, orange, herbstura.',
 				imagePath: '/images/cocktails/tiki/cobras-fang.png',
 				ingredients: [
@@ -150,6 +158,7 @@ export const categories: Category[] = [
 		cocktails: [
 			{
 				title: 'Singapore Sling',
+				subtitle: 'A sophisticated gin-based tiki classic',
 				description:
 					'Gin, cherry heering, benedictine, cointreau, grenadine, pineapple, lime, angostura bitters.',
 				imagePath: '/images/cocktails/tiki/singapore-sling.png',
@@ -167,6 +176,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Saturn',
+				subtitle: 'A gin-based tiki classic, bright and tropical',
 				description: 'Gin, passion fruit, lemon, orgeat, falernum.',
 				imagePath: '/images/cocktails/tiki/saturn.png',
 				ingredients: [
@@ -180,6 +190,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Port Light',
+				subtitle: 'A bourbon-based tropical delight',
 				description: 'Bourbon, honey, lemon, passion fruit.',
 				imagePath: '/images/cocktails/tiki/port-light.png',
 				ingredients: [
@@ -193,6 +204,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Iron Ranger',
+				subtitle: 'A bourbon tiki with a spicy kick',
 				description: 'Bourbon, falernum, demerara syrup, lemon, pineapple.',
 				imagePath: '/images/cocktails/tiki/iron-ranger.png',
 				ingredients: [

@@ -2,6 +2,7 @@ import type { SectionColor } from './colors';
 
 export interface Cocktail {
 	title: string;
+	subtitle?: string;
 	description: string;
 	imagePath: string;
 	ingredients?: string[];
