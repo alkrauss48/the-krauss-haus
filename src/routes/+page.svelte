@@ -72,6 +72,6 @@
 	>
 		<MenuLink href="/summer-menu" label="Summer Menu" />
 		<MenuLink href="/pdfs/tiki-menu.pdf" label="Tiki Menu" />
-		<MenuLink href="/pdfs/winter-menu.pdf" label="Winter Menu" />
+		<MenuLink href="/winter-menu" label="Winter Menu" />
 	</nav>
 </main>
