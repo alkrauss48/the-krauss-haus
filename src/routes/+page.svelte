@@ -74,4 +74,34 @@
 		<MenuLink href="/tiki-menu" label="Tiki Menu" />
 		<MenuLink href="/winter-menu" label="Winter Menu" />
 	</nav>
+
+	<div class="mt-16 text-center">
+		<h2 class="text-sm font-medium text-gray-500 mb-3">Historical Menus</h2>
+		<div class="flex flex-col gap-2">
+			<a
+				href="/pdfs/summer-menu.pdf"
+				class="text-sm text-gray-400 hover:text-gray-600 transition-colors"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Summer Menu (PDF)
+			</a>
+			<a
+				href="/pdfs/tiki-menu.pdf"
+				class="text-sm text-gray-400 hover:text-gray-600 transition-colors"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Tiki Menu (PDF)
+			</a>
+			<a
+				href="/pdfs/winter-menu.pdf"
+				class="text-sm text-gray-400 hover:text-gray-600 transition-colors"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Winter Menu (PDF)
+			</a>
+		</div>
+	</div>
 </main>
