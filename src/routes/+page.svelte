@@ -73,6 +73,7 @@
 		<MenuLink href="/summer-menu" label="Summer Menu" />
 		<MenuLink href="/tiki-menu" label="Tiki Menu" />
 		<MenuLink href="/winter-menu" label="Winter Menu" />
+		<MenuLink href="/syrups" label="Homemade Syrups" variant="secondary" />
 	</nav>
 
 	<div class="mt-16 text-center">
