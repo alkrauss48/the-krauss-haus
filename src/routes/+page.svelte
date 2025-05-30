@@ -71,7 +71,7 @@
 		aria-label="Menu Navigation"
 	>
 		<MenuLink href="/summer-menu" label="Summer Menu" />
-		<MenuLink href="/pdfs/tiki-menu.pdf" label="Tiki Menu" />
+		<MenuLink href="/tiki-menu" label="Tiki Menu" />
 		<MenuLink href="/winter-menu" label="Winter Menu" />
 	</nav>
 </main>
