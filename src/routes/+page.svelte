@@ -1,11 +1,5 @@
-<script>
-	import { onMount } from 'svelte';
+<script lang="ts">
 	import MenuLink from '$lib/components/MenuLink.svelte';
-
-	// Meta tags will be handled by SvelteKit's head management
-	onMount(() => {
-		// Any client-side initialization if needed
-	});
 </script>
 
 <svelte:head>
