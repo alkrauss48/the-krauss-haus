@@ -105,4 +105,33 @@
 			</a>
 		</div>
 	</div>
+
+	<footer class="mt-auto pt-8 text-center text-sm text-gray-400">
+		<p>
+			Made with love by the Krauss family (<a
+				href="https://thecodeboss.dev"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="hover:text-gray-600 transition-colors">Aaron</a
+			>,
+			<a
+				href="https://laylakrauss.dev"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="hover:text-gray-600 transition-colors">Layla</a
+			>,
+			<a
+				href="https://cyruskrauss.com"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="hover:text-gray-600 transition-colors">Cyrus</a
+			>, and
+			<a
+				href="https://lucaskrauss.dev"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="hover:text-gray-600 transition-colors">Lucas</a
+			>)
+		</p>
+	</footer>
 </main>
