@@ -1,6 +1,6 @@
 {
-	"name": "MyWebSite",
-	"short_name": "MySite",
+	"name": "The Krauss Haus",
+	"short_name": "Krauss Haus",
 	"icons": [
 		{
 			"src": "/images/favicon/web-app-manifest-192x192.png",

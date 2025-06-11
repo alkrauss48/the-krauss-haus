@@ -36,6 +36,13 @@
 	<meta name="twitter:creator" content="@thecodeboss" />
 
 	<!-- Favicon -->
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="192x192"
+		href="/images/favicon/web-app-manifest-192x192.png"
+	/>
 	<link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
 	<link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
 	<link rel="shortcut icon" href="/images/favicon/favicon.ico" />
