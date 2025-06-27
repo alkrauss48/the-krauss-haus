@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { SectionColor } from '$lib/types/colors';
+	import type { CocktailVariant } from '$lib/types/cocktails';
 
 	export let title: string;
 	export let subtitle: string = ''; // Optional subtitle
@@ -11,7 +12,7 @@
 		secondary: '#fef3c7',
 		tertiary: '#dbeafe'
 	}; // Default pastel colors
-	export let variations: string = ''; // Optional variations text
+	export let variations: CocktailVariant[] = []; // Optional variations array
 	export let ingredients: string[] = []; // Array of ingredient strings
 
 	let showModal = false;
@@ -105,9 +106,9 @@
 			<p class="text-gray-600 italic mb-2 text-sm">{subtitle}</p>
 		{/if}
 		<p class="text-gray-600 flex-1">{description}</p>
-		{#if variations}
+		{#if variations.length > 0}
 			<p class="text-xs text-gray-500 mt-2 pt-2 border-t border-gray-50 font-light tracking-wide">
-				Variations: {variations}
+				Variations: {variations.map((v) => v.name).join(', ')}
 			</p>
 		{/if}
 	</div>

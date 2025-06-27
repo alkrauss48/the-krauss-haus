@@ -101,7 +101,23 @@ export const categories: Category[] = [
 					'2 dashes Black walnut bitters',
 					'Garnish: Orange twist'
 				],
-				variations: 'Smoked, Muddled, Rum'
+				variations: [
+					{
+						name: 'Smoked',
+						description: '',
+						images: []
+					},
+					{
+						name: 'Muddled',
+						description: '',
+						images: []
+					},
+					{
+						name: 'Rum',
+						description: '',
+						images: []
+					}
+				]
 			}
 		]
 	},
@@ -163,7 +179,13 @@ export const categories: Category[] = [
 					'2 dashes Black walnut bitters',
 					'Garnish: Maraschino cherry'
 				],
-				variations: 'Black'
+				variations: [
+					{
+						name: 'Black',
+						description: '',
+						images: []
+					}
+				]
 			},
 			{
 				title: 'Amaretto Sour',
@@ -189,7 +211,18 @@ export const categories: Category[] = [
 					'.25oz Rich demerara syrup',
 					'Garnish: 3 coffee beans'
 				],
-				variations: 'Hazelnut, Peppermint'
+				variations: [
+					{
+						name: 'Hazelnut',
+						description: '',
+						images: []
+					},
+					{
+						name: 'Peppermint',
+						description: '',
+						images: []
+					}
+				]
 			}
 		]
 	}

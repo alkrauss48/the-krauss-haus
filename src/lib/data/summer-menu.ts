@@ -34,7 +34,13 @@ export const categories: Category[] = [
 					'.25oz Agave nectar',
 					'Garnish: Lime wedge'
 				],
-				variations: 'Spicy'
+				variations: [
+					{
+						name: 'Spicy',
+						description: '',
+						images: []
+					}
+				]
 			},
 			{
 				title: 'Moonwell',
@@ -50,7 +56,28 @@ export const categories: Category[] = [
 					'4oz Soda water',
 					'Garnish: Lemon wheel'
 				],
-				variations: "Valden's, Qweenanne's, Pounders', Troker's"
+				variations: [
+					{
+						name: "Valden's",
+						description: '',
+						images: []
+					},
+					{
+						name: "Qweenanne's",
+						description: '',
+						images: []
+					},
+					{
+						name: "Pounders'",
+						description: '',
+						images: []
+					},
+					{
+						name: "Troker's",
+						description: '',
+						images: []
+					}
+				]
 			}
 		]
 	},
@@ -69,7 +96,13 @@ export const categories: Category[] = [
 				description: 'Gin, campari, sweet vermouth, orange twist.',
 				imagePath: '/images/cocktails/summer/negroni.png',
 				ingredients: ['1oz Gin', '1oz Campari', '1oz Sweet vermouth', 'Garnish: Orange twist'],
-				variations: 'Mezcal'
+				variations: [
+					{
+						name: 'Mezcal',
+						description: '',
+						images: []
+					}
+				]
 			},
 			{
 				title: 'Mint Julep',

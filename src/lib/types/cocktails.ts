@@ -1,12 +1,18 @@
 import type { SectionColor } from './colors';
 
+export interface CocktailVariant {
+	name: string;
+	description: string;
+	images: string[];
+}
+
 export interface Cocktail {
 	title: string;
 	subtitle?: string;
 	description: string;
 	imagePath: string;
 	ingredients?: string[];
-	variations?: string;
+	variations?: CocktailVariant[];
 }
 
 export interface Category {
