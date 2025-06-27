@@ -80,6 +80,12 @@
 		<MenuLink href="/summer-menu" label="Summer Menu" />
 		<MenuLink href="/tiki-menu" label="Tiki Menu" />
 		<MenuLink href="/winter-menu" label="Winter Menu" />
+	</nav>
+
+	<nav
+		class="flex flex-col gap-4 w-full max-w-[320px] sm:max-w-[400px]"
+		aria-label="Secondary Menu Navigation"
+	>
 		<MenuLink href="/syrups" label="Homemade Syrups" variant="secondary" />
 	</nav>
 

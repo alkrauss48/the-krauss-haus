@@ -26,7 +26,7 @@
 
 		<div class="space-y-24">
 			{#each categories as category, i (category.title)}
-				<section class="relative" in:fly={{ y: 20, duration: 400, delay: 600 + i * 100 }}>
+				<section class="relative mb-24" in:fly={{ y: 20, duration: 400, delay: 600 + i * 100 }}>
 					<!-- Category Header with decorative line -->
 					<div class="flex items-center mb-12">
 						<div class="flex-1 h-px bg-gray-200"></div>
