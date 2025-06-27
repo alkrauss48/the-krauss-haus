@@ -29,8 +29,3 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
-/* Ensure proper modal background in older browsers */
-.modal-backdrop {
-	background-color: rgba(107, 114, 128, 0.6);
-}

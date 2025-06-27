@@ -11,7 +11,7 @@
 </script>
 
 <section
-	class="bg-white rounded-lg shadow-lg p-8 mb-24 border border-amber-100 relative overflow-hidden"
+	class="bg-white rounded-lg shadow-lg p-8 border border-amber-100 relative overflow-hidden"
 	in:fly={{ y: 20, duration: 400, delay: 500 }}
 >
 	<div class="max-w-xl mx-auto">
