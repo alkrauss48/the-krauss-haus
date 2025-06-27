@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Syrup } from '$lib/data/syrups';
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	export let syrups: Syrup[];
 </script>

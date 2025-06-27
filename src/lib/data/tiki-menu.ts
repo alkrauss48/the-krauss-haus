@@ -1,5 +1,4 @@
-import type { Cocktail, Category } from '$lib/types/cocktails';
-import { sectionColors } from '$lib/types/colors';
+import type { Category } from '$lib/types/cocktails';
 
 export const categories: Category[] = [
 	{
