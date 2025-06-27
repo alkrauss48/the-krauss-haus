@@ -10,7 +10,8 @@
 	export let bgColors: SectionColor = {
 		primary: '#fecaca',
 		secondary: '#fef3c7',
-		tertiary: '#dbeafe'
+		tertiary: '#dbeafe',
+		variationText: '#7c2d12'
 	}; // Default pastel colors
 	export let variations: CocktailVariant[] = []; // Optional variations array
 	export let ingredients: string[] = []; // Array of ingredient strings
@@ -74,6 +75,13 @@
 		handleTabKey(event);
 	}
 
+	function handleVariantClick(event: Event, variant: CocktailVariant): void {
+		event.stopPropagation();
+		// For now, just log the variant. You can extend this to show variant details
+		console.log(`Selected variant: ${variant.name}`, variant);
+		// TODO: Add variant-specific functionality (e.g., show variant details, change recipe, etc.)
+	}
+
 	// Add event listener when component mounts
 	onMount(() => {
 		window.addEventListener('keydown', handleKeydown);
@@ -107,9 +115,27 @@
 		{/if}
 		<p class="text-gray-600 flex-1">{description}</p>
 		{#if variations.length > 0}
-			<p class="text-xs text-gray-500 mt-2 pt-2 border-t border-gray-50 font-light tracking-wide">
-				Variations: {variations.map((v) => v.name).join(', ')}
-			</p>
+			<div class="mt-3 pt-3 border-t border-gray-50">
+				<p class="text-xs text-gray-500 mb-2 font-light tracking-wide">Variations:</p>
+				<div class="flex flex-wrap gap-2">
+					{#each variations as variant (variant.name)}
+						<button
+							class="px-3 py-1 text-xs font-medium rounded-full hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-1 transition-all duration-200 cursor-pointer"
+							style="background-color: {bgColors.primary}; color: {bgColors.variationText};"
+							on:click={(e) => handleVariantClick(e, variant)}
+							on:keydown={(e) => {
+								if (e.key === 'Enter' || e.key === ' ') {
+									e.preventDefault();
+									handleVariantClick(e, variant);
+								}
+							}}
+							aria-label="Select {variant.name} variation"
+						>
+							{variant.name}
+						</button>
+					{/each}
+				</div>
+			</div>
 		{/if}
 	</div>
 </button>
