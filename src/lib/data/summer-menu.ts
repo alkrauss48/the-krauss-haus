@@ -38,6 +38,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Moonwell',
+				subtitle: 'A Krauss Family original',
 				description: 'Light rum, elderflower liqueur, grenadine, sage bitters, lemon, soda water.',
 				imagePath: '/images/cocktails/summer/moonwell.png',
 				ingredients: [
@@ -107,6 +108,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Loggy Cab',
+				subtitle: 'A Krauss Family original',
 				description: 'Gin, lime, simple syrup, soda water.',
 				imagePath: '/images/cocktails/summer/loggy-cab.png',
 				ingredients: [

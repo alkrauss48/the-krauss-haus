@@ -3,6 +3,7 @@ import { sectionColors } from '$lib/types/colors';
 
 export const featuredDrink: Cocktail = {
 	title: 'Glühwein',
+	subtitle: 'Our own family recipe',
 	description: 'Red wine, brandy, orange, lemon, cinnamon, clove, brown sugar.',
 	imagePath: '/images/cocktails/winter/gluhwein.png',
 	ingredients: [
@@ -36,6 +37,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Merry Mule',
+				subtitle: "Served as the bride's drink at our wedding",
 				description: 'Vodka, cinnamon syrup, lime, ginger beer.',
 				imagePath: '/images/cocktails/winter/merry-mule.png',
 				ingredients: [
@@ -48,6 +50,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Caramel Apple Spice',
+				subtitle: 'A Krauss Family original',
 				description:
 					'Applejack, goldschläger, caramel vodka, apple strudel liqueur, calvados, apple cider',
 				imagePath: '/images/cocktails/winter/caramel-apple-spice.png',
@@ -120,6 +123,7 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Tom and Jerry',
+				subtitle: 'Family recipe from Great Grandpa Krauss',
 				description: 'Bourbon, dark rum, egg, sugar, nutmeg.',
 				imagePath: '/images/cocktails/winter/tom-and-jerry.png',
 				ingredients: [
@@ -176,15 +180,16 @@ export const categories: Category[] = [
 			},
 			{
 				title: 'Espresso Martini',
-				description: 'Cognac, coffee liqueur, espresso.',
+				description: 'Cognac, coffee liqueur, espresso, demerara syrup.',
 				imagePath: '/images/cocktails/winter/espresso-martini.png',
 				ingredients: [
-					'1oz Cognac',
-					'2oz Mr. Black Coffee Liqueur',
-					'1oz Cold brew concentrate',
+					'1.5oz Cognac',
+					'1oz Mr. Black Coffee Liqueur',
+					'1oz Espresso',
+					'.25oz Rich demerara syrup',
 					'Garnish: 3 coffee beans'
 				],
-				variations: 'Peppermint, Hazelnut'
+				variations: 'Hazelnut, Peppermint'
 			}
 		]
 	}

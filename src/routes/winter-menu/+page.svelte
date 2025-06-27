@@ -43,6 +43,7 @@
 							<div in:fly={{ y: 20, duration: 400, delay: 700 + i * 100 + j * 50 }}>
 								<CocktailCard
 									title={cocktail.title}
+									subtitle={cocktail.subtitle}
 									description={cocktail.description}
 									imagePath={cocktail.imagePath}
 									bgColors={category.bgColors}

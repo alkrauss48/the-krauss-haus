@@ -58,10 +58,9 @@ export const categories: Category[] = [
 				description: 'Jamaican rum, blended rum, fassionola, lemon.',
 				imagePath: '/images/cocktails/tiki/hurricane.png',
 				ingredients: [
-					'.5oz Coruba (Jamaican rum)',
+					'1oz Coruba (Jamaican rum)',
 					'.5oz Appleton Estate Signature (Jamaican rum)',
 					'.5oz Probitas (Blended light rum)',
-					'.5oz Planteray OFTD (Overproof blended rum)',
 					'1oz Fassionola',
 					'.75oz Lemon',
 					'Garnish: Lime wheel'
@@ -98,10 +97,11 @@ export const categories: Category[] = [
 				title: 'Three Dots and a Dash',
 				subtitle: 'A celebration of rum and spice',
 				description:
-					'Aged rhum agricole, demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
+					'Aged rhum agricole, blended rum,demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
 				imagePath: '/images/cocktails/tiki/three-dots-and-a-dash.png',
 				ingredients: [
-					'1.5oz Clement Barrel Select (aged Rhum Agricole)',
+					'1oz Clement Barrel Select (aged Rhum Agricole)',
+					'.5oz Planteray OFTD (Overproof blended rum)',
 					'.5oz Hamilton 86 (Demerara rum)',
 					'.5oz Honey syrup',
 					'.5oz Orange juice',

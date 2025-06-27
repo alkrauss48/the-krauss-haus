@@ -24,6 +24,7 @@
 		<div class="max-w-md mx-auto">
 			<CocktailCard
 				title={featuredDrink.title}
+				subtitle={featuredDrink.subtitle}
 				description={featuredDrink.description}
 				imagePath={featuredDrink.imagePath}
 				bgColors={sectionColors.featured}
