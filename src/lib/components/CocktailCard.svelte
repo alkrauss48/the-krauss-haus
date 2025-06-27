@@ -142,7 +142,7 @@
 
 {#if showModal}
 	<div
-		class="fixed inset-0 bg-gray-500/60 backdrop-blur-sm flex items-center justify-center z-40"
+		class="fixed inset-0 bg-gray-500/60 backdrop-blur-sm modal-backdrop flex items-center justify-center z-40"
 		on:click={toggleModal}
 		on:keydown={(e) => e.key === 'Escape' && toggleModal()}
 		role="presentation"
@@ -182,7 +182,7 @@
 			{#if ingredients.length > 0}
 				<ul class="space-y-3">
 					{#each ingredients as ingredient (ingredient)}
-						<li class="flex items-start">
+						<li class="flex items-start my-2">
 							<span class="text-amber-600 mr-2">•</span>
 							<span class="text-gray-700">{ingredient}</span>
 						</li>
