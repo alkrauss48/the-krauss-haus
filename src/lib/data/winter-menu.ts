@@ -89,7 +89,7 @@ export const categories: Category[] = [
 				title: 'Martini',
 				description: 'Gin, dry vermouth, orange bitters, olives.',
 				imagePath: '/images/cocktails/winter/martini.png',
-				ingredients: ['2oz Gin', '1oz Dry vermouth', '1 dash Orange bitters', 'Garnish: Olive']
+				ingredients: ['2oz Gin', '1oz Dry vermouth', '2 dashes Orange bitters', 'Garnish: Olive']
 			},
 			{
 				title: 'Old Fashioned',
@@ -104,17 +104,17 @@ export const categories: Category[] = [
 				variations: [
 					{
 						name: 'Smoked',
-						description: '',
+						description: 'Served in a smoked glass.',
 						images: []
 					},
 					{
 						name: 'Muddled',
-						description: '',
+						description: 'Muddle extra orange slice and maraschino cherry.',
 						images: []
 					},
 					{
 						name: 'Rum',
-						description: '',
+						description: 'Sub Aged rhum agricole for bourbon.',
 						images: []
 					}
 				]
@@ -182,7 +182,7 @@ export const categories: Category[] = [
 				variations: [
 					{
 						name: 'Black',
-						description: '',
+						description: 'Sub Amaro Lucano for sweet vermouth.',
 						images: []
 					}
 				]
@@ -214,12 +214,12 @@ export const categories: Category[] = [
 				variations: [
 					{
 						name: 'Hazelnut',
-						description: '',
+						description: 'Swap .5oz of Cognac with Frangelico.',
 						images: []
 					},
 					{
 						name: 'Peppermint',
-						description: '',
+						description: 'Swap .5oz of Cognac with peppermint infused vodka.',
 						images: []
 					}
 				]

@@ -39,14 +39,14 @@ export const categories: Category[] = [
 			{
 				title: 'Ancient Mariner',
 				subtitle: 'A complex blend of spice and citrus',
-				description: 'Blended rum, demerara rum, allspice dram, lime, grapefruit, simple syrup.',
+				description: 'Blended rum, demerara rum, allspice dram, lime, grapefruit, demerara syrup.',
 				imagePath: '/images/cocktails/tiki/ancient-mariner.png',
 				ingredients: [
 					'1oz Probitas (Blended light rum)',
 					'1oz Hamilton 86 (Demerara rum)',
 					'.25oz Allspice dram',
-					'.75oz Lime',
-					'.5oz Simple syrup',
+					'.5oz Demerara syrup',
+					'.5oz Lime',
 					'.5oz Grapefruit',
 					'Garnish: Mint sprig and lime wedge'
 				]
@@ -57,8 +57,8 @@ export const categories: Category[] = [
 				description: 'Jamaican rum, blended rum, fassionola, lemon.',
 				imagePath: '/images/cocktails/tiki/hurricane.png',
 				ingredients: [
-					'1oz Coruba (Jamaican rum)',
-					'.5oz Appleton Estate Signature (Jamaican rum)',
+					'.75oz Coruba (Jamaican rum)',
+					'.75oz Appleton Estate Signature (Jamaican rum)',
 					'.5oz Probitas (Blended light rum)',
 					'1oz Fassionola',
 					'.75oz Lemon',

@@ -37,7 +37,7 @@ export const categories: Category[] = [
 				variations: [
 					{
 						name: 'Spicy',
-						description: '',
+						description: 'Swap .5oz of tequila with jalepeño infused tequila.',
 						images: []
 					}
 				]
@@ -45,37 +45,43 @@ export const categories: Category[] = [
 			{
 				title: 'Moonwell',
 				subtitle: 'A Krauss Family original',
-				description: 'Light rum, elderflower liqueur, grenadine, sage bitters, lemon, soda water.',
+				description:
+					'Light rum, elderflower liqueur, grenadine, celery bitters, lemon, soda water.',
 				imagePath: '/images/cocktails/summer/moonwell.png',
 				ingredients: [
 					'1oz Light rum',
 					'1oz Elderflower liqueur',
 					'.5oz Grenadine',
 					'1/4 lemon, juiced',
-					'1 dash Sage bitters',
+					'1 dash celery bitters',
 					'4oz Soda water',
 					'Garnish: Lemon wheel'
 				],
 				variations: [
 					{
 						name: "Valden's",
-						description: '',
-						images: []
+						description: 'Sub beer for soda water.',
+						images: ['/images/wow/race_nightelf_male.jpg', '/images/wow/class_hunter.jpg']
 					},
 					{
 						name: "Qweenanne's",
-						description: '',
-						images: []
+						description: 'Sub tonic water for soda water.',
+						images: ['/images/wow/race_human_female.jpg', '/images/wow/class_warlock.jpg']
 					},
 					{
 						name: "Pounders'",
-						description: '',
-						images: []
+						description: 'Sub gin for rum.',
+						images: ['/images/wow/race_nightelf_male.jpg', '/images/wow/class_hunter.jpg']
 					},
 					{
 						name: "Troker's",
-						description: '',
-						images: []
+						description: 'Sub ginger beer for soda water.',
+						images: ['/images/wow/race_nightelf_male.jpg', '/images/wow/class_rogue.jpg']
+					},
+					{
+						name: "Tippinded's",
+						description: 'TBD',
+						images: ['/images/wow/race_dwarf_male.jpg', '/images/wow/class_priest.jpg']
 					}
 				]
 			}
@@ -99,7 +105,7 @@ export const categories: Category[] = [
 				variations: [
 					{
 						name: 'Mezcal',
-						description: '',
+						description: 'Sub mezcal for gin.',
 						images: []
 					}
 				]
