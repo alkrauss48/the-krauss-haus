@@ -17,7 +17,10 @@
 	export let ingredients: string[] = []; // Array of ingredient strings
 
 	let showModal = false;
+	let showVariationModal = false;
+	let selectedVariant: CocktailVariant | null = null;
 	let modalContent: HTMLElement;
+	let variationModalContent: HTMLElement;
 	let lastFocusedElement: HTMLElement | null = null;
 
 	function getFocusableElements(element: HTMLElement): HTMLElement[] {
@@ -29,9 +32,10 @@
 	}
 
 	function handleTabKey(e: KeyboardEvent): void {
-		if (!showModal) return;
+		if (!showModal && !showVariationModal) return;
 
-		const focusableElements = getFocusableElements(modalContent);
+		const modalToUse = showVariationModal ? variationModalContent : modalContent;
+		const focusableElements = getFocusableElements(modalToUse);
 		const firstFocusableElement = focusableElements[0];
 		const lastFocusableElement = focusableElements[focusableElements.length - 1];
 
@@ -68,18 +72,37 @@
 		}
 	}
 
+	function toggleVariationModal(): void {
+		showVariationModal = !showVariationModal;
+		if (showVariationModal) {
+			lastFocusedElement = document.activeElement as HTMLElement;
+			// Focus the first focusable element after a brief delay
+			setTimeout(() => {
+				const focusableElements = getFocusableElements(variationModalContent);
+				if (focusableElements.length > 0) {
+					focusableElements[0].focus();
+				}
+			}, 0);
+		} else {
+			lastFocusedElement?.focus();
+		}
+	}
+
 	function handleKeydown(event: KeyboardEvent): void {
-		if (event.key === 'Escape' && showModal) {
-			showModal = false;
+		if (event.key === 'Escape') {
+			if (showVariationModal) {
+				showVariationModal = false;
+			} else if (showModal) {
+				showModal = false;
+			}
 		}
 		handleTabKey(event);
 	}
 
 	function handleVariantClick(event: Event, variant: CocktailVariant): void {
 		event.stopPropagation();
-		// For now, just log the variant. You can extend this to show variant details
-		console.log(`Selected variant: ${variant.name}`, variant);
-		// TODO: Add variant-specific functionality (e.g., show variant details, change recipe, etc.)
+		selectedVariant = variant;
+		toggleVariationModal();
 	}
 
 	// Add event listener when component mounts
@@ -188,6 +211,63 @@
 						</li>
 					{/each}
 				</ul>
+			{/if}
+		</div>
+	</div>
+{/if}
+
+{#if showVariationModal}
+	<div
+		class="fixed inset-0 bg-gray-500/60 backdrop-blur-sm flex items-center justify-center z-40"
+		on:click={toggleVariationModal}
+		on:keydown={(e) => e.key === 'Escape' && toggleVariationModal()}
+		role="presentation"
+		aria-label="Close variation modal"
+	>
+		<div
+			bind:this={variationModalContent}
+			class="bg-white rounded-lg p-6 max-w-md w-full mx-4 shadow-xl z-50"
+			on:click|stopPropagation
+			role="presentation"
+			aria-label="Cocktail variation details"
+		>
+			<div class="flex justify-between items-start mb-6">
+				<h3 class="text-2xl font-bold text-gray-800">{selectedVariant?.name}</h3>
+				<button
+					class="text-gray-400 hover:text-gray-600"
+					on:click={toggleVariationModal}
+					aria-label="Close variation modal"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				</button>
+			</div>
+			{#if selectedVariant?.description}
+				<p class="text-gray-700">{selectedVariant?.description}</p>
+			{/if}
+			{#if selectedVariant?.images.length > 0}
+				<div class="mt-4 flex gap-2">
+					{#each selectedVariant?.images as image (image)}
+						<img
+							src={image}
+							alt={selectedVariant?.name}
+							class="w-16 h-auto object-cover rounded-lg"
+						/>
+					{/each}
+				</div>
 			{/if}
 		</div>
 	</div>
