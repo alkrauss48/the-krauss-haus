@@ -142,7 +142,7 @@
 				<p class="text-xs text-gray-500 mb-2 font-light tracking-wide">Variations:</p>
 				<div class="flex flex-wrap gap-2">
 					{#each variations as variant (variant.name)}
-						<button
+						<div
 							class="px-3 py-1 text-xs font-medium rounded-full hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-1 transition-all duration-200 cursor-pointer"
 							style="background-color: {bgColors.primary}; color: {bgColors.variationText};"
 							on:click={(e) => handleVariantClick(e, variant)}
@@ -152,10 +152,12 @@
 									handleVariantClick(e, variant);
 								}
 							}}
+							role="button"
+							tabindex="0"
 							aria-label="Select {variant.name} variation"
 						>
 							{variant.name}
-						</button>
+						</div>
 					{/each}
 				</div>
 			</div>
