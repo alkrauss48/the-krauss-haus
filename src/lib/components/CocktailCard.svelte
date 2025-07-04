@@ -143,7 +143,7 @@
 				<div class="flex flex-wrap gap-2">
 					{#each variations as variant (variant.name)}
 						<div
-							class="px-3 py-1 text-xs font-medium rounded-full hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-1 transition-all duration-200 cursor-pointer"
+							class="px-3 py-1 text-xs font-medium rounded-full hover:opacity-80 focus:outline-none focus:ring-2 transition-all duration-200 cursor-pointer"
 							style="background-color: {bgColors.primary}; color: {bgColors.variationText};"
 							on:click={(e) => handleVariantClick(e, variant)}
 							on:keydown={(e) => {
