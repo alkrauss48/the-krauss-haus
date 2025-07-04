@@ -4,10 +4,7 @@
 
 <svelte:head>
 	<title>The Krauss Haus</title>
-	<meta
-		name="description"
-		content="The Krauss Haus - A digital hub for guests featuring seasonal cocktail menus"
-	/>
+	<meta name="description" content="Our house bar menus! Come have a drink with us." />
 	<meta name="keywords" content="cocktails, menu, Krauss Haus, seasonal drinks, tiki drinks" />
 	<meta name="author" content="The Krauss Haus" />
 	<meta name="robots" content="index, follow" />
@@ -16,10 +13,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://thekrausshaus.com/" />
 	<meta property="og:title" content="The Krauss Haus" />
-	<meta
-		property="og:description"
-		content="A digital hub for guests featuring seasonal cocktail menus"
-	/>
+	<meta property="og:description" content="Our house bar menus! Come have a drink with us." />
 	<meta property="og:image" content="https://thekrausshaus.com/images/og-image.jpg" />
 	<meta property="og:site_name" content="The Krauss Haus" />
 	<meta property="og:locale" content="en_US" />
