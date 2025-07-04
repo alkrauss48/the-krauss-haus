@@ -3,12 +3,15 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import BackButton from '$lib/components/BackButton.svelte';
 	import { fade, fly } from 'svelte/transition';
-	import { syrups } from '$lib/data/syrups';
+	import { infusions } from '$lib/data/infusions';
 </script>
 
 <svelte:head>
-	<title>Homemade Syrups - The Krauss Haus</title>
-	<meta name="description" content="List of homemade syrups used in cocktails at The Krauss Haus" />
+	<title>Spirit Infusions - The Krauss Haus</title>
+	<meta
+		name="description"
+		content="List of homemade spirit infusions used in cocktails at The Krauss Haus"
+	/>
 </svelte:head>
 
 <main
@@ -20,16 +23,13 @@
 		<BackButton />
 
 		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-			<h1 class="text-4xl font-bold text-gray-800 mb-4">Homemade Syrups</h1>
-			<p class="text-gray-600">The secret ingredients behind our cocktails</p>
+			<h1 class="text-4xl font-bold text-gray-800 mb-4">Spirit Infusions</h1>
+			<p class="text-gray-600">Unique spirits and flavors for your cocktails</p>
 		</header>
 
 		<div class="bg-white rounded-lg shadow-sm p-6">
-			<h2 class="text-2xl font-bold text-gray-800 mb-6">Syrup Recipes</h2>
-			<p class="text-gray-600 mb-6">
-				All syrups last about a month in the refrigerator, unless otherwise noted.
-			</p>
-			<RecipeList recipes={syrups} />
+			<h2 class="text-2xl font-bold text-gray-800 mb-6">Infusion Recipes</h2>
+			<RecipeList recipes={infusions} />
 		</div>
 	</div>
 

@@ -81,6 +81,7 @@
 		aria-label="Secondary Menu Navigation"
 	>
 		<MenuLink href="/syrups" label="Homemade Syrups" variant="secondary" />
+		<MenuLink href="/infusions" label="Spirit Infusions" variant="secondary" />
 	</nav>
 
 	<div class="mt-16 text-center">

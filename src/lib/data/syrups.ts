@@ -1,12 +1,6 @@
-export interface Syrup {
-	name: string;
-	description?: string;
-	ingredients?: string[];
-	instructions?: string;
-	notes?: string;
-}
+import type { Recipe } from '$lib/types/recipes';
 
-export const syrups: Syrup[] = [
+export const syrups: Recipe[] = [
 	{
 		name: 'Rich Simple Syrup',
 		description: 'A 2:1 ratio of sugar to water, creating a more concentrated sweetness',
