@@ -79,7 +79,7 @@ export const categories: Category[] = [
 						images: ['/images/wow/race_nightelf_male.jpg', '/images/wow/class_rogue.jpg']
 					},
 					{
-						name: "Tippinded's",
+						name: "Tippindeg's",
 						description: 'TBD',
 						images: ['/images/wow/race_dwarf_male.jpg', '/images/wow/class_priest.jpg']
 					}

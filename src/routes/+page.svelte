@@ -67,52 +67,23 @@
 		</h1>
 	</header>
 
-	<nav
-		class="flex flex-col gap-4 w-full max-w-[320px] sm:max-w-[400px]"
-		aria-label="Menu Navigation"
-	>
-		<MenuLink href="/summer-menu" label="Summer Menu" />
-		<MenuLink href="/tiki-menu" label="Tiki Menu" />
-		<MenuLink href="/winter-menu" label="Winter Menu" />
-	</nav>
-
-	<nav
-		class="flex flex-col gap-4 w-full max-w-[320px] sm:max-w-[400px]"
-		aria-label="Secondary Menu Navigation"
-	>
-		<MenuLink href="/syrups" label="Homemade Syrups" variant="secondary" />
-		<MenuLink href="/infusions" label="Spirit Infusions" variant="secondary" />
-	</nav>
-
-	<div class="mt-16 text-center">
-		<h2 class="text-sm font-medium text-gray-500 mb-3">Historical Menus</h2>
-		<div class="flex flex-col gap-2">
-			<a
-				href="/pdfs/summer-menu.pdf"
-				class="text-sm text-gray-400 hover:text-gray-600 transition-colors"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				Summer Menu (PDF)
-			</a>
-			<a
-				href="/pdfs/tiki-menu.pdf"
-				class="text-sm text-gray-400 hover:text-gray-600 transition-colors"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				Tiki Menu (PDF)
-			</a>
-			<a
-				href="/pdfs/winter-menu.pdf"
-				class="text-sm text-gray-400 hover:text-gray-600 transition-colors"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				Winter Menu (PDF)
-			</a>
-		</div>
-	</div>
+	<!-- Cocktail Menus -->
+	<section class="w-full max-w-[320px] sm:max-w-[400px] mb-16">
+		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Cocktail Menus</h2>
+		<nav class="flex flex-col gap-4" aria-label="Menu Navigation">
+			<MenuLink href="/summer-menu" label="Summer Menu" />
+			<MenuLink href="/tiki-menu" label="Tiki Menu" />
+			<MenuLink href="/winter-menu" label="Winter Menu" />
+		</nav>
+	</section>
+	<!-- Extras -->
+	<section class="w-full max-w-[320px] sm:max-w-[400px]">
+		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Extras</h2>
+		<nav class="flex flex-col gap-4" aria-label="Secondary Menu Navigation">
+			<MenuLink href="/syrups" label="Homemade Syrups" variant="secondary" />
+			<MenuLink href="/infusions" label="Spirit Infusions" variant="secondary" />
+		</nav>
+	</section>
 
 	<footer class="mt-auto pt-8 text-center text-sm text-gray-400">
 		<p>

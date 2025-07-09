@@ -3,32 +3,26 @@ import type { Recipe } from '$lib/types/recipes';
 export const infusions: Recipe[] = [
 	{
 		name: 'Jalapeño Tequila',
-		description: 'Tequila infused with fresh jalapeños for a spicy kick.',
-		ingredients: ['1 (750ml) bottle blanco tequila', '2-3 fresh jalapeños, sliced'],
+		description: 'Tequila infused with fresh jalapeño for a spicy kick.',
+		ingredients: ['4oz blanco tequila', '1 medium jalapeño, sliced w/ half seeds'],
 		instructions:
-			'Add sliced jalapeños to the bottle of tequila (or pour both into a large jar). Let infuse at room temperature for 12-24 hours, tasting occasionally for desired heat. Strain out jalapeños and store tequila in the original bottle or a clean jar.',
-		notes:
-			'Great for spicy margaritas or palomas. The longer it infuses, the spicier it gets. Start tasting after 12 hours.'
+			'Add ingredients to a mason jar and let infuse for 24 hours, swirling around every few hours. Strain.',
+		notes: 'Used in the Spicy Margarita. If you want a spicier infusion, use more seeds.'
 	},
 	{
 		name: 'Caramel Vodka',
 		description: 'Vodka infused with homemade caramel syrup for a sweet, rich flavor.',
-		ingredients: ['1/2 cup caramel syrup (see recipe)', '1 (750ml) bottle vodka'],
-		instructions:
-			'Combine caramel syrup and vodka in a large jar. Stir or shake to combine. Let infuse for at least 24 hours, then strain if needed. Store in a clean bottle or jar.',
+		ingredients: ['1 oz caramel syrup (see recipe)', '3 oz vodka'],
+		instructions: 'Mix ingredients together. Easy as that!',
 		notes:
-			'Delicious in dessert cocktails or coffee drinks. Shake before using if separation occurs.'
+			'Used in the Caramel Apple Spice. Because the caramel syrup has no fat, this infusion will maintain a nice, translucent color with no separation.'
 	},
 	{
 		name: 'Peppermint Vodka',
 		description: 'Vodka infused with peppermint candies for a festive, minty spirit.',
-		ingredients: [
-			'1 (750ml) bottle vodka',
-			'1 cup peppermint candies (crushed, like Starlight mints or candy canes)'
-		],
+		ingredients: ['4 oz vodka', '2 hard peppermint candies (the ones with the red swirls)'],
 		instructions:
-			'Add crushed peppermint candies to vodka in a large jar. Stir or shake to dissolve. Let sit for 1-2 days, shaking occasionally, until candies are fully dissolved. Strain if needed and store in a clean bottle.',
-		notes:
-			'Perfect for holiday cocktails or hot chocolate. The color will turn pink/red depending on the candies used.'
+			'Add ingredients to a mason jar and let infuse for 2-3 hours, swirling around every 15-30 minutes. Remove any lingering pieces.',
+		notes: 'Used in the Peppermint Espresso Martini. This infusion will turn a nice pink/red color.'
 	}
 ];
