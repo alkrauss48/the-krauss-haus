@@ -27,6 +27,7 @@
 				subtitle={featuredDrink.subtitle}
 				description={featuredDrink.description}
 				imagePath={featuredDrink.imagePath}
+				method={featuredDrink.method}
 				bgColors={sectionColors.featured}
 				ingredients={featuredDrink.ingredients}
 			/>

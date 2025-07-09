@@ -43,6 +43,7 @@
 									subtitle={cocktail.subtitle}
 									description={cocktail.description}
 									imagePath={cocktail.imagePath}
+									method={cocktail.method}
 									bgColors={category.bgColors}
 									variations={cocktail.variations}
 									ingredients={cocktail.ingredients}

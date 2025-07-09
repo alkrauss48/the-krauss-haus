@@ -2,11 +2,13 @@
 	import { onMount } from 'svelte';
 	import type { SectionColor } from '$lib/types/colors';
 	import type { CocktailVariant } from '$lib/types/cocktails';
+	import { CocktailMethod, methodColors } from '$lib/types/cocktails';
 
 	export let title: string;
 	export let subtitle: string = ''; // Optional subtitle
 	export let description: string;
 	export let imagePath: string;
+	export let method: CocktailMethod | undefined = undefined; // Optional method
 	export let bgColors: SectionColor = {
 		primary: '#fecaca',
 		secondary: '#fef3c7',
@@ -181,7 +183,21 @@
 			aria-label="Cocktail details"
 		>
 			<div class="flex justify-between items-start mb-6">
-				<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
+				<div>
+					<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
+					{#if method}
+						<div class="mt-2">
+							<span
+								class="px-3 py-1 text-xs font-medium rounded-full"
+								style="background-color: {methodColors[
+									method as keyof typeof methodColors
+								]}; color: #374151;"
+							>
+								{method.charAt(0).toUpperCase() + method.slice(1)}
+							</span>
+						</div>
+					{/if}
+				</div>
 				<button
 					class="text-gray-400 hover:text-gray-600"
 					on:click={toggleModal}
@@ -260,9 +276,9 @@
 			{#if selectedVariant?.description}
 				<p class="text-gray-700">{selectedVariant?.description}</p>
 			{/if}
-			{#if selectedVariant?.images.length > 0}
+			{#if selectedVariant?.images && selectedVariant.images.length > 0}
 				<div class="mt-4 flex gap-2">
-					{#each selectedVariant?.images as image (image)}
+					{#each selectedVariant.images as image (image)}
 						<img
 							src={image}
 							alt={selectedVariant?.name}
