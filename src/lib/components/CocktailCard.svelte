@@ -1,22 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { SectionColor } from '$lib/types/colors';
-	import type { CocktailVariant } from '$lib/types/cocktails';
-	import { CocktailMethod, methodColors } from '$lib/types/cocktails';
+	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
+	import { methodColors } from '$lib/types/cocktails';
 
-	export let title: string;
-	export let subtitle: string = ''; // Optional subtitle
-	export let description: string;
-	export let imagePath: string;
-	export let method: CocktailMethod | undefined = undefined; // Optional method
+	export let cocktail: Cocktail;
 	export let bgColors: SectionColor = {
 		primary: '#fecaca',
 		secondary: '#fef3c7',
 		tertiary: '#dbeafe',
 		variationText: '#7c2d12'
 	}; // Default pastel colors
-	export let variations: CocktailVariant[] = []; // Optional variations array
-	export let ingredients: string[] = []; // Array of ingredient strings
 
 	let showModal = false;
 	let showVariationModal = false;
@@ -123,7 +117,7 @@
 			toggleModal();
 		}
 	}}
-	aria-label="View {title} details"
+	aria-label="View {cocktail.title} details"
 >
 	<div class="h-64 relative w-full">
 		<!-- Pastel diagonal gradient background -->
@@ -131,19 +125,23 @@
 			class="absolute inset-0 opacity-30"
 			style="background: linear-gradient(135deg, {bgColors.primary} 0%, {bgColors.secondary} 50%, {bgColors.tertiary} 100%);"
 		></div>
-		<img src={imagePath} alt={title} class="w-full h-full object-contain p-4 relative z-10" />
+		<img
+			src={cocktail.imagePath}
+			alt={cocktail.title}
+			class="w-full h-full object-contain p-4 relative z-10"
+		/>
 	</div>
 	<div class="p-6 flex-1 flex flex-col">
-		<h3 class="text-xl font-bold text-gray-800 mb-2">{title}</h3>
-		{#if subtitle}
-			<p class="text-gray-600 italic mb-2 text-sm">{subtitle}</p>
+		<h3 class="text-xl font-bold text-gray-800 mb-2">{cocktail.title}</h3>
+		{#if cocktail.subtitle}
+			<p class="text-gray-600 italic mb-2 text-sm">{cocktail.subtitle}</p>
 		{/if}
-		<p class="text-gray-600 flex-1">{description}</p>
-		{#if variations.length > 0}
+		<p class="text-gray-600 flex-1">{cocktail.description}</p>
+		{#if cocktail.variations && cocktail.variations.length > 0}
 			<div class="mt-3 pt-3 border-t border-gray-50">
 				<p class="text-xs text-gray-500 mb-2 font-light tracking-wide">Variations:</p>
 				<div class="flex flex-wrap gap-2">
-					{#each variations as variant (variant.name)}
+					{#each cocktail.variations as variant (variant.name)}
 						<div
 							class="px-3 py-1 text-xs font-medium rounded-full hover:opacity-80 focus:outline-none focus:ring-2 transition-all duration-200 cursor-pointer"
 							style="background-color: {bgColors.primary}; color: {bgColors.variationText};"
@@ -184,16 +182,16 @@
 		>
 			<div class="flex justify-between items-start mb-6">
 				<div>
-					<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
-					{#if method}
+					<h3 class="text-2xl font-bold text-gray-800">{cocktail.title}</h3>
+					{#if cocktail.method}
 						<div class="mt-2">
 							<span
 								class="px-3 py-1 text-xs font-medium rounded-full"
 								style="background-color: {methodColors[
-									method as keyof typeof methodColors
+									cocktail.method as keyof typeof methodColors
 								]}; color: #374151;"
 							>
-								{method.charAt(0).toUpperCase() + method.slice(1)}
+								{cocktail.method.charAt(0).toUpperCase() + cocktail.method.slice(1)}
 							</span>
 						</div>
 					{/if}
@@ -220,9 +218,9 @@
 					</svg>
 				</button>
 			</div>
-			{#if ingredients.length > 0}
+			{#if cocktail.ingredients && cocktail.ingredients.length > 0}
 				<ul class="space-y-3">
-					{#each ingredients as ingredient (ingredient)}
+					{#each cocktail.ingredients as ingredient (ingredient)}
 						<li class="flex items-start">
 							<span class="text-amber-600 mr-2">•</span>
 							<span class="text-gray-700">{ingredient}</span>

@@ -22,15 +22,7 @@
 			</p>
 		</div>
 		<div class="max-w-md mx-auto">
-			<CocktailCard
-				title={featuredDrink.title}
-				subtitle={featuredDrink.subtitle}
-				description={featuredDrink.description}
-				imagePath={featuredDrink.imagePath}
-				method={featuredDrink.method}
-				bgColors={sectionColors.featured}
-				ingredients={featuredDrink.ingredients}
-			/>
+			<CocktailCard cocktail={featuredDrink} bgColors={sectionColors.featured} />
 		</div>
 	</div>
 </section>
