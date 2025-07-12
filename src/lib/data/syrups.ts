@@ -123,5 +123,14 @@ export const syrups: Recipe[] = [
 			'Combine 1/4 cup water and all of the sugar in a saucepan. Cook over medium heat until sugar is dissolved. Cover, and continue boiling until sugar turns amber (about 10-15 minutes). Remove from heat cool slightly, and CAREFULLY add the remaining sugar. Stir until dissolved. Add vanilla extract.',
 		notes:
 			'Used to make caramel vodka, which is used in the Caramel Apple Spice. Recipe makes about 1/2 cup.'
+	},
+	{
+		name: 'Tom & Jerry Batter',
+		description: 'A batter made with egg and sugar for a rich, creamy flavor',
+		ingredients: ['6 eggs', '1lb powdered sugar'],
+		instructions:
+			'Separate eggs. Beat egg yolks, gradually adding sugar, until thick & creamy. Beat egg whites and until stiff peaks form. Combine yolks and beat until light and creamy.',
+		notes:
+			"Used in the Tom & Jerry. Created by Jack Krauss, Aaron's grandfather, who passed in 2011. You can freeze the batter and scoop it straight from the freezer."
 	}
 ];

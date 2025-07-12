@@ -153,10 +153,10 @@ export const categories: Category[] = [
 				method: CocktailMethod.Built,
 				ingredients: [
 					'.75oz Bourbon',
-					'.75oz Dark rum',
-					'2 tbsp egg/sugar batter',
+					'.75oz Appleton Estate Signature',
+					'2 tbsp Tom & Jerry batter',
 					'5oz Hot water',
-					'Garnish: Nutmeg'
+					'Garnish: Freshly grated nutmeg'
 				]
 			},
 			{
