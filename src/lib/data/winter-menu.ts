@@ -1,4 +1,5 @@
 import type { Cocktail, Category } from '$lib/types/cocktails';
+import { CocktailMethod } from '$lib/types/cocktails';
 import { sectionColors } from '$lib/types/colors';
 
 export const featuredDrink: Cocktail = {
@@ -26,6 +27,7 @@ export const categories: Category[] = [
 				title: 'Hot Toddy',
 				description: 'Bourbon, benedictine, spiced tea, honey, lemon, cinnamon.',
 				imagePath: '/images/cocktails/winter/hot-toddy.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'1.5oz Bourbon',
 					'.5oz Benedictine',
@@ -40,6 +42,7 @@ export const categories: Category[] = [
 				subtitle: "Served as the bride's drink at our wedding",
 				description: 'Vodka, cinnamon syrup, lime, ginger beer.',
 				imagePath: '/images/cocktails/winter/merry-mule.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'2oz vodka',
 					'.5 oz Cinnamon syrup',
@@ -54,6 +57,7 @@ export const categories: Category[] = [
 				description:
 					'Applejack, goldschläger, caramel vodka, apple strudel liqueur, calvados, apple cider',
 				imagePath: '/images/cocktails/winter/caramel-apple-spice.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'.5oz Applejack',
 					'.5oz Goldschläger',
@@ -75,6 +79,7 @@ export const categories: Category[] = [
 				description:
 					"Rye whiskey, cognac, absinthe, peychaud's bitters, demerara syrup, lemon twist.",
 				imagePath: '/images/cocktails/winter/sazerac.png',
+				method: CocktailMethod.Stirred,
 				ingredients: [
 					'1.5oz Rye whiskey',
 					'.5oz Cognac',
@@ -89,12 +94,14 @@ export const categories: Category[] = [
 				title: 'Martini',
 				description: 'Gin, dry vermouth, orange bitters, olives.',
 				imagePath: '/images/cocktails/winter/martini.png',
+				method: CocktailMethod.Stirred,
 				ingredients: ['2oz Gin', '1oz Dry vermouth', '2 dashes Orange bitters', 'Garnish: Olive']
 			},
 			{
 				title: 'Old Fashioned',
 				description: 'Bourbon, demerara syrup, black walnut bitters, orange twist.',
 				imagePath: '/images/cocktails/winter/old-fashioned.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'2oz Bourbon',
 					'.25oz Demerara syrup',
@@ -129,6 +136,7 @@ export const categories: Category[] = [
 				title: 'Penicillin',
 				description: 'Blended scotch, single malt scotch, honey-ginger syrup, lemon',
 				imagePath: '/images/cocktails/winter/penicillin.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'2oz Blended scotch',
 					'.25oz Laphroaig',
@@ -142,12 +150,13 @@ export const categories: Category[] = [
 				subtitle: 'Family recipe from Great Grandpa Krauss',
 				description: 'Bourbon, dark rum, egg, sugar, nutmeg.',
 				imagePath: '/images/cocktails/winter/tom-and-jerry.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'.75oz Bourbon',
-					'.75oz Dark rum',
-					'2 tbsp egg/sugar batter',
+					'.75oz Appleton Estate Signature',
+					'2 tbsp Tom & Jerry batter',
 					'5oz Hot water',
-					'Garnish: Nutmeg'
+					'Garnish: Freshly grated nutmeg'
 				]
 			},
 			{
@@ -155,6 +164,7 @@ export const categories: Category[] = [
 				description:
 					'Reposado tequila, mezcal, agave nectar, xocolatl bitters, smoked orange twist.',
 				imagePath: '/images/cocktails/winter/oaxaca-old-fashioned.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'1.5oz Reposado tequila',
 					'.5 oz Mezcal',
@@ -173,6 +183,7 @@ export const categories: Category[] = [
 				title: 'Manhattan',
 				description: 'Rye whiskey, sweet vermouth, black walnut bitters, maraschino cherry.',
 				imagePath: '/images/cocktails/winter/manhattan.png',
+				method: CocktailMethod.Stirred,
 				ingredients: [
 					'2oz Rye whiskey',
 					'1oz Sweet vermouth',
@@ -191,6 +202,7 @@ export const categories: Category[] = [
 				title: 'Amaretto Sour',
 				description: 'Amaretto, bourbon, lemon, simple syrup, egg white.',
 				imagePath: '/images/cocktails/winter/amaretto-sour.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1.5oz Amaretto',
 					'.75oz Bourbon',
@@ -204,6 +216,7 @@ export const categories: Category[] = [
 				title: 'Espresso Martini',
 				description: 'Cognac, coffee liqueur, espresso, demerara syrup.',
 				imagePath: '/images/cocktails/winter/espresso-martini.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1.5oz Cognac',
 					'1oz Mr. Black Coffee Liqueur',

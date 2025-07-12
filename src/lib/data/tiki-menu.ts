@@ -1,4 +1,5 @@
 import type { Category } from '$lib/types/cocktails';
+import { CocktailMethod } from '$lib/types/cocktails';
 
 export const categories: Category[] = [
 	{
@@ -6,7 +7,8 @@ export const categories: Category[] = [
 		bgColors: {
 			primary: '#dcfce7',
 			secondary: '#f0fdf4',
-			tertiary: '#ecfdf5'
+			tertiary: '#ecfdf5',
+			variationText: '#166534'
 		},
 		cocktails: [
 			{
@@ -14,6 +16,7 @@ export const categories: Category[] = [
 				subtitle: 'A creamy, coconut paradise in a glass',
 				description: 'Demerara rum, pineapple, cream of coconut, orange, nutmeg.',
 				imagePath: '/images/cocktails/tiki/painkiller.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'2oz Hamilton 86 (Demerara rum)',
 					'4oz Pineapple juice',
@@ -27,6 +30,7 @@ export const categories: Category[] = [
 				subtitle: 'A perfect balance of bitter and sweet',
 				description: 'Dark rum, campari, pineapple, lime, demarara syrup.',
 				imagePath: '/images/cocktails/tiki/jungle-bird.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1.5oz Appleton Estate Signature (Jamaican rum)',
 					'.75oz Campari',
@@ -41,6 +45,7 @@ export const categories: Category[] = [
 				subtitle: 'A complex blend of spice and citrus',
 				description: 'Blended rum, demerara rum, allspice dram, lime, grapefruit, demerara syrup.',
 				imagePath: '/images/cocktails/tiki/ancient-mariner.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1oz Probitas (Blended light rum)',
 					'1oz Hamilton 86 (Demerara rum)',
@@ -56,6 +61,7 @@ export const categories: Category[] = [
 				subtitle: 'A powerful blend of rums with a tropical twist',
 				description: 'Jamaican rum, blended rum, fassionola, lemon.',
 				imagePath: '/images/cocktails/tiki/hurricane.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'.75oz Coruba (Jamaican rum)',
 					'.75oz Appleton Estate Signature (Jamaican rum)',
@@ -72,7 +78,8 @@ export const categories: Category[] = [
 		bgColors: {
 			primary: '#fae8ff',
 			secondary: '#fce7f3',
-			tertiary: '#fdf2f8'
+			tertiary: '#fdf2f8',
+			variationText: '#581c87'
 		},
 		cocktails: [
 			{
@@ -81,6 +88,7 @@ export const categories: Category[] = [
 				description:
 					'Jamaican rum, blended rum, cachaca, orange curaçao, orgeat, lime, demerara syrup.',
 				imagePath: '/images/cocktails/tiki/mai-tai.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1oz Smith and Cross (Overproof Jamaican rum)',
 					'.5oz Leblon (Cachaca)',
@@ -98,6 +106,7 @@ export const categories: Category[] = [
 				description:
 					'Aged rhum agricole, blended rum,demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
 				imagePath: '/images/cocktails/tiki/three-dots-and-a-dash.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1oz Clement Barrel Select (aged Rhum Agricole)',
 					'.5oz Planteray OFTD (Overproof blended rum)',
@@ -117,6 +126,7 @@ export const categories: Category[] = [
 				description:
 					'Jamaican rum, overproof demerara rum, falernum, cinnamon syrup, lime, grapefruit, herbstura.',
 				imagePath: '/images/cocktails/tiki/jet-pilot.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'.5oz Smith and Cross (Overproof Jamaican rum)',
 					'.5oz Coruba (Jamaican rum)',
@@ -135,6 +145,7 @@ export const categories: Category[] = [
 				subtitle: 'A dangerously smooth blend of rum and spice',
 				description: 'Overproof demerara rum, falernum, fassionola, lime, orange, herbstura.',
 				imagePath: '/images/cocktails/tiki/cobras-fang.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1.5oz Hamilton 151 (Overproof Demerara rum)',
 					'.25oz Falernum',
@@ -152,7 +163,8 @@ export const categories: Category[] = [
 		bgColors: {
 			primary: '#fff7ed',
 			secondary: '#ffedd5',
-			tertiary: '#fef3c7'
+			tertiary: '#fef3c7',
+			variationText: '#9a3412'
 		},
 		cocktails: [
 			{
@@ -161,6 +173,7 @@ export const categories: Category[] = [
 				description:
 					'Gin, cherry heering, benedictine, cointreau, grenadine, pineapple, lime, angostura bitters.',
 				imagePath: '/images/cocktails/tiki/singapore-sling.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1.5oz Gin',
 					'.5oz Cherry Heering',
@@ -178,6 +191,7 @@ export const categories: Category[] = [
 				subtitle: 'A gin-based tiki classic, bright and tropical',
 				description: 'Gin, passion fruit, lemon, orgeat, falernum.',
 				imagePath: '/images/cocktails/tiki/saturn.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1.5oz Gin',
 					'.5oz Passion fruit syrup',
@@ -192,6 +206,7 @@ export const categories: Category[] = [
 				subtitle: 'A bourbon-based tropical delight',
 				description: 'Bourbon, honey, lemon, passion fruit.',
 				imagePath: '/images/cocktails/tiki/port-light.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'2oz Bourbon',
 					'.5oz Honey syrup',
@@ -206,6 +221,7 @@ export const categories: Category[] = [
 				subtitle: 'A bourbon tiki with a spicy kick',
 				description: 'Bourbon, falernum, demerara syrup, lemon, pineapple.',
 				imagePath: '/images/cocktails/tiki/iron-ranger.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'2oz Bourbon',
 					'.5oz Falernum',

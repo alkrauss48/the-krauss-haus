@@ -1,10 +1,12 @@
 import type { Cocktail, Category } from '$lib/types/cocktails';
+import { CocktailMethod } from '$lib/types/cocktails';
 import { sectionColors } from '$lib/types/colors';
 
 export const featuredDrink: Cocktail = {
 	title: "Pimm's Cup",
 	description: "Pimm's #1, sparkling lemonade, cucumber, orange, strawberry, mint.",
 	imagePath: '/images/cocktails/summer/pimms-cup.png',
+	method: CocktailMethod.Built,
 	ingredients: [
 		"2oz Pimm's #1",
 		'4oz sparkling lemonade',
@@ -21,12 +23,14 @@ export const categories: Category[] = [
 				title: 'Spritz',
 				description: 'Prosecco, aperol, soda water, orange wedge.',
 				imagePath: '/images/cocktails/summer/spritz.png',
+				method: CocktailMethod.Built,
 				ingredients: ['3oz Prosecco', '2oz Aperol', '1oz Soda water', 'Garnish: Orange wedge']
 			},
 			{
 				title: 'Margarita',
 				description: 'Blanco tequila, cointreau, lime, agave nectar.',
 				imagePath: '/images/cocktails/summer/margarita.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'2oz Blanco tequila',
 					'.75oz Cointreau',
@@ -48,6 +52,7 @@ export const categories: Category[] = [
 				description:
 					'Light rum, elderflower liqueur, grenadine, celery bitters, lemon, soda water.',
 				imagePath: '/images/cocktails/summer/moonwell.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'1oz Light rum',
 					'1oz Elderflower liqueur',
@@ -95,12 +100,14 @@ export const categories: Category[] = [
 				title: 'Daiquiri',
 				description: 'Light rum, lime, simple syrup.',
 				imagePath: '/images/cocktails/summer/daiquiri.png',
+				method: CocktailMethod.Shaken,
 				ingredients: ['2oz Probitas', '.75oz Lime', '.5oz Rich simple syrup', 'Garnish: Lime wedge']
 			},
 			{
 				title: 'Negroni',
 				description: 'Gin, campari, sweet vermouth, orange twist.',
 				imagePath: '/images/cocktails/summer/negroni.png',
+				method: CocktailMethod.Stirred,
 				ingredients: ['1oz Gin', '1oz Campari', '1oz Sweet vermouth', 'Garnish: Orange twist'],
 				variations: [
 					{
@@ -114,6 +121,7 @@ export const categories: Category[] = [
 				title: 'Mint Julep',
 				description: 'Bourbon, simple syrup, mint.',
 				imagePath: '/images/cocktails/summer/mint-julep.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'2oz Bourbon',
 					'.5oz Rich simple syrup',
@@ -131,12 +139,14 @@ export const categories: Category[] = [
 				title: 'Caipirinha',
 				description: 'Cachaça, lime, sugar.',
 				imagePath: '/images/cocktails/summer/caipirinha.png',
+				method: CocktailMethod.Built,
 				ingredients: ['2oz Cachaça', '6 Lime wedges', '1 tbsp Sugar']
 			},
 			{
 				title: 'Jack Rose',
 				description: 'Calvados, applejack, grenadine, lemon.',
 				imagePath: '/images/cocktails/summer/jack-rose.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1oz Calvados',
 					'1oz Applejack',
@@ -150,6 +160,7 @@ export const categories: Category[] = [
 				subtitle: 'A Krauss Family original',
 				description: 'Gin, lime, simple syrup, soda water.',
 				imagePath: '/images/cocktails/summer/loggy-cab.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'2oz Gin',
 					'.75oz Lime',
@@ -168,6 +179,7 @@ export const categories: Category[] = [
 				title: 'Mojito',
 				description: 'Light rum, lime, sugar, mint, angostura bitters.',
 				imagePath: '/images/cocktails/summer/mojito.png',
+				method: CocktailMethod.Built,
 				ingredients: [
 					'2oz Planteray 3 Star',
 					'.75oz Lime',
@@ -180,6 +192,7 @@ export const categories: Category[] = [
 				title: 'French 75',
 				description: 'Prosecco, gin, lemon, simple syrup.',
 				imagePath: '/images/cocktails/summer/french-75.png',
+				method: CocktailMethod.Shaken,
 				ingredients: [
 					'1oz Gin',
 					'.5oz Lemon',
@@ -192,6 +205,7 @@ export const categories: Category[] = [
 				title: 'Paper Plane',
 				description: 'Bourbon, amaro nonino, aperol, lemon.',
 				imagePath: '/images/cocktails/summer/paper-plane.png',
+				method: CocktailMethod.Shaken,
 				ingredients: ['.75oz Bourbon', '.75oz Amaro Nonino', '.75oz Aperol', '.75oz Lemon']
 			}
 		]
