@@ -106,7 +106,7 @@ export const categories: Category[] = [
 				description:
 					'Aged rhum agricole, blended rum,demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
 				imagePath: '/images/cocktails/tiki/three-dots-and-a-dash.png',
-				method: CocktailMethod.Shaken,
+				method: CocktailMethod.FlashBlended,
 				ingredients: [
 					'1oz Clement Barrel Select (aged Rhum Agricole)',
 					'.5oz Planteray OFTD (Overproof blended rum)',
@@ -126,7 +126,7 @@ export const categories: Category[] = [
 				description:
 					'Jamaican rum, overproof demerara rum, falernum, cinnamon syrup, lime, grapefruit, herbstura.',
 				imagePath: '/images/cocktails/tiki/jet-pilot.png',
-				method: CocktailMethod.Shaken,
+				method: CocktailMethod.FlashBlended,
 				ingredients: [
 					'.5oz Smith and Cross (Overproof Jamaican rum)',
 					'.5oz Coruba (Jamaican rum)',
@@ -145,7 +145,7 @@ export const categories: Category[] = [
 				subtitle: 'A dangerously smooth blend of rum and spice',
 				description: 'Overproof demerara rum, falernum, fassionola, lime, orange, herbstura.',
 				imagePath: '/images/cocktails/tiki/cobras-fang.png',
-				method: CocktailMethod.Shaken,
+				method: CocktailMethod.FlashBlended,
 				ingredients: [
 					'1.5oz Hamilton 151 (Overproof Demerara rum)',
 					'.25oz Falernum',
