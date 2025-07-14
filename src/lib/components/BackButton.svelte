@@ -9,7 +9,7 @@
 
 <button
 	on:click={goBack}
-	class="mb-8 flex items-center text-gray-600 hover:text-amber-600 transition-colors duration-200 group"
+	class="cursor-pointer mb-8 flex items-center text-gray-600 hover:text-amber-600 transition-colors duration-200 group"
 	in:fly={{ x: -20, duration: 400, delay: 300 }}
 >
 	<svg
