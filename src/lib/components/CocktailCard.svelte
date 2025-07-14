@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import type { SectionColor } from '$lib/types/colors';
 	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
-	import { methodColors } from '$lib/types/cocktails';
+	import { methodColors } from '$lib/enums/methods';
 
 	export let cocktail: Cocktail;
 	export let bgColors: SectionColor = {

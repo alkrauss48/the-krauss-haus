@@ -1,5 +1,5 @@
 import type { Category } from '$lib/types/cocktails';
-import { CocktailMethod } from '$lib/types/cocktails';
+import { CocktailMethod } from '$lib/enums/methods';
 
 export const categories: Category[] = [
 	{

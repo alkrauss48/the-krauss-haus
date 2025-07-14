@@ -1,5 +1,5 @@
 import type { Cocktail, Category } from '$lib/types/cocktails';
-import { CocktailMethod } from '$lib/types/cocktails';
+import { CocktailMethod } from '$lib/enums/methods';
 import { sectionColors } from '$lib/types/colors';
 
 export const featuredDrink: Cocktail = {

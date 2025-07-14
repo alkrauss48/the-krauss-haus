@@ -1,18 +1,5 @@
 import type { SectionColor } from './colors';
-
-export enum CocktailMethod {
-	Shaken = 'shaken',
-	Stirred = 'stirred',
-	Built = 'built',
-	FlashBlended = 'flash blended'
-}
-
-export const methodColors = {
-	[CocktailMethod.Shaken]: '#fef3c7',
-	[CocktailMethod.Stirred]: '#dbeafe',
-	[CocktailMethod.Built]: '#dcfce7',
-	[CocktailMethod.FlashBlended]: '#fae8ff'
-};
+import { CocktailMethod } from '../enums/methods';
 
 export interface CocktailVariant {
 	name: string;
