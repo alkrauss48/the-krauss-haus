@@ -38,6 +38,13 @@ export const categories: Category[] = [
 					'.5oz Lime',
 					'.5oz Demerara syrup',
 					'Garnish: Pineapple wedge'
+				],
+				variations: [
+					{
+						name: 'Funky',
+						description: 'Float .25 oz of Hamilton Pot Still Jamaican Black',
+						images: []
+					}
 				]
 			},
 			{
@@ -68,7 +75,7 @@ export const categories: Category[] = [
 					'.5oz Probitas (Blended light rum)',
 					'1oz Fassionola',
 					'.75oz Lemon',
-					'Garnish: Lime wheel'
+					'Garnish: Lemon wheel'
 				]
 			}
 		]

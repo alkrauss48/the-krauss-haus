@@ -221,7 +221,7 @@ export const categories: Category[] = [
 					'1.5oz Cognac',
 					'1oz Mr. Black Coffee Liqueur',
 					'1oz Espresso',
-					'.25oz Rich demerara syrup',
+					'.25oz Demerara syrup',
 					'Garnish: 3 coffee beans'
 				],
 				variations: [
