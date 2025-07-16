@@ -16,10 +16,7 @@
 
 <svelte:head>
 	<title>Tiki Party - The Krauss Haus</title>
-	<meta
-		name="description"
-		content="Celebrating Aaron's 35th in style with a curated cocktail schedule"
-	/>
+	<meta name="description" content="Celebrating Aaron's 35th in style on August 9th, 2025" />
 </svelte:head>
 
 <main
@@ -32,7 +29,7 @@
 
 		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
 			<h1 class="text-5xl font-bold text-amber-800 mb-4">Tiki Party</h1>
-			<p class="text-2xl text-amber-600 font-medium mb-2">Saturday, August 8, 2025</p>
+			<p class="text-2xl text-amber-600 font-medium mb-2">Saturday, August 9, 2025</p>
 			<p class="text-xl text-amber-700 font-medium">Celebrating Aaron's 35th in style</p>
 		</header>
 
