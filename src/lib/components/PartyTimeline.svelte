@@ -19,7 +19,8 @@
 <div class="relative max-w-3xl mx-auto">
 	<!-- Timeline Line -->
 	<div
-		class="absolute left-6 md:left-12 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-400 to-orange-500 rounded-full transform -translate-x-1/2"
+		class="absolute left-6 md:left-12 top-0 bottom-0 w-1 bg-amber-400 rounded-full transform -translate-x-1/2"
+		style="background: linear-gradient(to bottom, #fbbf24 0%, #f97316 100%);"
 	></div>
 
 	<!-- Schedule Items -->
@@ -31,7 +32,8 @@
 			>
 				<!-- Time Badge -->
 				<div
-					class="flex-shrink-0 w-12 h-12 md:w-24 md:h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg z-10"
+					class="flex-shrink-0 w-12 h-12 md:w-24 md:h-24 bg-amber-400 rounded-full flex items-center justify-center shadow-lg z-10"
+					style="background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);"
 				>
 					<span class="text-white font-bold text-[10px] md:text-sm">{timeSlot.time}</span>
 				</div>
@@ -62,7 +64,8 @@
 		in:fly={{ x: -20, duration: 400, delay: 1500 }}
 	>
 		<div
-			class="flex-shrink-0 w-12 h-12 md:w-24 md:h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg z-10"
+			class="flex-shrink-0 w-12 h-12 md:w-24 md:h-24 bg-orange-500 rounded-full flex items-center justify-center shadow-lg z-10"
+			style="background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);"
 		>
 			<span class="text-white font-bold text-[10px] md:text-sm">Next</span>
 		</div>
