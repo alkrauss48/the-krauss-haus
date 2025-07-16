@@ -20,7 +20,7 @@
 	<section class="w-full max-w-[400px] sm:max-w-[500px] mb-8">
 		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Upcoming Event</h2>
 		<a
-			href="/party"
+			href="/parties/tiki-party-2025"
 			class="block relative overflow-hidden bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 rounded-2xl p-8 text-center text-white shadow-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-3xl"
 		>
 			<!-- Animated Fireworks Background -->
