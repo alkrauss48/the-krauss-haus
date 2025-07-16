@@ -17,17 +17,29 @@ COPY . .
 RUN npm run build
 
 # Production stage
-FROM nginx:alpine
+FROM node:20-alpine
 
-# Copy built assets from builder stage
-COPY --from=builder /app/build /usr/share/nginx/html/
+# Set working directory
+WORKDIR /app
 
-# Copy custom nginx configuration
-COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf
+# Copy package files
+COPY package*.json ./
 
-# Expose port 80
-EXPOSE 80
+# Install only production dependencies
+RUN npm ci --only=production
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Copy built app from builder stage
+COPY --from=builder /app/build ./build
+
+# Copy SvelteKit configuration
+COPY --from=builder /app/svelte.config.js ./
+
+# Expose port 3000
+EXPOSE 3000
+
+# Set environment variable for production
+ENV NODE_ENV=production
+
+# Start the SvelteKit app
+CMD ["node", "build"]
 
