@@ -9,6 +9,7 @@
 <svelte:head>
 	<title>Homemade Syrups - The Krauss Haus</title>
 	<meta name="description" content="List of homemade syrups used in cocktails at The Krauss Haus" />
+	<meta property="og:image" content="https://thekrausshaus.com/images/open-graph/og-root.jpg" />
 </svelte:head>
 
 <main

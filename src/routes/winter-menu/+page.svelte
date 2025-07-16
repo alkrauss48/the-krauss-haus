@@ -10,6 +10,7 @@
 <svelte:head>
 	<title>Winter Menu - The Krauss Haus</title>
 	<meta name="description" content="Winter cocktail menu at The Krauss Haus" />
+	<meta property="og:image" content="https://thekrausshaus.com/images/open-graph/og-root.jpg" />
 </svelte:head>
 
 <main

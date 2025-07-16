@@ -3,6 +3,12 @@
 	import FeaturedEvent from '$lib/components/FeaturedEvent.svelte';
 </script>
 
+<svelte:head>
+	<title>The Krauss Haus</title>
+	<meta name="description" content="Our house bar menus! Come have a drink with us." />
+	<meta property="og:image" content="https://thekrausshaus.com/images/open-graph/og-root.jpg" />
+</svelte:head>
+
 <main
 	class="min-h-screen flex flex-col items-center gap-10 p-6 sm:p-4 md:p-6 font-['Montserrat'] bg-[#f8f9fa] md:justify-center"
 >
