@@ -30,9 +30,8 @@ RUN npm ci --only=production
 
 # Copy built app from builder stage
 COPY --from=builder /app/build ./build
-
-# Copy SvelteKit configuration
-COPY --from=builder /app/svelte.config.js ./
+# Copy static assets if you have them
+COPY --from=builder /app/static ./static
 
 # Expose port 3000
 EXPOSE 3000
