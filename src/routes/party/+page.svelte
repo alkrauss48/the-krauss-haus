@@ -17,6 +17,10 @@
 <svelte:head>
 	<title>Tiki Party - The Krauss Haus</title>
 	<meta name="description" content="Celebrating Aaron's 35th in style on August 9th, 2025" />
+	<meta
+		property="og:image"
+		content="https://thekrausshaus.com/images/open-graph/tiki-party-2025.jpg"
+	/>
 </svelte:head>
 
 <main
