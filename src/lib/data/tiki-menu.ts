@@ -6,7 +6,7 @@ import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
 import HURRICANE from '$lib/data/cocktails/hurricane';
 import MAI_TAI from '$lib/data/cocktails/mai-tai';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
-import JET_PILOT from '$lib/data/cocktails/jet-pilot';
+import ZOMBIE from '$lib/data/cocktails/zombie';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
 import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
 import SATURN from '$lib/data/cocktails/saturn';
@@ -32,7 +32,7 @@ export const categories: Category[] = [
 			tertiary: '#fdf2f8',
 			variationText: '#581c87'
 		},
-		cocktails: [MAI_TAI, THREE_DOTS_AND_A_DASH, JET_PILOT, COBRAS_FANG]
+		cocktails: [MAI_TAI, THREE_DOTS_AND_A_DASH, COBRAS_FANG, ZOMBIE]
 	},
 	{
 		title: 'Not Just Rum',
