@@ -13,7 +13,7 @@
 	import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
 	import SPRITZ from '$lib/data/cocktails/spritz';
 	import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
-	import PORT_LIGHT from '$lib/data/cocktails/port-light';
+	import MAI_TAI from '$lib/data/cocktails/mai-tai';
 
 	// Custom colors for the party theme
 	const partyColors = {
@@ -46,7 +46,7 @@
 		},
 		{
 			time: '6:00pm',
-			cocktail: IRON_RANGER,
+			cocktail: ANCIENT_MARINER,
 			note: PartyData.PartyNote.SMALL_BATCH
 		},
 		{
@@ -61,12 +61,12 @@
 		},
 		{
 			time: '7:30pm',
-			cocktail: ANCIENT_MARINER,
+			cocktail: IRON_RANGER,
 			note: PartyData.PartyNote.SMALL_BATCH
 		},
 		{
 			time: '8:00pm',
-			cocktail: PORT_LIGHT,
+			cocktail: MAI_TAI,
 			note: PartyData.PartyNote.SMALL_BATCH
 		}
 	];
