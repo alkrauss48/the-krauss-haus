@@ -9,6 +9,11 @@ const NEGRONI: Cocktail = {
 	ingredients: ['1oz Gin', '1oz Campari', '1oz Sweet vermouth', 'Garnish: Orange twist'],
 	variations: [
 		{
+			name: 'Kingston',
+			description: 'Sub Smith & Cross Jamaican Rum for gin.',
+			images: []
+		},
+		{
 			name: 'Mezcal',
 			description: 'Sub mezcal for gin.',
 			images: []
