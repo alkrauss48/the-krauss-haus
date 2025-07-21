@@ -5,6 +5,16 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
+	server: {
+		allowedHosts: [
+			'localhost',
+			'127.0.0.1',
+			'0.0.0.0',
+			'.ngrok-free.app',
+			'.ngrok.io',
+			'.ngrok.app'
+		]
+	},
 	test: {
 		workspace: [
 			{
