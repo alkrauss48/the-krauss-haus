@@ -5,6 +5,7 @@ const NEGRONI: Cocktail = {
 	title: 'Negroni',
 	description: 'Gin, campari, sweet vermouth, orange twist.',
 	imagePath: '/images/cocktails/summer/negroni.png',
+	slug: 'negroni',
 	method: CocktailMethod.Stirred,
 	ingredients: ['1oz Gin', '1oz Campari', '1oz Sweet vermouth', 'Garnish: Orange twist'],
 	variations: [

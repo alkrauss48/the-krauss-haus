@@ -6,6 +6,7 @@ const HURRICANE: Cocktail = {
 	subtitle: 'A powerful blend of rums with a tropical twist',
 	description: 'Jamaican rum, blended rum, fassionola, lemon.',
 	imagePath: '/images/cocktails/tiki/hurricane.png',
+	slug: 'hurricane',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'.75oz Coruba (Jamaican rum)',

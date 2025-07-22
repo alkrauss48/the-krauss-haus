@@ -5,6 +5,7 @@ const SAZERAC: Cocktail = {
 	title: 'Sazerac',
 	description: "Rye whiskey, cognac, absinthe, peychaud's bitters, demerara syrup, lemon twist.",
 	imagePath: '/images/cocktails/winter/sazerac.png',
+	slug: 'sazerac',
 	method: CocktailMethod.Stirred,
 	ingredients: [
 		'1.5oz Rye whiskey',

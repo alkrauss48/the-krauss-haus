@@ -3,6 +3,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 
 const TOM_AND_JERRY: Cocktail = {
 	title: 'Tom and Jerry',
+	slug: 'tom-and-jerry',
 	subtitle: 'Family recipe from Great Grandpa Krauss',
 	description: 'Bourbon, dark rum, egg, sugar, nutmeg.',
 	imagePath: '/images/cocktails/winter/tom-and-jerry.png',

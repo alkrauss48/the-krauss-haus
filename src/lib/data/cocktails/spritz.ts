@@ -5,6 +5,7 @@ const SPRITZ: Cocktail = {
 	title: 'Spritz',
 	description: 'Prosecco, aperol, soda water, orange wedge.',
 	imagePath: '/images/cocktails/summer/spritz.png',
+	slug: 'spritz',
 	method: CocktailMethod.Built,
 	ingredients: ['3oz Prosecco', '2oz Aperol', '1oz Soda water', 'Garnish: Orange wedge']
 };

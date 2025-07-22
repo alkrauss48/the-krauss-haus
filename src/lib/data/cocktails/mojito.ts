@@ -5,6 +5,7 @@ const MOJITO: Cocktail = {
 	title: 'Mojito',
 	description: 'Light rum, lime, sugar, mint, angostura bitters.',
 	imagePath: '/images/cocktails/summer/mojito.png',
+	slug: 'mojito',
 	method: CocktailMethod.Built,
 	ingredients: [
 		'2oz Planteray 3 Star',

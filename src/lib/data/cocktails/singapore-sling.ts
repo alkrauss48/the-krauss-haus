@@ -7,6 +7,7 @@ const SINGAPORE_SLING: Cocktail = {
 	description:
 		'Gin, cherry heering, benedictine, cointreau, grenadine, pineapple, lime, angostura bitters.',
 	imagePath: '/images/cocktails/tiki/singapore-sling.png',
+	slug: 'singapore-sling',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1.5oz Gin',

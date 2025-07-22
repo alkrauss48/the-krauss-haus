@@ -6,6 +6,7 @@ const ANCIENT_MARINER: Cocktail = {
 	subtitle: 'A complex blend of spice and citrus',
 	description: 'Blended rum, demerara rum, allspice dram, lime, grapefruit, demerara syrup.',
 	imagePath: '/images/cocktails/tiki/ancient-mariner.png',
+	slug: 'ancient-mariner',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1oz Probitas (Blended light rum)',

@@ -6,6 +6,7 @@ const IRON_RANGER: Cocktail = {
 	subtitle: 'A bourbon tiki with a spicy kick',
 	description: 'Bourbon, falernum, demerara syrup, lemon, pineapple.',
 	imagePath: '/images/cocktails/tiki/iron-ranger.png',
+	slug: 'iron-ranger',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'2oz Bourbon',

@@ -7,6 +7,7 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	description:
 		'Applejack, goldschläger, caramel vodka, apple strudel liqueur, calvados, apple cider',
 	imagePath: '/images/cocktails/winter/caramel-apple-spice.png',
+	slug: 'caramel-apple-spice',
 	method: CocktailMethod.Built,
 	ingredients: [
 		'.5oz Applejack',

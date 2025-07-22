@@ -5,6 +5,7 @@ const MARGARITA: Cocktail = {
 	title: 'Margarita',
 	description: 'Blanco tequila, cointreau, lime, agave nectar.',
 	imagePath: '/images/cocktails/summer/margarita.png',
+	slug: 'margarita',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'2oz Blanco tequila',

@@ -5,6 +5,7 @@ const OAXACA_OLD_FASHIONED: Cocktail = {
 	title: 'Oaxaca Old Fashioned',
 	description: 'Reposado tequila, mezcal, agave nectar, xocolatl bitters, smoked orange twist.',
 	imagePath: '/images/cocktails/winter/oaxaca-old-fashioned.png',
+	slug: 'oaxaca-old-fashioned',
 	method: CocktailMethod.Built,
 	ingredients: [
 		'1.5oz Reposado tequila',

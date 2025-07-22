@@ -5,6 +5,7 @@ const JACK_ROSE: Cocktail = {
 	title: 'Jack Rose',
 	description: 'Calvados, applejack, grenadine, lemon.',
 	imagePath: '/images/cocktails/summer/jack-rose.png',
+	slug: 'jack-rose',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1oz Calvados',

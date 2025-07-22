@@ -5,6 +5,7 @@ const PIMMS_CUP: Cocktail = {
 	title: "Pimm's Cup",
 	description: "Pimm's #1, sparkling lemonade, cucumber, orange, strawberry, mint.",
 	imagePath: '/images/cocktails/summer/pimms-cup.png',
+	slug: 'pimms-cup',
 	method: CocktailMethod.Built,
 	ingredients: [
 		"2oz Pimm's #1",

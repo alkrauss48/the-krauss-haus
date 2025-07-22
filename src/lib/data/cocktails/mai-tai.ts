@@ -6,6 +6,7 @@ const MAI_TAI: Cocktail = {
 	subtitle: 'The king of tiki drinks, complex and balanced',
 	description: 'Jamaican rum, blended rum, cachaca, orange curaçao, orgeat, lime, demerara syrup.',
 	imagePath: '/images/cocktails/tiki/mai-tai.png',
+	slug: 'mai-tai',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1oz Smith and Cross (Overproof Jamaican rum)',

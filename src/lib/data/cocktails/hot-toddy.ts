@@ -3,6 +3,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 
 const HOT_TODDY: Cocktail = {
 	title: 'Hot Toddy',
+	slug: 'hot-toddy',
 	description: 'Bourbon, benedictine, spiced tea, honey, lemon, cinnamon.',
 	imagePath: '/images/cocktails/winter/hot-toddy.png',
 	method: CocktailMethod.Built,

@@ -5,6 +5,7 @@ const GLUHWEIN: Cocktail = {
 	subtitle: 'Our own family recipe',
 	description: 'Red wine, brandy, orange, lemon, cinnamon, clove, brown sugar.',
 	imagePath: '/images/cocktails/winter/gluhwein.png',
+	slug: 'gluhwein',
 	ingredients: [
 		'750ml Cabernet Sauvignon',
 		'1/2 orange, zested and juiced',

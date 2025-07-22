@@ -5,6 +5,7 @@ const ESPRESSO_MARTINI: Cocktail = {
 	title: 'Espresso Martini',
 	description: 'Cognac, coffee liqueur, espresso, demerara syrup.',
 	imagePath: '/images/cocktails/winter/espresso-martini.png',
+	slug: 'espresso-martini',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1.5oz Cognac',

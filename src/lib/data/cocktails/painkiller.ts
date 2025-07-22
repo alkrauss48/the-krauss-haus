@@ -6,6 +6,7 @@ const PAINKILLER: Cocktail = {
 	subtitle: 'A creamy, coconut paradise in a glass',
 	description: 'Demerara rum, pineapple, cream of coconut, orange, nutmeg.',
 	imagePath: '/images/cocktails/tiki/painkiller.png',
+	slug: 'painkiller',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'2oz Hamilton 86 (Demerara rum)',

@@ -7,6 +7,7 @@ const JET_PILOT: Cocktail = {
 	description:
 		'Jamaican rum, overproof demerara rum, falernum, cinnamon syrup, lime, grapefruit, herbstura.',
 	imagePath: '/images/cocktails/tiki/jet-pilot.png',
+	slug: 'jet-pilot',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [
 		'.5oz Smith and Cross (Overproof Jamaican rum)',

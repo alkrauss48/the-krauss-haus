@@ -6,6 +6,7 @@ const COBRAS_FANG: Cocktail = {
 	subtitle: 'A dangerously smooth blend of rum and spice',
 	description: 'Overproof demerara rum, falernum, fassionola, lime, orange, herbstura.',
 	imagePath: '/images/cocktails/tiki/cobras-fang.png',
+	slug: 'cobras-fang',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [
 		'1.5oz Hamilton 151 (Overproof Demerara rum)',

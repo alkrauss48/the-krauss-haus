@@ -5,6 +5,7 @@ const OLD_FASHIONED: Cocktail = {
 	title: 'Old Fashioned',
 	description: 'Bourbon, demerara syrup, black walnut bitters, orange twist.',
 	imagePath: '/images/cocktails/winter/old-fashioned.png',
+	slug: 'old-fashioned',
 	method: CocktailMethod.Built,
 	ingredients: [
 		'2oz Bourbon',

@@ -6,6 +6,7 @@ const LOGGY_CAB: Cocktail = {
 	subtitle: 'A Krauss Family original',
 	description: 'Gin, lime, simple syrup, soda water.',
 	imagePath: '/images/cocktails/summer/loggy-cab.png',
+	slug: 'loggy-cab',
 	method: CocktailMethod.Built,
 	ingredients: [
 		'2oz Gin',

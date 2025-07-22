@@ -12,6 +12,7 @@ export interface Cocktail {
 	subtitle?: string;
 	description: string;
 	imagePath: string;
+	slug: string;
 	ingredients?: string[];
 	method?: CocktailMethod;
 	variations?: CocktailVariant[];

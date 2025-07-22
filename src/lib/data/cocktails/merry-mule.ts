@@ -6,6 +6,7 @@ const MERRY_MULE: Cocktail = {
 	subtitle: "Served as the bride's drink at our wedding",
 	description: 'Vodka, cinnamon syrup, lime, ginger beer.',
 	imagePath: '/images/cocktails/winter/merry-mule.png',
+	slug: 'merry-mule',
 	method: CocktailMethod.Built,
 	ingredients: [
 		'2oz vodka',

@@ -5,6 +5,7 @@ const MANHATTAN: Cocktail = {
 	title: 'Manhattan',
 	description: 'Rye whiskey, sweet vermouth, black walnut bitters, maraschino cherry.',
 	imagePath: '/images/cocktails/winter/manhattan.png',
+	slug: 'manhattan',
 	method: CocktailMethod.Stirred,
 	ingredients: [
 		'2oz Rye whiskey',

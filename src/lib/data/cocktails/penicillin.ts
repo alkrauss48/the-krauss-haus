@@ -5,6 +5,7 @@ const PENICILLIN: Cocktail = {
 	title: 'Penicillin',
 	description: 'Blended scotch, single malt scotch, honey-ginger syrup, lemon',
 	imagePath: '/images/cocktails/winter/penicillin.png',
+	slug: 'penicillin',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'2oz Blended scotch',

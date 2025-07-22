@@ -6,6 +6,7 @@ const SATURN: Cocktail = {
 	subtitle: 'A gin-based tiki classic, bright and tropical',
 	description: 'Gin, passion fruit, lemon, orgeat, falernum.',
 	imagePath: '/images/cocktails/tiki/saturn.png',
+	slug: 'saturn',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1.5oz Gin',

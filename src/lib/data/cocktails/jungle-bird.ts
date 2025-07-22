@@ -6,6 +6,7 @@ const JUNGLE_BIRD: Cocktail = {
 	subtitle: 'A perfect balance of bitter and sweet',
 	description: 'Dark rum, campari, pineapple, lime, demarara syrup.',
 	imagePath: '/images/cocktails/tiki/jungle-bird.png',
+	slug: 'jungle-bird',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1.5oz Appleton Estate Signature (Jamaican rum)',

@@ -7,6 +7,7 @@ const ZOMBIE: Cocktail = {
 	description:
 		"Blended light rum, Jamaican rum, overproof demerara rum, falernum, Donn's Mix, lime, grenadine, herbstura.",
 	imagePath: '/images/cocktails/tiki/zombie.png',
+	slug: 'zombie',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [
 		'.5oz Probitas (Blended light rum)',

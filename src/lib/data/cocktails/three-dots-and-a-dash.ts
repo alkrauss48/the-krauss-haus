@@ -7,6 +7,7 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 	description:
 		'Aged rhum agricole, blended rum,demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
 	imagePath: '/images/cocktails/tiki/three-dots-and-a-dash.png',
+	slug: 'three-dots-and-a-dash',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [
 		'1oz Clement Barrel Select (aged Rhum Agricole)',

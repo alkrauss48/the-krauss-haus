@@ -5,6 +5,7 @@ const FRENCH_75: Cocktail = {
 	title: 'French 75',
 	description: 'Prosecco, gin, lemon, simple syrup.',
 	imagePath: '/images/cocktails/summer/french-75.png',
+	slug: 'french-75',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1oz Gin',

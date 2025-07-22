@@ -6,6 +6,7 @@ const PORT_LIGHT: Cocktail = {
 	subtitle: 'A bourbon-based tropical delight',
 	description: 'Bourbon, honey, lemon, passion fruit.',
 	imagePath: '/images/cocktails/tiki/port-light.png',
+	slug: 'port-light',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'2oz Bourbon',

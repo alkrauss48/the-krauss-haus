@@ -3,6 +3,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 
 const PAPER_PLANE: Cocktail = {
 	title: 'Paper Plane',
+	slug: 'paper-plane',
 	description: 'Bourbon, amaro nonino, aperol, lemon.',
 	imagePath: '/images/cocktails/summer/paper-plane.png',
 	method: CocktailMethod.Shaken,

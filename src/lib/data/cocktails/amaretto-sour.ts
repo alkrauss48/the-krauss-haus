@@ -5,6 +5,7 @@ const AMARETTO_SOUR: Cocktail = {
 	title: 'Amaretto Sour',
 	description: 'Amaretto, bourbon, lemon, simple syrup, egg white.',
 	imagePath: '/images/cocktails/winter/amaretto-sour.png',
+	slug: 'amaretto-sour',
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1.5oz Amaretto',
