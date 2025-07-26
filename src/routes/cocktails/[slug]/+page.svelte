@@ -1,0 +1,134 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+	import BackButton from '$lib/components/BackButton.svelte';
+	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
+	import { fade, fly } from 'svelte/transition';
+	import { methodColors } from '$lib/enums/methods';
+
+	export let data: PageData;
+	const { cocktail } = data;
+</script>
+
+<svelte:head>
+	<title>{cocktail.title} - The Krauss Haus</title>
+	<meta name="description" content={cocktail.description} />
+	<meta property="og:image" content="https://thekrausshaus.com{cocktail.imagePath}" />
+	<meta property="og:title" content="{cocktail.title} - The Krauss Haus" />
+	<meta property="og:description" content={cocktail.description} />
+</svelte:head>
+
+<main
+	class="min-h-screen p-6 bg-[#f8f9fa] overflow-y-auto"
+	in:fly={{ y: 20, duration: 400, delay: 200 }}
+	out:fade={{ duration: 200 }}
+>
+	<div class="max-w-4xl mx-auto pb-8">
+		<BackButton />
+
+		<div
+			class="bg-white rounded-lg shadow-lg overflow-hidden"
+			in:fly={{ y: 20, duration: 400, delay: 400 }}
+		>
+			<!-- Hero Image Section -->
+			<div class="relative h-96 bg-gradient-to-br from-amber-50 to-orange-50">
+				<img
+					src={cocktail.imagePath}
+					alt={cocktail.title}
+					class="w-full h-full object-contain p-8"
+				/>
+			</div>
+
+			<!-- Content Section -->
+			<div class="p-8">
+				<!-- Header -->
+				<header class="mb-8">
+					<h1 class="text-4xl font-bold text-gray-800 mb-2">{cocktail.title}</h1>
+					{#if cocktail.subtitle}
+						<p class="text-xl text-gray-600 italic mb-4">{cocktail.subtitle}</p>
+					{/if}
+					<p class="text-lg text-gray-700 leading-relaxed">{cocktail.description}</p>
+				</header>
+
+				<!-- Method Badge -->
+				{#if cocktail.method}
+					<div class="mb-8">
+						<span
+							class="inline-block px-4 py-2 text-sm font-medium rounded-full text-gray-800"
+							style="background-color: {methodColors[cocktail.method]};"
+						>
+							{cocktail.method.charAt(0).toUpperCase() + cocktail.method.slice(1)}
+						</span>
+					</div>
+				{/if}
+
+				<!-- Ingredients Section -->
+				{#if cocktail.ingredients && cocktail.ingredients.length > 0}
+					<section class="mb-8">
+						<h2 class="text-2xl font-bold text-gray-800 mb-4">Ingredients</h2>
+						<ul class="space-y-2">
+							{#each cocktail.ingredients as ingredient}
+								<li class="flex items-start">
+									<span class="text-amber-600 mr-2 mt-1">•</span>
+									<span class="text-gray-700">{ingredient}</span>
+								</li>
+							{/each}
+						</ul>
+					</section>
+				{/if}
+
+				<!-- Variations Section -->
+				{#if cocktail.variations && cocktail.variations.length > 0}
+					<section class="mb-8">
+						<h2 class="text-2xl font-bold text-gray-800 mb-4">Variations</h2>
+						<div class="grid gap-4 md:grid-cols-2">
+							{#each cocktail.variations as variation}
+								<div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+									<h3 class="font-semibold text-gray-800 mb-2">{variation.name}</h3>
+									<p class="text-gray-600 text-sm">{variation.description}</p>
+									{#if variation.images && variation.images.length > 0}
+										<div class="flex gap-2 mt-3">
+											{#each variation.images as image}
+												<img
+													src={image}
+													alt="{variation.name} variation"
+													class="w-8 h-8 rounded-full object-cover"
+												/>
+											{/each}
+										</div>
+									{/if}
+								</div>
+							{/each}
+						</div>
+					</section>
+				{/if}
+
+				<!-- Back to Menu Links -->
+				<section class="pt-8 border-t border-gray-200">
+					<h2 class="text-xl font-semibold text-gray-800 mb-4">Find this cocktail on our menus:</h2>
+					<div class="flex flex-wrap gap-3">
+						<a
+							href="/summer-menu"
+							class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
+						>
+							Summer Menu
+						</a>
+						<a
+							href="/winter-menu"
+							class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors"
+						>
+							Winter Menu
+						</a>
+						<a
+							href="/tiki-menu"
+							class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
+						>
+							Tiki Menu
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<ScrollToTop />
+</main>

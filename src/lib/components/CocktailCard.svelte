@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import type { SectionColor } from '$lib/types/colors';
 	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
 	import { methodColors } from '$lib/enums/methods';
@@ -18,6 +19,7 @@
 	let modalContent: HTMLElement;
 	let variationModalContent: HTMLElement;
 	let lastFocusedElement: HTMLElement | null = null;
+	let showCopyFeedback = false;
 
 	function getFocusableElements(element: HTMLElement): HTMLElement[] {
 		return Array.from(
@@ -101,6 +103,28 @@
 		toggleVariationModal();
 	}
 
+	function navigateToCocktail(event: Event): void {
+		event.preventDefault();
+		goto(`/cocktails/${cocktail.slug}`);
+	}
+
+	async function copyToClipboard(event: Event): Promise<void> {
+		event.preventDefault();
+		event.stopPropagation();
+
+		const url = `${window.location.origin}/cocktails/${cocktail.slug}`;
+
+		try {
+			await navigator.clipboard.writeText(url);
+			showCopyFeedback = true;
+			setTimeout(() => {
+				showCopyFeedback = false;
+			}, 2000);
+		} catch (err) {
+			console.error('Failed to copy URL to clipboard:', err);
+		}
+	}
+
 	// Add event listener when component mounts
 	onMount(() => {
 		window.addEventListener('keydown', handleKeydown);
@@ -181,8 +205,43 @@
 			aria-label="Cocktail details"
 		>
 			<div class="flex justify-between items-start mb-6">
-				<div>
-					<h3 class="text-2xl font-bold text-gray-800">{cocktail.title}</h3>
+				<div class="flex-1">
+					<div class="flex items-center gap-2 mb-2">
+						<a
+							href="/cocktails/{cocktail.slug}"
+							class="text-2xl font-bold text-gray-800 hover:text-amber-600 transition-colors cursor-pointer"
+							on:click={navigateToCocktail}
+						>
+							{cocktail.title}
+						</a>
+						<button
+							class="cursor-pointer text-gray-400 hover:text-amber-600 transition-colors p-1 rounded-md hover:bg-gray-50 relative"
+							on:click={copyToClipboard}
+							aria-label="Copy link to {cocktail.title}"
+							title="Copy link"
+						>
+							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+								/>
+							</svg>
+
+							<!-- Copy feedback tooltip -->
+							{#if showCopyFeedback}
+								<div
+									class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap z-10"
+								>
+									Link to cocktail copied!
+									<div
+										class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-800"
+									></div>
+								</div>
+							{/if}
+						</button>
+					</div>
 					{#if cocktail.method}
 						<div class="mt-2">
 							<span
@@ -197,7 +256,7 @@
 					{/if}
 				</div>
 				<button
-					class="text-gray-400 hover:text-gray-600"
+					class="text-gray-400 hover:text-gray-600 ml-4"
 					on:click={toggleModal}
 					aria-label="Close modal"
 				>
@@ -218,6 +277,7 @@
 					</svg>
 				</button>
 			</div>
+
 			{#if cocktail.ingredients && cocktail.ingredients.length > 0}
 				<ul class="space-y-3">
 					{#each cocktail.ingredients as ingredient (ingredient)}
