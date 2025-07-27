@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { fly } from 'svelte/transition';
 
 	function goBack(): void {
-		goto('/');
+		window.history.back();
 	}
 </script>
 
@@ -24,5 +23,5 @@
 			clip-rule="evenodd"
 		/>
 	</svg>
-	Back to Home
+	Back
 </button>
