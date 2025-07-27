@@ -5,8 +5,45 @@
 	import { fade, fly } from 'svelte/transition';
 	import { methodColors } from '$lib/enums/methods';
 
+	// Import menu data to check which menus contain this cocktail
+	import {
+		categories as summerCategories,
+		featuredDrink as summerFeatured
+	} from '$lib/data/summer-menu';
+	import {
+		categories as winterCategories,
+		featuredDrink as winterFeatured
+	} from '$lib/data/winter-menu';
+	import { categories as tikiCategories } from '$lib/data/tiki-menu';
+
 	export let data: PageData;
 	const { cocktail } = data;
+
+	// Check which menus contain this cocktail
+	function isOnSummerMenu(): boolean {
+		if (summerFeatured.slug === cocktail.slug) return true;
+		return summerCategories.some((category) =>
+			category.cocktails.some((c) => c.slug === cocktail.slug)
+		);
+	}
+
+	function isOnWinterMenu(): boolean {
+		if (winterFeatured.slug === cocktail.slug) return true;
+		return winterCategories.some((category) =>
+			category.cocktails.some((c) => c.slug === cocktail.slug)
+		);
+	}
+
+	function isOnTikiMenu(): boolean {
+		return tikiCategories.some((category) =>
+			category.cocktails.some((c) => c.slug === cocktail.slug)
+		);
+	}
+
+	$: onSummer = isOnSummerMenu();
+	$: onWinter = isOnWinterMenu();
+	$: onTiki = isOnTikiMenu();
+	$: onAnyMenu = onSummer || onWinter || onTiki;
 </script>
 
 <svelte:head>
@@ -103,29 +140,39 @@
 				{/if}
 
 				<!-- Back to Menu Links -->
-				<section class="pt-8 border-t border-gray-200">
-					<h2 class="text-xl font-semibold text-gray-800 mb-4">Find this cocktail on our menus:</h2>
-					<div class="flex flex-wrap gap-3">
-						<a
-							href="/summer-menu"
-							class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
-						>
-							Summer Menu
-						</a>
-						<a
-							href="/winter-menu"
-							class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors"
-						>
-							Winter Menu
-						</a>
-						<a
-							href="/tiki-menu"
-							class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
-						>
-							Tiki Menu
-						</a>
-					</div>
-				</section>
+				{#if onAnyMenu}
+					<section class="pt-8 border-t border-gray-200">
+						<h2 class="text-xl font-semibold text-gray-800 mb-4">
+							Find this cocktail on our menus:
+						</h2>
+						<div class="flex flex-wrap gap-3">
+							{#if onSummer}
+								<a
+									href="/summer-menu"
+									class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
+								>
+									Summer Menu
+								</a>
+							{/if}
+							{#if onWinter}
+								<a
+									href="/winter-menu"
+									class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors"
+								>
+									Winter Menu
+								</a>
+							{/if}
+							{#if onTiki}
+								<a
+									href="/tiki-menu"
+									class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
+								>
+									Tiki Menu
+								</a>
+							{/if}
+						</div>
+					</section>
+				{/if}
 			</div>
 		</div>
 	</div>
