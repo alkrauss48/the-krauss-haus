@@ -40,10 +40,10 @@
 		);
 	}
 
-	$: onSummer = isOnSummerMenu();
-	$: onWinter = isOnWinterMenu();
-	$: onTiki = isOnTikiMenu();
-	$: onAnyMenu = onSummer || onWinter || onTiki;
+	const onSummer = isOnSummerMenu();
+	const onWinter = isOnWinterMenu();
+	const onTiki = isOnTikiMenu();
+	const onAnyMenu = onSummer || onWinter || onTiki;
 </script>
 
 <svelte:head>
@@ -103,7 +103,7 @@
 					<section class="mb-8">
 						<h2 class="text-2xl font-bold text-gray-800 mb-4">Ingredients</h2>
 						<ul class="space-y-2">
-							{#each cocktail.ingredients as ingredient}
+							{#each cocktail.ingredients as ingredient (ingredient)}
 								<li class="flex items-start">
 									<span class="text-amber-600 mr-2 mt-1">•</span>
 									<span class="text-gray-700">{ingredient}</span>
@@ -118,13 +118,13 @@
 					<section class="mb-8">
 						<h2 class="text-2xl font-bold text-gray-800 mb-4">Variations</h2>
 						<div class="grid gap-4 md:grid-cols-2">
-							{#each cocktail.variations as variation}
+							{#each cocktail.variations as variation (variation.name)}
 								<div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
 									<h3 class="font-semibold text-gray-800 mb-2">{variation.name}</h3>
 									<p class="text-gray-600 text-sm">{variation.description}</p>
 									{#if variation.images && variation.images.length > 0}
 										<div class="flex gap-2 mt-3">
-											{#each variation.images as image}
+											{#each variation.images as image (image)}
 												<img
 													src={image}
 													alt="{variation.name} variation"
