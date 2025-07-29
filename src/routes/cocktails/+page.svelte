@@ -101,11 +101,13 @@
 			{:else}
 				<!-- Table Header -->
 				<div class="border-b border-gray-200 bg-gray-50 px-6 py-4">
-					<div class="grid grid-cols-12 gap-4 items-center font-semibold text-gray-700">
-						<div class="col-span-2">Image</div>
-						<div class="col-span-3">Name</div>
-						<div class="col-span-5">Description</div>
-						<div class="col-span-2">Method</div>
+					<div
+						class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center font-semibold text-gray-700"
+					>
+						<div class="col-span-3 md:col-span-2">Image</div>
+						<div class="col-span-5 md:col-span-3">Name</div>
+						<div class="col-span-5 hidden md:block">Description</div>
+						<div class="col-span-3 hidden sm:block md:col-span-2">Method</div>
 					</div>
 				</div>
 
@@ -120,9 +122,9 @@
 							on:keydown={(e) => handleKeydown(e, cocktail.slug)}
 							in:fly={{ y: 20, duration: 300, delay: 900 + i * 50 }}
 						>
-							<div class="grid grid-cols-12 gap-4 items-center">
+							<div class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center">
 								<!-- Image -->
-								<div class="col-span-2">
+								<div class="col-span-3 md:col-span-2">
 									<div
 										class="w-16 h-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg overflow-hidden shadow-sm"
 									>
@@ -135,7 +137,7 @@
 								</div>
 
 								<!-- Name -->
-								<div class="col-span-3">
+								<div class="col-span-5 md:col-span-3">
 									<h3 class="font-semibold text-gray-800 text-lg">{cocktail.title}</h3>
 									{#if cocktail.subtitle}
 										<p class="text-gray-500 text-sm italic">{cocktail.subtitle}</p>
@@ -143,14 +145,14 @@
 								</div>
 
 								<!-- Description -->
-								<div class="col-span-5">
+								<div class="col-span-5 hidden md:block">
 									<p class="text-gray-600 text-sm leading-relaxed line-clamp-2">
 										{cocktail.description}
 									</p>
 								</div>
 
 								<!-- Method -->
-								<div class="col-span-2">
+								<div class="col-span-3 hidden sm:block md:col-span-2">
 									{#if cocktail.method}
 										<span
 											class="inline-block px-3 py-1 text-xs font-medium rounded-full text-gray-800"
