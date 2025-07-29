@@ -244,6 +244,7 @@
 					</div>
 					{#if cocktail.method}
 						<div class="mt-2">
+							<span class="text-xs text-gray-500 mb-2 font-light tracking-wide">Method:</span>
 							<span
 								class="px-3 py-1 text-xs font-medium rounded-full"
 								style="background-color: {methodColors[

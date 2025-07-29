@@ -90,6 +90,7 @@
 				<!-- Method Badge -->
 				{#if cocktail.method}
 					<div class="mb-8">
+						<span class="text-sm text-gray-500 mb-2 font-light tracking-wide">Method:</span>
 						<span
 							class="inline-block px-4 py-2 text-sm font-medium rounded-full text-gray-800"
 							style="background-color: {methodColors[cocktail.method]};"
