@@ -4,6 +4,7 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { methodColors } from '$lib/enums/methods';
+	import { handleAnchorClick } from '$lib/utils/navigation';
 
 	// Import menu data to check which menus contain this cocktail
 	import {
@@ -149,6 +150,7 @@
 							{#if onSummer}
 								<a
 									href="/summer-menu"
+									on:click={(e) => handleAnchorClick(e, '/summer-menu')}
 									class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
 								>
 									Summer Menu
@@ -157,6 +159,7 @@
 							{#if onWinter}
 								<a
 									href="/winter-menu"
+									on:click={(e) => handleAnchorClick(e, '/winter-menu')}
 									class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors"
 								>
 									Winter Menu
@@ -165,6 +168,7 @@
 							{#if onTiki}
 								<a
 									href="/tiki-menu"
+									on:click={(e) => handleAnchorClick(e, '/tiki-menu')}
 									class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
 								>
 									Tiki Menu

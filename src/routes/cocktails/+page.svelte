@@ -4,7 +4,7 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { methodColors } from '$lib/enums/methods';
-	import { goto } from '$app/navigation';
+	import { trackedGoto } from '$lib/utils/navigation';
 
 	export let data: PageData;
 	const { cocktails } = data;
@@ -17,7 +17,7 @@
 	);
 
 	function navigateToCocktail(slug: string): void {
-		goto(`/cocktails/${slug}`);
+		trackedGoto(`/cocktails/${slug}`);
 	}
 
 	function handleKeydown(event: KeyboardEvent, slug: string): void {

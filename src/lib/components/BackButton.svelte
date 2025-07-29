@@ -1,14 +1,19 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { fly } from 'svelte/transition';
+	import { goBack } from '$lib/utils/navigation';
+	import { navigationStore } from '$lib/stores/navigation';
 
-	function goBack(): void {
-		goto('/');
+	function handleGoBack(): void {
+		goBack();
 	}
+
+	// Check if there's a previous page in the navigation stack
+	$: canGoBack = $navigationStore.stack.length > 0;
+	$: buttonText = canGoBack ? 'Back' : 'Back to Home';
 </script>
 
 <button
-	on:click={goBack}
+	on:click={handleGoBack}
 	class="cursor-pointer mb-8 flex items-center text-gray-600 hover:text-amber-600 transition-colors duration-200 group"
 	in:fly={{ x: -20, duration: 400, delay: 300 }}
 >
@@ -24,5 +29,5 @@
 			clip-rule="evenodd"
 		/>
 	</svg>
-	Back to Home
+	{buttonText}
 </button>
