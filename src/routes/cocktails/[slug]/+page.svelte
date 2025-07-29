@@ -2,6 +2,7 @@
 	import type { PageData } from './$types';
 	import BackButton from '$lib/components/BackButton.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
+	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { methodColors } from '$lib/enums/methods';
 	import { handleAnchorClick } from '$lib/utils/navigation';
@@ -80,7 +81,14 @@
 			<div class="p-8">
 				<!-- Header -->
 				<header class="mb-8">
-					<h1 class="text-4xl font-bold text-gray-800 mb-2">{cocktail.title}</h1>
+					<div class="flex items-center gap-3 mb-2">
+						<h1 class="text-4xl font-bold text-gray-800">{cocktail.title}</h1>
+						<CopyLinkButton
+							url={typeof window !== 'undefined' ? window.location.href : ''}
+							ariaLabel="Copy link to {cocktail.title}"
+							size="md"
+						/>
+					</div>
 					{#if cocktail.subtitle}
 						<p class="text-xl text-gray-600 italic mb-4">{cocktail.subtitle}</p>
 					{/if}
