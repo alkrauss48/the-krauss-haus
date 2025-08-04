@@ -123,6 +123,14 @@
 					</section>
 				{/if}
 
+				<!-- Notes Section -->
+				{#if cocktail.notes}
+					<section class="mb-8">
+						<h2 class="text-2xl font-bold text-gray-800 mb-4">Notes</h2>
+						<p class="text-gray-700 leading-relaxed">{cocktail.notes}</p>
+					</section>
+				{/if}
+
 				<!-- Variations Section -->
 				{#if cocktail.variations && cocktail.variations.length > 0}
 					<section class="mb-8">

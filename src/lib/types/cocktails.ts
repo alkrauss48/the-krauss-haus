@@ -16,6 +16,7 @@ export interface Cocktail {
 	ingredients?: string[];
 	method?: CocktailMethod;
 	variations?: CocktailVariant[];
+	notes?: string;
 }
 
 export interface Category {
