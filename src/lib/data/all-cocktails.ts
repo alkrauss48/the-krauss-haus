@@ -8,6 +8,7 @@ import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
+import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
 import GLUHWEIN from '$lib/data/cocktails/gluhwein';
 import HOT_TODDY from '$lib/data/cocktails/hot-toddy';
@@ -33,9 +34,11 @@ import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
 import PENICILLIN from '$lib/data/cocktails/penicillin';
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
 import PORT_LIGHT from '$lib/data/cocktails/port-light';
+import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import SATURN from '$lib/data/cocktails/saturn';
 import SAZERAC from '$lib/data/cocktails/sazerac';
 import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
+import SPAGHETT from '$lib/data/cocktails/spaghett';
 import SPRITZ from '$lib/data/cocktails/spritz';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
 import TOM_AND_JERRY from '$lib/data/cocktails/tom-and-jerry';
@@ -50,6 +53,7 @@ export const allCocktails: Cocktail[] = [
 	COBRAS_FANG,
 	DAIQUIRI,
 	ESPRESSO_MARTINI,
+	FERNET_CON_COCA,
 	FRENCH_75,
 	GLUHWEIN,
 	HOT_TODDY,
@@ -75,9 +79,11 @@ export const allCocktails: Cocktail[] = [
 	PENICILLIN,
 	PIMMS_CUP,
 	PORT_LIGHT,
+	RAMOS_GIN_FIZZ,
 	SATURN,
 	SAZERAC,
 	SINGAPORE_SLING,
+	SPAGHETT,
 	SPRITZ,
 	THREE_DOTS_AND_A_DASH,
 	TOM_AND_JERRY,
