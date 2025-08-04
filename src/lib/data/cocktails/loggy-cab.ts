@@ -14,6 +14,29 @@ const LOGGY_CAB: Cocktail = {
 		'.5oz Rich simple syrup',
 		'4oz Soda water',
 		'Garnish: Lime wheel'
+	],
+	variations: [
+		{
+			name: 'Gimlet',
+			description: 'Classic cocktail. No soda water. Serve up.',
+			images: []
+		},
+		{
+			name: 'Tom Collins',
+			description: 'Classic cocktail. Swap out the lime for lemon.',
+			images: []
+		},
+		{
+			name: 'Gin Rickey',
+			description: 'Classic cocktail. No simple syrup.',
+			images: []
+		},
+		{
+			name: 'Cabin-style',
+			description:
+				'Swap syrup for 1T sugar. Use 3/4 - 1 lime, shake with shells. Dump all into glass.',
+			images: []
+		}
 	]
 };
 
