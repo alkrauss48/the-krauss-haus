@@ -24,6 +24,7 @@ import MARGARITA from '$lib/data/cocktails/margarita';
 import MARTINI from '$lib/data/cocktails/martini';
 import MERRY_MULE from '$lib/data/cocktails/merry-mule';
 import MINT_JULEP from '$lib/data/cocktails/mint-julep';
+import MISSIONARYS_DOWNFALL from '$lib/data/cocktails/missionarys-downfall';
 import MOJITO from '$lib/data/cocktails/mojito';
 import MOONWELL from '$lib/data/cocktails/moonwell';
 import NEGRONI from '$lib/data/cocktails/negroni';
@@ -37,6 +38,7 @@ import PORT_LIGHT from '$lib/data/cocktails/port-light';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import SATURN from '$lib/data/cocktails/saturn';
 import SAZERAC from '$lib/data/cocktails/sazerac';
+import SEA_LEGS from '$lib/data/cocktails/sea-legs';
 import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
 import SPAGHETT from '$lib/data/cocktails/spaghett';
 import SPRITZ from '$lib/data/cocktails/spritz';
@@ -69,6 +71,7 @@ export const allCocktails: Cocktail[] = [
 	MARTINI,
 	MERRY_MULE,
 	MINT_JULEP,
+	MISSIONARYS_DOWNFALL,
 	MOJITO,
 	MOONWELL,
 	NEGRONI,
@@ -82,6 +85,7 @@ export const allCocktails: Cocktail[] = [
 	RAMOS_GIN_FIZZ,
 	SATURN,
 	SAZERAC,
+	SEA_LEGS,
 	SINGAPORE_SLING,
 	SPAGHETT,
 	SPRITZ,
