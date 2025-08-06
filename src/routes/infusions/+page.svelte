@@ -24,8 +24,8 @@
 		<BackButton />
 
 		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-			<h1 class="text-4xl font-bold text-gray-800 mb-4">Spirit Infusions</h1>
-			<p class="text-gray-600">Easy infusions for fun flavor modifications!</p>
+			<h1 class="text-4xl font-bold text-gray-800 mb-4">Liquor Infusions</h1>
+			<p class="text-gray-600">Why buy a flavored spirit or liqueur if you can make your own?</p>
 		</header>
 
 		<div class="bg-white rounded-lg shadow-sm p-6">

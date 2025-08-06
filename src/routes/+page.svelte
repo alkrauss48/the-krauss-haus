@@ -48,7 +48,7 @@
 		<nav class="flex flex-col gap-4" aria-label="Secondary Menu Navigation">
 			<MenuLink href="/cocktails" label="All Cocktails" variant="secondary" />
 			<MenuLink href="/syrups" label="Homemade Syrups" variant="secondary" />
-			<MenuLink href="/infusions" label="Spirit Infusions" variant="secondary" />
+			<MenuLink href="/infusions" label="Liquor Infusions" variant="secondary" />
 		</nav>
 	</section>
 
