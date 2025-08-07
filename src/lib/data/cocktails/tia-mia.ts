@@ -1,0 +1,27 @@
+import { CocktailMethod } from '$lib/enums/methods';
+import type { Cocktail } from '$lib/types/cocktails';
+
+const TIA_MIA: Cocktail = {
+	title: 'Tia Mia',
+	description: 'Mezcal, jamaican rum, cointreau, orgeat, lime',
+	imagePath: '/images/cocktails/tia-mia.png',
+	slug: 'tia-mia',
+	method: CocktailMethod.Shaken,
+	ingredients: [
+		'1oz Mezcal',
+		'1oz Appleton Estate (Jamaican rum)',
+		'.5oz Cointreau',
+		'.5oz Orgeat',
+		'.75oz Lime',
+		'Garnish: Mint spring and lime wheel'
+	],
+	variations: [
+		{
+			name: 'Chili',
+			description: 'Add 1 dash smoked chili bitters',
+			images: []
+		}
+	]
+};
+
+export default TIA_MIA;

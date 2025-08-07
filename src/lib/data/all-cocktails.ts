@@ -43,7 +43,10 @@ import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
 import SPAGHETT from '$lib/data/cocktails/spaghett';
 import SPRITZ from '$lib/data/cocktails/spritz';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
+import TIA_MIA from '$lib/data/cocktails/tia-mia';
 import TOM_AND_JERRY from '$lib/data/cocktails/tom-and-jerry';
+import TORONTO from '$lib/data/cocktails/toronto';
+import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
 import ZOMBIE from '$lib/data/cocktails/zombie';
 
 // Create array of all cocktails (sorted alphabetically)
@@ -90,7 +93,10 @@ export const allCocktails: Cocktail[] = [
 	SPAGHETT,
 	SPRITZ,
 	THREE_DOTS_AND_A_DASH,
+	TIA_MIA,
 	TOM_AND_JERRY,
+	TORONTO,
+	VIEUX_CARRE,
 	ZOMBIE
 ].sort((a, b) => a.title.localeCompare(b.title));
 
