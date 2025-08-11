@@ -12,8 +12,11 @@ const MOJITO: Cocktail = {
 		'.75oz Lime',
 		'1 tbsp Sugar',
 		'6-10 leaves Mint',
-		'Garnish: Mint sprig & dash of Angostura bitters'
-	]
+		'Garnish: Mint sprig & dash of Angostura bitters',
+		'Soda water (to top)'
+	],
+	notes:
+		'Muddle lime, sugar, and mint lightly in glass. Add rum, then ice cubes. Stir, top with soda water and garnishes.'
 };
 
 export default MOJITO;
