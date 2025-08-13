@@ -6,11 +6,22 @@ export const BASE_SPIRIT: TagCategory = {
 };
 
 // Base Spirit Tags
-export const RUM: Tag = { label: 'Rum', category: BASE_SPIRIT };
-export const WHISKEY: Tag = { label: 'Whiskey', category: BASE_SPIRIT };
-export const TEQUILA: Tag = { label: 'Tequila', category: BASE_SPIRIT };
-export const MEZCAL: Tag = { label: 'Mezcal', category: BASE_SPIRIT };
-export const GIN: Tag = { label: 'Gin', category: BASE_SPIRIT };
-export const VODKA: Tag = { label: 'Vodka', category: BASE_SPIRIT };
-export const BRANDY: Tag = { label: 'Brandy', category: BASE_SPIRIT };
-export const AMARO: Tag = { label: 'Amaro', category: BASE_SPIRIT };
+const RUM: Tag = { label: 'Rum', category: BASE_SPIRIT };
+const WHISKEY: Tag = { label: 'Whiskey', category: BASE_SPIRIT };
+const TEQUILA: Tag = { label: 'Tequila', category: BASE_SPIRIT };
+const MEZCAL: Tag = { label: 'Mezcal', category: BASE_SPIRIT };
+const GIN: Tag = { label: 'Gin', category: BASE_SPIRIT };
+const VODKA: Tag = { label: 'Vodka', category: BASE_SPIRIT };
+const BRANDY: Tag = { label: 'Brandy', category: BASE_SPIRIT };
+const AMARO: Tag = { label: 'Amaro', category: BASE_SPIRIT };
+
+export const TAGS = {
+	RUM,
+	WHISKEY,
+	TEQUILA,
+	MEZCAL,
+	GIN,
+	VODKA,
+	BRANDY,
+	AMARO
+};
