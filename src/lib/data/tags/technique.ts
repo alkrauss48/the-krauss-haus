@@ -6,11 +6,11 @@ export const TECHNIQUE: TagCategory = {
 };
 
 // Technique Tags
-const STIRRED: Tag = { label: 'Stirred', category: TECHNIQUE };
-const SHAKEN: Tag = { label: 'Shaken', category: TECHNIQUE };
-const FLASH_BLENDED: Tag = { label: 'Flash Blended', category: TECHNIQUE };
-const BLENDED: Tag = { label: 'Blended', category: TECHNIQUE };
-const BUILT: Tag = { label: 'Built', category: TECHNIQUE };
+const SHAKEN: Tag = { label: 'Shaken', category: TECHNIQUE, order: 1 };
+const STIRRED: Tag = { label: 'Stirred', category: TECHNIQUE, order: 2 };
+const BUILT: Tag = { label: 'Built', category: TECHNIQUE, order: 3 };
+const FLASH_BLENDED: Tag = { label: 'Flash Blended', category: TECHNIQUE, order: 4 };
+const BLENDED: Tag = { label: 'Blended', category: TECHNIQUE, order: 5 };
 
 export const TAGS = {
 	STIRRED,

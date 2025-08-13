@@ -5,5 +5,6 @@ export interface TagCategory {
 
 export interface Tag {
 	label: string;
+	order: number;
 	category: TagCategory;
 }

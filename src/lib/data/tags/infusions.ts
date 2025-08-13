@@ -6,11 +6,11 @@ export const INFUSIONS: TagCategory = {
 };
 
 // Infusion Tags
-const CARAMEL_VODKA: Tag = { label: 'Caramel Vodka', category: INFUSIONS };
-const FALERNUM: Tag = { label: 'Falernum', category: INFUSIONS };
-const JALAPENO_TEQUILA: Tag = { label: 'Jalapeno Tequila', category: INFUSIONS };
-const LIMONCELLO: Tag = { label: 'Limoncello', category: INFUSIONS };
-const PEPPEMINT_VODKA: Tag = { label: 'Peppermint Vodka', category: INFUSIONS };
+const FALERNUM: Tag = { label: 'Falernum', category: INFUSIONS, order: 1 };
+const CARAMEL_VODKA: Tag = { label: 'Caramel Vodka', category: INFUSIONS, order: 2 };
+const JALAPENO_TEQUILA: Tag = { label: 'Jalapeno Tequila', category: INFUSIONS, order: 3 };
+const PEPPEMINT_VODKA: Tag = { label: 'Peppermint Vodka', category: INFUSIONS, order: 4 };
+const LIMONCELLO: Tag = { label: 'Limoncello', category: INFUSIONS, order: 5 };
 
 export const TAGS = {
 	CARAMEL_VODKA,
