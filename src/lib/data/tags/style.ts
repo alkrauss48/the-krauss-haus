@@ -6,24 +6,14 @@ export const STYLE: TagCategory = {
 };
 
 // Style Tags
-const CLASSIC: Tag = { label: 'Classic', category: STYLE, order: 1 };
-const MODERN: Tag = { label: 'Modern', category: STYLE, order: 2 };
-const ORIGINAL: Tag = { label: 'Original', category: STYLE, order: 3 };
-const TIKI: Tag = { label: 'Tiki', category: STYLE, order: 4 };
-const SOUR: Tag = { label: 'Sour', category: STYLE, order: 5 };
-const HIGHBALL: Tag = { label: 'Highball', category: STYLE, order: 6 };
-const LOWBALL: Tag = { label: 'Lowball', category: STYLE, order: 7 };
-const FROZEN: Tag = { label: 'Frozen', category: STYLE, order: 8 };
-const HOT: Tag = { label: 'Hot', category: STYLE, order: 9 };
+const TIKI: Tag = { label: 'Tiki', category: STYLE, order: 1 };
+const SOUR: Tag = { label: 'Sour', category: STYLE, order: 2 };
+const SPIRIT_FORWARD: Tag = { label: 'Spirit Forward', category: STYLE, order: 3 };
+const HIGHBALL: Tag = { label: 'Highball', category: STYLE, order: 4 };
 
 export const TAGS = {
 	TIKI,
-	CLASSIC,
-	MODERN,
-	ORIGINAL,
 	SOUR,
-	HIGHBALL,
-	LOWBALL,
-	FROZEN,
-	HOT
+	SPIRIT_FORWARD,
+	HIGHBALL
 };
