@@ -1,5 +1,6 @@
 import type { SectionColor } from './colors';
 import { CocktailMethod } from '../enums/methods';
+import type { Tag } from './tags';
 
 export interface CocktailVariant {
 	name: string;
@@ -17,6 +18,7 @@ export interface Cocktail {
 	method?: CocktailMethod;
 	variations?: CocktailVariant[];
 	notes?: string;
+	tags?: Tag[];
 }
 
 export interface Category {
