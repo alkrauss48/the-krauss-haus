@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const THREE_DOTS_AND_A_DASH: Cocktail = {
 	title: 'Three Dots and a Dash',
@@ -20,6 +21,17 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 		'.25oz Allspice dram',
 		'1 dash Angostura bitters',
 		'Garnish: Three maraschino cherries and pineapple frond'
+	],
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.BOOZY,
+		Tags.FlavorProfile.SPICED,
+		Tags.Technique.FLASH_BLENDED,
+		Tags.Infusions.FALERNUM,
+		Tags.Syrups.HONEY_SYRUP,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

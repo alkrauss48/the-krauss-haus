@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const SEA_LEGS: Cocktail = {
 	title: 'Sea Legs',
@@ -14,6 +15,15 @@ const SEA_LEGS: Cocktail = {
 		'.75oz Lime',
 		'2 dashes Celery bitters',
 		'Garnish: salted rim and dash of angostura bitters'
+	],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseSpirit.MEZCAL,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.HERBAL,
+		Tags.Technique.SHAKEN,
+		Tags.Syrups.ORGEAT,
+		Tags.Origin.MODERN
 	]
 };
 

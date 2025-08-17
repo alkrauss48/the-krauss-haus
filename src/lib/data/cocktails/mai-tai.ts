@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const MAI_TAI: Cocktail = {
 	title: 'Mai Tai',
@@ -17,6 +18,16 @@ const MAI_TAI: Cocktail = {
 		'1oz Lime',
 		'.25oz Demerara syrup',
 		'Garnish: Mint sprig and lime shell'
+	],
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.BOOZY,
+		Tags.Technique.SHAKEN,
+		Tags.Syrups.ORGEAT,
+		Tags.Syrups.DEMERARA_SYRUP,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

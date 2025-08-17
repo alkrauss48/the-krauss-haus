@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const NEGRONI: Cocktail = {
 	title: 'Negroni',
@@ -19,6 +20,15 @@ const NEGRONI: Cocktail = {
 			description: 'Sub mezcal for gin.',
 			images: []
 		}
+	],
+	tags: [
+		Tags.BaseSpirit.GIN,
+		Tags.FlavorProfile.BITTER,
+		Tags.FlavorProfile.BOOZY,
+		Tags.FlavorProfile.HERBAL,
+		Tags.Technique.STIRRED,
+		Tags.Style.SPIRIT_FORWARD,
+		Tags.Origin.CLASSIC
 	]
 };
 

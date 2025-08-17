@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const SAZERAC: Cocktail = {
 	title: 'Sazerac',
@@ -15,6 +16,16 @@ const SAZERAC: Cocktail = {
 		'1 dash Angostura bitters',
 		'.25oz Demerara syrup',
 		'Garnish: Lemon twist'
+	],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseSpirit.BRANDY,
+		Tags.FlavorProfile.BOOZY,
+		Tags.FlavorProfile.HERBAL,
+		Tags.Technique.STIRRED,
+		Tags.Syrups.DEMERARA_SYRUP,
+		Tags.Style.SPIRIT_FORWARD,
+		Tags.Origin.CLASSIC
 	]
 };
 

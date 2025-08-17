@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const CARAMEL_APPLE_SPICE: Cocktail = {
 	title: 'Caramel Apple Spice',
@@ -17,6 +18,14 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 		'Splash of Calvados',
 		'5oz Apple cider',
 		'Garnish: Cinnamon stick and maraschino cherry'
+	],
+	tags: [
+		Tags.BaseSpirit.BRANDY,
+		Tags.Infusions.CARAMEL_VODKA,
+		Tags.Temperature.HOT,
+		Tags.FlavorProfile.SPICED,
+		Tags.Technique.BUILT,
+		Tags.Origin.ORIGINAL
 	]
 };
 

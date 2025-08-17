@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const TIA_MIA: Cocktail = {
 	title: 'Tia Mia',
@@ -21,6 +22,14 @@ const TIA_MIA: Cocktail = {
 			description: 'Add 1 dash smoked chili bitters',
 			images: []
 		}
+	],
+	tags: [
+		Tags.BaseSpirit.MEZCAL,
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.CITRUS,
+		Tags.Technique.SHAKEN,
+		Tags.Syrups.ORGEAT,
+		Tags.Origin.MODERN
 	]
 };
 

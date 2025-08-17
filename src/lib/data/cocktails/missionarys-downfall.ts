@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const MISSIONARYS_DOWNFALL: Cocktail = {
 	title: "Missionary's Downfall",
@@ -17,7 +18,18 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		'158g (3/4 cup) crushed ice'
 	],
 	notes:
-		'Heat the pineapple for 1-2 minutes (this deactivates the bromelain, which is what gives pineapple its "bite"). Blend all ingredients without ice, until mint is shredded. Add ice and blend just enough to make it all smooth.'
+		'Makes ~12 oz. Heat the pineapple for 1-2 minutes (this deactivates the bromelain, which is what gives pineapple its "bite"). Blend all ingredients without ice, until mint is shredded. Add ice and blend just enough to make it all smooth.',
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.FRUITY,
+		Tags.FlavorProfile.HERBAL,
+		Tags.FlavorProfile.CITRUS,
+		Tags.Technique.BLENDED,
+		Tags.Syrups.HONEY_SYRUP,
+		Tags.Temperature.FROZEN,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
+	]
 };
 
 export default MISSIONARYS_DOWNFALL;

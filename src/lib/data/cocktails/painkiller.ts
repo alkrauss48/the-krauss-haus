@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const PAINKILLER: Cocktail = {
 	title: 'Painkiller',
@@ -14,6 +15,16 @@ const PAINKILLER: Cocktail = {
 		'1oz Orange juice',
 		'1oz Cream of coconut',
 		'Garnish: Freshly grated nutmeg'
+	],
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.FRUITY,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.REFRESHING,
+		Tags.FlavorProfile.CREAMY,
+		Tags.Technique.SHAKEN,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

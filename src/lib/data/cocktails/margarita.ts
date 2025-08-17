@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const MARGARITA: Cocktail = {
 	title: 'Margarita',
@@ -20,6 +21,14 @@ const MARGARITA: Cocktail = {
 			description: 'Swap .5oz of tequila with jalepeño infused tequila.',
 			images: []
 		}
+	],
+	tags: [
+		Tags.BaseSpirit.TEQUILA,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.REFRESHING,
+		Tags.Technique.SHAKEN,
+		Tags.Style.SOUR,
+		Tags.Origin.CLASSIC
 	]
 };
 

@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const MARTINI: Cocktail = {
 	title: 'Martini',
@@ -7,7 +8,14 @@ const MARTINI: Cocktail = {
 	imagePath: '/images/cocktails/winter/martini.png',
 	slug: 'martini',
 	method: CocktailMethod.Stirred,
-	ingredients: ['2oz Gin', '1oz Dry vermouth', '2 dashes Orange bitters', 'Garnish: Olive']
+	ingredients: ['2oz Gin', '1oz Dry vermouth', '2 dashes Orange bitters', 'Garnish: Olive'],
+	tags: [
+		Tags.BaseSpirit.GIN,
+		Tags.FlavorProfile.BOOZY,
+		Tags.Technique.STIRRED,
+		Tags.Style.SPIRIT_FORWARD,
+		Tags.Origin.CLASSIC
+	]
 };
 
 export default MARTINI;

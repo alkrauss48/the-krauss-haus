@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const JET_PILOT: Cocktail = {
 	title: 'Jet Pilot',
@@ -20,6 +21,17 @@ const JET_PILOT: Cocktail = {
 		'.5oz Grapefruit',
 		'1 dash Herbstura',
 		'Garnish: Maraschino cherry'
+	],
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.BOOZY,
+		Tags.FlavorProfile.SPICED,
+		Tags.Technique.FLASH_BLENDED,
+		Tags.Infusions.FALERNUM,
+		Tags.Syrups.CINNAMON_SYRUP,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

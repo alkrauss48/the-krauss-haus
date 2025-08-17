@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const MOONWELL: Cocktail = {
 	title: 'Moonwell',
@@ -43,6 +44,17 @@ const MOONWELL: Cocktail = {
 			description: 'TBD',
 			images: ['/images/wow/race_dwarf_male.jpg', '/images/wow/class_priest.jpg']
 		}
+	],
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.HERBAL,
+		Tags.FlavorProfile.BUBBLY,
+		Tags.FlavorProfile.REFRESHING,
+		Tags.Technique.BUILT,
+		Tags.Syrups.GRENADINE,
+		Tags.Style.HIGHBALL,
+		Tags.Origin.ORIGINAL
 	]
 };
 

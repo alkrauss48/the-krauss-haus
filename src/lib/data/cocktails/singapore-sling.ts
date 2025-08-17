@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const SINGAPORE_SLING: Cocktail = {
 	title: 'Singapore Sling',
@@ -19,6 +20,16 @@ const SINGAPORE_SLING: Cocktail = {
 		'.75oz Lime juice',
 		'3 dashes Angostura bitters',
 		'Garnish: Pineapple wedge and maraschino cherry'
+	],
+	tags: [
+		Tags.BaseSpirit.GIN,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.FRUITY,
+		Tags.FlavorProfile.HERBAL,
+		Tags.Technique.SHAKEN,
+		Tags.Syrups.GRENADINE,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

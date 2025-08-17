@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const LOGGY_CAB: Cocktail = {
 	title: 'Loggy Cab',
@@ -37,6 +38,16 @@ const LOGGY_CAB: Cocktail = {
 				'Swap syrup for 1T sugar. Use 3/4 - 1 lime, shake with shells. Dump all into glass.',
 			images: []
 		}
+	],
+	tags: [
+		Tags.BaseSpirit.GIN,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.BUBBLY,
+		Tags.FlavorProfile.REFRESHING,
+		Tags.Technique.BUILT,
+		Tags.Syrups.RICH_SIMPLE_SYRUP,
+		Tags.Style.HIGHBALL,
+		Tags.Origin.ORIGINAL
 	]
 };
 

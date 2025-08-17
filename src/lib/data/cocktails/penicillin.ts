@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const PENICILLIN: Cocktail = {
 	title: 'Penicillin',
@@ -13,6 +14,16 @@ const PENICILLIN: Cocktail = {
 		'.75oz Honey-ginger syrup',
 		'.75oz Lemon',
 		'Garnish: Candied ginger'
+	],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.BOOZY,
+		Tags.FlavorProfile.SPICED,
+		Tags.Technique.SHAKEN,
+		Tags.Syrups.HONEY_GINGER_SYRUP,
+		Tags.Style.SOUR,
+		Tags.Origin.MODERN
 	]
 };
 

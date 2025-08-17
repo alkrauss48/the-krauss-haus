@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const VIEUX_CARRE: Cocktail = {
 	title: 'Vieux Carré',
@@ -16,6 +17,15 @@ const VIEUX_CARRE: Cocktail = {
 		'2 dashes Angostura bitters',
 		"2 dashes Peychaud's bitters",
 		'Garnish: Lemon twist'
+	],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseSpirit.BRANDY,
+		Tags.FlavorProfile.BOOZY,
+		Tags.FlavorProfile.HERBAL,
+		Tags.Technique.STIRRED,
+		Tags.Style.SPIRIT_FORWARD,
+		Tags.Origin.CLASSIC
 	]
 };
 

@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const PORT_LIGHT: Cocktail = {
 	title: 'Port Light',
@@ -15,6 +16,16 @@ const PORT_LIGHT: Cocktail = {
 		'.5oz Passion fruit syrup',
 		'(Optional) Egg white',
 		'Garnish: Mint spring, pineapple square, and maraschino cherry'
+	],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.FRUITY,
+		Tags.Technique.SHAKEN,
+		Tags.Syrups.HONEY_SYRUP,
+		Tags.Syrups.PASSION_FRUIT_SYRUP,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

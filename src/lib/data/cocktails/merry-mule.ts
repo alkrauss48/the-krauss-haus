@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const MERRY_MULE: Cocktail = {
 	title: 'Merry Mule',
@@ -14,6 +15,15 @@ const MERRY_MULE: Cocktail = {
 		'1/2 Lime',
 		'4oz Ginger beer',
 		'Garnish: Cinnamon stick and apple slices'
+	],
+	tags: [
+		Tags.BaseSpirit.VODKA,
+		Tags.FlavorProfile.SPICED,
+		Tags.FlavorProfile.CITRUS,
+		Tags.Technique.BUILT,
+		Tags.Syrups.CINNAMON_SYRUP,
+		Tags.Style.HIGHBALL,
+		Tags.Origin.ORIGINAL
 	]
 };
 

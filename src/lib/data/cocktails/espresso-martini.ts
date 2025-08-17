@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const ESPRESSO_MARTINI: Cocktail = {
 	title: 'Espresso Martini',
@@ -25,6 +26,13 @@ const ESPRESSO_MARTINI: Cocktail = {
 			description: 'Swap .5oz of Cognac with peppermint infused vodka.',
 			images: []
 		}
+	],
+	tags: [
+		Tags.BaseSpirit.BRANDY,
+		Tags.FlavorProfile.BOOZY,
+		Tags.Technique.SHAKEN,
+		Tags.Syrups.DEMERARA_SYRUP,
+		Tags.Origin.MODERN
 	]
 };
 

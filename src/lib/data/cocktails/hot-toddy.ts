@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const HOT_TODDY: Cocktail = {
 	title: 'Hot Toddy',
@@ -14,6 +15,14 @@ const HOT_TODDY: Cocktail = {
 		'Honey to taste',
 		'1/4 Lemon, juiced',
 		'Garnish: Cinnamon stick, lemon wheel, and maraschino cherry'
+	],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.FlavorProfile.SPICED,
+		Tags.FlavorProfile.HERBAL,
+		Tags.Temperature.HOT,
+		Tags.Technique.BUILT,
+		Tags.Origin.CLASSIC
 	]
 };
 

@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const OLD_FASHIONED: Cocktail = {
 	title: 'Old Fashioned',
@@ -29,6 +30,14 @@ const OLD_FASHIONED: Cocktail = {
 			description: 'Sub Aged rhum agricole for bourbon.',
 			images: []
 		}
+	],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.FlavorProfile.BOOZY,
+		Tags.Technique.BUILT,
+		Tags.Syrups.DEMERARA_SYRUP,
+		Tags.Style.SPIRIT_FORWARD,
+		Tags.Origin.CLASSIC
 	]
 };
 

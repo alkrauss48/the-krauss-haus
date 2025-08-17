@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const IRON_RANGER: Cocktail = {
 	title: 'Iron Ranger',
@@ -15,6 +16,17 @@ const IRON_RANGER: Cocktail = {
 		'.75oz Lemon',
 		'1oz Pineapple juice',
 		'Garnish: Mint sprig and freshly grated cinnamon'
+	],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.FRUITY,
+		Tags.FlavorProfile.SPICED,
+		Tags.Technique.SHAKEN,
+		Tags.Infusions.FALERNUM,
+		Tags.Syrups.DEMERARA_SYRUP,
+		Tags.Style.TIKI,
+		Tags.Origin.MODERN
 	]
 };
 

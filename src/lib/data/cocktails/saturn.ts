@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const SATURN: Cocktail = {
 	title: 'Saturn',
@@ -15,6 +16,20 @@ const SATURN: Cocktail = {
 		'.25oz Orgeat',
 		'.25oz Falernum',
 		'Garnish: Lemon peel and maraschino cherry'
+	],
+	tags: [
+		Tags.BaseSpirit.GIN,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.FRUITY,
+		Tags.FlavorProfile.HERBAL,
+		Tags.FlavorProfile.SPICED,
+		Tags.FlavorProfile.REFRESHING,
+		Tags.Technique.SHAKEN,
+		Tags.Infusions.FALERNUM,
+		Tags.Syrups.PASSION_FRUIT_SYRUP,
+		Tags.Syrups.ORGEAT,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

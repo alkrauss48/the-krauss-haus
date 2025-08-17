@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const PIMMS_CUP: Cocktail = {
 	title: "Pimm's Cup",
@@ -11,6 +12,16 @@ const PIMMS_CUP: Cocktail = {
 		"2oz Pimm's #1",
 		'4oz sparkling lemonade',
 		'Garnish: orange, mint sprig, strawberry, cucumber'
+	],
+	tags: [
+		Tags.BaseSpirit.GIN,
+		Tags.FlavorProfile.HERBAL,
+		Tags.FlavorProfile.FRUITY,
+		Tags.FlavorProfile.BUBBLY,
+		Tags.FlavorProfile.REFRESHING,
+		Tags.Technique.BUILT,
+		Tags.Style.HIGHBALL,
+		Tags.Origin.CLASSIC
 	]
 };
 

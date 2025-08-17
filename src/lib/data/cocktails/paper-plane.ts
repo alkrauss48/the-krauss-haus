@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const PAPER_PLANE: Cocktail = {
 	title: 'Paper Plane',
@@ -7,7 +8,16 @@ const PAPER_PLANE: Cocktail = {
 	description: 'Bourbon, amaro nonino, aperol, lemon.',
 	imagePath: '/images/cocktails/summer/paper-plane.png',
 	method: CocktailMethod.Shaken,
-	ingredients: ['.75oz Bourbon', '.75oz Amaro Nonino', '.75oz Aperol', '.75oz Lemon']
+	ingredients: ['.75oz Bourbon', '.75oz Amaro Nonino', '.75oz Aperol', '.75oz Lemon'],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseSpirit.AMARO,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.BITTER,
+		Tags.Technique.SHAKEN,
+		Tags.Style.SOUR,
+		Tags.Origin.MODERN
+	]
 };
 
 export default PAPER_PLANE;

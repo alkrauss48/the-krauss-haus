@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const ANCIENT_MARINER: Cocktail = {
 	title: 'Ancient Mariner',
@@ -16,6 +17,15 @@ const ANCIENT_MARINER: Cocktail = {
 		'.5oz Lime',
 		'.5oz Grapefruit',
 		'Garnish: Mint sprig and lime wedge'
+	],
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.SPICED,
+		Tags.Technique.SHAKEN,
+		Tags.Syrups.DEMERARA_SYRUP,
+		Tags.Style.TIKI,
+		Tags.Origin.MODERN
 	]
 };
 

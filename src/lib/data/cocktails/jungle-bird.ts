@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const JUNGLE_BIRD: Cocktail = {
 	title: 'Jungle Bird',
@@ -22,6 +23,16 @@ const JUNGLE_BIRD: Cocktail = {
 			description: 'Float .25 oz of Hamilton Pot Still Jamaican Black',
 			images: []
 		}
+	],
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.BaseSpirit.AMARO,
+		Tags.FlavorProfile.BITTER,
+		Tags.FlavorProfile.FRUITY,
+		Tags.Technique.SHAKEN,
+		Tags.Syrups.DEMERARA_SYRUP,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

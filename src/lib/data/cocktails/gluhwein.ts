@@ -1,4 +1,6 @@
+import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const GLUHWEIN: Cocktail = {
 	title: 'Glühwein',
@@ -14,6 +16,13 @@ const GLUHWEIN: Cocktail = {
 		'6 Cloves',
 		'1/4C Brown sugar',
 		'2oz Brandy'
+	],
+	tags: [
+		Tags.BaseSpirit.BRANDY,
+		Tags.FlavorProfile.SPICED,
+		Tags.Temperature.HOT,
+		Tags.Technique.BUILT,
+		Tags.Origin.CLASSIC
 	]
 };
 

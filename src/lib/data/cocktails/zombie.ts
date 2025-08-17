@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const ZOMBIE: Cocktail = {
 	title: 'Zombie',
@@ -21,6 +22,18 @@ const ZOMBIE: Cocktail = {
 		'1tsp Grenadine',
 		'1 dash Herbstura',
 		'Garnish: Mint sprig'
+	],
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.SPICED,
+		Tags.FlavorProfile.BOOZY,
+		Tags.FlavorProfile.HERBAL,
+		Tags.Technique.FLASH_BLENDED,
+		Tags.Infusions.FALERNUM,
+		Tags.Syrups.GRENADINE,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

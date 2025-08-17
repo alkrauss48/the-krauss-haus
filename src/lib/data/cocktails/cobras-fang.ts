@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const COBRAS_FANG: Cocktail = {
 	title: "Cobra's Fang",
@@ -16,6 +17,18 @@ const COBRAS_FANG: Cocktail = {
 		'.5oz Orange',
 		'1 dash Herbstura',
 		'Garnish: Mint sprig and cinnamon stick'
+	],
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.BOOZY,
+		Tags.FlavorProfile.SPICED,
+		Tags.FlavorProfile.HERBAL,
+		Tags.Technique.FLASH_BLENDED,
+		Tags.Infusions.FALERNUM,
+		Tags.Syrups.FASSIONOLA,
+		Tags.Style.TIKI,
+		Tags.Origin.CLASSIC
 	]
 };
 

@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const MANHATTAN: Cocktail = {
 	title: 'Manhattan',
@@ -19,6 +20,14 @@ const MANHATTAN: Cocktail = {
 			description: 'Sub Amaro Lucano for sweet vermouth.',
 			images: []
 		}
+	],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseSpirit.AMARO,
+		Tags.FlavorProfile.BOOZY,
+		Tags.Style.SPIRIT_FORWARD,
+		Tags.Technique.STIRRED,
+		Tags.Origin.CLASSIC
 	]
 };
 

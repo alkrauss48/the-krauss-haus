@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const MOJITO: Cocktail = {
 	title: 'Mojito',
@@ -16,7 +17,16 @@ const MOJITO: Cocktail = {
 		'Soda water (to top)'
 	],
 	notes:
-		'Muddle lime, sugar, and mint lightly in glass. Add rum, then ice cubes. Stir, top with soda water and garnishes.'
+		'Muddle lime, sugar, and mint lightly in glass. Add rum, then ice cubes. Stir, top with soda water and garnishes.',
+	tags: [
+		Tags.BaseSpirit.RUM,
+		Tags.FlavorProfile.CITRUS,
+		Tags.FlavorProfile.HERBAL,
+		Tags.FlavorProfile.REFRESHING,
+		Tags.Technique.BUILT,
+		Tags.Style.HIGHBALL,
+		Tags.Origin.CLASSIC
+	]
 };
 
 export default MOJITO;

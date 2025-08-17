@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Tags } from '../all-tags';
 
 const MINT_JULEP: Cocktail = {
 	title: 'Mint Julep',
@@ -7,7 +8,16 @@ const MINT_JULEP: Cocktail = {
 	imagePath: '/images/cocktails/summer/mint-julep.png',
 	slug: 'mint-julep',
 	method: CocktailMethod.Built,
-	ingredients: ['2oz Bourbon', '.5oz Rich simple syrup', '6-10 leaves Mint', 'Garnish: Mint sprig']
+	ingredients: ['2oz Bourbon', '.5oz Rich simple syrup', '6-10 leaves Mint', 'Garnish: Mint sprig'],
+	tags: [
+		Tags.BaseSpirit.WHISKEY,
+		Tags.FlavorProfile.HERBAL,
+		Tags.FlavorProfile.BOOZY,
+		Tags.Style.SPIRIT_FORWARD,
+		Tags.Technique.BUILT,
+		Tags.Syrups.RICH_SIMPLE_SYRUP,
+		Tags.Origin.CLASSIC
+	]
 };
 
 export default MINT_JULEP;
