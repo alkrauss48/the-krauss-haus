@@ -31,7 +31,8 @@ const ESPRESSO_MARTINI: Cocktail = {
 		Tags.BaseSpirit.BRANDY,
 		Tags.Technique.SHAKEN,
 		Tags.Syrups.DEMERARA_SYRUP,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.Infusions.PEPPEMINT_VODKA
 	]
 };
 
