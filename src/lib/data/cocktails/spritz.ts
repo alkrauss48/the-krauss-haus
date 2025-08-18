@@ -13,7 +13,7 @@ const SPRITZ: Cocktail = {
 		Tags.BaseSpirit.AMARO,
 		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.BUBBLY,
-		Tags.FlavorProfile.REFRESHING,
+		Tags.AlcoholLevel.LOW,
 		Tags.Technique.BUILT,
 		Tags.Origin.MODERN
 	]

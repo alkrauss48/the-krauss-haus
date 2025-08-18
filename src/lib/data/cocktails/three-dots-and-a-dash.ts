@@ -25,7 +25,7 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.CITRUS,
-		Tags.FlavorProfile.BOOZY,
+		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.FLASH_BLENDED,
 		Tags.Infusions.FALERNUM,

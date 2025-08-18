@@ -25,7 +25,7 @@ const JET_PILOT: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.CITRUS,
-		Tags.FlavorProfile.BOOZY,
+		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.FLASH_BLENDED,
 		Tags.Infusions.FALERNUM,

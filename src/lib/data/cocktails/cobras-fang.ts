@@ -21,7 +21,7 @@ const COBRAS_FANG: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.CITRUS,
-		Tags.FlavorProfile.BOOZY,
+		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.SPICED,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.FLASH_BLENDED,

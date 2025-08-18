@@ -18,7 +18,6 @@ const PENICILLIN: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
-		Tags.FlavorProfile.BOOZY,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
 		Tags.Syrups.HONEY_GINGER_SYRUP,

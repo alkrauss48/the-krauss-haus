@@ -20,7 +20,6 @@ const SAZERAC: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.WHISKEY,
 		Tags.BaseSpirit.BRANDY,
-		Tags.FlavorProfile.BOOZY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Syrups.DEMERARA_SYRUP,

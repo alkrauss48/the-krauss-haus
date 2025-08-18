@@ -29,7 +29,8 @@ const TIA_MIA: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
 		Tags.Syrups.ORGEAT,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.AlcoholLevel.HIGH
 	]
 };
 

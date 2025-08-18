@@ -28,7 +28,8 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		Tags.Syrups.HONEY_SYRUP,
 		Tags.Temperature.FROZEN,
 		Tags.Style.TIKI,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.AlcoholLevel.LOW
 	]
 };
 

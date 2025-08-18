@@ -25,7 +25,7 @@ const MARGARITA: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.TEQUILA,
 		Tags.FlavorProfile.CITRUS,
-		Tags.FlavorProfile.REFRESHING,
+		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
 		Tags.Origin.CLASSIC

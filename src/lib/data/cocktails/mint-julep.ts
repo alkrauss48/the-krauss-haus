@@ -12,7 +12,6 @@ const MINT_JULEP: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.WHISKEY,
 		Tags.FlavorProfile.HERBAL,
-		Tags.FlavorProfile.BOOZY,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Technique.BUILT,
 		Tags.Syrups.RICH_SIMPLE_SYRUP,

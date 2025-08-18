@@ -17,7 +17,7 @@ const TORONTO: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.WHISKEY,
 		Tags.BaseSpirit.AMARO,
-		Tags.FlavorProfile.BOOZY,
+		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.STIRRED,
 		Tags.Syrups.DEMERARA_SYRUP,

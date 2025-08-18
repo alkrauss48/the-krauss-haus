@@ -21,7 +21,6 @@ const VIEUX_CARRE: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.WHISKEY,
 		Tags.BaseSpirit.BRANDY,
-		Tags.FlavorProfile.BOOZY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,

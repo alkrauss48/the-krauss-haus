@@ -21,7 +21,6 @@ const HURRICANE: Cocktail = {
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
-		Tags.FlavorProfile.REFRESHING,
 		Tags.Technique.SHAKEN,
 		Tags.Syrups.FASSIONOLA,
 		Tags.Style.TIKI,

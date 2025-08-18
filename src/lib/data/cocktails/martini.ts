@@ -11,7 +11,7 @@ const MARTINI: Cocktail = {
 	ingredients: ['2oz Gin', '1oz Dry vermouth', '2 dashes Orange bitters', 'Garnish: Olive'],
 	tags: [
 		Tags.BaseSpirit.GIN,
-		Tags.FlavorProfile.BOOZY,
+		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC

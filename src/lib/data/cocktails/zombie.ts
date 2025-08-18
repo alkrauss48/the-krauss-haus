@@ -27,7 +27,7 @@ const ZOMBIE: Cocktail = {
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
-		Tags.FlavorProfile.BOOZY,
+		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.FLASH_BLENDED,
 		Tags.Infusions.FALERNUM,

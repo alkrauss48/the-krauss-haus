@@ -1,4 +1,3 @@
-import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
 
@@ -22,7 +21,8 @@ const GLUHWEIN: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.AlcoholLevel.LOW
 	]
 };
 

@@ -50,7 +50,7 @@ const MOONWELL: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.BUBBLY,
-		Tags.FlavorProfile.REFRESHING,
+		Tags.AlcoholLevel.LOW,
 		Tags.Technique.BUILT,
 		Tags.Syrups.GRENADINE,
 		Tags.Style.HIGHBALL,

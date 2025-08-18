@@ -29,7 +29,6 @@ const ESPRESSO_MARTINI: Cocktail = {
 	],
 	tags: [
 		Tags.BaseSpirit.BRANDY,
-		Tags.FlavorProfile.BOOZY,
 		Tags.Technique.SHAKEN,
 		Tags.Syrups.DEMERARA_SYRUP,
 		Tags.Origin.MODERN

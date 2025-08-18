@@ -19,7 +19,6 @@ const FRENCH_75: Cocktail = {
 		Tags.BaseSpirit.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BUBBLY,
-		Tags.FlavorProfile.BOOZY,
 		Tags.Technique.SHAKEN,
 		Tags.Syrups.RICH_SIMPLE_SYRUP,
 		Tags.Style.SOUR,

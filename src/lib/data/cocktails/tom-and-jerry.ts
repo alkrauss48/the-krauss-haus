@@ -24,7 +24,8 @@ const TOM_AND_JERRY: Cocktail = {
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
 		Tags.Syrups.TOM_AND_JERRY_BATTER,
-		Tags.Origin.ORIGINAL
+		Tags.Origin.ORIGINAL,
+		Tags.AlcoholLevel.LOW
 	]
 };
 

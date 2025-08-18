@@ -33,7 +33,6 @@ const OLD_FASHIONED: Cocktail = {
 	],
 	tags: [
 		Tags.BaseSpirit.WHISKEY,
-		Tags.FlavorProfile.BOOZY,
 		Tags.Technique.BUILT,
 		Tags.Syrups.DEMERARA_SYRUP,
 		Tags.Style.SPIRIT_FORWARD,

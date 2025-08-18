@@ -9,6 +9,7 @@ import { INFUSIONS, TAGS as INFUSIONS_TAGS } from '$lib/data/tags/infusions';
 import { SYRUPS, TAGS as SYRUPS_TAGS } from '$lib/data/tags/syrups';
 import { ORIGIN, TAGS as ORIGIN_TAGS } from '$lib/data/tags/origin';
 import { TEMPERATURE, TAGS as TEMPERATURE_TAGS } from '$lib/data/tags/temperature';
+import { ALCOHOL_LEVEL, TAGS as ALCOHOL_LEVEL_TAGS } from '$lib/data/tags/alcohol-level';
 
 // Structured namespace for easy access
 export const Tags = {
@@ -19,7 +20,8 @@ export const Tags = {
 	Infusions: INFUSIONS_TAGS,
 	Syrups: SYRUPS_TAGS,
 	Origin: ORIGIN_TAGS,
-	Temperature: TEMPERATURE_TAGS
+	Temperature: TEMPERATURE_TAGS,
+	AlcoholLevel: ALCOHOL_LEVEL_TAGS
 } as const;
 
 // Create arrays of all tags by category for convenience
@@ -28,10 +30,11 @@ export const allTagCategories: TagCategory[] = [
 	FLAVOR_PROFILE,
 	STYLE,
 	ORIGIN,
+	ALCOHOL_LEVEL,
 	TECHNIQUE,
-	INFUSIONS,
+	TEMPERATURE,
 	SYRUPS,
-	TEMPERATURE
+	INFUSIONS
 ];
 
 // Create a map of all tag categories by label for quick lookups

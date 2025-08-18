@@ -12,7 +12,6 @@ const CAIPIRINHA: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.CITRUS,
-		Tags.FlavorProfile.REFRESHING,
 		Tags.Style.SOUR,
 		Tags.Technique.BUILT,
 		Tags.Origin.CLASSIC

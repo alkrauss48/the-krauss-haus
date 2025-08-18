@@ -18,7 +18,7 @@ const PIMMS_CUP: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.BUBBLY,
-		Tags.FlavorProfile.REFRESHING,
+		Tags.AlcoholLevel.LOW,
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
 		Tags.Origin.CLASSIC

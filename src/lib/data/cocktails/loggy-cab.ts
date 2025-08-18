@@ -43,7 +43,6 @@ const LOGGY_CAB: Cocktail = {
 		Tags.BaseSpirit.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BUBBLY,
-		Tags.FlavorProfile.REFRESHING,
 		Tags.Technique.BUILT,
 		Tags.Syrups.RICH_SIMPLE_SYRUP,
 		Tags.Style.HIGHBALL,

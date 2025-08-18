@@ -22,7 +22,8 @@ const AMARETTO_SOUR: Cocktail = {
 		Tags.Technique.SHAKEN,
 		Tags.Syrups.RICH_SIMPLE_SYRUP,
 		Tags.Style.SOUR,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.AlcoholLevel.LOW
 	]
 };
 

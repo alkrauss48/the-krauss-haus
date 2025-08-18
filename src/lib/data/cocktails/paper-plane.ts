@@ -14,6 +14,7 @@ const PAPER_PLANE: Cocktail = {
 		Tags.BaseSpirit.AMARO,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BITTER,
+		Tags.AlcoholLevel.LOW,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
 		Tags.Origin.MODERN

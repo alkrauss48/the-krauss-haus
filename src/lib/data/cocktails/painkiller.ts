@@ -20,7 +20,6 @@ const PAINKILLER: Cocktail = {
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.CITRUS,
-		Tags.FlavorProfile.REFRESHING,
 		Tags.FlavorProfile.CREAMY,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,

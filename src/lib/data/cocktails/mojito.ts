@@ -22,7 +22,6 @@ const MOJITO: Cocktail = {
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
-		Tags.FlavorProfile.REFRESHING,
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
 		Tags.Origin.CLASSIC

@@ -22,7 +22,7 @@ const MAI_TAI: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.CITRUS,
-		Tags.FlavorProfile.BOOZY,
+		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.SHAKEN,
 		Tags.Syrups.ORGEAT,
 		Tags.Syrups.DEMERARA_SYRUP,

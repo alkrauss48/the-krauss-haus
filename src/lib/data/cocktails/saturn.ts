@@ -23,7 +23,7 @@ const SATURN: Cocktail = {
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.SPICED,
-		Tags.FlavorProfile.REFRESHING,
+		Tags.AlcoholLevel.LOW,
 		Tags.Technique.SHAKEN,
 		Tags.Infusions.FALERNUM,
 		Tags.Syrups.PASSION_FRUIT_SYRUP,

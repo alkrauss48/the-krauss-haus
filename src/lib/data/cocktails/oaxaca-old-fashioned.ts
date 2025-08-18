@@ -18,7 +18,6 @@ const OAXACA_OLD_FASHIONED: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.TEQUILA,
 		Tags.BaseSpirit.MEZCAL,
-		Tags.FlavorProfile.BOOZY,
 		Tags.Technique.BUILT,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.MODERN

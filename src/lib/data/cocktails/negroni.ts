@@ -24,7 +24,6 @@ const NEGRONI: Cocktail = {
 	tags: [
 		Tags.BaseSpirit.GIN,
 		Tags.FlavorProfile.BITTER,
-		Tags.FlavorProfile.BOOZY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,

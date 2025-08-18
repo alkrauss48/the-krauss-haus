@@ -25,7 +25,8 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 		Tags.Temperature.HOT,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.BUILT,
-		Tags.Origin.ORIGINAL
+		Tags.Origin.ORIGINAL,
+		Tags.AlcoholLevel.LOW
 	]
 };
 
