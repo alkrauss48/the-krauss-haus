@@ -2,7 +2,7 @@ import type { Tag, TagCategory } from '$lib/types/tags';
 
 export const ALCOHOL_LEVEL: TagCategory = {
 	label: 'Alcohol Level',
-	color: '#E53E3E' // red
+	color: '#e11d48' // softer rose red
 };
 
 // Alcohol Level Tags

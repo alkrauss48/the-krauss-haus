@@ -2,7 +2,7 @@ import type { Tag, TagCategory } from '$lib/types/tags';
 
 export const BASE_SPIRIT: TagCategory = {
 	label: 'Base Spirit',
-	color: '#B5651D' // rum-like brown
+	color: '#a16207' // softer amber brown
 };
 
 // Base Spirit Tags

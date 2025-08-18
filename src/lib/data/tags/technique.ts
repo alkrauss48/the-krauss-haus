@@ -2,7 +2,7 @@ import type { Tag, TagCategory } from '$lib/types/tags';
 
 export const TECHNIQUE: TagCategory = {
 	label: 'Technique',
-	color: '#FF5722' // orange
+	color: '#f59e0b' // softer amber orange
 };
 
 // Technique Tags

@@ -2,7 +2,7 @@ import type { Tag, TagCategory } from '$lib/types/tags';
 
 export const TEMPERATURE: TagCategory = {
 	label: 'Temperature',
-	color: '#007ACC' // tiki blue
+	color: '#06b6d4' // softer cyan blue
 };
 
 // Temperature Tags

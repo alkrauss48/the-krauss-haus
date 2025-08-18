@@ -2,7 +2,7 @@ import type { Tag, TagCategory } from '$lib/types/tags';
 
 export const FLAVOR_PROFILE: TagCategory = {
 	label: 'Flavor Profile',
-	color: '#FBC02D' // yellow/gold
+	color: '#10b981' // softer emerald green
 };
 
 // Flavor Profile Tags

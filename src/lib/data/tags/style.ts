@@ -2,7 +2,7 @@ import type { Tag, TagCategory } from '$lib/types/tags';
 
 export const STYLE: TagCategory = {
 	label: 'Style',
-	color: '#007ACC' // tiki blue
+	color: '#0891b2' // softer teal blue
 };
 
 // Style Tags

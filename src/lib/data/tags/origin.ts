@@ -2,7 +2,7 @@ import type { Tag, TagCategory } from '$lib/types/tags';
 
 export const ORIGIN: TagCategory = {
 	label: 'Origin',
-	color: '#007ACC' // tiki blue
+	color: '#a3a3a3' // soft warm gray
 };
 
 // Origin Tags

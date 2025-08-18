@@ -2,7 +2,7 @@ import type { Tag, TagCategory } from '$lib/types/tags';
 
 export const SYRUPS: TagCategory = {
 	label: 'Syrups',
-	color: '#007ACC' // tiki blue
+	color: '#eab308' // softer golden yellow
 };
 
 // Syrup Tags
