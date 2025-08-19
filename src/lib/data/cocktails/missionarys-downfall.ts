@@ -4,17 +4,17 @@ import { Tags } from '../all-tags';
 
 const MISSIONARYS_DOWNFALL: Cocktail = {
 	title: "Missionary's Downfall",
-	description: 'Miller high life, aperol, lemon.',
+	description: 'Blended light rum, peach liqueur, mint, pineapple, honey syrup, lime.',
 	imagePath: '/images/cocktails/missionarys-downfall.png',
 	slug: 'missionarys-downfall',
 	method: CocktailMethod.Blended,
 	ingredients: [
 		'1oz Probitas (Blended light rum)',
 		'.5oz Peach liqueur',
+		'12 large mint leaves',
+		'56g (1/4 cup) diced fresh pineapple',
 		'1oz Honey syrup',
 		'.5oz Lime',
-		'56g (1/4 cup) diced fresh pineapple',
-		'12 large mint leaves',
 		'158g (3/4 cup) crushed ice'
 	],
 	notes:
