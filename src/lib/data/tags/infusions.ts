@@ -1,7 +1,7 @@
 import type { Tag, TagCategory } from '$lib/types/tags';
 
 export const INFUSIONS: TagCategory = {
-	label: 'Infusions',
+	label: 'Homemade Infusions',
 	color: '#8b5cf6' // softer violet purple
 };
 
