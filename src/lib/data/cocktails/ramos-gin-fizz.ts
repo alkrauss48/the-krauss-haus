@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const RAMOS_GIN_FIZZ: Cocktail = {
 	title: 'Ramos Gin Fizz',
 	description:
-		'Gin, lemon, lime, simple syrup, egg white, heavy cream, soda water, orange blossom water',
+		'Gin, lemon, lime, simple syrup, egg white, heavy cream, soda water, orange blossom water.',
 	imagePath: '/images/cocktails/ramos-gin-fizz.png',
 	slug: 'ramos-gin-fizz',
 	method: CocktailMethod.Built,

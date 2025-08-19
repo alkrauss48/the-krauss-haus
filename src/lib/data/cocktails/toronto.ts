@@ -4,7 +4,7 @@ import { Tags } from '../all-tags';
 
 const TORONTO: Cocktail = {
 	title: 'Toronto',
-	description: 'Rye whiskey, fernet branca, demerara syrup, lemon twist',
+	description: 'Rye whiskey, fernet branca, demerara syrup, lemon twist.',
 	imagePath: '/images/cocktails/toronto.png',
 	slug: 'toronto',
 	method: CocktailMethod.Stirred,

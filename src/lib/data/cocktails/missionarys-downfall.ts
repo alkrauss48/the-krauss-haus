@@ -4,7 +4,7 @@ import { Tags } from '../all-tags';
 
 const MISSIONARYS_DOWNFALL: Cocktail = {
 	title: "Missionary's Downfall",
-	description: 'Miller high life, aperol, lemon',
+	description: 'Miller high life, aperol, lemon.',
 	imagePath: '/images/cocktails/missionarys-downfall.png',
 	slug: 'missionarys-downfall',
 	method: CocktailMethod.Blended,

@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const VIEUX_CARRE: Cocktail = {
 	title: 'Vieux Carré',
 	description:
-		"Rye whiskey, cognac, sweet vermouth, benedictine, angostura bitters, peychaud's bitters, lemon twist",
+		"Rye whiskey, cognac, sweet vermouth, benedictine, angostura bitters, peychaud's bitters, lemon twist.",
 	imagePath: '/images/cocktails/vieux-carre.png',
 	slug: 'vieux-carre',
 	method: CocktailMethod.Stirred,

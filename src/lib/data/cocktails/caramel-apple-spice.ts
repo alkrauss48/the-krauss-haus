@@ -6,7 +6,7 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	title: 'Caramel Apple Spice',
 	subtitle: 'A Krauss Family original',
 	description:
-		'Applejack, goldschläger, caramel vodka, apple strudel liqueur, calvados, apple cider',
+		'Applejack, goldschläger, caramel vodka, apple strudel liqueur, calvados, apple cider.',
 	imagePath: '/images/cocktails/winter/caramel-apple-spice.png',
 	slug: 'caramel-apple-spice',
 	method: CocktailMethod.Built,

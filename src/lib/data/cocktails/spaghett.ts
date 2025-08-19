@@ -4,7 +4,7 @@ import { Tags } from '../all-tags';
 
 const SPAGHETT: Cocktail = {
 	title: 'Spaghett',
-	description: 'Miller high life, aperol, lemon',
+	description: 'Miller high life, aperol, lemon.',
 	imagePath: '/images/cocktails/spaghett.png',
 	slug: 'spaghett',
 	method: CocktailMethod.Built,

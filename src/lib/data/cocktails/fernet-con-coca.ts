@@ -4,7 +4,7 @@ import { Tags } from '../all-tags';
 
 const FERNET_CON_COCA: Cocktail = {
 	title: 'Fernet con Coca',
-	description: 'Fernet branca, coca cola, ice',
+	description: 'Fernet branca, coca cola, ice.',
 	imagePath: '/images/cocktails/fernet-con-coca.png',
 	slug: 'fernet-con-coca',
 	method: CocktailMethod.Built,
