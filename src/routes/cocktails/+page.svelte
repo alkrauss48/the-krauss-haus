@@ -299,9 +299,6 @@
 								<!-- Name -->
 								<div class="col-span-5 md:col-span-3">
 									<h3 class="font-semibold text-gray-800 text-lg">{cocktail.title}</h3>
-									{#if cocktail.subtitle}
-										<p class="text-gray-500 text-sm italic">{cocktail.subtitle}</p>
-									{/if}
 								</div>
 
 								<!-- Description -->
