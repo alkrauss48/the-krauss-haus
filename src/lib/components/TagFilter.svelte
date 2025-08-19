@@ -128,6 +128,44 @@
 			closeSidebar();
 		}
 	}
+
+	// Helper function to convert hex color to rgba
+	function hexToRgba(hex: string, alpha: number): string {
+		const r = parseInt(hex.slice(1, 3), 16);
+		const g = parseInt(hex.slice(3, 5), 16);
+		const b = parseInt(hex.slice(5, 7), 16);
+		return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+	}
+
+	// Get category-based styling for tags
+	function getTagStyling(tag: Tag, selected: boolean, disabled: boolean) {
+		const categoryColor = tag.category.color;
+
+		if (selected) {
+			return {
+				background: categoryColor,
+				border: categoryColor,
+				color: 'white'
+			};
+		}
+
+		if (disabled) {
+			return {
+				background: '#f3f4f6', // gray-100
+				border: '#e5e7eb', // gray-200
+				color: '#9ca3af' // gray-400
+			};
+		}
+
+		// Default state with subtle category color tint
+		return {
+			background: hexToRgba(categoryColor, 0.08),
+			border: hexToRgba(categoryColor, 0.2),
+			color: '#374151', // gray-700
+			hoverBackground: hexToRgba(categoryColor, 0.12),
+			hoverBorder: hexToRgba(categoryColor, 0.3)
+		};
+	}
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -148,7 +186,7 @@
 	class:translate-x-full={!isOpen}
 >
 	<!-- Sidebar Header -->
-	<div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 z-10">
+	<div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 z-20">
 		<div class="flex items-center justify-between">
 			<h2 class="text-lg font-semibold text-gray-800">Filter Cocktails</h2>
 			<button
@@ -249,34 +287,67 @@
 
 					<!-- Category Tags -->
 					{#if isExpanded}
-						<div class="space-y-2 pl-6" transition:slide>
+						<div class="space-y-3 pl-6" transition:slide>
 							{#each categoryTags as tag (`${tag.label}-${selectedTagsKey}`)}
 								{@const count = getTagCount(tag)}
 								{@const selected = isTagSelected(tag)}
 								{@const disabled = isTagDisabled(tag)}
+								{@const styling = getTagStyling(tag, selected, disabled)}
+
 								<button
-									class="w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg border transition-all duration-200"
+									class="w-full flex items-center justify-between rounded-xl border-2 transition-all duration-300 transform group relative overflow-hidden py-2.5 px-3 text-sm"
 									class:cursor-pointer={!disabled}
 									class:cursor-not-allowed={disabled}
-									class:hover:shadow-sm={!disabled}
-									class:bg-white={!selected && !disabled}
-									class:border-gray-300={!selected && !disabled}
-									class:text-gray-700={!selected && !disabled}
-									class:hover:border-gray-400={!selected && !disabled}
-									class:hover:bg-gray-50={!selected && !disabled}
-									class:text-white={selected}
-									class:border-transparent={selected}
-									class:shadow-sm={selected}
-									class:bg-gray-100={disabled}
-									class:border-gray-200={disabled}
-									class:text-gray-400={disabled}
+									class:hover:scale-[1.02]={!disabled && !selected}
+									class:hover:shadow-lg={!disabled}
+									class:shadow-md={selected}
+									class:scale-[0.98]={disabled}
 									class:opacity-50={disabled}
-									style={selected ? `background-color: ${tag.category.color};` : ''}
+									style="
+										background-color: {styling.background};
+										border-color: {styling.border};
+										color: {styling.color};
+									"
 									{disabled}
 									on:click={() => toggleTag(tag)}
+									on:mouseenter={!disabled && !selected
+										? (e) => {
+												e.currentTarget.style.backgroundColor =
+													styling.hoverBackground || styling.background;
+												e.currentTarget.style.borderColor = styling.hoverBorder || styling.border;
+											}
+										: undefined}
+									on:mouseleave={!disabled && !selected
+										? (e) => {
+												e.currentTarget.style.backgroundColor = styling.background;
+												e.currentTarget.style.borderColor = styling.border;
+											}
+										: undefined}
 								>
-									<span>{tag.label}</span>
-									<span class="text-xs opacity-75 ml-2">({count})</span>
+									<!-- Background gradient overlay for selected state -->
+									{#if selected}
+										<div
+											class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-10"
+										></div>
+									{/if}
+
+									<div class="flex items-center gap-2 relative z-10">
+										<span class="font-medium">{tag.label}</span>
+									</div>
+
+									<div class="flex items-center gap-1 relative z-10">
+										<span
+											class="text-xs px-2 py-1 rounded-full font-semibold"
+											class:bg-white={selected}
+											class:text-black={selected}
+											class:bg-gray-100={!selected && !disabled}
+											class:text-gray-600={!selected && !disabled}
+											class:bg-gray-200={disabled}
+											class:text-gray-500={disabled}
+										>
+											{count}
+										</span>
+									</div>
 								</button>
 							{/each}
 						</div>
