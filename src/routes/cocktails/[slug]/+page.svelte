@@ -4,8 +4,8 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { fade, fly } from 'svelte/transition';
-	import { methodColors } from '$lib/enums/methods';
 	import { handleAnchorClick } from '$lib/utils/navigation';
+	import type { Tag } from '$lib/types/tags';
 
 	// Import menu data to check which menus contain this cocktail
 	import {
@@ -46,6 +46,25 @@
 	const onWinter = isOnWinterMenu();
 	const onTiki = isOnTikiMenu();
 	const onAnyMenu = onSummer || onWinter || onTiki;
+
+	// Helper function to convert category label to URL-friendly key
+	function categoryToUrlKey(categoryLabel: string): string {
+		return categoryLabel.toLowerCase().replace(/\s+/g, '-');
+	}
+
+	// Generate URL for cocktails page with specific tag filter
+	function getTagFilterUrl(tag: Tag): string {
+		const categoryKey = categoryToUrlKey(tag.category.label);
+		return `/cocktails?${categoryKey}=${encodeURIComponent(tag.label)}`;
+	}
+
+	// Helper function to convert hex color to rgba
+	function hexToRgba(hex: string, alpha: number): string {
+		const r = parseInt(hex.slice(1, 3), 16);
+		const g = parseInt(hex.slice(3, 5), 16);
+		const b = parseInt(hex.slice(5, 7), 16);
+		return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+	}
 </script>
 
 <svelte:head>
@@ -95,31 +114,62 @@
 					<p class="text-lg text-gray-700 leading-relaxed">{cocktail.description}</p>
 				</header>
 
-				<!-- Method Badge -->
-				{#if cocktail.method}
-					<div class="mb-8">
-						<span class="text-sm text-gray-500 mb-2 font-light tracking-wide">Method:</span>
-						<span
-							class="inline-block px-4 py-2 text-sm font-medium rounded-full text-gray-800"
-							style="background-color: {methodColors[cocktail.method]};"
-						>
-							{cocktail.method.charAt(0).toUpperCase() + cocktail.method.slice(1)}
-						</span>
-					</div>
-				{/if}
-
-				<!-- Ingredients Section -->
-				{#if cocktail.ingredients && cocktail.ingredients.length > 0}
+				<!-- Ingredients and Tags Section -->
+				{#if (cocktail.ingredients && cocktail.ingredients.length > 0) || (cocktail.tags && cocktail.tags.length > 0)}
 					<section class="mb-8">
-						<h2 class="text-2xl font-bold text-gray-800 mb-4">Ingredients</h2>
-						<ul class="space-y-2">
-							{#each cocktail.ingredients as ingredient (ingredient)}
-								<li class="flex items-start">
-									<span class="text-amber-600 mr-2 mt-1">•</span>
-									<span class="text-gray-700">{ingredient}</span>
-								</li>
-							{/each}
-						</ul>
+						<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+							<!-- Ingredients (Left/Main) -->
+							{#if cocktail.ingredients && cocktail.ingredients.length > 0}
+								<div class="lg:col-span-2">
+									<h2 class="text-2xl font-bold text-gray-800 mb-4">Ingredients</h2>
+									<ul class="space-y-2">
+										{#each cocktail.ingredients as ingredient (ingredient)}
+											<li class="flex items-start">
+												<span class="text-amber-600 mr-2 mt-1">•</span>
+												<span class="text-gray-700">{ingredient}</span>
+											</li>
+										{/each}
+									</ul>
+								</div>
+							{/if}
+
+							<!-- Tags Sidebar (Right) -->
+							{#if cocktail.tags && cocktail.tags.length > 0}
+								<div class="lg:col-span-1">
+									<h3 class="text-lg font-semibold text-gray-600 mb-3">Tags</h3>
+									<div class="flex flex-wrap gap-2">
+										{#each cocktail.tags as tag (tag.label)}
+											<a
+												href={getTagFilterUrl(tag)}
+												on:click={(e) => handleAnchorClick(e, getTagFilterUrl(tag))}
+												class="inline-block px-2 py-1 text-xs font-medium rounded-md transition-all duration-200 hover:scale-105 border border-opacity-20"
+												style="
+													background-color: {hexToRgba(tag.category.color, 0.05)};
+													border-color: {hexToRgba(tag.category.color, 0.2)};
+													color: {tag.category.color};
+												"
+												on:mouseenter={(e) => {
+													e.currentTarget.style.backgroundColor = hexToRgba(
+														tag.category.color,
+														0.08
+													);
+													e.currentTarget.style.borderColor = hexToRgba(tag.category.color, 0.3);
+												}}
+												on:mouseleave={(e) => {
+													e.currentTarget.style.backgroundColor = hexToRgba(
+														tag.category.color,
+														0.05
+													);
+													e.currentTarget.style.borderColor = hexToRgba(tag.category.color, 0.2);
+												}}
+											>
+												{tag.label}
+											</a>
+										{/each}
+									</div>
+								</div>
+							{/if}
+						</div>
 					</section>
 				{/if}
 
