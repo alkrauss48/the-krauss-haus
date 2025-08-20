@@ -3,7 +3,7 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import BackButton from '$lib/components/BackButton.svelte';
 	import { fade, fly } from 'svelte/transition';
-	import * as PartyData from '$lib/data/party';
+	import * as PartyData from '$lib/types/party';
 
 	import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
 	import HURRICANE from '$lib/data/cocktails/hurricane';

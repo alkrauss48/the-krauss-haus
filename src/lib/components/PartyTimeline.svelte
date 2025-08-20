@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CocktailCard from '$lib/components/CocktailCard.svelte';
 	import { fly } from 'svelte/transition';
-	import * as PartyData from '$lib/data/party';
+	import * as PartyData from '$lib/types/party';
 
 	export let partySchedule: PartyData.PartyTimeSlot[];
 	export let partyColors: {
