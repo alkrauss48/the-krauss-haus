@@ -1,59 +1,16 @@
 import type { Recipe } from '$lib/types/recipes';
 
+// Import all infusion recipes
+import CARAMEL_VODKA from '$lib/data/recipes/caramel-vodka';
+import FALERNUM from '$lib/data/recipes/falernum';
+import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
+import LIMONCELLO from '$lib/data/recipes/limoncello';
+import PEPPERMINT_VODKA from '$lib/data/recipes/peppermint-vodka';
+
 export const infusions: Recipe[] = [
-	{
-		name: 'Jalapeño Tequila',
-		description: 'Tequila infused with fresh jalapeño for a spicy kick.',
-		ingredients: ['4oz blanco tequila', '1 medium jalapeño, sliced w/ half seeds'],
-		instructions:
-			'Add ingredients to a mason jar and let infuse for 24 hours, swirling around every few hours. Strain.',
-		notes: 'Used in the Spicy Margarita. If you want a spicier infusion, use more seeds.'
-	},
-	{
-		name: 'Caramel Vodka',
-		description: 'Vodka infused with homemade caramel syrup for a sweet, rich flavor.',
-		ingredients: ['1 oz caramel syrup (see recipe)', '3 oz vodka'],
-		instructions: 'Mix ingredients together. Easy as that!',
-		notes:
-			'Used in the Caramel Apple Spice. Because the caramel syrup has no fat, this infusion will maintain a nice, translucent color with no separation.'
-	},
-	{
-		name: 'Peppermint Vodka',
-		description: 'Vodka infused with peppermint candies for a festive, minty spirit.',
-		ingredients: ['4 oz vodka', '2 hard peppermint candies (the ones with the red swirls)'],
-		instructions:
-			'Add ingredients to a mason jar and let infuse for 2-3 hours, swirling around every 15-30 minutes. Remove any lingering pieces.',
-		notes: 'Used in the Peppermint Espresso Martini. This infusion will turn a nice pink/red color.'
-	},
-	{
-		name: 'Falernum',
-		description: 'A spiced liqueur with notes of ginger, clove, and lime',
-		ingredients: [
-			'8 oz overproof rum (like Planteray OFTD)',
-			'12 limes zested (not juiced)',
-			'24 cloves',
-			'30g ginger, chopped',
-			'1 tsp grated nutmeg',
-			'1 vanilla bean, split and scraped. Include seeds and pot',
-			'16 oz semi-rich (1.5:1) simple syrup made with unsweetened oatmilk',
-			'1 oz amaretto'
-		],
-		instructions:
-			'Steep all ingredients in rum for 24 hours, besides simple syrup and amaretto. Strain to remove solids. Add simple syrup and amaretto.',
-		notes:
-			"Makes ~24oz at 23% ABV. Used in the Three Dots & a Dash, the Jet Pilot, the Cobra's Fang, the Saturn, and the Iron Ranger. Because of its alcohol content, this will keep for up to 2 years refrigerated."
-	},
-	{
-		name: 'Limoncello',
-		description: 'A classic Italian liqueur made from lemons',
-		ingredients: [
-			'Peels from 5 lemons, unwaxed (no white pithe)',
-			'1C Everclear (95% ABV grain liquor)',
-			'1.5C Water',
-			'200g Sugar'
-		],
-		instructions:
-			'Infuse everclear and lemon peels for 2-3 weeks (lower end if more white pithe). Heat water and sugar to make syrup. Strain lemon peels out, add syrup. Let rest for 2 weeks in freezer or fridge.',
-		notes: 'Makes ~24oz at 31% ABV. Takes about a month to make. Always serve chilled.'
-	}
+	CARAMEL_VODKA,
+	FALERNUM,
+	JALAPENO_TEQUILA,
+	LIMONCELLO,
+	PEPPERMINT_VODKA
 ];
