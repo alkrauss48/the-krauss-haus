@@ -2,6 +2,8 @@
 	import type { Recipe } from '$lib/types/recipes';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import { trackedGoto } from '$lib/utils/navigation';
+	import { allCocktails } from '$lib/data/all-cocktails';
 
 	export let recipes: Recipe[];
 
@@ -71,6 +73,34 @@
 		handleTabKey(event);
 	}
 
+	// Convert category label to URL-friendly key (same as cocktails page)
+	function categoryToUrlKey(categoryLabel: string): string {
+		return categoryLabel.toLowerCase().replace(/\s+/g, '-');
+	}
+
+	// Generate URL for cocktails page with recipe tag filter
+	function getCocktailsUrlWithTag(recipe: Recipe): string {
+		if (!recipe.tag) return '/cocktails';
+
+		const categoryKey = categoryToUrlKey(recipe.tag.category.label);
+		const tagLabel = recipe.tag.label;
+		return `/cocktails?${categoryKey}=${encodeURIComponent(tagLabel)}`;
+	}
+
+	function navigateToCocktails(recipe: Recipe): void {
+		const url = getCocktailsUrlWithTag(recipe);
+		trackedGoto(url);
+	}
+
+	// Count cocktails that use this recipe's tag
+	function getCocktailCountForRecipe(recipe: Recipe): number {
+		if (!recipe.tag) return 0;
+
+		return allCocktails.filter((cocktail) =>
+			(cocktail.tags || []).some((cocktailTag) => cocktailTag.label === recipe.tag!.label)
+		).length;
+	}
+
 	// Add event listener when component mounts
 	onMount(() => {
 		window.addEventListener('keydown', handleKeydown);
@@ -118,9 +148,31 @@
 			aria-label="Recipe details"
 		>
 			<div class="flex justify-between items-start mb-6">
-				<h3 class="text-2xl font-bold text-gray-800">{selectedRecipe?.name}</h3>
+				<div class="flex-1 pr-4">
+					<h3 class="text-2xl font-bold text-gray-800 mb-3">{selectedRecipe?.name}</h3>
+					{#if selectedRecipe?.tag && getCocktailCountForRecipe(selectedRecipe) > 0}
+						{@const cocktailCount = getCocktailCountForRecipe(selectedRecipe)}
+						<button
+							class="inline-flex items-center px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200 text-sm gap-2 cursor-pointer"
+							on:click={() => selectedRecipe && navigateToCocktails(selectedRecipe)}
+							aria-label="View {cocktailCount} cocktail{cocktailCount === 1
+								? ''
+								: 's'} that use {selectedRecipe.name}"
+						>
+							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+								/>
+							</svg>
+							View Cocktails ({cocktailCount})
+						</button>
+					{/if}
+				</div>
 				<button
-					class="text-gray-400 hover:text-gray-600"
+					class="text-gray-400 hover:text-gray-600 flex-shrink-0"
 					on:click={toggleModal}
 					aria-label="Close modal"
 				>
