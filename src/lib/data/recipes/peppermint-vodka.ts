@@ -1,4 +1,5 @@
 import type { Recipe } from '$lib/types/recipes';
+import { Tags } from '$lib/data/all-tags';
 
 const PEPPERMINT_VODKA: Recipe = {
 	name: 'Peppermint Vodka',
@@ -7,7 +8,8 @@ const PEPPERMINT_VODKA: Recipe = {
 	ingredients: ['4 oz vodka', '2 hard peppermint candies (the ones with the red swirls)'],
 	instructions:
 		'Add ingredients to a mason jar and let infuse for 2-3 hours, swirling around every 15-30 minutes. Remove any lingering pieces.',
-	notes: 'Used in the Peppermint Espresso Martini. This infusion will turn a nice pink/red color.'
+	notes: 'Used in the Peppermint Espresso Martini. This infusion will turn a nice pink/red color.',
+	tag: Tags.Infusions.PEPPEMINT_VODKA
 };
 
 export default PEPPERMINT_VODKA;

@@ -1,4 +1,5 @@
 import type { Recipe } from '$lib/types/recipes';
+import { Tags } from '$lib/data/all-tags';
 
 const RICH_SIMPLE_SYRUP: Recipe = {
 	name: 'Rich Simple Syrup',
@@ -8,7 +9,8 @@ const RICH_SIMPLE_SYRUP: Recipe = {
 	instructions:
 		'Combine sugar and water in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves completely. Do not boil. Let cool and store in an airtight container in the refrigerator.',
 	notes:
-		'The 2:1 ratio makes it more concentrated than regular simple syrup, so you can use less in cocktails. This syrup will keep for up to 6 months in the refrigerator. '
+		'The 2:1 ratio makes it more concentrated than regular simple syrup, so you can use less in cocktails. This syrup will keep for up to 6 months in the refrigerator. ',
+	tag: Tags.Syrups.RICH_SIMPLE_SYRUP
 };
 
 export default RICH_SIMPLE_SYRUP;

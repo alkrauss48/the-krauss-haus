@@ -1,4 +1,5 @@
 import type { Recipe } from '$lib/types/recipes';
+import { Tags } from '$lib/data/all-tags';
 
 const HONEY_GINGER_SYRUP: Recipe = {
 	name: 'Honey-Ginger Syrup',
@@ -11,7 +12,8 @@ const HONEY_GINGER_SYRUP: Recipe = {
 	],
 	instructions:
 		'Combine honey, water, and ginger in a saucepan. Heat over medium heat, stirring occasionally, until honey dissolves. Simmer for 5 minutes to infuse the ginger flavor. Remove from heat, pour everything into a mason jar. Let cool for 12 hours. Remove ginger.',
-	notes: 'Used in the Penicillin.'
+	notes: 'Used in the Penicillin.',
+	tag: Tags.Syrups.HONEY_GINGER_SYRUP
 };
 
 export default HONEY_GINGER_SYRUP;

@@ -1,4 +1,5 @@
 import type { Recipe } from '$lib/types/recipes';
+import { Tags } from '$lib/data/all-tags';
 
 const ORGEAT: Recipe = {
 	name: 'Orgeat',
@@ -13,7 +14,8 @@ const ORGEAT: Recipe = {
 	],
 	instructions:
 		'Combine oatmilk and sugar in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves. Remove from heat, and add remaining ingredients.',
-	notes: 'Used in the Mai Tai and the Saturn. Recipe makes about 3.5 cups.'
+	notes: 'Used in the Mai Tai and the Saturn. Recipe makes about 3.5 cups.',
+	tag: Tags.Syrups.ORGEAT
 };
 
 export default ORGEAT;

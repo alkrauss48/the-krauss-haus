@@ -1,4 +1,5 @@
 import type { Recipe } from '$lib/types/recipes';
+import { Tags } from '$lib/data/all-tags';
 
 const CARAMEL_SYRUP: Recipe = {
 	name: 'Caramel Syrup',
@@ -8,7 +9,8 @@ const CARAMEL_SYRUP: Recipe = {
 	instructions:
 		'Combine 1/4 cup water and all of the sugar in a saucepan. Cook over medium heat until sugar is dissolved. Cover, and continue boiling until sugar turns amber (about 10-15 minutes). Remove from heat cool slightly, and CAREFULLY add the remaining sugar. Stir until dissolved. Add vanilla extract.',
 	notes:
-		'Used to make caramel vodka, which is used in the Caramel Apple Spice. Recipe makes about 1/2 cup.'
+		'Used to make caramel vodka, which is used in the Caramel Apple Spice. Recipe makes about 1/2 cup.',
+	tag: Tags.Syrups.CARAMEL_SYRUP
 };
 
 export default CARAMEL_SYRUP;

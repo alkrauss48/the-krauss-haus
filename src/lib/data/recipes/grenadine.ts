@@ -1,4 +1,5 @@
 import type { Recipe } from '$lib/types/recipes';
+import { Tags } from '$lib/data/all-tags';
 
 const GRENADINE: Recipe = {
 	name: 'Grenadine',
@@ -12,7 +13,8 @@ const GRENADINE: Recipe = {
 	],
 	instructions:
 		'Combine pomegranate juice and sugar in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves. Remove from heat, add pomegranate molasses and orange blossom water.',
-	notes: 'Used in the Moonwell, Jack Rose, and Singapore Sling. Recipe makes about 1.5 cups.'
+	notes: 'Used in the Moonwell, Jack Rose, and Singapore Sling. Recipe makes about 1.5 cups.',
+	tag: Tags.Syrups.GRENADINE
 };
 
 export default GRENADINE;
