@@ -7,7 +7,7 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 	subtitle: 'A celebration of rum and spice',
 	description:
 		'Aged rhum agricole, blended rum,demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
-	imagePath: '/images/cocktails/tiki/three-dots-and-a-dash.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/three-dots-and-a-dash.png',
 	slug: 'three-dots-and-a-dash',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [

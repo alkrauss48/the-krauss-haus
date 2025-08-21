@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const MOJITO: Cocktail = {
 	title: 'Mojito',
 	description: 'Light rum, lime, sugar, mint, angostura bitters.',
-	imagePath: '/images/cocktails/summer/mojito.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mojito.png',
 	slug: 'mojito',
 	method: CocktailMethod.Built,
 	ingredients: [

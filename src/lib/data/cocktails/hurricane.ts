@@ -6,7 +6,7 @@ const HURRICANE: Cocktail = {
 	title: 'Hurricane',
 	subtitle: 'A powerful blend of rums with a tropical twist',
 	description: 'Jamaican rum, blended rum, fassionola, lemon.',
-	imagePath: '/images/cocktails/tiki/hurricane.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hurricane.png',
 	slug: 'hurricane',
 	method: CocktailMethod.Shaken,
 	ingredients: [

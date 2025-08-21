@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const SPRITZ: Cocktail = {
 	title: 'Spritz',
 	description: 'Prosecco, aperol, soda water, orange wedge.',
-	imagePath: '/images/cocktails/summer/spritz.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/spritz.png',
 	slug: 'spritz',
 	method: CocktailMethod.Built,
 	ingredients: ['3oz Prosecco', '2oz Aperol', '1oz Soda water', 'Garnish: Orange wedge'],

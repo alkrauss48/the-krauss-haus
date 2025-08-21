@@ -6,7 +6,7 @@ const VIEUX_CARRE: Cocktail = {
 	title: 'Vieux Carré',
 	description:
 		"Rye whiskey, cognac, sweet vermouth, benedictine, angostura bitters, peychaud's bitters, lemon twist.",
-	imagePath: '/images/cocktails/vieux-carre.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/vieux-carre.png',
 	slug: 'vieux-carre',
 	method: CocktailMethod.Stirred,
 	ingredients: [

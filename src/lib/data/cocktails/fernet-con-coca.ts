@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const FERNET_CON_COCA: Cocktail = {
 	title: 'Fernet con Coca',
 	description: 'Fernet branca, coca cola, ice.',
-	imagePath: '/images/cocktails/fernet-con-coca.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/fernet-con-coca.png',
 	slug: 'fernet-con-coca',
 	method: CocktailMethod.Built,
 	ingredients: ['30% Fernet branca', '70% Coca cola'],

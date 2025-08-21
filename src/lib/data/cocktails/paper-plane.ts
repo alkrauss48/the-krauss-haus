@@ -6,7 +6,7 @@ const PAPER_PLANE: Cocktail = {
 	title: 'Paper Plane',
 	slug: 'paper-plane',
 	description: 'Bourbon, amaro nonino, aperol, lemon.',
-	imagePath: '/images/cocktails/summer/paper-plane.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/paper-plane.png',
 	method: CocktailMethod.Shaken,
 	ingredients: ['.75oz Bourbon', '.75oz Amaro Nonino', '.75oz Aperol', '.75oz Lemon'],
 	tags: [

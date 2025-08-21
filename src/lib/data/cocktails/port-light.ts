@@ -6,7 +6,7 @@ const PORT_LIGHT: Cocktail = {
 	title: 'Port Light',
 	subtitle: 'A bourbon-based tropical delight',
 	description: 'Bourbon, honey, lemon, passion fruit.',
-	imagePath: '/images/cocktails/tiki/port-light.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/port-light.png',
 	slug: 'port-light',
 	method: CocktailMethod.Shaken,
 	ingredients: [

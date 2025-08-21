@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const SEA_LEGS: Cocktail = {
 	title: 'Sea Legs',
 	description: 'Single malt scotch, mezcal, orgeat, lime, celery bitters, angostura bitters.',
-	imagePath: '/images/cocktails/sea-legs.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/sea-legs.png',
 	slug: 'sea-legs',
 	method: CocktailMethod.Shaken,
 	ingredients: [

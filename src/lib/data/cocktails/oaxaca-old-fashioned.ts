@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const OAXACA_OLD_FASHIONED: Cocktail = {
 	title: 'Oaxaca Old Fashioned',
 	description: 'Reposado tequila, mezcal, agave nectar, xocolatl bitters, smoked orange twist.',
-	imagePath: '/images/cocktails/winter/oaxaca-old-fashioned.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/oaxaca-old-fashioned.png',
 	slug: 'oaxaca-old-fashioned',
 	method: CocktailMethod.Built,
 	ingredients: [

@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const JACK_ROSE: Cocktail = {
 	title: 'Jack Rose',
 	description: 'Calvados, applejack, grenadine, lemon.',
-	imagePath: '/images/cocktails/summer/jack-rose.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/jack-rose.png',
 	slug: 'jack-rose',
 	method: CocktailMethod.Shaken,
 	ingredients: [

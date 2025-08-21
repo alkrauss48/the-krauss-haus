@@ -7,7 +7,7 @@ const ZOMBIE: Cocktail = {
 	subtitle: 'The original heavy-weight tiki classic. Max 2 per person.',
 	description:
 		"Blended light rum, Jamaican rum, overproof rum, falernum, Donn's Mix, lime, grenadine, herbstura.",
-	imagePath: '/images/cocktails/tiki/zombie.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/zombie.png',
 	slug: 'zombie',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [

@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const MANHATTAN: Cocktail = {
 	title: 'Manhattan',
 	description: 'Rye whiskey, sweet vermouth, black walnut bitters, maraschino cherry.',
-	imagePath: '/images/cocktails/winter/manhattan.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/manhattan.png',
 	slug: 'manhattan',
 	method: CocktailMethod.Stirred,
 	ingredients: [

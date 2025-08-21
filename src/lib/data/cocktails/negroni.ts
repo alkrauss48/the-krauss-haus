@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const NEGRONI: Cocktail = {
 	title: 'Negroni',
 	description: 'Gin, campari, sweet vermouth, orange twist.',
-	imagePath: '/images/cocktails/summer/negroni.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/negroni.png',
 	slug: 'negroni',
 	method: CocktailMethod.Stirred,
 	ingredients: ['1oz Gin', '1oz Campari', '1oz Sweet vermouth', 'Garnish: Orange twist'],

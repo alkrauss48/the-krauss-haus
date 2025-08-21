@@ -6,7 +6,7 @@ const IRON_RANGER: Cocktail = {
 	title: 'Iron Ranger',
 	subtitle: 'A bourbon tiki with a spicy kick',
 	description: 'Bourbon, falernum, demerara syrup, lemon, pineapple.',
-	imagePath: '/images/cocktails/tiki/iron-ranger.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/iron-ranger.png',
 	slug: 'iron-ranger',
 	method: CocktailMethod.Shaken,
 	ingredients: [

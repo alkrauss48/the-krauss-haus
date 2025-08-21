@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const SPAGHETT: Cocktail = {
 	title: 'Spaghett',
 	description: 'Miller high life, aperol, lemon.',
-	imagePath: '/images/cocktails/spaghett.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/spaghett.png',
 	slug: 'spaghett',
 	method: CocktailMethod.Built,
 	ingredients: ['12oz Miller high life bottle', '1oz Aperol', '.5oz Lemon'],

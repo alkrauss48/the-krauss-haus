@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const SAZERAC: Cocktail = {
 	title: 'Sazerac',
 	description: "Rye whiskey, cognac, absinthe, peychaud's bitters, demerara syrup, lemon twist.",
-	imagePath: '/images/cocktails/winter/sazerac.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/sazerac.png',
 	slug: 'sazerac',
 	method: CocktailMethod.Stirred,
 	ingredients: [

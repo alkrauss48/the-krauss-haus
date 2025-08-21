@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const PENICILLIN: Cocktail = {
 	title: 'Penicillin',
 	description: 'Blended scotch, single malt scotch, honey-ginger syrup, lemon.',
-	imagePath: '/images/cocktails/winter/penicillin.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/penicillin.png',
 	slug: 'penicillin',
 	method: CocktailMethod.Shaken,
 	ingredients: [

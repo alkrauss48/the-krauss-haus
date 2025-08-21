@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 const MARTINI: Cocktail = {
 	title: 'Martini',
 	description: 'Gin, dry vermouth, orange bitters, olives.',
-	imagePath: '/images/cocktails/winter/martini.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/martini.png',
 	slug: 'martini',
 	method: CocktailMethod.Stirred,
 	ingredients: ['2oz Gin', '1oz Dry vermouth', '2 dashes Orange bitters', 'Garnish: Olive'],

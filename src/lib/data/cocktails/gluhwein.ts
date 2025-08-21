@@ -5,7 +5,7 @@ const GLUHWEIN: Cocktail = {
 	title: 'Glühwein',
 	subtitle: 'Our own family recipe',
 	description: 'Red wine, brandy, orange, lemon, cinnamon, clove, brown sugar.',
-	imagePath: '/images/cocktails/winter/gluhwein.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/gluhwein.png',
 	slug: 'gluhwein',
 	ingredients: [
 		'750ml Cabernet Sauvignon',

@@ -6,7 +6,7 @@ const MAI_TAI: Cocktail = {
 	title: 'Mai Tai',
 	subtitle: 'The king of tiki drinks, complex and balanced',
 	description: 'Jamaican rum, blended rum, cachaca, orange curaçao, orgeat, lime, demerara syrup.',
-	imagePath: '/images/cocktails/tiki/mai-tai.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mai-tai.png',
 	slug: 'mai-tai',
 	method: CocktailMethod.Shaken,
 	ingredients: [

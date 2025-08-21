@@ -6,7 +6,7 @@ const JUNGLE_BIRD: Cocktail = {
 	title: 'Jungle Bird',
 	subtitle: 'A perfect balance of bitter and sweet',
 	description: 'Dark rum, campari, pineapple, lime, demarara syrup.',
-	imagePath: '/images/cocktails/tiki/jungle-bird.png',
+	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/jungle-bird.png',
 	slug: 'jungle-bird',
 	method: CocktailMethod.Shaken,
 	ingredients: [
