@@ -122,6 +122,15 @@
 							{#if cocktail.ingredients && cocktail.ingredients.length > 0}
 								<div class="lg:col-span-2">
 									<h2 class="text-2xl font-bold text-gray-800 mb-4">Ingredients</h2>
+									{#if cocktail.method}
+										<div class="mb-4">
+											<span
+												class="inline-block px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-md border border-gray-200"
+											>
+												{cocktail.method}
+											</span>
+										</div>
+									{/if}
 									<ul class="space-y-2">
 										{#each cocktail.ingredients as ingredient (ingredient)}
 											<li class="flex items-start">
