@@ -41,6 +41,7 @@ import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import SATURN from '$lib/data/cocktails/saturn';
 import SAZERAC from '$lib/data/cocktails/sazerac';
 import SEA_LEGS from '$lib/data/cocktails/sea-legs';
+import SIDECAR from '$lib/data/cocktails/sidecar';
 import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
 import SPAGHETT from '$lib/data/cocktails/spaghett';
 import SPRITZ from '$lib/data/cocktails/spritz';
@@ -94,6 +95,7 @@ export const allCocktails: Cocktail[] = [
 	SATURN,
 	SAZERAC,
 	SEA_LEGS,
+	SIDECAR,
 	SINGAPORE_SLING,
 	SPAGHETT,
 	SPRITZ,
