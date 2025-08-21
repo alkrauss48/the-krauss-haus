@@ -17,6 +17,7 @@ import IRON_RANGER from '$lib/data/cocktails/iron-ranger';
 import JACK_ROSE from '$lib/data/cocktails/jack-rose';
 import JET_PILOT from '$lib/data/cocktails/jet-pilot';
 import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
+import LAST_WORD from '$lib/data/cocktails/last-word';
 import LOGGY_CAB from '$lib/data/cocktails/loggy-cab';
 import MAI_TAI from '$lib/data/cocktails/mai-tai';
 import MANHATTAN from '$lib/data/cocktails/manhattan';
@@ -27,6 +28,7 @@ import MINT_JULEP from '$lib/data/cocktails/mint-julep';
 import MISSIONARYS_DOWNFALL from '$lib/data/cocktails/missionarys-downfall';
 import MOJITO from '$lib/data/cocktails/mojito';
 import MOONWELL from '$lib/data/cocktails/moonwell';
+import NAKED_AND_FAMOUS from '$lib/data/cocktails/naked-and-famous';
 import NEGRONI from '$lib/data/cocktails/negroni';
 import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
 import OLD_FASHIONED from '$lib/data/cocktails/old-fashioned';
@@ -47,6 +49,7 @@ import TIA_MIA from '$lib/data/cocktails/tia-mia';
 import TOM_AND_JERRY from '$lib/data/cocktails/tom-and-jerry';
 import TORONTO from '$lib/data/cocktails/toronto';
 import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
+import WHISKEY_SOUR from '$lib/data/cocktails/whiskey-sour';
 import ZOMBIE from '$lib/data/cocktails/zombie';
 
 // Create array of all cocktails (sorted alphabetically)
@@ -67,6 +70,7 @@ export const allCocktails: Cocktail[] = [
 	JACK_ROSE,
 	JET_PILOT,
 	JUNGLE_BIRD,
+	LAST_WORD,
 	LOGGY_CAB,
 	MAI_TAI,
 	MANHATTAN,
@@ -77,6 +81,7 @@ export const allCocktails: Cocktail[] = [
 	MISSIONARYS_DOWNFALL,
 	MOJITO,
 	MOONWELL,
+	NAKED_AND_FAMOUS,
 	NEGRONI,
 	OAXACA_OLD_FASHIONED,
 	OLD_FASHIONED,
@@ -97,6 +102,7 @@ export const allCocktails: Cocktail[] = [
 	TOM_AND_JERRY,
 	TORONTO,
 	VIEUX_CARRE,
+	WHISKEY_SOUR,
 	ZOMBIE
 ].sort((a, b) => a.title.localeCompare(b.title));
 
