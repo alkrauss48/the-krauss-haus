@@ -1,7 +1,7 @@
 <script lang="ts">
 	import RecipeList from '$lib/components/RecipeList.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
-	import BackButton from '$lib/components/BackButton.svelte';
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { syrups } from '$lib/data/syrups';
 </script>
@@ -18,7 +18,7 @@
 	out:fade={{ duration: 200 }}
 >
 	<div class="max-w-4xl mx-auto pb-8">
-		<BackButton />
+		<Breadcrumbs />
 
 		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
 			<h1 class="text-4xl font-bold text-gray-800 mb-4">Homemade Syrups</h1>

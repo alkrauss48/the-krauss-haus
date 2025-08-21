@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import BackButton from '$lib/components/BackButton.svelte';
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { fade, fly } from 'svelte/transition';
-	import { handleAnchorClick } from '$lib/utils/navigation';
+
 	import type { Tag } from '$lib/types/tags';
 
 	// Import menu data to check which menus contain this cocktail
@@ -81,7 +81,7 @@
 	out:fade={{ duration: 200 }}
 >
 	<div class="max-w-4xl mx-auto pb-8">
-		<BackButton />
+		<Breadcrumbs />
 
 		<div
 			class="bg-white rounded-lg shadow-lg overflow-hidden"
@@ -141,7 +141,6 @@
 										{#each cocktail.tags as tag (tag.label)}
 											<a
 												href={getTagFilterUrl(tag)}
-												on:click={(e) => handleAnchorClick(e, getTagFilterUrl(tag))}
 												class="inline-block px-2 py-1 text-xs font-medium rounded-md transition-all duration-200 hover:scale-105 border border-opacity-20"
 												style="
 													background-color: {hexToRgba(tag.category.color, 0.05)};
@@ -217,7 +216,6 @@
 							{#if onSummer}
 								<a
 									href="/summer-menu"
-									on:click={(e) => handleAnchorClick(e, '/summer-menu')}
 									class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
 								>
 									Summer Menu
@@ -226,7 +224,6 @@
 							{#if onWinter}
 								<a
 									href="/winter-menu"
-									on:click={(e) => handleAnchorClick(e, '/winter-menu')}
 									class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors"
 								>
 									Winter Menu
@@ -235,7 +232,6 @@
 							{#if onTiki}
 								<a
 									href="/tiki-menu"
-									on:click={(e) => handleAnchorClick(e, '/tiki-menu')}
 									class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
 								>
 									Tiki Menu

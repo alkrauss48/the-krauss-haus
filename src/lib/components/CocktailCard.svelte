@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { trackedGoto } from '$lib/utils/navigation';
+	import { goto } from '$app/navigation';
 	import type { SectionColor } from '$lib/types/colors';
 	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
 	import { methodColors } from '$lib/enums/methods';
@@ -105,7 +105,7 @@
 
 	function navigateToCocktail(event: Event): void {
 		event.preventDefault();
-		trackedGoto(`/cocktails/${cocktail.slug}`);
+		goto(`/cocktails/${cocktail.slug}`);
 	}
 
 	// Add event listener when component mounts

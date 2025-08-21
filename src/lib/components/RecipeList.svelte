@@ -2,7 +2,7 @@
 	import type { Recipe } from '$lib/types/recipes';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import { trackedGoto } from '$lib/utils/navigation';
+	import { goto } from '$app/navigation';
 	import { allCocktails } from '$lib/data/all-cocktails';
 
 	export let recipes: Recipe[];
@@ -89,7 +89,7 @@
 
 	function navigateToCocktails(recipe: Recipe): void {
 		const url = getCocktailsUrlWithTag(recipe);
-		trackedGoto(url);
+		goto(url);
 	}
 
 	// Count cocktails that use this recipe's tag

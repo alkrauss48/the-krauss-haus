@@ -1,11 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import BackButton from '$lib/components/BackButton.svelte';
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import TagFilter from '$lib/components/TagFilter.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { methodColors } from '$lib/enums/methods';
-	import { trackedGoto } from '$lib/utils/navigation';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { allTagCategories } from '$lib/data/all-tags';
@@ -34,7 +33,7 @@
 	});
 
 	function navigateToCocktail(slug: string): void {
-		trackedGoto(`/cocktails/${slug}`);
+		goto(`/cocktails/${slug}`);
 	}
 
 	function handleKeydown(event: KeyboardEvent, slug: string): void {
@@ -103,7 +102,7 @@
 	out:fade={{ duration: 200 }}
 >
 	<div class="max-w-6xl mx-auto pb-8">
-		<BackButton />
+		<Breadcrumbs />
 
 		<header class="text-center mb-8" in:fly={{ y: 20, duration: 400, delay: 400 }}>
 			<h1 class="text-4xl font-bold text-gray-800 mb-4">All Cocktails</h1>

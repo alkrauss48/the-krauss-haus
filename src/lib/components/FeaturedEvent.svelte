@@ -1,18 +1,11 @@
 <script lang="ts">
-	import { handleAnchorClick } from '$lib/utils/navigation';
-
 	export let title: string;
 	export let subtitle: string;
 	export let url: string;
-
-	function onClick(event: MouseEvent): void {
-		handleAnchorClick(event, url);
-	}
 </script>
 
 <a
 	href={url}
-	on:click={onClick}
 	class="block relative overflow-hidden bg-orange-500 rounded-2xl p-8 text-center text-white shadow-2xl transform hover:scale-105 transition-all duration-300 hover:shadow-3xl"
 	style="background: linear-gradient(135deg, #fb923c 0%, #ef4444 50%, #ec4899 100%);"
 >
