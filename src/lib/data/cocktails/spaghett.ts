@@ -14,7 +14,6 @@ const SPAGHETT: Cocktail = {
 	ingredients: ['12oz Miller high life bottle', '1oz Aperol', '.5oz Lemon'],
 	notes: 'Drink some of the beer. Fill the bottle back up with the Aperol and lemon.',
 	tags: [
-		Tags.BaseSpirit.AMARO,
 		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,

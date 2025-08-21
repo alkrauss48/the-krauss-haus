@@ -14,7 +14,6 @@ const NAKED_AND_FAMOUS: Cocktail = {
 	ingredients: ['.75oz Mezcal', '.75oz Yellow Chartreuse', '.75oz Aperol', '.75oz Lime'],
 	tags: [
 		Tags.BaseSpirit.MEZCAL,
-		Tags.BaseSpirit.AMARO,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,

@@ -13,7 +13,6 @@ const SPRITZ: Cocktail = {
 	method: CocktailMethod.Built,
 	ingredients: ['3oz Prosecco', '2oz Aperol', '1oz Soda water', 'Garnish: Orange wedge'],
 	tags: [
-		Tags.BaseSpirit.AMARO,
 		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.AlcoholLevel.LOW,

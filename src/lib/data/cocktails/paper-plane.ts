@@ -14,7 +14,6 @@ const PAPER_PLANE: Cocktail = {
 	ingredients: ['.75oz Bourbon', '.75oz Amaro Nonino', '.75oz Aperol', '.75oz Lemon'],
 	tags: [
 		Tags.BaseSpirit.WHISKEY,
-		Tags.BaseSpirit.AMARO,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BITTER,
 		Tags.AlcoholLevel.LOW,

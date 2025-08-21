@@ -12,8 +12,7 @@ const GIN: Tag = { label: 'Gin', category: BASE_SPIRIT, order: 3 };
 const BRANDY: Tag = { label: 'Brandy', category: BASE_SPIRIT, order: 4 };
 const TEQUILA: Tag = { label: 'Tequila', category: BASE_SPIRIT, order: 5 };
 const MEZCAL: Tag = { label: 'Mezcal', category: BASE_SPIRIT, order: 6 };
-const AMARO: Tag = { label: 'Amaro', category: BASE_SPIRIT, order: 7 };
-const VODKA: Tag = { label: 'Vodka', category: BASE_SPIRIT, order: 8 };
+const VODKA: Tag = { label: 'Vodka', category: BASE_SPIRIT, order: 7 };
 
 export const TAGS = {
 	RUM,
@@ -22,6 +21,5 @@ export const TAGS = {
 	MEZCAL,
 	GIN,
 	VODKA,
-	BRANDY,
-	AMARO
+	BRANDY
 };

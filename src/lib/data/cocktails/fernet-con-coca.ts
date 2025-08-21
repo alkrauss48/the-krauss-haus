@@ -15,7 +15,6 @@ const FERNET_CON_COCA: Cocktail = {
 	notes:
 		'Eye-ball the fernet and coca cola amounts. Fernet first, over ice. No need to stir. There should be foam from the coca cola.',
 	tags: [
-		Tags.BaseSpirit.AMARO,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.BUILT,
