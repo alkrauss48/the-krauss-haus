@@ -82,6 +82,18 @@ docker run -p 8080:80 krauss-haus
 
 The site will be available at `http://localhost:8080`
 
+## Image Generation
+
+Images have been generated with ChatGPT. All cocktail images typically follow the following prompt template:
+
+> Create an artistic painting of a `name` cocktail in a `type of glass` with `type of ice`, `and any garnishes or other visual details`. Use loose brushstrokes and an expressive watercolor style with `color` tones. Make this a completely transparent PNG with no background at all, although minor abstract background directly behind the cocktail is okay as long as it highlights the cocktail itself. The illustration should have a hand-painted artistic interpretation with clear edges and a contained design. Portrait orientation (taller than wide).
+
+An example prompt is:
+
+```
+Create an artistic painting of a jet pilot cocktail in a rocks glass with crushed ice, a speared maraschino cherry on a cocktail pick (no other garnish), and a straw. Use loose brushstrokes and an expressive watercolor style with translucent light brown tones. Make this a completely transparent PNG with no background at all, although minor abstract background directly behind the cocktail is okay as long as it highlights the cocktail itself. The illustration should have a hand-painted artistic interpretation with clear edges and a contained design. Portrait orientation (taller than wide).
+```
+
 ## License
 
 MIT
