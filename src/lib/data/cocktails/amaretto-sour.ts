@@ -16,7 +16,7 @@ const AMARETTO_SOUR: Cocktail = {
 		'.75oz Bourbon',
 		'.75oz Lemon',
 		'.25oz Rich simple syrup',
-		'1 egg white',
+		'1 Egg white',
 		'Garnish: Maraschino cherry'
 	],
 	tags: [

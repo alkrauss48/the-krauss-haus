@@ -17,7 +17,7 @@ const PORT_LIGHT: Cocktail = {
 		'.5oz Honey syrup',
 		'.75oz Lemon',
 		'.5oz Passion fruit syrup',
-		'(Optional) Egg white',
+		'1 Egg white',
 		'Garnish: Mint spring, pineapple square, and maraschino cherry'
 	],
 	tags: [
