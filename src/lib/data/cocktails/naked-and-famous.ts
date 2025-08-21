@@ -4,7 +4,7 @@ import { Tags } from '../all-tags';
 
 const NAKED_AND_FAMOUS: Cocktail = {
 	title: 'Naked and Famous',
-	description: 'Mezcal, yellow chartreuse, aperol, lime',
+	description: 'Mezcal, yellow chartreuse, aperol, lime.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/naked-and-famous.png',
 	thumbnailImagePath:
