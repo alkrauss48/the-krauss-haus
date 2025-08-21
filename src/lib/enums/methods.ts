@@ -1,9 +1,9 @@
 export enum CocktailMethod {
-	Shaken = 'shaken',
-	Stirred = 'stirred',
-	Built = 'built',
-	FlashBlended = 'flash blended',
-	Blended = 'blended'
+	Shaken = 'Shaken',
+	Stirred = 'Stirred',
+	Built = 'Built',
+	FlashBlended = 'Flash Blended',
+	Blended = 'Blended'
 }
 
 export const methodColors = {
