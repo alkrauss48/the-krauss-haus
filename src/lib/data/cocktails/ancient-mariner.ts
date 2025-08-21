@@ -6,7 +6,10 @@ const ANCIENT_MARINER: Cocktail = {
 	title: 'Ancient Mariner',
 	subtitle: 'A complex blend of spice and citrus',
 	description: 'Blended rum, demerara rum, allspice dram, lime, grapefruit, demerara syrup.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/ancient-mariner.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/ancient-mariner.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ancient-mariner.png',
 	slug: 'ancient-mariner',
 	method: CocktailMethod.Shaken,
 	ingredients: [

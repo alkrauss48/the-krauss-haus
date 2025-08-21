@@ -6,7 +6,10 @@ const COBRAS_FANG: Cocktail = {
 	title: "Cobra's Fang",
 	subtitle: 'A dangerously smooth blend of rum and spice',
 	description: 'Overproof demerara rum, falernum, fassionola, lime, orange, herbstura.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/cobras-fang.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/cobras-fang.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/cobras-fang.png',
 	slug: 'cobras-fang',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [

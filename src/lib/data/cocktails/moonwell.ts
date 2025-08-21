@@ -6,7 +6,10 @@ const MOONWELL: Cocktail = {
 	title: 'Moonwell',
 	subtitle: 'A Krauss Family original',
 	description: 'Light rum, elderflower liqueur, grenadine, celery bitters, lemon, soda water.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/moonwell.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/moonwell.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/moonwell.png',
 	slug: 'moonwell',
 	method: CocktailMethod.Built,
 	ingredients: [

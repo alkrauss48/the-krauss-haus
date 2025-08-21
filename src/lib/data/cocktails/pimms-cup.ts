@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const PIMMS_CUP: Cocktail = {
 	title: "Pimm's Cup",
 	description: "Pimm's #1, sparkling lemonade, cucumber, orange, strawberry, mint.",
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/pimms-cup.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/pimms-cup.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/pimms-cup.png',
 	slug: 'pimms-cup',
 	method: CocktailMethod.Built,
 	ingredients: [

@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const MISSIONARYS_DOWNFALL: Cocktail = {
 	title: "Missionary's Downfall",
 	description: 'Blended light rum, peach liqueur, mint, pineapple, honey syrup, lime.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/missionarys-downfall.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/missionarys-downfall.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/missionarys-downfall.png',
 	slug: 'missionarys-downfall',
 	method: CocktailMethod.Blended,
 	ingredients: [

@@ -6,7 +6,10 @@ const HOT_TODDY: Cocktail = {
 	title: 'Hot Toddy',
 	slug: 'hot-toddy',
 	description: 'Bourbon, benedictine, spiced tea, honey, lemon, cinnamon.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hot-toddy.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hot-toddy.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hot-toddy.png',
 	method: CocktailMethod.Built,
 	ingredients: [
 		'1.5oz Bourbon',

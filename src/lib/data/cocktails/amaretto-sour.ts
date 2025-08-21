@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const AMARETTO_SOUR: Cocktail = {
 	title: 'Amaretto Sour',
 	description: 'Amaretto, bourbon, lemon, simple syrup, egg white.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/amaretto-sour.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/amaretto-sour.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/amaretto-sour.png',
 	slug: 'amaretto-sour',
 	method: CocktailMethod.Shaken,
 	ingredients: [

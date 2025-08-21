@@ -6,7 +6,10 @@ const SATURN: Cocktail = {
 	title: 'Saturn',
 	subtitle: 'A gin-based tiki classic, bright and tropical',
 	description: 'Gin, passion fruit, lemon, orgeat, falernum.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/saturn.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/saturn.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/saturn.png',
 	slug: 'saturn',
 	method: CocktailMethod.Shaken,
 	ingredients: [

@@ -7,7 +7,10 @@ const SINGAPORE_SLING: Cocktail = {
 	subtitle: 'A sophisticated gin-based tiki classic',
 	description:
 		'Gin, cherry heering, benedictine, cointreau, grenadine, pineapple, lime, angostura bitters.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/singapore-sling.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/singapore-sling.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/singapore-sling.png',
 	slug: 'singapore-sling',
 	method: CocktailMethod.Shaken,
 	ingredients: [

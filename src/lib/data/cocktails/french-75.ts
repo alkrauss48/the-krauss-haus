@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const FRENCH_75: Cocktail = {
 	title: 'French 75',
 	description: 'Prosecco, gin, lemon, simple syrup.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/french-75.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/french-75.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/french-75.png',
 	slug: 'french-75',
 	method: CocktailMethod.Shaken,
 	ingredients: [

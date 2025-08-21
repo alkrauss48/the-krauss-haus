@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const OLD_FASHIONED: Cocktail = {
 	title: 'Old Fashioned',
 	description: 'Bourbon, demerara syrup, black walnut bitters, orange twist.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/old-fashioned.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/old-fashioned.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/old-fashioned.png',
 	slug: 'old-fashioned',
 	method: CocktailMethod.Built,
 	ingredients: [

@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const MARGARITA: Cocktail = {
 	title: 'Margarita',
 	description: 'Blanco tequila, cointreau, lime, agave nectar.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/margarita.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/margarita.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/margarita.png',
 	slug: 'margarita',
 	method: CocktailMethod.Shaken,
 	ingredients: [

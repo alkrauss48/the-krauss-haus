@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const TIA_MIA: Cocktail = {
 	title: 'Tia Mia',
 	description: 'Mezcal, jamaican rum, cointreau, orgeat, lime.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/tia-mia.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/tia-mia.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/tia-mia.png',
 	slug: 'tia-mia',
 	method: CocktailMethod.Shaken,
 	ingredients: [

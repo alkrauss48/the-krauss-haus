@@ -7,7 +7,10 @@ const JET_PILOT: Cocktail = {
 	subtitle: 'A bold, spicy journey through the tropics',
 	description:
 		'Jamaican rum, overproof demerara rum, falernum, cinnamon syrup, lime, grapefruit, herbstura.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/jet-pilot.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/jet-pilot.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/jet-pilot.png',
 	slug: 'jet-pilot',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [

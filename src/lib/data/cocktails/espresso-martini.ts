@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const ESPRESSO_MARTINI: Cocktail = {
 	title: 'Espresso Martini',
 	description: 'Cognac, coffee liqueur, espresso, demerara syrup.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/espresso-martini.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/espresso-martini.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/espresso-martini.png',
 	slug: 'espresso-martini',
 	method: CocktailMethod.Shaken,
 	ingredients: [

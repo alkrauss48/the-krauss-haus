@@ -7,7 +7,10 @@ const TOM_AND_JERRY: Cocktail = {
 	slug: 'tom-and-jerry',
 	subtitle: 'Family recipe from Great Grandpa Krauss',
 	description: 'Bourbon, dark rum, egg, sugar, nutmeg.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/tom-and-jerry.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/tom-and-jerry.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/tom-and-jerry.png',
 	method: CocktailMethod.Built,
 	ingredients: [
 		'.75oz Bourbon',

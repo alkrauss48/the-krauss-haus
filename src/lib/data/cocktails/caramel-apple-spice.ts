@@ -7,7 +7,10 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	subtitle: 'A Krauss Family original',
 	description:
 		'Applejack, goldschläger, caramel vodka, apple strudel liqueur, calvados, apple cider.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/caramel-apple-spice.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/caramel-apple-spice.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/caramel-apple-spice.png',
 	slug: 'caramel-apple-spice',
 	method: CocktailMethod.Built,
 	ingredients: [

@@ -6,7 +6,10 @@ const MERRY_MULE: Cocktail = {
 	title: 'Merry Mule',
 	subtitle: "Served as the bride's drink at our wedding",
 	description: 'Vodka, cinnamon syrup, lime, ginger beer.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/merry-mule.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/merry-mule.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/merry-mule.png',
 	slug: 'merry-mule',
 	method: CocktailMethod.Built,
 	ingredients: [

@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const TORONTO: Cocktail = {
 	title: 'Toronto',
 	description: 'Rye whiskey, fernet branca, demerara syrup, lemon twist.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/toronto.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/toronto.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/toronto.png',
 	slug: 'toronto',
 	method: CocktailMethod.Stirred,
 	ingredients: [

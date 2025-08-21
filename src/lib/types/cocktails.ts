@@ -13,6 +13,7 @@ export interface Cocktail {
 	subtitle?: string;
 	description: string;
 	imagePath: string;
+	thumbnailImagePath: string;
 	slug: string;
 	ingredients?: string[];
 	method?: CocktailMethod;

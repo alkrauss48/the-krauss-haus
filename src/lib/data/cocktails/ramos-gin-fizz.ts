@@ -6,7 +6,10 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 	title: 'Ramos Gin Fizz',
 	description:
 		'Gin, lemon, lime, simple syrup, egg white, heavy cream, soda water, orange blossom water.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/ramos-gin-fizz.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/ramos-gin-fizz.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ramos-gin-fizz.png',
 	slug: 'ramos-gin-fizz',
 	method: CocktailMethod.Built,
 	ingredients: [

@@ -5,7 +5,10 @@ import { Tags } from '../all-tags';
 const MINT_JULEP: Cocktail = {
 	title: 'Mint Julep',
 	description: 'Bourbon, simple syrup, mint.',
-	imagePath: 'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mint-julep.png',
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mint-julep.png',
+	thumbnailImagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/mint-julep.png',
 	slug: 'mint-julep',
 	method: CocktailMethod.Built,
 	ingredients: ['2oz Bourbon', '.5oz Rich simple syrup', '6-10 leaves Mint', 'Garnish: Mint sprig'],
