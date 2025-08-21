@@ -288,7 +288,7 @@
 										class="w-16 h-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg overflow-hidden shadow-sm"
 									>
 										<img
-											src={cocktail.imagePath}
+											src={cocktail.thumbnailImagePath}
 											alt={cocktail.title}
 											class="w-full h-full object-contain p-2"
 										/>
