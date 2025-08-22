@@ -287,7 +287,7 @@
 
 					<!-- Category Tags -->
 					{#if isExpanded}
-						<div class="space-y-3 pl-6" transition:slide>
+						<div class="flex flex-wrap gap-2 pl-6" transition:slide>
 							{#each categoryTags as tag (`${tag.label}-${selectedTagsKey}`)}
 								{@const count = getTagCount(tag)}
 								{@const selected = isTagSelected(tag)}
@@ -295,7 +295,7 @@
 								{@const styling = getTagStyling(tag, selected, disabled)}
 
 								<button
-									class="w-full flex items-center justify-between rounded-xl border-2 transition-all duration-300 transform group relative overflow-hidden py-2.5 px-3 text-sm"
+									class="inline-flex items-center gap-1.5 rounded-lg border-2 transition-all duration-300 transform group relative overflow-hidden py-1.5 px-2.5 text-xs"
 									class:cursor-pointer={!disabled}
 									class:cursor-not-allowed={disabled}
 									class:hover:scale-[1.02]={!disabled && !selected}
@@ -331,23 +331,18 @@
 										></div>
 									{/if}
 
-									<div class="flex items-center gap-2 relative z-10">
-										<span class="font-medium">{tag.label}</span>
-									</div>
-
-									<div class="flex items-center gap-1 relative z-10">
-										<span
-											class="text-xs px-2 py-1 rounded-full font-semibold"
-											class:bg-white={selected}
-											class:text-black={selected}
-											class:bg-gray-100={!selected && !disabled}
-											class:text-gray-600={!selected && !disabled}
-											class:bg-gray-200={disabled}
-											class:text-gray-500={disabled}
-										>
-											{count}
-										</span>
-									</div>
+									<span class="font-medium relative z-10">{tag.label}</span>
+									<span
+										class="text-xs px-1.5 py-0.5 rounded-full font-semibold relative z-10"
+										class:bg-white={selected}
+										class:text-black={selected}
+										class:bg-gray-100={!selected && !disabled}
+										class:text-gray-600={!selected && !disabled}
+										class:bg-gray-200={disabled}
+										class:text-gray-500={disabled}
+									>
+										{count}
+									</span>
 								</button>
 							{/each}
 						</div>
