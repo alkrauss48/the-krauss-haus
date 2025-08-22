@@ -10,6 +10,7 @@ import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
+import GIN_BASIL_SMASH from '$lib/data/cocktails/gin-basil-smash';
 import GLUHWEIN from '$lib/data/cocktails/gluhwein';
 import HOT_TODDY from '$lib/data/cocktails/hot-toddy';
 import HURRICANE from '$lib/data/cocktails/hurricane';
@@ -64,6 +65,7 @@ export const allCocktails: Cocktail[] = [
 	ESPRESSO_MARTINI,
 	FERNET_CON_COCA,
 	FRENCH_75,
+	GIN_BASIL_SMASH,
 	GLUHWEIN,
 	HOT_TODDY,
 	HURRICANE,
