@@ -31,6 +31,7 @@ import MOJITO from '$lib/data/cocktails/mojito';
 import MOONWELL from '$lib/data/cocktails/moonwell';
 import NAKED_AND_FAMOUS from '$lib/data/cocktails/naked-and-famous';
 import NEGRONI from '$lib/data/cocktails/negroni';
+import NEGRONI_BIANCO_BERGAMOTTO from '$lib/data/cocktails/negroni-bianco-bergamotto';
 import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
 import OLD_FASHIONED from '$lib/data/cocktails/old-fashioned';
 import PAINKILLER from '$lib/data/cocktails/painkiller';
@@ -87,6 +88,7 @@ export const allCocktails: Cocktail[] = [
 	MOONWELL,
 	NAKED_AND_FAMOUS,
 	NEGRONI,
+	NEGRONI_BIANCO_BERGAMOTTO,
 	OAXACA_OLD_FASHIONED,
 	OLD_FASHIONED,
 	PAINKILLER,
