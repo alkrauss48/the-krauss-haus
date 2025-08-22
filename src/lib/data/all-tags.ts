@@ -27,9 +27,9 @@ export const Tags = {
 // Create arrays of all tags by category for convenience
 export const allTagCategories: TagCategory[] = [
 	BASE_SPIRIT,
-	FLAVOR_PROFILE,
 	STYLE,
 	ORIGIN,
+	FLAVOR_PROFILE,
 	ALCOHOL_LEVEL,
 	TECHNIQUE,
 	TEMPERATURE,
