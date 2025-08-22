@@ -70,7 +70,7 @@
 <svelte:head>
 	<title>{cocktail.title} - The Krauss Haus</title>
 	<meta name="description" content={cocktail.description} />
-	<meta property="og:image" content="https://thekrausshaus.com{cocktail.imagePath}" />
+	<meta property="og:image" content={cocktail.imagePath} />
 	<meta property="og:title" content="{cocktail.title} - The Krauss Haus" />
 	<meta property="og:description" content={cocktail.description} />
 </svelte:head>
