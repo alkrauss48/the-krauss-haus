@@ -298,6 +298,12 @@
 								<!-- Name -->
 								<div class="col-span-5 md:col-span-3">
 									<h3 class="font-semibold text-gray-800 text-lg">{cocktail.title}</h3>
+									<!-- Show description under name on mobile only -->
+									<p
+										class="text-gray-600 text-sm leading-relaxed mt-1 md:hidden mobile-line-clamp-2"
+									>
+										{cocktail.description}
+									</p>
 								</div>
 
 								<!-- Description -->
@@ -335,7 +341,22 @@
 	.line-clamp-2 {
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
+		line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+	}
+
+	.mobile-line-clamp-2 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	@media (min-width: 768px) {
+		.mobile-line-clamp-2 {
+			display: none !important;
+		}
 	}
 </style>
