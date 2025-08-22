@@ -19,8 +19,10 @@
 
 	// Filter cocktails based on search term and selected tags
 	$: filteredCocktails = cocktails.filter((cocktail) => {
-		// First filter by search term
-		const matchesSearch = cocktail.title.toLowerCase().includes(searchTerm.toLowerCase());
+		// First filter by search term (search both title and description)
+		const matchesSearch =
+			cocktail.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			cocktail.description.toLowerCase().includes(searchTerm.toLowerCase());
 
 		// Then filter by tags (intersection - all selected tags must be present)
 		const matchesTags =
@@ -123,7 +125,7 @@
 								id="cocktail-search"
 								type="text"
 								bind:value={searchTerm}
-								placeholder="Search by cocktail name..."
+								placeholder="Search by name or description..."
 								class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white shadow-sm"
 							/>
 							<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
