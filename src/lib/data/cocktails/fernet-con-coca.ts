@@ -19,7 +19,7 @@ const FERNET_CON_COCA: Cocktail = {
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
-		Tags.Origin.CLASSIC
+		Tags.Origin.FOLK
 	]
 };
 

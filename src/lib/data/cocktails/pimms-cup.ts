@@ -24,7 +24,7 @@ const PIMMS_CUP: Cocktail = {
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
-		Tags.Origin.CLASSIC
+		Tags.Origin.FOLK
 	]
 };
 

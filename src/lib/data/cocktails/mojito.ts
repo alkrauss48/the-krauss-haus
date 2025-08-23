@@ -12,7 +12,7 @@ const MOJITO: Cocktail = {
 	slug: 'mojito',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2oz Planteray 3 Star',
+		'2oz Light rum',
 		'.75oz Lime',
 		'1 tbsp Sugar',
 		'6-10 leaves Mint',
@@ -27,7 +27,7 @@ const MOJITO: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
-		Tags.Origin.CLASSIC
+		Tags.Origin.FOLK
 	]
 };
 

@@ -25,7 +25,7 @@ const HOT_TODDY: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
-		Tags.Origin.CLASSIC
+		Tags.Origin.FOLK
 	]
 };
 

@@ -17,7 +17,7 @@ const CAIPIRINHA: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.Style.SOUR,
 		Tags.Technique.BUILT,
-		Tags.Origin.CLASSIC
+		Tags.Origin.FOLK
 	]
 };
 
