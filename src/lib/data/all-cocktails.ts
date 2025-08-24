@@ -3,13 +3,16 @@ import type { Cocktail } from '$lib/types/cocktails';
 // Import all cocktail data
 import AMARETTO_SOUR from '$lib/data/cocktails/amaretto-sour';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
+import BATANGA from '$lib/data/cocktails/batanga';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
+import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
+import GIN_AND_TONIC from '$lib/data/cocktails/gin-and-tonic';
 import GIN_BASIL_SMASH from '$lib/data/cocktails/gin-basil-smash';
 import GLUHWEIN from '$lib/data/cocktails/gluhwein';
 import HOT_TODDY from '$lib/data/cocktails/hot-toddy';
@@ -35,6 +38,7 @@ import NEGRONI_BIANCO_BERGAMOTTO from '$lib/data/cocktails/negroni-bianco-bergam
 import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
 import OLD_FASHIONED from '$lib/data/cocktails/old-fashioned';
 import PAINKILLER from '$lib/data/cocktails/painkiller';
+import PALOMA from '$lib/data/cocktails/paloma';
 import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
 import PENICILLIN from '$lib/data/cocktails/penicillin';
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
@@ -60,13 +64,16 @@ import ZOMBIE from '$lib/data/cocktails/zombie';
 export const allCocktails: Cocktail[] = [
 	AMARETTO_SOUR,
 	ANCIENT_MARINER,
+	BATANGA,
 	CAIPIRINHA,
 	CARAMEL_APPLE_SPICE,
 	COBRAS_FANG,
+	CUBA_LIBRE,
 	DAIQUIRI,
 	ESPRESSO_MARTINI,
 	FERNET_CON_COCA,
 	FRENCH_75,
+	GIN_AND_TONIC,
 	GIN_BASIL_SMASH,
 	GLUHWEIN,
 	HOT_TODDY,
@@ -92,6 +99,7 @@ export const allCocktails: Cocktail[] = [
 	OAXACA_OLD_FASHIONED,
 	OLD_FASHIONED,
 	PAINKILLER,
+	PALOMA,
 	PAPER_PLANE,
 	PENICILLIN,
 	PIMMS_CUP,
