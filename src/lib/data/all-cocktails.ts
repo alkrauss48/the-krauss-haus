@@ -9,6 +9,7 @@ import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
 import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
+import DIVISION_BELL from '$lib/data/cocktails/division-bell';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
@@ -33,6 +34,7 @@ import MISSIONARYS_DOWNFALL from '$lib/data/cocktails/missionarys-downfall';
 import MOJITO from '$lib/data/cocktails/mojito';
 import MOONWELL from '$lib/data/cocktails/moonwell';
 import NAKED_AND_FAMOUS from '$lib/data/cocktails/naked-and-famous';
+import NAVY_GROG from '$lib/data/cocktails/navy-grog';
 import NEGRONI from '$lib/data/cocktails/negroni';
 import NEGRONI_BIANCO_BERGAMOTTO from '$lib/data/cocktails/negroni-bianco-bergamotto';
 import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
@@ -44,6 +46,7 @@ import PENICILLIN from '$lib/data/cocktails/penicillin';
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
 import PORT_LIGHT from '$lib/data/cocktails/port-light';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
+import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
 import SATURN from '$lib/data/cocktails/saturn';
 import SAZERAC from '$lib/data/cocktails/sazerac';
 import SEA_LEGS from '$lib/data/cocktails/sea-legs';
@@ -70,6 +73,7 @@ export const allCocktails: Cocktail[] = [
 	COBRAS_FANG,
 	CUBA_LIBRE,
 	DAIQUIRI,
+	DIVISION_BELL,
 	ESPRESSO_MARTINI,
 	FERNET_CON_COCA,
 	FRENCH_75,
@@ -94,6 +98,7 @@ export const allCocktails: Cocktail[] = [
 	MOJITO,
 	MOONWELL,
 	NAKED_AND_FAMOUS,
+	NAVY_GROG,
 	NEGRONI,
 	NEGRONI_BIANCO_BERGAMOTTO,
 	OAXACA_OLD_FASHIONED,
@@ -105,6 +110,7 @@ export const allCocktails: Cocktail[] = [
 	PIMMS_CUP,
 	PORT_LIGHT,
 	RAMOS_GIN_FIZZ,
+	RATTLE_SKULL,
 	SATURN,
 	SAZERAC,
 	SEA_LEGS,
