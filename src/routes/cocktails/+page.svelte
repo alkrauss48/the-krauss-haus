@@ -292,6 +292,7 @@
 										<img
 											src={cocktail.thumbnailImagePath}
 											alt={cocktail.title}
+											loading="lazy"
 											class="w-full h-full object-contain p-2"
 										/>
 									</div>
