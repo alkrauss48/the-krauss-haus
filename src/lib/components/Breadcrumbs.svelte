@@ -34,10 +34,13 @@
 					label = 'Tiki Menu';
 					break;
 				case 'syrups':
-					label = 'Homemade Syrups';
+					label = 'Syrups';
 					break;
 				case 'infusions':
-					label = 'Liquor Infusions';
+					label = 'Infusions';
+					break;
+				case 'recipes':
+					label = 'Recipes';
 					break;
 				case 'parties':
 					label = 'Cocktail Parties';
