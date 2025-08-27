@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import GRENADINE from '../recipes/grenadine';
 
 const JACK_ROSE: Cocktail = {
 	title: 'Jack Rose',
@@ -14,7 +15,10 @@ const JACK_ROSE: Cocktail = {
 	ingredients: [
 		'1oz Calvados',
 		'1oz Applejack',
-		'.75oz Grenadine',
+		{
+			amount: '.75oz',
+			recipe: GRENADINE
+		},
 		'.75oz Lemon',
 		'Garnish: Lemon twist'
 	],

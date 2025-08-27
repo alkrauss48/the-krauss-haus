@@ -1,6 +1,8 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import FALERNUM from '../recipes/falernum';
+import CINNAMON_SYRUP from '../recipes/cinnamon-syrup';
 
 const JET_PILOT: Cocktail = {
 	title: 'Jet Pilot',
@@ -18,8 +20,14 @@ const JET_PILOT: Cocktail = {
 		'.5oz Coruba (Jamaican rum)',
 		'.75oz Appleton Estate Signature (Jamaican rum)',
 		'.75oz Hamilton 151 (Overproof Demerara rum)',
-		'.5oz Falernum',
-		'.5oz Cinnamon syrup',
+		{
+			amount: '.5oz',
+			recipe: FALERNUM
+		},
+		{
+			amount: '.5oz',
+			recipe: CINNAMON_SYRUP
+		},
 		'.5oz Lime',
 		'.5oz Grapefruit',
 		'1 dash Herbstura',

@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import HONEY_SYRUP from '../recipes/honey-syrup';
 
 const NAVY_GROG: Cocktail = {
 	title: 'Navy Grog',
@@ -16,7 +17,10 @@ const NAVY_GROG: Cocktail = {
 		'1oz Coruba (Dark Jamaican rum)',
 		'1oz Hamilton 86 (Demerara rum)',
 		'1oz Planteray 3 Stars (Blended light rum)',
-		'1oz Honey syrup',
+		{
+			amount: '1oz',
+			recipe: HONEY_SYRUP
+		},
 		'.75oz Lime',
 		'.75oz Grapefruit',
 		'1oz Soda water',

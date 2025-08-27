@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const ESPRESSO_MARTINI: Cocktail = {
 	title: 'Espresso Martini',
@@ -15,7 +16,10 @@ const ESPRESSO_MARTINI: Cocktail = {
 		'1.5oz Cognac',
 		'1oz Mr. Black Coffee Liqueur',
 		'1oz Espresso',
-		'.25oz Demerara syrup',
+		{
+			amount: '.25oz',
+			recipe: DEMERARA_SYRUP
+		},
 		'Garnish: 3 coffee beans'
 	],
 	variations: [
@@ -35,7 +39,7 @@ const ESPRESSO_MARTINI: Cocktail = {
 		Tags.Technique.SHAKEN,
 		Tags.Syrups.DEMERARA_SYRUP,
 		Tags.Origin.MODERN,
-		Tags.Infusions.PEPPEMINT_VODKA
+		Tags.Infusions.PEPPERMINT_VODKA
 	]
 };
 

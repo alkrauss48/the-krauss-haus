@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import GRENADINE from '../recipes/grenadine';
 
 const SINGAPORE_SLING: Cocktail = {
 	title: 'Singapore Sling',
@@ -18,7 +19,10 @@ const SINGAPORE_SLING: Cocktail = {
 		'.5oz Cherry Heering',
 		'.5oz Benedictine',
 		'.5oz Cointreau',
-		'.5oz Grenadine',
+		{
+			amount: '.5oz',
+			recipe: GRENADINE
+		},
 		'3oz Pineapple juice',
 		'.75oz Lime juice',
 		'3 dashes Angostura bitters',

@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const ANCIENT_MARINER: Cocktail = {
 	title: 'Ancient Mariner',
@@ -16,7 +17,10 @@ const ANCIENT_MARINER: Cocktail = {
 		'1oz Probitas (Blended light rum)',
 		'1oz Hamilton 86 (Demerara rum)',
 		'.25oz Allspice dram',
-		'.5oz Demerara syrup',
+		{
+			amount: '.5oz',
+			recipe: DEMERARA_SYRUP
+		},
 		'.5oz Lime',
 		'.5oz Grapefruit',
 		'Garnish: Mint sprig and lime wedge'

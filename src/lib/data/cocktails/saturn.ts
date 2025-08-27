@@ -1,6 +1,9 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import PASSIONFRUIT_SYRUP from '../recipes/passionfruit-syrup';
+import ORGEAT from '../recipes/orgeat';
+import FALERNUM from '../recipes/falernum';
 
 const SATURN: Cocktail = {
 	title: 'Saturn',
@@ -14,10 +17,19 @@ const SATURN: Cocktail = {
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'1.5oz Gin',
-		'.5oz Passion fruit syrup',
+		{
+			amount: '.5oz',
+			recipe: PASSIONFRUIT_SYRUP
+		},
 		'.5oz Lemon',
-		'.25oz Orgeat',
-		'.25oz Falernum',
+		{
+			amount: '.25oz',
+			recipe: ORGEAT
+		},
+		{
+			amount: '.25oz',
+			recipe: FALERNUM
+		},
 		'Garnish: Lemon peel and maraschino cherry'
 	],
 	tags: [

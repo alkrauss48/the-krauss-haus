@@ -1,6 +1,8 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import FALERNUM from '../recipes/falernum';
+import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const IRON_RANGER: Cocktail = {
 	title: 'Iron Ranger',
@@ -14,8 +16,14 @@ const IRON_RANGER: Cocktail = {
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'2oz Bourbon',
-		'.5oz Falernum',
-		'.5oz Demerara syrup',
+		{
+			amount: '.5oz',
+			recipe: FALERNUM
+		},
+		{
+			amount: '.5oz',
+			recipe: DEMERARA_SYRUP
+		},
 		'.75oz Lemon',
 		'1oz Pineapple juice',
 		'Garnish: Mint sprig and freshly grated cinnamon'

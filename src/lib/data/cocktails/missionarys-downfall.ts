@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import HONEY_SYRUP from '../recipes/honey-syrup';
 
 const MISSIONARYS_DOWNFALL: Cocktail = {
 	title: "Missionary's Downfall",
@@ -16,7 +17,10 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		'.5oz Peach liqueur',
 		'12 large mint leaves',
 		'56g (1/4 cup) diced fresh pineapple',
-		'1oz Honey syrup',
+		{
+			amount: '1oz',
+			recipe: HONEY_SYRUP
+		},
 		'.5oz Lime',
 		'158g (3/4 cup) crushed ice'
 	],

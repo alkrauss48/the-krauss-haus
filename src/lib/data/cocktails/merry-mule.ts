@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import CINNAMON_SYRUP from '../recipes/cinnamon-syrup';
 
 const MERRY_MULE: Cocktail = {
 	title: 'Merry Mule',
@@ -14,7 +15,10 @@ const MERRY_MULE: Cocktail = {
 	method: CocktailMethod.Built,
 	ingredients: [
 		'2oz vodka',
-		'.5 oz Cinnamon syrup',
+		{
+			amount: '.5 oz',
+			recipe: CINNAMON_SYRUP
+		},
 		'1/2 Lime',
 		'4oz Ginger beer',
 		'Garnish: Cinnamon stick and apple slices'

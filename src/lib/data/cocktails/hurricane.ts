@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import FASSIONOLA from '../recipes/fassionola';
 
 const HURRICANE: Cocktail = {
 	title: 'Hurricane',
@@ -16,7 +17,10 @@ const HURRICANE: Cocktail = {
 		'.75oz Coruba (Jamaican rum)',
 		'.75oz Appleton Estate Signature (Jamaican rum)',
 		'.5oz Probitas (Blended light rum)',
-		'1oz Fassionola',
+		{
+			amount: '1oz',
+			recipe: FASSIONOLA
+		},
 		'.75oz Lemon',
 		'Garnish: Lemon wheel'
 	],

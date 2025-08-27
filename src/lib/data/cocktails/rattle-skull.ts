@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const RATTLE_SKULL: Cocktail = {
 	title: 'Rattle Skull',
@@ -16,7 +17,10 @@ const RATTLE_SKULL: Cocktail = {
 		'1oz Appleton Estate Signature Jamaican rum',
 		'1oz Cognac',
 		'.75oz Lime',
-		'.5oz Demerara syrup',
+		{
+			amount: '.5oz',
+			recipe: DEMERARA_SYRUP
+		},
 		'Garnish: Freshly grated nutmeg'
 	],
 	notes:

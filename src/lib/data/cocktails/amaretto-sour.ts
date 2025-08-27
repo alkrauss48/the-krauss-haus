@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const AMARETTO_SOUR: Cocktail = {
 	title: 'Amaretto Sour',
@@ -15,7 +16,10 @@ const AMARETTO_SOUR: Cocktail = {
 		'1.5oz Amaretto',
 		'.75oz Bourbon',
 		'.75oz Lemon',
-		'.25oz Rich simple syrup',
+		{
+			amount: '.25oz',
+			recipe: RICH_SIMPLE_SYRUP
+		},
 		'1 Egg white',
 		'Garnish: Maraschino cherry'
 	],

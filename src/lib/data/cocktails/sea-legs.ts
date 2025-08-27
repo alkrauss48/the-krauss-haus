@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import ORGEAT from '../recipes/orgeat';
 
 const SEA_LEGS: Cocktail = {
 	title: 'Sea Legs',
@@ -14,7 +15,10 @@ const SEA_LEGS: Cocktail = {
 	ingredients: [
 		'1oz Single malt scotch',
 		'1oz Mezcal',
-		'.75oz Orgeat',
+		{
+			amount: '.75oz',
+			recipe: ORGEAT
+		},
 		'.75oz Lime',
 		'2 dashes Celery bitters',
 		'Garnish: salted rim and dash of angostura bitters'

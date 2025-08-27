@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const TORONTO: Cocktail = {
 	title: 'Toronto',
@@ -14,7 +15,10 @@ const TORONTO: Cocktail = {
 	ingredients: [
 		'2oz Rye whiskey',
 		'.5oz Fernet Branca',
-		'1tsp Demerara syrup',
+		{
+			amount: '1 tsp',
+			recipe: DEMERARA_SYRUP
+		},
 		'Garnish: Lemon twist'
 	],
 	tags: [

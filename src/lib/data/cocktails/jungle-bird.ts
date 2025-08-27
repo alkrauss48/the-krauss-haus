@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const JUNGLE_BIRD: Cocktail = {
 	title: 'Jungle Bird',
@@ -17,7 +18,10 @@ const JUNGLE_BIRD: Cocktail = {
 		'.75oz Campari',
 		'1.5oz Pineapple juice',
 		'.5oz Lime',
-		'.5oz Demerara syrup',
+		{
+			amount: '.5oz',
+			recipe: DEMERARA_SYRUP
+		},
 		'Garnish: Pineapple wedge'
 	],
 	variations: [

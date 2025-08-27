@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const SAZERAC: Cocktail = {
 	title: 'Sazerac',
@@ -17,7 +18,10 @@ const SAZERAC: Cocktail = {
 		'Absinthe rinse',
 		"4 dashes Peychaud's bitters",
 		'1 dash Angostura bitters',
-		'.25oz Demerara syrup',
+		{
+			amount: '.25oz',
+			recipe: DEMERARA_SYRUP
+		},
 		'Garnish: Lemon twist'
 	],
 	tags: [

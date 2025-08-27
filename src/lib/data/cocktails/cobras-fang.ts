@@ -1,6 +1,8 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import FALERNUM from '../recipes/falernum';
+import FASSIONOLA from '../recipes/fassionola';
 
 const COBRAS_FANG: Cocktail = {
 	title: "Cobra's Fang",
@@ -14,8 +16,14 @@ const COBRAS_FANG: Cocktail = {
 	method: CocktailMethod.FlashBlended,
 	ingredients: [
 		'1.5oz Hamilton 151 (Overproof Demerara rum)',
-		'.25oz Falernum',
-		'.5oz Fassionola',
+		{
+			amount: '.25oz',
+			recipe: FALERNUM
+		},
+		{
+			amount: '.5oz',
+			recipe: FASSIONOLA
+		},
 		'.5oz Lime',
 		'.5oz Orange',
 		'1 dash Herbstura',

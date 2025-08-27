@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import ORGEAT from '../recipes/orgeat';
 
 const TIA_MIA: Cocktail = {
 	title: 'Tia Mia',
@@ -15,7 +16,10 @@ const TIA_MIA: Cocktail = {
 		'1oz Mezcal',
 		'1oz Appleton Estate (Jamaican rum)',
 		'.5oz Cointreau',
-		'.5oz Orgeat',
+		{
+			amount: '.5oz',
+			recipe: ORGEAT
+		},
 		'.75oz Lime',
 		'Garnish: Mint spring and lime wheel'
 	],

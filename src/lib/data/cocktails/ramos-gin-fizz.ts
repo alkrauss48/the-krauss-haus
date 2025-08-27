@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const RAMOS_GIN_FIZZ: Cocktail = {
 	title: 'Ramos Gin Fizz',
@@ -16,7 +17,10 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 		'2oz Gin',
 		'.5oz Lemon',
 		'.5oz Lime',
-		'.5oz Rich simple syrup',
+		{
+			amount: '.5oz',
+			recipe: RICH_SIMPLE_SYRUP
+		},
 		'1 Egg white',
 		'1oz Heavy cream',
 		'3 drops Orange blossom water',

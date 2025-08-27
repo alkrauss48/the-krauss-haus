@@ -1,6 +1,8 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import HONEY_SYRUP from '../recipes/honey-syrup';
+import PASSIONFRUIT_SYRUP from '../recipes/passionfruit-syrup';
 
 const PORT_LIGHT: Cocktail = {
 	title: 'Port Light',
@@ -14,9 +16,15 @@ const PORT_LIGHT: Cocktail = {
 	method: CocktailMethod.Shaken,
 	ingredients: [
 		'2oz Bourbon',
-		'.5oz Honey syrup',
+		{
+			amount: '.5oz',
+			recipe: HONEY_SYRUP
+		},
 		'.75oz Lemon',
-		'.5oz Passion fruit syrup',
+		{
+			amount: '.5oz',
+			recipe: PASSIONFRUIT_SYRUP
+		},
 		'1 Egg white',
 		'Garnish: Mint spring, pineapple square, and maraschino cherry'
 	],

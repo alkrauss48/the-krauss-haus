@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const OLD_FASHIONED: Cocktail = {
 	title: 'Old Fashioned',
@@ -13,7 +14,10 @@ const OLD_FASHIONED: Cocktail = {
 	method: CocktailMethod.Built,
 	ingredients: [
 		'2oz Bourbon',
-		'.25oz Demerara syrup',
+		{
+			amount: '.25oz',
+			recipe: DEMERARA_SYRUP
+		},
 		'2 dashes Black walnut bitters',
 		'Garnish: Orange twist'
 	],

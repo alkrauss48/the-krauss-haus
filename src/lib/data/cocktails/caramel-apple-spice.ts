@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import CARAMEL_VODKA from '../recipes/caramel-vodka';
 
 const CARAMEL_APPLE_SPICE: Cocktail = {
 	title: 'Caramel Apple Spice',
@@ -16,7 +17,10 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	ingredients: [
 		'.5oz Applejack',
 		'.5oz Goldschläger',
-		'.5oz Caramel vodka',
+		{
+			amount: '.5oz',
+			recipe: CARAMEL_VODKA
+		},
 		'.5oz Apple strudel liqueur',
 		'Splash of Calvados',
 		'5oz Apple cider',

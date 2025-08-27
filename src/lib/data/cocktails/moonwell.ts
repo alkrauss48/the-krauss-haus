@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import GRENADINE from '../recipes/grenadine';
 
 const MOONWELL: Cocktail = {
 	title: 'Moonwell',
@@ -15,7 +16,10 @@ const MOONWELL: Cocktail = {
 	ingredients: [
 		'1oz Light rum',
 		'1oz Elderflower liqueur',
-		'.5oz Grenadine',
+		{
+			amount: '.5oz',
+			recipe: GRENADINE
+		},
 		'1/4 lemon, juiced',
 		'1 dash celery bitters',
 		'4oz Soda water',

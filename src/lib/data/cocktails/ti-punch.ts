@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const TI_PUNCH: Cocktail = {
 	title: 'Ti Punch',
@@ -11,7 +12,14 @@ const TI_PUNCH: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ti-punch.png',
 	slug: 'ti-punch',
 	method: CocktailMethod.Built,
-	ingredients: ['2oz Rhum Agricole', '1 Lime coin', '1 tsp Rich simple syrup'],
+	ingredients: [
+		'2oz Rhum Agricole',
+		'1 Lime coin',
+		{
+			amount: '1 tsp',
+			recipe: RICH_SIMPLE_SYRUP
+		}
+	],
 	notes:
 		'Served without ice. Mix rhum and simple syrup in glass. Squeeze lime coin (a disk of lime rind) and drop into glass. Chacun prépare sa proper mort (each prepares his own death)!',
 	tags: [Tags.BaseSpirit.RUM, Tags.Style.SPIRIT_FORWARD, Tags.Technique.BUILT, Tags.Origin.FOLK]

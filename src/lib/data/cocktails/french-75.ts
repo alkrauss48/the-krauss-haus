@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const FRENCH_75: Cocktail = {
 	title: 'French 75',
@@ -14,7 +15,10 @@ const FRENCH_75: Cocktail = {
 	ingredients: [
 		'1oz Gin',
 		'.5oz Lemon',
-		'.5oz rich simple syrup',
+		{
+			amount: '.5oz',
+			recipe: RICH_SIMPLE_SYRUP
+		},
 		'3oz Prosecco',
 		'Garnish: Lemon twist'
 	],

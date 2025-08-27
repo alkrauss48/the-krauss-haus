@@ -1,6 +1,9 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import FALERNUM from '../recipes/falernum';
+import GRENADINE from '../recipes/grenadine';
+import CINNAMON_SYRUP from '../recipes/cinnamon-syrup';
 
 const ZOMBIE: Cocktail = {
 	title: 'Zombie',
@@ -19,10 +22,20 @@ const ZOMBIE: Cocktail = {
 		'.5oz Coruba (Jamaican rum)',
 		'.5oz Hamilton 151 (Overproof Demerara rum)',
 		'.5oz Planteray OFTD (Overproof Blended rum)',
-		".5oz Donn's Mix (2:1 ratio of Grapefruit to Cinnamon Syrup)",
-		'.5oz Falernum',
+		'2/3oz Grapefruit',
+		{
+			amount: '1/3oz',
+			recipe: CINNAMON_SYRUP
+		},
+		{
+			amount: '.5oz',
+			recipe: FALERNUM
+		},
 		'.75oz Lime',
-		'1tsp Grenadine',
+		{
+			amount: '1 tsp',
+			recipe: GRENADINE
+		},
 		'1 dash Herbstura',
 		'Garnish: Mint sprig'
 	],

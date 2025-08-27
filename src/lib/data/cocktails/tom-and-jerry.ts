@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import TOM_AND_JERRY_BATTER from '../recipes/tom-and-jerry-batter';
 
 const TOM_AND_JERRY: Cocktail = {
 	title: 'Tom and Jerry',
@@ -15,7 +16,10 @@ const TOM_AND_JERRY: Cocktail = {
 	ingredients: [
 		'.75oz Bourbon',
 		'.75oz Appleton Estate Signature',
-		'2 tbsp Tom & Jerry batter',
+		{
+			amount: '2 tbsp',
+			recipe: TOM_AND_JERRY_BATTER
+		},
 		'5oz Hot water',
 		'Garnish: Freshly grated nutmeg'
 	],

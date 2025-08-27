@@ -1,6 +1,8 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import ORGEAT from '../recipes/orgeat';
+import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const MAI_TAI: Cocktail = {
 	title: 'Mai Tai',
@@ -17,9 +19,15 @@ const MAI_TAI: Cocktail = {
 		'.5oz Leblon (Cachaca)',
 		'.5oz Planteray OFTD (Overproof blended rum)',
 		'.5oz Pierre Ferrand Dry Curaçao',
-		'.5oz Orgeat',
+		{
+			amount: '.5oz',
+			recipe: ORGEAT
+		},
 		'1oz Lime',
-		'.25oz Demerara syrup',
+		{
+			amount: '.25oz',
+			recipe: DEMERARA_SYRUP
+		},
 		'Garnish: Mint sprig and lime shell'
 	],
 	tags: [

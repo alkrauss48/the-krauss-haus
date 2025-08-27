@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const GIN_BASIL_SMASH: Cocktail = {
 	title: 'Gin Basil Smash',
@@ -14,7 +15,10 @@ const GIN_BASIL_SMASH: Cocktail = {
 	ingredients: [
 		'2oz Gin',
 		'.75oz Lemon',
-		'.5oz Rich simple syrup',
+		{
+			amount: '.5oz',
+			recipe: RICH_SIMPLE_SYRUP
+		},
 		'12 Basil leaves',
 		'Garnish: Basil sprig'
 	],
