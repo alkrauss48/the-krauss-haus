@@ -7,8 +7,7 @@ const HONEY_SYRUP: Recipe = {
 	ingredients: ['1 part (by volume) honey', '1 part (by volume) water'],
 	instructions:
 		'Combine honey and hot water in a jar or container. Stir until honey dissolves completely. Let cool and store in an airtight container in the refrigerator.',
-	notes:
-		'Use raw honey for the best flavor. Used in the Three Dots & a Dash and the Port Light. Recipe makes 1 cup.'
+	notes: 'Use raw honey for the best flavor. Recipe makes 1 cup.'
 };
 
 export default HONEY_SYRUP;

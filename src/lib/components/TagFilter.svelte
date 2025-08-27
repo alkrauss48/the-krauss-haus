@@ -310,7 +310,7 @@
 		tabindex="-1"
 		aria-label="Close filter sidebar"
 		on:click={closeSidebar}
-		on:keydown={(e) => e.key === 'Enter' || e.key === ' ' ? closeSidebar() : null}
+		on:keydown={(e) => (e.key === 'Enter' || e.key === ' ' ? closeSidebar() : null)}
 		transition:fade={{ duration: 200 }}
 	></div>
 {/if}

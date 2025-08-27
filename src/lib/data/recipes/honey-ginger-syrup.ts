@@ -11,7 +11,7 @@ const HONEY_GINGER_SYRUP: Recipe = {
 	],
 	instructions:
 		'Combine honey, water, and ginger in a saucepan. Heat over medium heat, stirring occasionally, until honey dissolves. Simmer for 5 minutes to infuse the ginger flavor. Remove from heat, pour everything into a mason jar. Let cool for 12 hours. Remove ginger.',
-	notes: 'Used in the Penicillin.'
+	notes: 'Use raw honey for the best flavor. Recipe makes 1 cup.'
 };
 
 export default HONEY_GINGER_SYRUP;

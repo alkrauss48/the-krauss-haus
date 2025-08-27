@@ -71,6 +71,31 @@
 					{/if}
 				</header>
 
+				<!-- Cocktails Section (Mobile - Above Ingredients) -->
+				{#if cocktailCount > 0}
+					<section class="mb-8 block lg:hidden">
+						<div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
+							<p class="text-sm text-gray-600 mb-3">
+								This recipe is used in {cocktailCount} cocktail{cocktailCount === 1 ? '' : 's'}.
+							</p>
+							<a
+								href={getRecipeFilterUrl()}
+								class="inline-flex items-center px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200 text-sm gap-2 w-full justify-center"
+							>
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+									/>
+								</svg>
+								View Cocktails
+							</a>
+						</div>
+					</section>
+				{/if}
+
 				<!-- Ingredients Section -->
 				{#if recipe.ingredients && recipe.ingredients.length > 0}
 					<section class="mb-8">
@@ -88,8 +113,8 @@
 								</ul>
 							</div>
 
-							<!-- Cocktails Sidebar (Right) -->
-							<div class="lg:col-span-1">
+							<!-- Cocktails Sidebar (Desktop - Right Side) -->
+							<div class="lg:col-span-1 hidden lg:block">
 								<!-- View Cocktails Button -->
 								{#if cocktailCount > 0}
 									<div class="bg-amber-50 border border-amber-200 rounded-lg p-4">

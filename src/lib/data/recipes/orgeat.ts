@@ -13,7 +13,7 @@ const ORGEAT: Recipe = {
 	],
 	instructions:
 		'Combine oatmilk and sugar in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves. Remove from heat, and add remaining ingredients.',
-	notes: 'Used in the Mai Tai and the Saturn. Recipe makes about 3.5 cups.'
+	notes: 'Recipe makes about 3.5 cups.'
 };
 
 export default ORGEAT;
