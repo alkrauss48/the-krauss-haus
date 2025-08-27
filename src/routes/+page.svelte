@@ -47,8 +47,7 @@
 		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Extras</h2>
 		<nav class="flex flex-col gap-4" aria-label="Secondary Menu Navigation">
 			<MenuLink href="/parties" label="Cocktail Parties" variant="secondary" />
-			<MenuLink href="/syrups" label="Homemade Syrups" variant="secondary" />
-			<MenuLink href="/infusions" label="Liquor Infusions" variant="secondary" />
+			<MenuLink href="/recipes" label="Recipes" variant="secondary" />
 		</nav>
 	</section>
 

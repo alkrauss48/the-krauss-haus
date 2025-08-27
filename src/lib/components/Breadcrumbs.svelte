@@ -33,12 +33,6 @@
 				case 'tiki-menu':
 					label = 'Tiki Menu';
 					break;
-				case 'syrups':
-					label = 'Syrups';
-					break;
-				case 'infusions':
-					label = 'Infusions';
-					break;
 				case 'recipes':
 					label = 'Recipes';
 					break;

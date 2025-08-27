@@ -44,12 +44,12 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 	{#each recipes as recipe, i (recipe.name)}
 		<div
-			class="bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 border border-gray-200"
+			class="rounded-lg border border-gray-200 overflow-hidden"
 			in:fly={{ y: 20, duration: 400, delay: i * 50 }}
 		>
 			<a
 				href={getRecipeUrl(recipe)}
-				class="block p-4 hover:text-gray-900 transition-colors duration-200"
+				class="block p-4 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200"
 				data-sveltekit-prefetch
 			>
 				<div class="flex items-start justify-between">
@@ -63,7 +63,7 @@
 			</a>
 
 			<!-- Copy Link Button -->
-			<div class="px-4 pb-4 pt-2 border-t border-gray-100">
+			<div class="px-4 pb-4 pt-2 border-t border-gray-200 bg-white">
 				<div class="flex items-center justify-between">
 					<div class="flex items-center gap-2">
 						{#if recipe.tag && getCocktailCountForRecipe(recipe) > 0}

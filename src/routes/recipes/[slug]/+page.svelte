@@ -7,15 +7,7 @@
 	import { allCocktails } from '$lib/data/all-cocktails';
 
 	export let data: PageData;
-	const { recipe, backToPage } = data;
-
-	// Helper function to convert hex color to rgba
-	function hexToRgba(hex: string, alpha: number): string {
-		const r = parseInt(hex.slice(1, 3), 16);
-		const g = parseInt(hex.slice(3, 5), 16);
-		const b = parseInt(hex.slice(5, 7), 16);
-		return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-	}
+	const { recipe } = data;
 
 	// Helper function to convert category label to URL-friendly key
 	function categoryToUrlKey(categoryLabel: string): string {
@@ -98,41 +90,6 @@
 							<!-- Tag Sidebar (Right) -->
 							{#if recipe.tag}
 								<div class="lg:col-span-1">
-									<h3 class="text-lg font-semibold text-gray-600 mb-3">Category</h3>
-									<div class="flex flex-wrap gap-2">
-										<a
-											href={getTagFilterUrl()}
-											class="inline-block px-2 py-1 text-xs font-medium rounded-md transition-all duration-200 hover:scale-105 border border-opacity-20"
-											style="
-										background-color: {hexToRgba(recipe.tag!.category.color, 0.05)};
-										border-color: {hexToRgba(recipe.tag!.category.color, 0.2)};
-										color: {recipe.tag!.category.color};
-									"
-											on:mouseenter={(e) => {
-												e.currentTarget.style.backgroundColor = hexToRgba(
-													recipe.tag!.category.color,
-													0.08
-												);
-												e.currentTarget.style.borderColor = hexToRgba(
-													recipe.tag!.category.color,
-													0.3
-												);
-											}}
-											on:mouseleave={(e) => {
-												e.currentTarget.style.backgroundColor = hexToRgba(
-													recipe.tag!.category.color,
-													0.05
-												);
-												e.currentTarget.style.borderColor = hexToRgba(
-													recipe.tag!.category.color,
-													0.2
-												);
-											}}
-										>
-											{recipe.tag!.label}
-										</a>
-									</div>
-
 									<!-- View Cocktails Button -->
 									{#if cocktailCount > 0}
 										<div class="mt-4">
@@ -174,19 +131,17 @@
 					</section>
 				{/if}
 
-				<!-- Back to Page Link -->
-				{#if backToPage}
-					<section class="pt-8 border-t border-gray-200">
-						<div class="flex flex-wrap gap-3">
-							<a
-								href="/{backToPage}"
-								class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
-							>
-								Back to {backToPage === 'syrups' ? 'Homemade Syrups' : 'Liquor Infusions'}
-							</a>
-						</div>
-					</section>
-				{/if}
+				<!-- Back to Recipes Link -->
+				<section class="pt-8 border-t border-gray-200">
+					<div class="flex flex-wrap gap-3">
+						<a
+							href="/recipes"
+							class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
+						>
+							Back to Recipes
+						</a>
+					</div>
+				</section>
 			</div>
 		</div>
 	</div>
