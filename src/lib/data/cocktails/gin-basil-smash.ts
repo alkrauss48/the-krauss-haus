@@ -29,7 +29,7 @@ const GIN_BASIL_SMASH: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.RICH_SIMPLE_SYRUP,
+
 		Tags.Style.SOUR,
 		Tags.Origin.MODERN
 	]

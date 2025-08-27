@@ -28,7 +28,7 @@ const MERRY_MULE: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,
-		Tags.Syrups.CINNAMON_SYRUP,
+
 		Tags.Style.HIGHBALL,
 		Tags.Origin.ORIGINAL
 	]

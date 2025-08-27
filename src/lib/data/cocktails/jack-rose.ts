@@ -26,7 +26,7 @@ const JACK_ROSE: Cocktail = {
 		Tags.BaseSpirit.BRANDY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.GRENADINE,
+
 		Tags.Style.SOUR,
 		Tags.Origin.CLASSIC
 	]

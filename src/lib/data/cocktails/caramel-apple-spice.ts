@@ -28,7 +28,7 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	],
 	tags: [
 		Tags.BaseSpirit.BRANDY,
-		Tags.Infusions.CARAMEL_VODKA,
+
 		Tags.Temperature.HOT,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.BUILT,

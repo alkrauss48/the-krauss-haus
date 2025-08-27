@@ -29,7 +29,7 @@ const SEA_LEGS: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.ORGEAT,
+
 		Tags.Origin.MODERN
 	]
 };

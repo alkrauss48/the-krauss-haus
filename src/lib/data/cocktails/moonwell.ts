@@ -59,7 +59,7 @@ const MOONWELL: Cocktail = {
 		Tags.FlavorProfile.BUBBLY,
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.BUILT,
-		Tags.Syrups.GRENADINE,
+
 		Tags.Style.HIGHBALL,
 		Tags.Origin.ORIGINAL
 	]

@@ -39,8 +39,7 @@ const JET_PILOT: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.FLASH_BLENDED,
-		Tags.Infusions.FALERNUM,
-		Tags.Syrups.CINNAMON_SYRUP,
+
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

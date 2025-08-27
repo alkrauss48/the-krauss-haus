@@ -27,7 +27,7 @@ const FRENCH_75: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.RICH_SIMPLE_SYRUP,
+
 		Tags.Style.SOUR,
 		Tags.Origin.CLASSIC
 	]

@@ -26,7 +26,7 @@ const TORONTO: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.STIRRED,
-		Tags.Syrups.DEMERARA_SYRUP,
+
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC
 	]

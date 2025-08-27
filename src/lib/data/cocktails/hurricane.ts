@@ -29,7 +29,7 @@ const HURRICANE: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.FASSIONOLA,
+
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

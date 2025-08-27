@@ -39,8 +39,7 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.FLASH_BLENDED,
-		Tags.Infusions.FALERNUM,
-		Tags.Syrups.HONEY_SYRUP,
+
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

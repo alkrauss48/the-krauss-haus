@@ -34,7 +34,7 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.CREAMY,
 		Tags.Technique.BUILT,
-		Tags.Syrups.RICH_SIMPLE_SYRUP,
+
 		Tags.Origin.CLASSIC
 	]
 };

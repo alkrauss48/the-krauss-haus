@@ -33,8 +33,7 @@ const PORT_LIGHT: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.HONEY_SYRUP,
-		Tags.Syrups.PASSION_FRUIT_SYRUP,
+
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

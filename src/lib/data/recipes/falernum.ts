@@ -1,5 +1,4 @@
 import type { Recipe } from '$lib/types/recipes';
-import { Tags } from '$lib/data/all-tags';
 
 const FALERNUM: Recipe = {
 	name: 'Falernum',
@@ -18,8 +17,7 @@ const FALERNUM: Recipe = {
 	instructions:
 		'Steep all ingredients in rum for 24 hours, besides simple syrup and amaretto. Strain to remove solids. Add simple syrup and amaretto.',
 	notes:
-		"Makes ~24oz at 23% ABV. Used in the Three Dots & a Dash, the Jet Pilot, the Cobra's Fang, the Saturn, and the Iron Ranger. Because of its alcohol content, this will keep for up to 2 years refrigerated.",
-	tag: Tags.Infusions.FALERNUM
+		"Makes ~24oz at 23% ABV. Used in the Three Dots & a Dash, the Jet Pilot, the Cobra's Fang, the Saturn, and the Iron Ranger. Because of its alcohol content, this will keep for up to 2 years refrigerated."
 };
 
 export default FALERNUM;

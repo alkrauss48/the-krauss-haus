@@ -40,9 +40,7 @@ const SATURN: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.SHAKEN,
-		Tags.Infusions.FALERNUM,
-		Tags.Syrups.PASSION_FRUIT_SYRUP,
-		Tags.Syrups.ORGEAT,
+
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

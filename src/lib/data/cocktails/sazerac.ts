@@ -29,7 +29,7 @@ const SAZERAC: Cocktail = {
 		Tags.BaseSpirit.BRANDY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
-		Tags.Syrups.DEMERARA_SYRUP,
+
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC
 	]

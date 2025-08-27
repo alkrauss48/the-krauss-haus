@@ -25,7 +25,7 @@ const DAIQUIRI: Cocktail = {
 		Tags.BaseSpirit.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.RICH_SIMPLE_SYRUP,
+
 		Tags.Style.SOUR,
 		Tags.Origin.CLASSIC
 	]

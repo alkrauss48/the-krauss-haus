@@ -27,7 +27,7 @@ const PENICILLIN: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.HONEY_GINGER_SYRUP,
+
 		Tags.Style.SOUR,
 		Tags.Origin.MODERN
 	]

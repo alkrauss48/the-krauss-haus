@@ -51,7 +51,7 @@ const LOGGY_CAB: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.Technique.BUILT,
-		Tags.Syrups.RICH_SIMPLE_SYRUP,
+
 		Tags.Style.HIGHBALL,
 		Tags.Origin.ORIGINAL
 	]

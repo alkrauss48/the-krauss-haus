@@ -3,6 +3,9 @@
 	import { fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 	import { allCocktails } from '$lib/data/all-cocktails';
+	import { cocktailUsesRecipe } from '$lib/utils/recipe-cocktail';
+	import { syrups } from '$lib/data/syrups';
+	import { infusions } from '$lib/data/infusions';
 	import CopyLinkButton from './CopyLinkButton.svelte';
 
 	export let recipes: Recipe[];
@@ -12,32 +15,29 @@
 		return `/recipes/${recipe.slug}`;
 	}
 
-	// Convert category label to URL-friendly key (same as cocktails page)
-	function categoryToUrlKey(categoryLabel: string): string {
-		return categoryLabel.toLowerCase().replace(/\s+/g, '-');
-	}
+	// Generate URL for cocktails page with recipe filter
+	function getCocktailsUrlWithRecipe(recipe: Recipe): string {
+		// Determine if this is a syrup or infusion
+		const isSyrup = syrups.some((s) => s.slug === recipe.slug);
+		const isInfusion = infusions.some((i) => i.slug === recipe.slug);
 
-	// Generate URL for cocktails page with recipe tag filter
-	function getCocktailsUrlWithTag(recipe: Recipe): string {
-		if (!recipe.tag) return '/cocktails';
+		if (isSyrup) {
+			return `/cocktails?homemade-syrups=${encodeURIComponent(recipe.name)}`;
+		} else if (isInfusion) {
+			return `/cocktails?homemade-infusions=${encodeURIComponent(recipe.name)}`;
+		}
 
-		const categoryKey = categoryToUrlKey(recipe.tag.category.label);
-		const tagLabel = recipe.tag.label;
-		return `/cocktails?${categoryKey}=${encodeURIComponent(tagLabel)}`;
+		return '/cocktails';
 	}
 
 	function navigateToCocktails(recipe: Recipe): void {
-		const url = getCocktailsUrlWithTag(recipe);
+		const url = getCocktailsUrlWithRecipe(recipe);
 		goto(url);
 	}
 
-	// Count cocktails that use this recipe's tag
+	// Count cocktails that use this recipe
 	function getCocktailCountForRecipe(recipe: Recipe): number {
-		if (!recipe.tag) return 0;
-
-		return allCocktails.filter((cocktail) =>
-			(cocktail.tags || []).some((cocktailTag) => cocktailTag.label === recipe.tag!.label)
-		).length;
+		return allCocktails.filter((cocktail) => cocktailUsesRecipe(cocktail, recipe)).length;
 	}
 </script>
 
@@ -66,7 +66,7 @@
 			<div class="px-4 pb-4 pt-2 border-t border-gray-200 bg-white">
 				<div class="flex items-center justify-between">
 					<div class="flex items-center gap-2">
-						{#if recipe.tag && getCocktailCountForRecipe(recipe) > 0}
+						{#if getCocktailCountForRecipe(recipe) > 0}
 							{@const cocktailCount = getCocktailCountForRecipe(recipe)}
 							<button
 								class="inline-flex items-center px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded text-xs gap-1.5 cursor-pointer transition-colors duration-200"

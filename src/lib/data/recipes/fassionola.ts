@@ -1,5 +1,4 @@
 import type { Recipe } from '$lib/types/recipes';
-import { Tags } from '$lib/data/all-tags';
 
 const FASSIONOLA: Recipe = {
 	name: 'Fassionola',
@@ -15,8 +14,7 @@ const FASSIONOLA: Recipe = {
 	],
 	instructions:
 		'In large bowl, add strawberries, blueberries, pineapple, and lemon peel. Add equal amount sugar (by weight) compared to the amount of fruit. Stir and cover with plastic wrap. Stir every few hours (it will be very dry at first, but will start to become more liquidy) for 24 hours. Strain (Should get ~40oz). Add 1/4 of the total strained volume of passion fruit puree (i.e. ~10oz).',
-	notes: "Used in the Hurricane and Cobra's Fang. Recipe makes about 6 cups.",
-	tag: Tags.Syrups.FASSIONOLA
+	notes: "Used in the Hurricane and Cobra's Fang. Recipe makes about 6 cups."
 };
 
 export default FASSIONOLA;

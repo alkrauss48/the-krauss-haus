@@ -30,7 +30,7 @@ const ANCIENT_MARINER: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.DEMERARA_SYRUP,
+
 		Tags.Style.TIKI,
 		Tags.Origin.MODERN
 	]

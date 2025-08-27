@@ -5,8 +5,7 @@ import { BASE_SPIRIT, TAGS as BASE_SPIRIT_TAGS } from '$lib/data/tags/base-spiri
 import { FLAVOR_PROFILE, TAGS as FLAVOR_PROFILE_TAGS } from '$lib/data/tags/flavor-profile';
 import { STYLE, TAGS as STYLE_TAGS } from '$lib/data/tags/style';
 import { TECHNIQUE, TAGS as TECHNIQUE_TAGS } from '$lib/data/tags/technique';
-import { INFUSIONS, TAGS as INFUSIONS_TAGS } from '$lib/data/tags/infusions';
-import { SYRUPS, TAGS as SYRUPS_TAGS } from '$lib/data/tags/syrups';
+
 import { ORIGIN, TAGS as ORIGIN_TAGS } from '$lib/data/tags/origin';
 import { TEMPERATURE, TAGS as TEMPERATURE_TAGS } from '$lib/data/tags/temperature';
 import { ALCOHOL_LEVEL, TAGS as ALCOHOL_LEVEL_TAGS } from '$lib/data/tags/alcohol-level';
@@ -17,8 +16,7 @@ export const Tags = {
 	FlavorProfile: FLAVOR_PROFILE_TAGS,
 	Style: STYLE_TAGS,
 	Technique: TECHNIQUE_TAGS,
-	Infusions: INFUSIONS_TAGS,
-	Syrups: SYRUPS_TAGS,
+
 	Origin: ORIGIN_TAGS,
 	Temperature: TEMPERATURE_TAGS,
 	AlcoholLevel: ALCOHOL_LEVEL_TAGS
@@ -32,9 +30,7 @@ export const allTagCategories: TagCategory[] = [
 	FLAVOR_PROFILE,
 	ALCOHOL_LEVEL,
 	TECHNIQUE,
-	TEMPERATURE,
-	SYRUPS,
-	INFUSIONS
+	TEMPERATURE
 ];
 
 // Create a map of all tag categories by label for quick lookups

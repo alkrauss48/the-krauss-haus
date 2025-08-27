@@ -2,6 +2,9 @@ import type { PageLoad } from './$types';
 import { allCocktails } from '$lib/data/all-cocktails';
 import { Tags, allTagCategories } from '$lib/data/all-tags';
 import type { Tag } from '$lib/types/tags';
+import type { Recipe } from '$lib/types/recipes';
+import { syrups } from '$lib/data/syrups';
+import { infusions } from '$lib/data/infusions';
 
 export const load: PageLoad = ({ url }) => {
 	// Parse tags from URL query params using category-based structure
@@ -19,9 +22,29 @@ export const load: PageLoad = ({ url }) => {
 		}
 	});
 
+	// Parse recipes from URL query params
+	const selectedRecipes: Recipe[] = [];
+
+	// Check for syrup recipes
+	const syrupParam = url.searchParams.get('homemade-syrups');
+	if (syrupParam) {
+		const syrupNames = syrupParam.split(',').map((name) => name.trim());
+		const selectedSyrups = syrups.filter((syrup) => syrupNames.includes(syrup.name));
+		selectedRecipes.push(...selectedSyrups);
+	}
+
+	// Check for infusion recipes
+	const infusionParam = url.searchParams.get('homemade-infusions');
+	if (infusionParam) {
+		const infusionNames = infusionParam.split(',').map((name) => name.trim());
+		const selectedInfusions = infusions.filter((infusion) => infusionNames.includes(infusion.name));
+		selectedRecipes.push(...selectedInfusions);
+	}
+
 	return {
 		cocktails: allCocktails,
-		selectedTags
+		selectedTags,
+		selectedRecipes
 	};
 };
 

@@ -32,7 +32,7 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BLENDED,
-		Tags.Syrups.HONEY_SYRUP,
+
 		Tags.Temperature.FROZEN,
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,

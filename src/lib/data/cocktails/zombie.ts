@@ -46,8 +46,7 @@ const ZOMBIE: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.FLASH_BLENDED,
-		Tags.Infusions.FALERNUM,
-		Tags.Syrups.GRENADINE,
+
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

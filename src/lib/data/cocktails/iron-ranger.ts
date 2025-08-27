@@ -34,8 +34,7 @@ const IRON_RANGER: Cocktail = {
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
-		Tags.Infusions.FALERNUM,
-		Tags.Syrups.DEMERARA_SYRUP,
+
 		Tags.Style.TIKI,
 		Tags.Origin.MODERN
 	]

@@ -36,7 +36,7 @@ const JUNGLE_BIRD: Cocktail = {
 		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.DEMERARA_SYRUP,
+
 		Tags.Style.TIKI,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Origin.CLASSIC,

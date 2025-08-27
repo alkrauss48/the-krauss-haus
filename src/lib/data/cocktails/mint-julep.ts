@@ -26,7 +26,7 @@ const MINT_JULEP: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Technique.BUILT,
-		Tags.Syrups.RICH_SIMPLE_SYRUP,
+
 		Tags.Origin.FOLK
 	]
 };

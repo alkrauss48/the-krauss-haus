@@ -36,8 +36,7 @@ const COBRAS_FANG: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.FLASH_BLENDED,
-		Tags.Infusions.FALERNUM,
-		Tags.Syrups.FASSIONOLA,
+
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

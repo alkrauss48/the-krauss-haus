@@ -27,7 +27,7 @@ const AMARETTO_SOUR: Cocktail = {
 		Tags.BaseSpirit.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.RICH_SIMPLE_SYRUP,
+
 		Tags.Style.SOUR,
 		Tags.Origin.MODERN,
 		Tags.AlcoholLevel.LOW

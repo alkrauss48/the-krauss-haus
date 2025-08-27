@@ -31,8 +31,7 @@ const MARGARITA: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
-		Tags.Origin.CLASSIC,
-		Tags.Infusions.JALAPENO_TEQUILA
+		Tags.Origin.CLASSIC
 	]
 };
 

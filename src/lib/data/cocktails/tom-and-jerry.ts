@@ -30,7 +30,7 @@ const TOM_AND_JERRY: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
-		Tags.Syrups.TOM_AND_JERRY_BATTER,
+
 		Tags.Origin.FOLK,
 		Tags.AlcoholLevel.LOW
 	]

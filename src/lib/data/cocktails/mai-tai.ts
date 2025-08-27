@@ -35,8 +35,7 @@ const MAI_TAI: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.ORGEAT,
-		Tags.Syrups.DEMERARA_SYRUP,
+
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

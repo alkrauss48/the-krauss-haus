@@ -34,7 +34,7 @@ const SINGAPORE_SLING: Cocktail = {
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
-		Tags.Syrups.GRENADINE,
+
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
 		Tags.AlcoholLevel.HIGH
