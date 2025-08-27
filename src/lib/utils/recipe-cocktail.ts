@@ -1,32 +1,6 @@
 import type { Cocktail } from '$lib/types/cocktails';
-import type { Recipe, RecipeIngredient } from '$lib/types/recipes';
-import { syrups } from '$lib/data/syrups';
-import { infusions } from '$lib/data/infusions';
-
-/**
- * Recipe categories for filtering
- */
-export interface RecipeCategory {
-	label: string;
-	color: string;
-	recipes: Recipe[];
-}
-
-/**
- * Recipe filter categories (replacing the old tag-based system)
- */
-export const RECIPE_CATEGORIES: RecipeCategory[] = [
-	{
-		label: 'Homemade Syrups',
-		color: '#eab308', // same golden yellow as before
-		recipes: syrups
-	},
-	{
-		label: 'Homemade Infusions',
-		color: '#8b5cf6', // same violet purple as before
-		recipes: infusions
-	}
-];
+import type { Recipe, RecipeIngredient, RecipeCategory } from '$lib/types/recipes';
+import { RECIPE_CATEGORIES } from '$lib/data/all-recipes';
 
 /**
  * Extract all recipes used in a cocktail

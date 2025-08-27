@@ -6,12 +6,9 @@
 	import type { Cocktail } from '$lib/types/cocktails';
 	import type { Recipe } from '$lib/types/recipes';
 	import { allTagCategories } from '$lib/data/all-tags';
-	import {
-		RECIPE_CATEGORIES,
-		getUsedRecipesByCategory,
-		filterCocktailsByRecipes,
-		type RecipeCategory
-	} from '$lib/utils/recipe-cocktail';
+	import { getUsedRecipesByCategory, filterCocktailsByRecipes } from '$lib/utils/recipe-cocktail';
+	import { RECIPE_CATEGORIES } from '$lib/data/all-recipes';
+	import type { RecipeCategory } from '$lib/types/recipes';
 
 	export let cocktails: Cocktail[] = [];
 	export let selectedTags: Tag[] = [];

@@ -11,7 +11,7 @@
 	import type { Tag } from '$lib/types/tags';
 	import type { Recipe } from '$lib/types/recipes';
 	import { filterCocktailsByRecipes } from '$lib/utils/recipe-cocktail';
-	import { syrups } from '$lib/data/syrups';
+	import { syrups, infusions, other } from '$lib/data/all-recipes';
 
 	export let data: PageData;
 	const { cocktails } = data;
@@ -104,33 +104,31 @@
 
 		// Add recipe params if any are selected
 		if (selectedRecipes.length > 0) {
-			// Import recipe data to categorize properly
-			import('$lib/data/syrups').then(({ syrups }) => {
-				import('$lib/data/infusions').then(({ infusions }) => {
-					const syrupNames: string[] = [];
-					const infusionNames: string[] = [];
+			const syrupNames: string[] = [];
+			const infusionNames: string[] = [];
+			const otherNames: string[] = [];
 
-					selectedRecipes.forEach((recipe) => {
-						if (syrups.some((s) => s.slug === recipe.slug)) {
-							syrupNames.push(recipe.name);
-						} else if (infusions.some((i) => i.slug === recipe.slug)) {
-							infusionNames.push(recipe.name);
-						}
-					});
-
-					if (syrupNames.length > 0) {
-						url.searchParams.set('homemade-syrups', syrupNames.join(','));
-					}
-					if (infusionNames.length > 0) {
-						url.searchParams.set('homemade-infusions', infusionNames.join(','));
-					}
-
-					goto(url, { replaceState: true, noScroll: true });
-				});
+			selectedRecipes.forEach((recipe) => {
+				if (syrups.some((s) => s.slug === recipe.slug)) {
+					syrupNames.push(recipe.name);
+				} else if (infusions.some((i) => i.slug === recipe.slug)) {
+					infusionNames.push(recipe.name);
+				} else if (other.some((o) => o.slug === recipe.slug)) {
+					otherNames.push(recipe.name);
+				}
 			});
-		} else {
-			goto(url, { replaceState: true, noScroll: true });
+
+			if (syrupNames.length > 0) {
+				url.searchParams.set('homemade-syrups', syrupNames.join(','));
+			}
+			if (infusionNames.length > 0) {
+				url.searchParams.set('homemade-infusions', infusionNames.join(','));
+			}
+			if (otherNames.length > 0) {
+				url.searchParams.set('other', otherNames.join(','));
+			}
 		}
+		goto(url, { replaceState: true, noScroll: true });
 	}
 </script>
 
@@ -256,7 +254,8 @@
 							{/each}
 							{#each selectedRecipes as recipe (recipe.slug)}
 								{@const isSyrup = syrups.some((s) => s.slug === recipe.slug)}
-								{@const categoryColor = isSyrup ? '#eab308' : '#8b5cf6'}
+								{@const isInfusion = infusions.some((i) => i.slug === recipe.slug)}
+								{@const categoryColor = isSyrup ? '#eab308' : isInfusion ? '#8b5cf6' : '#6b7280'}
 								<button
 									class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full text-white hover:opacity-80 transition-opacity cursor-pointer"
 									style="background-color: {categoryColor};"

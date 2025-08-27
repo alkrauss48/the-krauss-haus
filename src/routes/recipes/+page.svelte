@@ -3,8 +3,7 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import { fade, fly } from 'svelte/transition';
-	import { syrups } from '$lib/data/syrups';
-	import { infusions } from '$lib/data/infusions';
+	import { syrups, infusions, other } from '$lib/data/all-recipes';
 </script>
 
 <svelte:head>
@@ -52,7 +51,7 @@
 							</svg>
 						</div>
 						<div>
-							<h2 class="text-2xl font-bold text-gray-800">Homemade Syrups</h2>
+							<h2 class="text-2xl font-bold text-gray-800">Syrups</h2>
 							<p class="text-sm text-gray-600">
 								{syrups.length} recipe{syrups.length === 1 ? '' : 's'}
 							</p>
@@ -70,7 +69,7 @@
 		</section>
 
 		<!-- Infusions Section -->
-		<section class="mb-8" in:fly={{ y: 20, duration: 400, delay: 800 }}>
+		<section class="mb-16" in:fly={{ y: 20, duration: 400, delay: 800 }}>
 			<div class="bg-white rounded-lg shadow-sm overflow-hidden">
 				<div
 					class="bg-gradient-to-r from-purple-50 to-indigo-50 px-8 py-6 border-b border-purple-100"
@@ -111,6 +110,44 @@
 				</div>
 				<div class="p-8">
 					<RecipeList recipes={infusions} />
+				</div>
+			</div>
+		</section>
+
+		<!-- Other Section -->
+		<section class="mb-8" in:fly={{ y: 20, duration: 400, delay: 1000 }}>
+			<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+				<div class="bg-gradient-to-r from-gray-50 to-slate-50 px-8 py-6 border-b border-gray-100">
+					<div class="flex items-center gap-3 mb-2">
+						<div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+							<svg
+								class="w-5 h-5 text-gray-700"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+								/>
+							</svg>
+						</div>
+						<div>
+							<h2 class="text-2xl font-bold text-gray-800">Other</h2>
+							<p class="text-sm text-gray-600">
+								{other.length} recipe{other.length === 1 ? '' : 's'}
+							</p>
+						</div>
+					</div>
+					<p class="text-gray-700">
+						Special recipes that don't fit neatly into the syrup or infusion categories, but are
+						essential for certain cocktails.
+					</p>
+				</div>
+				<div class="p-8">
+					<RecipeList recipes={other} />
 				</div>
 			</div>
 		</section>

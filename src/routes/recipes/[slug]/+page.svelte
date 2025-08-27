@@ -6,22 +6,24 @@
 	import { fade, fly } from 'svelte/transition';
 	import { allCocktails } from '$lib/data/all-cocktails';
 	import { cocktailUsesRecipe } from '$lib/utils/recipe-cocktail';
-	import { syrups } from '$lib/data/syrups';
-	import { infusions } from '$lib/data/infusions';
+	import { syrups, infusions, other } from '$lib/data/all-recipes';
 
 	export let data: PageData;
 	const { recipe } = data;
 
 	// Generate URL for cocktails page with recipe filter
 	function getRecipeFilterUrl(): string {
-		// Determine if this is a syrup or infusion
+		// Determine which category this recipe belongs to
 		const isSyrup = syrups.some((s) => s.slug === recipe.slug);
 		const isInfusion = infusions.some((i) => i.slug === recipe.slug);
+		const isOther = other.some((o) => o.slug === recipe.slug);
 
 		if (isSyrup) {
 			return `/cocktails?homemade-syrups=${encodeURIComponent(recipe.name)}`;
 		} else if (isInfusion) {
 			return `/cocktails?homemade-infusions=${encodeURIComponent(recipe.name)}`;
+		} else if (isOther) {
+			return `/cocktails?other=${encodeURIComponent(recipe.name)}`;
 		}
 
 		return '/cocktails';

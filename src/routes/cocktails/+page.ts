@@ -3,8 +3,7 @@ import { allCocktails } from '$lib/data/all-cocktails';
 import { Tags, allTagCategories } from '$lib/data/all-tags';
 import type { Tag } from '$lib/types/tags';
 import type { Recipe } from '$lib/types/recipes';
-import { syrups } from '$lib/data/syrups';
-import { infusions } from '$lib/data/infusions';
+import { syrups, infusions, other } from '$lib/data/all-recipes';
 
 export const load: PageLoad = ({ url }) => {
 	// Parse tags from URL query params using category-based structure
@@ -39,6 +38,14 @@ export const load: PageLoad = ({ url }) => {
 		const infusionNames = infusionParam.split(',').map((name) => name.trim());
 		const selectedInfusions = infusions.filter((infusion) => infusionNames.includes(infusion.name));
 		selectedRecipes.push(...selectedInfusions);
+	}
+
+	// Check for other recipes
+	const otherParam = url.searchParams.get('other');
+	if (otherParam) {
+		const otherNames = otherParam.split(',').map((name) => name.trim());
+		const selectedOther = other.filter((recipe) => otherNames.includes(recipe.name));
+		selectedRecipes.push(...selectedOther);
 	}
 
 	return {

@@ -11,3 +11,12 @@ export interface RecipeIngredient {
 	amount: string;
 	recipe: Recipe;
 }
+
+/**
+ * Recipe categories for filtering
+ */
+export interface RecipeCategory {
+	label: string;
+	color: string;
+	recipes: Recipe[];
+}
