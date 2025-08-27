@@ -9,3 +9,8 @@ export interface Recipe {
 	notes?: string;
 	tag?: Tag;
 }
+
+export interface RecipeIngredient {
+	amount: string;
+	recipe: Recipe;
+}

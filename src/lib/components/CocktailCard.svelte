@@ -246,7 +246,11 @@
 					{#each cocktail.ingredients as ingredient (ingredient)}
 						<li class="flex items-start">
 							<span class="text-amber-600 mr-2">•</span>
-							<span class="text-gray-700">{ingredient}</span>
+							{#if typeof ingredient === 'string'}
+								<span class="text-gray-700">{ingredient}</span>
+							{:else}
+								<span class="text-gray-700">{ingredient.amount} {ingredient.recipe.name}</span>
+							{/if}
 						</li>
 					{/each}
 				</ul>

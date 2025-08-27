@@ -1,6 +1,7 @@
 import type { SectionColor } from './colors';
 import { CocktailMethod } from '../enums/methods';
 import type { Tag } from './tags';
+import type { RecipeIngredient } from './recipes';
 
 export interface CocktailVariant {
 	name: string;
@@ -15,7 +16,7 @@ export interface Cocktail {
 	imagePath: string;
 	thumbnailImagePath: string;
 	slug: string;
-	ingredients?: string[];
+	ingredients?: (string | RecipeIngredient)[];
 	method?: CocktailMethod;
 	variations?: CocktailVariant[];
 	notes?: string;

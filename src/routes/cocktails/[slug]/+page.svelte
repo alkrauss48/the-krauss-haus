@@ -135,7 +135,18 @@
 										{#each cocktail.ingredients as ingredient (ingredient)}
 											<li class="flex items-start">
 												<span class="text-amber-600 mr-2 mt-1">•</span>
-												<span class="text-gray-700">{ingredient}</span>
+												{#if typeof ingredient === 'string'}
+													<span class="text-gray-700">{ingredient}</span>
+												{:else}
+													<a
+														href="/recipes/{ingredient.recipe.slug}"
+														class="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-md transition-colors duration-200 hover:text-blue-800"
+													>
+														<span>{ingredient.amount}</span>
+														<div class="w-px h-4 bg-blue-300 mx-2"></div>
+														<span>{ingredient.recipe.name}</span>
+													</a>
+												{/if}
 											</li>
 										{/each}
 									</ul>
