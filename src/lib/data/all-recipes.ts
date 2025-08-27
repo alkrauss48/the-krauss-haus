@@ -19,6 +19,7 @@ import FALERNUM from '$lib/data/recipes/falernum';
 import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
 import LIMONCELLO from '$lib/data/recipes/limoncello';
 import PEPPERMINT_VODKA from '$lib/data/recipes/peppermint-vodka';
+import SPICED_TEA from './recipes/spiced-tea';
 
 // Syrups (excluding Caramel Syrup and Tom and Jerry Batter which go to "Other")
 export const syrups: Recipe[] = [
@@ -44,7 +45,7 @@ export const infusions: Recipe[] = [
 ];
 
 // Other recipes (special category for Caramel Syrup and Tom and Jerry Batter)
-export const other: Recipe[] = [TOM_AND_JERRY_BATTER];
+export const other: Recipe[] = [SPICED_TEA, TOM_AND_JERRY_BATTER];
 
 /**
  * Recipe filter categories

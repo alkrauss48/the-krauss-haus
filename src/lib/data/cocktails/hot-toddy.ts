@@ -1,6 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Tags } from '../all-tags';
+import SPICED_TEA from '../recipes/spiced-tea';
 
 const HOT_TODDY: Cocktail = {
 	title: 'Hot Toddy',
@@ -14,7 +15,10 @@ const HOT_TODDY: Cocktail = {
 	ingredients: [
 		'1.5oz Bourbon',
 		'.5oz Benedictine',
-		'5oz Spiced tea',
+		{
+			amount: '5oz',
+			recipe: SPICED_TEA
+		},
 		'Honey to taste',
 		'1/4 Lemon, juiced',
 		'Garnish: Cinnamon stick, lemon wheel, and maraschino cherry'
@@ -26,7 +30,8 @@ const HOT_TODDY: Cocktail = {
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
 		Tags.Origin.FOLK
-	]
+	],
+	notes: "I usually do 7 swirls of honey; it's just too thick to want to measure with a jigger."
 };
 
 export default HOT_TODDY;
