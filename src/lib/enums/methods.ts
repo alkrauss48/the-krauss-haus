@@ -1,7 +1,7 @@
 export enum CocktailMethod {
 	Shaken = 'Shaken',
 	Stirred = 'Stirred',
-	Built = 'Built',
+	Built = 'Built in Glass',
 	FlashBlended = 'Flash Blended',
 	Blended = 'Blended'
 }
