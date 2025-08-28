@@ -56,15 +56,9 @@
 
 	function toggleModal(): void {
 		showModal = !showModal;
+
 		if (showModal) {
 			lastFocusedElement = document.activeElement as HTMLElement;
-			// Focus the first focusable element after a brief delay
-			setTimeout(() => {
-				const focusableElements = getFocusableElements(modalContent);
-				if (focusableElements.length > 0) {
-					focusableElements[0].focus();
-				}
-			}, 0);
 		} else {
 			lastFocusedElement?.focus();
 		}
@@ -72,15 +66,9 @@
 
 	function toggleVariationModal(): void {
 		showVariationModal = !showVariationModal;
+
 		if (showVariationModal) {
 			lastFocusedElement = document.activeElement as HTMLElement;
-			// Focus the first focusable element after a brief delay
-			setTimeout(() => {
-				const focusableElements = getFocusableElements(variationModalContent);
-				if (focusableElements.length > 0) {
-					focusableElements[0].focus();
-				}
-			}, 0);
 		} else {
 			lastFocusedElement?.focus();
 		}
@@ -219,7 +207,7 @@
 					{/if}
 				</div>
 				<button
-					class="text-gray-400 hover:text-gray-600 ml-4"
+					class="cursor-pointer text-gray-400 hover:text-gray-600 ml-4"
 					on:click={toggleModal}
 					aria-label="Close modal"
 				>
@@ -277,7 +265,7 @@
 			<div class="flex justify-between items-start mb-6">
 				<h3 class="text-2xl font-bold text-gray-800">{selectedVariant?.name}</h3>
 				<button
-					class="text-gray-400 hover:text-gray-600"
+					class="cursor-pointer text-gray-400 hover:text-gray-600"
 					on:click={toggleVariationModal}
 					aria-label="Close variation modal"
 				>
