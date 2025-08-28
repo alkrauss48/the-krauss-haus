@@ -34,8 +34,7 @@ const NAVY_GROG: Cocktail = {
 		Tags.BaseSpirit.RUM,
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.CITRUS,
-
-		Tags.Technique.BUILT
+		Tags.Technique.SHAKEN
 	]
 };
 

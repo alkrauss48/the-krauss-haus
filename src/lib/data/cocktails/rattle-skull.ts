@@ -33,7 +33,6 @@ const RATTLE_SKULL: Cocktail = {
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
-
 		Tags.Technique.SHAKEN
 	]
 };
