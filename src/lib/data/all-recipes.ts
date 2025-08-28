@@ -19,6 +19,7 @@ import FALERNUM from '$lib/data/recipes/falernum';
 import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
 import LIMONCELLO from '$lib/data/recipes/limoncello';
 import PEPPERMINT_VODKA from '$lib/data/recipes/peppermint-vodka';
+import PERSIAN_SPICE_LIQUEUR from './recipes/persian-spice-liqueur';
 import SPICED_TEA from './recipes/spiced-tea';
 
 // Syrups (excluding Caramel Syrup and Tom and Jerry Batter which go to "Other")
@@ -41,7 +42,8 @@ export const infusions: Recipe[] = [
 	FALERNUM,
 	JALAPENO_TEQUILA,
 	LIMONCELLO,
-	PEPPERMINT_VODKA
+	PEPPERMINT_VODKA,
+	PERSIAN_SPICE_LIQUEUR
 ];
 
 // Other recipes (special category for Caramel Syrup and Tom and Jerry Batter)
