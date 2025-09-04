@@ -11,8 +11,8 @@ const LIMONCELLO: Recipe = {
 		'200g Sugar'
 	],
 	instructions:
-		'Infuse everclear and lemon peels for 2-3 weeks (lower end if more white pithe). Heat water and sugar to make syrup. Strain lemon peels out, add syrup. Let rest for 2 weeks in freezer or fridge.',
-	notes: 'Makes ~24oz at 31% ABV. Takes about a month to make. Always serve chilled.'
+		'Infuse everclear and lemon peels for 2 weeks or more (lower end if more white pithe). Heat water and sugar to make syrup. Strain lemon peels out, add syrup. Let rest for at least 5 days in freezer.',
+	notes: 'Makes ~24oz at 31% ABV. Takes a few weeks to make. Always serve chilled.'
 };
 
 export default LIMONCELLO;

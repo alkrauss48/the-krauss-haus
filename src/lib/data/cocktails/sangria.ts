@@ -26,7 +26,6 @@ const SANGRIA: Cocktail = {
 		Tags.BaseSpirit.BRANDY,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.FRUITY,
-		Tags.AlcoholLevel.LOW
 	]
 };
 

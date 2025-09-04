@@ -23,9 +23,7 @@ const GLUHWEIN: Cocktail = {
 		Tags.BaseSpirit.BRANDY,
 		Tags.FlavorProfile.SPICED,
 		Tags.Temperature.HOT,
-		Tags.Technique.BUILT,
 		Tags.Origin.FOLK,
-		Tags.AlcoholLevel.LOW
 	]
 };
 

@@ -13,7 +13,7 @@ const PERSIAN_SPICE_LIQUEUR: Recipe = {
 		'250g Sugar'
 	],
 	instructions:
-		'Steep everclear, 250mL water, rose petals, cardamom, and vanilla in a mason jar for 24 hours, swirling every few hours. Strain. Heat remaining 150mL water and sugar until dissolved. Combine with alcohol and let rest for 1 week.',
+		'Steep everclear, 250mL water, rose petals, cardamom, and vanilla in a mason jar for 24 hours, swirling every few hours. Strain. Heat remaining 150mL water and sugar until dissolved. Combine with alcohol and let rest for at least 5 days.',
 	notes: 'Makes ~750mL at 31% ABV.'
 };
 
