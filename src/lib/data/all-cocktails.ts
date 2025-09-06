@@ -13,6 +13,7 @@ import DIVISION_BELL from '$lib/data/cocktails/division-bell';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
+import GILDED_ROSE from '$lib/data/cocktails/gilded-rose';
 import GIN_AND_TONIC from '$lib/data/cocktails/gin-and-tonic';
 import GIN_BASIL_SMASH from '$lib/data/cocktails/gin-basil-smash';
 import GLUHWEIN from '$lib/data/cocktails/gluhwein';
@@ -29,6 +30,7 @@ import MANHATTAN from '$lib/data/cocktails/manhattan';
 import MARGARITA from '$lib/data/cocktails/margarita';
 import MARTINI from '$lib/data/cocktails/martini';
 import MERRY_MULE from '$lib/data/cocktails/merry-mule';
+import MICHELADA from '$lib/data/cocktails/michelada';
 import MINT_JULEP from '$lib/data/cocktails/mint-julep';
 import MISSIONARYS_DOWNFALL from '$lib/data/cocktails/missionarys-downfall';
 import MOJITO from '$lib/data/cocktails/mojito';
@@ -78,6 +80,7 @@ export const allCocktails: Cocktail[] = [
 	ESPRESSO_MARTINI,
 	FERNET_CON_COCA,
 	FRENCH_75,
+	GILDED_ROSE,
 	GIN_AND_TONIC,
 	GIN_BASIL_SMASH,
 	GLUHWEIN,
@@ -94,6 +97,7 @@ export const allCocktails: Cocktail[] = [
 	MARGARITA,
 	MARTINI,
 	MERRY_MULE,
+	MICHELADA,
 	MINT_JULEP,
 	MISSIONARYS_DOWNFALL,
 	MOJITO,
