@@ -8,13 +8,13 @@ const PERSIAN_SPICE_LIQUEUR: Recipe = {
 		'250mL Everclear',
 		'400mL distilled water',
 		'10g edible rose petals',
-		'1 cardamom pod, cracked',
+		'2 cardamom pods, cracked',
 		'1/2 vanilla bean, split and scraped',
 		'250g Sugar'
 	],
 	instructions:
-		'Steep everclear, 250mL water, rose petals, cardamom, and vanilla in a mason jar for 24 hours, swirling every few hours. Strain. Heat remaining 150mL water and sugar until dissolved. Combine with alcohol and let rest for at least 5 days.',
-	notes: 'Makes ~750mL at 31% ABV.'
+		'Steep everclear, 250mL water, rose petals, cardamom pods, and vanilla bean in a mason jar for 24 hours, swirling every few hours. Strain. Heat remaining 150mL water and sugar until dissolved. Combine with alcohol and let rest for at least 5 days.',
+	notes: 'Makes ~750mL at 31% ABV. Best stored in the freezer.'
 };
 
 export default PERSIAN_SPICE_LIQUEUR;
