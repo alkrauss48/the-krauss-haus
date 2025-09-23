@@ -302,7 +302,7 @@
 <!-- Backdrop -->
 {#if isOpen}
 	<div
-		class="fixed inset-0 bg-black/50 z-40"
+		class="fixed inset-0 bg-black/50 z-40 cursor-pointer"
 		role="button"
 		tabindex="-1"
 		aria-label="Close filter sidebar"
