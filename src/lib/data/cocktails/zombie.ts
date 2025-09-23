@@ -22,20 +22,20 @@ const ZOMBIE: Cocktail = {
 		'.5oz Coruba (Jamaican rum)',
 		'.5oz Hamilton 151 (Overproof Demerara rum)',
 		'.5oz Planteray OFTD (Overproof Blended rum)',
-		'2/3oz Grapefruit',
-		{
-			amount: '1/3oz',
-			recipe: CINNAMON_SYRUP
-		},
 		{
 			amount: '.5oz',
 			recipe: FALERNUM
 		},
-		'.75oz Lime',
 		{
 			amount: '1 tsp',
 			recipe: GRENADINE
 		},
+		{
+			amount: '1 tsp',
+			recipe: CINNAMON_SYRUP
+		},
+		'2 tsp Grapefruit',
+		'.75oz Lime',
 		'1 dash Herbstura',
 		'Garnish: Mint sprig'
 	],

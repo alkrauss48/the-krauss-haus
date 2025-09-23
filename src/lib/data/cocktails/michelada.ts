@@ -14,10 +14,10 @@ const MICHELADA: Cocktail = {
 	ingredients: [
 		'12oz Mexican lager',
 		'1 lime (minus a wedge)',
-		'3 dashes Worcestershire sauce',
-		'5 dashes Valentina hot sauce',
+		'3 shakes Worcestershire sauce',
+		'5 shakes Valentina hot sauce',
 		'Pinch of salt',
-		'Garnish: Tajin rim and lime wedge'
+		'Garnish: Tajin/Chamoy rim and lime wedge'
 	],
 	notes: 'Add all ingredients besides beer into a glass, then top with the beer.',
 	tags: [
