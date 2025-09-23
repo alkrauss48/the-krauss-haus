@@ -10,6 +10,7 @@ import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
 import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
+import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
@@ -77,6 +78,7 @@ export const allCocktails: Cocktail[] = [
 	CUBA_LIBRE,
 	DAIQUIRI,
 	DIVISION_BELL,
+	DONGA_PUNCH,
 	ESPRESSO_MARTINI,
 	FERNET_CON_COCA,
 	FRENCH_75,
