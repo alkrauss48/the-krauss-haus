@@ -13,13 +13,14 @@ const MICHELADA: Cocktail = {
 	method: CocktailMethod.Built,
 	ingredients: [
 		'12oz Mexican lager',
-		'1 lime (minus a wedge)',
+		'1 lime (minus a wedge), juiced',
 		'3 shakes Worcestershire sauce',
 		'5 shakes Valentina hot sauce',
 		'Pinch of salt',
 		'Garnish: Tajin/Chamoy rim and lime wedge'
 	],
-	notes: 'Add all ingredients besides beer into a glass, then top with the beer.',
+	notes:
+		'Add all ingredients besides beer into a glass, then top with the beer. Tecate is my preference.',
 	tags: [
 		Tags.Origin.FOLK,
 		Tags.AlcoholLevel.LOW,

@@ -27,7 +27,7 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 		'Soda water'
 	],
 	notes:
-		'Shake all ingredients, sans soda water, with 3 1" ice cubes, for 4 minutes until all ice is dissolved. Add a splash of soda water to the glass. Pour contents into glass. Place in freezer for 2-3 minutes. Pour rest of soda water down through straw to lift up the foam (a thin funnel may help).',
+		'Shake all ingredients, sans soda water, with 3 1" ice cubes, for 4 minutes. Add a splash of soda water to an 8-10oz single rocks or highball glass. Strain into glass. Place in fridge for 2-3 minutes to allow foam to set up. Pour rest of soda water down through straw via a funnel to lift up the foam over the rim of the glass.',
 	tags: [
 		Tags.BaseSpirit.GIN,
 		Tags.FlavorProfile.CITRUS,
