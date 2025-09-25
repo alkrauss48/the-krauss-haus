@@ -5,7 +5,7 @@ import CINNAMON_SYRUP from '../recipes/cinnamon-syrup';
 
 const DONGA_PUNCH: Cocktail = {
 	title: 'Donga Punch',
-	description: 'Jamaican rum, blended rum, fassionola, lemon.',
+	description: 'Aged rhum agricole, grapefruit, cinnamon syrup, lime.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/donga-punch.png',
 	thumbnailImagePath:
