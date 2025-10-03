@@ -48,6 +48,7 @@ import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
 import PENICILLIN from '$lib/data/cocktails/penicillin';
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
 import PORT_LIGHT from '$lib/data/cocktails/port-light';
+import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
 import SANGRIA from '$lib/data/cocktails/sangria';
@@ -116,6 +117,7 @@ export const allCocktails: Cocktail[] = [
 	PENICILLIN,
 	PIMMS_CUP,
 	PORT_LIGHT,
+	RADLER,
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,
 	SANGRIA,
