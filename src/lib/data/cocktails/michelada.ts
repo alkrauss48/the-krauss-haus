@@ -20,7 +20,7 @@ const MICHELADA: Cocktail = {
 		'Garnish: Tajin/Chamoy rim and lime wedge'
 	],
 	notes:
-		'Add all ingredients besides beer into a glass, then top with the beer. Tecate is my preference.',
+		'Add all ingredients besides beer into a glass, then top with the beer. Tecate is our preference.',
 	tags: [
 		Tags.Origin.FOLK,
 		Tags.AlcoholLevel.LOW,
