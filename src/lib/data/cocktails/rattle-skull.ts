@@ -26,6 +26,7 @@ const RATTLE_SKULL: Cocktail = {
 	notes:
 		'This cocktail is over 300 years old, dating back to colonial New England. A "rattle skull" refers to an empty-headed person, which this drink might induce. Pour beer into a glass. Shake rum, cognac, lime, and demerara syrup with ice. Strain over beer into glass. Garnish with nutmeg.',
 	tags: [
+		Tags.BaseAlcohol.BEER,
 		Tags.Origin.FOLK,
 		Tags.BaseAlcohol.RUM,
 		Tags.BaseAlcohol.BRANDY,

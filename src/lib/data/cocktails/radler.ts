@@ -15,6 +15,7 @@ const RADLER: Cocktail = {
 	notes:
 		"No need to measure. A 60/40 ratio of beer to lemonade works well too. We're partial to Bitburger Pils.",
 	tags: [
+		Tags.BaseAlcohol.BEER,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,

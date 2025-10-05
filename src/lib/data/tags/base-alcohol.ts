@@ -13,6 +13,8 @@ const BRANDY: Tag = { label: 'Brandy', category: BASE_ALCOHOL, order: 4 };
 const TEQUILA: Tag = { label: 'Tequila', category: BASE_ALCOHOL, order: 5 };
 const MEZCAL: Tag = { label: 'Mezcal', category: BASE_ALCOHOL, order: 6 };
 const VODKA: Tag = { label: 'Vodka', category: BASE_ALCOHOL, order: 7 };
+const BEER: Tag = { label: 'Beer', category: BASE_ALCOHOL, order: 8 };
+const WINE: Tag = { label: 'Wine', category: BASE_ALCOHOL, order: 9 };
 
 export const TAGS = {
 	RUM,
@@ -21,5 +23,7 @@ export const TAGS = {
 	MEZCAL,
 	GIN,
 	VODKA,
-	BRANDY
+	BRANDY,
+	BEER,
+	WINE
 };

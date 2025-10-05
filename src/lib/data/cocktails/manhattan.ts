@@ -26,6 +26,7 @@ const MANHATTAN: Cocktail = {
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
+		Tags.BaseAlcohol.WINE,
 		Tags.AlcoholLevel.HIGH,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Technique.STIRRED,

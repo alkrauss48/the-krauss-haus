@@ -22,6 +22,7 @@ const MICHELADA: Cocktail = {
 	notes:
 		'Add all ingredients besides beer into a glass, then top with the beer. Tecate is our preference.',
 	tags: [
+		Tags.BaseAlcohol.BEER,
 		Tags.Origin.FOLK,
 		Tags.AlcoholLevel.LOW,
 		Tags.FlavorProfile.BUBBLY,

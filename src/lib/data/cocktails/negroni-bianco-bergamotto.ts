@@ -14,6 +14,7 @@ const NEGRONI_BIANCO_BERGAMOTTO: Cocktail = {
 	ingredients: ['1oz Gin', '1oz Italicus', '1oz Dry vermouth', 'Garnish: Lemon twist'],
 	tags: [
 		Tags.BaseAlcohol.GIN,
+		Tags.BaseAlcohol.WINE,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
