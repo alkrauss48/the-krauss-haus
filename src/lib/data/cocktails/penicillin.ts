@@ -23,7 +23,7 @@ const PENICILLIN: Cocktail = {
 		'Garnish: Candied ginger'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,

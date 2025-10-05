@@ -27,7 +27,7 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 		'Garnish: Cinnamon stick and maraschino cherry'
 	],
 	tags: [
-		Tags.BaseSpirit.BRANDY,
+		Tags.BaseAlcohol.BRANDY,
 
 		Tags.Temperature.HOT,
 		Tags.FlavorProfile.SPICED,

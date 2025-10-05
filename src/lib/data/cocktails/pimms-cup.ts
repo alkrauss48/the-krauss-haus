@@ -17,7 +17,7 @@ const PIMMS_CUP: Cocktail = {
 		'Garnish: orange, mint sprig, strawberry, cucumber'
 	],
 	tags: [
-		Tags.BaseSpirit.GIN,
+		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.BUBBLY,

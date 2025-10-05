@@ -31,8 +31,8 @@ const TIA_MIA: Cocktail = {
 		}
 	],
 	tags: [
-		Tags.BaseSpirit.MEZCAL,
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.MEZCAL,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
 

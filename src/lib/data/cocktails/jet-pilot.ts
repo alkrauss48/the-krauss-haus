@@ -34,7 +34,7 @@ const JET_PILOT: Cocktail = {
 		'Garnish: Maraschino cherry'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.SPICED,

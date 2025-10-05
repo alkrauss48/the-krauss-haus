@@ -25,8 +25,8 @@ const SAZERAC: Cocktail = {
 		'Garnish: Lemon twist'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
-		Tags.BaseSpirit.BRANDY,
+		Tags.BaseAlcohol.WHISKEY,
+		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 

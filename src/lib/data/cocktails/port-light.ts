@@ -29,7 +29,7 @@ const PORT_LIGHT: Cocktail = {
 		'Garnish: Mint spring, pineapple square, and maraschino cherry'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,

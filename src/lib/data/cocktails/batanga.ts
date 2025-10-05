@@ -20,7 +20,7 @@ const BATANGA: Cocktail = {
 	notes:
 		'Typically unmeasured. Add tequila, then ice, then lime (including shell). Top with soda, add salt, and stir with the knife used to cut the lime.',
 	tags: [
-		Tags.BaseSpirit.TEQUILA,
+		Tags.BaseAlcohol.TEQUILA,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,

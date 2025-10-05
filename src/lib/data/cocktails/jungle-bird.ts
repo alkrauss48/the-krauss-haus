@@ -32,7 +32,7 @@ const JUNGLE_BIRD: Cocktail = {
 		}
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,

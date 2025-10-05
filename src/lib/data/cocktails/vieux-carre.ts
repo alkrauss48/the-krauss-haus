@@ -22,8 +22,8 @@ const VIEUX_CARRE: Cocktail = {
 		'Garnish: Lemon twist'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
-		Tags.BaseSpirit.BRANDY,
+		Tags.BaseAlcohol.WHISKEY,
+		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,

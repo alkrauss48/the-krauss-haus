@@ -40,7 +40,7 @@ const ZOMBIE: Cocktail = {
 		'Garnish: Mint sprig'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
 		Tags.AlcoholLevel.HIGH,

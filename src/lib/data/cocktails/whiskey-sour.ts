@@ -23,7 +23,7 @@ const WHISKEY_SOUR: Cocktail = {
 		'Garnish: Maraschino cherry'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
 

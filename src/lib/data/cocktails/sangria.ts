@@ -23,7 +23,7 @@ const SANGRIA: Cocktail = {
 		'Makes 4-5 servings. Combine all but club soda in pitcher. Let rest at least 2 hours in refrigerator. Pour with fruit over ice into wine glasses, and top with club soda.',
 	tags: [
 		Tags.Origin.FOLK,
-		Tags.BaseSpirit.BRANDY,
+		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.FRUITY
 	]

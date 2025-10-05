@@ -18,7 +18,7 @@ const CUBA_LIBRE: Cocktail = {
 	],
 	notes: 'Typically unmeasured. Add rum, then ice, then lime (including shell). Top with soda.',
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,

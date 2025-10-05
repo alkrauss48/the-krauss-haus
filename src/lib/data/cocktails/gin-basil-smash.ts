@@ -25,7 +25,7 @@ const GIN_BASIL_SMASH: Cocktail = {
 	notes:
 		'Muddle lemon and basil lightly in shaker tin. Add other ingredients with ice. Shake and strain. Garnish with basil sprig.',
 	tags: [
-		Tags.BaseSpirit.GIN,
+		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,

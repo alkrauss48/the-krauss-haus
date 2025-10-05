@@ -20,7 +20,7 @@ const PAINKILLER: Cocktail = {
 		'Garnish: Freshly grated nutmeg'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.CREAMY,

@@ -13,7 +13,7 @@ const PAPER_PLANE: Cocktail = {
 	method: CocktailMethod.Shaken,
 	ingredients: ['.75oz Bourbon', '.75oz Amaro Nonino', '.75oz Aperol', '.75oz Lemon'],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BITTER,
 		Tags.AlcoholLevel.LOW,

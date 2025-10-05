@@ -22,7 +22,7 @@ const TORONTO: Cocktail = {
 		'Garnish: Lemon twist'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseAlcohol.WHISKEY,
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.STIRRED,

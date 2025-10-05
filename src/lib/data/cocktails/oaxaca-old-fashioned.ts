@@ -19,8 +19,8 @@ const OAXACA_OLD_FASHIONED: Cocktail = {
 		'Garnish: Smoked orange twist'
 	],
 	tags: [
-		Tags.BaseSpirit.TEQUILA,
-		Tags.BaseSpirit.MEZCAL,
+		Tags.BaseAlcohol.TEQUILA,
+		Tags.BaseAlcohol.MEZCAL,
 		Tags.Technique.BUILT,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.MODERN

@@ -22,7 +22,7 @@ const DONGA_PUNCH: Cocktail = {
 		'.75oz Lime'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,

@@ -13,7 +13,7 @@ const GIN_AND_TONIC: Cocktail = {
 	method: CocktailMethod.Built,
 	ingredients: ['1.5oz Gin', '4oz Tonic water', 'Garnish: Lime wedge'],
 	tags: [
-		Tags.BaseSpirit.GIN,
+		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.BITTER,

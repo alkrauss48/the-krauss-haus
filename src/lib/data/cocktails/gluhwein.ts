@@ -19,7 +19,7 @@ const GLUHWEIN: Cocktail = {
 		'1/4C Brown sugar',
 		'2oz Brandy'
 	],
-	tags: [Tags.BaseSpirit.BRANDY, Tags.FlavorProfile.SPICED, Tags.Temperature.HOT, Tags.Origin.FOLK]
+	tags: [Tags.BaseAlcohol.BRANDY, Tags.FlavorProfile.SPICED, Tags.Temperature.HOT, Tags.Origin.FOLK]
 };
 
 export default GLUHWEIN;

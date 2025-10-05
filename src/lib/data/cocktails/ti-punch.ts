@@ -22,7 +22,7 @@ const TI_PUNCH: Cocktail = {
 	],
 	notes:
 		'Served without ice. Mix rhum and simple syrup in glass. Squeeze lime coin (a disk of lime rind) and drop into glass. Chacun prépare sa proper mort (each prepares his own death)!',
-	tags: [Tags.BaseSpirit.RUM, Tags.Style.SPIRIT_FORWARD, Tags.Technique.BUILT, Tags.Origin.FOLK]
+	tags: [Tags.BaseAlcohol.RUM, Tags.Style.SPIRIT_FORWARD, Tags.Technique.BUILT, Tags.Origin.FOLK]
 };
 
 export default TI_PUNCH;

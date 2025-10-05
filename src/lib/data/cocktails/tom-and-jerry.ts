@@ -23,8 +23,8 @@ const TOM_AND_JERRY: Cocktail = {
 		'Garnish: Freshly grated nutmeg'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.WHISKEY,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CREAMY,
 		Tags.FlavorProfile.SPICED,
 		Tags.Temperature.HOT,

@@ -23,7 +23,7 @@ const JACK_ROSE: Cocktail = {
 		'Garnish: Lemon twist'
 	],
 	tags: [
-		Tags.BaseSpirit.BRANDY,
+		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
 

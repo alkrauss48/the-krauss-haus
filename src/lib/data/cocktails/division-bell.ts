@@ -19,7 +19,7 @@ const DIVISION_BELL: Cocktail = {
 		'Garnish: Grapefruit twist'
 	],
 	tags: [
-		Tags.BaseSpirit.MEZCAL,
+		Tags.BaseAlcohol.MEZCAL,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.SHAKEN,

@@ -22,7 +22,7 @@ const MINT_JULEP: Cocktail = {
 		'Garnish: Mint sprig'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Technique.BUILT,

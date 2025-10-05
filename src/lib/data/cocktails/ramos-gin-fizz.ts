@@ -29,7 +29,7 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 	notes:
 		'Shake all ingredients, sans soda water, with 3 1" ice cubes, for 4 minutes. Add a splash of soda water to an 8-10oz single rocks or highball glass. Strain into glass. Place in fridge for 2-3 minutes to allow foam to set up. Pour rest of soda water down through straw via a funnel to lift up the foam over the rim of the glass.',
 	tags: [
-		Tags.BaseSpirit.GIN,
+		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.CREAMY,

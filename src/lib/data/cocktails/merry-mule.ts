@@ -24,7 +24,7 @@ const MERRY_MULE: Cocktail = {
 		'Garnish: Cinnamon stick and apple slices'
 	],
 	tags: [
-		Tags.BaseSpirit.VODKA,
+		Tags.BaseAlcohol.VODKA,
 		Tags.FlavorProfile.SPICED,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,

@@ -29,7 +29,7 @@ const SINGAPORE_SLING: Cocktail = {
 		'Garnish: Pineapple wedge and maraschino cherry'
 	],
 	tags: [
-		Tags.BaseSpirit.GIN,
+		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.HERBAL,

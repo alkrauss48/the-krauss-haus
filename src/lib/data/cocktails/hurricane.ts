@@ -25,7 +25,7 @@ const HURRICANE: Cocktail = {
 		'Garnish: Lemon wheel'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,

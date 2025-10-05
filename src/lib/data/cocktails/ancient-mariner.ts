@@ -26,7 +26,7 @@ const ANCIENT_MARINER: Cocktail = {
 		'Garnish: Mint sprig and lime wedge'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,

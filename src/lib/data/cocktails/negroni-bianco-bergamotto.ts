@@ -13,7 +13,7 @@ const NEGRONI_BIANCO_BERGAMOTTO: Cocktail = {
 	method: CocktailMethod.Stirred,
 	ingredients: ['1oz Gin', '1oz Italicus', '1oz Dry vermouth', 'Garnish: Lemon twist'],
 	tags: [
-		Tags.BaseSpirit.GIN,
+		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,

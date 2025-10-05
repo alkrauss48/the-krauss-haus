@@ -34,7 +34,7 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 		'Garnish: Three maraschino cherries and pineapple frond'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.SPICED,

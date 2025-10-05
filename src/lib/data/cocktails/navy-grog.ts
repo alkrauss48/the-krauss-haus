@@ -31,7 +31,7 @@ const NAVY_GROG: Cocktail = {
 	tags: [
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN

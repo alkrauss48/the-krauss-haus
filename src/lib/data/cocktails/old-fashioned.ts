@@ -39,7 +39,7 @@ const OLD_FASHIONED: Cocktail = {
 		}
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseAlcohol.WHISKEY,
 		Tags.Technique.BUILT,
 
 		Tags.Style.SPIRIT_FORWARD,

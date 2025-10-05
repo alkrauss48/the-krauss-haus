@@ -22,7 +22,7 @@ const DAIQUIRI: Cocktail = {
 		'Garnish: Lime wedge'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
 

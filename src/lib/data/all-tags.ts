@@ -1,7 +1,7 @@
 import type { TagCategory } from '$lib/types/tags';
 
 // Import all tag categories
-import { BASE_SPIRIT, TAGS as BASE_SPIRIT_TAGS } from '$lib/data/tags/base-spirit';
+import { BASE_ALCOHOL, TAGS as BASE_ALCOHOL_TAGS } from '$lib/data/tags/base-alcohol';
 import { FLAVOR_PROFILE, TAGS as FLAVOR_PROFILE_TAGS } from '$lib/data/tags/flavor-profile';
 import { STYLE, TAGS as STYLE_TAGS } from '$lib/data/tags/style';
 import { TECHNIQUE, TAGS as TECHNIQUE_TAGS } from '$lib/data/tags/technique';
@@ -12,7 +12,7 @@ import { ALCOHOL_LEVEL, TAGS as ALCOHOL_LEVEL_TAGS } from '$lib/data/tags/alcoho
 
 // Structured namespace for easy access
 export const Tags = {
-	BaseSpirit: BASE_SPIRIT_TAGS,
+	BaseAlcohol: BASE_ALCOHOL_TAGS,
 	FlavorProfile: FLAVOR_PROFILE_TAGS,
 	Style: STYLE_TAGS,
 	Technique: TECHNIQUE_TAGS,
@@ -24,7 +24,7 @@ export const Tags = {
 
 // Create arrays of all tags by category for convenience
 export const allTagCategories: TagCategory[] = [
-	BASE_SPIRIT,
+	BASE_ALCOHOL,
 	STYLE,
 	ORIGIN,
 	FLAVOR_PROFILE,

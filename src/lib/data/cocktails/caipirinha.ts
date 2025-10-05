@@ -13,7 +13,7 @@ const CAIPIRINHA: Cocktail = {
 	method: CocktailMethod.Built,
 	ingredients: ['2oz Cachaça', '6 Lime wedges', '1 tbsp Sugar'],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Style.SOUR,
 		Tags.Technique.BUILT,

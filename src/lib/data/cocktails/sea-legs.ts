@@ -24,8 +24,8 @@ const SEA_LEGS: Cocktail = {
 		'Garnish: salted rim and dash of angostura bitters'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
-		Tags.BaseSpirit.MEZCAL,
+		Tags.BaseAlcohol.WHISKEY,
+		Tags.BaseAlcohol.MEZCAL,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,

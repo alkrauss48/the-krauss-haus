@@ -24,7 +24,7 @@ const HOT_TODDY: Cocktail = {
 		'Garnish: Cinnamon stick, lemon wheel, and maraschino cherry'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.SPICED,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Temperature.HOT,

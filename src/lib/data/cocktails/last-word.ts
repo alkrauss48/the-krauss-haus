@@ -19,7 +19,7 @@ const LAST_WORD: Cocktail = {
 		'Garnish: Maraschino cherry'
 	],
 	tags: [
-		Tags.BaseSpirit.GIN,
+		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,

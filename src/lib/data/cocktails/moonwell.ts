@@ -53,7 +53,7 @@ const MOONWELL: Cocktail = {
 		}
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.BUBBLY,

@@ -27,7 +27,7 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 	notes:
 		'Makes ~12 oz. Heat the pineapple for 1-2 minutes (this deactivates the bromelain, which is what gives pineapple its "bite"). Blend all ingredients without ice, until mint is shredded. Add ice and blend just enough to make it all smooth.',
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.CITRUS,

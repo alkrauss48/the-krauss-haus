@@ -23,7 +23,7 @@ const FRENCH_75: Cocktail = {
 		'Garnish: Lemon twist'
 	],
 	tags: [
-		Tags.BaseSpirit.GIN,
+		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.Technique.SHAKEN,

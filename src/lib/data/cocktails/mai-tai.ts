@@ -31,7 +31,7 @@ const MAI_TAI: Cocktail = {
 		'Garnish: Mint sprig and lime shell'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.SHAKEN,

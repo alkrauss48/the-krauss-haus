@@ -34,7 +34,7 @@ const ESPRESSO_MARTINI: Cocktail = {
 			images: []
 		}
 	],
-	tags: [Tags.BaseSpirit.BRANDY, Tags.Technique.SHAKEN, Tags.Origin.MODERN]
+	tags: [Tags.BaseAlcohol.BRANDY, Tags.Technique.SHAKEN, Tags.Origin.MODERN]
 };
 
 export default ESPRESSO_MARTINI;

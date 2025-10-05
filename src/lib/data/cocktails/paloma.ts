@@ -19,7 +19,7 @@ const PALOMA: Cocktail = {
 	],
 	notes: 'Typically unmeasured. Add tequila, then ice, then lime. Top with soda.',
 	tags: [
-		Tags.BaseSpirit.TEQUILA,
+		Tags.BaseAlcohol.TEQUILA,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,

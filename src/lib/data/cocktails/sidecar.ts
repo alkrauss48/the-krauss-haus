@@ -19,7 +19,7 @@ const SIDECAR: Cocktail = {
 		'Garnish: Sugar rim'
 	],
 	tags: [
-		Tags.BaseSpirit.BRANDY,
+		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.SHAKEN,

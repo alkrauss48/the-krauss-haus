@@ -30,7 +30,7 @@ const COBRAS_FANG: Cocktail = {
 		'Garnish: Mint sprig and cinnamon stick'
 	],
 	tags: [
-		Tags.BaseSpirit.RUM,
+		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.SPICED,

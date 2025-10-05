@@ -29,7 +29,7 @@ const IRON_RANGER: Cocktail = {
 		'Garnish: Mint sprig and freshly grated cinnamon'
 	],
 	tags: [
-		Tags.BaseSpirit.WHISKEY,
+		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.SPICED,
