@@ -36,6 +36,6 @@ export const categories: Category[] = [
 	{
 		title: "Lucas' Drinks",
 		bgColors: sectionColors.lucas,
-		cocktails: [MOJITO, FRENCH_75, PAPER_PLANE]
+		cocktails: [FRENCH_75, MOJITO, PAPER_PLANE]
 	}
 ];
