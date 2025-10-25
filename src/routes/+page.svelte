@@ -1,5 +1,17 @@
 <script lang="ts">
 	import MenuLink from '$lib/components/MenuLink.svelte';
+	import TipButton from '$lib/components/TipButton.svelte';
+	import TipModal from '$lib/components/TipModal.svelte';
+
+	let showTipModal = false;
+
+	function handleTipOpen() {
+		showTipModal = true;
+	}
+
+	function handleTipClose() {
+		showTipModal = false;
+	}
 </script>
 
 <svelte:head>
@@ -52,31 +64,41 @@
 	</section>
 
 	<footer class="mt-auto pt-8 text-center text-sm text-gray-400">
+		<div class="mb-6">
+			<TipButton on:open={handleTipOpen} />
+		</div>
 		<p>
 			Made with love by the Krauss family (<a
 				href="https://thecodeboss.dev"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="hover:text-gray-600 transition-colors">Aaron</a
+				class="hover:text-gray-600 transition-colors underline decoration-dotted underline-offset-2"
+				>Aaron</a
 			>,
 			<a
 				href="https://laylakrauss.dev"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="hover:text-gray-600 transition-colors">Layla</a
+				class="hover:text-gray-600 transition-colors underline decoration-dotted underline-offset-2"
+				>Layla</a
 			>,
 			<a
 				href="https://cyruskrauss.com"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="hover:text-gray-600 transition-colors">Cyrus</a
+				class="hover:text-gray-600 transition-colors underline decoration-dotted underline-offset-2"
+				>Cyrus</a
 			>, and
 			<a
 				href="https://lucaskrauss.dev"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="hover:text-gray-600 transition-colors">Lucas</a
+				class="hover:text-gray-600 transition-colors underline decoration-dotted underline-offset-2"
+				>Lucas</a
 			>)
 		</p>
 	</footer>
 </main>
+
+<!-- Tip Modal -->
+<TipModal bind:isOpen={showTipModal} on:close={handleTipClose} />
