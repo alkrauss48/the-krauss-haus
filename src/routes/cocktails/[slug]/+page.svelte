@@ -3,6 +3,7 @@
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
+	import { resolve } from '$app/paths';
 	import { fade, fly } from 'svelte/transition';
 
 	import type { Tag } from '$lib/types/tags';
@@ -130,7 +131,7 @@
 													<span class="text-gray-700">{ingredient}</span>
 												{:else}
 													<a
-														href="/recipes/{ingredient.recipe.slug}"
+														href={resolve(`/recipes/${ingredient.recipe.slug}`)}
 														class="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-md transition-colors duration-200 hover:text-blue-800"
 													>
 														<span>{ingredient.amount}</span>
@@ -158,7 +159,7 @@
 									<div class="flex flex-wrap gap-2">
 										{#each cocktail.tags as tag (tag.label)}
 											<a
-												href={getTagFilterUrl(tag)}
+												href={resolve(getTagFilterUrl(tag))}
 												class="inline-block px-2 py-1 text-xs font-medium rounded-md transition-all duration-200 hover:scale-105 border border-opacity-20"
 												style="
 													background-color: {hexToRgba(tag.category.color, 0.05)};
@@ -233,7 +234,7 @@
 						<div class="flex flex-wrap gap-3">
 							{#if onSummer}
 								<a
-									href="/summer-menu"
+									href={resolve('/summer-menu')}
 									class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
 								>
 									Summer Menu
@@ -241,7 +242,7 @@
 							{/if}
 							{#if onWinter}
 								<a
-									href="/winter-menu"
+									href={resolve('/winter-menu')}
 									class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors"
 								>
 									Winter Menu
@@ -249,7 +250,7 @@
 							{/if}
 							{#if onTiki}
 								<a
-									href="/tiki-menu"
+									href={resolve('/tiki-menu')}
 									class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
 								>
 									Tiki Menu

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import type { Recipe } from '$lib/types/recipes';
 	import { fly } from 'svelte/transition';
 
@@ -17,7 +18,7 @@
 			in:fly={{ y: 20, duration: 400, delay: i * 50 }}
 		>
 			<a
-				href={getRecipeUrl(recipe)}
+				href={resolve(getRecipeUrl(recipe))}
 				class="block p-4 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200"
 				data-sveltekit-prefetch
 			>

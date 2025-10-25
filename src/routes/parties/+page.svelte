@@ -4,6 +4,7 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 
 	export let data: PageData;
 	const { parties } = data;
@@ -18,7 +19,7 @@
 	);
 
 	function navigateToParty(slug: string): void {
-		goto(`/parties/${slug}`);
+		goto(resolve(`/parties/${slug}`));
 	}
 
 	function handleKeydown(event: KeyboardEvent, slug: string): void {

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { resolve } from '$app/paths';
 	import { fly } from 'svelte/transition';
 
 	// Define the breadcrumb structure based on routes
@@ -76,7 +77,7 @@
 			{:else}
 				<!-- Clickable breadcrumb link -->
 				<a
-					href={breadcrumb.href}
+					href={resolve(breadcrumb.href)}
 					class="hover:text-amber-600 transition-colors duration-200"
 					data-sveltekit-prefetch
 				>

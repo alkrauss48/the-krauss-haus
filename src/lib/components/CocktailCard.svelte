@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import type { SectionColor } from '$lib/types/colors';
 	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
 	import { methodColors } from '$lib/enums/methods';
@@ -93,7 +94,7 @@
 
 	function navigateToCocktail(event: Event): void {
 		event.preventDefault();
-		goto(`/cocktails/${cocktail.slug}`);
+		goto(resolve(`/cocktails/${cocktail.slug}`));
 	}
 
 	// Add event listener when component mounts
@@ -178,7 +179,7 @@
 				<div class="flex-1">
 					<div class="flex items-center gap-2 mb-2">
 						<a
-							href="/cocktails/{cocktail.slug}"
+							href={resolve(`/cocktails/${cocktail.slug}`)}
 							class="text-2xl font-bold text-gray-800 hover:text-amber-600 transition-colors cursor-pointer"
 							on:click={navigateToCocktail}
 						>

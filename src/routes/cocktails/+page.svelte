@@ -6,6 +6,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { methodColors } from '$lib/enums/methods';
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import { page } from '$app/stores';
 	import { allTagCategories } from '$lib/data/all-tags';
 	import type { Tag } from '$lib/types/tags';
@@ -44,7 +45,7 @@
 	});
 
 	function navigateToCocktail(slug: string): void {
-		goto(`/cocktails/${slug}`);
+		goto(resolve(`/cocktails/${slug}`));
 	}
 
 	function handleKeydown(event: KeyboardEvent, slug: string): void {
@@ -128,7 +129,7 @@
 				url.searchParams.set('other', otherNames.join(','));
 			}
 		}
-		goto(url, { replaceState: true, noScroll: true });
+		goto(resolve(url.toString()), { replaceState: true, noScroll: true });
 	}
 </script>
 

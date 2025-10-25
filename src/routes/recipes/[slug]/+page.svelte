@@ -3,6 +3,7 @@
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
+	import { resolve } from '$app/paths';
 	import { fade, fly } from 'svelte/transition';
 	import { allCocktails } from '$lib/data/all-cocktails';
 	import { cocktailUsesRecipe } from '$lib/utils/recipe-cocktail';
@@ -81,7 +82,7 @@
 								This recipe is used in {cocktailCount} cocktail{cocktailCount === 1 ? '' : 's'}.
 							</p>
 							<a
-								href={getRecipeFilterUrl()}
+								href={resolve(getRecipeFilterUrl())}
 								class="inline-flex items-center px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200 text-sm gap-2 w-full justify-center"
 							>
 								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,7 +128,7 @@
 												: 's'}.
 										</p>
 										<a
-											href={getRecipeFilterUrl()}
+											href={resolve(getRecipeFilterUrl())}
 											class="inline-flex items-center px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200 text-sm gap-2 w-full justify-center"
 										>
 											<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -167,7 +168,7 @@
 				<section class="pt-8 border-t border-gray-200">
 					<div class="flex flex-wrap gap-3">
 						<a
-							href="/recipes"
+							href={resolve('/recipes')}
 							class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
 						>
 							Back to Recipes
