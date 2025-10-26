@@ -129,7 +129,7 @@
 				url.searchParams.set('other', otherNames.join(','));
 			}
 		}
-		goto(resolve(url.toString()), { replaceState: true, noScroll: true });
+		goto(resolve(`${url.pathname}${url.search}`), { replaceState: true, noScroll: true });
 	}
 </script>
 
