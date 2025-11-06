@@ -10,9 +10,9 @@ const TECATE_MEXICAN_LAGER: Ingredient = {
 	title: 'Tecate Mexican Lager',
 	slug: 'tecate-mexican-lager'
 };
-const WARSTEINER_HELLES_LAGER: Ingredient = {
-	title: 'Warsteiner Helles Lager',
-	slug: 'warsteiner-helles-lager'
+const WARSTEINER_PILSENER: Ingredient = {
+	title: 'Warsteiner Pilsener',
+	slug: 'warsteiner-pilsener'
 };
 
 // Wine
@@ -47,7 +47,7 @@ export const BEER_AND_WINE: IngredientCategory = {
 	subcategories: [
 		{
 			label: 'Beer',
-			ingredients: [FULLERS_LONDON_PORTER, TECATE_MEXICAN_LAGER, WARSTEINER_HELLES_LAGER]
+			ingredients: [FULLERS_LONDON_PORTER, TECATE_MEXICAN_LAGER, WARSTEINER_PILSENER]
 		},
 		{
 			label: 'Wine',
@@ -64,7 +64,7 @@ export const INGREDIENTS = {
 	// Beer
 	FULLERS_LONDON_PORTER,
 	TECATE_MEXICAN_LAGER,
-	WARSTEINER_HELLES_LAGER,
+	WARSTEINER_PILSENER,
 
 	// Wine
 	CABERNET_SAUVIGNON,

@@ -4,7 +4,7 @@ import LIMONCELLO_RECIPE from '$lib/data/recipes/limoncello';
 import FALERNUM_RECIPE from '$lib/data/recipes/falernum';
 import PERSIAN_SPICE_LIQUEUR_RECIPE from '$lib/data/recipes/persian-spice-liqueur';
 
-// Bitters & Herbal
+// Amaro
 const AMARO_LUCANO: Ingredient = {
 	title: 'Amaro Lucano',
 	slug: 'amaro-lucano'
@@ -17,10 +17,6 @@ const APEROL: Ingredient = {
 	title: 'Aperol',
 	slug: 'aperol'
 };
-const BENEDICTINE: Ingredient = {
-	title: 'Benedictine',
-	slug: 'benedictine'
-};
 const CAMPARI: Ingredient = {
 	title: 'Campari',
 	slug: 'campari'
@@ -28,6 +24,12 @@ const CAMPARI: Ingredient = {
 const FERNET_BRANCA: Ingredient = {
 	title: 'Fernet Branca',
 	slug: 'fernet-branca'
+};
+
+// Herbal
+const BENEDICTINE: Ingredient = {
+	title: 'Benedictine',
+	slug: 'benedictine'
 };
 const GREEN_CHARTREUSE: Ingredient = {
 	title: 'Green Chartreuse',
@@ -78,9 +80,9 @@ const ALLSPICE_DRAM: Ingredient = {
 	title: 'Allspice Dram',
 	slug: 'allspice-dram'
 };
-const AMARETTO_LAZZARONI: Ingredient = {
-	title: 'Amaretto Lazzaroni',
-	slug: 'amaretto-lazzaroni',
+const LAZZARONI: Ingredient = {
+	title: 'Lazzaroni',
+	slug: 'lazzaroni',
 	group: 'Amaretto'
 };
 const FALERNUM: Ingredient = {
@@ -126,19 +128,12 @@ export const LIQUEURS: IngredientCategory = {
 	type: IngredientType.Alcoholic,
 	subcategories: [
 		{
-			label: 'Bitters & Herbal',
-			ingredients: [
-				AMARO_LUCANO,
-				AMARO_NONINO,
-				APEROL,
-				BENEDICTINE,
-				CAMPARI,
-				FERNET_BRANCA,
-				GREEN_CHARTREUSE,
-				JAGERMEISTER,
-				PIMMS,
-				YELLOW_CHARTREUSE
-			]
+			label: 'Amaro',
+			ingredients: [AMARO_LUCANO, AMARO_NONINO, APEROL, CAMPARI, FERNET_BRANCA]
+		},
+		{
+			label: 'Herbal',
+			ingredients: [BENEDICTINE, GREEN_CHARTREUSE, JAGERMEISTER, PIMMS, YELLOW_CHARTREUSE]
 		},
 		{
 			label: 'Fruit & Citrus',
@@ -153,7 +148,7 @@ export const LIQUEURS: IngredientCategory = {
 		},
 		{
 			label: 'Nut & Spice',
-			ingredients: [ALLSPICE_DRAM, AMARETTO_LAZZARONI, FALERNUM, FRANGELICO, GOLDSCHLAGER]
+			ingredients: [ALLSPICE_DRAM, FALERNUM, FRANGELICO, GOLDSCHLAGER, LAZZARONI]
 		},
 		{
 			label: 'Floral, Coffee & Specialty',
@@ -185,10 +180,10 @@ export const INGREDIENTS = {
 
 	// Nut & Spice
 	ALLSPICE_DRAM,
-	AMARETTO_LAZZARONI,
 	FALERNUM,
 	FRANGELICO,
 	GOLDSCHLAGER,
+	LAZZARONI,
 
 	// Floral, Coffee & Specialty
 	EGGNOG,

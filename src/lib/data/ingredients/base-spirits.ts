@@ -82,9 +82,9 @@ const MONKEY_SHOULDER: Ingredient = {
 	slug: 'monkey-shoulder',
 	group: 'Blended Scotch Whisky'
 };
-const RITTENHOUSE_RYE: Ingredient = {
-	title: 'Rittenhouse Rye',
-	slug: 'rittenhouse-rye',
+const RITTENHOUSE: Ingredient = {
+	title: 'Rittenhouse',
+	slug: 'rittenhouse',
 	group: 'Rye Whiskey'
 };
 
@@ -177,7 +177,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		},
 		{
 			label: 'Whiskey',
-			ingredients: [ELIJAH_CRAIG, EVAN_WILLIAMS_BIB, LAPHROIG, MONKEY_SHOULDER, RITTENHOUSE_RYE]
+			ingredients: [ELIJAH_CRAIG, EVAN_WILLIAMS_BIB, LAPHROIG, MONKEY_SHOULDER, RITTENHOUSE]
 		},
 		{
 			label: 'Brandy',
@@ -217,7 +217,7 @@ export const INGREDIENTS = {
 	EVAN_WILLIAMS_BIB,
 	LAPHROIG,
 	MONKEY_SHOULDER,
-	RITTENHOUSE_RYE,
+	RITTENHOUSE,
 
 	// Brandy
 	BOULARD_VSOP,

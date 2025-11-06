@@ -1,5 +1,7 @@
 import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
+import SPICED_TEA_RECIPE from '$lib/data/recipes/spiced-tea';
+import TOM_AND_JERRY_BATTER_RECIPE from '$lib/data/recipes/tom-and-jerry-batter';
 
 const CREAM_OF_COCONUT: Ingredient = {
 	title: 'Cream of Coconut',
@@ -23,11 +25,13 @@ const ORANGE_BLOSSOM_WATER: Ingredient = {
 };
 const SPICED_TEA: Ingredient = {
 	title: 'Spiced Tea',
-	slug: 'spiced-tea'
+	slug: 'spiced-tea',
+	recipe: SPICED_TEA_RECIPE
 };
 const TOM_AND_JERRY_BATTER: Ingredient = {
 	title: 'Tom and Jerry Batter',
-	slug: 'tom-and-jerry-batter'
+	slug: 'tom-and-jerry-batter',
+	recipe: TOM_AND_JERRY_BATTER_RECIPE
 };
 
 export const OTHER: IngredientCategory = {

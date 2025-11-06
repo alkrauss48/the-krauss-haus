@@ -1,41 +1,59 @@
 import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
+import CINNAMON_SYRUP_RECIPE from '$lib/data/recipes/cinnamon-syrup';
+import DEMERARA_SYRUP_RECIPE from '$lib/data/recipes/demerara-syrup';
+import FASSIONOLA_RECIPE from '$lib/data/recipes/fassionola';
+import GRENADINE_RECIPE from '$lib/data/recipes/grenadine';
+import HONEY_SYRUP_RECIPE from '$lib/data/recipes/honey-syrup';
+import HONEY_GINGER_SYRUP_RECIPE from '$lib/data/recipes/honey-ginger-syrup';
+import ORGEAT_RECIPE from '$lib/data/recipes/orgeat';
+import PASSIONFRUIT_SYRUP_RECIPE from '$lib/data/recipes/passionfruit-syrup';
+import RICH_SIMPLE_SYRUP_RECIPE from '$lib/data/recipes/rich-simple-syrup';
 
 const CINNAMON_SYRUP: Ingredient = {
 	title: 'Cinnamon Syrup',
-	slug: 'cinnamon-syrup'
+	slug: 'cinnamon-syrup',
+	recipe: CINNAMON_SYRUP_RECIPE
 };
 const DEMERARA_SYRUP: Ingredient = {
 	title: 'Demerara Syrup',
-	slug: 'demerara-syrup'
+	slug: 'demerara-syrup',
+	recipe: DEMERARA_SYRUP_RECIPE
 };
 const FASSIONOLA: Ingredient = {
 	title: 'Fassionola',
-	slug: 'fassionola'
+	slug: 'fassionola',
+	recipe: FASSIONOLA_RECIPE
 };
 const GRENADINE: Ingredient = {
 	title: 'Grenadine',
-	slug: 'grenadine'
+	slug: 'grenadine',
+	recipe: GRENADINE_RECIPE
 };
 const HONEY_SYRUP: Ingredient = {
 	title: 'Honey Syrup',
-	slug: 'honey-syrup'
+	slug: 'honey-syrup',
+	recipe: HONEY_SYRUP_RECIPE
 };
 const HONEY_GINGER_SYRUP: Ingredient = {
 	title: 'Honey-Ginger Syrup',
-	slug: 'honey-ginger-syrup'
+	slug: 'honey-ginger-syrup',
+	recipe: HONEY_GINGER_SYRUP_RECIPE
 };
 const ORGEAT: Ingredient = {
 	title: 'Orgeat',
-	slug: 'orgeat'
+	slug: 'orgeat',
+	recipe: ORGEAT_RECIPE
 };
 const PASSIONFRUIT_SYRUP: Ingredient = {
 	title: 'Passionfruit Syrup',
-	slug: 'passionfruit-syrup'
+	slug: 'passionfruit-syrup',
+	recipe: PASSIONFRUIT_SYRUP_RECIPE
 };
 const RICH_SIMPLE_SYRUP: Ingredient = {
 	title: 'Rich Simple Syrup',
-	slug: 'rich-simple-syrup'
+	slug: 'rich-simple-syrup',
+	recipe: RICH_SIMPLE_SYRUP_RECIPE
 };
 
 export const SYRUPS: IngredientCategory = {
