@@ -9,7 +9,7 @@
 	import type { IngredientCategory, IngredientSubcategory } from '$lib/types/ingredients';
 	import { resolve } from '$app/paths';
 
-	let selectedType: IngredientType | null = null;
+	let selectedType: IngredientType | 'homemade' | null = null;
 	let searchTerm = '';
 
 	// Track which categories are expanded
@@ -26,11 +26,17 @@
 	}
 
 	function expandAll(): void {
-		expandedCategories = new SvelteSet(filteredCategories.map((cat) => cat.label));
+		// Add filtered categories to existing expanded set (don't remove non-visible ones)
+		const newSet = new SvelteSet(expandedCategories);
+		filteredCategories.forEach((cat) => newSet.add(cat.label));
+		expandedCategories = newSet;
 	}
 
 	function collapseAll(): void {
-		expandedCategories = new SvelteSet<string>();
+		// Only collapse filtered categories (preserve expanded state of non-visible ones)
+		const newSet = new SvelteSet(expandedCategories);
+		filteredCategories.forEach((cat) => newSet.delete(cat.label));
+		expandedCategories = newSet;
 	}
 
 	function getTotalIngredientCount(category: IngredientCategory): number {
@@ -94,23 +100,58 @@
 			.filter((category): category is IngredientCategory => category !== null);
 	}
 
-	// Filter categories by selected type first
-	$: typeFilteredCategories = selectedType
-		? allIngredientCategories.filter((category) => category.type === selectedType)
-		: allIngredientCategories;
+	// Filter categories by selected type or homemade filter
+	$: typeFilteredCategories = (() => {
+		if (selectedType === 'homemade') {
+			// Filter for categories that have ingredients with recipes
+			return allIngredientCategories
+				.map((category) => {
+					const filteredSubcategories = category.subcategories
+						.map((subcategory) => ({
+							...subcategory,
+							ingredients: subcategory.ingredients.filter((ingredient) => ingredient.recipe !== undefined)
+						}))
+						.filter((subcategory) => subcategory.ingredients.length > 0);
+
+					if (filteredSubcategories.length > 0) {
+						return {
+							...category,
+							subcategories: filteredSubcategories
+						};
+					}
+					return null;
+				})
+				.filter((category): category is IngredientCategory => category !== null);
+		} else if (selectedType) {
+			return allIngredientCategories.filter((category) => category.type === selectedType);
+		}
+		return allIngredientCategories;
+	})();
 
 	// Then filter by search term
 	$: filteredCategories = filterCategoriesBySearch(typeFilteredCategories, searchTerm);
 
-	// Auto-expand/collapse based on search state
+	// Track previous search term to detect when search is cleared
+	let previousSearchTerm = '';
+
+	// Auto-expand/collapse based on search state (only when search changes, not when tabs change)
 	$: {
-		if (searchTerm.trim()) {
-			// Expand all filtered categories when searching
+		const currentSearch = searchTerm.trim();
+		const previousSearch = previousSearchTerm.trim();
+
+		if (currentSearch && !previousSearch) {
+			// Starting a search - expand all filtered categories
 			expandedCategories = new SvelteSet(filteredCategories.map((cat) => cat.label));
-		} else {
-			// Collapse all when search is cleared
+		} else if (!currentSearch && previousSearch) {
+			// Clearing search - collapse all
 			expandedCategories = new SvelteSet<string>();
+		} else if (currentSearch && currentSearch !== previousSearch) {
+			// Search term changed - update expanded categories to match filtered results
+			expandedCategories = new SvelteSet(filteredCategories.map((cat) => cat.label));
 		}
+		// If tabs change but search hasn't changed, don't modify expandedCategories
+
+		previousSearchTerm = searchTerm;
 	}
 </script>
 
@@ -206,36 +247,33 @@
 			>
 				{IngredientType.NonAlcoholic}
 			</button>
+			<button
+				class="px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
+				'homemade'
+					? 'bg-gray-800 text-white shadow-md'
+					: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
+				on:click={() => (selectedType = 'homemade')}
+			>
+				Homemade
+			</button>
 		</div>
 
-		<!-- Legend and Expand/Collapse Controls -->
+		<!-- Expand/Collapse Controls -->
 		{#if filteredCategories.length > 0}
-			<div class="mb-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-				<!-- Legend -->
-				<div class="flex items-center gap-2 text-sm text-gray-600">
-					<span
-						class="inline-block px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-md"
-					>
-						Sample
-					</span>
-					<span class="text-gray-500">= Homemade</span>
-				</div>
-				<!-- Expand/Collapse Controls -->
-				<div class="flex gap-2">
-					<button
-						class="text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200 cursor-pointer underline decoration-dotted underline-offset-2"
-						on:click={expandAll}
-					>
-						Expand all
-					</button>
-					<span class="text-gray-400">|</span>
-					<button
-						class="text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200 cursor-pointer underline decoration-dotted underline-offset-2"
-						on:click={collapseAll}
-					>
-						Collapse all
-					</button>
-				</div>
+			<div class="mb-6 flex justify-end gap-2">
+				<button
+					class="text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200 cursor-pointer underline decoration-dotted underline-offset-2"
+					on:click={expandAll}
+				>
+					Expand all
+				</button>
+				<span class="text-gray-400">|</span>
+				<button
+					class="text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200 cursor-pointer underline decoration-dotted underline-offset-2"
+					on:click={collapseAll}
+				>
+					Collapse all
+				</button>
 			</div>
 		{/if}
 
@@ -285,26 +323,27 @@
 										<div class="flex flex-wrap gap-2">
 											{#each subcategory.ingredients as ingredient (ingredient.slug)}
 												<span
-													class="inline-block px-3 py-1.5 rounded-md text-sm {ingredient.recipe
-														? 'bg-blue-50 text-blue-700 border border-blue-200'
-														: 'bg-gray-50 text-gray-700'}"
+													class="inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center bg-gray-50 text-gray-700"
 												>
-													<span>{ingredient.title}</span>
-													{#if ingredient.recipe}
-														<a
-															href={resolve(`/recipes/${ingredient.recipe.slug}`)}
-															class="text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 ml-1.5 font-normal transition-colors"
-														>
-															See recipe
-														</a>
-													{/if}
+													<div class="flex items-center flex-wrap gap-x-1.5">
+														<span>{ingredient.title}</span>
+														{#if ingredient.recipe}
+															<a
+																href={resolve(`/recipes/${ingredient.recipe.slug}`)}
+																class="text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors"
+															>
+																See recipe
+															</a>
+														{/if}
+														{#if ingredient.group}
+															<span class="text-xs text-gray-400 font-normal hidden sm:inline">
+																<span class="mx-1.5">·</span>{ingredient.group}
+															</span>
+														{/if}
+													</div>
 													{#if ingredient.group}
-														<span
-															class="text-xs {ingredient.recipe
-																? 'text-blue-500'
-																: 'text-gray-400'} font-normal"
-														>
-															<span class="mx-1.5">·</span>{ingredient.group}
+														<span class="text-xs text-gray-400 font-normal sm:hidden mt-0.5">
+															{ingredient.group}
 														</span>
 													{/if}
 												</span>
