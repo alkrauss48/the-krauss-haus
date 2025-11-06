@@ -37,6 +37,9 @@
 				case 'recipes':
 					label = 'Recipes';
 					break;
+				case 'ingredients':
+					label = 'Ingredients';
+					break;
 				case 'parties':
 					label = 'Cocktail Parties';
 					break;

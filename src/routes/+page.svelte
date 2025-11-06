@@ -58,6 +58,7 @@
 	<section class="w-full max-w-[320px] sm:max-w-[400px]">
 		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Extras</h2>
 		<nav class="flex flex-col gap-4" aria-label="Secondary Menu Navigation">
+			<MenuLink href="/ingredients" label="Ingredients" variant="secondary" />
 			<MenuLink href="/parties" label="Cocktail Parties" variant="secondary" />
 			<MenuLink href="/recipes" label="Recipes" variant="secondary" />
 		</nav>
