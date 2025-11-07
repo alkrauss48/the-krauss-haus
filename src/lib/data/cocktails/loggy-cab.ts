@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const LOGGY_CAB: Cocktail = {
 	title: 'Loggy Cab',
@@ -14,14 +14,26 @@ const LOGGY_CAB: Cocktail = {
 	slug: 'loggy-cab',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2oz Gin',
-		'.75oz Lime',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.FORDS
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
 		{
 			amount: '.5oz',
-			recipe: RICH_SIMPLE_SYRUP
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
-		'4oz Soda water',
-		'Garnish: Lime wheel'
+		{
+			amount: '4oz',
+			ingredient: Ingredients.Mixers.SODA_WATER
+		},
+		{
+			label: 'Garnish: Lime wheel',
+			ingredient: Ingredients.Citrus.LIME
+		}
 	],
 	variations: [
 		{
@@ -51,7 +63,6 @@ const LOGGY_CAB: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.Technique.BUILT,
-
 		Tags.Style.HIGHBALL,
 		Tags.Origin.ORIGINAL
 	]

@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import GRENADINE from '../recipes/grenadine';
 
 const JACK_ROSE: Cocktail = {
 	title: 'Jack Rose',
@@ -13,20 +13,31 @@ const JACK_ROSE: Cocktail = {
 	slug: 'jack-rose',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1oz Calvados',
-		'1oz Applejack',
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.BOULARD_VSOP
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.LAIRDS_BIB
+		},
 		{
 			amount: '.75oz',
-			recipe: GRENADINE
+			ingredient: Ingredients.Syrups.GRENADINE
 		},
-		'.75oz Lemon',
-		'Garnish: Lemon twist'
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			label: 'Garnish: Lemon twist',
+			ingredient: Ingredients.Citrus.LEMON
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.SOUR,
 		Tags.Origin.CLASSIC
 	]

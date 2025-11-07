@@ -1,13 +1,13 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import CARAMEL_VODKA from '../recipes/caramel-vodka';
 
 const CARAMEL_APPLE_SPICE: Cocktail = {
 	title: 'Caramel Apple Spice',
 	subtitle: 'A Krauss Family original',
 	description:
-		'Applejack, goldschläger, caramel vodka, apple strudel liqueur, calvados, apple cider.',
+		'Apple brandy, goldschläger, caramel vodka, apple strudel liqueur, calvados, apple cider.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/caramel-apple-spice.png',
 	thumbnailImagePath:
@@ -15,20 +15,41 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	slug: 'caramel-apple-spice',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'.5oz Applejack',
-		'.5oz Goldschläger',
 		{
 			amount: '.5oz',
-			recipe: CARAMEL_VODKA
+			ingredient: Ingredients.BaseSpirits.LAIRDS_BIB
 		},
-		'.5oz Apple strudel liqueur',
-		'Splash of Calvados',
-		'5oz Apple cider',
-		'Garnish: Cinnamon stick and maraschino cherry'
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.GOLDSCHLAGER
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.CARAMEL_VODKA
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.APPLE_STRUDEL_LIQUEUER
+		},
+		{
+			label: 'Splash of Calvados',
+			ingredient: Ingredients.BaseSpirits.BOULARD_VSOP
+		},
+		{
+			amount: '5oz',
+			ingredient: Ingredients.Mixers.APPLE_CIDER
+		},
+		{
+			label: 'Garnish: Cinnamon Stick',
+			ingredient: Ingredients.HerbsAndSpices.CINNAMON
+		},
+		{
+			label: 'Garnish: Maraschino Cherry',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.BRANDY,
-
 		Tags.Temperature.HOT,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.BUILT,

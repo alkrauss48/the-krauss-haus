@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const SPRITZ: Cocktail = {
@@ -11,7 +12,24 @@ const SPRITZ: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/spritz.png',
 	slug: 'spritz',
 	method: CocktailMethod.Built,
-	ingredients: ['3oz Prosecco', '2oz Aperol', '1oz Soda water', 'Garnish: Orange wedge'],
+	ingredients: [
+		{
+			amount: '3oz',
+			ingredient: Ingredients.BeerAndWine.PROSECCO
+		},
+		{
+			amount: '2oz',
+			ingredient: Ingredients.Liqueurs.APEROL
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Mixers.SODA_WATER
+		},
+		{
+			label: 'Garnish: Orange wedge',
+			ingredient: Ingredients.Citrus.ORANGE
+		}
+	],
 	tags: [
 		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.BUBBLY,

@@ -1,10 +1,11 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const LAST_WORD: Cocktail = {
 	title: 'Last Word',
-	description: 'Gin, green chartreuse, maraschino liqueur, lime.',
+	description: 'Gin, green chartreuse, maraschino liqueur, lime, maraschino cherry.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/last-word.png',
 	thumbnailImagePath:
@@ -12,11 +13,26 @@ const LAST_WORD: Cocktail = {
 	slug: 'last-word',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'.75oz Gin',
-		'.75oz Green Chartreuse',
-		'.75oz Maraschino liqueur',
-		'.75oz Lime',
-		'Garnish: Maraschino cherry'
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.FORDS
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Liqueurs.GREEN_CHARTREUSE
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Liqueurs.MARASCHINO_LIQUEUER
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			label: 'Garnish: Maraschino Cherry',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.GIN,

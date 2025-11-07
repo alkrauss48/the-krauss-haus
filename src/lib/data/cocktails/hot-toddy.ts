@@ -1,27 +1,50 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import SPICED_TEA from '../recipes/spiced-tea';
 
 const HOT_TODDY: Cocktail = {
 	title: 'Hot Toddy',
 	slug: 'hot-toddy',
-	description: 'Bourbon, benedictine, spiced tea, honey, lemon, cinnamon.',
+	description: 'Bourbon, benedictine, spiced tea, honey, lemon, cinnamon, maraschino cherry.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hot-toddy.png',
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hot-toddy.png',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'1.5oz Bourbon',
-		'.5oz Benedictine',
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.EVAN_WILLIAMS_BIB
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.BENEDICTINE
+		},
 		{
 			amount: '5oz',
-			recipe: SPICED_TEA
+			ingredient: Ingredients.Mixers.SPICED_TEA
 		},
-		'Honey to taste',
-		'1/4 Lemon, juiced',
-		'Garnish: Cinnamon stick, lemon wheel, and maraschino cherry'
+		{
+			label: 'Honey to taste',
+			ingredient: Ingredients.Syrups.HONEY_SYRUP
+		},
+		{
+			label: '1/4 Lemon, juiced',
+			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			label: 'Garnish: Cinnamon stick',
+			ingredient: Ingredients.HerbsAndSpices.CINNAMON
+		},
+		{
+			label: 'Garnish: Lemon wheel',
+			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			label: 'Garnish: Maraschino cherry',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,

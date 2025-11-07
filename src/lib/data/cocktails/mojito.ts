@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const MOJITO: Cocktail = {
@@ -12,12 +13,34 @@ const MOJITO: Cocktail = {
 	slug: 'mojito',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2oz Light rum',
-		'.75oz Lime',
-		'1 tbsp Sugar',
-		'6-10 leaves Mint',
-		'Garnish: Mint sprig & dash of Angostura bitters',
-		'Soda water (to top)'
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '1 tbsp',
+			ingredient: Ingredients.Other.SUGAR
+		},
+		{
+			amount: '6-10 leaves',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			label: 'Soda water (to top)',
+			ingredient: Ingredients.Mixers.SODA_WATER
+		},
+		{
+			label: 'Garnish: Mint sprig',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			label: 'Garnish: Dash of Angostura bitters',
+			ingredient: Ingredients.Bitters.ANGOSTURA
+		}
 	],
 	notes:
 		'Muddle lime, sugar, and mint lightly in glass. Add rum, then ice cubes. Stir, top with soda water and garnishes.',

@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const MICHELADA: Cocktail = {
@@ -12,11 +13,20 @@ const MICHELADA: Cocktail = {
 	slug: 'michelada',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'12oz Mexican lager',
-		'1 lime (minus a wedge), juiced',
+		{
+			amount: '12oz',
+			ingredient: Ingredients.BeerAndWine.TECATE_MEXICAN_LAGER
+		},
+		{
+			label: '1 lime (minus a wedge), juiced',
+			ingredient: Ingredients.Citrus.LIME
+		},
 		'3 shakes Worcestershire sauce',
 		'5 shakes Valentina hot sauce',
-		'Pinch of salt',
+		{
+			label: 'Pinch of salt',
+			ingredient: Ingredients.Other.SALT
+		},
 		'Garnish: Tajin/Chamoy rim and lime wedge'
 	],
 	notes:

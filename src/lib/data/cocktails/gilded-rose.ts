@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import PERSIAN_SPICE_LIQUEUR from '../recipes/persian-spice-liqueur';
 
 const GILDED_ROSE: Cocktail = {
 	title: 'Gilded Rose',
@@ -16,9 +16,12 @@ const GILDED_ROSE: Cocktail = {
 	ingredients: [
 		{
 			amount: '.5oz',
-			recipe: PERSIAN_SPICE_LIQUEUR
+			ingredient: Ingredients.Liqueurs.PERSIAN_SPICE_LIQUEUR
 		},
-		'4oz Champagne',
+		{
+			amount: '4oz',
+			ingredient: Ingredients.BeerAndWine.CHAMPAGNE
+		},
 		'Garnish: Edible flower'
 	],
 	notes:

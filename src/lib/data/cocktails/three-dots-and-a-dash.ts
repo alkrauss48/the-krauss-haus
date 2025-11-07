@@ -1,8 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import HONEY_SYRUP from '../recipes/honey-syrup';
-import FALERNUM from '../recipes/falernum';
 
 const THREE_DOTS_AND_A_DASH: Cocktail = {
 	title: 'Three Dots and a Dash',
@@ -16,22 +15,47 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 	slug: 'three-dots-and-a-dash',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [
-		'1oz Clement Barrel Select (aged Rhum Agricole)',
-		'.5oz Planteray OFTD (Overproof blended rum)',
-		'.5oz Hamilton 86 (Demerara rum)',
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.CLEMENT_SELECT_BARREL
+		},
 		{
 			amount: '.5oz',
-			recipe: HONEY_SYRUP
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
 		},
-		'.5oz Orange juice',
-		'.5oz Lime juice',
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.HAMILTON_86
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.HONEY_SYRUP
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.ORANGE
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
 		{
 			amount: '.25oz',
-			recipe: FALERNUM
+			ingredient: Ingredients.Liqueurs.FALERNUM
 		},
-		'.25oz Allspice dram',
-		'1 dash Angostura bitters',
-		'Garnish: Three maraschino cherries and pineapple frond'
+		{
+			amount: '.25oz',
+			ingredient: Ingredients.Liqueurs.ALLSPICE_DRAM
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Bitters.ANGOSTURA
+		},
+		{
+			label: 'Garnish: Three maraschino cherries',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		},
+		'Garnish: Pineapple frond'
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
@@ -39,7 +63,6 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.FLASH_BLENDED,
-
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

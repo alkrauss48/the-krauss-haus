@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import CINNAMON_SYRUP from '../recipes/cinnamon-syrup';
 
 const DONGA_PUNCH: Cocktail = {
 	title: 'Donga Punch',
@@ -13,13 +13,22 @@ const DONGA_PUNCH: Cocktail = {
 	slug: 'donga-punch',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'2oz Clement Barrel Select (Aged Rhum Agricole)',
-		'1oz Grapefruit',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.CLEMENT_SELECT_BARREL
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Citrus.GRAPEFRUIT
+		},
 		{
 			amount: '.5oz',
-			recipe: CINNAMON_SYRUP
+			ingredient: Ingredients.Syrups.CINNAMON_SYRUP
 		},
-		'.75oz Lime'
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,

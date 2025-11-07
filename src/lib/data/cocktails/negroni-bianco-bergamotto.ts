@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const NEGRONI_BIANCO_BERGAMOTTO: Cocktail = {
@@ -11,7 +12,24 @@ const NEGRONI_BIANCO_BERGAMOTTO: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/negroni-bianco-bergamotto.png',
 	slug: 'negroni-bianco-bergamotto',
 	method: CocktailMethod.Stirred,
-	ingredients: ['1oz Gin', '1oz Italicus', '1oz Dry vermouth', 'Garnish: Lemon twist'],
+	ingredients: [
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.FORDS
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Liqueurs.ITALICUS
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BeerAndWine.DOLIN_VERMOUTH_DRY
+		},
+		{
+			label: 'Garnish: Lemon twist',
+			ingredient: Ingredients.Citrus.LEMON
+		}
+	],
 	tags: [
 		Tags.BaseAlcohol.GIN,
 		Tags.BaseAlcohol.WINE,

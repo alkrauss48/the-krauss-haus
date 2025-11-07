@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const TI_PUNCH: Cocktail = {
 	title: 'Ti Punch',
@@ -13,11 +13,17 @@ const TI_PUNCH: Cocktail = {
 	slug: 'ti-punch',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2oz Rhum Agricole',
-		'1 Lime coin',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.NEISSON_BLANC
+		},
+		{
+			label: '1 Lime coin',
+			ingredient: Ingredients.Citrus.LIME
+		},
 		{
 			amount: '1 tsp',
-			recipe: RICH_SIMPLE_SYRUP
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		}
 	],
 	notes:

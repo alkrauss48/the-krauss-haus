@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const NAKED_AND_FAMOUS: Cocktail = {
@@ -11,7 +12,24 @@ const NAKED_AND_FAMOUS: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/naked-and-famous.png',
 	slug: 'naked-and-famous',
 	method: CocktailMethod.Shaken,
-	ingredients: ['.75oz Mezcal', '.75oz Yellow Chartreuse', '.75oz Aperol', '.75oz Lime'],
+	ingredients: [
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.DEL_MAGUY_VIDA
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Liqueurs.YELLOW_CHARTREUSE
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Liqueurs.APEROL
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		}
+	],
 	tags: [
 		Tags.BaseAlcohol.MEZCAL,
 		Tags.FlavorProfile.CITRUS,

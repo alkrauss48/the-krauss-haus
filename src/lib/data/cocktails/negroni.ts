@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const NEGRONI: Cocktail = {
@@ -11,7 +12,24 @@ const NEGRONI: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/negroni.png',
 	slug: 'negroni',
 	method: CocktailMethod.Stirred,
-	ingredients: ['1oz Gin', '1oz Campari', '1oz Sweet vermouth', 'Garnish: Orange twist'],
+	ingredients: [
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.FORDS
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Liqueurs.CAMPARI
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BeerAndWine.COCCHI_VERMOUTH_DI_TORINO
+		},
+		{
+			label: 'Garnish: Orange twist',
+			ingredient: Ingredients.Citrus.ORANGE
+		}
+	],
 	variations: [
 		{
 			name: 'Kingston',

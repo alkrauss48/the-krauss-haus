@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const SPAGHETT: Cocktail = {
@@ -11,7 +12,20 @@ const SPAGHETT: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/spaghett.png',
 	slug: 'spaghett',
 	method: CocktailMethod.Built,
-	ingredients: ['12oz Miller high life bottle', '1oz Aperol', '.5oz Lemon'],
+	ingredients: [
+		{
+			amount: '12oz',
+			ingredient: Ingredients.BeerAndWine.MILLER_HIGH_LIFE
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Liqueurs.APEROL
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.LEMON
+		}
+	],
 	notes: 'Drink some of the beer. Fill the bottle back up with the Aperol and lemon.',
 	tags: [
 		Tags.BaseAlcohol.BEER,

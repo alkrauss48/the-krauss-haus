@@ -1,13 +1,12 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import FALERNUM from '../recipes/falernum';
-import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const IRON_RANGER: Cocktail = {
 	title: 'Iron Ranger',
 	subtitle: 'A bourbon tiki with a spicy kick',
-	description: 'Bourbon, falernum, demerara syrup, lemon, pineapple.',
+	description: 'Bourbon, falernum, demerara syrup, lemon, pineapple, cinnamon, mint.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/iron-ranger.png',
 	thumbnailImagePath:
@@ -15,18 +14,34 @@ const IRON_RANGER: Cocktail = {
 	slug: 'iron-ranger',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'2oz Bourbon',
 		{
-			amount: '.5oz',
-			recipe: FALERNUM
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.EVAN_WILLIAMS_BIB
 		},
 		{
 			amount: '.5oz',
-			recipe: DEMERARA_SYRUP
+			ingredient: Ingredients.Liqueurs.FALERNUM
 		},
-		'.75oz Lemon',
-		'1oz Pineapple juice',
-		'Garnish: Mint sprig and freshly grated cinnamon'
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Citrus.PINEAPPLE
+		},
+		{
+			label: 'Garnish: Mint Sprig',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			label: 'Garnish: Grated Cinnamon',
+			ingredient: Ingredients.HerbsAndSpices.CINNAMON
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
@@ -34,7 +49,6 @@ const IRON_RANGER: Cocktail = {
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.TIKI,
 		Tags.Origin.MODERN
 	]

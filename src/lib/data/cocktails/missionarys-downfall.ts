@@ -1,11 +1,11 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import HONEY_SYRUP from '../recipes/honey-syrup';
 
 const MISSIONARYS_DOWNFALL: Cocktail = {
 	title: "Missionary's Downfall",
-	description: 'Blended light rum, peach liqueur, mint, pineapple, honey syrup, lime.',
+	description: 'Light rum, peach liqueur, mint, pineapple, honey syrup, lime.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/missionarys-downfall.png',
 	thumbnailImagePath:
@@ -13,15 +13,29 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 	slug: 'missionarys-downfall',
 	method: CocktailMethod.Blended,
 	ingredients: [
-		'1oz Probitas (Blended light rum)',
-		'.5oz Peach liqueur',
-		'12 large mint leaves',
-		'56g (1/4 cup) diced fresh pineapple',
 		{
 			amount: '1oz',
-			recipe: HONEY_SYRUP
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
 		},
-		'.5oz Lime',
+		'.5oz Peach liqueur',
+		{
+			amount: '12',
+			label: 'Large mint leaves',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			amount: '56g (1/4 cup)',
+			label: 'Diced fresh pineapple',
+			ingredient: Ingredients.Citrus.PINEAPPLE
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Syrups.HONEY_SYRUP
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
 		'158g (3/4 cup) crushed ice'
 	],
 	notes:
@@ -32,7 +46,6 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BLENDED,
-
 		Tags.Temperature.FROZEN,
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,

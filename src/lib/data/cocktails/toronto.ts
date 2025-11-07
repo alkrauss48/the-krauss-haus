@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const TORONTO: Cocktail = {
 	title: 'Toronto',
@@ -13,20 +13,28 @@ const TORONTO: Cocktail = {
 	slug: 'toronto',
 	method: CocktailMethod.Stirred,
 	ingredients: [
-		'2oz Rye whiskey',
-		'.5oz Fernet Branca',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.RITTENHOUSE
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.FERNET_BRANCA
+		},
 		{
 			amount: '1 tsp',
-			recipe: DEMERARA_SYRUP
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
 		},
-		'Garnish: Lemon twist'
+		{
+			label: 'Garnish: Lemon twist',
+			ingredient: Ingredients.Citrus.LEMON
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.STIRRED,
-
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC
 	]

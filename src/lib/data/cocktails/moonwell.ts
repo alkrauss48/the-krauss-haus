@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import GRENADINE from '../recipes/grenadine';
 
 const MOONWELL: Cocktail = {
 	title: 'Moonwell',
@@ -14,16 +14,34 @@ const MOONWELL: Cocktail = {
 	slug: 'moonwell',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'1oz Light rum',
-		'1oz Elderflower liqueur',
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Liqueurs.ELDERFLOWER_LIQUEUR
+		},
 		{
 			amount: '.5oz',
-			recipe: GRENADINE
+			ingredient: Ingredients.Syrups.GRENADINE
 		},
-		'1/4 lemon, juiced',
-		'1 dash celery bitters',
-		'4oz Soda water',
-		'Garnish: Lemon wheel'
+		{
+			label: '1/4 Lemon, juiced',
+			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Bitters.CELERY
+		},
+		{
+			amount: '4oz',
+			ingredient: Ingredients.Mixers.SODA_WATER
+		},
+		{
+			label: 'Garnish: Lemon wheel',
+			ingredient: Ingredients.Citrus.LEMON
+		}
 	],
 	variations: [
 		{
@@ -59,7 +77,6 @@ const MOONWELL: Cocktail = {
 		Tags.FlavorProfile.BUBBLY,
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.BUILT,
-
 		Tags.Style.HIGHBALL,
 		Tags.Origin.ORIGINAL
 	]

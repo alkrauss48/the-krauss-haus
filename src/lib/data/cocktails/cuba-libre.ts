@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const CUBA_LIBRE: Cocktail = {
@@ -12,9 +13,19 @@ const CUBA_LIBRE: Cocktail = {
 	slug: 'cuba-libre',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2 fingers (or 2oz) Light rum',
-		'(4oz) Coca cola',
-		'1/2 Lime (or 1/2 oz), pressed with shell'
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
+		},
+		{
+			amount: '4oz',
+			ingredient: Ingredients.Mixers.COCA_COLA
+		},
+		{
+			amount: '.5oz',
+			label: 'Lime, pressed with shell',
+			ingredient: Ingredients.Citrus.LIME
+		}
 	],
 	notes: 'Typically unmeasured. Add rum, then ice, then lime (including shell). Top with soda.',
 	tags: [

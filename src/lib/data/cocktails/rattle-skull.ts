@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const RATTLE_SKULL: Cocktail = {
 	title: 'Rattle Skull',
@@ -13,15 +13,30 @@ const RATTLE_SKULL: Cocktail = {
 	slug: 'rattle-skull',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'12oz Porter (beer)',
-		'1oz Appleton Estate Signature Jamaican rum',
-		'1oz Cognac',
-		'.75oz Lime',
+		{
+			amount: '12oz',
+			ingredient: Ingredients.BeerAndWine.FULLERS_LONDON_PORTER
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.ST_REMY_VSOP
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
 		{
 			amount: '.5oz',
-			recipe: DEMERARA_SYRUP
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
 		},
-		'Garnish: Freshly grated nutmeg'
+		{
+			label: 'Garnish: Freshly grated nutmeg',
+			ingredient: Ingredients.HerbsAndSpices.NUTMEG
+		}
 	],
 	notes:
 		'This cocktail is over 300 years old, dating back to colonial New England. A "rattle skull" refers to an empty-headed person, which this drink might induce. Pour beer into a glass. Shake rum, cognac, lime, and demerara syrup with ice. Strain over beer into glass. Garnish with nutmeg.',

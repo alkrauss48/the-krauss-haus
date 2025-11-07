@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const CAIPIRINHA: Cocktail = {
@@ -11,7 +12,21 @@ const CAIPIRINHA: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/caipirinha.png',
 	slug: 'caipirinha',
 	method: CocktailMethod.Built,
-	ingredients: ['2oz Cachaça', '6 Lime wedges', '1 tbsp Sugar'],
+	ingredients: [
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.LEBLON
+		},
+		{
+			amount: '6',
+			label: 'Lime wedges',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '1 tbsp',
+			ingredient: Ingredients.Other.SUGAR
+		}
+	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,

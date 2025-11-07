@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const GIN_BASIL_SMASH: Cocktail = {
 	title: 'Gin Basil Smash',
@@ -13,14 +13,27 @@ const GIN_BASIL_SMASH: Cocktail = {
 	slug: 'gin-basil-smash',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'2oz Gin',
-		'.75oz Lemon',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.FORDS
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
 		{
 			amount: '.5oz',
-			recipe: RICH_SIMPLE_SYRUP
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
-		'12 Basil leaves',
-		'Garnish: Basil sprig'
+		{
+			amount: '12',
+			label: 'Basil leaves',
+			ingredient: Ingredients.HerbsAndSpices.BASIL
+		},
+		{
+			label: 'Garnish: Basil sprig',
+			ingredient: Ingredients.HerbsAndSpices.BASIL
+		}
 	],
 	notes:
 		'Muddle lemon and basil lightly in shaker tin. Add other ingredients with ice. Shake and strain. Garnish with basil sprig.',
@@ -29,7 +42,6 @@ const GIN_BASIL_SMASH: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.SOUR,
 		Tags.Origin.MODERN
 	]

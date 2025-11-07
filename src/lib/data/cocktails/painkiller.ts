@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const PAINKILLER: Cocktail = {
@@ -13,11 +14,26 @@ const PAINKILLER: Cocktail = {
 	slug: 'painkiller',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'2oz Hamilton 86 (Demerara rum)',
-		'4oz Pineapple juice',
-		'1oz Orange juice',
-		'1oz Cream of coconut',
-		'Garnish: Freshly grated nutmeg'
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.HAMILTON_86
+		},
+		{
+			amount: '4oz',
+			ingredient: Ingredients.Citrus.PINEAPPLE
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Citrus.ORANGE
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Other.CREAM_OF_COCONUT
+		},
+		{
+			label: 'Garnish: Freshly grated nutmeg',
+			ingredient: Ingredients.HerbsAndSpices.NUTMEG
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,

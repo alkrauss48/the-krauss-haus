@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const RADLER: Cocktail = {
@@ -11,7 +12,16 @@ const RADLER: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/radler.png',
 	slug: 'radler',
 	method: CocktailMethod.Built,
-	ingredients: ['50% German Helles or Pilsner lager', '50% Sanpellegrino Limonata'],
+	ingredients: [
+		{
+			amount: '50%',
+			ingredient: Ingredients.BeerAndWine.WARSTEINER_PILSENER
+		},
+		{
+			amount: '50%',
+			ingredient: Ingredients.Mixers.SANPELLEGRINO_LIMONATA
+		}
+	],
 	notes:
 		"No need to measure. A 60/40 ratio of beer to lemonade works well too. We're partial to Bitburger Pils.",
 	tags: [

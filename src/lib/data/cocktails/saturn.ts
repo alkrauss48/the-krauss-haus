@@ -1,9 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import PASSIONFRUIT_SYRUP from '../recipes/passionfruit-syrup';
-import ORGEAT from '../recipes/orgeat';
-import FALERNUM from '../recipes/falernum';
 
 const SATURN: Cocktail = {
 	title: 'Saturn',
@@ -16,21 +14,34 @@ const SATURN: Cocktail = {
 	slug: 'saturn',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1.5oz Gin',
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.FORDS
+		},
 		{
 			amount: '.5oz',
-			recipe: PASSIONFRUIT_SYRUP
-		},
-		'.5oz Lemon',
-		{
-			amount: '.25oz',
-			recipe: ORGEAT
+			ingredient: Ingredients.Syrups.PASSIONFRUIT_SYRUP
 		},
 		{
-			amount: '.25oz',
-			recipe: FALERNUM
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.LEMON
 		},
-		'Garnish: Lemon peel and maraschino cherry'
+		{
+			amount: '.25oz',
+			ingredient: Ingredients.Syrups.ORGEAT
+		},
+		{
+			amount: '.25oz',
+			ingredient: Ingredients.Liqueurs.FALERNUM
+		},
+		{
+			label: 'Garnish: Lemon peel',
+			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			label: 'Garnish: Maraschino cherry',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.GIN,
@@ -40,7 +51,6 @@ const SATURN: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

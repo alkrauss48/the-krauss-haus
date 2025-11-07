@@ -1,13 +1,13 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import FALERNUM from '../recipes/falernum';
-import FASSIONOLA from '../recipes/fassionola';
 
 const COBRAS_FANG: Cocktail = {
 	title: "Cobra's Fang",
 	subtitle: 'A dangerously smooth blend of rum and spice',
-	description: 'Overproof demerara rum, falernum, fassionola, lime, orange, herbstura.',
+	description:
+		'Overproof demerara rum, falernum, fassionola, lime, orange, herbstura, mint, cinnamon.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/cobras-fang.png',
 	thumbnailImagePath:
@@ -15,19 +15,38 @@ const COBRAS_FANG: Cocktail = {
 	slug: 'cobras-fang',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [
-		'1.5oz Hamilton 151 (Overproof Demerara rum)',
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.HAMILTON_151
+		},
 		{
 			amount: '.25oz',
-			recipe: FALERNUM
+			ingredient: Ingredients.Liqueurs.FALERNUM
 		},
 		{
 			amount: '.5oz',
-			recipe: FASSIONOLA
+			ingredient: Ingredients.Syrups.FASSIONOLA
 		},
-		'.5oz Lime',
-		'.5oz Orange',
-		'1 dash Herbstura',
-		'Garnish: Mint sprig and cinnamon stick'
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.ORANGE
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Bitters.HERBSTURA
+		},
+		{
+			label: 'Garnish: Mint Sprig',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			label: 'Garnish: Cinnamon Stick',
+			ingredient: Ingredients.HerbsAndSpices.CINNAMON
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
@@ -36,7 +55,6 @@ const COBRAS_FANG: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.FLASH_BLENDED,
-
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

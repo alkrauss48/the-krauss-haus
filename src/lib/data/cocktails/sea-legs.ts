@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import ORGEAT from '../recipes/orgeat';
 
 const SEA_LEGS: Cocktail = {
 	title: 'Sea Legs',
@@ -13,15 +13,34 @@ const SEA_LEGS: Cocktail = {
 	slug: 'sea-legs',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1oz Single malt scotch',
-		'1oz Mezcal',
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.LAPHROIG
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.DEL_MAGUY_VIDA
+		},
 		{
 			amount: '.75oz',
-			recipe: ORGEAT
+			ingredient: Ingredients.Syrups.ORGEAT
 		},
-		'.75oz Lime',
-		'2 dashes Celery bitters',
-		'Garnish: salted rim and dash of angostura bitters'
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '2 dashes',
+			ingredient: Ingredients.Bitters.CELERY
+		},
+		{
+			label: 'Garnish: Salted rim',
+			ingredient: Ingredients.Other.SALT
+		},
+		{
+			label: 'Garnish: Dash of Angostura bitters',
+			ingredient: Ingredients.Bitters.ANGOSTURA
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
@@ -29,7 +48,6 @@ const SEA_LEGS: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
-
 		Tags.Origin.MODERN
 	]
 };

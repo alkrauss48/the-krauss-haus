@@ -1,11 +1,11 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const AMARETTO_SOUR: Cocktail = {
 	title: 'Amaretto Sour',
-	description: 'Amaretto, bourbon, lemon, simple syrup, egg white.',
+	description: 'Amaretto, bourbon, lemon, simple syrup, egg white, maraschino cherry.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/amaretto-sour.png',
 	thumbnailImagePath:
@@ -13,21 +13,36 @@ const AMARETTO_SOUR: Cocktail = {
 	slug: 'amaretto-sour',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1.5oz Amaretto',
-		'.75oz Bourbon',
-		'.75oz Lemon',
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.Liqueurs.LAZZARONI
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.EVAN_WILLIAMS_BIB
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
 		{
 			amount: '.25oz',
-			recipe: RICH_SIMPLE_SYRUP
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
-		'1 Egg white',
-		'Garnish: Maraschino cherry'
+		{
+			amount: '1',
+			label: 'Egg White',
+			ingredient: Ingredients.Other.EGG
+		},
+		{
+			label: 'Garnish: Maraschino Cherry',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.SOUR,
 		Tags.Origin.MODERN,
 		Tags.AlcoholLevel.LOW

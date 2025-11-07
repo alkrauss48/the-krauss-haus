@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const DAIQUIRI: Cocktail = {
 	title: 'Daiquiri',
@@ -13,13 +13,22 @@ const DAIQUIRI: Cocktail = {
 	slug: 'daiquiri',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'2oz Probitas',
-		'.75oz Lime',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.PROBITAS
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
 		{
 			amount: '.5oz',
-			recipe: RICH_SIMPLE_SYRUP
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
-		'Garnish: Lime wedge'
+		{
+			label: 'Garnish: Lime wedge',
+			ingredient: Ingredients.Citrus.LIME
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,

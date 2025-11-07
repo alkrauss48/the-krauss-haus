@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const WHISKEY_SOUR: Cocktail = {
 	title: 'Whiskey Sour',
@@ -13,20 +13,31 @@ const WHISKEY_SOUR: Cocktail = {
 	slug: 'whiskey-sour',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'.2oz Whiskey',
-		'.75oz Lemon',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.EVAN_WILLIAMS_BIB
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
 		{
 			amount: '.5oz',
-			recipe: RICH_SIMPLE_SYRUP
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
-		'1 egg white',
-		'Garnish: Maraschino cherry'
+		{
+			label: '1 Egg white',
+			ingredient: Ingredients.Other.EGG
+		},
+		{
+			label: 'Garnish: Maraschino cherry',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.SOUR,
 		Tags.Origin.CLASSIC
 	]

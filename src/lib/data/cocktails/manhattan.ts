@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const MANHATTAN: Cocktail = {
@@ -12,10 +13,22 @@ const MANHATTAN: Cocktail = {
 	slug: 'manhattan',
 	method: CocktailMethod.Stirred,
 	ingredients: [
-		'2oz Rye whiskey',
-		'1oz Sweet vermouth',
-		'2 dashes Black walnut bitters',
-		'Garnish: Maraschino cherry'
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.RITTENHOUSE
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BeerAndWine.COCCHI_VERMOUTH_DI_TORINO
+		},
+		{
+			amount: '2 dashes',
+			ingredient: Ingredients.Bitters.BLACK_WALNUT
+		},
+		{
+			label: 'Garnish: Maraschino cherry',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		}
 	],
 	variations: [
 		{
