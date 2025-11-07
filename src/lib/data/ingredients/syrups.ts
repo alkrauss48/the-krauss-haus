@@ -20,6 +20,10 @@ const DEMERARA_SYRUP: Ingredient = {
 	slug: 'demerara-syrup',
 	recipe: DEMERARA_SYRUP_RECIPE
 };
+const AGAVE_NECTAR: Ingredient = {
+	title: 'Agave Nectar',
+	slug: 'agave-nectar'
+};
 const FASSIONOLA: Ingredient = {
 	title: 'Fassionola',
 	slug: 'fassionola',
@@ -63,6 +67,7 @@ export const SYRUPS: IngredientCategory = {
 		{
 			label: 'Default',
 			ingredients: [
+				AGAVE_NECTAR,
 				CINNAMON_SYRUP,
 				DEMERARA_SYRUP,
 				FASSIONOLA,
@@ -78,6 +83,7 @@ export const SYRUPS: IngredientCategory = {
 };
 
 export const INGREDIENTS = {
+	AGAVE_NECTAR,
 	CINNAMON_SYRUP,
 	DEMERARA_SYRUP,
 	FASSIONOLA,

@@ -9,6 +9,10 @@ const CINNAMON: Ingredient = {
 	title: 'Cinnamon',
 	slug: 'cinnamon'
 };
+const CLOVE: Ingredient = {
+	title: 'Clove',
+	slug: 'clove'
+};
 const MINT: Ingredient = {
 	title: 'Mint',
 	slug: 'mint'
@@ -24,7 +28,7 @@ export const HERBS_AND_SPICES: IngredientCategory = {
 	subcategories: [
 		{
 			label: 'Default',
-			ingredients: [BASIL, CINNAMON, MINT, NUTMEG]
+			ingredients: [BASIL, CINNAMON, CLOVE, MINT, NUTMEG]
 		}
 	]
 };
@@ -32,6 +36,7 @@ export const HERBS_AND_SPICES: IngredientCategory = {
 export const INGREDIENTS = {
 	BASIL,
 	CINNAMON,
+	CLOVE,
 	MINT,
 	NUTMEG
 };
