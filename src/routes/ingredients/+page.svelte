@@ -109,7 +109,9 @@
 					const filteredSubcategories = category.subcategories
 						.map((subcategory) => ({
 							...subcategory,
-							ingredients: subcategory.ingredients.filter((ingredient) => ingredient.recipe !== undefined)
+							ingredients: subcategory.ingredients.filter(
+								(ingredient) => ingredient.recipe !== undefined
+							)
 						}))
 						.filter((subcategory) => subcategory.ingredients.length > 0);
 

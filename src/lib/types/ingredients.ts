@@ -20,7 +20,7 @@ export interface Ingredient {
 }
 
 export interface IngredientItem {
-	amount: string;
+	amount?: string;
 	label?: string;
 	ingredient: Ingredient;
 }
