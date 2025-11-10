@@ -48,6 +48,33 @@
 		);
 	}
 
+	// Find which category an ingredient belongs to
+	function findIngredientCategory(ingredientSlug: string): IngredientCategory | null {
+		for (const category of allIngredientCategories) {
+			for (const subcategory of category.subcategories) {
+				if (subcategory.ingredients.some((i) => i.slug === ingredientSlug)) {
+					return category;
+				}
+			}
+		}
+		return null;
+	}
+
+	// Convert category label to URL-friendly key
+	function categoryToUrlKey(categoryLabel: string): string {
+		return categoryLabel.toLowerCase().replace(/\s+/g, '-');
+	}
+
+	// Generate URL for ingredient filter on cocktails page
+	function getIngredientFilterUrl(ingredientSlug: string): string {
+		const category = findIngredientCategory(ingredientSlug);
+		if (!category) {
+			return resolve('/cocktails');
+		}
+		const categoryKey = categoryToUrlKey(category.label);
+		return resolve(`/cocktails?ingredient-${categoryKey}=${encodeURIComponent(ingredientSlug)}`);
+	}
+
 	// Check if a string contains the search term (case-insensitive)
 	function matchesSearch(text: string, term: string): boolean {
 		if (!term) return true;
@@ -330,8 +357,10 @@
 										<div class="flex flex-wrap gap-2">
 											{#each subcategory.ingredients as ingredient (ingredient.slug)}
 												{@const usageCount = ingredientUsageCounts.get(ingredient.slug) || 0}
-												<span
-													class="inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center bg-gray-50 text-gray-700"
+												{@const filterUrl = getIngredientFilterUrl(ingredient.slug)}
+												<a
+													href={filterUrl}
+													class="inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer"
 												>
 													<div class="flex items-center flex-wrap gap-x-1.5">
 														<span>{ingredient.title}</span>
@@ -342,6 +371,7 @@
 															<a
 																href={resolve(`/recipes/${ingredient.recipe.slug}`)}
 																class="text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors"
+																on:click|stopPropagation
 															>
 																See recipe
 															</a>
@@ -357,7 +387,7 @@
 															{ingredient.group}
 														</span>
 													{/if}
-												</span>
+												</a>
 											{/each}
 										</div>
 									</div>

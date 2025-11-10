@@ -1,7 +1,9 @@
 import type { PageLoad } from './$types';
 import { allCocktails } from '$lib/data/all-cocktails';
 import { Tags, allTagCategories } from '$lib/data/all-tags';
+import { allIngredientCategories } from '$lib/data/all-ingredients';
 import type { Tag } from '$lib/types/tags';
+import type { Ingredient } from '$lib/types/ingredients';
 
 export const load: PageLoad = ({ url }) => {
 	// Parse tags from URL query params using category-based structure
@@ -19,9 +21,25 @@ export const load: PageLoad = ({ url }) => {
 		}
 	});
 
+	// Parse ingredients from URL query params using category-based structure
+	const selectedIngredients: Ingredient[] = [];
+
+	// For each ingredient category, check if there are selected ingredients
+	allIngredientCategories.forEach((category) => {
+		const categoryKey = categoryToUrlKey(category.label);
+		const categoryParam = url.searchParams.get(`ingredient-${categoryKey}`);
+
+		if (categoryParam) {
+			const ingredientSlugs = categoryParam.split(',').map((slug) => slug.trim());
+			const categoryIngredients = getIngredientsBySlugsInCategory(ingredientSlugs, category);
+			selectedIngredients.push(...categoryIngredients);
+		}
+	});
+
 	return {
 		cocktails: allCocktails,
-		selectedTags
+		selectedTags,
+		selectedIngredients
 	};
 };
 
@@ -52,4 +70,24 @@ function getTagsByLabelsInCategory(labels: string[], categoryLabel: string): Tag
 			)
 		)
 		.filter((tag): tag is Tag => tag !== undefined);
+}
+
+// Helper function to get Ingredient objects by their slugs within a specific category
+function getIngredientsBySlugsInCategory(
+	slugs: string[],
+	category: (typeof allIngredientCategories)[0]
+): Ingredient[] {
+	const allIngredients: Ingredient[] = [];
+
+	// Collect all ingredients from this category's subcategories
+	category.subcategories.forEach((subcategory) => {
+		allIngredients.push(...subcategory.ingredients);
+	});
+
+	// Find matching ingredients by slug (case-insensitive)
+	return slugs
+		.map((slug) =>
+			allIngredients.find((ingredient) => ingredient.slug.toLowerCase() === slug.toLowerCase())
+		)
+		.filter((ingredient): ingredient is Ingredient => ingredient !== undefined);
 }

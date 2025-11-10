@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import { SvelteSet } from 'svelte/reactivity';
-	import { slide, fade } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 	import type { Tag, TagCategory } from '$lib/types/tags';
 	import type { Cocktail } from '$lib/types/cocktails';
 	import { allTagCategories } from '$lib/data/all-tags';
@@ -87,12 +87,6 @@
 		dispatch('filtersChanged', { tags: selectedTags });
 	}
 
-	// Clear all filters
-	function clearAllFilters(): void {
-		selectedTags = [];
-		dispatch('filtersChanged', { tags: selectedTags });
-	}
-
 	// Toggle category expansion
 	function toggleCategory(categoryLabel: string): void {
 		if (expandedCategories.has(categoryLabel)) {
@@ -109,18 +103,6 @@
 	function getSelectedTagsCount(category: TagCategory): number {
 		const categoryTags = getTagsForCategory(category);
 		return categoryTags.filter((tag) => isTagSelected(tag)).length;
-	}
-
-	// Close sidebar
-	function closeSidebar(): void {
-		dispatch('toggleSidebar');
-	}
-
-	// Handle escape key
-	function handleKeydown(event: KeyboardEvent): void {
-		if (event.key === 'Escape' && isOpen) {
-			closeSidebar();
-		}
 	}
 
 	// Helper function to convert hex color to rgba
@@ -161,202 +143,118 @@
 	}
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<!-- Filter Categories -->
+<div class="px-6 py-4 space-y-6">
+	{#each allDisplayCategories as category (`${category.label}-${selectedTagsKey}`)}
+		{@const isExpanded = expandedCategories.has(category.label)}
+		{@const categoryTags = getTagsForCategory(category)}
+		{@const selectedCount = getSelectedTagsCount(category)}
 
-<!-- Backdrop -->
-{#if isOpen}
-	<div
-		class="fixed inset-0 bg-black/50 z-40 cursor-pointer"
-		role="button"
-		tabindex="-1"
-		aria-label="Close filter sidebar"
-		on:click={closeSidebar}
-		on:keydown={(e) => (e.key === 'Enter' || e.key === ' ' ? closeSidebar() : null)}
-		transition:fade={{ duration: 200 }}
-	></div>
-{/if}
-
-<!-- Sidebar -->
-<div
-	class="fixed top-0 right-0 h-full w-96 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto"
-	class:translate-x-0={isOpen}
-	class:translate-x-full={!isOpen}
-	inert={!isOpen}
->
-	<!-- Sidebar Header -->
-	<div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 z-20">
-		<div class="flex items-center justify-between">
-			<h2 class="text-lg font-semibold text-gray-800">Filter Cocktails</h2>
-			<button
-				on:click={closeSidebar}
-				class="p-2 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
-				aria-label="Close filters"
-			>
-				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M6 18L18 6M6 6l12 12"
-					/>
-				</svg>
-			</button>
-		</div>
-
-		<!-- Results summary -->
-		<div class="mt-2 text-sm text-gray-600">
-			{filteredCocktails.length} of {cocktails.length} cocktails
-		</div>
-
-		<!-- Clear all button -->
-		{#if selectedTags.length > 0}
-			<button
-				on:click={clearAllFilters}
-				class="mt-3 w-full px-3 py-2 text-sm text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors font-medium cursor-pointer"
-			>
-				Clear all filters ({selectedTags.length})
-			</button>
-		{/if}
-	</div>
-
-	<!-- Selected Tags Summary -->
-	{#if selectedTags.length > 0}
-		<div class="px-6 py-4 bg-amber-50 border-b border-amber-200">
-			<h3 class="text-sm font-medium text-gray-800 mb-2">Active Filters</h3>
-			<div class="flex flex-wrap gap-2">
-				{#each selectedTags as tag (tag.label)}
+		{#if categoryTags.length > 0}
+			<div class="space-y-3">
+				<!-- Category Header -->
+				<div class="flex items-center justify-between">
 					<button
-						class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full text-white hover:opacity-80 transition-opacity cursor-pointer"
-						style="background-color: {tag.category.color};"
-						on:click={() => toggleTag(tag)}
+						class="flex items-center gap-2 text-left group cursor-pointer"
+						on:click={() => toggleCategory(category.label)}
 					>
-						{tag.label}
-						<svg class="ml-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+						<div
+							class="w-4 h-4 rounded-sm border-2 flex items-center justify-center transition-all duration-200"
+							style="border-color: {category.color}; background-color: {selectedCount > 0
+								? category.color
+								: 'transparent'};"
+						>
+							{#if selectedCount > 0}
+								<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+									<path
+										fill-rule="evenodd"
+										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							{/if}
+						</div>
+						<h3 class="text-sm font-semibold text-gray-800 group-hover:text-gray-600">
+							{category.label}
+							{#if selectedCount > 0}
+								<span class="text-xs text-gray-500">({selectedCount})</span>
+							{/if}
+						</h3>
+						<svg
+							class="w-4 h-4 text-gray-400 transition-transform duration-200"
+							class:rotate-180={isExpanded}
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
 							<path
-								fill-rule="evenodd"
-								d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-								clip-rule="evenodd"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M19 9l-7 7-7-7"
 							/>
 						</svg>
 					</button>
-				{/each}
-			</div>
-		</div>
-	{/if}
-
-	<!-- Filter Categories -->
-	<div class="px-6 py-4 space-y-6">
-		{#each allDisplayCategories as category (`${category.label}-${selectedTagsKey}`)}
-			{@const isExpanded = expandedCategories.has(category.label)}
-			{@const categoryTags = getTagsForCategory(category)}
-			{@const selectedCount = getSelectedTagsCount(category)}
-
-			{#if categoryTags.length > 0}
-				<div class="space-y-3">
-					<!-- Category Header -->
-					<div class="flex items-center justify-between">
-						<button
-							class="flex items-center gap-2 text-left group cursor-pointer"
-							on:click={() => toggleCategory(category.label)}
-						>
-							<div
-								class="w-4 h-4 rounded-sm border-2 flex items-center justify-center transition-all duration-200"
-								style="border-color: {category.color}; background-color: {selectedCount > 0
-									? category.color
-									: 'transparent'};"
-							>
-								{#if selectedCount > 0}
-									<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-										<path
-											fill-rule="evenodd"
-											d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-											clip-rule="evenodd"
-										/>
-									</svg>
-								{/if}
-							</div>
-							<h3 class="text-sm font-semibold text-gray-800 group-hover:text-gray-600">
-								{category.label}
-								{#if selectedCount > 0}
-									<span class="text-xs text-gray-500">({selectedCount})</span>
-								{/if}
-							</h3>
-							<svg
-								class="w-4 h-4 text-gray-400 transition-transform duration-200"
-								class:rotate-180={isExpanded}
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M19 9l-7 7-7-7"
-								/>
-							</svg>
-						</button>
-					</div>
-
-					<!-- Category Items (Tags) -->
-					{#if isExpanded}
-						<div class="flex flex-wrap gap-2 pl-6" transition:slide>
-							{#each categoryTags as tag (`${tag.label}-${selectedTagsKey}`)}
-								{@const count = getTagCount(tag)}
-								{@const selected = isTagSelected(tag)}
-								{@const disabled = isTagDisabled(tag)}
-								{@const styling = getTagStyling(tag, selected, disabled)}
-
-								<button
-									class="inline-flex items-center gap-1.5 rounded-lg border-2 transition-all duration-300 transform group relative overflow-hidden py-1.5 px-2.5 text-xs"
-									class:cursor-pointer={!disabled}
-									class:cursor-not-allowed={disabled}
-									class:hover:scale-[1.02]={!disabled && !selected}
-									class:hover:shadow-lg={!disabled}
-									class:shadow-md={selected}
-									class:scale-[0.98]={disabled}
-									class:opacity-50={disabled}
-									style="
-										background-color: {styling.background};
-										border-color: {styling.border};
-										color: {styling.color};
-									"
-									{disabled}
-									on:click={() => toggleTag(tag)}
-									on:mouseenter={!disabled && !selected
-										? (e) => {
-												e.currentTarget.style.backgroundColor =
-													styling.hoverBackground || styling.background;
-												e.currentTarget.style.borderColor = styling.hoverBorder || styling.border;
-											}
-										: undefined}
-									on:mouseleave={!disabled && !selected
-										? (e) => {
-												e.currentTarget.style.backgroundColor = styling.background;
-												e.currentTarget.style.borderColor = styling.border;
-											}
-										: undefined}
-								>
-									<!-- Background gradient overlay for selected state -->
-									{#if selected}
-										<div
-											class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-10"
-										></div>
-									{/if}
-
-									<span class="font-medium relative z-10">{tag.label}</span>
-									<span
-										class="text-xs px-1.5 py-0.5 rounded-full font-semibold relative z-10"
-										style="background-color: rgba(255, 255, 255, 0.2); color: inherit;"
-									>
-										{count}
-									</span>
-								</button>
-							{/each}
-						</div>
-					{/if}
 				</div>
-			{/if}
-		{/each}
-	</div>
+
+				<!-- Category Items (Tags) -->
+				{#if isExpanded}
+					<div class="flex flex-wrap gap-2 pl-6" transition:slide>
+						{#each categoryTags as tag (`${tag.label}-${selectedTagsKey}`)}
+							{@const count = getTagCount(tag)}
+							{@const selected = isTagSelected(tag)}
+							{@const disabled = isTagDisabled(tag)}
+							{@const styling = getTagStyling(tag, selected, disabled)}
+
+							<button
+								class="inline-flex items-center gap-1.5 rounded-lg border-2 transition-all duration-300 transform group relative overflow-hidden py-1.5 px-2.5 text-xs"
+								class:cursor-pointer={!disabled}
+								class:cursor-not-allowed={disabled}
+								class:hover:scale-[1.02]={!disabled && !selected}
+								class:hover:shadow-lg={!disabled}
+								class:shadow-md={selected}
+								class:scale-[0.98]={disabled}
+								class:opacity-50={disabled}
+								style="
+									background-color: {styling.background};
+									border-color: {styling.border};
+									color: {styling.color};
+								"
+								{disabled}
+								on:click={() => toggleTag(tag)}
+								on:mouseenter={!disabled && !selected
+									? (e) => {
+											e.currentTarget.style.backgroundColor =
+												styling.hoverBackground || styling.background;
+											e.currentTarget.style.borderColor = styling.hoverBorder || styling.border;
+										}
+									: undefined}
+								on:mouseleave={!disabled && !selected
+									? (e) => {
+											e.currentTarget.style.backgroundColor = styling.background;
+											e.currentTarget.style.borderColor = styling.border;
+										}
+									: undefined}
+							>
+								<!-- Background gradient overlay for selected state -->
+								{#if selected}
+									<div
+										class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-10"
+									></div>
+								{/if}
+
+								<span class="font-medium relative z-10">{tag.label}</span>
+								<span
+									class="text-xs px-1.5 py-0.5 rounded-full font-semibold relative z-10"
+									style="background-color: rgba(255, 255, 255, 0.2); color: inherit;"
+								>
+									{count}
+								</span>
+							</button>
+						{/each}
+					</div>
+				{/if}
+			</div>
+		{/if}
+	{/each}
 </div>

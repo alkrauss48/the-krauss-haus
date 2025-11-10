@@ -2,23 +2,26 @@
 	import type { PageData } from './$types';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
-	import TagFilter from '$lib/components/TagFilter.svelte';
+	import FilterSidebar from '$lib/components/FilterSidebar.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { methodColors } from '$lib/enums/methods';
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/stores';
 	import { allTagCategories } from '$lib/data/all-tags';
+	import { allIngredientCategories } from '$lib/data/all-ingredients';
 	import type { Tag } from '$lib/types/tags';
+	import type { Ingredient } from '$lib/types/ingredients';
 
 	export let data: PageData;
 	const { cocktails } = data;
 
 	let searchTerm = '';
 	let selectedTags: Tag[] = data.selectedTags || [];
+	let selectedIngredients: Ingredient[] = data.selectedIngredients || [];
 	let isFilterSidebarOpen = false;
 
-	// Filter cocktails based on search term and selected tags
+	// Filter cocktails based on search term, selected tags, and selected ingredients
 	$: filteredCocktails = cocktails.filter((cocktail) => {
 		// First filter by search term (search both title and description)
 		const matchesSearch =
@@ -32,7 +35,22 @@
 				(cocktail.tags || []).some((cocktailTag) => cocktailTag.label === selectedTag.label)
 			);
 
-		return matchesSearch && matchesTags;
+		// Then filter by ingredients (intersection - all selected ingredients must be present)
+		const matchesIngredients =
+			selectedIngredients.length === 0 ||
+			selectedIngredients.every((selectedIngredient) => {
+				if (!cocktail.ingredients) return false;
+				const cocktailIngredientSlugs = new Set<string>();
+				for (const item of cocktail.ingredients) {
+					if (typeof item === 'string') continue;
+					if ('ingredient' in item && item.ingredient?.slug) {
+						cocktailIngredientSlugs.add(item.ingredient.slug);
+					}
+				}
+				return cocktailIngredientSlugs.has(selectedIngredient.slug);
+			});
+
+		return matchesSearch && matchesTags && matchesIngredients;
 	});
 
 	function navigateToCocktail(slug: string): void {
@@ -46,9 +64,12 @@
 		}
 	}
 
-	// Handle filter changes (tags) and update URL
-	function handleFiltersChanged(event: CustomEvent<{ tags: Tag[] }>): void {
+	// Handle filter changes (tags and ingredients) and update URL
+	function handleFiltersChanged(
+		event: CustomEvent<{ tags: Tag[]; ingredients: Ingredient[] }>
+	): void {
 		selectedTags = event.detail.tags;
+		selectedIngredients = event.detail.ingredients;
 		updateURL();
 	}
 
@@ -62,7 +83,7 @@
 		return categoryLabel.toLowerCase().replace(/\s+/g, '-');
 	}
 
-	// Update URL with current tag selection using category-based structure
+	// Update URL with current tag and ingredient selection using category-based structure
 	function updateURL(): void {
 		const url = new URL($page.url);
 
@@ -70,6 +91,12 @@
 		allTagCategories.forEach((category) => {
 			const categoryKey = categoryToUrlKey(category.label);
 			url.searchParams.delete(categoryKey);
+		});
+
+		// Clear all existing ingredient-related params
+		allIngredientCategories.forEach((category) => {
+			const categoryKey = categoryToUrlKey(category.label);
+			url.searchParams.delete(`ingredient-${categoryKey}`);
 		});
 
 		// Group selected tags by category
@@ -87,6 +114,31 @@
 			const categoryKey = categoryToUrlKey(categoryLabel);
 			const tagLabels = tags.map((tag) => tag.label).join(',');
 			url.searchParams.set(categoryKey, tagLabels);
+		});
+
+		// Group selected ingredients by category
+		const ingredientsByCategory: Record<string, Ingredient[]> = {};
+		selectedIngredients.forEach((ingredient) => {
+			// Find which category this ingredient belongs to
+			for (const category of allIngredientCategories) {
+				for (const subcategory of category.subcategories) {
+					if (subcategory.ingredients.some((i) => i.slug === ingredient.slug)) {
+						const categoryLabel = category.label;
+						if (!ingredientsByCategory[categoryLabel]) {
+							ingredientsByCategory[categoryLabel] = [];
+						}
+						ingredientsByCategory[categoryLabel].push(ingredient);
+						break;
+					}
+				}
+			}
+		});
+
+		// Set URL params for each category with selected ingredients
+		Object.entries(ingredientsByCategory).forEach(([categoryLabel, ingredients]) => {
+			const categoryKey = categoryToUrlKey(categoryLabel);
+			const ingredientSlugs = ingredients.map((ingredient) => ingredient.slug).join(',');
+			url.searchParams.set(`ingredient-${categoryKey}`, ingredientSlugs);
 		});
 
 		goto(resolve(`${url.pathname}${url.search}`), { replaceState: true, noScroll: true });
@@ -151,7 +203,7 @@
 					<button
 						on:click={toggleFilterSidebar}
 						class="cursor-pointer px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 relative sm:w-auto w-full"
-						class:bg-amber-700={selectedTags.length > 0}
+						class:bg-amber-700={selectedTags.length > 0 || selectedIngredients.length > 0}
 					>
 						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path
@@ -163,11 +215,11 @@
 						</svg>
 						<span class="hidden sm:inline">Filters</span>
 						<span class="sm:hidden">Filter Cocktails</span>
-						{#if selectedTags.length > 0}
+						{#if selectedTags.length > 0 || selectedIngredients.length > 0}
 							<span
 								class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
 							>
-								{selectedTags.length}
+								{selectedTags.length + selectedIngredients.length}
 							</span>
 						{/if}
 					</button>
@@ -176,7 +228,7 @@
 		</div>
 
 		<!-- Active Filters Summary (visible when filters are applied) -->
-		{#if selectedTags.length > 0}
+		{#if selectedTags.length > 0 || selectedIngredients.length > 0}
 			<div class="mb-6" in:fly={{ y: 20, duration: 400, delay: 700 }}>
 				<div class="max-w-4xl mx-auto">
 					<div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
@@ -185,6 +237,7 @@
 							<button
 								on:click={() => {
 									selectedTags = [];
+									selectedIngredients = [];
 									updateURL();
 								}}
 								class="text-xs text-red-600 hover:text-red-700 font-medium cursor-pointer"
@@ -212,16 +265,37 @@
 									</svg>
 								</button>
 							{/each}
+							{#each selectedIngredients as ingredient (ingredient.slug)}
+								<button
+									class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-amber-600 text-white hover:opacity-80 transition-opacity cursor-pointer"
+									on:click={() => {
+										selectedIngredients = selectedIngredients.filter(
+											(i) => i.slug !== ingredient.slug
+										);
+										updateURL();
+									}}
+								>
+									{ingredient.title}
+									<svg class="ml-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+										<path
+											fill-rule="evenodd"
+											d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+								</button>
+							{/each}
 						</div>
 					</div>
 				</div>
 			</div>
 		{/if}
 
-		<!-- Tag Filter Sidebar -->
-		<TagFilter
+		<!-- Filter Sidebar -->
+		<FilterSidebar
 			{cocktails}
 			{selectedTags}
+			{selectedIngredients}
 			{filteredCocktails}
 			isOpen={isFilterSidebarOpen}
 			on:filtersChanged={handleFiltersChanged}
@@ -230,13 +304,13 @@
 
 		<!-- Results Count -->
 		<div class="mb-6 text-center text-gray-600" in:fly={{ y: 20, duration: 400, delay: 900 }}>
-			{#if searchTerm || selectedTags.length > 0}
+			{#if searchTerm || selectedTags.length > 0 || selectedIngredients.length > 0}
 				Showing {filteredCocktails.length} of {cocktails.length} cocktails
 				{#if searchTerm}
 					matching "{searchTerm}"
 				{/if}
-				{#if selectedTags.length > 0}
-					with selected tags
+				{#if selectedTags.length > 0 || selectedIngredients.length > 0}
+					with selected filters
 				{/if}
 			{:else}
 				{cocktails.length} cocktails total
@@ -252,12 +326,12 @@
 				<div class="p-12 text-center">
 					<p class="text-gray-500 text-lg">
 						No cocktails found
-						{#if searchTerm && selectedTags.length > 0}
-							matching "{searchTerm}" with selected tags
+						{#if searchTerm && (selectedTags.length > 0 || selectedIngredients.length > 0)}
+							matching "{searchTerm}" with selected filters
 						{:else if searchTerm}
 							matching "{searchTerm}"
-						{:else if selectedTags.length > 0}
-							with selected tags
+						{:else if selectedTags.length > 0 || selectedIngredients.length > 0}
+							with selected filters
 						{/if}
 					</p>
 				</div>
