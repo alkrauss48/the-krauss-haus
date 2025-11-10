@@ -25,6 +25,7 @@ const NUTMEG: Ingredient = {
 export const HERBS_AND_SPICES: IngredientCategory = {
 	label: 'Herbs & Spices',
 	type: IngredientType.NonAlcoholic,
+	color: '#8b5cf6', // violet purple (complementary to existing palette)
 	subcategories: [
 		{
 			label: 'Default',

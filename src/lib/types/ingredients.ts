@@ -4,6 +4,7 @@ import type { Recipe } from './recipes';
 export interface IngredientCategory {
 	label: string;
 	type: IngredientType;
+	color: string;
 	subcategories: IngredientSubcategory[];
 }
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { SvelteSet } from 'svelte/reactivity';
+	import { SvelteSet, SvelteMap } from 'svelte/reactivity';
 	import { slide } from 'svelte/transition';
 	import type {
 		Ingredient,
@@ -8,15 +8,18 @@
 		IngredientSubcategory
 	} from '$lib/types/ingredients';
 	import type { Cocktail } from '$lib/types/cocktails';
+	import type { LogicMode } from '$lib/types/filters';
 	import { allIngredientCategories } from '$lib/data/all-ingredients';
+	import { matchesIngredientsLogic } from '$lib/utils/filterLogic';
 
 	export let cocktails: Cocktail[] = [];
 	export let selectedIngredients: Ingredient[] = [];
 	export let filteredCocktails: Cocktail[] = [];
 	export let isOpen: boolean = false;
+	export let logicMode: LogicMode = 'AND';
 
-	// Force reactivity when selections change
-	$: selectedIngredientsKey = selectedIngredients.map((i) => i.slug).join(',');
+	// Force reactivity when selections or logic mode change
+	$: selectedIngredientsKey = `${selectedIngredients.map((i) => i.slug).join(',')}-${logicMode}`;
 
 	const dispatch = createEventDispatcher<{
 		filtersChanged: { ingredients: Ingredient[] };
@@ -25,6 +28,48 @@
 
 	// Track which categories are manually expanded by user
 	let manuallyExpandedCategories = new SvelteSet<string>([]);
+
+	// Pre-compute selected ingredient slugs Set for O(1) lookups
+	$: selectedIngredientSlugs = new SvelteSet(selectedIngredients.map((i) => i.slug));
+
+	// Pre-compute all ingredient slugs used in cocktails (computed once when cocktails change)
+	$: allIngredientSlugs = (() => {
+		const slugs = new SvelteSet<string>();
+		for (const cocktail of cocktails) {
+			if (!cocktail.ingredients) continue;
+			for (const ingredient of cocktail.ingredients) {
+				if (typeof ingredient === 'string') continue;
+				if ('ingredient' in ingredient && ingredient.ingredient?.slug) {
+					slugs.add(ingredient.ingredient.slug);
+				}
+			}
+		}
+		return slugs;
+	})();
+
+	// Pre-compute ingredients per subcategory (computed once when cocktails change)
+	$: ingredientsBySubcategory = (() => {
+		const map = new SvelteMap<string, Ingredient[]>();
+		for (const category of allIngredientCategories) {
+			for (const subcategory of category.subcategories) {
+				const key = `${category.label}-${subcategory.label}`;
+				const ingredients = subcategory.ingredients.filter((ingredient) =>
+					allIngredientSlugs.has(ingredient.slug)
+				);
+				map.set(key, ingredients);
+			}
+		}
+		return map;
+	})();
+
+	// Get all ingredients used in cocktails for a subcategory (uses cached data)
+	function getIngredientsForSubcategory(
+		category: IngredientCategory,
+		subcategory: IngredientSubcategory
+	): Ingredient[] {
+		const key = `${category.label}-${subcategory.label}`;
+		return ingredientsBySubcategory.get(key) || [];
+	}
 
 	// Compute which categories should be expanded (selected ingredients + manual)
 	$: expandedCategories = (() => {
@@ -35,7 +80,7 @@
 			for (const subcategory of category.subcategories) {
 				const ingredients = getIngredientsForSubcategory(category, subcategory);
 				const hasSelected = ingredients.some((ingredient) =>
-					selectedIngredients.some((selected) => selected.slug === ingredient.slug)
+					selectedIngredientSlugs.has(ingredient.slug)
 				);
 
 				if (hasSelected) {
@@ -48,61 +93,27 @@
 		return result;
 	})();
 
-	// Get all ingredients used in cocktails, organized by category/subcategory
-	function getIngredientsForSubcategory(
-		category: IngredientCategory,
-		subcategory: IngredientSubcategory
-	): Ingredient[] {
-		const allIngredientSlugs = new Set<string>();
-
-		// Extract all ingredient slugs from cocktails
-		for (const cocktail of cocktails) {
-			if (!cocktail.ingredients) continue;
-			for (const ingredient of cocktail.ingredients) {
-				if (typeof ingredient === 'string') continue;
-				if ('ingredient' in ingredient && ingredient.ingredient?.slug) {
-					allIngredientSlugs.add(ingredient.ingredient.slug);
-				}
-			}
-		}
-
-		// Filter subcategory ingredients to only those used in cocktails
-		return subcategory.ingredients.filter((ingredient) => allIngredientSlugs.has(ingredient.slug));
-	}
-
 	// Calculate cocktail count for an ingredient given current filter state
 	function getIngredientCount(ingredient: Ingredient): number {
-		// If this ingredient is already selected, show current filtered count
-		if (selectedIngredients.find((i) => i.slug === ingredient.slug)) {
-			return filteredCocktails.length;
+		// If this ingredient is already selected, calculate count with current logic mode
+		if (selectedIngredientSlugs.has(ingredient.slug)) {
+			// Recalculate filtered cocktails with current logic mode to ensure reactivity
+			return cocktails.filter((cocktail) => {
+				return matchesIngredientsLogic(cocktail, selectedIngredients, logicMode);
+			}).length;
 		}
 
 		// If not selected, show what the count would be if we added this ingredient
 		const hypotheticalIngredients = [...selectedIngredients, ingredient];
 
 		return cocktails.filter((cocktail) => {
-			if (!cocktail.ingredients) return false;
-
-			const cocktailIngredientSlugs = new Set<string>();
-			for (const item of cocktail.ingredients) {
-				if (typeof item === 'string') continue;
-				if ('ingredient' in item && item.ingredient?.slug) {
-					cocktailIngredientSlugs.add(item.ingredient.slug);
-				}
-			}
-
-			// All selected ingredients must be present (intersection)
-			return hypotheticalIngredients.every((selectedIngredient) =>
-				cocktailIngredientSlugs.has(selectedIngredient.slug)
-			);
+			return matchesIngredientsLogic(cocktail, hypotheticalIngredients, logicMode);
 		}).length;
 	}
 
-	// Check if an ingredient is selected
+	// Check if an ingredient is selected (uses pre-computed Set for O(1) lookup)
 	function isIngredientSelected(ingredient: Ingredient): boolean {
-		return selectedIngredients.some(
-			(selectedIngredient) => selectedIngredient.slug === ingredient.slug
-		);
+		return selectedIngredientSlugs.has(ingredient.slug);
 	}
 
 	// Check if an ingredient should be disabled (no cocktails would remain if selected)
@@ -158,14 +169,6 @@
 		return count;
 	}
 
-	// Get subcategories that have ingredients
-	function getSubcategoriesWithIngredients(category: IngredientCategory): IngredientSubcategory[] {
-		return category.subcategories.filter((subcategory) => {
-			const ingredients = getIngredientsForSubcategory(category, subcategory);
-			return ingredients.length > 0;
-		});
-	}
-
 	// Expand/Collapse All functionality
 	function expandAllCategories(): void {
 		const newSet = new SvelteSet<string>();
@@ -187,7 +190,7 @@
 			for (const subcategory of category.subcategories) {
 				const ingredients = getIngredientsForSubcategory(category, subcategory);
 				const hasSelected = ingredients.some((ingredient) =>
-					selectedIngredients.some((selected) => selected.slug === ingredient.slug)
+					selectedIngredientSlugs.has(ingredient.slug)
 				);
 				if (hasSelected) {
 					newSet.add(category.label);
@@ -198,19 +201,6 @@
 		manuallyExpandedCategories = newSet;
 	}
 
-	// Check if all categories are expanded
-	$: allCategoriesExpanded = (() => {
-		const categoriesWithIngredients = allIngredientCategories.filter((category) => {
-			return category.subcategories.some(
-				(sub) => getIngredientsForSubcategory(category, sub).length > 0
-			);
-		});
-		return categoriesWithIngredients.every((category) => expandedCategories.has(category.label));
-	})();
-
-	// Category color (using amber as default, matching TagFilter style)
-	const categoryColor = '#d97706'; // amber-600
-
 	// Helper function to convert hex color to rgba (matching TagFilter)
 	function hexToRgba(hex: string, alpha: number): string {
 		const r = parseInt(hex.slice(1, 3), 16);
@@ -220,7 +210,12 @@
 	}
 
 	// Get ingredient badge styling (matching TagFilter)
-	function getIngredientStyling(ingredient: Ingredient, selected: boolean, disabled: boolean) {
+	function getIngredientStyling(
+		categoryColor: string,
+		ingredient: Ingredient,
+		selected: boolean,
+		disabled: boolean
+	) {
 		if (selected) {
 			return {
 				background: categoryColor,
@@ -283,8 +278,8 @@
 					>
 						<div
 							class="w-4 h-4 rounded-sm border-2 flex items-center justify-center transition-all duration-200"
-							style="border-color: {categoryColor}; background-color: {selectedCount > 0
-								? categoryColor
+							style="border-color: {category.color}; background-color: {selectedCount > 0
+								? category.color
 								: 'transparent'};"
 						>
 							{#if selectedCount > 0}
@@ -331,7 +326,7 @@
 									<!-- Subcategory Header (sticky when scrolling) -->
 									{#if subcategory.label.toLowerCase() !== 'default'}
 										<h4
-											class="text-xs font-medium text-gray-700 mb-2 sticky top-0 bg-white py-1.5 z-10 border-b border-gray-100 -mx-6 px-6"
+											class="text-xs font-medium text-gray-700 mb-2 sticky top-0 bg-white py-1.5 z-20 border-b border-gray-100 -mx-6 px-6"
 										>
 											{subcategory.label}
 										</h4>
@@ -343,7 +338,12 @@
 											{@const count = getIngredientCount(ingredient)}
 											{@const selected = isIngredientSelected(ingredient)}
 											{@const disabled = isIngredientDisabled(ingredient)}
-											{@const styling = getIngredientStyling(ingredient, selected, disabled)}
+											{@const styling = getIngredientStyling(
+												category.color,
+												ingredient,
+												selected,
+												disabled
+											)}
 
 											<button
 												class="inline-flex items-center gap-1.5 rounded-lg border-2 transition-all duration-300 transform group relative overflow-hidden py-1.5 px-2.5 text-xs"

@@ -69,10 +69,10 @@
 	function getIngredientFilterUrl(ingredientSlug: string): string {
 		const category = findIngredientCategory(ingredientSlug);
 		if (!category) {
-			return resolve('/cocktails');
+			return '/cocktails';
 		}
 		const categoryKey = categoryToUrlKey(category.label);
-		return resolve(`/cocktails?ingredient-${categoryKey}=${encodeURIComponent(ingredientSlug)}`);
+		return `/cocktails?ingredient-${categoryKey}=${encodeURIComponent(ingredientSlug)}`;
 	}
 
 	// Check if a string contains the search term (case-insensitive)
@@ -359,7 +359,7 @@
 												{@const usageCount = ingredientUsageCounts.get(ingredient.slug) || 0}
 												{@const filterUrl = getIngredientFilterUrl(ingredient.slug)}
 												<a
-													href={filterUrl}
+													href={resolve(filterUrl)}
 													class="inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer"
 												>
 													<div class="flex items-center flex-wrap gap-x-1.5">

@@ -4,6 +4,7 @@ import { Tags, allTagCategories } from '$lib/data/all-tags';
 import { allIngredientCategories } from '$lib/data/all-ingredients';
 import type { Tag } from '$lib/types/tags';
 import type { Ingredient } from '$lib/types/ingredients';
+import type { LogicMode } from '$lib/types/filters';
 
 export const load: PageLoad = ({ url }) => {
 	// Parse tags from URL query params using category-based structure
@@ -36,10 +37,21 @@ export const load: PageLoad = ({ url }) => {
 		}
 	});
 
+	// Parse logic mode from URL query params
+	const logicParam = url.searchParams.get('logic');
+	const validLogicModes: LogicMode[] = ['AND', 'OR', 'NOT AND', 'NOT OR'];
+	// Decode the logic param (handles URL encoding for spaces)
+	const decodedLogicParam = logicParam ? decodeURIComponent(logicParam) : null;
+	const logicMode: LogicMode =
+		decodedLogicParam && validLogicModes.includes(decodedLogicParam as LogicMode)
+			? (decodedLogicParam as LogicMode)
+			: 'AND';
+
 	return {
 		cocktails: allCocktails,
 		selectedTags,
-		selectedIngredients
+		selectedIngredients,
+		logicMode
 	};
 };
 

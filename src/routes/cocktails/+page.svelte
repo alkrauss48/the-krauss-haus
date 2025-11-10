@@ -12,6 +12,8 @@
 	import { allIngredientCategories } from '$lib/data/all-ingredients';
 	import type { Tag } from '$lib/types/tags';
 	import type { Ingredient } from '$lib/types/ingredients';
+	import type { LogicMode } from '$lib/types/filters';
+	import { matchesTagsLogic, matchesIngredientsLogic } from '$lib/utils/filterLogic';
 
 	export let data: PageData;
 	const { cocktails } = data;
@@ -19,6 +21,7 @@
 	let searchTerm = '';
 	let selectedTags: Tag[] = data.selectedTags || [];
 	let selectedIngredients: Ingredient[] = data.selectedIngredients || [];
+	let logicMode: LogicMode = data.logicMode || 'AND';
 	let isFilterSidebarOpen = false;
 
 	// Filter cocktails based on search term, selected tags, and selected ingredients
@@ -28,27 +31,11 @@
 			cocktail.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			cocktail.description.toLowerCase().includes(searchTerm.toLowerCase());
 
-		// Then filter by tags (intersection - all selected tags must be present)
-		const matchesTags =
-			selectedTags.length === 0 ||
-			selectedTags.every((selectedTag) =>
-				(cocktail.tags || []).some((cocktailTag) => cocktailTag.label === selectedTag.label)
-			);
+		// Then filter by tags using the selected logic mode
+		const matchesTags = matchesTagsLogic(cocktail, selectedTags, logicMode);
 
-		// Then filter by ingredients (intersection - all selected ingredients must be present)
-		const matchesIngredients =
-			selectedIngredients.length === 0 ||
-			selectedIngredients.every((selectedIngredient) => {
-				if (!cocktail.ingredients) return false;
-				const cocktailIngredientSlugs = new Set<string>();
-				for (const item of cocktail.ingredients) {
-					if (typeof item === 'string') continue;
-					if ('ingredient' in item && item.ingredient?.slug) {
-						cocktailIngredientSlugs.add(item.ingredient.slug);
-					}
-				}
-				return cocktailIngredientSlugs.has(selectedIngredient.slug);
-			});
+		// Then filter by ingredients using the selected logic mode
+		const matchesIngredients = matchesIngredientsLogic(cocktail, selectedIngredients, logicMode);
 
 		return matchesSearch && matchesTags && matchesIngredients;
 	});
@@ -73,9 +60,44 @@
 		updateURL();
 	}
 
+	// Handle logic mode changes and update URL
+	function handleLogicModeChanged(event: CustomEvent<LogicMode>): void {
+		logicMode = event.detail;
+		updateURL();
+	}
+
 	// Toggle filter sidebar
 	function toggleFilterSidebar(): void {
 		isFilterSidebarOpen = !isFilterSidebarOpen;
+	}
+
+	// Find the category color for an ingredient
+	function getIngredientCategoryColor(ingredient: Ingredient): string {
+		for (const category of allIngredientCategories) {
+			for (const subcategory of category.subcategories) {
+				if (subcategory.ingredients.some((ing) => ing.slug === ingredient.slug)) {
+					return category.color;
+				}
+			}
+		}
+		// Fallback to amber if category not found
+		return '#d97706';
+	}
+
+	// Format logic mode for display (short version)
+	function getLogicModeText(mode: LogicMode): string {
+		switch (mode) {
+			case 'AND':
+				return '(Match All)';
+			case 'OR':
+				return '(Match Any)';
+			case 'NOT AND':
+				return '(Exclude All)';
+			case 'NOT OR':
+				return '(Exclude Any)';
+			default:
+				return '';
+		}
 	}
 
 	// Convert category label to URL-friendly key
@@ -98,6 +120,13 @@
 			const categoryKey = categoryToUrlKey(category.label);
 			url.searchParams.delete(`ingredient-${categoryKey}`);
 		});
+
+		// Update logic mode param (encode spaces for URL)
+		if (logicMode === 'AND') {
+			url.searchParams.delete('logic');
+		} else {
+			url.searchParams.set('logic', encodeURIComponent(logicMode));
+		}
 
 		// Group selected tags by category
 		const tagsByCategory: Record<string, Tag[]> = {};
@@ -233,7 +262,12 @@
 				<div class="max-w-4xl mx-auto">
 					<div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
 						<div class="flex items-center justify-between mb-2">
-							<h4 class="text-sm font-medium text-gray-800">Active Filters</h4>
+							<h4 class="text-sm font-medium text-gray-800">
+								Active Filters
+								<span class="text-xs text-gray-600 font-normal ml-1">
+									{getLogicModeText(logicMode)}
+								</span>
+							</h4>
 							<button
 								on:click={() => {
 									selectedTags = [];
@@ -266,8 +300,10 @@
 								</button>
 							{/each}
 							{#each selectedIngredients as ingredient (ingredient.slug)}
+								{@const categoryColor = getIngredientCategoryColor(ingredient)}
 								<button
-									class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-amber-600 text-white hover:opacity-80 transition-opacity cursor-pointer"
+									class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full text-white hover:opacity-80 transition-opacity cursor-pointer"
+									style="background-color: {categoryColor};"
 									on:click={() => {
 										selectedIngredients = selectedIngredients.filter(
 											(i) => i.slug !== ingredient.slug
@@ -297,8 +333,10 @@
 			{selectedTags}
 			{selectedIngredients}
 			{filteredCocktails}
+			{logicMode}
 			isOpen={isFilterSidebarOpen}
 			on:filtersChanged={handleFiltersChanged}
+			on:logicModeChanged={handleLogicModeChanged}
 			on:toggleSidebar={toggleFilterSidebar}
 		/>
 

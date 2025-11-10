@@ -25,6 +25,7 @@ const PINEAPPLE: Ingredient = {
 export const CITRUS: IngredientCategory = {
 	label: 'Citrus',
 	type: IngredientType.NonAlcoholic,
+	color: '#06b6d4', // softer cyan blue (matching Temperature tag)
 	subcategories: [
 		{
 			label: 'Default',

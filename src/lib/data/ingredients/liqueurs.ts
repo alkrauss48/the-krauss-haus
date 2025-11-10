@@ -126,6 +126,7 @@ const PERSIAN_SPICE_LIQUEUR: Ingredient = {
 export const LIQUEURS: IngredientCategory = {
 	label: 'Liqueurs',
 	type: IngredientType.Alcoholic,
+	color: '#0891b2', // softer teal blue (matching Style tag)
 	subcategories: [
 		{
 			label: 'Amaro',

@@ -4,15 +4,18 @@
 	import { slide } from 'svelte/transition';
 	import type { Tag, TagCategory } from '$lib/types/tags';
 	import type { Cocktail } from '$lib/types/cocktails';
+	import type { LogicMode } from '$lib/types/filters';
 	import { allTagCategories } from '$lib/data/all-tags';
+	import { matchesTagsLogic } from '$lib/utils/filterLogic';
 
 	export let cocktails: Cocktail[] = [];
 	export let selectedTags: Tag[] = [];
 	export let filteredCocktails: Cocktail[] = [];
 	export let isOpen: boolean = false;
+	export let logicMode: LogicMode = 'AND';
 
-	// Force reactivity when selections change
-	$: selectedTagsKey = selectedTags.map((t) => t.label).join(',');
+	// Force reactivity when selections or logic mode change
+	$: selectedTagsKey = `${selectedTags.map((t) => t.label).join(',')}-${logicMode}`;
 
 	const dispatch = createEventDispatcher<{
 		filtersChanged: { tags: Tag[] };
@@ -40,19 +43,19 @@
 
 	// Calculate cocktail count for a tag given current filter state
 	function getTagCount(tag: Tag): number {
-		// If this tag is already selected, show current filtered count
+		// If this tag is already selected, calculate count with current logic mode
 		if (selectedTags.find((t) => t.label === tag.label)) {
-			return filteredCocktails.length;
+			// Recalculate filtered cocktails with current logic mode to ensure reactivity
+			return cocktails.filter((cocktail) => {
+				return matchesTagsLogic(cocktail, selectedTags, logicMode);
+			}).length;
 		}
 
 		// If not selected, show what the count would be if we added this tag
 		const hypotheticalTags = [...selectedTags, tag];
 
 		return cocktails.filter((cocktail) => {
-			const cocktailTags = cocktail.tags || [];
-			return hypotheticalTags.every((selectedTag) =>
-				cocktailTags.some((cocktailTag) => cocktailTag.label === selectedTag.label)
-			);
+			return matchesTagsLogic(cocktail, hypotheticalTags, logicMode);
 		}).length;
 	}
 

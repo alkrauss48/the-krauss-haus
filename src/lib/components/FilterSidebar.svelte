@@ -6,23 +6,25 @@
 	import type { Tag } from '$lib/types/tags';
 	import type { Ingredient } from '$lib/types/ingredients';
 	import type { Cocktail } from '$lib/types/cocktails';
+	import type { LogicMode } from '$lib/types/filters';
+	import { allIngredientCategories } from '$lib/data/all-ingredients';
 
 	export let cocktails: Cocktail[] = [];
 	export let selectedTags: Tag[] = [];
 	export let selectedIngredients: Ingredient[] = [];
 	export let filteredCocktails: Cocktail[] = [];
 	export let isOpen: boolean = false;
+	export let logicMode: LogicMode = 'AND';
 
 	type FilterMode = 'tags' | 'ingredients';
-	type LogicMode = 'AND' | 'OR' | 'NOT';
 	let filterMode: FilterMode = 'tags';
-	let logicMode: LogicMode = 'AND';
 	let hasInitializedMode = false;
 	let scrollPositions: Record<FilterMode, number> = { tags: 0, ingredients: 0 };
 	let filterContentElement: HTMLDivElement | null = null;
 
 	const dispatch = createEventDispatcher<{
 		filtersChanged: { tags: Tag[]; ingredients: Ingredient[] };
+		logicModeChanged: LogicMode;
 		toggleSidebar: void;
 	}>();
 
@@ -106,6 +108,19 @@
 			selectedIngredients = [];
 			dispatch('filtersChanged', { tags: selectedTags, ingredients: [] });
 		}
+	}
+
+	// Find the category color for an ingredient
+	function getIngredientCategoryColor(ingredient: Ingredient): string {
+		for (const category of allIngredientCategories) {
+			for (const subcategory of category.subcategories) {
+				if (subcategory.ingredients.some((ing) => ing.slug === ingredient.slug)) {
+					return category.color;
+				}
+			}
+		}
+		// Fallback to amber if category not found
+		return '#d97706';
 	}
 </script>
 
@@ -206,20 +221,19 @@
 			</button>
 		{/if}
 
-		<!-- Logic Mode Selector (Future-proofing) -->
+		<!-- Logic Mode Selector -->
 		<div class="mt-3 pt-3 border-t border-gray-200">
 			<label class="block text-xs font-medium text-gray-700 mb-2">Filter Logic</label>
 			<select
 				bind:value={logicMode}
+				on:change={() => dispatch('logicModeChanged', logicMode)}
 				class="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent cursor-pointer"
-				disabled
-				title="Coming soon: Choose how multiple filters combine"
 			>
-				<option value="AND">Match all selected filters (AND)</option>
-				<option value="OR">Match any selected filters (OR)</option>
-				<option value="NOT">Exclude selected filters (NOT)</option>
+				<option value="AND">Match ALL selected filters</option>
+				<option value="OR">Match ANY selected filter</option>
+				<option value="NOT AND">Exclude ALL selected filters</option>
+				<option value="NOT OR">Exclude ANY selected filter</option>
 			</select>
-			<p class="mt-1 text-xs text-gray-500 italic">Currently: AND logic only</p>
 		</div>
 	</div>
 
@@ -254,8 +268,10 @@
 			<h3 class="text-sm font-medium text-gray-800 mb-2">Active Filters</h3>
 			<div class="flex flex-wrap gap-2">
 				{#each selectedIngredients as ingredient (ingredient.slug)}
+					{@const categoryColor = getIngredientCategoryColor(ingredient)}
 					<button
-						class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-amber-600 text-white hover:opacity-80 transition-opacity cursor-pointer"
+						class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full text-white hover:opacity-80 transition-opacity cursor-pointer"
+						style="background-color: {categoryColor};"
 						on:click={() => {
 							selectedIngredients = selectedIngredients.filter((i) => i.slug !== ingredient.slug);
 							dispatch('filtersChanged', { tags: selectedTags, ingredients: selectedIngredients });
@@ -283,6 +299,7 @@
 				{selectedTags}
 				{filteredCocktails}
 				{isOpen}
+				{logicMode}
 				on:filtersChanged={handleTagsChanged}
 				on:toggleSidebar={() => {}}
 			/>
@@ -292,6 +309,7 @@
 				{selectedIngredients}
 				{filteredCocktails}
 				{isOpen}
+				{logicMode}
 				on:filtersChanged={handleIngredientsChanged}
 				on:toggleSidebar={() => {}}
 			/>

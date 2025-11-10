@@ -52,6 +52,7 @@ const PROSECCO: Ingredient = {
 export const BEER_AND_WINE: IngredientCategory = {
 	label: 'Beer & Wine',
 	type: IngredientType.Alcoholic,
+	color: '#10b981', // softer emerald green (matching Flavor Profile tag)
 	subcategories: [
 		{
 			label: 'Beer',
