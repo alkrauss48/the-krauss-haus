@@ -48,6 +48,33 @@
 		);
 	}
 
+	// Find which category an ingredient belongs to
+	function findIngredientCategory(ingredientSlug: string): IngredientCategory | null {
+		for (const category of allIngredientCategories) {
+			for (const subcategory of category.subcategories) {
+				if (subcategory.ingredients.some((i) => i.slug === ingredientSlug)) {
+					return category;
+				}
+			}
+		}
+		return null;
+	}
+
+	// Convert category label to URL-friendly key
+	function categoryToUrlKey(categoryLabel: string): string {
+		return categoryLabel.toLowerCase().replace(/\s+/g, '-');
+	}
+
+	// Generate URL for ingredient filter on cocktails page
+	function getIngredientFilterUrl(ingredientSlug: string): string {
+		const category = findIngredientCategory(ingredientSlug);
+		if (!category) {
+			return '/cocktails';
+		}
+		const categoryKey = categoryToUrlKey(category.label);
+		return `/cocktails?ingredient-${categoryKey}=${encodeURIComponent(ingredientSlug)}`;
+	}
+
 	// Check if a string contains the search term (case-insensitive)
 	function matchesSearch(text: string, term: string): boolean {
 		if (!term) return true;
@@ -224,11 +251,11 @@
 
 		<!-- Type Filter Tabs -->
 		<div
-			class="mb-12 flex justify-center gap-2 sm:gap-4"
+			class="mb-12 flex justify-center gap-3 sm:gap-4 flex-wrap"
 			in:fly={{ y: 20, duration: 400, delay: 600 }}
 		>
 			<button
-				class="px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
+				class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
 				null
 					? 'bg-gray-800 text-white shadow-md'
 					: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
@@ -237,7 +264,7 @@
 				All
 			</button>
 			<button
-				class="px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
+				class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
 				IngredientType.Alcoholic
 					? 'bg-gray-800 text-white shadow-md'
 					: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
@@ -246,7 +273,7 @@
 				{IngredientType.Alcoholic}
 			</button>
 			<button
-				class="px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
+				class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
 				IngredientType.NonAlcoholic
 					? 'bg-gray-800 text-white shadow-md'
 					: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
@@ -255,7 +282,7 @@
 				{IngredientType.NonAlcoholic}
 			</button>
 			<button
-				class="px-3 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
+				class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
 				'homemade'
 					? 'bg-gray-800 text-white shadow-md'
 					: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
@@ -292,7 +319,22 @@
 				<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
 					<!-- Category Header -->
 					<button
-						class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+						class="w-full px-6 py-4 flex items-center justify-between text-left transition-colors duration-200 cursor-pointer border-l-4"
+						style="border-left-color: {category.color}; background-color: {isExpanded
+							? `color-mix(in srgb, ${category.color} 3%, white)`
+							: 'white'};"
+						on:mouseenter={(e) => {
+							if (!isExpanded) {
+								e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 5%, white)`;
+							}
+						}}
+						on:mouseleave={(e) => {
+							if (!isExpanded) {
+								e.currentTarget.style.backgroundColor = 'white';
+							} else {
+								e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 3%, white)`;
+							}
+						}}
 						on:click={() => toggleCategory(category.label)}
 					>
 						<h2 class="text-xl font-semibold text-gray-800">{category.label}</h2>
@@ -330,8 +372,19 @@
 										<div class="flex flex-wrap gap-2">
 											{#each subcategory.ingredients as ingredient (ingredient.slug)}
 												{@const usageCount = ingredientUsageCounts.get(ingredient.slug) || 0}
-												<span
-													class="inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center bg-gray-50 text-gray-700"
+												{@const filterUrl = getIngredientFilterUrl(ingredient.slug)}
+												<a
+													href={resolve(filterUrl)}
+													class="inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center transition-colors cursor-pointer border border-transparent"
+													style="background-color: color-mix(in srgb, {category.color} 4%, white); border-color: color-mix(in srgb, {category.color} 12%, transparent);"
+													on:mouseenter={(e) => {
+														e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 6%, white)`;
+														e.currentTarget.style.borderColor = `color-mix(in srgb, ${category.color} 18%, transparent)`;
+													}}
+													on:mouseleave={(e) => {
+														e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 4%, white)`;
+														e.currentTarget.style.borderColor = `color-mix(in srgb, ${category.color} 12%, transparent)`;
+													}}
 												>
 													<div class="flex items-center flex-wrap gap-x-1.5">
 														<span>{ingredient.title}</span>
@@ -342,6 +395,7 @@
 															<a
 																href={resolve(`/recipes/${ingredient.recipe.slug}`)}
 																class="text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors"
+																on:click|stopPropagation
 															>
 																See recipe
 															</a>
@@ -357,7 +411,7 @@
 															{ingredient.group}
 														</span>
 													{/if}
-												</span>
+												</a>
 											{/each}
 										</div>
 									</div>

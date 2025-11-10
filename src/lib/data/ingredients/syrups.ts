@@ -63,6 +63,7 @@ const RICH_SIMPLE_SYRUP: Ingredient = {
 export const SYRUPS: IngredientCategory = {
 	label: 'Syrups',
 	type: IngredientType.NonAlcoholic,
+	color: '#e11d48', // softer rose red (matching Alcohol Level tag)
 	subcategories: [
 		{
 			label: 'Default',

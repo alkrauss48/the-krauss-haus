@@ -43,6 +43,7 @@ const TOM_AND_JERRY_BATTER: Ingredient = {
 export const OTHER: IngredientCategory = {
 	label: 'Other',
 	type: IngredientType.NonAlcoholic,
+	color: '#6b7280', // neutral gray (complementary to existing palette)
 	subcategories: [
 		{
 			label: 'Default',

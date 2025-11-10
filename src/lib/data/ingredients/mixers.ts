@@ -39,6 +39,7 @@ const TONIC_WATER: Ingredient = {
 export const MIXERS: IngredientCategory = {
 	label: 'Mixers',
 	type: IngredientType.NonAlcoholic,
+	color: '#f59e0b', // softer amber orange (matching Technique tag)
 	subcategories: [
 		{
 			label: 'Default',

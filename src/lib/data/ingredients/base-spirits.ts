@@ -158,6 +158,7 @@ const ABSINTHE: Ingredient = {
 export const BASE_SPIRITS: IngredientCategory = {
 	label: 'Base Spirits',
 	type: IngredientType.Alcoholic,
+	color: '#a16207', // softer amber brown (matching Base Alcohol tag)
 	subcategories: [
 		{
 			label: 'Rum',

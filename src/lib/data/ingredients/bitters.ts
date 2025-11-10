@@ -37,6 +37,7 @@ const CHILI: Ingredient = {
 export const BITTERS: IngredientCategory = {
 	label: 'Bitters',
 	type: IngredientType.Alcoholic,
+	color: '#a3a3a3', // soft warm gray (matching Origin tag)
 	subcategories: [
 		{
 			label: 'Default',
