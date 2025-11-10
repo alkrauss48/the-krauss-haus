@@ -6,6 +6,7 @@
 	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
 	import { methodColors } from '$lib/enums/methods';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
+	import { getIngredientDisplayName } from '$lib/utils/ingredients';
 
 	export let cocktail: Cocktail;
 	export let bgColors: SectionColor = {
@@ -238,7 +239,14 @@
 							{#if typeof ingredient === 'string'}
 								<span class="text-gray-700">{ingredient}</span>
 							{:else}
-								<span class="text-gray-700">{ingredient.amount} {ingredient.recipe.name}</span>
+								{@const displayName = getIngredientDisplayName(ingredient)}
+								<span class="text-gray-700">
+									{#if ingredient.amount}
+										{ingredient.amount} {displayName}
+									{:else}
+										{displayName}
+									{/if}
+								</span>
 							{/if}
 						</li>
 					{/each}

@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const MARTINI: Cocktail = {
@@ -11,7 +12,21 @@ const MARTINI: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/martini.png',
 	slug: 'martini',
 	method: CocktailMethod.Stirred,
-	ingredients: ['2oz Gin', '1oz Dry vermouth', '2 dashes Orange bitters', 'Garnish: Olive'],
+	ingredients: [
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.FORDS
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BeerAndWine.DOLIN_VERMOUTH_DRY
+		},
+		{
+			amount: '2 dashes',
+			ingredient: Ingredients.Bitters.ORANGE
+		},
+		'Garnish: 3 Olives'
+	],
 	tags: [
 		Tags.BaseAlcohol.GIN,
 		Tags.BaseAlcohol.WINE,

@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const OLD_FASHIONED: Cocktail = {
 	title: 'Old Fashioned',
@@ -13,13 +13,22 @@ const OLD_FASHIONED: Cocktail = {
 	slug: 'old-fashioned',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2oz Bourbon',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.ELIJAH_CRAIG
+		},
 		{
 			amount: '.25oz',
-			recipe: DEMERARA_SYRUP
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
 		},
-		'2 dashes Black walnut bitters',
-		'Garnish: Orange twist'
+		{
+			amount: '2 dashes',
+			ingredient: Ingredients.Bitters.BLACK_WALNUT
+		},
+		{
+			label: 'Garnish: Orange twist',
+			ingredient: Ingredients.Citrus.ORANGE
+		}
 	],
 	variations: [
 		{

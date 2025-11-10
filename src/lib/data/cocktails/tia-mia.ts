@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import ORGEAT from '../recipes/orgeat';
 
 const TIA_MIA: Cocktail = {
 	title: 'Tia Mia',
@@ -13,15 +13,34 @@ const TIA_MIA: Cocktail = {
 	slug: 'tia-mia',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1oz Mezcal',
-		'1oz Appleton Estate (Jamaican rum)',
-		'.5oz Cointreau',
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.DEL_MAGUY_VIDA
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+		},
 		{
 			amount: '.5oz',
-			recipe: ORGEAT
+			ingredient: Ingredients.Liqueurs.COINTREAU
 		},
-		'.75oz Lime',
-		'Garnish: Mint spring and lime wheel'
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.ORGEAT
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			label: 'Garnish: Mint spring',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			label: 'Garnish: Lime wheel',
+			ingredient: Ingredients.Citrus.LIME
+		}
 	],
 	variations: [
 		{

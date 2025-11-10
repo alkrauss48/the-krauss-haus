@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import RICH_SIMPLE_SYRUP from '../recipes/rich-simple-syrup';
 
 const MINT_JULEP: Cocktail = {
 	title: 'Mint Julep',
@@ -13,20 +13,28 @@ const MINT_JULEP: Cocktail = {
 	slug: 'mint-julep',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2oz Bourbon',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.ELIJAH_CRAIG
+		},
 		{
 			amount: '.5oz',
-			recipe: RICH_SIMPLE_SYRUP
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
-		'6-10 leaves Mint',
-		'Garnish: Mint sprig'
+		{
+			amount: '6-10 leaves',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			label: 'Garnish: Mint sprig',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Technique.BUILT,
-
 		Tags.Origin.FOLK
 	]
 };

@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const JUNGLE_BIRD: Cocktail = {
 	title: 'Jungle Bird',
@@ -14,21 +14,29 @@ const JUNGLE_BIRD: Cocktail = {
 	slug: 'jungle-bird',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1.5oz Appleton Estate Signature (Jamaican rum)',
-		'.75oz Campari',
-		'1.5oz Pineapple juice',
-		'.5oz Lime',
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Liqueurs.CAMPARI
+		},
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.Citrus.PINEAPPLE
+		},
 		{
 			amount: '.5oz',
-			recipe: DEMERARA_SYRUP
+			ingredient: Ingredients.Citrus.LIME
 		},
-		'Garnish: Pineapple wedge'
-	],
-	variations: [
 		{
-			name: 'Funky',
-			description: 'Float .25 oz of Hamilton Pot Still Jamaican Black',
-			images: []
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
+		},
+		{
+			label: 'Garnish: Pineapple wedge',
+			ingredient: Ingredients.Citrus.PINEAPPLE
 		}
 	],
 	tags: [
@@ -36,7 +44,6 @@ const JUNGLE_BIRD: Cocktail = {
 		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.TIKI,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Origin.CLASSIC,

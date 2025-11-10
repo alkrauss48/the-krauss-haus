@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const PALOMA: Cocktail = {
@@ -12,10 +13,22 @@ const PALOMA: Cocktail = {
 	slug: 'paloma',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2 fingers (or 2oz) Blanco Tequila',
-		'(4oz) Squirt grapefruit soda',
-		'1/2 Lime (or .5oz), pressed',
-		'Garnish: Salt rim'
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.CIMARRON_BLANCO
+		},
+		{
+			amount: '4oz',
+			ingredient: Ingredients.Mixers.GRAPEFRUIT_SODA
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			label: 'Garnish: Salt rim',
+			ingredient: Ingredients.Other.SALT
+		}
 	],
 	notes: 'Typically unmeasured. Add tequila, then ice, then lime. Top with soda.',
 	tags: [

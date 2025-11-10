@@ -1,10 +1,11 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const BATANGA: Cocktail = {
 	title: 'Batanga',
-	description: 'Tequila, coca cola, lime, salt.',
+	description: 'Blanco tequila, coca cola, lime, salt.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/batanga.png',
 	thumbnailImagePath:
@@ -12,10 +13,23 @@ const BATANGA: Cocktail = {
 	slug: 'batanga',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2 fingers (or 2oz) Blanco Tequila',
-		'(4oz) Coca cola',
-		'1/2 Lime (or .5oz), pressed with shell',
-		'1 pinch (or 1 dash) salt'
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.CIMARRON_BLANCO
+		},
+		{
+			amount: '4oz',
+			ingredient: Ingredients.Mixers.COCA_COLA
+		},
+		{
+			amount: '.5oz',
+			label: 'Lime, pressed with shell',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Other.SALT
+		}
 	],
 	notes:
 		'Typically unmeasured. Add tequila, then ice, then lime (including shell). Top with soda, add salt, and stir with the knife used to cut the lime.',

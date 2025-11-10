@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const PAPER_PLANE: Cocktail = {
@@ -11,7 +12,24 @@ const PAPER_PLANE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/paper-plane.png',
 	method: CocktailMethod.Shaken,
-	ingredients: ['.75oz Bourbon', '.75oz Amaro Nonino', '.75oz Aperol', '.75oz Lemon'],
+	ingredients: [
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.EVAN_WILLIAMS_BIB
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Liqueurs.AMARO_NONINO
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Liqueurs.APEROL
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		}
+	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,

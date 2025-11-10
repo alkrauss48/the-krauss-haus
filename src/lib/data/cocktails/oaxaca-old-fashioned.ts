@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const OAXACA_OLD_FASHIONED: Cocktail = {
@@ -12,11 +13,26 @@ const OAXACA_OLD_FASHIONED: Cocktail = {
 	slug: 'oaxaca-old-fashioned',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'1.5oz Reposado tequila',
-		'.5 oz Mezcal',
-		'.25 oz Agave nectar',
-		'2 dashes Xocolatl bitters',
-		'Garnish: Smoked orange twist'
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.CIMARRON_REPOSADO
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.DEL_MAGUY_VIDA
+		},
+		{
+			amount: '.25oz',
+			ingredient: Ingredients.Syrups.AGAVE_NECTAR
+		},
+		{
+			amount: '2 dashes',
+			ingredient: Ingredients.Bitters.XOCOLATL
+		},
+		{
+			label: 'Garnish: Smoked orange twist',
+			ingredient: Ingredients.Citrus.ORANGE
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.TEQUILA,

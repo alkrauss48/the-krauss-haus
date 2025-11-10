@@ -1,9 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import FALERNUM from '../recipes/falernum';
-import GRENADINE from '../recipes/grenadine';
-import CINNAMON_SYRUP from '../recipes/cinnamon-syrup';
 
 const ZOMBIE: Cocktail = {
 	title: 'Zombie',
@@ -17,27 +15,54 @@ const ZOMBIE: Cocktail = {
 	slug: 'zombie',
 	method: CocktailMethod.FlashBlended,
 	ingredients: [
-		'1oz Appleton Estate Signature (Jamaican rum)',
-		'.5oz Probitas (Blended light rum)',
-		'.5oz Coruba (Jamaican rum)',
-		'.5oz Hamilton 151 (Overproof Demerara rum)',
-		'.5oz Planteray OFTD (Overproof Blended rum)',
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+		},
 		{
 			amount: '.5oz',
-			recipe: FALERNUM
+			ingredient: Ingredients.BaseSpirits.PROBITAS
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.CORUBA
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.HAMILTON_151
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.FALERNUM
 		},
 		{
 			amount: '1 tsp',
-			recipe: GRENADINE
+			ingredient: Ingredients.Syrups.GRENADINE
 		},
 		{
 			amount: '1 tsp',
-			recipe: CINNAMON_SYRUP
+			ingredient: Ingredients.Syrups.CINNAMON_SYRUP
 		},
-		'2 tsp Grapefruit',
-		'.75oz Lime',
-		'1 dash Herbstura',
-		'Garnish: Mint sprig'
+		{
+			amount: '2 tsp',
+			ingredient: Ingredients.Citrus.GRAPEFRUIT
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Bitters.HERBSTURA
+		},
+		{
+			label: 'Garnish: Mint sprig',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
@@ -46,7 +71,6 @@ const ZOMBIE: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.FLASH_BLENDED,
-
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

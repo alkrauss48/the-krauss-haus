@@ -5,8 +5,10 @@
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import { allIngredientCategories } from '$lib/data/all-ingredients';
+	import { allCocktails } from '$lib/data/all-cocktails';
 	import { IngredientType } from '$lib/enums/ingredientType';
 	import type { IngredientCategory, IngredientSubcategory } from '$lib/types/ingredients';
+	import { getIngredientUsageCounts } from '$lib/utils/ingredients';
 	import { resolve } from '$app/paths';
 
 	let selectedType: IngredientType | 'homemade' | null = null;
@@ -109,7 +111,9 @@
 					const filteredSubcategories = category.subcategories
 						.map((subcategory) => ({
 							...subcategory,
-							ingredients: subcategory.ingredients.filter((ingredient) => ingredient.recipe !== undefined)
+							ingredients: subcategory.ingredients.filter(
+								(ingredient) => ingredient.recipe !== undefined
+							)
 						}))
 						.filter((subcategory) => subcategory.ingredients.length > 0);
 
@@ -130,6 +134,9 @@
 
 	// Then filter by search term
 	$: filteredCategories = filterCategoriesBySearch(typeFilteredCategories, searchTerm);
+
+	// Calculate ingredient usage counts (computed once)
+	const ingredientUsageCounts = getIngredientUsageCounts(allCocktails);
 
 	// Track previous search term to detect when search is cleared
 	let previousSearchTerm = '';
@@ -322,11 +329,15 @@
 										{/if}
 										<div class="flex flex-wrap gap-2">
 											{#each subcategory.ingredients as ingredient (ingredient.slug)}
+												{@const usageCount = ingredientUsageCounts.get(ingredient.slug) || 0}
 												<span
 													class="inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center bg-gray-50 text-gray-700"
 												>
 													<div class="flex items-center flex-wrap gap-x-1.5">
 														<span>{ingredient.title}</span>
+														{#if usageCount > 0}
+															<span class="text-xs text-gray-400 font-normal">({usageCount})</span>
+														{/if}
 														{#if ingredient.recipe}
 															<a
 																href={resolve(`/recipes/${ingredient.recipe.slug}`)}

@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const DIVISION_BELL: Cocktail = {
@@ -12,11 +13,26 @@ const DIVISION_BELL: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/division-bell.png',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1.5oz Mezcal',
-		'.75oz Aperol',
-		'.5oz Maraschino liqueur',
-		'.75oz Lime',
-		'Garnish: Grapefruit twist'
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.DEL_MAGUY_VIDA
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Liqueurs.APEROL
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.MARASCHINO_LIQUEUER
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			label: 'Garnish: Grapefruit twist',
+			ingredient: Ingredients.Citrus.GRAPEFRUIT
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.MEZCAL,

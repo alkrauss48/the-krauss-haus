@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import GRENADINE from '../recipes/grenadine';
 
 const SINGAPORE_SLING: Cocktail = {
 	title: 'Singapore Sling',
@@ -15,18 +15,43 @@ const SINGAPORE_SLING: Cocktail = {
 	slug: 'singapore-sling',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1.5oz Gin',
-		'.5oz Cherry Heering',
-		'.5oz Benedictine',
-		'.5oz Cointreau',
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.FORDS
+		},
 		{
 			amount: '.5oz',
-			recipe: GRENADINE
+			ingredient: Ingredients.Liqueurs.CHERRY_HEERING
 		},
-		'3oz Pineapple juice',
-		'.75oz Lime juice',
-		'3 dashes Angostura bitters',
-		'Garnish: Pineapple wedge and maraschino cherry'
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.BENEDICTINE
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.COINTREAU
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.GRENADINE
+		},
+		{
+			amount: '3oz',
+			ingredient: Ingredients.Citrus.PINEAPPLE
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '3 dashes',
+			ingredient: Ingredients.Bitters.ANGOSTURA
+		},
+		'Garnish: Pineapple wedge',
+		{
+			label: 'Garnish: Maraschino cherry',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.GIN,
@@ -34,7 +59,6 @@ const SINGAPORE_SLING: Cocktail = {
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
 		Tags.AlcoholLevel.HIGH

@@ -6,6 +6,10 @@ const FULLERS_LONDON_PORTER: Ingredient = {
 	title: "Fuller's London Porter",
 	slug: 'fullers-london-porter'
 };
+const MILLER_HIGH_LIFE: Ingredient = {
+	title: 'Miller High Life',
+	slug: 'miller-high-life'
+};
 const TECATE_MEXICAN_LAGER: Ingredient = {
 	title: 'Tecate Mexican Lager',
 	slug: 'tecate-mexican-lager'
@@ -36,6 +40,10 @@ const TEMPRANILLO: Ingredient = {
 };
 
 // Sparkling
+const CHAMPAGNE: Ingredient = {
+	title: 'Champagne',
+	slug: 'champagne'
+};
 const PROSECCO: Ingredient = {
 	title: 'Prosecco',
 	slug: 'prosecco'
@@ -47,7 +55,12 @@ export const BEER_AND_WINE: IngredientCategory = {
 	subcategories: [
 		{
 			label: 'Beer',
-			ingredients: [FULLERS_LONDON_PORTER, TECATE_MEXICAN_LAGER, WARSTEINER_PILSENER]
+			ingredients: [
+				FULLERS_LONDON_PORTER,
+				MILLER_HIGH_LIFE,
+				TECATE_MEXICAN_LAGER,
+				WARSTEINER_PILSENER
+			]
 		},
 		{
 			label: 'Wine',
@@ -55,7 +68,7 @@ export const BEER_AND_WINE: IngredientCategory = {
 		},
 		{
 			label: 'Sparkling',
-			ingredients: [PROSECCO]
+			ingredients: [CHAMPAGNE, PROSECCO]
 		}
 	]
 };
@@ -63,6 +76,7 @@ export const BEER_AND_WINE: IngredientCategory = {
 export const INGREDIENTS = {
 	// Beer
 	FULLERS_LONDON_PORTER,
+	MILLER_HIGH_LIFE,
 	TECATE_MEXICAN_LAGER,
 	WARSTEINER_PILSENER,
 
@@ -73,5 +87,6 @@ export const INGREDIENTS = {
 	TEMPRANILLO,
 
 	// Sparkling
+	CHAMPAGNE,
 	PROSECCO
 };

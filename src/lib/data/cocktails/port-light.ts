@@ -1,8 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import HONEY_SYRUP from '../recipes/honey-syrup';
-import PASSIONFRUIT_SYRUP from '../recipes/passionfruit-syrup';
 
 const PORT_LIGHT: Cocktail = {
 	title: 'Port Light',
@@ -15,25 +14,41 @@ const PORT_LIGHT: Cocktail = {
 	slug: 'port-light',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'2oz Bourbon',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.EVAN_WILLIAMS_BIB
+		},
 		{
 			amount: '.5oz',
-			recipe: HONEY_SYRUP
+			ingredient: Ingredients.Syrups.HONEY_SYRUP
 		},
-		'.75oz Lemon',
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
 		{
 			amount: '.5oz',
-			recipe: PASSIONFRUIT_SYRUP
+			ingredient: Ingredients.Syrups.PASSIONFRUIT_SYRUP
 		},
-		'1 Egg white',
-		'Garnish: Mint spring, pineapple square, and maraschino cherry'
+		{
+			label: '1 Egg white',
+			ingredient: Ingredients.Other.EGG
+		},
+		{
+			label: 'Garnish: Mint spring',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		'Garnish: Pineapple square',
+		{
+			label: 'Garnish: Maraschino cherry',
+			ingredient: Ingredients.Other.MARASCHINO_CHERRY
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

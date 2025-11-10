@@ -1,8 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import ORGEAT from '../recipes/orgeat';
-import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const MAI_TAI: Cocktail = {
 	title: 'Mai Tai',
@@ -15,27 +14,48 @@ const MAI_TAI: Cocktail = {
 	slug: 'mai-tai',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1oz Smith and Cross (Overproof Jamaican rum)',
-		'.5oz Leblon (Cachaca)',
-		'.5oz Planteray OFTD (Overproof blended rum)',
-		'.5oz Pierre Ferrand Dry Curaçao',
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.SMITH_AND_CROSS
+		},
 		{
 			amount: '.5oz',
-			recipe: ORGEAT
+			ingredient: Ingredients.BaseSpirits.LEBLON
 		},
-		'1oz Lime',
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.DRY_CURACAO
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.ORGEAT
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
 		{
 			amount: '.25oz',
-			recipe: DEMERARA_SYRUP
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
 		},
-		'Garnish: Mint sprig and lime shell'
+		{
+			label: 'Garnish: Mint sprig',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			label: 'Garnish: Lime shell',
+			ingredient: Ingredients.Citrus.LIME
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

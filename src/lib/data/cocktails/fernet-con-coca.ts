@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const FERNET_CON_COCA: Cocktail = {
@@ -11,7 +12,16 @@ const FERNET_CON_COCA: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/fernet-con-coca.png',
 	slug: 'fernet-con-coca',
 	method: CocktailMethod.Built,
-	ingredients: ['30% Fernet branca', '70% Coca cola'],
+	ingredients: [
+		{
+			label: '30% Fernet branca',
+			ingredient: Ingredients.Liqueurs.FERNET_BRANCA
+		},
+		{
+			label: '70% Coca cola',
+			ingredient: Ingredients.Mixers.COCA_COLA
+		}
+	],
 	notes:
 		'Eye-ball the fernet and coca cola amounts. Fernet first, over ice. No need to stir. There should be foam from the coca cola.',
 	tags: [

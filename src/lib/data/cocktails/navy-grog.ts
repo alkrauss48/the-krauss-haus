@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import HONEY_SYRUP from '../recipes/honey-syrup';
 
 const NAVY_GROG: Cocktail = {
 	title: 'Navy Grog',
@@ -14,17 +14,38 @@ const NAVY_GROG: Cocktail = {
 	slug: 'navy-grog',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1oz Coruba (Dark Jamaican rum)',
-		'1oz Hamilton 86 (Demerara rum)',
-		'1oz Planteray 3 Stars (Blended light rum)',
 		{
 			amount: '1oz',
-			recipe: HONEY_SYRUP
+			ingredient: Ingredients.BaseSpirits.CORUBA
 		},
-		'.75oz Lime',
-		'.75oz Grapefruit',
-		'1oz Soda water',
-		'Garnish: Mint sprig'
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.HAMILTON_86
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Syrups.HONEY_SYRUP
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.GRAPEFRUIT
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Mixers.SODA_WATER
+		},
+		{
+			label: 'Garnish: Mint sprig',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		}
 	],
 	notes:
 		'One of the only classic tiki cocktails not served over crushed ice. Shake all ingredients besides soda water with ice. Strain into a glass over ice block. Top with soda water and garnish with mint sprig.',

@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import HONEY_GINGER_SYRUP from '../recipes/honey-ginger-syrup';
 
 const PENICILLIN: Cocktail = {
 	title: 'Penicillin',
@@ -13,13 +13,22 @@ const PENICILLIN: Cocktail = {
 	slug: 'penicillin',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'2oz Blended scotch',
-		'.25oz Laphroaig',
+		{
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.MONKEY_SHOULDER
+		},
+		{
+			amount: '.25oz',
+			ingredient: Ingredients.BaseSpirits.LAPHROIG
+		},
 		{
 			amount: '.75oz',
-			recipe: HONEY_GINGER_SYRUP
+			ingredient: Ingredients.Syrups.HONEY_GINGER_SYRUP
 		},
-		'.75oz Lemon',
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
 		'Garnish: Candied ginger'
 	],
 	tags: [

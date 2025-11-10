@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const PIMMS_CUP: Cocktail = {
@@ -12,9 +13,26 @@ const PIMMS_CUP: Cocktail = {
 	slug: 'pimms-cup',
 	method: CocktailMethod.Built,
 	ingredients: [
-		"2oz Pimm's #1",
-		'4oz sparkling lemonade',
-		'Garnish: orange, mint sprig, strawberry, cucumber'
+		{
+			amount: '2oz',
+			ingredient: Ingredients.Liqueurs.PIMMS
+		},
+		{
+			amount: '4oz',
+			label: 'Sparkling lemonade',
+			ingredient: Ingredients.Mixers.SANPELLEGRINO_LIMONATA
+		},
+
+		{
+			label: 'Garnish: Orange',
+			ingredient: Ingredients.Citrus.ORANGE
+		},
+		{
+			label: 'Garnish: Mint sprig',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		'Garnish: Strawberry',
+		'Garnish: Cucumber'
 	],
 	tags: [
 		Tags.BaseAlcohol.GIN,

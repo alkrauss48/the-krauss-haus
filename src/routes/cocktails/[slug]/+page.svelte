@@ -7,6 +7,7 @@
 	import { fade, fly } from 'svelte/transition';
 
 	import type { Tag } from '$lib/types/tags';
+	import { getIngredientDisplayName } from '$lib/utils/ingredients';
 
 	// Import menu data to check which menus contain this cocktail
 	import {
@@ -130,14 +131,23 @@
 												{#if typeof ingredient === 'string'}
 													<span class="text-gray-700">{ingredient}</span>
 												{:else}
-													<a
-														href={resolve(`/recipes/${ingredient.recipe.slug}`)}
-														class="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-md transition-colors duration-200 hover:text-blue-800"
-													>
-														<span>{ingredient.amount}</span>
-														<div class="w-px h-4 bg-blue-300 mx-2"></div>
-														<span>{ingredient.recipe.name}</span>
-													</a>
+													{@const displayName = getIngredientDisplayName(ingredient)}
+													{@const recipe = ingredient.ingredient.recipe}
+													<span class="text-gray-700">
+														{#if ingredient.amount}
+															{ingredient.amount} {displayName}
+														{:else}
+															{displayName}
+														{/if}
+														{#if recipe}
+															<a
+																href={resolve(`/recipes/${recipe.slug}`)}
+																class="text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors ml-1.5"
+															>
+																See recipe
+															</a>
+														{/if}
+													</span>
 												{/if}
 											</li>
 										{/each}

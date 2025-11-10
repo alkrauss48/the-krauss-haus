@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const SIDECAR: Cocktail = {
@@ -12,11 +13,26 @@ const SIDECAR: Cocktail = {
 	slug: 'sidecar',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1.5oz Cognac',
-		'1oz Pierre Ferrand Dry Curaçao',
-		'.75oz Lemon',
-		'1 dash Orange bitters',
-		'Garnish: Sugar rim'
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.ST_REMY_VSOP
+		},
+		{
+			amount: '1oz',
+			ingredient: Ingredients.Liqueurs.DRY_CURACAO
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Bitters.ORANGE
+		},
+		{
+			label: 'Garnish: Sugar rim',
+			ingredient: Ingredients.Other.SUGAR
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.BRANDY,

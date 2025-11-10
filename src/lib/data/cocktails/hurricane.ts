@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import FASSIONOLA from '../recipes/fassionola';
 
 const HURRICANE: Cocktail = {
 	title: 'Hurricane',
@@ -14,22 +14,36 @@ const HURRICANE: Cocktail = {
 	slug: 'hurricane',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'.75oz Coruba (Jamaican rum)',
-		'.75oz Appleton Estate Signature (Jamaican rum)',
-		'.5oz Probitas (Blended light rum)',
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.CORUBA
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.PROBITAS
+		},
 		{
 			amount: '1oz',
-			recipe: FASSIONOLA
+			ingredient: Ingredients.Syrups.FASSIONOLA
 		},
-		'.75oz Lemon',
-		'Garnish: Lemon wheel'
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			label: 'Garnish: Lemon wheel',
+			ingredient: Ingredients.Citrus.LEMON
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC
 	]

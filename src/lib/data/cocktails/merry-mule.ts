@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import CINNAMON_SYRUP from '../recipes/cinnamon-syrup';
 
 const MERRY_MULE: Cocktail = {
 	title: 'Merry Mule',
@@ -14,21 +14,34 @@ const MERRY_MULE: Cocktail = {
 	slug: 'merry-mule',
 	method: CocktailMethod.Built,
 	ingredients: [
-		'2oz vodka',
 		{
-			amount: '.5 oz',
-			recipe: CINNAMON_SYRUP
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.MONOPOLOWA
 		},
-		'1/2 Lime',
-		'4oz Ginger beer',
-		'Garnish: Cinnamon stick and apple slices'
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.CINNAMON_SYRUP
+		},
+		{
+			amount: '.5oz',
+			label: 'Lime',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '4oz',
+			ingredient: Ingredients.Mixers.GINGER_BEER
+		},
+		{
+			label: 'Garnish: Cinnamon stick',
+			ingredient: Ingredients.HerbsAndSpices.CINNAMON
+		},
+		'Garnish: Apple slices'
 	],
 	tags: [
 		Tags.BaseAlcohol.VODKA,
 		Tags.FlavorProfile.SPICED,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,
-
 		Tags.Style.HIGHBALL,
 		Tags.Origin.ORIGINAL
 	]

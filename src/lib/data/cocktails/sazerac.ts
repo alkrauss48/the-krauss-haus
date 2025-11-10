@@ -1,7 +1,7 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const SAZERAC: Cocktail = {
 	title: 'Sazerac',
@@ -13,23 +13,40 @@ const SAZERAC: Cocktail = {
 	slug: 'sazerac',
 	method: CocktailMethod.Stirred,
 	ingredients: [
-		'1.5oz Rye whiskey',
-		'.5oz Cognac',
-		'Absinthe rinse',
-		"4 dashes Peychaud's bitters",
-		'1 dash Angostura bitters',
+		{
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.RITTENHOUSE
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.ST_REMY_VSOP
+		},
+		{
+			label: 'Absinthe rinse',
+			ingredient: Ingredients.BaseSpirits.ABSINTHE
+		},
+		{
+			amount: '4 dashes',
+			ingredient: Ingredients.Bitters.PEYCHAUDS
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Bitters.ANGOSTURA
+		},
 		{
 			amount: '.25oz',
-			recipe: DEMERARA_SYRUP
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
 		},
-		'Garnish: Lemon twist'
+		{
+			label: 'Garnish: Lemon twist',
+			ingredient: Ingredients.Citrus.LEMON
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
-
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC
 	]

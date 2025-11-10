@@ -1,5 +1,6 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 
 const VIEUX_CARRE: Cocktail = {
@@ -13,13 +14,34 @@ const VIEUX_CARRE: Cocktail = {
 	slug: 'vieux-carre',
 	method: CocktailMethod.Stirred,
 	ingredients: [
-		'.75oz Rye whiskey',
-		'.75oz Cognac',
-		'.75oz Sweet vermouth',
-		'1tsp Benedictine',
-		'2 dashes Angostura bitters',
-		"2 dashes Peychaud's bitters",
-		'Garnish: Lemon twist'
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.RITTENHOUSE
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.ST_REMY_VSOP
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.BeerAndWine.COCCHI_VERMOUTH_DI_TORINO
+		},
+		{
+			amount: '1 tsp',
+			ingredient: Ingredients.Liqueurs.BENEDICTINE
+		},
+		{
+			amount: '2 dashes',
+			ingredient: Ingredients.Bitters.ANGOSTURA
+		},
+		{
+			amount: '2 dashes',
+			ingredient: Ingredients.Bitters.PEYCHAUDS
+		},
+		{
+			label: 'Garnish: Lemon twist',
+			ingredient: Ingredients.Citrus.LEMON
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,

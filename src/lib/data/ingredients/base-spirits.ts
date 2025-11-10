@@ -10,9 +10,9 @@ const APPLETON_ESTATE_SIGNATURE: Ingredient = {
 	slug: 'appleton-estate-signature',
 	group: 'Jamaican Rum'
 };
-const CLEMENT_BARREL_SELECT: Ingredient = {
-	title: 'Clement Barrel Select',
-	slug: 'clement-barrel-select',
+const CLEMENT_SELECT_BARREL: Ingredient = {
+	title: 'Clement Select Barrel',
+	slug: 'clement-select-barrel',
 	group: 'Élevé sous bois Rhum Agricole'
 };
 const CORUBA: Ingredient = {
@@ -163,7 +163,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 			label: 'Rum',
 			ingredients: [
 				APPLETON_ESTATE_SIGNATURE,
-				CLEMENT_BARREL_SELECT,
+				CLEMENT_SELECT_BARREL,
 				CORUBA,
 				HAMILTON_151,
 				HAMILTON_86,
@@ -201,7 +201,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 export const INGREDIENTS = {
 	// Rum
 	APPLETON_ESTATE_SIGNATURE,
-	CLEMENT_BARREL_SELECT,
+	CLEMENT_SELECT_BARREL,
 	CORUBA,
 	HAMILTON_151,
 	HAMILTON_86,

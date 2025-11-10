@@ -1,12 +1,13 @@
 import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
+import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
-import DEMERARA_SYRUP from '../recipes/demerara-syrup';
 
 const ANCIENT_MARINER: Cocktail = {
 	title: 'Ancient Mariner',
 	subtitle: 'A complex blend of spice and citrus',
-	description: 'Blended rum, demerara rum, allspice dram, lime, grapefruit, demerara syrup.',
+	description:
+		'Demerara rum, blended light rum, blanc rhum agricole, allspice dram, lime, grapefruit, demerara syrup, mint.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/ancient-mariner.png',
 	thumbnailImagePath:
@@ -14,23 +15,48 @@ const ANCIENT_MARINER: Cocktail = {
 	slug: 'ancient-mariner',
 	method: CocktailMethod.Shaken,
 	ingredients: [
-		'1oz Probitas (Blended light rum)',
-		'1oz Hamilton 86 (Demerara rum)',
-		'.25oz Allspice dram',
+		{
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.HAMILTON_86
+		},
 		{
 			amount: '.5oz',
-			recipe: DEMERARA_SYRUP
+			ingredient: Ingredients.BaseSpirits.PROBITAS
 		},
-		'.5oz Lime',
-		'.5oz Grapefruit',
-		'Garnish: Mint sprig and lime wedge'
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.NEISSON_BLANC
+		},
+		{
+			amount: '.25oz',
+			ingredient: Ingredients.Liqueurs.ALLSPICE_DRAM
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.GRAPEFRUIT
+		},
+		{
+			label: 'Garnish: Mint Sprig',
+			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			label: 'Garnish: Lime wedge',
+			ingredient: Ingredients.Citrus.LIME
+		}
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.TIKI,
 		Tags.Origin.MODERN
 	]
