@@ -5,37 +5,9 @@
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { resolve } from '$app/paths';
 	import { fade, fly } from 'svelte/transition';
-	import { allCocktails } from '$lib/data/all-cocktails';
-	import { cocktailUsesRecipe } from '$lib/utils/recipe-cocktail';
-	import { syrups, infusions, other } from '$lib/data/all-recipes';
 
 	export let data: PageData;
 	const { recipe } = data;
-
-	// Generate URL for cocktails page with recipe filter
-	function getRecipeFilterUrl(): string {
-		// Determine which category this recipe belongs to
-		const isSyrup = syrups.some((s) => s.slug === recipe.slug);
-		const isInfusion = infusions.some((i) => i.slug === recipe.slug);
-		const isOther = other.some((o) => o.slug === recipe.slug);
-
-		if (isSyrup) {
-			return `/cocktails?homemade-syrups=${encodeURIComponent(recipe.name)}`;
-		} else if (isInfusion) {
-			return `/cocktails?homemade-infusions=${encodeURIComponent(recipe.name)}`;
-		} else if (isOther) {
-			return `/cocktails?other=${encodeURIComponent(recipe.name)}`;
-		}
-
-		return '/cocktails';
-	}
-
-	// Count cocktails that use this recipe
-	function getCocktailCount(): number {
-		return allCocktails.filter((cocktail) => cocktailUsesRecipe(cocktail, recipe)).length;
-	}
-
-	const cocktailCount = getCocktailCount();
 </script>
 
 <svelte:head>
@@ -74,77 +46,18 @@
 					{/if}
 				</header>
 
-				<!-- Cocktails Section (Mobile - Above Ingredients) -->
-				{#if cocktailCount > 0}
-					<section class="mb-8 block lg:hidden">
-						<div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
-							<p class="text-sm text-gray-600 mb-3">
-								This recipe is used in {cocktailCount} cocktail{cocktailCount === 1 ? '' : 's'}.
-							</p>
-							<a
-								href={resolve(getRecipeFilterUrl())}
-								class="inline-flex items-center px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200 text-sm gap-2 w-full justify-center"
-							>
-								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-									/>
-								</svg>
-								View Cocktails
-							</a>
-						</div>
-					</section>
-				{/if}
-
 				<!-- Ingredients Section -->
 				{#if recipe.ingredients && recipe.ingredients.length > 0}
 					<section class="mb-8">
-						<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-							<!-- Ingredients (Left/Main) -->
-							<div class="lg:col-span-2">
-								<h2 class="text-2xl font-bold text-gray-800 mb-4">Ingredients</h2>
-								<ul class="space-y-2">
-									{#each recipe.ingredients as ingredient (ingredient)}
-										<li class="flex items-start">
-											<span class="text-amber-600 mr-2 mt-1">•</span>
-											<span class="text-gray-700">{ingredient}</span>
-										</li>
-									{/each}
-								</ul>
-							</div>
-
-							<!-- Cocktails Sidebar (Desktop - Right Side) -->
-							<div class="lg:col-span-1 hidden lg:block">
-								<!-- View Cocktails Button -->
-								{#if cocktailCount > 0}
-									<div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
-										<h3 class="text-sm font-semibold text-gray-800 mb-2">Used In Cocktails</h3>
-										<p class="text-sm text-gray-600 mb-3">
-											This recipe is used in {cocktailCount} cocktail{cocktailCount === 1
-												? ''
-												: 's'}.
-										</p>
-										<a
-											href={resolve(getRecipeFilterUrl())}
-											class="inline-flex items-center px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200 text-sm gap-2 w-full justify-center"
-										>
-											<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-												/>
-											</svg>
-											View Cocktails ({cocktailCount})
-										</a>
-									</div>
-								{/if}
-							</div>
-						</div>
+						<h2 class="text-2xl font-bold text-gray-800 mb-4">Ingredients</h2>
+						<ul class="space-y-2">
+							{#each recipe.ingredients as ingredient (ingredient)}
+								<li class="flex items-start">
+									<span class="text-amber-600 mr-2 mt-1">•</span>
+									<span class="text-gray-700">{ingredient}</span>
+								</li>
+							{/each}
+						</ul>
 					</section>
 				{/if}
 

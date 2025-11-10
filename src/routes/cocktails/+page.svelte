@@ -10,19 +10,15 @@
 	import { page } from '$app/stores';
 	import { allTagCategories } from '$lib/data/all-tags';
 	import type { Tag } from '$lib/types/tags';
-	import type { Recipe } from '$lib/types/recipes';
-	import { filterCocktailsByRecipes } from '$lib/utils/recipe-cocktail';
-	import { syrups, infusions, other } from '$lib/data/all-recipes';
 
 	export let data: PageData;
 	const { cocktails } = data;
 
 	let searchTerm = '';
 	let selectedTags: Tag[] = data.selectedTags || [];
-	let selectedRecipes: Recipe[] = data.selectedRecipes || [];
 	let isFilterSidebarOpen = false;
 
-	// Filter cocktails based on search term, selected tags, and selected recipes
+	// Filter cocktails based on search term and selected tags
 	$: filteredCocktails = cocktails.filter((cocktail) => {
 		// First filter by search term (search both title and description)
 		const matchesSearch =
@@ -36,12 +32,7 @@
 				(cocktail.tags || []).some((cocktailTag) => cocktailTag.label === selectedTag.label)
 			);
 
-		// Filter by recipes (intersection - all selected recipes must be present)
-		const matchesRecipes =
-			selectedRecipes.length === 0 ||
-			filterCocktailsByRecipes([cocktail], selectedRecipes).length > 0;
-
-		return matchesSearch && matchesTags && matchesRecipes;
+		return matchesSearch && matchesTags;
 	});
 
 	function navigateToCocktail(slug: string): void {
@@ -55,10 +46,9 @@
 		}
 	}
 
-	// Handle filter changes (tags and recipes) and update URL
-	function handleFiltersChanged(event: CustomEvent<{ tags: Tag[]; recipes: Recipe[] }>): void {
+	// Handle filter changes (tags) and update URL
+	function handleFiltersChanged(event: CustomEvent<{ tags: Tag[] }>): void {
 		selectedTags = event.detail.tags;
-		selectedRecipes = event.detail.recipes;
 		updateURL();
 	}
 
@@ -72,7 +62,7 @@
 		return categoryLabel.toLowerCase().replace(/\s+/g, '-');
 	}
 
-	// Update URL with current tag and recipe selection using category-based structure
+	// Update URL with current tag selection using category-based structure
 	function updateURL(): void {
 		const url = new URL($page.url);
 
@@ -81,10 +71,6 @@
 			const categoryKey = categoryToUrlKey(category.label);
 			url.searchParams.delete(categoryKey);
 		});
-
-		// Clear recipe-related params (using same keys as old tag system)
-		url.searchParams.delete('homemade-syrups');
-		url.searchParams.delete('homemade-infusions');
 
 		// Group selected tags by category
 		const tagsByCategory: Record<string, Tag[]> = {};
@@ -103,32 +89,6 @@
 			url.searchParams.set(categoryKey, tagLabels);
 		});
 
-		// Add recipe params if any are selected
-		if (selectedRecipes.length > 0) {
-			const syrupNames: string[] = [];
-			const infusionNames: string[] = [];
-			const otherNames: string[] = [];
-
-			selectedRecipes.forEach((recipe) => {
-				if (syrups.some((s) => s.slug === recipe.slug)) {
-					syrupNames.push(recipe.name);
-				} else if (infusions.some((i) => i.slug === recipe.slug)) {
-					infusionNames.push(recipe.name);
-				} else if (other.some((o) => o.slug === recipe.slug)) {
-					otherNames.push(recipe.name);
-				}
-			});
-
-			if (syrupNames.length > 0) {
-				url.searchParams.set('homemade-syrups', syrupNames.join(','));
-			}
-			if (infusionNames.length > 0) {
-				url.searchParams.set('homemade-infusions', infusionNames.join(','));
-			}
-			if (otherNames.length > 0) {
-				url.searchParams.set('other', otherNames.join(','));
-			}
-		}
 		goto(resolve(`${url.pathname}${url.search}`), { replaceState: true, noScroll: true });
 	}
 </script>
@@ -191,7 +151,7 @@
 					<button
 						on:click={toggleFilterSidebar}
 						class="cursor-pointer px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 relative sm:w-auto w-full"
-						class:bg-amber-700={selectedTags.length > 0 || selectedRecipes.length > 0}
+						class:bg-amber-700={selectedTags.length > 0}
 					>
 						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path
@@ -203,11 +163,11 @@
 						</svg>
 						<span class="hidden sm:inline">Filters</span>
 						<span class="sm:hidden">Filter Cocktails</span>
-						{#if selectedTags.length > 0 || selectedRecipes.length > 0}
+						{#if selectedTags.length > 0}
 							<span
 								class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
 							>
-								{selectedTags.length + selectedRecipes.length}
+								{selectedTags.length}
 							</span>
 						{/if}
 					</button>
@@ -216,7 +176,7 @@
 		</div>
 
 		<!-- Active Filters Summary (visible when filters are applied) -->
-		{#if selectedTags.length > 0 || selectedRecipes.length > 0}
+		{#if selectedTags.length > 0}
 			<div class="mb-6" in:fly={{ y: 20, duration: 400, delay: 700 }}>
 				<div class="max-w-4xl mx-auto">
 					<div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
@@ -225,7 +185,6 @@
 							<button
 								on:click={() => {
 									selectedTags = [];
-									selectedRecipes = [];
 									updateURL();
 								}}
 								class="text-xs text-red-600 hover:text-red-700 font-medium cursor-pointer"
@@ -253,28 +212,6 @@
 									</svg>
 								</button>
 							{/each}
-							{#each selectedRecipes as recipe (recipe.slug)}
-								{@const isSyrup = syrups.some((s) => s.slug === recipe.slug)}
-								{@const isInfusion = infusions.some((i) => i.slug === recipe.slug)}
-								{@const categoryColor = isSyrup ? '#eab308' : isInfusion ? '#8b5cf6' : '#6b7280'}
-								<button
-									class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full text-white hover:opacity-80 transition-opacity cursor-pointer"
-									style="background-color: {categoryColor};"
-									on:click={() => {
-										selectedRecipes = selectedRecipes.filter((r) => r.slug !== recipe.slug);
-										updateURL();
-									}}
-								>
-									{recipe.name}
-									<svg class="ml-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-										<path
-											fill-rule="evenodd"
-											d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-											clip-rule="evenodd"
-										/>
-									</svg>
-								</button>
-							{/each}
 						</div>
 					</div>
 				</div>
@@ -285,7 +222,6 @@
 		<TagFilter
 			{cocktails}
 			{selectedTags}
-			{selectedRecipes}
 			{filteredCocktails}
 			isOpen={isFilterSidebarOpen}
 			on:filtersChanged={handleFiltersChanged}
@@ -294,7 +230,7 @@
 
 		<!-- Results Count -->
 		<div class="mb-6 text-center text-gray-600" in:fly={{ y: 20, duration: 400, delay: 900 }}>
-			{#if searchTerm || selectedTags.length > 0 || selectedRecipes.length > 0}
+			{#if searchTerm || selectedTags.length > 0}
 				Showing {filteredCocktails.length} of {cocktails.length} cocktails
 				{#if searchTerm}
 					matching "{searchTerm}"

@@ -7,11 +7,6 @@ export interface Recipe {
 	notes?: string;
 }
 
-export interface RecipeIngredient {
-	amount: string;
-	recipe: Recipe;
-}
-
 /**
  * Recipe categories for filtering
  */

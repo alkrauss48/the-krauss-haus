@@ -135,8 +135,8 @@
 	// Then filter by search term
 	$: filteredCategories = filterCategoriesBySearch(typeFilteredCategories, searchTerm);
 
-	// Calculate ingredient usage counts (computed once, reactive to cocktails)
-	$: ingredientUsageCounts = getIngredientUsageCounts(allCocktails);
+	// Calculate ingredient usage counts (computed once)
+	const ingredientUsageCounts = getIngredientUsageCounts(allCocktails);
 
 	// Track previous search term to detect when search is cleared
 	let previousSearchTerm = '';
