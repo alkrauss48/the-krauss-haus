@@ -204,11 +204,6 @@
 			</div>
 		</div>
 
-		<!-- Results summary -->
-		<div class="text-sm text-gray-600 mb-3">
-			{filteredCocktails.length} of {cocktails.length} cocktails
-		</div>
-
 		<!-- Clear all button -->
 		{#if (filterMode === 'tags' && selectedTags.length > 0) || (filterMode === 'ingredients' && selectedIngredients.length > 0)}
 			<button
@@ -223,17 +218,19 @@
 
 		<!-- Logic Mode Selector -->
 		<div class="mt-3 pt-3 border-t border-gray-200">
-			<label class="block text-xs font-medium text-gray-700 mb-2">Filter Logic</label>
-			<select
-				bind:value={logicMode}
-				on:change={() => dispatch('logicModeChanged', logicMode)}
-				class="w-full px-2 py-1.5 text-xs border border-gray-300 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent cursor-pointer"
-			>
-				<option value="AND">Match ALL selected filters</option>
-				<option value="OR">Match ANY selected filter</option>
-				<option value="NOT AND">Exclude ALL selected filters</option>
-				<option value="NOT OR">Exclude ANY selected filter</option>
-			</select>
+			<div class="flex items-center gap-2">
+				<label class="text-xs font-medium text-gray-700 whitespace-nowrap">Filter Logic</label>
+				<select
+					bind:value={logicMode}
+					on:change={() => dispatch('logicModeChanged', logicMode)}
+					class="flex-1 px-2 py-1.5 text-xs border border-gray-300 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent cursor-pointer"
+				>
+					<option value="AND">Match ALL selected filters</option>
+					<option value="OR">Match ANY selected filter</option>
+					<option value="NOT AND">Exclude ALL selected filters</option>
+					<option value="NOT OR">Exclude ANY selected filter</option>
+				</select>
+			</div>
 		</div>
 	</div>
 
