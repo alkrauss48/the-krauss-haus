@@ -61,8 +61,9 @@
 	}
 
 	// Convert category label to URL-friendly key
+	// Handles special characters like & by converting to "and"
 	function categoryToUrlKey(categoryLabel: string): string {
-		return categoryLabel.toLowerCase().replace(/\s+/g, '-');
+		return categoryLabel.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-');
 	}
 
 	// Generate URL for ingredient filter on cocktails page
