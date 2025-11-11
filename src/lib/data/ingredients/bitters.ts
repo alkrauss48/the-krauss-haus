@@ -11,7 +11,7 @@ const PEYCHAUDS: Ingredient = {
 };
 const ORANGE: Ingredient = {
 	title: 'Orange',
-	slug: 'orange'
+	slug: 'orange-bitters'
 };
 const CELERY: Ingredient = {
 	title: 'Celery',
