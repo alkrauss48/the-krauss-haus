@@ -7,7 +7,7 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 	title: 'Three Dots and a Dash',
 	subtitle: 'A celebration of rum and spice',
 	description:
-		'Aged rhum agricole, blended rum,demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
+		'Aged rhum agricole, blended rum, demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/three-dots-and-a-dash.png',
 	thumbnailImagePath:
