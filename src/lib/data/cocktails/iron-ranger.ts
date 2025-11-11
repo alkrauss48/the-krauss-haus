@@ -5,7 +5,7 @@ import { Tags } from '../all-tags';
 
 const IRON_RANGER: Cocktail = {
 	title: 'Iron Ranger',
-	subtitle: 'A bourbon tiki with a spicy kick',
+	subtitle: 'Bourbon-based with a hint of spice',
 	description: 'Bourbon, falernum, demerara syrup, lemon, pineapple, cinnamon, mint.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/iron-ranger.png',
@@ -33,6 +33,10 @@ const IRON_RANGER: Cocktail = {
 		{
 			amount: '1oz',
 			ingredient: Ingredients.Citrus.PINEAPPLE
+		},
+		{
+			amount: '2 dashes',
+			ingredient: Ingredients.Bitters.ANGOSTURA
 		},
 		{
 			label: 'Garnish: Mint Sprig',
