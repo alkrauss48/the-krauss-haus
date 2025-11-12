@@ -160,6 +160,13 @@
 											</span>
 										</div>
 									{/if}
+									{#if cocktail.servedIn}
+										<div class="mt-4">
+											<span class="text-sm font-medium text-gray-600">
+												Served in: {cocktail.servedIn}
+											</span>
+										</div>
+									{/if}
 								</div>
 							{/if}
 

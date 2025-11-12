@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -13,6 +14,7 @@ const GILDED_ROSE: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gilded-rose.png',
 	slug: 'gilded-rose',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.FluteGlass,
 	ingredients: [
 		{
 			amount: '.5oz',
@@ -31,7 +33,8 @@ const GILDED_ROSE: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.BUILT,
 		Tags.Origin.ORIGINAL,
-		Tags.AlcoholLevel.LOW
+		Tags.AlcoholLevel.LOW,
+		Tags.ServedIn.FLUTE_GLASS
 	]
 };
 

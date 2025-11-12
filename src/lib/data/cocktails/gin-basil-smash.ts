@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const GIN_BASIL_SMASH: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gin-basil-smash.png',
 	slug: 'gin-basil-smash',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -43,7 +45,8 @@ const GIN_BASIL_SMASH: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

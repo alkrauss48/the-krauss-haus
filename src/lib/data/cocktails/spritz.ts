@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const SPRITZ: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/spritz.png',
 	slug: 'spritz',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '3oz',
@@ -35,7 +37,8 @@ const SPRITZ: Cocktail = {
 		Tags.FlavorProfile.BUBBLY,
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.BUILT,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

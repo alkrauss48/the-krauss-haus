@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const CUBA_LIBRE: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/cuba-libre.png',
 	slug: 'cuba-libre',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.HighballGlass,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -34,7 +36,8 @@ const CUBA_LIBRE: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
-		Tags.Origin.FOLK
+		Tags.Origin.FOLK,
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 

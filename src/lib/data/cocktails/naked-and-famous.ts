@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const NAKED_AND_FAMOUS: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/naked-and-famous.png',
 	slug: 'naked-and-famous',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.CoupeGlass,
 	ingredients: [
 		{
 			amount: '.75oz',
@@ -36,7 +38,8 @@ const NAKED_AND_FAMOUS: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.ServedIn.COUPE_GLASS
 	]
 };
 

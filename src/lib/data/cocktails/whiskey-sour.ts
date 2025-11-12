@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const WHISKEY_SOUR: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/whiskey-sour.png',
 	slug: 'whiskey-sour',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.CoupeGlass,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -39,7 +41,8 @@ const WHISKEY_SOUR: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.COUPE_GLASS
 	]
 };
 

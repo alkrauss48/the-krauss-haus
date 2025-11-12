@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -13,6 +14,7 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ramos-gin-fizz.png',
 	slug: 'ramos-gin-fizz',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.HighballGlass,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -55,7 +57,8 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.CREAMY,
 		Tags.Technique.BUILT,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 

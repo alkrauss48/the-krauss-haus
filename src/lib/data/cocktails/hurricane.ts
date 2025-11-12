@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -13,6 +14,7 @@ const HURRICANE: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hurricane.png',
 	slug: 'hurricane',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '.75oz',
@@ -45,7 +47,8 @@ const HURRICANE: Cocktail = {
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

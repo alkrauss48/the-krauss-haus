@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -13,6 +14,7 @@ const IRON_RANGER: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/iron-ranger.png',
 	slug: 'iron-ranger',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.TikiMug,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -54,7 +56,8 @@ const IRON_RANGER: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.ServedIn.TIKI_MUG
 	]
 };
 

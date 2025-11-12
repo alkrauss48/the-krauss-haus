@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -13,6 +14,7 @@ const SATURN: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/saturn.png',
 	slug: 'saturn',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '1.5oz',
@@ -52,7 +54,8 @@ const SATURN: Cocktail = {
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -14,6 +15,7 @@ const COBRAS_FANG: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/cobras-fang.png',
 	slug: 'cobras-fang',
 	method: CocktailMethod.FlashBlended,
+	servedIn: ServedIn.TikiMug,
 	ingredients: [
 		{
 			amount: '1.5oz',
@@ -56,7 +58,8 @@ const COBRAS_FANG: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.FLASH_BLENDED,
 		Tags.Style.TIKI,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.TIKI_MUG
 	]
 };
 

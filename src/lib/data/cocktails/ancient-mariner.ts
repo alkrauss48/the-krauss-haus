@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -14,6 +15,7 @@ const ANCIENT_MARINER: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ancient-mariner.png',
 	slug: 'ancient-mariner',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '1oz',
@@ -58,7 +60,8 @@ const ANCIENT_MARINER: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

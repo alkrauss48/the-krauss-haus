@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -13,6 +14,7 @@ const VIEUX_CARRE: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/vieux-carre.png',
 	slug: 'vieux-carre',
 	method: CocktailMethod.Stirred,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '.75oz',
@@ -50,7 +52,8 @@ const VIEUX_CARRE: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

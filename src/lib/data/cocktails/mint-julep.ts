@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const MINT_JULEP: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/mint-julep.png',
 	slug: 'mint-julep',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.JulepTin,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -35,7 +37,8 @@ const MINT_JULEP: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Technique.BUILT,
-		Tags.Origin.FOLK
+		Tags.Origin.FOLK,
+		Tags.ServedIn.JULEP_TIN
 	]
 };
 

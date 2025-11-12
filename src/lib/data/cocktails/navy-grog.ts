@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -13,6 +14,7 @@ const NAVY_GROG: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/navy-grog.png',
 	slug: 'navy-grog',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '1oz',
@@ -55,7 +57,8 @@ const NAVY_GROG: Cocktail = {
 		Tags.BaseAlcohol.RUM,
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.CITRUS,
-		Tags.Technique.SHAKEN
+		Tags.Technique.SHAKEN,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

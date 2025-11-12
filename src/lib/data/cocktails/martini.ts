@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const MARTINI: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/martini.png',
 	slug: 'martini',
 	method: CocktailMethod.Stirred,
+	servedIn: ServedIn.NickAndNoraGlass,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -33,7 +35,8 @@ const MARTINI: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.NICK_AND_NORA_GLASS
 	]
 };
 

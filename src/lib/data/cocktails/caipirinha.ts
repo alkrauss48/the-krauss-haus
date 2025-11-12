@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const CAIPIRINHA: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/caipirinha.png',
 	slug: 'caipirinha',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -32,7 +34,8 @@ const CAIPIRINHA: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.Style.SOUR,
 		Tags.Technique.BUILT,
-		Tags.Origin.FOLK
+		Tags.Origin.FOLK,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

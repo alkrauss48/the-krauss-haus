@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const FERNET_CON_COCA: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/fernet-con-coca.png',
 	slug: 'fernet-con-coca',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.HighballGlass,
 	ingredients: [
 		{
 			label: '30% Fernet branca',
@@ -29,7 +31,8 @@ const FERNET_CON_COCA: Cocktail = {
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
-		Tags.Origin.FOLK
+		Tags.Origin.FOLK,
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 
