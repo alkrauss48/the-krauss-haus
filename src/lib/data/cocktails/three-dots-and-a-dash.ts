@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -14,6 +15,7 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/three-dots-and-a-dash.png',
 	slug: 'three-dots-and-a-dash',
 	method: CocktailMethod.FlashBlended,
+	servedIn: ServedIn.TikiMug,
 	ingredients: [
 		{
 			amount: '1oz',
@@ -64,7 +66,8 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.FLASH_BLENDED,
 		Tags.Style.TIKI,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.TIKI_MUG
 	]
 };
 

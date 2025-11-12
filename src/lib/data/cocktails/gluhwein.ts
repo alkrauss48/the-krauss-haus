@@ -1,3 +1,4 @@
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -11,6 +12,7 @@ const GLUHWEIN: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gluhwein.png',
 	slug: 'gluhwein',
+	servedIn: ServedIn.Mug,
 	ingredients: [
 		{
 			amount: '750ml',
@@ -47,7 +49,8 @@ const GLUHWEIN: Cocktail = {
 		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.SPICED,
 		Tags.Temperature.HOT,
-		Tags.Origin.FOLK
+		Tags.Origin.FOLK,
+		Tags.ServedIn.MUG
 	]
 };
 

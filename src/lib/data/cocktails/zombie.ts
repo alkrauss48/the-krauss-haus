@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -14,6 +15,7 @@ const ZOMBIE: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/zombie.png',
 	slug: 'zombie',
 	method: CocktailMethod.FlashBlended,
+	servedIn: ServedIn.TikiMug,
 	ingredients: [
 		{
 			amount: '1oz',
@@ -72,7 +74,8 @@ const ZOMBIE: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.FLASH_BLENDED,
 		Tags.Style.TIKI,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.TIKI_MUG
 	]
 };
 

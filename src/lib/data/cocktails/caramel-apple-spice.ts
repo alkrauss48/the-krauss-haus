@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -14,6 +15,7 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/caramel-apple-spice.png',
 	slug: 'caramel-apple-spice',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.Mug,
 	ingredients: [
 		{
 			amount: '.5oz',
@@ -54,7 +56,8 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.BUILT,
 		Tags.Origin.ORIGINAL,
-		Tags.AlcoholLevel.LOW
+		Tags.AlcoholLevel.LOW,
+		Tags.ServedIn.MUG
 	]
 };
 

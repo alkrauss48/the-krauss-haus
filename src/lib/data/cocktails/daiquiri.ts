@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const DAIQUIRI: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/daiquiri.png',
 	slug: 'daiquiri',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.CoupeGlass,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -36,7 +38,8 @@ const DAIQUIRI: Cocktail = {
 		Tags.Technique.SHAKEN,
 
 		Tags.Style.SOUR,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.COUPE_GLASS
 	]
 };
 

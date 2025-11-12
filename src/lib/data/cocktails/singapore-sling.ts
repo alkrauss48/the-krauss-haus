@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -14,6 +15,7 @@ const SINGAPORE_SLING: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/singapore-sling.png',
 	slug: 'singapore-sling',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.HighballGlass,
 	ingredients: [
 		{
 			amount: '1.5oz',
@@ -61,7 +63,8 @@ const SINGAPORE_SLING: Cocktail = {
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
-		Tags.AlcoholLevel.HIGH
+		Tags.AlcoholLevel.HIGH,
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 

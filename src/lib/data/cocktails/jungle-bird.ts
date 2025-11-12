@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -13,6 +14,7 @@ const JUNGLE_BIRD: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/jungle-bird.png',
 	slug: 'jungle-bird',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '1.5oz',
@@ -47,7 +49,8 @@ const JUNGLE_BIRD: Cocktail = {
 		Tags.Style.TIKI,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Origin.CLASSIC,
-		Tags.AlcoholLevel.LOW
+		Tags.AlcoholLevel.LOW,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

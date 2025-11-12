@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const GIN_AND_TONIC: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gin-and-tonic.png',
 	slug: 'gin-and-tonic',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.HighballGlass,
 	ingredients: [
 		{
 			amount: '1.5oz',
@@ -34,7 +36,8 @@ const GIN_AND_TONIC: Cocktail = {
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 

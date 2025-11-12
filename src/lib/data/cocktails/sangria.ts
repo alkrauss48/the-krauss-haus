@@ -1,3 +1,4 @@
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -10,6 +11,7 @@ const SANGRIA: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sangria.png',
 	slug: 'sangria',
+	servedIn: ServedIn.HighballGlass,
 	ingredients: [
 		{
 			amount: '750mL',
@@ -51,7 +53,8 @@ const SANGRIA: Cocktail = {
 		Tags.Origin.FOLK,
 		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.BUBBLY,
-		Tags.FlavorProfile.FRUITY
+		Tags.FlavorProfile.FRUITY,
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 

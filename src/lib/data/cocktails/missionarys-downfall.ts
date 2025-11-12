@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/missionarys-downfall.png',
 	slug: 'missionarys-downfall',
 	method: CocktailMethod.Blended,
+	servedIn: ServedIn.HighballGlass,
 	ingredients: [
 		{
 			amount: '1oz',
@@ -49,7 +51,8 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		Tags.Temperature.FROZEN,
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
-		Tags.AlcoholLevel.LOW
+		Tags.AlcoholLevel.LOW,
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 

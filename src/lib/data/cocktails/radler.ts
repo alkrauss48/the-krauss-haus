@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const RADLER: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/radler.png',
 	slug: 'radler',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.PintGlass,
 	ingredients: [
 		{
 			amount: '50%',
@@ -30,7 +32,8 @@ const RADLER: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,
 		Tags.AlcoholLevel.LOW,
-		Tags.Origin.FOLK
+		Tags.Origin.FOLK,
+		Tags.ServedIn.PINT_GLASS
 	]
 };
 

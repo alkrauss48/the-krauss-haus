@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -14,6 +15,7 @@ const JET_PILOT: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/jet-pilot.png',
 	slug: 'jet-pilot',
 	method: CocktailMethod.FlashBlended,
+	servedIn: ServedIn.TikiMug,
 	ingredients: [
 		{
 			amount: '.5oz',
@@ -63,7 +65,8 @@ const JET_PILOT: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.FLASH_BLENDED,
 		Tags.Style.TIKI,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.TIKI_MUG
 	]
 };
 

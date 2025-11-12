@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const TOM_AND_JERRY: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/tom-and-jerry.png',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.Mug,
 	ingredients: [
 		{
 			amount: '.75oz',
@@ -39,7 +41,8 @@ const TOM_AND_JERRY: Cocktail = {
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
 		Tags.Origin.FOLK,
-		Tags.AlcoholLevel.LOW
+		Tags.AlcoholLevel.LOW,
+		Tags.ServedIn.MUG
 	],
 	notes:
 		"This is a family recipe created by Jack Krauss, Aaron's grandfather, who passed away in 2011."

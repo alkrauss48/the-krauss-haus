@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -13,6 +14,7 @@ const MERRY_MULE: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/merry-mule.png',
 	slug: 'merry-mule',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.Mug,
 	ingredients: [
 		{
 			amount: '2oz',
@@ -43,7 +45,8 @@ const MERRY_MULE: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
-		Tags.Origin.ORIGINAL
+		Tags.Origin.ORIGINAL,
+		Tags.ServedIn.MUG
 	]
 };
 

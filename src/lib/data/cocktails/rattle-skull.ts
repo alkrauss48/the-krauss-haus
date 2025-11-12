@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const RATTLE_SKULL: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/rattle-skull.png',
 	slug: 'rattle-skull',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.PintGlass,
 	ingredients: [
 		{
 			amount: '12oz',
@@ -49,7 +51,8 @@ const RATTLE_SKULL: Cocktail = {
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
-		Tags.Technique.SHAKEN
+		Tags.Technique.SHAKEN,
+		Tags.ServedIn.PINT_GLASS
 	]
 };
 

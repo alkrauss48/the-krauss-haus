@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const HOT_TODDY: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hot-toddy.png',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.Mug,
 	ingredients: [
 		{
 			amount: '1.5oz',
@@ -52,7 +54,8 @@ const HOT_TODDY: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
-		Tags.Origin.FOLK
+		Tags.Origin.FOLK,
+		Tags.ServedIn.MUG
 	],
 	notes: "I usually do 7 swirls of honey; it's just too thick to want to measure with a jigger."
 };

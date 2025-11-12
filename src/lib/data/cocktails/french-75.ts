@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const FRENCH_75: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/french-75.png',
 	slug: 'french-75',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.FluteGlass,
 	ingredients: [
 		{
 			amount: '1oz',
@@ -40,7 +42,8 @@ const FRENCH_75: Cocktail = {
 		Tags.FlavorProfile.BUBBLY,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.FLUTE_GLASS
 	]
 };
 

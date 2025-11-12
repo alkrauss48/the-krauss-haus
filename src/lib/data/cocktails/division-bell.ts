@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const DIVISION_BELL: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/division-bell.png',
 	method: CocktailMethod.Shaken,
+	servedIn: ServedIn.CoupeGlass,
 	ingredients: [
 		{
 			amount: '1.5oz',
@@ -40,7 +42,8 @@ const DIVISION_BELL: Cocktail = {
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.ServedIn.COUPE_GLASS
 	]
 };
 

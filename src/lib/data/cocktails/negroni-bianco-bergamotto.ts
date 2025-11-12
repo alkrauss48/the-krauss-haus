@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const NEGRONI_BIANCO_BERGAMOTTO: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/negroni-bianco-bergamotto.png',
 	slug: 'negroni-bianco-bergamotto',
 	method: CocktailMethod.Stirred,
+	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
 			amount: '1oz',
@@ -36,7 +38,8 @@ const NEGRONI_BIANCO_BERGAMOTTO: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
-		Tags.Origin.MODERN
+		Tags.Origin.MODERN,
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

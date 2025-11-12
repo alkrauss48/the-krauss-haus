@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const SAZERAC: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sazerac.png',
 	slug: 'sazerac',
 	method: CocktailMethod.Stirred,
+	servedIn: ServedIn.SingleRocksGlass,
 	ingredients: [
 		{
 			amount: '1.5oz',
@@ -48,7 +50,8 @@ const SAZERAC: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
-		Tags.Origin.CLASSIC
+		Tags.Origin.CLASSIC,
+		Tags.ServedIn.SINGLE_ROCKS_GLASS
 	]
 };
 

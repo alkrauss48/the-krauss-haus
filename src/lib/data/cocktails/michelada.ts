@@ -1,4 +1,5 @@
 import { CocktailMethod } from '$lib/enums/methods';
+import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
@@ -12,6 +13,7 @@ const MICHELADA: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/michelada.png',
 	slug: 'michelada',
 	method: CocktailMethod.Built,
+	servedIn: ServedIn.PintGlass,
 	ingredients: [
 		{
 			amount: '12oz',
@@ -38,7 +40,8 @@ const MICHELADA: Cocktail = {
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
-		Tags.Technique.BUILT
+		Tags.Technique.BUILT,
+		Tags.ServedIn.PINT_GLASS
 	]
 };
 
