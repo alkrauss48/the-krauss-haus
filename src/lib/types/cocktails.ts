@@ -2,6 +2,7 @@ import type { SectionColor } from './colors';
 import { CocktailMethod } from '../enums/methods';
 import type { Tag } from './tags';
 import type { IngredientItem } from './ingredients';
+import type { ServedIn } from '$lib/enums/served-in';
 
 export interface CocktailVariant {
 	name: string;
@@ -18,6 +19,7 @@ export interface Cocktail {
 	slug: string;
 	ingredients?: (string | IngredientItem)[];
 	method?: CocktailMethod;
+	servedIn?: ServedIn;
 	variations?: CocktailVariant[];
 	notes?: string;
 	tags?: Tag[];

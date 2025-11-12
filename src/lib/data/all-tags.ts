@@ -9,6 +9,7 @@ import { TECHNIQUE, TAGS as TECHNIQUE_TAGS } from '$lib/data/tags/technique';
 import { ORIGIN, TAGS as ORIGIN_TAGS } from '$lib/data/tags/origin';
 import { TEMPERATURE, TAGS as TEMPERATURE_TAGS } from '$lib/data/tags/temperature';
 import { ALCOHOL_LEVEL, TAGS as ALCOHOL_LEVEL_TAGS } from '$lib/data/tags/alcohol-level';
+import { SERVED_IN, TAGS as SERVED_IN_TAGS } from '$lib/data/tags/served-in';
 
 // Structured namespace for easy access
 export const Tags = {
@@ -19,7 +20,8 @@ export const Tags = {
 
 	Origin: ORIGIN_TAGS,
 	Temperature: TEMPERATURE_TAGS,
-	AlcoholLevel: ALCOHOL_LEVEL_TAGS
+	AlcoholLevel: ALCOHOL_LEVEL_TAGS,
+	ServedIn: SERVED_IN_TAGS
 } as const;
 
 // Create arrays of all tags by category for convenience
@@ -30,7 +32,8 @@ export const allTagCategories: TagCategory[] = [
 	FLAVOR_PROFILE,
 	ALCOHOL_LEVEL,
 	TECHNIQUE,
-	TEMPERATURE
+	TEMPERATURE,
+	SERVED_IN
 ];
 
 // Create a map of all tag categories by label for quick lookups
