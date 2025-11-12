@@ -208,7 +208,7 @@
 		{#if (filterMode === 'tags' && selectedTags.length > 0) || (filterMode === 'ingredients' && selectedIngredients.length > 0)}
 			<button
 				on:click={clearAllFilters}
-				class="w-full px-3 py-2 text-sm text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors font-medium cursor-pointer"
+				class="hidden md:block w-full px-3 py-2 text-sm text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors font-medium cursor-pointer"
 			>
 				Clear all filters ({filterMode === 'tags'
 					? selectedTags.length
