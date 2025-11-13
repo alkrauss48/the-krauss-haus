@@ -29,7 +29,7 @@ const DAIQUIRI: Cocktail = {
 		},
 		{
 			label: 'Garnish: Lime wedge',
-			ingredient: Ingredients.Citrus.LIME
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
 	tags: [

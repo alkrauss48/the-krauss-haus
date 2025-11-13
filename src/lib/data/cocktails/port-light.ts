@@ -40,7 +40,10 @@ const PORT_LIGHT: Cocktail = {
 			label: 'Garnish: Mint spring',
 			ingredient: Ingredients.HerbsAndSpices.MINT
 		},
-		'Garnish: Pineapple square',
+		{
+			label: 'Garnish: Pineapple square',
+			ingredient: Ingredients.Citrus.PINEAPPLE_GARNISH
+		},
 		{
 			label: 'Garnish: Maraschino cherry',
 			ingredient: Ingredients.Other.MARASCHINO_CHERRY

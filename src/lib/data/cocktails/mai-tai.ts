@@ -50,7 +50,7 @@ const MAI_TAI: Cocktail = {
 		},
 		{
 			label: 'Garnish: Lime shell',
-			ingredient: Ingredients.Citrus.LIME
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
 	tags: [

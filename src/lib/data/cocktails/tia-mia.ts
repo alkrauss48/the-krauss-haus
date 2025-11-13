@@ -41,7 +41,7 @@ const TIA_MIA: Cocktail = {
 		},
 		{
 			label: 'Garnish: Lime wheel',
-			ingredient: Ingredients.Citrus.LIME
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
 	variations: [
@@ -56,7 +56,6 @@ const TIA_MIA: Cocktail = {
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
-
 		Tags.Origin.MODERN,
 		Tags.AlcoholLevel.HIGH,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS

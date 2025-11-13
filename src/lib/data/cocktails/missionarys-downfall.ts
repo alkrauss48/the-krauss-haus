@@ -28,7 +28,7 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		{
 			amount: '56g (1/4 cup)',
 			label: 'Diced fresh pineapple',
-			ingredient: Ingredients.Citrus.PINEAPPLE
+			ingredient: Ingredients.Citrus.PINEAPPLE_GARNISH
 		},
 		{
 			amount: '1oz',

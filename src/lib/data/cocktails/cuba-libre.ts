@@ -25,8 +25,11 @@ const CUBA_LIBRE: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			label: 'Lime, pressed with shell',
 			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			label: 'Garnish: Lime shell',
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
 	notes: 'Typically unmeasured. Add rum, then ice, then lime (including shell). Top with soda.',

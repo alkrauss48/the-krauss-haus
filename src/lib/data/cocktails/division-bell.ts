@@ -33,7 +33,7 @@ const DIVISION_BELL: Cocktail = {
 		},
 		{
 			label: 'Garnish: Grapefruit twist',
-			ingredient: Ingredients.Citrus.GRAPEFRUIT
+			ingredient: Ingredients.Citrus.GRAPEFRUIT_GARNISH
 		}
 	],
 	tags: [

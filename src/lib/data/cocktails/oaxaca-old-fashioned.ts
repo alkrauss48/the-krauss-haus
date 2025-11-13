@@ -33,7 +33,7 @@ const OAXACA_OLD_FASHIONED: Cocktail = {
 		},
 		{
 			label: 'Garnish: Smoked orange twist',
-			ingredient: Ingredients.Citrus.ORANGE
+			ingredient: Ingredients.Citrus.ORANGE_GARNISH
 		}
 	],
 	tags: [

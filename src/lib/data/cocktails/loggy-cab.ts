@@ -34,7 +34,7 @@ const LOGGY_CAB: Cocktail = {
 		},
 		{
 			label: 'Garnish: Lime wheel',
-			ingredient: Ingredients.Citrus.LIME
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
 	variations: [

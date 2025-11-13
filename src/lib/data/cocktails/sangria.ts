@@ -27,15 +27,15 @@ const SANGRIA: Cocktail = {
 		},
 		{
 			label: '1 Orange, sliced',
-			ingredient: Ingredients.Citrus.ORANGE
+			ingredient: Ingredients.Citrus.ORANGE_GARNISH
 		},
 		{
 			label: '1 Lime, sliced',
-			ingredient: Ingredients.Citrus.LIME
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		},
 		{
 			label: '1/2 Lemon, sliced',
-			ingredient: Ingredients.Citrus.LEMON
+			ingredient: Ingredients.Citrus.LEMON_GARNISH
 		},
 		{
 			amount: '2 tbsp',

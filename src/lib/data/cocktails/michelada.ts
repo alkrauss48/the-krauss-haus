@@ -29,7 +29,11 @@ const MICHELADA: Cocktail = {
 			label: 'Pinch of salt',
 			ingredient: Ingredients.Other.SALT
 		},
-		'Garnish: Tajin/Chamoy rim and lime wedge'
+		'Garnish: Tajin/Chamoy rim',
+		{
+			label: 'Garnish: Lime wedge',
+			ingredient: Ingredients.Citrus.LIME_GARNISH
+		}
 	],
 	notes:
 		'Add all ingredients besides beer into a glass, then top with the beer. Tecate is our preference.',

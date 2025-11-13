@@ -27,7 +27,7 @@ const PIMMS_CUP: Cocktail = {
 
 		{
 			label: 'Garnish: Orange',
-			ingredient: Ingredients.Citrus.ORANGE
+			ingredient: Ingredients.Citrus.ORANGE_GARNISH
 		},
 		{
 			label: 'Garnish: Mint sprig',

@@ -29,7 +29,7 @@ const OLD_FASHIONED: Cocktail = {
 		},
 		{
 			label: 'Garnish: Orange twist',
-			ingredient: Ingredients.Citrus.ORANGE
+			ingredient: Ingredients.Citrus.ORANGE_GARNISH
 		}
 	],
 	variations: [

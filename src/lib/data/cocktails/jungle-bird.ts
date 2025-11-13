@@ -38,7 +38,7 @@ const JUNGLE_BIRD: Cocktail = {
 		},
 		{
 			label: 'Garnish: Pineapple wedge',
-			ingredient: Ingredients.Citrus.PINEAPPLE
+			ingredient: Ingredients.Citrus.PINEAPPLE_GARNISH
 		}
 	],
 	tags: [

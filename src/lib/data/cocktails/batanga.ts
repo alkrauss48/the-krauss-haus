@@ -25,12 +25,15 @@ const BATANGA: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			label: 'Lime, pressed with shell',
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
 			amount: '1 dash',
 			ingredient: Ingredients.Other.SALT
+		},
+		{
+			label: 'Garnish: Lime shell',
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
 	notes:
