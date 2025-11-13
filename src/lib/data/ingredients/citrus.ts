@@ -2,34 +2,63 @@ import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
 
 const GRAPEFRUIT: Ingredient = {
-	title: 'Grapefruit',
+	title: 'Grapefruit Juice',
 	slug: 'grapefruit'
 };
+const GRAPEFRUIT_GARNISH: Ingredient = {
+	title: 'Grapefruit Garnish',
+	slug: 'grapefruit-garnish'
+};
 const LIME: Ingredient = {
-	title: 'Lime',
+	title: 'Lime Juice',
 	slug: 'lime'
 };
+const LIME_GARNISH: Ingredient = {
+	title: 'Lime Garnish',
+	slug: 'lime-garnish'
+};
 const LEMON: Ingredient = {
-	title: 'Lemon',
+	title: 'Lemon Juice',
 	slug: 'lemon'
 };
+const LEMON_GARNISH: Ingredient = {
+	title: 'Lemon Garnish',
+	slug: 'lemon-garnish'
+};
 const ORANGE: Ingredient = {
-	title: 'Orange',
+	title: 'Orange Juice',
 	slug: 'orange'
 };
+const ORANGE_GARNISH: Ingredient = {
+	title: 'Orange Garnish',
+	slug: 'orange-garnish'
+};
 const PINEAPPLE: Ingredient = {
-	title: 'Pineapple',
+	title: 'Pineapple Juice',
 	slug: 'pineapple'
 };
-
+const PINEAPPLE_GARNISH: Ingredient = {
+	title: 'Pineapple Garnish',
+	slug: 'pineapple-garnish'
+};
 export const CITRUS: IngredientCategory = {
 	label: 'Citrus',
 	type: IngredientType.NonAlcoholic,
 	color: '#06b6d4', // softer cyan blue (matching Temperature tag)
 	subcategories: [
 		{
-			label: 'Default',
+			label: 'Juice',
 			ingredients: [GRAPEFRUIT, LIME, LEMON, ORANGE, PINEAPPLE]
+		},
+		{
+			label: 'Garnish',
+			ingredients: [
+				GRAPEFRUIT_GARNISH,
+				LIME_GARNISH,
+				LEMON_GARNISH,
+				ORANGE_GARNISH,
+				PINEAPPLE_GARNISH
+			]
 		}
 	]
 };
@@ -39,5 +68,10 @@ export const INGREDIENTS = {
 	LIME,
 	LEMON,
 	ORANGE,
-	PINEAPPLE
+	PINEAPPLE,
+	GRAPEFRUIT_GARNISH,
+	LIME_GARNISH,
+	LEMON_GARNISH,
+	ORANGE_GARNISH,
+	PINEAPPLE_GARNISH
 };
