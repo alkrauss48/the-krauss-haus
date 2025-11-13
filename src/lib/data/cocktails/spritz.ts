@@ -29,7 +29,7 @@ const SPRITZ: Cocktail = {
 		},
 		{
 			label: 'Garnish: Orange wedge',
-			ingredient: Ingredients.Citrus.ORANGE
+			ingredient: Ingredients.Citrus.ORANGE_GARNISH
 		}
 	],
 	tags: [

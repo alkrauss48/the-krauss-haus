@@ -33,7 +33,7 @@ const FRENCH_75: Cocktail = {
 		},
 		{
 			label: 'Garnish: Lemon twist',
-			ingredient: Ingredients.Citrus.LEMON
+			ingredient: Ingredients.Citrus.LEMON_GARNISH
 		}
 	],
 	tags: [

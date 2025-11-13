@@ -26,7 +26,6 @@ const MERRY_MULE: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			label: 'Lime',
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{

@@ -22,7 +22,7 @@ const CAIPIRINHA: Cocktail = {
 		{
 			amount: '6',
 			label: 'Lime wedges',
-			ingredient: Ingredients.Citrus.LIME
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		},
 		{
 			amount: '1 tbsp',

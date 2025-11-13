@@ -21,7 +21,7 @@ const TI_PUNCH: Cocktail = {
 		},
 		{
 			label: '1 Lime coin',
-			ingredient: Ingredients.Citrus.LIME
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		},
 		{
 			amount: '1 tsp',

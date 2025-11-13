@@ -38,7 +38,7 @@ const HURRICANE: Cocktail = {
 		},
 		{
 			label: 'Garnish: Lemon wheel',
-			ingredient: Ingredients.Citrus.LEMON
+			ingredient: Ingredients.Citrus.LEMON_GARNISH
 		}
 	],
 	tags: [

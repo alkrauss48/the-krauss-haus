@@ -38,7 +38,7 @@ const SATURN: Cocktail = {
 		},
 		{
 			label: 'Garnish: Lemon peel',
-			ingredient: Ingredients.Citrus.LEMON
+			ingredient: Ingredients.Citrus.LEMON_GARNISH
 		},
 		{
 			label: 'Garnish: Maraschino cherry',

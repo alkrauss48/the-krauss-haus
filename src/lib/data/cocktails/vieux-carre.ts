@@ -42,7 +42,7 @@ const VIEUX_CARRE: Cocktail = {
 		},
 		{
 			label: 'Garnish: Lemon twist',
-			ingredient: Ingredients.Citrus.LEMON
+			ingredient: Ingredients.Citrus.LEMON_GARNISH
 		}
 	],
 	tags: [
