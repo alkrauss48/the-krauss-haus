@@ -26,7 +26,7 @@ const NAVY_GROG: Cocktail = {
 		},
 		{
 			amount: '1oz',
-			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
+			ingredient: Ingredients.BaseSpirits.PROBITAS
 		},
 		{
 			amount: '1oz',
