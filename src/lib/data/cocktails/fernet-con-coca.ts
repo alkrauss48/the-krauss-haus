@@ -32,7 +32,8 @@ const FERNET_CON_COCA: Cocktail = {
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
 		Tags.Origin.FOLK,
-		Tags.ServedIn.HIGHBALL_GLASS
+		Tags.ServedIn.HIGHBALL_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

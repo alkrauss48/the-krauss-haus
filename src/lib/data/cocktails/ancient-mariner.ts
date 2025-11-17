@@ -61,7 +61,8 @@ const ANCIENT_MARINER: Cocktail = {
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
 		Tags.Origin.MODERN,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 

@@ -45,7 +45,8 @@ const MICHELADA: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.BUILT,
-		Tags.ServedIn.PINT_GLASS
+		Tags.ServedIn.PINT_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

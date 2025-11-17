@@ -55,7 +55,8 @@ const HOT_TODDY: Cocktail = {
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
 		Tags.Origin.FOLK,
-		Tags.ServedIn.MUG
+		Tags.ServedIn.MUG,
+		Tags.PrepTime.COMPLEX_PREP
 	],
 	notes: "I usually do 7 swirls of honey; it's just too thick to want to measure with a jigger."
 };

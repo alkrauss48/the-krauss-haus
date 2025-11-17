@@ -42,7 +42,8 @@ const TOM_AND_JERRY: Cocktail = {
 		Tags.Technique.BUILT,
 		Tags.Origin.FOLK,
 		Tags.AlcoholLevel.LOW,
-		Tags.ServedIn.MUG
+		Tags.ServedIn.MUG,
+		Tags.PrepTime.COMPLEX_PREP
 	],
 	notes:
 		"This is a family recipe created by Jack Krauss, Aaron's grandfather, who passed away in 2011."

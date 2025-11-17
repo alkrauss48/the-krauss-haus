@@ -58,7 +58,8 @@ const NAVY_GROG: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 

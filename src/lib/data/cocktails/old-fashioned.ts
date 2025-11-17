@@ -52,10 +52,10 @@ const OLD_FASHIONED: Cocktail = {
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.Technique.BUILT,
-
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

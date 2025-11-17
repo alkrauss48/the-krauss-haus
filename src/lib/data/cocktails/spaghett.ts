@@ -33,7 +33,8 @@ const SPAGHETT: Cocktail = {
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,
-		Tags.Origin.FOLK
+		Tags.Origin.FOLK,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

@@ -49,7 +49,8 @@ const ESPRESSO_MARTINI: Cocktail = {
 		Tags.BaseAlcohol.BRANDY,
 		Tags.Technique.SHAKEN,
 		Tags.Origin.MODERN,
-		Tags.ServedIn.COUPE_GLASS
+		Tags.ServedIn.COUPE_GLASS,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 

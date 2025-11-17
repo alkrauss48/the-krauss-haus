@@ -35,7 +35,8 @@ const TI_PUNCH: Cocktail = {
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Technique.BUILT,
 		Tags.Origin.FOLK,
-		Tags.ServedIn.SINGLE_ROCKS_GLASS
+		Tags.ServedIn.SINGLE_ROCKS_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

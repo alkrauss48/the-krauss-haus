@@ -37,7 +37,8 @@ const GIN_AND_TONIC: Cocktail = {
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
 		Tags.Origin.CLASSIC,
-		Tags.ServedIn.HIGHBALL_GLASS
+		Tags.ServedIn.HIGHBALL_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

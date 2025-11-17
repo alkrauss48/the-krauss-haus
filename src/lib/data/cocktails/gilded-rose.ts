@@ -34,7 +34,8 @@ const GILDED_ROSE: Cocktail = {
 		Tags.Technique.BUILT,
 		Tags.Origin.ORIGINAL,
 		Tags.AlcoholLevel.LOW,
-		Tags.ServedIn.FLUTE_GLASS
+		Tags.ServedIn.FLUTE_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

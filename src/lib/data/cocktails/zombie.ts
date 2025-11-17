@@ -75,7 +75,8 @@ const ZOMBIE: Cocktail = {
 		Tags.Technique.FLASH_BLENDED,
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
-		Tags.ServedIn.TIKI_MUG
+		Tags.ServedIn.TIKI_MUG,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 

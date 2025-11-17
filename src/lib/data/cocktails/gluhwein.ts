@@ -50,7 +50,8 @@ const GLUHWEIN: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Temperature.HOT,
 		Tags.Origin.FOLK,
-		Tags.ServedIn.MUG
+		Tags.ServedIn.MUG,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 

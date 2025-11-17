@@ -49,7 +49,10 @@ const SINGAPORE_SLING: Cocktail = {
 			amount: '3 dashes',
 			ingredient: Ingredients.Bitters.ANGOSTURA
 		},
-		'Garnish: Pineapple wedge',
+		{
+			label: 'Garnish: Pineapple wedge',
+			ingredient: Ingredients.Citrus.PINEAPPLE_GARNISH
+		},
 		{
 			label: 'Garnish: Maraschino cherry',
 			ingredient: Ingredients.Other.MARASCHINO_CHERRY
@@ -64,7 +67,8 @@ const SINGAPORE_SLING: Cocktail = {
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
 		Tags.AlcoholLevel.HIGH,
-		Tags.ServedIn.HIGHBALL_GLASS
+		Tags.ServedIn.HIGHBALL_GLASS,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 

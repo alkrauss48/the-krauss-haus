@@ -33,7 +33,8 @@ const RADLER: Cocktail = {
 		Tags.Technique.BUILT,
 		Tags.AlcoholLevel.LOW,
 		Tags.Origin.FOLK,
-		Tags.ServedIn.PINT_GLASS
+		Tags.ServedIn.PINT_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

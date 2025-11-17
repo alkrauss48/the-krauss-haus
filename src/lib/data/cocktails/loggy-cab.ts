@@ -67,7 +67,8 @@ const LOGGY_CAB: Cocktail = {
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
 		Tags.Origin.ORIGINAL,
-		Tags.ServedIn.HIGHBALL_GLASS
+		Tags.ServedIn.HIGHBALL_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

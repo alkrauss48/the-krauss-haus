@@ -54,7 +54,8 @@ const SANGRIA: Cocktail = {
 		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.FRUITY,
-		Tags.ServedIn.HIGHBALL_GLASS
+		Tags.ServedIn.HIGHBALL_GLASS,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 

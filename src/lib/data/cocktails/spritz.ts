@@ -38,7 +38,8 @@ const SPRITZ: Cocktail = {
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.BUILT,
 		Tags.Origin.MODERN,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

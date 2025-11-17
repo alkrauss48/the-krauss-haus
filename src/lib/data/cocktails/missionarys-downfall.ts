@@ -52,7 +52,8 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
 		Tags.AlcoholLevel.LOW,
-		Tags.ServedIn.HIGHBALL_GLASS
+		Tags.ServedIn.HIGHBALL_GLASS,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 

@@ -35,7 +35,8 @@ const CAIPIRINHA: Cocktail = {
 		Tags.Style.SOUR,
 		Tags.Technique.BUILT,
 		Tags.Origin.FOLK,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

@@ -52,7 +52,8 @@ const NEGRONI: Cocktail = {
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 

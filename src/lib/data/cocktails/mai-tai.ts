@@ -60,7 +60,8 @@ const MAI_TAI: Cocktail = {
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 

@@ -57,7 +57,8 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 		Tags.Technique.BUILT,
 		Tags.Origin.ORIGINAL,
 		Tags.AlcoholLevel.LOW,
-		Tags.ServedIn.MUG
+		Tags.ServedIn.MUG,
+		Tags.PrepTime.COMPLEX_PREP
 	]
 };
 
