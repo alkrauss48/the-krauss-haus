@@ -6,6 +6,7 @@ import FASSIONOLA_RECIPE from '$lib/data/recipes/fassionola';
 import GRENADINE_RECIPE from '$lib/data/recipes/grenadine';
 import HONEY_SYRUP_RECIPE from '$lib/data/recipes/honey-syrup';
 import HONEY_GINGER_SYRUP_RECIPE from '$lib/data/recipes/honey-ginger-syrup';
+import MINT_SYRUP_RECIPE from '$lib/data/recipes/mint-syrup';
 import ORGEAT_RECIPE from '$lib/data/recipes/orgeat';
 import PASSIONFRUIT_SYRUP_RECIPE from '$lib/data/recipes/passionfruit-syrup';
 import RICH_SIMPLE_SYRUP_RECIPE from '$lib/data/recipes/rich-simple-syrup';
@@ -44,6 +45,11 @@ const HONEY_GINGER_SYRUP: Ingredient = {
 	slug: 'honey-ginger-syrup',
 	recipe: HONEY_GINGER_SYRUP_RECIPE
 };
+const MINT_SYRUP: Ingredient = {
+	title: 'Mint Syrup',
+	slug: 'mint-syrup',
+	recipe: MINT_SYRUP_RECIPE
+};
 const ORGEAT: Ingredient = {
 	title: 'Orgeat',
 	slug: 'orgeat',
@@ -75,6 +81,7 @@ export const SYRUPS: IngredientCategory = {
 				GRENADINE,
 				HONEY_SYRUP,
 				HONEY_GINGER_SYRUP,
+				MINT_SYRUP,
 				ORGEAT,
 				PASSIONFRUIT_SYRUP,
 				RICH_SIMPLE_SYRUP
@@ -91,6 +98,7 @@ export const INGREDIENTS = {
 	GRENADINE,
 	HONEY_SYRUP,
 	HONEY_GINGER_SYRUP,
+	MINT_SYRUP,
 	ORGEAT,
 	PASSIONFRUIT_SYRUP,
 	RICH_SIMPLE_SYRUP

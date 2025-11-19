@@ -8,6 +8,7 @@ import FASSIONOLA from '$lib/data/recipes/fassionola';
 import GRENADINE from '$lib/data/recipes/grenadine';
 import HONEY_GINGER_SYRUP from '$lib/data/recipes/honey-ginger-syrup';
 import HONEY_SYRUP from '$lib/data/recipes/honey-syrup';
+import MINT_SYRUP from '$lib/data/recipes/mint-syrup';
 import ORGEAT from '$lib/data/recipes/orgeat';
 import PASSIONFRUIT_SYRUP from '$lib/data/recipes/passionfruit-syrup';
 import RICH_SIMPLE_SYRUP from '$lib/data/recipes/rich-simple-syrup';
@@ -31,6 +32,7 @@ export const syrups: Recipe[] = [
 	GRENADINE,
 	HONEY_GINGER_SYRUP,
 	HONEY_SYRUP,
+	MINT_SYRUP,
 	ORGEAT,
 	PASSIONFRUIT_SYRUP,
 	RICH_SIMPLE_SYRUP
