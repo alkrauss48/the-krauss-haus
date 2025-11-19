@@ -6,7 +6,7 @@ import { Tags } from '../all-tags';
 
 const MINT_JULEP: Cocktail = {
 	title: 'Mint Julep',
-	description: 'Bourbon, simple syrup, mint.',
+	description: 'Bourbon, mint syrup, mint sprig.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mint-julep.png',
 	thumbnailImagePath:
@@ -20,12 +20,8 @@ const MINT_JULEP: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.ELIJAH_CRAIG
 		},
 		{
-			amount: '.5oz',
-			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
-		},
-		{
-			amount: '6-10 leaves',
-			ingredient: Ingredients.HerbsAndSpices.MINT
+			amount: '.75oz',
+			ingredient: Ingredients.Syrups.MINT_SYRUP
 		},
 		{
 			label: 'Garnish: Mint sprig',
