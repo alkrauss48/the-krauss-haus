@@ -50,7 +50,7 @@ const NAVY_GROG: Cocktail = {
 		}
 	],
 	notes:
-		'One of the only classic tiki cocktails not served over crushed ice. Shake all ingredients besides soda water with ice. Strain into a glass over ice block. Top with soda water and garnish with mint sprig.',
+		'One of the only classic tiki cocktails not served over crushed ice. Shake all ingredients besides soda water with ice. Strain into a glass over ice block. Top with soda water, serve with a straw, and garnish with mint sprig.',
 	tags: [
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
