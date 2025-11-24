@@ -34,7 +34,11 @@
 		<!-- Path Header -->
 		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
 			<div class="mb-8">
-				<img src={path.imagePath} alt={path.title} class="w-full max-w-xs mx-auto object-contain" />
+				<img
+					src={path.imagePath}
+					alt={path.title}
+					class="w-full max-w-xs mx-auto object-contain rounded-xl"
+				/>
 			</div>
 			<h1 class="text-5xl font-bold text-gray-800 mb-4">{path.title}</h1>
 			<p class="text-2xl text-gray-600 font-medium mb-4">{path.subtitle}</p>

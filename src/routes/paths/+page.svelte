@@ -4,15 +4,23 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { resolve } from '$app/paths';
+	import { goto } from '$app/navigation';
 
 	export let data: PageData;
 	const { paths } = data;
+
+	function navigateToPath(slug: string): void {
+		goto(resolve(`/paths/${slug}`));
+	}
 </script>
 
 <svelte:head>
 	<title>Cocktail Paths - The Krauss Haus</title>
 	<meta name="description" content="Discover your journey through the world of cocktails" />
-	<meta property="og:image" content="https://thekrausshaus.com/images/open-graph/og-root.jpg" />
+	<meta
+		property="og:image"
+		content="https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/cocktail-paths-promo.jpeg"
+	/>
 </svelte:head>
 
 <main
@@ -29,22 +37,24 @@
 		</header>
 
 		<!-- Paths Grid: All 7 paths in flexbox -->
-		<div class="flex flex-wrap justify-center gap-6" in:fly={{ y: 20, duration: 400, delay: 600 }}>
+		<div
+			class="flex flex-wrap justify-center gap-3 sm:gap-6"
+			in:fly={{ y: 20, duration: 400, delay: 600 }}
+		>
 			{#each paths as path, index (path.slug)}
 				<a
 					href={resolve(`/paths/${path.slug}`)}
-					class="group rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white overflow-hidden w-full sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-2*1.5rem)/3)] lg:w-[calc((100%-3*1.5rem)/4)] cursor-pointer"
+					on:click|preventDefault={() => navigateToPath(path.slug)}
+					class="group rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-white overflow-hidden w-[calc((100%-0.75rem)/2)] sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-2*1.5rem)/3)] lg:w-[calc((100%-3*1.5rem)/4)] cursor-pointer"
 					in:fly={{ y: 20, duration: 400, delay: 700 + index * 100 }}
 				>
 					<img src={path.imagePath} alt={path.title} class="w-full h-auto" loading="lazy" />
 					<!-- Title and Subtitle Below Image -->
-					<div class="p-6">
-						<h2
-							class="text-3xl font-bold text-gray-800 mb-1 group-hover:text-indigo-600 transition-colors"
-						>
+					<div class="p-3 sm:p-6">
+						<h2 class="text-lg sm:text-2xl md:text-3xl font-bold text-gray-800 mb-1">
 							{path.title}
 						</h2>
-						<p class="text-gray-600 text-sm">{path.subtitle}</p>
+						<p class="text-gray-600 text-xs sm:text-sm">{path.subtitle}</p>
 					</div>
 				</a>
 			{/each}
