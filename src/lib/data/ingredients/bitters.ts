@@ -2,36 +2,36 @@ import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
 
 const ANGOSTURA: Ingredient = {
-	title: 'Angostura',
-	slug: 'angostura'
+	title: 'Angostura Bitters',
+	slug: 'angostura-bitters'
 };
 const PEYCHAUDS: Ingredient = {
-	title: "Peychaud's",
-	slug: 'peychauds'
+	title: "Peychaud's Bitters",
+	slug: 'peychauds-bitters'
 };
 const ORANGE: Ingredient = {
-	title: 'Orange',
+	title: 'Orange Bitters',
 	slug: 'orange-bitters'
 };
 const CELERY: Ingredient = {
-	title: 'Celery',
-	slug: 'celery'
+	title: 'Celery Bitters',
+	slug: 'celery-bitters'
 };
 const BLACK_WALNUT: Ingredient = {
-	title: 'Black Walnut',
-	slug: 'black-walnut'
+	title: 'Black Walnut Bitters',
+	slug: 'black-walnut-bitters'
 };
 const XOCOLATL: Ingredient = {
-	title: 'Xocolatl',
-	slug: 'xocolatl'
+	title: 'Xocolatl Bitters',
+	slug: 'xocolatl-bitters'
 };
 const HERBSTURA: Ingredient = {
 	title: 'Herbstura',
 	slug: 'herbstura'
 };
 const CHILI: Ingredient = {
-	title: 'Chili',
-	slug: 'chili'
+	title: 'Chili Bitters',
+	slug: 'chili-bitters'
 };
 
 export const BITTERS: IngredientCategory = {
