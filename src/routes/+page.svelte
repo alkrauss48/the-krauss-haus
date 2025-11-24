@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FeaturedEvent from '$lib/components/FeaturedEvent.svelte';
 	import MenuLink from '$lib/components/MenuLink.svelte';
 	import TipButton from '$lib/components/TipButton.svelte';
 	import TipModal from '$lib/components/TipModal.svelte';
@@ -35,14 +36,10 @@
 	</header>
 
 	<!-- Call to Action -->
-	<!-- <section class="w-full max-w-[400px] sm:max-w-[500px] mb-8">
-		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Upcoming Event</h2>
-		<FeaturedEvent
-			title="Tiki Party"
-			subtitle="Saturday, August 9, 2025"
-			url="/parties/tiki-party-2025"
-		/>
-	</section> -->
+	<section class="w-full max-w-[400px] sm:max-w-[500px] mb-8">
+		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Just Launched</h2>
+		<FeaturedEvent title="Cocktail Paths" subtitle="Start your journey" url="/paths" />
+	</section>
 
 	<!-- Cocktail Menus -->
 	<section class="w-full max-w-[320px] sm:max-w-[400px] mb-16">

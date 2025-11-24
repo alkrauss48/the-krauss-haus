@@ -25,6 +25,9 @@
 				case 'cocktails':
 					label = 'Cocktails';
 					break;
+				case 'paths':
+					label = 'Cocktail Paths';
+					break;
 				case 'summer-menu':
 					label = 'Summer Menu';
 					break;
