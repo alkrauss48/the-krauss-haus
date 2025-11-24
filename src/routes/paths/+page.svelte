@@ -11,7 +11,7 @@
 
 <svelte:head>
 	<title>Cocktail Paths - The Krauss Haus</title>
-	<meta name="description" content="Explore cocktail paths at The Krauss Haus" />
+	<meta name="description" content="Discover your journey through the world of cocktails" />
 	<meta property="og:image" content="https://thekrausshaus.com/images/open-graph/og-root.jpg" />
 </svelte:head>
 
