@@ -3,6 +3,7 @@
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import { fade, fly } from 'svelte/transition';
+	import { resolve } from '$app/paths';
 
 	export let data: PageData;
 	const { paths } = data;
@@ -30,17 +31,22 @@
 		<!-- Paths Grid: All 7 paths in flexbox -->
 		<div class="flex flex-wrap justify-center gap-6" in:fly={{ y: 20, duration: 400, delay: 600 }}>
 			{#each paths as path, index (path.slug)}
-				<div
-					class="group rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white overflow-hidden w-full sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-2*1.5rem)/3)] lg:w-[calc((100%-3*1.5rem)/4)]"
+				<a
+					href={resolve(`/paths/${path.slug}`)}
+					class="group rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white overflow-hidden w-full sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-2*1.5rem)/3)] lg:w-[calc((100%-3*1.5rem)/4)] cursor-pointer"
 					in:fly={{ y: 20, duration: 400, delay: 700 + index * 100 }}
 				>
 					<img src={path.imagePath} alt={path.title} class="w-full h-auto" loading="lazy" />
 					<!-- Title and Subtitle Below Image -->
 					<div class="p-6">
-						<h2 class="text-3xl font-bold text-gray-800 mb-1">{path.title}</h2>
+						<h2
+							class="text-3xl font-bold text-gray-800 mb-1 group-hover:text-indigo-600 transition-colors"
+						>
+							{path.title}
+						</h2>
 						<p class="text-gray-600 text-sm">{path.subtitle}</p>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</div>
