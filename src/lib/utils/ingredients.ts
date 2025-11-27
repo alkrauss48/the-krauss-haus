@@ -24,30 +24,67 @@ export function getIngredientDisplayName(ingredientItem: IngredientItem): string
 }
 
 /**
+ * Extract ingredient slugs from an array of ingredients (string | IngredientItem)[]
+ * Returns a Set of unique ingredient slugs
+ */
+function extractIngredientSlugs(ingredients: (string | IngredientItem)[] | undefined): Set<string> {
+	const slugs = new Set<string>();
+	if (!ingredients) return slugs;
+
+	for (const ingredient of ingredients) {
+		// Skip string ingredients
+		if (typeof ingredient === 'string') continue;
+
+		// Only add if it's an IngredientItem with an ingredient slug
+		if ('ingredient' in ingredient && ingredient.ingredient?.slug) {
+			slugs.add(ingredient.ingredient.slug);
+		}
+	}
+
+	return slugs;
+}
+
+/**
+ * Get all ingredient slugs from a cocktail (including variants).
+ * Returns a Set of unique ingredient slugs.
+ * This ensures we don't double count an ingredient if it appears in both
+ * the main ingredients and a variant.
+ */
+export function getCocktailIngredientSlugs(cocktail: Cocktail): Set<string> {
+	const slugs = new Set<string>();
+
+	// Add slugs from main ingredients
+	const mainSlugs = extractIngredientSlugs(cocktail.ingredients);
+	mainSlugs.forEach((slug) => slugs.add(slug));
+
+	// Add slugs from variant ingredients
+	if (cocktail.variations) {
+		for (const variant of cocktail.variations) {
+			const variantSlugs = extractIngredientSlugs(variant.ingredients);
+			variantSlugs.forEach((slug) => slugs.add(slug));
+		}
+	}
+
+	return slugs;
+}
+
+/**
  * Count how many cocktails use each ingredient (by slug).
+ * Includes ingredients from both main cocktail ingredients and variants.
+ * Each cocktail is only counted once per ingredient, even if the ingredient
+ * appears in both main ingredients and variants.
  * Returns a Map of ingredient slug -> count.
  */
 export function getIngredientUsageCounts(cocktails: Cocktail[]): Map<string, number> {
 	const counts = new Map<string, number>();
 
 	for (const cocktail of cocktails) {
-		if (!cocktail.ingredients) continue;
+		// Get all unique ingredient slugs from this cocktail (including variants)
+		const cocktailSlugs = getCocktailIngredientSlugs(cocktail);
 
-		const seenSlugs = new Set<string>(); // Track unique slugs per cocktail
-
-		for (const ingredient of cocktail.ingredients) {
-			// Skip string ingredients
-			if (typeof ingredient === 'string') continue;
-
-			// Only count if it's an IngredientItem with an ingredient slug
-			if ('ingredient' in ingredient && ingredient.ingredient?.slug) {
-				const slug = ingredient.ingredient.slug;
-				// Only count once per cocktail (in case ingredient appears multiple times)
-				if (!seenSlugs.has(slug)) {
-					seenSlugs.add(slug);
-					counts.set(slug, (counts.get(slug) || 0) + 1);
-				}
-			}
+		// Count each slug once per cocktail
+		for (const slug of cocktailSlugs) {
+			counts.set(slug, (counts.get(slug) || 0) + 1);
 		}
 	}
 
