@@ -14,6 +14,7 @@
 	import type { Ingredient } from '$lib/types/ingredients';
 	import type { LogicMode } from '$lib/types/filters';
 	import { matchesTagsLogic, matchesIngredientsLogic } from '$lib/utils/filterLogic';
+	import { formatVariantIngredients } from '$lib/utils/ingredients';
 
 	export let data: PageData;
 	const { cocktails } = data;
@@ -392,57 +393,112 @@
 					{#each filteredCocktails as cocktail (cocktail.slug)}
 						<div
 							class="px-6 py-4 hover:bg-gray-50 cursor-pointer transition-colors duration-200 focus-within:bg-gray-50"
+							class:pb-0={cocktail.variations && cocktail.variations.length > 0}
 							role="button"
 							tabindex="0"
 							on:click={() => navigateToCocktail(cocktail.slug)}
 							on:keydown={(e) => handleKeydown(e, cocktail.slug)}
 						>
-							<div class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center">
-								<!-- Image -->
-								<div class="col-span-3 md:col-span-2">
-									<div
-										class="w-16 h-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg overflow-hidden shadow-sm"
-									>
-										<img
-											src={cocktail.thumbnailImagePath}
-											alt={cocktail.title}
-											loading="lazy"
-											class="w-full h-full object-contain p-2"
-										/>
+							<div>
+								<div class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center">
+									<!-- Image -->
+									<div class="col-span-3 md:col-span-2">
+										<div
+											class="w-16 h-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg overflow-hidden shadow-sm"
+										>
+											<img
+												src={cocktail.thumbnailImagePath}
+												alt={cocktail.title}
+												loading="lazy"
+												class="w-full h-full object-contain p-2"
+											/>
+										</div>
+									</div>
+
+									<!-- Name -->
+									<div class="col-span-5 md:col-span-3">
+										<h3 class="font-semibold text-gray-800 text-lg">{cocktail.title}</h3>
+										<!-- Show description under name on mobile only -->
+										<p
+											class="text-gray-600 text-sm leading-relaxed mt-1 md:hidden mobile-line-clamp-2"
+										>
+											{cocktail.description}
+										</p>
+									</div>
+
+									<!-- Description -->
+									<div class="col-span-5 hidden md:block">
+										<p class="text-gray-600 text-sm leading-relaxed line-clamp-2">
+											{cocktail.description}
+										</p>
+									</div>
+
+									<!-- Method -->
+									<div class="col-span-3 hidden sm:block md:col-span-2">
+										{#if cocktail.method}
+											<span
+												class="inline-block px-3 py-1 text-xs font-medium rounded-full text-gray-800"
+												style="background-color: {methodColors[cocktail.method]};"
+											>
+												{cocktail.method.charAt(0).toUpperCase() + cocktail.method.slice(1)}
+											</span>
+										{:else}
+											<span class="text-gray-400 text-sm">—</span>
+										{/if}
 									</div>
 								</div>
 
-								<!-- Name -->
-								<div class="col-span-5 md:col-span-3">
-									<h3 class="font-semibold text-gray-800 text-lg">{cocktail.title}</h3>
-									<!-- Show description under name on mobile only -->
-									<p
-										class="text-gray-600 text-sm leading-relaxed mt-1 md:hidden mobile-line-clamp-2"
+								<!-- Variants Sub-section -->
+								{#if cocktail.variations && cocktail.variations.length > 0}
+									<div
+										class="mt-3 pt-3 pb-4 border-t border-gray-100 bg-gray-50/50 rounded-md -mx-6 px-6 py-2 border-l-2 border-l-amber-200"
 									>
-										{cocktail.description}
-									</p>
-								</div>
+										<div class="space-y-2">
+											{#each cocktail.variations as variant, index (variant.name)}
+												<div
+													class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center"
+												>
+													<!-- Empty spacer for image column -->
+													<div class="col-span-3 md:col-span-2">
+														{#if index === 0}
+															<span
+																class="text-xs font-medium text-gray-400 uppercase tracking-wide"
+																>Variants</span
+															>
+														{/if}
+													</div>
 
-								<!-- Description -->
-								<div class="col-span-5 hidden md:block">
-									<p class="text-gray-600 text-sm leading-relaxed line-clamp-2">
-										{cocktail.description}
-									</p>
-								</div>
+													<!-- Variant Name (aligned with cocktail name) -->
+													<div class="col-span-5 md:col-span-3">
+														<span class="text-sm font-medium text-gray-500">{variant.name}</span>
+														<!-- Show variant ingredients under name on mobile only -->
+														{#if formatVariantIngredients(variant)}
+															<p
+																class="text-gray-400 italic text-xs leading-relaxed mt-0.5 md:hidden"
+															>
+																{formatVariantIngredients(variant)}
+															</p>
+														{/if}
+													</div>
 
-								<!-- Method -->
-								<div class="col-span-3 hidden sm:block md:col-span-2">
-									{#if cocktail.method}
-										<span
-											class="inline-block px-3 py-1 text-xs font-medium rounded-full text-gray-800"
-											style="background-color: {methodColors[cocktail.method]};"
-										>
-											{cocktail.method.charAt(0).toUpperCase() + cocktail.method.slice(1)}
-										</span>
-									{:else}
-										<span class="text-gray-400 text-sm">—</span>
-									{/if}
-								</div>
+													<!-- Variant Ingredients (aligned with cocktail description) -->
+													<div class="col-span-5 hidden md:block">
+														{#if formatVariantIngredients(variant)}
+															<p class="text-gray-400 italic text-xs leading-relaxed">
+																{formatVariantIngredients(variant)}
+															</p>
+														{:else}
+															<p class="text-gray-400 italic text-xs">No ingredients listed</p>
+														{/if}
+													</div>
+
+													<!-- Empty spacer for method column -->
+													<div class="col-span-3 hidden sm:block md:col-span-2"></div>
+												</div>
+											{/each}
+										</div>
+									</div>
+								{/if}
 							</div>
 						</div>
 					{/each}
