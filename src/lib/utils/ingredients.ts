@@ -1,5 +1,5 @@
 import type { IngredientItem } from '$lib/types/ingredients';
-import type { Cocktail } from '$lib/types/cocktails';
+import type { Cocktail, CocktailVariant } from '$lib/types/cocktails';
 
 /**
  * Get the display name for an ingredient item.
@@ -8,6 +8,11 @@ import type { Cocktail } from '$lib/types/cocktails';
 export function getIngredientDisplayName(ingredientItem: IngredientItem): string {
 	if (ingredientItem.label) {
 		return ingredientItem.label;
+	}
+
+	if (!ingredientItem.ingredient) {
+		// Fallback if ingredient is missing
+		return 'Unknown ingredient';
 	}
 
 	const { group, title } = ingredientItem.ingredient;
@@ -47,4 +52,36 @@ export function getIngredientUsageCounts(cocktails: Cocktail[]): Map<string, num
 	}
 
 	return counts;
+}
+
+/**
+ * Format variant ingredients as a space-separated sentence.
+ * Similar to how Cocktail ingredients are displayed, but joined with spaces instead of bullets.
+ */
+export function formatVariantIngredients(variant: CocktailVariant): string {
+	if (!variant.ingredients || variant.ingredients.length === 0) {
+		return '';
+	}
+
+	return variant.ingredients
+		.map((ingredient) => {
+			if (typeof ingredient === 'string') {
+				return ingredient;
+			}
+			// Validate that it's a proper IngredientItem with an ingredient property
+			if (!ingredient || !ingredient.ingredient) {
+				// Fallback: try to use label or amount if available, otherwise skip
+				if (ingredient?.label) {
+					return ingredient.amount ? `${ingredient.amount} ${ingredient.label}` : ingredient.label;
+				}
+				return '';
+			}
+			const displayName = getIngredientDisplayName(ingredient);
+			if (ingredient.amount) {
+				return `${ingredient.amount} ${displayName}`;
+			}
+			return displayName;
+		})
+		.filter((item) => item !== '') // Remove any empty strings
+		.join(' ');
 }

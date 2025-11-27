@@ -6,7 +6,7 @@
 	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
 	import { methodColors } from '$lib/enums/methods';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
-	import { getIngredientDisplayName } from '$lib/utils/ingredients';
+	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
 
 	export let cocktail: Cocktail;
 	export let bgColors: SectionColor = {
@@ -295,8 +295,8 @@
 					</svg>
 				</button>
 			</div>
-			{#if selectedVariant?.description}
-				<p class="text-gray-700">{selectedVariant?.description}</p>
+			{#if selectedVariant && formatVariantIngredients(selectedVariant)}
+				<p class="text-gray-700">{formatVariantIngredients(selectedVariant)}</p>
 			{/if}
 			{#if selectedVariant?.images && selectedVariant.images.length > 0}
 				<div class="mt-4 flex gap-2">

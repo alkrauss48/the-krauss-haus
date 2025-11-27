@@ -36,12 +36,22 @@ const ESPRESSO_MARTINI: Cocktail = {
 	variations: [
 		{
 			name: 'Hazelnut',
-			description: 'Swap .5oz of Cognac with Frangelico.',
+			ingredients: [
+				{
+					label: 'Swap .5oz of Cognac with Frangelico.',
+					ingredient: Ingredients.Liqueurs.FRANGELICO
+				}
+			],
 			images: []
 		},
 		{
 			name: 'Peppermint',
-			description: 'Swap .5oz of Cognac with peppermint infused vodka.',
+			ingredients: [
+				{
+					label: 'Swap .5oz of Cognac with peppermint infused vodka.',
+					ingredient: Ingredients.BaseSpirits.PEPPERMINT_VODKA
+				}
+			],
 			images: []
 		}
 	],

@@ -40,23 +40,36 @@ const LOGGY_CAB: Cocktail = {
 	variations: [
 		{
 			name: 'Gimlet',
-			description: 'Classic cocktail. No soda water. Serve up.',
+			ingredients: ['Classic cocktail. No soda water. Serve up'],
 			images: []
 		},
 		{
 			name: 'Tom Collins',
-			description: 'Classic cocktail. Swap out the lime for lemon.',
+			ingredients: [
+				{
+					label: 'Classic cocktail. Swap out the lime for lemon.',
+					ingredient: Ingredients.Citrus.LEMON
+				}
+			],
 			images: []
 		},
 		{
 			name: 'Gin Rickey',
-			description: 'Classic cocktail. No simple syrup.',
+			ingredients: ['Classic cocktail. No simple syrup'],
 			images: []
 		},
 		{
 			name: 'Cabin-style',
-			description:
-				'Swap syrup for 1T sugar. Use 3/4 - 1 lime, shake with shells. Dump all into glass.',
+			ingredients: [
+				{
+					label: 'Swap syrup for 1T sugar.',
+					ingredient: Ingredients.Other.SUGAR
+				},
+				{
+					label: ' Use 3/4 - 1 lime, shake with shells. Dump all into glass.',
+					ingredient: Ingredients.Citrus.LIME_GARNISH
+				}
+			],
 			images: []
 		}
 	],

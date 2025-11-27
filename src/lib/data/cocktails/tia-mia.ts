@@ -47,7 +47,12 @@ const TIA_MIA: Cocktail = {
 	variations: [
 		{
 			name: 'Chili',
-			description: 'Add 1 dash smoked chili bitters',
+			ingredients: [
+				{
+					label: 'Add 1 dash smoked chili bitters.',
+					ingredient: Ingredients.Bitters.CHILI
+				}
+			],
 			images: []
 		}
 	],

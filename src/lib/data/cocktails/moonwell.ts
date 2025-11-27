@@ -48,27 +48,42 @@ const MOONWELL: Cocktail = {
 	variations: [
 		{
 			name: "Valden's",
-			description: 'Sub beer for soda water.',
+			ingredients: ['Sub beer for soda water.'],
 			images: ['/images/wow/race_nightelf_male.jpg', '/images/wow/class_hunter.jpg']
 		},
 		{
 			name: "Qweenanne's",
-			description: 'Sub tonic water for soda water.',
+			ingredients: [
+				{
+					label: 'Sub tonic water for soda water.',
+					ingredient: Ingredients.Mixers.TONIC_WATER
+				}
+			],
 			images: ['/images/wow/race_human_female.jpg', '/images/wow/class_warlock.jpg']
 		},
 		{
 			name: "Pounders'",
-			description: 'Sub gin for rum.',
+			ingredients: [
+				{
+					label: 'Sub gin for rum.',
+					ingredient: Ingredients.BaseSpirits.FORDS
+				}
+			],
 			images: ['/images/wow/race_nightelf_male.jpg', '/images/wow/class_hunter.jpg']
 		},
 		{
 			name: "Troker's",
-			description: 'Sub ginger beer for soda water.',
+			ingredients: [
+				{
+					label: 'Sub ginger beer for soda water.',
+					ingredient: Ingredients.Mixers.GINGER_BEER
+				}
+			],
 			images: ['/images/wow/race_nightelf_male.jpg', '/images/wow/class_rogue.jpg']
 		},
 		{
 			name: "Tippindeg's",
-			description: 'TBD',
+			ingredients: ['TBD'],
 			images: ['/images/wow/race_dwarf_male.jpg', '/images/wow/class_priest.jpg']
 		}
 	],

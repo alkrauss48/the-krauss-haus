@@ -6,7 +6,7 @@ import type { ServedIn } from '$lib/enums/served-in';
 
 export interface CocktailVariant {
 	name: string;
-	description: string;
+	ingredients?: (string | IngredientItem)[];
 	images: string[];
 }
 

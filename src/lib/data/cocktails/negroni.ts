@@ -35,12 +35,22 @@ const NEGRONI: Cocktail = {
 	variations: [
 		{
 			name: 'Kingston',
-			description: 'Sub Smith & Cross Jamaican Rum for gin.',
+			ingredients: [
+				{
+					label: 'Sub Smith & Cross Jamaican Rum for gin.',
+					ingredient: Ingredients.BaseSpirits.SMITH_AND_CROSS
+				}
+			],
 			images: []
 		},
 		{
 			name: 'Mezcal',
-			description: 'Sub mezcal for gin.',
+			ingredients: [
+				{
+					label: 'Sub mezcal for gin.',
+					ingredient: Ingredients.BaseSpirits.DEL_MAGUY_VIDA
+				}
+			],
 			images: []
 		}
 	],
