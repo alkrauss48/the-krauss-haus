@@ -24,7 +24,6 @@ const PIMMS_CUP: Cocktail = {
 			label: 'Sparkling lemonade',
 			ingredient: Ingredients.Mixers.SANPELLEGRINO_LIMONATA
 		},
-
 		{
 			label: 'Garnish: Orange',
 			ingredient: Ingredients.Citrus.ORANGE_GARNISH
@@ -37,7 +36,6 @@ const PIMMS_CUP: Cocktail = {
 		'Garnish: Cucumber'
 	],
 	tags: [
-		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.BUBBLY,

@@ -7,7 +7,7 @@ import { Tags } from '../all-tags';
 const NAVY_GROG: Cocktail = {
 	title: 'Navy Grog',
 	description:
-		'Dark jamaican rum, demerara rum, blended light rum, honey syrup, lime, grapefruit, soda water.',
+		'Jamaican rum, demerara rum, blended light rum, honey syrup, lime, grapefruit, soda water.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/navy-grog.png',
 	thumbnailImagePath:
@@ -17,16 +17,20 @@ const NAVY_GROG: Cocktail = {
 	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
-			amount: '1oz',
+			amount: '.75oz',
 			ingredient: Ingredients.BaseSpirits.CORUBA
 		},
 		{
-			amount: '1oz',
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+		},
+		{
+			amount: '.75oz',
 			ingredient: Ingredients.BaseSpirits.HAMILTON_86
 		},
 		{
-			amount: '1oz',
-			ingredient: Ingredients.BaseSpirits.PROBITAS
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
 		},
 		{
 			amount: '1oz',
