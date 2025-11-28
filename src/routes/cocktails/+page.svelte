@@ -27,10 +27,23 @@
 
 	// Filter cocktails based on search term, selected tags, and selected ingredients
 	$: filteredCocktails = cocktails.filter((cocktail) => {
-		// First filter by search term (search both title and description)
-		const matchesSearch =
-			cocktail.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			cocktail.description.toLowerCase().includes(searchTerm.toLowerCase());
+		// First filter by search term (search title, description, variant names, and variant ingredients)
+		const searchLower = searchTerm.toLowerCase();
+		const matchesTitle = cocktail.title.toLowerCase().includes(searchLower);
+		const matchesDescription = cocktail.description.toLowerCase().includes(searchLower);
+
+		// Check variant names and ingredients
+		let matchesVariants = false;
+		if (cocktail.variations && cocktail.variations.length > 0) {
+			matchesVariants = cocktail.variations.some((variant) => {
+				const matchesVariantName = variant.name.toLowerCase().includes(searchLower);
+				const variantIngredients = formatVariantIngredients(variant);
+				const matchesVariantIngredients = variantIngredients.toLowerCase().includes(searchLower);
+				return matchesVariantName || matchesVariantIngredients;
+			});
+		}
+
+		const matchesSearch = matchesTitle || matchesDescription || matchesVariants;
 
 		// Then filter by tags using the selected logic mode
 		const matchesTags = matchesTagsLogic(cocktail, selectedTags, logicMode);
