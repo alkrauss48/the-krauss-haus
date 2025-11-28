@@ -47,11 +47,15 @@ export const load: PageLoad = ({ url }) => {
 			? (decodedLogicParam as LogicMode)
 			: 'AND';
 
+	// Parse search term from URL query params
+	const searchTerm = url.searchParams.get('search') || '';
+
 	return {
 		cocktails: allCocktails,
 		selectedTags,
 		selectedIngredients,
-		logicMode
+		logicMode,
+		searchTerm
 	};
 };
 

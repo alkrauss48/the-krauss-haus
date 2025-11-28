@@ -8,6 +8,7 @@
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/stores';
+	import { browser } from '$app/environment';
 	import { allTagCategories } from '$lib/data/all-tags';
 	import { allIngredientCategories } from '$lib/data/all-ingredients';
 	import type { Tag } from '$lib/types/tags';
@@ -19,7 +20,7 @@
 	export let data: PageData;
 	const { cocktails } = data;
 
-	let searchTerm = '';
+	let searchTerm = data.searchTerm || '';
 	let selectedTags: Tag[] = data.selectedTags || [];
 	let selectedIngredients: Ingredient[] = data.selectedIngredients || [];
 	let logicMode: LogicMode = data.logicMode || 'AND';
@@ -124,6 +125,13 @@
 	function updateURL(): void {
 		const url = new URL($page.url);
 
+		// Update search term param
+		if (searchTerm.trim()) {
+			url.searchParams.set('search', searchTerm.trim());
+		} else {
+			url.searchParams.delete('search');
+		}
+
 		// Clear all existing tag-related params
 		allTagCategories.forEach((category) => {
 			const categoryKey = categoryToUrlKey(category.label);
@@ -187,6 +195,27 @@
 
 		goto(resolve(`${url.pathname}${url.search}`), { replaceState: true, noScroll: true });
 	}
+
+	// Update only the search URL param without triggering navigation
+	function updateSearchURL(): void {
+		if (!browser) return;
+
+		const url = new URL($page.url);
+		if (searchTerm.trim()) {
+			url.searchParams.set('search', searchTerm.trim());
+		} else {
+			url.searchParams.delete('search');
+		}
+
+		// Use History API directly to avoid re-renders
+		const newUrl = `${url.pathname}${url.search}`;
+		window.history.replaceState({}, '', newUrl);
+	}
+
+	// Handle search input changes
+	function handleSearchInput(): void {
+		updateSearchURL();
+	}
 </script>
 
 <svelte:head>
@@ -222,6 +251,7 @@
 								id="cocktail-search"
 								type="text"
 								bind:value={searchTerm}
+								on:input={handleSearchInput}
 								placeholder="Search by name or description..."
 								class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white shadow-sm"
 							/>
