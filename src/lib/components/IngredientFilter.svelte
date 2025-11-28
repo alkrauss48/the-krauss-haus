@@ -11,6 +11,7 @@
 	import type { LogicMode } from '$lib/types/filters';
 	import { allIngredientCategories } from '$lib/data/all-ingredients';
 	import { matchesIngredientsLogic } from '$lib/utils/filterLogic';
+	import { getCocktailIngredientSlugs } from '$lib/utils/ingredients';
 
 	export let cocktails: Cocktail[] = [];
 	export let selectedIngredients: Ingredient[] = [];
@@ -32,17 +33,14 @@
 	// Pre-compute selected ingredient slugs Set for O(1) lookups
 	$: selectedIngredientSlugs = new SvelteSet(selectedIngredients.map((i) => i.slug));
 
-	// Pre-compute all ingredient slugs used in cocktails (computed once when cocktails change)
+	// Pre-compute all ingredient slugs used in cocktails (including variants)
+	// Computed once when cocktails change
 	$: allIngredientSlugs = (() => {
 		const slugs = new SvelteSet<string>();
 		for (const cocktail of cocktails) {
-			if (!cocktail.ingredients) continue;
-			for (const ingredient of cocktail.ingredients) {
-				if (typeof ingredient === 'string') continue;
-				if ('ingredient' in ingredient && ingredient.ingredient?.slug) {
-					slugs.add(ingredient.ingredient.slug);
-				}
-			}
+			// Get all ingredient slugs from this cocktail (including variants)
+			const cocktailSlugs = getCocktailIngredientSlugs(cocktail);
+			cocktailSlugs.forEach((slug) => slugs.add(slug));
 		}
 		return slugs;
 	})();

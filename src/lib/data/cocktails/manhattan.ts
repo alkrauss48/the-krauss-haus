@@ -35,7 +35,12 @@ const MANHATTAN: Cocktail = {
 	variations: [
 		{
 			name: 'Black',
-			description: 'Sub Amaro Lucano for sweet vermouth.',
+			ingredients: [
+				{
+					label: 'Sub Amaro Lucano for sweet vermouth.',
+					ingredient: Ingredients.Liqueurs.AMARO_LUCANO
+				}
+			],
 			images: []
 		}
 	],

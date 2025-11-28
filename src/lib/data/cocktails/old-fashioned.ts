@@ -35,17 +35,31 @@ const OLD_FASHIONED: Cocktail = {
 	variations: [
 		{
 			name: 'Smoked',
-			description: 'Served in a smoked glass.',
+			ingredients: ['Served in a smoked glass'],
 			images: []
 		},
 		{
 			name: 'Muddled',
-			description: 'Muddle extra orange slice and maraschino cherry.',
+			ingredients: [
+				{
+					label: 'Muddle extra orange slice.',
+					ingredient: Ingredients.Citrus.ORANGE_GARNISH
+				},
+				{
+					label: 'Muddle maraschino cherry.',
+					ingredient: Ingredients.Other.MARASCHINO_CHERRY
+				}
+			],
 			images: []
 		},
 		{
 			name: 'Rum',
-			description: 'Sub Aged rhum agricole for bourbon.',
+			ingredients: [
+				{
+					label: 'Sub aged rhum agricole for bourbon.',
+					ingredient: Ingredients.BaseSpirits.CLEMENT_SELECT_BARREL
+				}
+			],
 			images: []
 		}
 	],

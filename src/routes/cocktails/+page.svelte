@@ -8,17 +8,19 @@
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/stores';
+	import { browser } from '$app/environment';
 	import { allTagCategories } from '$lib/data/all-tags';
 	import { allIngredientCategories } from '$lib/data/all-ingredients';
 	import type { Tag } from '$lib/types/tags';
 	import type { Ingredient } from '$lib/types/ingredients';
 	import type { LogicMode } from '$lib/types/filters';
 	import { matchesTagsLogic, matchesIngredientsLogic } from '$lib/utils/filterLogic';
+	import { formatVariantIngredients } from '$lib/utils/ingredients';
 
 	export let data: PageData;
 	const { cocktails } = data;
 
-	let searchTerm = '';
+	let searchTerm = data.searchTerm || '';
 	let selectedTags: Tag[] = data.selectedTags || [];
 	let selectedIngredients: Ingredient[] = data.selectedIngredients || [];
 	let logicMode: LogicMode = data.logicMode || 'AND';
@@ -26,10 +28,23 @@
 
 	// Filter cocktails based on search term, selected tags, and selected ingredients
 	$: filteredCocktails = cocktails.filter((cocktail) => {
-		// First filter by search term (search both title and description)
-		const matchesSearch =
-			cocktail.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			cocktail.description.toLowerCase().includes(searchTerm.toLowerCase());
+		// First filter by search term (search title, description, variant names, and variant ingredients)
+		const searchLower = searchTerm.toLowerCase();
+		const matchesTitle = cocktail.title.toLowerCase().includes(searchLower);
+		const matchesDescription = cocktail.description.toLowerCase().includes(searchLower);
+
+		// Check variant names and ingredients
+		let matchesVariants = false;
+		if (cocktail.variations && cocktail.variations.length > 0) {
+			matchesVariants = cocktail.variations.some((variant) => {
+				const matchesVariantName = variant.name.toLowerCase().includes(searchLower);
+				const variantIngredients = formatVariantIngredients(variant);
+				const matchesVariantIngredients = variantIngredients.toLowerCase().includes(searchLower);
+				return matchesVariantName || matchesVariantIngredients;
+			});
+		}
+
+		const matchesSearch = matchesTitle || matchesDescription || matchesVariants;
 
 		// Then filter by tags using the selected logic mode
 		const matchesTags = matchesTagsLogic(cocktail, selectedTags, logicMode);
@@ -110,6 +125,13 @@
 	function updateURL(): void {
 		const url = new URL($page.url);
 
+		// Update search term param
+		if (searchTerm.trim()) {
+			url.searchParams.set('search', searchTerm.trim());
+		} else {
+			url.searchParams.delete('search');
+		}
+
 		// Clear all existing tag-related params
 		allTagCategories.forEach((category) => {
 			const categoryKey = categoryToUrlKey(category.label);
@@ -173,6 +195,27 @@
 
 		goto(resolve(`${url.pathname}${url.search}`), { replaceState: true, noScroll: true });
 	}
+
+	// Update only the search URL param without triggering navigation
+	function updateSearchURL(): void {
+		if (!browser) return;
+
+		const url = new URL($page.url);
+		if (searchTerm.trim()) {
+			url.searchParams.set('search', searchTerm.trim());
+		} else {
+			url.searchParams.delete('search');
+		}
+
+		// Use History API directly to avoid re-renders
+		const newUrl = `${url.pathname}${url.search}`;
+		window.history.replaceState({}, '', newUrl);
+	}
+
+	// Handle search input changes
+	function handleSearchInput(): void {
+		updateSearchURL();
+	}
 </script>
 
 <svelte:head>
@@ -208,6 +251,7 @@
 								id="cocktail-search"
 								type="text"
 								bind:value={searchTerm}
+								on:input={handleSearchInput}
 								placeholder="Search by name or description..."
 								class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white shadow-sm"
 							/>
@@ -392,57 +436,112 @@
 					{#each filteredCocktails as cocktail (cocktail.slug)}
 						<div
 							class="px-6 py-4 hover:bg-gray-50 cursor-pointer transition-colors duration-200 focus-within:bg-gray-50"
+							class:pb-0={cocktail.variations && cocktail.variations.length > 0}
 							role="button"
 							tabindex="0"
 							on:click={() => navigateToCocktail(cocktail.slug)}
 							on:keydown={(e) => handleKeydown(e, cocktail.slug)}
 						>
-							<div class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center">
-								<!-- Image -->
-								<div class="col-span-3 md:col-span-2">
-									<div
-										class="w-16 h-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg overflow-hidden shadow-sm"
-									>
-										<img
-											src={cocktail.thumbnailImagePath}
-											alt={cocktail.title}
-											loading="lazy"
-											class="w-full h-full object-contain p-2"
-										/>
+							<div>
+								<div class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center">
+									<!-- Image -->
+									<div class="col-span-3 md:col-span-2">
+										<div
+											class="w-16 h-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg overflow-hidden shadow-sm"
+										>
+											<img
+												src={cocktail.thumbnailImagePath}
+												alt={cocktail.title}
+												loading="lazy"
+												class="w-full h-full object-contain p-2"
+											/>
+										</div>
+									</div>
+
+									<!-- Name -->
+									<div class="col-span-5 md:col-span-3">
+										<h3 class="font-semibold text-gray-800 text-lg">{cocktail.title}</h3>
+										<!-- Show description under name on mobile only -->
+										<p
+											class="text-gray-600 text-sm leading-relaxed mt-1 md:hidden mobile-line-clamp-2"
+										>
+											{cocktail.description}
+										</p>
+									</div>
+
+									<!-- Description -->
+									<div class="col-span-5 hidden md:block">
+										<p class="text-gray-600 text-sm leading-relaxed line-clamp-2">
+											{cocktail.description}
+										</p>
+									</div>
+
+									<!-- Method -->
+									<div class="col-span-3 hidden sm:block md:col-span-2">
+										{#if cocktail.method}
+											<span
+												class="inline-block px-3 py-1 text-xs font-medium rounded-full text-gray-800"
+												style="background-color: {methodColors[cocktail.method]};"
+											>
+												{cocktail.method.charAt(0).toUpperCase() + cocktail.method.slice(1)}
+											</span>
+										{:else}
+											<span class="text-gray-400 text-sm">—</span>
+										{/if}
 									</div>
 								</div>
 
-								<!-- Name -->
-								<div class="col-span-5 md:col-span-3">
-									<h3 class="font-semibold text-gray-800 text-lg">{cocktail.title}</h3>
-									<!-- Show description under name on mobile only -->
-									<p
-										class="text-gray-600 text-sm leading-relaxed mt-1 md:hidden mobile-line-clamp-2"
+								<!-- Variants Sub-section -->
+								{#if cocktail.variations && cocktail.variations.length > 0}
+									<div
+										class="mt-3 pt-3 pb-4 border-t border-gray-100 bg-gray-50/50 rounded-md -mx-6 px-6 py-2 border-l-2 border-l-amber-200"
 									>
-										{cocktail.description}
-									</p>
-								</div>
+										<div class="space-y-2">
+											{#each cocktail.variations as variant, index (variant.name)}
+												<div
+													class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center"
+												>
+													<!-- Empty spacer for image column -->
+													<div class="col-span-3 md:col-span-2">
+														{#if index === 0}
+															<span
+																class="text-xs font-medium text-gray-400 uppercase tracking-wide"
+																>Variants</span
+															>
+														{/if}
+													</div>
 
-								<!-- Description -->
-								<div class="col-span-5 hidden md:block">
-									<p class="text-gray-600 text-sm leading-relaxed line-clamp-2">
-										{cocktail.description}
-									</p>
-								</div>
+													<!-- Variant Name (aligned with cocktail name) -->
+													<div class="col-span-5 md:col-span-3">
+														<span class="text-sm font-medium text-gray-500">{variant.name}</span>
+														<!-- Show variant ingredients under name on mobile only -->
+														{#if formatVariantIngredients(variant)}
+															<p
+																class="text-gray-400 italic text-xs leading-relaxed mt-0.5 md:hidden"
+															>
+																{formatVariantIngredients(variant)}
+															</p>
+														{/if}
+													</div>
 
-								<!-- Method -->
-								<div class="col-span-3 hidden sm:block md:col-span-2">
-									{#if cocktail.method}
-										<span
-											class="inline-block px-3 py-1 text-xs font-medium rounded-full text-gray-800"
-											style="background-color: {methodColors[cocktail.method]};"
-										>
-											{cocktail.method.charAt(0).toUpperCase() + cocktail.method.slice(1)}
-										</span>
-									{:else}
-										<span class="text-gray-400 text-sm">—</span>
-									{/if}
-								</div>
+													<!-- Variant Ingredients (aligned with cocktail description) -->
+													<div class="col-span-5 hidden md:block">
+														{#if formatVariantIngredients(variant)}
+															<p class="text-gray-400 italic text-xs leading-relaxed">
+																{formatVariantIngredients(variant)}
+															</p>
+														{:else}
+															<p class="text-gray-400 italic text-xs">No ingredients listed</p>
+														{/if}
+													</div>
+
+													<!-- Empty spacer for method column -->
+													<div class="col-span-3 hidden sm:block md:col-span-2"></div>
+												</div>
+											{/each}
+										</div>
+									</div>
+								{/if}
 							</div>
 						</div>
 					{/each}

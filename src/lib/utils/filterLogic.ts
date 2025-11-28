@@ -2,6 +2,7 @@ import type { Tag } from '$lib/types/tags';
 import type { Ingredient } from '$lib/types/ingredients';
 import type { Cocktail } from '$lib/types/cocktails';
 import type { LogicMode } from '$lib/types/filters';
+import { getCocktailIngredientSlugs } from '$lib/utils/ingredients';
 
 /**
  * Check if a cocktail matches tags based on logic mode
@@ -31,7 +32,8 @@ export function matchesTagsLogic(cocktail: Cocktail, tags: Tag[], mode: LogicMod
 }
 
 /**
- * Check if a cocktail matches ingredients based on logic mode
+ * Check if a cocktail matches ingredients based on logic mode.
+ * Includes ingredients from both main cocktail ingredients and variants.
  */
 export function matchesIngredientsLogic(
 	cocktail: Cocktail,
@@ -40,18 +42,13 @@ export function matchesIngredientsLogic(
 ): boolean {
 	if (ingredients.length === 0) return true;
 
-	// If cocktail has no ingredients, it can't match any selected ingredients
-	// For NOT modes, this means it should be included (doesn't match exclusion criteria)
-	if (!cocktail.ingredients) {
-		return mode === 'NOT AND' || mode === 'NOT OR';
-	}
+	// Get all ingredient slugs from the cocktail (including variants)
+	const cocktailIngredientSlugs = getCocktailIngredientSlugs(cocktail);
 
-	const cocktailIngredientSlugs = new Set<string>();
-	for (const item of cocktail.ingredients) {
-		if (typeof item === 'string') continue;
-		if ('ingredient' in item && item.ingredient?.slug) {
-			cocktailIngredientSlugs.add(item.ingredient.slug);
-		}
+	// If cocktail has no ingredients (including variants), it can't match any selected ingredients
+	// For NOT modes, this means it should be included (doesn't match exclusion criteria)
+	if (cocktailIngredientSlugs.size === 0) {
+		return mode === 'NOT AND' || mode === 'NOT OR';
 	}
 
 	const selectedIngredientSlugs = ingredients.map((ingredient) => ingredient.slug);

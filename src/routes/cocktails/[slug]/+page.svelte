@@ -7,7 +7,7 @@
 	import { fade, fly } from 'svelte/transition';
 
 	import type { Tag } from '$lib/types/tags';
-	import { getIngredientDisplayName } from '$lib/utils/ingredients';
+	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
 
 	// Import menu data to check which menus contain this cocktail
 	import {
@@ -225,7 +225,9 @@
 							{#each cocktail.variations as variation (variation.name)}
 								<div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
 									<h3 class="font-semibold text-gray-800 mb-2">{variation.name}</h3>
-									<p class="text-gray-600 text-sm">{variation.description}</p>
+									{#if formatVariantIngredients(variation)}
+										<p class="text-gray-600 text-sm">{formatVariantIngredients(variation)}</p>
+									{/if}
 									{#if variation.images && variation.images.length > 0}
 										<div class="flex gap-2 mt-3">
 											{#each variation.images as image (image)}

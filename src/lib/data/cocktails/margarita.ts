@@ -43,7 +43,12 @@ const MARGARITA: Cocktail = {
 	variations: [
 		{
 			name: 'Spicy',
-			description: 'Swap .5oz of tequila with jalepeño infused tequila.',
+			ingredients: [
+				{
+					label: 'Swap .5oz of tequila with jalepeño infused tequila.',
+					ingredient: Ingredients.BaseSpirits.JALAPENO_TEQUILA
+				}
+			],
 			images: []
 		}
 	],
