@@ -50,6 +50,16 @@ const MARGARITA: Cocktail = {
 				}
 			],
 			images: []
+		},
+		{
+			name: 'Mezcal',
+			ingredients: [
+				{
+					label: 'Swap tequila with 1.5oz mezcal.',
+					ingredient: Ingredients.BaseSpirits.DEL_MAGUY_VIDA
+				}
+			],
+			images: []
 		}
 	],
 	tags: [

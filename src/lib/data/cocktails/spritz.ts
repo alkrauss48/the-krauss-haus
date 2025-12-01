@@ -32,6 +32,18 @@ const SPRITZ: Cocktail = {
 			ingredient: Ingredients.Citrus.ORANGE_GARNISH
 		}
 	],
+	variations: [
+		{
+			name: 'Limoncello',
+			ingredients: [
+				{
+					label: 'Swap Aperol with Limoncello.',
+					ingredient: Ingredients.Liqueurs.LIMONCELLO
+				}
+			],
+			images: []
+		}
+	],
 	tags: [
 		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.BUBBLY,

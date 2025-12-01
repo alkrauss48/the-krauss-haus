@@ -52,6 +52,16 @@ const NEGRONI: Cocktail = {
 				}
 			],
 			images: []
+		},
+		{
+			name: 'Sbagliato',
+			ingredients: [
+				{
+					label: 'Sub gin for prosecco.',
+					ingredient: Ingredients.BeerAndWine.PROSECCO
+				}
+			],
+			images: []
 		}
 	],
 	tags: [
