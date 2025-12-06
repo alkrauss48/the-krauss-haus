@@ -2,10 +2,13 @@ import type { Cocktail } from '$lib/types/cocktails';
 
 // Import all cocktail data
 import AMARETTO_SOUR from '$lib/data/cocktails/amaretto-sour';
+import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
 import BATANGA from '$lib/data/cocktails/batanga';
+import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
+import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
 import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
@@ -65,6 +68,7 @@ import TI_PUNCH from '$lib/data/cocktails/ti-punch';
 import TIA_MIA from '$lib/data/cocktails/tia-mia';
 import TOM_AND_JERRY from '$lib/data/cocktails/tom-and-jerry';
 import TORONTO from '$lib/data/cocktails/toronto';
+import TRINIDAD_SOUR from '$lib/data/cocktails/trinidad-sour';
 import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
 import WHISKEY_SOUR from '$lib/data/cocktails/whiskey-sour';
 import ZOMBIE from '$lib/data/cocktails/zombie';
@@ -72,10 +76,13 @@ import ZOMBIE from '$lib/data/cocktails/zombie';
 // Create array of all cocktails (sorted alphabetically)
 export const allCocktails: Cocktail[] = [
 	AMARETTO_SOUR,
+	AMERICANO,
 	ANCIENT_MARINER,
 	BATANGA,
+	BOULEVARDIER,
 	CAIPIRINHA,
 	CARAMEL_APPLE_SPICE,
+	CHOCOLATE_COVERED_CHERRIES,
 	COBRAS_FANG,
 	CUBA_LIBRE,
 	DAIQUIRI,
@@ -135,6 +142,7 @@ export const allCocktails: Cocktail[] = [
 	TIA_MIA,
 	TOM_AND_JERRY,
 	TORONTO,
+	TRINIDAD_SOUR,
 	VIEUX_CARRE,
 	WHISKEY_SOUR,
 	ZOMBIE
