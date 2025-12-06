@@ -45,6 +45,10 @@ const HONEY_GINGER_SYRUP: Ingredient = {
 	slug: 'honey-ginger-syrup',
 	recipe: HONEY_GINGER_SYRUP_RECIPE
 };
+const MARASCHINO_CHERRY_SYRUP: Ingredient = {
+	title: 'Maraschino Cherry Syrup',
+	slug: 'maraschino-cherry-syrup'
+};
 const MINT_SYRUP: Ingredient = {
 	title: 'Mint Syrup',
 	slug: 'mint-syrup',
@@ -81,6 +85,7 @@ export const SYRUPS: IngredientCategory = {
 				GRENADINE,
 				HONEY_SYRUP,
 				HONEY_GINGER_SYRUP,
+				MARASCHINO_CHERRY_SYRUP,
 				MINT_SYRUP,
 				ORGEAT,
 				PASSIONFRUIT_SYRUP,
@@ -98,6 +103,7 @@ export const INGREDIENTS = {
 	GRENADINE,
 	HONEY_SYRUP,
 	HONEY_GINGER_SYRUP,
+	MARASCHINO_CHERRY_SYRUP,
 	MINT_SYRUP,
 	ORGEAT,
 	PASSIONFRUIT_SYRUP,

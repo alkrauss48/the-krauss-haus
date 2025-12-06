@@ -42,7 +42,7 @@ const FOREST_SPIRIT: Cocktail = {
 			ingredient: Ingredients.Bitters.ORANGE
 		},
 		{
-			amount: '1-2 oz',
+			amount: '3-4 oz',
 			ingredient: Ingredients.Mixers.SODA_WATER
 		},
 		{
@@ -62,9 +62,8 @@ const FOREST_SPIRIT: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.BUBBLY,
-		Tags.AlcoholLevel.LOW,
 		Tags.Technique.SHAKEN,
-		Tags.Style.SOUR,
+		Tags.Style.HIGHBALL,
 		Tags.Origin.ORIGINAL,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
