@@ -100,6 +100,10 @@ const GOLDSCHLAGER: Ingredient = {
 };
 
 // Floral, Coffee & Specialty
+const CREME_DE_CACAO: Ingredient = {
+	title: 'Crème de Cacao',
+	slug: 'creme-de-cacao'
+};
 const EGGNOG: Ingredient = {
 	title: 'Eggnog',
 	slug: 'eggnog'
@@ -153,7 +157,14 @@ export const LIQUEURS: IngredientCategory = {
 		},
 		{
 			label: 'Floral, Coffee & Specialty',
-			ingredients: [EGGNOG, ELDERFLOWER_LIQUEUR, ITALICUS, MR_BLACK, PERSIAN_SPICE_LIQUEUR]
+			ingredients: [
+				CREME_DE_CACAO,
+				EGGNOG,
+				ELDERFLOWER_LIQUEUR,
+				ITALICUS,
+				MR_BLACK,
+				PERSIAN_SPICE_LIQUEUR
+			]
 		}
 	]
 };
@@ -187,6 +198,7 @@ export const INGREDIENTS = {
 	LAZZARONI,
 
 	// Floral, Coffee & Specialty
+	CREME_DE_CACAO,
 	EGGNOG,
 	ELDERFLOWER_LIQUEUR,
 	ITALICUS,
