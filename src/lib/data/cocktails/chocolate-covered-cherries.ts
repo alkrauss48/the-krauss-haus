@@ -13,7 +13,7 @@ const CHOCOLATE_COVERED_CHERRIES: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/chocolate-covered-cherries.png',
 	slug: 'chocolate-covered-cherries',
-	method: CocktailMethod.Built,
+	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
@@ -44,9 +44,9 @@ const CHOCOLATE_COVERED_CHERRIES: Cocktail = {
 	notes: "We first experienced this cocktail at Teller's in OKC for our 7th anniversary.",
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
-		Tags.Technique.BUILT,
+		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
-		Tags.Origin.MODERN,
+		Tags.AlcoholLevel.HIGH,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
