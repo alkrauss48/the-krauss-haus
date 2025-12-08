@@ -2,6 +2,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 
 // Import all cocktail data
 import AMARETTO_SOUR from '$lib/data/cocktails/amaretto-sour';
+import AMERICAN_TRILOGY from '$lib/data/cocktails/american-trilogy';
 import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
 import BATANGA from '$lib/data/cocktails/batanga';
@@ -10,6 +11,7 @@ import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
+import COSMOPOLITAN from '$lib/data/cocktails/cosmopolitan';
 import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
@@ -29,6 +31,7 @@ import JACK_ROSE from '$lib/data/cocktails/jack-rose';
 import JET_PILOT from '$lib/data/cocktails/jet-pilot';
 import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
 import LAST_WORD from '$lib/data/cocktails/last-word';
+import LEMON_DROP from '$lib/data/cocktails/lemon-drop';
 import LOGGY_CAB from '$lib/data/cocktails/loggy-cab';
 import MAI_TAI from '$lib/data/cocktails/mai-tai';
 import MANHATTAN from '$lib/data/cocktails/manhattan';
@@ -55,6 +58,7 @@ import PORT_LIGHT from '$lib/data/cocktails/port-light';
 import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
+import SALTY_DOG from '$lib/data/cocktails/salty-dog';
 import SANGRIA from '$lib/data/cocktails/sangria';
 import SATURN from '$lib/data/cocktails/saturn';
 import SAZERAC from '$lib/data/cocktails/sazerac';
@@ -76,6 +80,7 @@ import ZOMBIE from '$lib/data/cocktails/zombie';
 // Create array of all cocktails (sorted alphabetically)
 export const allCocktails: Cocktail[] = [
 	AMARETTO_SOUR,
+	AMERICAN_TRILOGY,
 	AMERICANO,
 	ANCIENT_MARINER,
 	BATANGA,
@@ -84,6 +89,7 @@ export const allCocktails: Cocktail[] = [
 	CARAMEL_APPLE_SPICE,
 	CHOCOLATE_COVERED_CHERRIES,
 	COBRAS_FANG,
+	COSMOPOLITAN,
 	CUBA_LIBRE,
 	DAIQUIRI,
 	DIVISION_BELL,
@@ -103,6 +109,7 @@ export const allCocktails: Cocktail[] = [
 	JET_PILOT,
 	JUNGLE_BIRD,
 	LAST_WORD,
+	LEMON_DROP,
 	LOGGY_CAB,
 	MAI_TAI,
 	MANHATTAN,
@@ -129,6 +136,7 @@ export const allCocktails: Cocktail[] = [
 	RADLER,
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,
+	SALTY_DOG,
 	SANGRIA,
 	SATURN,
 	SAZERAC,

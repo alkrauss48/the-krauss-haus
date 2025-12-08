@@ -1,7 +1,8 @@
 import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
-import JALAPENO_TEQUILA_RECIPE from '$lib/data/recipes/jalapeno-tequila';
 import CARAMEL_VODKA_RECIPE from '$lib/data/recipes/caramel-vodka';
+import CITRON_VODKA_RECIPE from '$lib/data/recipes/citron-vodka';
+import JALAPENO_TEQUILA_RECIPE from '$lib/data/recipes/jalapeno-tequila';
 import PEPPERMINT_VODKA_RECIPE from '$lib/data/recipes/peppermint-vodka';
 
 // Rum
@@ -145,6 +146,11 @@ const CARAMEL_VODKA: Ingredient = {
 	slug: 'caramel-vodka',
 	recipe: CARAMEL_VODKA_RECIPE
 };
+const CITRON_VODKA: Ingredient = {
+	title: 'Citron Vodka',
+	slug: 'citron-vodka',
+	recipe: CITRON_VODKA_RECIPE
+};
 const PEPPERMINT_VODKA: Ingredient = {
 	title: 'Peppermint Vodka',
 	slug: 'peppermint-vodka',
@@ -194,7 +200,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		},
 		{
 			label: 'Neutral Spirits',
-			ingredients: [MONOPOLOWA, CARAMEL_VODKA, PEPPERMINT_VODKA, ABSINTHE]
+			ingredients: [MONOPOLOWA, CARAMEL_VODKA, CITRON_VODKA, PEPPERMINT_VODKA, ABSINTHE]
 		}
 	]
 };
@@ -237,6 +243,7 @@ export const INGREDIENTS = {
 	// Neutral Spirits
 	MONOPOLOWA,
 	CARAMEL_VODKA,
+	CITRON_VODKA,
 	PEPPERMINT_VODKA,
 	ABSINTHE
 };

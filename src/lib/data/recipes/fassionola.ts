@@ -3,7 +3,7 @@ import type { Recipe } from '$lib/types/recipes';
 const FASSIONOLA: Recipe = {
 	name: 'Fassionola',
 	slug: 'fassionola',
-	description: 'A tropical fruit syrup with a complex blend of flavors',
+	description: 'A tropical fruit syrup with a complex blend of flavors.',
 	ingredients: [
 		'1 lb strawberries, cut in small pieces (~415g)',
 		'1 pint blueberries, lightly muddled (~318g)',

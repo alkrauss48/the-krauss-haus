@@ -3,7 +3,7 @@ import type { Recipe } from '$lib/types/recipes';
 const LIMONCELLO: Recipe = {
 	name: 'Limoncello',
 	slug: 'limoncello',
-	description: 'A classic Italian liqueur made from lemons',
+	description: 'A classic Italian liqueur made from lemons.',
 	ingredients: [
 		'Peels from 5 lemons, unwaxed (no white pithe)',
 		'1C Everclear (95% ABV grain liquor)',

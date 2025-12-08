@@ -3,7 +3,7 @@ import type { Recipe } from '$lib/types/recipes';
 const DEMERARA_SYRUP: Recipe = {
 	name: 'Demerara Syrup',
 	slug: 'demerara-syrup',
-	description: 'Made with demerara sugar for a rich, molasses-like sweetness',
+	description: 'Made with demerara sugar for a rich, molasses-like sweetness.',
 	ingredients: ['2 parts (by weight) demerara sugar', '1 part (by weight) water'],
 	instructions:
 		'Combine demerara sugar and water in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves completely. Do not boil. Let cool and store in an airtight container in the refrigerator.',

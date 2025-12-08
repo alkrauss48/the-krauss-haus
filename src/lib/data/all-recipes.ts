@@ -16,12 +16,14 @@ import TOM_AND_JERRY_BATTER from '$lib/data/recipes/tom-and-jerry-batter';
 
 // Import all infusion recipes
 import CARAMEL_VODKA from '$lib/data/recipes/caramel-vodka';
+import CITRON_VODKA from '$lib/data/recipes/citron-vodka';
 import FALERNUM from '$lib/data/recipes/falernum';
 import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
 import LIMONCELLO from '$lib/data/recipes/limoncello';
 import PEPPERMINT_VODKA from '$lib/data/recipes/peppermint-vodka';
-import PERSIAN_SPICE_LIQUEUR from './recipes/persian-spice-liqueur';
-import SPICED_TEA from './recipes/spiced-tea';
+import PERSIAN_SPICE_LIQUEUR from '$lib/data/recipes/persian-spice-liqueur';
+import SPICED_TEA from '$lib/data/recipes/spiced-tea';
+import CRANBERRY_CORDIAL from '$lib/data/recipes/cranberry-cordial';
 
 // Syrups (excluding Caramel Syrup and Tom and Jerry Batter which go to "Other")
 export const syrups: Recipe[] = [
@@ -41,6 +43,7 @@ export const syrups: Recipe[] = [
 // Infusions
 export const infusions: Recipe[] = [
 	CARAMEL_VODKA,
+	CITRON_VODKA,
 	FALERNUM,
 	JALAPENO_TEQUILA,
 	LIMONCELLO,
@@ -49,7 +52,7 @@ export const infusions: Recipe[] = [
 ];
 
 // Other recipes (special category for Caramel Syrup and Tom and Jerry Batter)
-export const other: Recipe[] = [SPICED_TEA, TOM_AND_JERRY_BATTER];
+export const other: Recipe[] = [CRANBERRY_CORDIAL, SPICED_TEA, TOM_AND_JERRY_BATTER];
 
 /**
  * Recipe filter categories

@@ -494,7 +494,7 @@
 								<!-- Variants Sub-section -->
 								{#if cocktail.variations && cocktail.variations.length > 0}
 									<div
-										class="mt-3 pt-3 pb-4 border-t border-gray-100 bg-gray-50/50 rounded-md -mx-6 px-6 py-2 border-l-2 border-l-amber-200"
+										class="mt-3 pt-3 pb-4 border-t border-gray-100 bg-gray-50/50 -mx-6 px-6 py-2 border-l-2 border-l-amber-200"
 									>
 										<div class="space-y-2">
 											{#each cocktail.variations as variant, index (variant.name)}

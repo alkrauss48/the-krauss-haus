@@ -3,7 +3,7 @@ import type { Recipe } from '$lib/types/recipes';
 const HONEY_GINGER_SYRUP: Recipe = {
 	name: 'Honey-Ginger Syrup',
 	slug: 'honey-ginger-syrup',
-	description: 'Honey syrup infused with fresh ginger for a spicy kick',
+	description: 'Honey syrup infused with fresh ginger for a spicy kick.',
 	ingredients: [
 		'1/2 cup honey',
 		'1/2 cup hot water',
