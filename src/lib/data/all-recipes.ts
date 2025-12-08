@@ -16,6 +16,7 @@ import TOM_AND_JERRY_BATTER from '$lib/data/recipes/tom-and-jerry-batter';
 
 // Import all infusion recipes
 import CARAMEL_VODKA from '$lib/data/recipes/caramel-vodka';
+import CITRON_VODKA from '$lib/data/recipes/citron-vodka';
 import FALERNUM from '$lib/data/recipes/falernum';
 import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
 import LIMONCELLO from '$lib/data/recipes/limoncello';
@@ -42,6 +43,7 @@ export const syrups: Recipe[] = [
 // Infusions
 export const infusions: Recipe[] = [
 	CARAMEL_VODKA,
+	CITRON_VODKA,
 	FALERNUM,
 	JALAPENO_TEQUILA,
 	LIMONCELLO,
