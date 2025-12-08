@@ -1,7 +1,13 @@
 import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
+import CRANBERRY_CORDIAL_RECIPE from '$lib/data/recipes/cranberry-cordial';
 import TOM_AND_JERRY_BATTER_RECIPE from '$lib/data/recipes/tom-and-jerry-batter';
 
+const CRANBERRY_CORDIAL: Ingredient = {
+	title: 'Cranberry Cordial',
+	slug: 'cranberry-cordial',
+	recipe: CRANBERRY_CORDIAL_RECIPE
+};
 const CREAM_OF_COCONUT: Ingredient = {
 	title: 'Cream of Coconut',
 	slug: 'cream-of-coconut'
@@ -48,6 +54,7 @@ export const OTHER: IngredientCategory = {
 		{
 			label: 'Default',
 			ingredients: [
+				CRANBERRY_CORDIAL,
 				CREAM_OF_COCONUT,
 				EGG,
 				ESPRESSO,
@@ -63,6 +70,7 @@ export const OTHER: IngredientCategory = {
 };
 
 export const INGREDIENTS = {
+	CRANBERRY_CORDIAL,
 	CREAM_OF_COCONUT,
 	EGG,
 	ESPRESSO,
