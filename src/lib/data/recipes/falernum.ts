@@ -3,7 +3,7 @@ import type { Recipe } from '$lib/types/recipes';
 const FALERNUM: Recipe = {
 	name: 'Falernum',
 	slug: 'falernum',
-	description: 'A spiced liqueur with notes of ginger, clove, and lime',
+	description: 'A spiced liqueur with notes of ginger, clove, and lime.',
 	ingredients: [
 		'8 oz overproof rum (like Planteray OFTD)',
 		'12 limes zested (not juiced)',

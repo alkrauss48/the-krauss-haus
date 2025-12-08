@@ -3,7 +3,7 @@ import type { Recipe } from '$lib/types/recipes';
 const MINT_SYRUP: Recipe = {
 	name: 'Mint Syrup',
 	slug: 'mint-syrup',
-	description: 'Simple syrup infused with fresh mint',
+	description: 'Simple syrup infused with fresh mint.',
 	ingredients: [
 		'20g spearmint, including leaves and stems (bottom half of stems removed)',
 		'240g hot water (heated to 190F)',

@@ -3,7 +3,7 @@ import type { Recipe } from '$lib/types/recipes';
 const GRENADINE: Recipe = {
 	name: 'Grenadine',
 	slug: 'grenadine',
-	description: 'A pomegranate-based syrup with a deep red color and tart sweetness',
+	description: 'A pomegranate-based syrup with a deep red color and tart sweetness.',
 	ingredients: [
 		'1 cup pomegranate juice',
 		'1 cup granulated sugar',
