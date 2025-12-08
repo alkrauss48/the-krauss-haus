@@ -11,6 +11,7 @@ import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
+import COSMOPOLITAN from '$lib/data/cocktails/cosmopolitan';
 import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
@@ -87,6 +88,7 @@ export const allCocktails: Cocktail[] = [
 	CARAMEL_APPLE_SPICE,
 	CHOCOLATE_COVERED_CHERRIES,
 	COBRAS_FANG,
+	COSMOPOLITAN,
 	CUBA_LIBRE,
 	DAIQUIRI,
 	DIVISION_BELL,
