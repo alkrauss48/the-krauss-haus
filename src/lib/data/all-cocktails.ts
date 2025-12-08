@@ -31,6 +31,7 @@ import JACK_ROSE from '$lib/data/cocktails/jack-rose';
 import JET_PILOT from '$lib/data/cocktails/jet-pilot';
 import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
 import LAST_WORD from '$lib/data/cocktails/last-word';
+import LEMON_DROP from '$lib/data/cocktails/lemon-drop';
 import LOGGY_CAB from '$lib/data/cocktails/loggy-cab';
 import MAI_TAI from '$lib/data/cocktails/mai-tai';
 import MANHATTAN from '$lib/data/cocktails/manhattan';
@@ -108,6 +109,7 @@ export const allCocktails: Cocktail[] = [
 	JET_PILOT,
 	JUNGLE_BIRD,
 	LAST_WORD,
+	LEMON_DROP,
 	LOGGY_CAB,
 	MAI_TAI,
 	MANHATTAN,
