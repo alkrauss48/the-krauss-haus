@@ -43,7 +43,7 @@ const FOREST_SPIRIT: Cocktail = {
 		},
 		{
 			amount: '3-4 oz',
-			ingredient: Ingredients.Mixers.SODA_WATER
+			ingredient: Ingredients.Mixers.TONIC_WATER
 		},
 		{
 			label: 'Garnish: Mint sprig',
@@ -61,6 +61,7 @@ const FOREST_SPIRIT: Cocktail = {
 		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
+		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.Technique.SHAKEN,
 		Tags.Style.HIGHBALL,
