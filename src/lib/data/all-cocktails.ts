@@ -40,6 +40,7 @@ import MARGARITA from '$lib/data/cocktails/margarita';
 import MARTINI from '$lib/data/cocktails/martini';
 import MERRY_MULE from '$lib/data/cocktails/merry-mule';
 import MICHELADA from '$lib/data/cocktails/michelada';
+import MIMOSA from '$lib/data/cocktails/mimosa';
 import MINT_JULEP from '$lib/data/cocktails/mint-julep';
 import MISSIONARYS_DOWNFALL from '$lib/data/cocktails/missionarys-downfall';
 import MOJITO from '$lib/data/cocktails/mojito';
@@ -120,6 +121,7 @@ export const allCocktails: Cocktail[] = [
 	MARTINI,
 	MERRY_MULE,
 	MICHELADA,
+	MIMOSA,
 	MINT_JULEP,
 	MISSIONARYS_DOWNFALL,
 	MOJITO,
