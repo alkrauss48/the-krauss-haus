@@ -74,6 +74,7 @@ import TOM_AND_JERRY from '$lib/data/cocktails/tom-and-jerry';
 import TORONTO from '$lib/data/cocktails/toronto';
 import TRINIDAD_SOUR from '$lib/data/cocktails/trinidad-sour';
 import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
+import WHISKEY_GINGER from '$lib/data/cocktails/whiskey-ginger';
 import WHISKEY_SOUR from '$lib/data/cocktails/whiskey-sour';
 import ZOMBIE from '$lib/data/cocktails/zombie';
 
@@ -152,6 +153,7 @@ export const allCocktails: Cocktail[] = [
 	TORONTO,
 	TRINIDAD_SOUR,
 	VIEUX_CARRE,
+	WHISKEY_GINGER,
 	WHISKEY_SOUR,
 	ZOMBIE
 ].sort((a, b) => a.title.localeCompare(b.title));
