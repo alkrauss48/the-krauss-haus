@@ -38,6 +38,7 @@ const FRENCH_75: Cocktail = {
 	],
 	tags: [
 		Tags.BaseAlcohol.GIN,
+		Tags.BaseAlcohol.WINE,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.Technique.SHAKEN,

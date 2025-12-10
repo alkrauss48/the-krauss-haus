@@ -29,6 +29,7 @@ const GILDED_ROSE: Cocktail = {
 	notes:
 		'Pour persian spice liqueur into champagne flute, then add champagne. No need to stir. Garnish with edible flower.',
 	tags: [
+		Tags.BaseAlcohol.WINE,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.BUILT,

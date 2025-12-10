@@ -11,6 +11,7 @@ import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
+import CORN_N_OIL from '$lib/data/cocktails/corn-n-oil';
 import COSMOPOLITAN from '$lib/data/cocktails/cosmopolitan';
 import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
@@ -25,6 +26,7 @@ import GIN_AND_TONIC from '$lib/data/cocktails/gin-and-tonic';
 import GIN_BASIL_SMASH from '$lib/data/cocktails/gin-basil-smash';
 import GLUHWEIN from '$lib/data/cocktails/gluhwein';
 import HOT_TODDY from '$lib/data/cocktails/hot-toddy';
+import HUGO_SPRITZ from '$lib/data/cocktails/hugo-spritz';
 import HURRICANE from '$lib/data/cocktails/hurricane';
 import IRON_RANGER from '$lib/data/cocktails/iron-ranger';
 import JACK_ROSE from '$lib/data/cocktails/jack-rose';
@@ -39,6 +41,7 @@ import MARGARITA from '$lib/data/cocktails/margarita';
 import MARTINI from '$lib/data/cocktails/martini';
 import MERRY_MULE from '$lib/data/cocktails/merry-mule';
 import MICHELADA from '$lib/data/cocktails/michelada';
+import MIMOSA from '$lib/data/cocktails/mimosa';
 import MINT_JULEP from '$lib/data/cocktails/mint-julep';
 import MISSIONARYS_DOWNFALL from '$lib/data/cocktails/missionarys-downfall';
 import MOJITO from '$lib/data/cocktails/mojito';
@@ -74,6 +77,7 @@ import TOM_AND_JERRY from '$lib/data/cocktails/tom-and-jerry';
 import TORONTO from '$lib/data/cocktails/toronto';
 import TRINIDAD_SOUR from '$lib/data/cocktails/trinidad-sour';
 import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
+import WHISKEY_GINGER from '$lib/data/cocktails/whiskey-ginger';
 import WHISKEY_SOUR from '$lib/data/cocktails/whiskey-sour';
 import ZOMBIE from '$lib/data/cocktails/zombie';
 
@@ -89,6 +93,7 @@ export const allCocktails: Cocktail[] = [
 	CARAMEL_APPLE_SPICE,
 	CHOCOLATE_COVERED_CHERRIES,
 	COBRAS_FANG,
+	CORN_N_OIL,
 	COSMOPOLITAN,
 	CUBA_LIBRE,
 	DAIQUIRI,
@@ -103,6 +108,7 @@ export const allCocktails: Cocktail[] = [
 	GIN_BASIL_SMASH,
 	GLUHWEIN,
 	HOT_TODDY,
+	HUGO_SPRITZ,
 	HURRICANE,
 	IRON_RANGER,
 	JACK_ROSE,
@@ -117,6 +123,7 @@ export const allCocktails: Cocktail[] = [
 	MARTINI,
 	MERRY_MULE,
 	MICHELADA,
+	MIMOSA,
 	MINT_JULEP,
 	MISSIONARYS_DOWNFALL,
 	MOJITO,
@@ -152,6 +159,7 @@ export const allCocktails: Cocktail[] = [
 	TORONTO,
 	TRINIDAD_SOUR,
 	VIEUX_CARRE,
+	WHISKEY_GINGER,
 	WHISKEY_SOUR,
 	ZOMBIE
 ].sort((a, b) => a.title.localeCompare(b.title));
