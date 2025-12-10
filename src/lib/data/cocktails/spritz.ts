@@ -45,6 +45,7 @@ const SPRITZ: Cocktail = {
 		}
 	],
 	tags: [
+		Tags.BaseAlcohol.WINE,
 		Tags.FlavorProfile.BITTER,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.AlcoholLevel.LOW,

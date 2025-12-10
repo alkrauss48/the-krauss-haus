@@ -42,6 +42,7 @@ const WHISKEY_GINGER: Cocktail = {
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
+		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.SPICED,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.BUILT,
