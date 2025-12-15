@@ -6,7 +6,7 @@ import { Tags } from '../all-tags';
 
 const HUGO_SPRITZ: Cocktail = {
 	title: 'Hugo Spritz',
-	description: 'Prosecco, aperol, soda water, orange wedge.',
+	description: 'Prosecco, elderflower liqueur, soda water, lime wheel, mint sprig.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hugo-spritz.png',
 	thumbnailImagePath:

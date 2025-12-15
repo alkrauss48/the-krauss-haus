@@ -8,7 +8,7 @@ const FOREST_SPIRIT: Cocktail = {
 	title: 'Forest Spirit',
 	subtitle: 'A Krauss Family original',
 	description:
-		'Gin, elderflower liqueur, italicus, lemon, honey syrup, orange bitters, soda water, mint.',
+		'Gin, elderflower liqueur, italicus, lemon, honey syrup, orange bitters, tonic water, mint.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/forest-spirit.png',
 	thumbnailImagePath:
