@@ -7,6 +7,7 @@ import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
 import BATANGA from '$lib/data/cocktails/batanga';
 import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
+import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
@@ -90,6 +91,7 @@ export const allCocktails: Cocktail[] = [
 	ANCIENT_MARINER,
 	BATANGA,
 	BOULEVARDIER,
+	BRANDY_ALEXANDER,
 	CAIPIRINHA,
 	CARAMEL_APPLE_SPICE,
 	CHOCOLATE_COVERED_CHERRIES,
