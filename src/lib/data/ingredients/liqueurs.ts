@@ -1,5 +1,6 @@
 import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
+import CREME_DE_CACAO_RECIPE from '$lib/data/recipes/creme-de-cacao';
 import LIMONCELLO_RECIPE from '$lib/data/recipes/limoncello';
 import FALERNUM_RECIPE from '$lib/data/recipes/falernum';
 import PERSIAN_SPICE_LIQUEUR_RECIPE from '$lib/data/recipes/persian-spice-liqueur';
@@ -102,7 +103,8 @@ const GOLDSCHLAGER: Ingredient = {
 // Floral, Coffee & Specialty
 const CREME_DE_CACAO: Ingredient = {
 	title: 'Crème de Cacao',
-	slug: 'creme-de-cacao'
+	slug: 'creme-de-cacao',
+	recipe: CREME_DE_CACAO_RECIPE
 };
 const EGGNOG: Ingredient = {
 	title: 'Eggnog',
