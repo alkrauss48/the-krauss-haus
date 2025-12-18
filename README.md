@@ -94,6 +94,12 @@ An example prompt is:
 Create an artistic painting of a jet pilot cocktail in a rocks glass with crushed ice, a speared maraschino cherry on a cocktail pick (no other garnish), and a straw. Use loose brushstrokes and an expressive watercolor style with translucent light brown tones. Make this a completely transparent PNG with no background at all, although minor abstract background directly behind the cocktail is okay as long as it highlights the cocktail itself. The illustration should have a hand-painted artistic interpretation with clear edges and a contained design. Portrait orientation (taller than wide).
 ```
 
+Example of "Path" images:
+
+```
+Create an artistic painting of a "<class>", with the context as a class from a role-playing game or adventure. The character should have <any necessary items> and appear as "<personality>". Use loose brushstrokes and an expressive watercolor style with color tones. The character should appear in the form of their most iconic stance, and should be the only (or at least the only major) thing pictured. The illustration should have a hand-painted artistic interpretation with clear edges and a contained design. Portrait orientation (taller than wide).
+```
+
 ## License
 
 MIT
