@@ -7,6 +7,7 @@ import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
 import BATANGA from '$lib/data/cocktails/batanga';
 import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
+import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
@@ -35,6 +36,7 @@ import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
 import LAST_WORD from '$lib/data/cocktails/last-word';
 import LEMON_DROP from '$lib/data/cocktails/lemon-drop';
 import LOGGY_CAB from '$lib/data/cocktails/loggy-cab';
+import LOST_LAKE from '$lib/data/cocktails/lost-lake';
 import MAI_TAI from '$lib/data/cocktails/mai-tai';
 import MANHATTAN from '$lib/data/cocktails/manhattan';
 import MARGARITA from '$lib/data/cocktails/margarita';
@@ -89,6 +91,7 @@ export const allCocktails: Cocktail[] = [
 	ANCIENT_MARINER,
 	BATANGA,
 	BOULEVARDIER,
+	BRANDY_ALEXANDER,
 	CAIPIRINHA,
 	CARAMEL_APPLE_SPICE,
 	CHOCOLATE_COVERED_CHERRIES,
@@ -117,6 +120,7 @@ export const allCocktails: Cocktail[] = [
 	LAST_WORD,
 	LEMON_DROP,
 	LOGGY_CAB,
+	LOST_LAKE,
 	MAI_TAI,
 	MANHATTAN,
 	MARGARITA,

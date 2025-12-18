@@ -53,6 +53,30 @@ const ESPRESSO_MARTINI: Cocktail = {
 				}
 			],
 			images: []
+		},
+		{
+			name: 'Chocolate',
+			ingredients: [
+				{
+					label: 'Swap .5oz of Cognac with Crème de Cacao.',
+					ingredient: Ingredients.Liqueurs.CREME_DE_CACAO
+				}
+			],
+			images: []
+		},
+		{
+			name: '"Nutella"',
+			ingredients: [
+				{
+					label: 'Swap .25oz of Cognac with Frangelico.',
+					ingredient: Ingredients.Liqueurs.FRANGELICO
+				},
+				{
+					label: 'Swap .25oz of Cognac with Crème de Cacao.',
+					ingredient: Ingredients.Liqueurs.CREME_DE_CACAO
+				}
+			],
+			images: []
 		}
 	],
 	tags: [

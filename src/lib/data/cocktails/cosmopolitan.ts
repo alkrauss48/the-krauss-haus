@@ -6,7 +6,7 @@ import { Tags } from '../all-tags';
 
 const COSMOPOLITAN: Cocktail = {
 	title: 'Cosmopolitan',
-	description: 'Citron vodka, cointreau, lime, cranberry cordial, orange twist.',
+	description: 'Citron vodka, cointreau, lime, cranberry cordial, simple syrup, orange twist.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/cosmopolitan.png',
 	thumbnailImagePath:
@@ -30,6 +30,10 @@ const COSMOPOLITAN: Cocktail = {
 		{
 			amount: '.5oz',
 			ingredient: Ingredients.Other.CRANBERRY_CORDIAL
+		},
+		{
+			amount: '.25oz',
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
 		{
 			label: 'Garnish: Orange twist',

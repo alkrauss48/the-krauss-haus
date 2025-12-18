@@ -6,7 +6,7 @@ import { Tags } from '../all-tags';
 
 const RADLER: Cocktail = {
 	title: 'Radler',
-	description: 'German helles or pilsner lager, sparkling lemonade.',
+	description: 'Pilsner lager, sparkling lemonade.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/radler.png',
 	thumbnailImagePath:
