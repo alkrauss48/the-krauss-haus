@@ -3,6 +3,7 @@ import COBRAS_FANG from '../cocktails/cobras-fang';
 import JUNGLE_BIRD from '../cocktails/jungle-bird';
 import NEGRONI from '../cocktails/negroni';
 import SINGAPORE_SLING from '../cocktails/singapore-sling';
+import VIEUX_CARRE from '../cocktails/vieux-carre';
 
 export const ROGUE: CocktailPath = {
 	title: 'Rogue',
@@ -12,5 +13,5 @@ export const ROGUE: CocktailPath = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/rogue.jpeg',
 	description:
 		'This path thrives on sharp contrasts—bright citrus against bitter liqueurs, deep aromatics, and unconventional profiles.',
-	cocktails: [SINGAPORE_SLING, JUNGLE_BIRD, COBRAS_FANG, NEGRONI]
+	cocktails: [SINGAPORE_SLING, JUNGLE_BIRD, COBRAS_FANG, VIEUX_CARRE, NEGRONI]
 };
