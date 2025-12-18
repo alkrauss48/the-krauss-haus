@@ -36,7 +36,7 @@
 			<p class="text-gray-600">Discover your journey through the world of cocktails</p>
 		</header>
 
-		<!-- Paths Grid: All 7 paths in flexbox -->
+		<!-- Paths Grid: 2 columns (mobile) -> 3 columns (md) -> 5 columns (lg) -->
 		<div
 			class="flex flex-wrap justify-center gap-3 sm:gap-6"
 			in:fly={{ y: 20, duration: 400, delay: 600 }}
@@ -45,7 +45,7 @@
 				<a
 					href={resolve(`/paths/${path.slug}`)}
 					on:click|preventDefault={() => navigateToPath(path.slug)}
-					class="group rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-white overflow-hidden w-[calc((100%-0.75rem)/2)] sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-2*1.5rem)/3)] lg:w-[calc((100%-3*1.5rem)/4)] cursor-pointer"
+					class="group rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-white overflow-hidden cursor-pointer w-[calc((100%-0.75rem)/2)] sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-2*1.5rem)/3)] lg:w-[calc((100%-4*1.5rem)/5)]"
 					in:fly={{ y: 20, duration: 400, delay: 700 + index * 100 }}
 				>
 					<img src={path.imagePath} alt={path.title} class="w-full h-auto" loading="lazy" />
