@@ -3,6 +3,7 @@ import MINT_JULEP from '../cocktails/mint-julep';
 import OAXACA_OLD_FASHIONED from '../cocktails/oaxaca-old-fashioned';
 import OLD_FASHIONED from '../cocktails/old-fashioned';
 import SAZERAC from '../cocktails/sazerac';
+import TI_PUNCH from '../cocktails/ti-punch';
 
 export const WARRIOR: CocktailPath = {
 	title: 'Warrior',
@@ -12,5 +13,5 @@ export const WARRIOR: CocktailPath = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/warrior.jpeg',
 	description:
 		'You prefer cocktails where the base spirit stays in command—unmistakable, confident, and clean. This path builds your appreciation of spirit- forward balance, moving from sweetened structure to bold minimalism.',
-	cocktails: [OLD_FASHIONED, MINT_JULEP, OAXACA_OLD_FASHIONED, SAZERAC]
+	cocktails: [OLD_FASHIONED, MINT_JULEP, OAXACA_OLD_FASHIONED, TI_PUNCH, SAZERAC]
 };
