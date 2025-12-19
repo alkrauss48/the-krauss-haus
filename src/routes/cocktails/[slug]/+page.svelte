@@ -21,7 +21,7 @@
 	import { categories as tikiCategories } from '$lib/data/tiki-menu';
 
 	export let data: PageData;
-	const { cocktail } = data;
+	const { cocktail, pathsContainingCocktail } = data;
 
 	// Check which menus contain this cocktail
 	function isOnSummerMenu(): boolean {
@@ -48,6 +48,7 @@
 	const onWinter = isOnWinterMenu();
 	const onTiki = isOnTikiMenu();
 	const onAnyMenu = onSummer || onWinter || onTiki;
+	const hasMenusOrPaths = onAnyMenu || pathsContainingCocktail.length > 0;
 
 	// Helper function to convert category label to URL-friendly key
 	// Handles special characters like & by converting to "and"
@@ -245,12 +246,10 @@
 					</section>
 				{/if}
 
-				<!-- Back to Menu Links -->
-				{#if onAnyMenu}
+				<!-- Back to Menu Links and Paths -->
+				{#if hasMenusOrPaths}
 					<section class="pt-8 border-t border-gray-200">
-						<h2 class="text-xl font-semibold text-gray-800 mb-4">
-							Find this cocktail on our menus:
-						</h2>
+						<h2 class="text-xl font-semibold text-gray-800 mb-4">Find this cocktail on:</h2>
 						<div class="flex flex-wrap gap-3">
 							{#if onSummer}
 								<a
@@ -276,6 +275,14 @@
 									Tiki Menu
 								</a>
 							{/if}
+							{#each pathsContainingCocktail as path (path.slug)}
+								<a
+									href={resolve(`/paths/${path.slug}`)}
+									class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors"
+								>
+									{path.title} Path
+								</a>
+							{/each}
 						</div>
 					</section>
 				{/if}
