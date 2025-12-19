@@ -6,6 +6,14 @@ export enum PartyNote {
 	BIG_BATCH = 'Big batch, up to 10 servings'
 }
 
+export interface CocktailParty {
+	slug: string;
+	name: string;
+	description: string;
+	date: Date;
+	schedule: PartyTimeSlot[];
+}
+
 export interface PartyTimeSlot {
 	time: string;
 	cocktail: Cocktail;
