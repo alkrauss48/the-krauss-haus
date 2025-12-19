@@ -35,7 +35,11 @@
 		if (!showModal && !showVariationModal) return;
 
 		const modalToUse = showVariationModal ? variationModalContent : modalContent;
+		if (!modalToUse) return;
+
 		const focusableElements = getFocusableElements(modalToUse);
+		if (focusableElements.length === 0) return;
+
 		const firstFocusableElement = focusableElements[0];
 		const lastFocusableElement = focusableElements[focusableElements.length - 1];
 
