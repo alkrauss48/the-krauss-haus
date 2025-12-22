@@ -5,9 +5,8 @@
 	import { fly } from 'svelte/transition';
 
 	export let featuredDrink: Cocktail;
-	export let title = 'Welcome Drink';
-	export let subtitle =
-		"Because you shouldn't have to worry about what to order the moment you walk in the door.";
+	export let title = 'Featured Drink';
+	export let subtitle = '';
 </script>
 
 <section
