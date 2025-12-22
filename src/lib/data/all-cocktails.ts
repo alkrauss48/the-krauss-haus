@@ -26,6 +26,7 @@ import GILDED_ROSE from '$lib/data/cocktails/gilded-rose';
 import GIN_AND_TONIC from '$lib/data/cocktails/gin-and-tonic';
 import GIN_BASIL_SMASH from '$lib/data/cocktails/gin-basil-smash';
 import GLUHWEIN from '$lib/data/cocktails/gluhwein';
+import GODFATHER from '$lib/data/cocktails/godfather';
 import HOT_TODDY from '$lib/data/cocktails/hot-toddy';
 import HUGO_SPRITZ from '$lib/data/cocktails/hugo-spritz';
 import HURRICANE from '$lib/data/cocktails/hurricane';
@@ -110,6 +111,7 @@ export const allCocktails: Cocktail[] = [
 	GIN_AND_TONIC,
 	GIN_BASIL_SMASH,
 	GLUHWEIN,
+	GODFATHER,
 	HOT_TODDY,
 	HUGO_SPRITZ,
 	HURRICANE,
