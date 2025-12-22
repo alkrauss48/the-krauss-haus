@@ -10,6 +10,7 @@ import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
+import CHAMPAGNE_COCKTAIL from '$lib/data/cocktails/champagne-cocktail';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
 import CORN_N_OIL from '$lib/data/cocktails/corn-n-oil';
@@ -95,6 +96,7 @@ export const allCocktails: Cocktail[] = [
 	BRANDY_ALEXANDER,
 	CAIPIRINHA,
 	CARAMEL_APPLE_SPICE,
+	CHAMPAGNE_COCKTAIL,
 	CHOCOLATE_COVERED_CHERRIES,
 	COBRAS_FANG,
 	CORN_N_OIL,
