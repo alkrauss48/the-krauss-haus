@@ -11,11 +11,11 @@ import MOJITO from '$lib/data/cocktails/mojito';
 import MOONWELL from '$lib/data/cocktails/moonwell';
 import NEGRONI from '$lib/data/cocktails/negroni';
 import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
-import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
-import RADLER from '$lib/data/cocktails/radler';
 import SPRITZ from '$lib/data/cocktails/spritz';
+import DAIQUIRI from './cocktails/daiquiri';
+import SPAGHETT from './cocktails/spaghett';
 
-export const featuredDrink: Cocktail = PIMMS_CUP;
+export const featuredDrink: Cocktail = GILDED_ROSE;
 
 export const categories: Category[] = [
 	{
@@ -31,7 +31,7 @@ export const categories: Category[] = [
 	{
 		title: "Cyrus' Drinks",
 		bgColors: sectionColors.cyrus,
-		cocktails: [CAIPIRINHA, GILDED_ROSE, RADLER]
+		cocktails: [CAIPIRINHA, SPAGHETT, DAIQUIRI]
 	},
 	{
 		title: "Lucas' Drinks",
