@@ -18,6 +18,7 @@ import TOM_AND_JERRY_BATTER from '$lib/data/recipes/tom-and-jerry-batter';
 import CARAMEL_VODKA from '$lib/data/recipes/caramel-vodka';
 import CITRON_VODKA from '$lib/data/recipes/citron-vodka';
 import CREME_DE_CACAO from '$lib/data/recipes/creme-de-cacao';
+import DRY_CURACAO from '$lib/data/recipes/dry-curacao';
 import FALERNUM from '$lib/data/recipes/falernum';
 import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
 import LIMONCELLO from '$lib/data/recipes/limoncello';
@@ -46,6 +47,7 @@ export const infusions: Recipe[] = [
 	CARAMEL_VODKA,
 	CITRON_VODKA,
 	CREME_DE_CACAO,
+	DRY_CURACAO,
 	FALERNUM,
 	JALAPENO_TEQUILA,
 	LIMONCELLO,

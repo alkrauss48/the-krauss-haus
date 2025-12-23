@@ -4,6 +4,7 @@ import CREME_DE_CACAO_RECIPE from '$lib/data/recipes/creme-de-cacao';
 import LIMONCELLO_RECIPE from '$lib/data/recipes/limoncello';
 import FALERNUM_RECIPE from '$lib/data/recipes/falernum';
 import PERSIAN_SPICE_LIQUEUR_RECIPE from '$lib/data/recipes/persian-spice-liqueur';
+import DRY_CURACAO_RECIPE from '$lib/data/recipes/dry-curacao';
 
 // Amaro
 const AMARO_LUCANO: Ingredient = {
@@ -60,8 +61,9 @@ const LIMONCELLO: Ingredient = {
 	recipe: LIMONCELLO_RECIPE
 };
 const DRY_CURACAO: Ingredient = {
-	title: 'Pierre Ferrand Dry Curaçao',
-	slug: 'pf-dry-curacao'
+	title: 'Dry Curaçao',
+	slug: 'dry-curacao',
+	recipe: DRY_CURACAO_RECIPE
 };
 const COINTREAU: Ingredient = {
 	title: 'Cointreau',
