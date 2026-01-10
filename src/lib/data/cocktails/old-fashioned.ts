@@ -61,6 +61,20 @@ const OLD_FASHIONED: Cocktail = {
 				}
 			],
 			images: []
+		},
+		{
+			name: 'Spiced',
+			ingredients: [
+				{
+					label: 'Sub rye whiskey for bourbon.',
+					ingredient: Ingredients.BaseSpirits.RITTENHOUSE
+				},
+				{
+					label: 'Add 1/4oz of allspice dram.',
+					ingredient: Ingredients.Liqueurs.ALLSPICE_DRAM
+				}
+			],
+			images: []
 		}
 	],
 	tags: [
