@@ -19,10 +19,12 @@ import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
+import DR_FUNK from '$lib/data/cocktails/dr-funk';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FOREST_SPIRIT from '$lib/data/cocktails/forest-spirit';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
+import GILDA from '$lib/data/cocktails/gilda';
 import GILDED_ROSE from '$lib/data/cocktails/gilded-rose';
 import GIN_AND_TONIC from '$lib/data/cocktails/gin-and-tonic';
 import GIN_BASIL_SMASH from '$lib/data/cocktails/gin-basil-smash';
@@ -54,6 +56,7 @@ import NAKED_AND_FAMOUS from '$lib/data/cocktails/naked-and-famous';
 import NAVY_GROG from '$lib/data/cocktails/navy-grog';
 import NEGRONI from '$lib/data/cocktails/negroni';
 import NEGRONI_BIANCO_BERGAMOTTO from '$lib/data/cocktails/negroni-bianco-bergamotto';
+import NORWEIGAN_PARALYSIS from '$lib/data/cocktails/norwegian-paralysis';
 import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
 import OLD_FASHIONED from '$lib/data/cocktails/old-fashioned';
 import PAINKILLER from '$lib/data/cocktails/painkiller';
@@ -65,6 +68,7 @@ import PORT_LIGHT from '$lib/data/cocktails/port-light';
 import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
+import RUM_BARREL from '$lib/data/cocktails/rum-barrel';
 import SALTY_DOG from '$lib/data/cocktails/salty-dog';
 import SANGRIA from '$lib/data/cocktails/sangria';
 import SATURN from '$lib/data/cocktails/saturn';
@@ -72,6 +76,7 @@ import SAZERAC from '$lib/data/cocktails/sazerac';
 import SEA_LEGS from '$lib/data/cocktails/sea-legs';
 import SIDECAR from '$lib/data/cocktails/sidecar';
 import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
+import SLAP_N_PICKLE from '$lib/data/cocktails/slap-n-pickle';
 import SPAGHETT from '$lib/data/cocktails/spaghett';
 import SPRITZ from '$lib/data/cocktails/spritz';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
@@ -105,10 +110,12 @@ export const allCocktails: Cocktail[] = [
 	DAIQUIRI,
 	DIVISION_BELL,
 	DONGA_PUNCH,
+	DR_FUNK,
 	ESPRESSO_MARTINI,
 	FERNET_CON_COCA,
 	FRENCH_75,
 	FOREST_SPIRIT,
+	GILDA,
 	GILDED_ROSE,
 	GIN_AND_TONIC,
 	GIN_BASIL_SMASH,
@@ -140,6 +147,7 @@ export const allCocktails: Cocktail[] = [
 	NAVY_GROG,
 	NEGRONI,
 	NEGRONI_BIANCO_BERGAMOTTO,
+	NORWEIGAN_PARALYSIS,
 	OAXACA_OLD_FASHIONED,
 	OLD_FASHIONED,
 	PAINKILLER,
@@ -151,6 +159,7 @@ export const allCocktails: Cocktail[] = [
 	RADLER,
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,
+	RUM_BARREL,
 	SALTY_DOG,
 	SANGRIA,
 	SATURN,
@@ -158,6 +167,7 @@ export const allCocktails: Cocktail[] = [
 	SEA_LEGS,
 	SIDECAR,
 	SINGAPORE_SLING,
+	SLAP_N_PICKLE,
 	SPAGHETT,
 	SPRITZ,
 	THREE_DOTS_AND_A_DASH,

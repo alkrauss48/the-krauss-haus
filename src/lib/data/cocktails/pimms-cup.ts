@@ -32,8 +32,11 @@ const PIMMS_CUP: Cocktail = {
 			label: 'Garnish: Mint sprig',
 			ingredient: Ingredients.HerbsAndSpices.MINT
 		},
-		'Garnish: Strawberry',
-		'Garnish: Cucumber'
+		{
+			label: 'Garnish: Cucumber',
+			ingredient: Ingredients.Other.CUCUMBER
+		},
+		'Garnish: Strawberry'
 	],
 	tags: [
 		Tags.FlavorProfile.HERBAL,
