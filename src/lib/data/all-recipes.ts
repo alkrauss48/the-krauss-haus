@@ -15,6 +15,7 @@ import RICH_SIMPLE_SYRUP from '$lib/data/recipes/rich-simple-syrup';
 import TOM_AND_JERRY_BATTER from '$lib/data/recipes/tom-and-jerry-batter';
 
 // Import all infusion recipes
+import AQUAVIT from '$lib/data/recipes/aquavit';
 import CARAMEL_VODKA from '$lib/data/recipes/caramel-vodka';
 import CITRON_VODKA from '$lib/data/recipes/citron-vodka';
 import CREME_DE_CACAO from '$lib/data/recipes/creme-de-cacao';
@@ -44,6 +45,7 @@ export const syrups: Recipe[] = [
 
 // Infusions
 export const infusions: Recipe[] = [
+	AQUAVIT,
 	CARAMEL_VODKA,
 	CITRON_VODKA,
 	CREME_DE_CACAO,
