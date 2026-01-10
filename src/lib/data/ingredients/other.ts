@@ -12,6 +12,10 @@ const CREAM_OF_COCONUT: Ingredient = {
 	title: 'Cream of Coconut',
 	slug: 'cream-of-coconut'
 };
+const CUCUMBER: Ingredient = {
+	title: 'Cucumber',
+	slug: 'cucumber'
+};
 const EGG: Ingredient = {
 	title: 'Egg',
 	slug: 'egg'
@@ -56,6 +60,7 @@ export const OTHER: IngredientCategory = {
 			ingredients: [
 				CRANBERRY_CORDIAL,
 				CREAM_OF_COCONUT,
+				CUCUMBER,
 				EGG,
 				ESPRESSO,
 				HEAVY_CREAM,
@@ -72,6 +77,7 @@ export const OTHER: IngredientCategory = {
 export const INGREDIENTS = {
 	CRANBERRY_CORDIAL,
 	CREAM_OF_COCONUT,
+	CUCUMBER,
 	EGG,
 	ESPRESSO,
 	HEAVY_CREAM,
