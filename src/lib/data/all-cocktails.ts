@@ -75,6 +75,7 @@ import SAZERAC from '$lib/data/cocktails/sazerac';
 import SEA_LEGS from '$lib/data/cocktails/sea-legs';
 import SIDECAR from '$lib/data/cocktails/sidecar';
 import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
+import SLAP_N_PICKLE from '$lib/data/cocktails/slap-n-pickle';
 import SPAGHETT from '$lib/data/cocktails/spaghett';
 import SPRITZ from '$lib/data/cocktails/spritz';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
@@ -164,6 +165,7 @@ export const allCocktails: Cocktail[] = [
 	SEA_LEGS,
 	SIDECAR,
 	SINGAPORE_SLING,
+	SLAP_N_PICKLE,
 	SPAGHETT,
 	SPRITZ,
 	THREE_DOTS_AND_A_DASH,
