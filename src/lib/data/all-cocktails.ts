@@ -23,6 +23,7 @@ import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FOREST_SPIRIT from '$lib/data/cocktails/forest-spirit';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
+import GILDA from '$lib/data/cocktails/gilda';
 import GILDED_ROSE from '$lib/data/cocktails/gilded-rose';
 import GIN_AND_TONIC from '$lib/data/cocktails/gin-and-tonic';
 import GIN_BASIL_SMASH from '$lib/data/cocktails/gin-basil-smash';
@@ -109,6 +110,7 @@ export const allCocktails: Cocktail[] = [
 	FERNET_CON_COCA,
 	FRENCH_75,
 	FOREST_SPIRIT,
+	GILDA,
 	GILDED_ROSE,
 	GIN_AND_TONIC,
 	GIN_BASIL_SMASH,
