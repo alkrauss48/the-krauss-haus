@@ -67,6 +67,7 @@ import PORT_LIGHT from '$lib/data/cocktails/port-light';
 import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
+import RUM_BARREL from '$lib/data/cocktails/rum-barrel';
 import SALTY_DOG from '$lib/data/cocktails/salty-dog';
 import SANGRIA from '$lib/data/cocktails/sangria';
 import SATURN from '$lib/data/cocktails/saturn';
@@ -155,6 +156,7 @@ export const allCocktails: Cocktail[] = [
 	RADLER,
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,
+	RUM_BARREL,
 	SALTY_DOG,
 	SANGRIA,
 	SATURN,
