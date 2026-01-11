@@ -1,17 +1,19 @@
 import type { Category } from '$lib/types/cocktails';
 
-import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
-import PAINKILLER from '$lib/data/cocktails/painkiller';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
+import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
+import GILDA from '$lib/data/cocktails/gilda';
 import HURRICANE from '$lib/data/cocktails/hurricane';
+import IRON_RANGER from '$lib/data/cocktails/iron-ranger';
+import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
 import MAI_TAI from '$lib/data/cocktails/mai-tai';
+import NORWEIGAN_PARALYSIS from '$lib/data/cocktails/norwegian-paralysis';
+import PAINKILLER from '$lib/data/cocktails/painkiller';
+import PORT_LIGHT from '$lib/data/cocktails/port-light';
+import SATURN from '$lib/data/cocktails/saturn';
+import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
 import ZOMBIE from '$lib/data/cocktails/zombie';
-import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
-import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
-import SATURN from '$lib/data/cocktails/saturn';
-import PORT_LIGHT from '$lib/data/cocktails/port-light';
-import IRON_RANGER from '$lib/data/cocktails/iron-ranger';
 
 export const categories: Category[] = [
 	{
@@ -42,6 +44,6 @@ export const categories: Category[] = [
 			tertiary: '#fef3c7',
 			variationText: '#9a3412'
 		},
-		cocktails: [SINGAPORE_SLING, SATURN, PORT_LIGHT, IRON_RANGER]
+		cocktails: [SINGAPORE_SLING, SATURN, GILDA, IRON_RANGER, PORT_LIGHT, NORWEIGAN_PARALYSIS]
 	}
 ];

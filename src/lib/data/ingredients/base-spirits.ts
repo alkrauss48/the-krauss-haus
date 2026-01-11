@@ -1,5 +1,6 @@
 import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
+import AQUAVIT_RECIPE from '$lib/data/recipes/aquavit';
 import CARAMEL_VODKA_RECIPE from '$lib/data/recipes/caramel-vodka';
 import CITRON_VODKA_RECIPE from '$lib/data/recipes/citron-vodka';
 import JALAPENO_TEQUILA_RECIPE from '$lib/data/recipes/jalapeno-tequila';
@@ -160,6 +161,11 @@ const ABSINTHE: Ingredient = {
 	title: 'Absinthe',
 	slug: 'absinthe'
 };
+const AQUAVIT: Ingredient = {
+	title: 'Aquavit',
+	slug: 'aquavit',
+	recipe: AQUAVIT_RECIPE
+};
 
 export const BASE_SPIRITS: IngredientCategory = {
 	label: 'Base Spirits',
@@ -200,7 +206,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		},
 		{
 			label: 'Neutral Spirits',
-			ingredients: [MONOPOLOWA, CARAMEL_VODKA, CITRON_VODKA, PEPPERMINT_VODKA, ABSINTHE]
+			ingredients: [MONOPOLOWA, CARAMEL_VODKA, CITRON_VODKA, PEPPERMINT_VODKA, ABSINTHE, AQUAVIT]
 		}
 	]
 };
@@ -245,5 +251,6 @@ export const INGREDIENTS = {
 	CARAMEL_VODKA,
 	CITRON_VODKA,
 	PEPPERMINT_VODKA,
-	ABSINTHE
+	ABSINTHE,
+	AQUAVIT
 };
