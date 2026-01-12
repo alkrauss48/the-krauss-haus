@@ -37,7 +37,7 @@
 
 	<!-- Menus and Explore Grid -->
 	<div
-		class="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[800px] mb-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8"
+		class="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[800px] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8"
 	>
 		<!-- Cocktail Menus -->
 		<section class="w-full bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 shadow-sm">
@@ -76,7 +76,18 @@
 			</nav>
 		</section>
 	</div>
-	<!-- Extras -->
+
+	<!-- Random Cocktail Link -->
+	<div class="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[800px] text-center mb-8">
+		<a
+			href="#"
+			on:click|preventDefault
+			class="text-sm text-gray-600 hover:text-gray-800 transition-colors underline decoration-dotted underline-offset-2"
+		>
+			Or, pick a random cocktail
+		</a>
+	</div>
+
 	<section class="w-full max-w-[320px] sm:max-w-[400px]">
 		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Extras</h2>
 		<nav class="flex flex-col gap-4" aria-label="Secondary Menu Navigation">
