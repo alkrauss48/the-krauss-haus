@@ -207,9 +207,10 @@
 			url.searchParams.delete('search');
 		}
 
-		// Use History API directly to avoid re-renders
+		// Use History API directly to avoid re-renders, but preserve the current state
 		const newUrl = `${url.pathname}${url.search}`;
-		window.history.replaceState({}, '', newUrl);
+		const currentState = window.history.state || {};
+		window.history.replaceState(currentState, '', newUrl);
 	}
 
 	// Handle search input changes
