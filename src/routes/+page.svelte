@@ -2,9 +2,11 @@
 	import MenuLink from '$lib/components/MenuLink.svelte';
 	import TipButton from '$lib/components/TipButton.svelte';
 	import TipModal from '$lib/components/TipModal.svelte';
+	import RandomCocktailModal from '$lib/components/RandomCocktailModal.svelte';
 	import { resolve } from '$app/paths';
 
 	let showTipModal = false;
+	let showRandomCocktailModal = false;
 
 	function handleTipOpen() {
 		showTipModal = true;
@@ -12,6 +14,10 @@
 
 	function handleTipClose() {
 		showTipModal = false;
+	}
+
+	function handleRandomCocktailOpen() {
+		showRandomCocktailModal = true;
 	}
 </script>
 
@@ -79,13 +85,12 @@
 
 	<!-- Random Cocktail Link -->
 	<div class="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[800px] text-center mb-8">
-		<a
-			href="#"
-			on:click|preventDefault
-			class="text-sm text-gray-600 hover:text-gray-800 transition-colors underline decoration-dotted underline-offset-2"
+		<button
+			on:click={handleRandomCocktailOpen}
+			class="text-sm text-gray-600 hover:text-gray-800 transition-colors underline decoration-dotted underline-offset-2 bg-transparent border-0 cursor-pointer p-0"
 		>
 			Or, pick a random cocktail
-		</a>
+		</button>
 	</div>
 
 	<section class="w-full max-w-[320px] sm:max-w-[400px]">
@@ -136,3 +141,6 @@
 
 <!-- Tip Modal -->
 <TipModal bind:isOpen={showTipModal} on:close={handleTipClose} />
+
+<!-- Random Cocktail Modal -->
+<RandomCocktailModal bind:isOpen={showRandomCocktailModal} />

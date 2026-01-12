@@ -175,7 +175,7 @@
 	>
 		<div
 			bind:this={modalContent}
-			class="bg-white rounded-lg p-8 max-w-md w-full mx-4 shadow-xl z-50"
+			class="text-left bg-white rounded-lg p-8 max-w-md w-full mx-4 shadow-xl z-50"
 			on:click|stopPropagation
 			role="presentation"
 			aria-label="Cocktail details"
@@ -270,7 +270,7 @@
 	>
 		<div
 			bind:this={variationModalContent}
-			class="bg-white rounded-lg p-6 max-w-md w-full mx-4 shadow-xl z-50"
+			class="text-left bg-white rounded-lg p-6 max-w-md w-full mx-4 shadow-xl z-50"
 			on:click|stopPropagation
 			role="presentation"
 			aria-label="Cocktail variation details"
