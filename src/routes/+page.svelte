@@ -1,10 +1,12 @@
 <script lang="ts">
-	import FeaturedEvent from '$lib/components/FeaturedEvent.svelte';
 	import MenuLink from '$lib/components/MenuLink.svelte';
 	import TipButton from '$lib/components/TipButton.svelte';
 	import TipModal from '$lib/components/TipModal.svelte';
+	import RandomCocktailModal from '$lib/components/RandomCocktailModal.svelte';
+	import { resolve } from '$app/paths';
 
 	let showTipModal = false;
+	let showRandomCocktailModal = false;
 
 	function handleTipOpen() {
 		showTipModal = true;
@@ -12,6 +14,10 @@
 
 	function handleTipClose() {
 		showTipModal = false;
+	}
+
+	function handleRandomCocktailOpen() {
+		showRandomCocktailModal = true;
 	}
 </script>
 
@@ -35,23 +41,58 @@
 		</h1>
 	</header>
 
-	<!-- Call to Action -->
-	<section class="w-full max-w-[400px] sm:max-w-[500px] mb-8">
-		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Just Launched</h2>
-		<FeaturedEvent title="Cocktail Paths" subtitle="Start your journey" url="/paths" />
-	</section>
+	<!-- Menus and Explore Grid -->
+	<div
+		class="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[800px] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8"
+	>
+		<!-- Cocktail Menus -->
+		<section class="w-full bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 shadow-sm">
+			<h2 class="text-lg text-center font-medium text-amber-800 mb-3">Cocktail Menus</h2>
+			<p class="text-sm text-center text-amber-700/80 mb-6 leading-relaxed">
+				Browse our curated seasonal menus featuring handpicked cocktails for each time of year
+			</p>
+			<nav class="flex flex-col gap-5" aria-label="Menu Navigation">
+				<MenuLink href="/summer-menu" label="Summer Menu" />
+				<MenuLink href="/tiki-menu" label="Tiki Menu" />
+				<MenuLink href="/winter-menu" label="Winter Menu" />
+			</nav>
+		</section>
 
-	<!-- Cocktail Menus -->
-	<section class="w-full max-w-[320px] sm:max-w-[400px] mb-16">
-		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Cocktail Menus</h2>
-		<nav class="flex flex-col gap-4" aria-label="Menu Navigation">
-			<MenuLink href="/summer-menu" label="Summer Menu" />
-			<MenuLink href="/tiki-menu" label="Tiki Menu" />
-			<MenuLink href="/winter-menu" label="Winter Menu" />
-			<MenuLink href="/cocktails" label="All Cocktails" variant="secondary" />
-		</nav>
-	</section>
-	<!-- Extras -->
+		<!-- Explore Section: Paths and All Cocktails -->
+		<section class="w-full bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 shadow-sm">
+			<h2 class="text-lg text-center font-medium text-indigo-800 mb-3">Explore</h2>
+			<p class="text-sm text-center text-indigo-700/80 mb-6 leading-relaxed">
+				Discover cocktails through guided paths or search and filter our entire collection
+			</p>
+			<nav class="flex flex-col gap-5" aria-label="Explore Navigation">
+				<a
+					href={resolve('/paths')}
+					class="block w-full p-5 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-purple-200/50 hover:border-purple-300 shadow-sm hover:shadow-md backdrop-blur-sm"
+				>
+					<h3 class="text-base font-semibold mb-1 text-gray-800">Cocktail Paths</h3>
+					<p class="text-xs text-gray-600">Start your journey</p>
+				</a>
+				<a
+					href={resolve('/cocktails')}
+					class="block w-full p-5 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-blue-200/50 hover:border-blue-300 shadow-sm hover:shadow-md backdrop-blur-sm"
+				>
+					<h3 class="text-base font-semibold mb-1 text-gray-800">All Cocktails</h3>
+					<p class="text-xs text-gray-600">Browse our complete collection</p>
+				</a>
+			</nav>
+		</section>
+	</div>
+
+	<!-- Random Cocktail Link -->
+	<div class="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[800px] text-center mb-8">
+		<button
+			on:click={handleRandomCocktailOpen}
+			class="text-sm text-gray-600 hover:text-gray-800 transition-colors underline decoration-dotted underline-offset-2 bg-transparent border-0 cursor-pointer p-0"
+		>
+			Or, pick a random cocktail
+		</button>
+	</div>
+
 	<section class="w-full max-w-[320px] sm:max-w-[400px]">
 		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Extras</h2>
 		<nav class="flex flex-col gap-4" aria-label="Secondary Menu Navigation">
@@ -100,3 +141,6 @@
 
 <!-- Tip Modal -->
 <TipModal bind:isOpen={showTipModal} on:close={handleTipClose} />
+
+<!-- Random Cocktail Modal -->
+<RandomCocktailModal bind:isOpen={showRandomCocktailModal} />
