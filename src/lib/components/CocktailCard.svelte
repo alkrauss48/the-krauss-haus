@@ -9,6 +9,8 @@
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
 
 	export let cocktail: Cocktail;
+	export let showTitle: boolean = true;
+	export let showVariations: boolean = true;
 	export let bgColors: SectionColor = {
 		primary: '#fecaca',
 		secondary: '#fef3c7',
@@ -132,12 +134,14 @@
 		/>
 	</div>
 	<div class="p-6 flex-1 flex flex-col">
-		<h3 class="text-xl font-bold text-gray-800 mb-2">{cocktail.title}</h3>
+		{#if showTitle}
+			<h3 class="text-xl font-bold text-gray-800 mb-2">{cocktail.title}</h3>
+		{/if}
 		{#if cocktail.subtitle}
 			<p class="text-gray-600 italic mb-2 text-sm">{cocktail.subtitle}</p>
 		{/if}
 		<p class="text-gray-600 flex-1">{cocktail.description}</p>
-		{#if cocktail.variations && cocktail.variations.length > 0}
+		{#if showVariations && cocktail.variations && cocktail.variations.length > 0}
 			<div class="mt-3 pt-3 border-t border-gray-50">
 				<p class="text-xs text-gray-500 mb-2 font-light tracking-wide">Variations:</p>
 				<div class="flex flex-wrap gap-2">
