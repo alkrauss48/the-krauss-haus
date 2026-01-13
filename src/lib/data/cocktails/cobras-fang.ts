@@ -6,7 +6,6 @@ import { Tags } from '../all-tags';
 
 const COBRAS_FANG: Cocktail = {
 	title: "Cobra's Fang",
-	subtitle: 'A dangerously smooth blend of rum and spice',
 	description:
 		'Overproof demerara rum, falernum, fassionola, lime, orange, herbstura, mint, cinnamon.',
 	imagePath:

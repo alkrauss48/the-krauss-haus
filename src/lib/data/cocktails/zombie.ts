@@ -6,7 +6,6 @@ import { Tags } from '../all-tags';
 
 const ZOMBIE: Cocktail = {
 	title: 'Zombie',
-	subtitle: 'The original heavy-weight tiki classic. Max 2 per person.',
 	description:
 		"Blended light rum, Jamaican rum, overproof rum, falernum, Donn's Mix, lime, grenadine, herbstura.",
 	imagePath:

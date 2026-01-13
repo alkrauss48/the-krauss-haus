@@ -6,7 +6,6 @@ import { Tags } from '../all-tags';
 
 const ANCIENT_MARINER: Cocktail = {
 	title: 'Ancient Mariner',
-	subtitle: 'A complex blend of spice and citrus',
 	description:
 		'Demerara rum, blended light rum, blanc rhum agricole, allspice dram, lime, grapefruit, demerara syrup, mint.',
 	imagePath:

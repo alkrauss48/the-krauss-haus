@@ -6,7 +6,6 @@ import { Tags } from '../all-tags';
 
 const JET_PILOT: Cocktail = {
 	title: 'Jet Pilot',
-	subtitle: 'A bold, spicy journey through the tropics',
 	description:
 		'Jamaican rum, overproof demerara rum, falernum, cinnamon syrup, lime, grapefruit, herbstura, maraschino cherry.',
 	imagePath:

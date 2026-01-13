@@ -6,7 +6,6 @@ import { Tags } from '../all-tags';
 
 const IRON_RANGER: Cocktail = {
 	title: 'Iron Ranger',
-	subtitle: 'Bourbon-based with a hint of spice',
 	description: 'Bourbon, falernum, demerara syrup, lemon, pineapple, cinnamon, mint.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/iron-ranger.png',
