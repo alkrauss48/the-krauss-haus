@@ -23,6 +23,7 @@
 	let starIdCounter = 0;
 	let fireworkIdCounter = 0;
 	let selectedCocktailSlugs = new SvelteSet<string>();
+	let countdownCancelled = false;
 
 	// Generate random cocktail (shuffle behavior - no repeats until all shown)
 	function getRandomCocktail(): Cocktail {
@@ -82,6 +83,7 @@
 		showResult = false;
 		countdownNumber = null;
 		selectedCocktail = null;
+		countdownCancelled = false;
 
 		// Countdown from 3 to 1
 		for (let i = 3; i >= 1; i--) {
@@ -90,6 +92,7 @@
 			generateFireworks(40 - i * 10);
 			await tick();
 			await new Promise((resolve) => setTimeout(resolve, 1000));
+			if (countdownCancelled) return;
 		}
 
 		countdownNumber = '🎉';
@@ -99,6 +102,7 @@
 		generateFireworks(50);
 		await tick();
 		await new Promise((resolve) => setTimeout(resolve, 500));
+		if (countdownCancelled) return;
 
 		// Show result
 		selectedCocktail = getRandomCocktail();
@@ -114,6 +118,7 @@
 	// Close modal and reset state
 	function closeModal(): void {
 		isOpen = false;
+		countdownCancelled = true; // Cancel any running countdown
 		// Reset after animation
 		if (browser) {
 			setTimeout(() => {
