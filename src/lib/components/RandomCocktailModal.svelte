@@ -7,6 +7,7 @@
 	import type { Cocktail } from '$lib/types/cocktails';
 	import CocktailCard from '$lib/components/CocktailCard.svelte';
 	import { tick } from 'svelte';
+	import { SvelteSet } from 'svelte/reactivity';
 
 	export let isOpen = false;
 
@@ -21,11 +22,30 @@
 	let fireworks: Array<{ id: number; x: number; y: number; delay: number }> = [];
 	let starIdCounter = 0;
 	let fireworkIdCounter = 0;
+	let selectedCocktailSlugs = new SvelteSet<string>();
 
-	// Generate random cocktail
+	// Generate random cocktail (shuffle behavior - no repeats until all shown)
 	function getRandomCocktail(): Cocktail {
-		const randomIndex = Math.floor(Math.random() * allCocktails.length);
-		return allCocktails[randomIndex];
+		// Get cocktails that haven't been selected yet
+		const availableCocktails = allCocktails.filter(
+			(cocktail) => !selectedCocktailSlugs.has(cocktail.slug)
+		);
+
+		// If all cocktails have been shown, reset and start over
+		if (availableCocktails.length === 0) {
+			selectedCocktailSlugs.clear();
+			// Now all cocktails are available again
+			const randomIndex = Math.floor(Math.random() * allCocktails.length);
+			const selected = allCocktails[randomIndex];
+			selectedCocktailSlugs.add(selected.slug);
+			return selected;
+		}
+
+		// Pick a random cocktail from available ones
+		const randomIndex = Math.floor(Math.random() * availableCocktails.length);
+		const selected = availableCocktails[randomIndex];
+		selectedCocktailSlugs.add(selected.slug);
+		return selected;
 	}
 
 	// Generate stars for animation
