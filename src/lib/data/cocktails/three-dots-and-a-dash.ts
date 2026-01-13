@@ -6,7 +6,6 @@ import { Tags } from '../all-tags';
 
 const THREE_DOTS_AND_A_DASH: Cocktail = {
 	title: 'Three Dots and a Dash',
-	subtitle: 'A celebration of rum and spice',
 	description:
 		'Aged rhum agricole, blended rum, demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
 	imagePath:

@@ -6,7 +6,6 @@ import { Tags } from '../all-tags';
 
 const JUNGLE_BIRD: Cocktail = {
 	title: 'Jungle Bird',
-	subtitle: 'A perfect balance of bitter and sweet',
 	description: 'Dark rum, campari, pineapple, lime, demarara syrup.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/jungle-bird.png',

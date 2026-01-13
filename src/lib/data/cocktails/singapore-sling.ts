@@ -6,7 +6,6 @@ import { Tags } from '../all-tags';
 
 const SINGAPORE_SLING: Cocktail = {
 	title: 'Singapore Sling',
-	subtitle: 'A sophisticated gin-based tiki classic',
 	description:
 		'Gin, cherry heering, benedictine, cointreau, grenadine, pineapple, lime, angostura bitters.',
 	imagePath:

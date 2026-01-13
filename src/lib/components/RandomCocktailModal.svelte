@@ -95,7 +95,7 @@
 			if (countdownCancelled) return;
 		}
 
-		countdownNumber = '🎉';
+		countdownNumber = '0';
 
 		// Final explosion
 		generateStars(50);
@@ -223,10 +223,10 @@
 			<!-- Intro Screen -->
 			{#if showIntro}
 				<div class="text-center" in:fade={{ duration: 300 }}>
-					<h2 id="modal-title" class="text-3xl font-bold text-gray-800 mb-4">
+					<h2 id="modal-title" class="text-xl md:text-3xl font-bold text-gray-800 mb-4">
 						Random Cocktail Picker
 					</h2>
-					<p class="text-gray-600 mb-8 text-lg leading-relaxed">
+					<p class="text-gray-600 mb-8 text-md md:text-lg leading-relaxed">
 						Ready to discover something new? We'll pick a random cocktail from our collection!
 					</p>
 					<button
@@ -333,9 +333,9 @@
 			<!-- Result Screen -->
 			{#if showResult && selectedCocktail}
 				<div class="text-center" in:fade={{ duration: 400, delay: 200 }}>
-					<h2 class="text-2xl font-bold text-gray-800 mb-6">Your Cocktail</h2>
+					<h2 class="text-lg md:text-2xl font-bold text-gray-800 mb-6">{selectedCocktail.title}</h2>
 					<div class="mb-6">
-						<CocktailCard cocktail={selectedCocktail} />
+						<CocktailCard cocktail={selectedCocktail} showTitle={false} showVariations={false} />
 					</div>
 					<button
 						class="cursor-pointer px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
