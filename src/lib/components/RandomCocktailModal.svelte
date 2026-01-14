@@ -231,6 +231,7 @@
 					</p>
 					<button
 						class="cursor-pointer px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+						style="background: linear-gradient(135deg, #fb923c 0%, #ef4444 50%, #ec4899 100%);"
 						on:click={startCountdown}
 					>
 						Pick my Cocktail
@@ -321,7 +322,7 @@
 						>
 							<div
 								class="text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-orange-500 to-red-500"
-								style="text-shadow: 0 0 30px rgba(251, 146, 60, 0.5), 0 0 60px rgba(251, 146, 60, 0.3); animation: pulse 1s ease-in-out infinite;"
+								style="text-shadow: 0 0 5px rgba(251, 146, 60, 0.5), 0 0 10px rgba(251, 146, 60, 0.3); animation: pulse 1s ease-in-out infinite;"
 							>
 								{countdownNumber}
 							</div>
@@ -339,6 +340,7 @@
 					</div>
 					<button
 						class="cursor-pointer px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+						style="background: linear-gradient(135deg, #9333ea 0%, #be123c 50%, #ec4899 100%);"
 						on:click={pickAnother}
 					>
 						Pick Another

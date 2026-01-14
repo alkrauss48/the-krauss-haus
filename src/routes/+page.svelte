@@ -46,7 +46,9 @@
 		class="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[800px] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8"
 	>
 		<!-- Cocktail Menus -->
-		<section class="w-full bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 shadow-sm">
+		<section
+			class="w-full bg-orange-50 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 shadow-sm"
+		>
 			<h2 class="text-lg text-center font-medium text-amber-800 mb-3">Cocktail Menus</h2>
 			<p class="text-sm text-center text-amber-700/80 mb-6 leading-relaxed">
 				Browse our curated seasonal menus featuring handpicked cocktails for each time of year
@@ -59,7 +61,9 @@
 		</section>
 
 		<!-- Explore Section: Paths and All Cocktails -->
-		<section class="w-full bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 shadow-sm">
+		<section
+			class="w-full bg-indigo-50 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 shadow-sm"
+		>
 			<h2 class="text-lg text-center font-medium text-indigo-800 mb-3">Explore</h2>
 			<p class="text-sm text-center text-indigo-700/80 mb-6 leading-relaxed">
 				Discover cocktails through guided paths or search and filter our entire collection
