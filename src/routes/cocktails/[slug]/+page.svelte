@@ -57,7 +57,7 @@
 			in:fly={{ y: 20, duration: 400, delay: 400 }}
 		>
 			<!-- Hero Image Section -->
-			<div class="relative h-96 bg-gradient-to-br from-amber-50 to-orange-50">
+			<div class="relative h-96 bg-orange-50 bg-gradient-to-br from-amber-50 to-orange-50">
 				<img
 					src={cocktail.imagePath}
 					alt={cocktail.title}
