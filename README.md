@@ -91,7 +91,25 @@ Images have been generated with ChatGPT. All cocktail images typically follow th
 An example prompt is:
 
 ```
-Create an artistic painting of a jet pilot cocktail in a rocks glass with crushed ice, a speared maraschino cherry on a cocktail pick (no other garnish), and a straw. Use loose brushstrokes and an expressive watercolor style with translucent light brown tones. Make this a completely transparent PNG with no background at all, although minor abstract background directly behind the cocktail is okay as long as it highlights the cocktail itself. The illustration should have a hand-painted artistic interpretation with clear edges and a contained design. Portrait orientation (taller than wide).
+Create an artistic painting of [COCKTAIL DESCRIPTION — see section below].
+
+The cocktail should fill nearly the entire frame, with very minimal padding on all sides, while remaining fully contained within the canvas (no cropping or cut-off elements).
+
+Use loose brushstrokes and an expressive watercolor style, with clear edges and a hand-painted artistic interpretation. The color palette should emphasize tones of [COLOR TONES — see section below].
+
+Output as a completely transparent PNG with no background at all. A subtle, abstract watercolor halo or splash directly behind the cocktail is acceptable only if it helps visually highlight the drink and remains contained around it.
+
+Portrait orientation (taller than wide).
+
+Cocktail description:
+– Cocktail: Planter’s Punch
+– Glassware: Highball glass
+– Ice: Crushed ice
+– Garnish: Mint sprig
+– Accessories: Straw
+
+Color tones:
+– Blend of dark and medium-light brown tones
 ```
 
 Example of "Path" images:
