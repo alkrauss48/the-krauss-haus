@@ -46,26 +46,37 @@
 		class="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[800px] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8"
 	>
 		<!-- Cocktail Menus -->
-		<section
-			class="w-full bg-orange-50 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 shadow-sm"
-		>
-			<h2 class="text-lg text-center font-medium text-amber-800 mb-3">Cocktail Menus</h2>
-			<p class="text-sm text-center text-amber-700/80 mb-6 leading-relaxed">
+		<section class="w-full bg-white rounded-2xl p-6 shadow-sm border-2 border-blue-200">
+			<h2 class="text-lg text-center font-medium text-blue-800 mb-3">Cocktail Menus</h2>
+			<p class="text-sm text-center text-gray-600 mb-6 leading-relaxed">
 				Browse our curated seasonal menus featuring handpicked cocktails for each time of year
 			</p>
 			<nav class="flex flex-col gap-5" aria-label="Menu Navigation">
-				<MenuLink href="/summer-menu" label="Summer Menu" />
-				<MenuLink href="/tiki-menu" label="Tiki Menu" />
-				<MenuLink href="/winter-menu" label="Winter Menu" />
+				<a
+					href={resolve('/summer-menu')}
+					class="block w-full p-4 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-blue-200/50 hover:border-blue-300 shadow-sm hover:shadow-md backdrop-blur-sm"
+				>
+					<h3 class="text-base font-semibold mb-1 text-gray-800">Summer Menu</h3>
+				</a>
+				<a
+					href={resolve('/tiki-menu')}
+					class="block w-full p-4 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-blue-200/50 hover:border-blue-300 shadow-sm hover:shadow-md backdrop-blur-sm"
+				>
+					<h3 class="text-base font-semibold mb-1 text-gray-800">Tiki Menu</h3>
+				</a>
+				<a
+					href={resolve('/winter-menu')}
+					class="block w-full p-4 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-blue-200/50 hover:border-blue-300 shadow-sm hover:shadow-md backdrop-blur-sm"
+				>
+					<h3 class="text-base font-semibold mb-1 text-gray-800">Winter Menu</h3>
+				</a>
 			</nav>
 		</section>
 
 		<!-- Explore Section: Paths and All Cocktails -->
-		<section
-			class="w-full bg-indigo-50 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 shadow-sm"
-		>
-			<h2 class="text-lg text-center font-medium text-indigo-800 mb-3">Explore</h2>
-			<p class="text-sm text-center text-indigo-700/80 mb-6 leading-relaxed">
+		<section class="w-full bg-white rounded-2xl p-6 shadow-sm border-2 border-purple-200">
+			<h2 class="text-lg text-center font-medium text-purple-800 mb-3">Explore</h2>
+			<p class="text-sm text-center text-gray-600 mb-6 leading-relaxed">
 				Discover cocktails through guided paths or search and filter our entire collection
 			</p>
 			<nav class="flex flex-col gap-5" aria-label="Explore Navigation">
@@ -78,7 +89,7 @@
 				</a>
 				<a
 					href={resolve('/cocktails')}
-					class="block w-full p-5 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-blue-200/50 hover:border-blue-300 shadow-sm hover:shadow-md backdrop-blur-sm"
+					class="block w-full p-5 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-purple-200/50 hover:border-purple-300 shadow-sm hover:shadow-md backdrop-blur-sm"
 				>
 					<h3 class="text-base font-semibold mb-1 text-gray-800">All Cocktails</h3>
 					<p class="text-xs text-gray-600">Browse our complete collection</p>
