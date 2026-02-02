@@ -6,6 +6,7 @@ import AMERICAN_TRILOGY from '$lib/data/cocktails/american-trilogy';
 import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
 import BATANGA from '$lib/data/cocktails/batanga';
+import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-guiseppe';
 import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
@@ -64,6 +65,7 @@ import PALOMA from '$lib/data/cocktails/paloma';
 import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
 import PENICILLIN from '$lib/data/cocktails/penicillin';
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
+import PLANTERS_PUNCH from '$lib/data/cocktails/planters-punch';
 import PORT_LIGHT from '$lib/data/cocktails/port-light';
 import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
@@ -97,6 +99,7 @@ export const allCocktails: Cocktail[] = [
 	AMERICANO,
 	ANCIENT_MARINER,
 	BATANGA,
+	BITTER_GIUSEPPE,
 	BOULEVARDIER,
 	BRANDY_ALEXANDER,
 	CAIPIRINHA,
@@ -155,6 +158,7 @@ export const allCocktails: Cocktail[] = [
 	PAPER_PLANE,
 	PENICILLIN,
 	PIMMS_CUP,
+	PLANTERS_PUNCH,
 	PORT_LIGHT,
 	RADLER,
 	RAMOS_GIN_FIZZ,
