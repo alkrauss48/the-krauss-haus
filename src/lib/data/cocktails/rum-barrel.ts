@@ -29,7 +29,7 @@ const RUM_BARREL: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.HAMILTON_86
 		},
 		{
-			amount: '.25oz',
+			amount: '.5oz',
 			ingredient: Ingredients.BaseSpirits.SMITH_AND_CROSS
 		},
 		{
@@ -37,11 +37,11 @@ const RUM_BARREL: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.HAMILTON_151
 		},
 		{
-			amount: '.75oz',
+			amount: '1oz',
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
-			amount: '.5oz',
+			amount: '1oz',
 			ingredient: Ingredients.Citrus.PINEAPPLE
 		},
 		{
@@ -69,7 +69,6 @@ const RUM_BARREL: Cocktail = {
 			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
-	notes: 'Float the 151 rum on top.',
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
@@ -78,7 +77,7 @@ const RUM_BARREL: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.FLASH_BLENDED,
 		Tags.Style.TIKI,
-		Tags.Origin.CLASSIC,
+		Tags.Origin.MODERN,
 		Tags.ServedIn.TIKI_MUG,
 		Tags.PrepTime.COMPLEX_PREP
 	]

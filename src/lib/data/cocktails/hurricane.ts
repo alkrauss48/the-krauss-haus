@@ -12,7 +12,7 @@ const HURRICANE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hurricane.png',
 	slug: 'hurricane',
-	method: CocktailMethod.Shaken,
+	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ingredients: [
 		{
@@ -44,7 +44,7 @@ const HURRICANE: Cocktail = {
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
-		Tags.Technique.SHAKEN,
+		Tags.Technique.FLASH_BLENDED,
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS
