@@ -37,7 +37,7 @@ const ZOMBIE: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
 		},
 		{
-			amount: '.5oz',
+			amount: '.25oz',
 			ingredient: Ingredients.Liqueurs.FALERNUM
 		},
 		{
