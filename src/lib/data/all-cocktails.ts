@@ -1,7 +1,9 @@
 import type { Cocktail } from '$lib/types/cocktails';
 
 // Import all cocktail data
+import ALASKA from '$lib/data/cocktails/alaska';
 import AMARETTO_SOUR from '$lib/data/cocktails/amaretto-sour';
+import AMERICAN_BOILERMAKER from '$lib/data/cocktails/american-boilermaker';
 import AMERICAN_TRILOGY from '$lib/data/cocktails/american-trilogy';
 import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
@@ -11,13 +13,17 @@ import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
+import CERVEZA_Y_TEQUILA from '$lib/data/cocktails/cerveza-y-tequila';
 import CHAMPAGNE_COCKTAIL from '$lib/data/cocktails/champagne-cocktail';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
 import CORN_N_OIL from '$lib/data/cocktails/corn-n-oil';
 import COSMOPOLITAN from '$lib/data/cocktails/cosmopolitan';
+import COUNT_MAST from '$lib/data/cocktails/count-mast';
 import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
+import DEAR_MAMA from '$lib/data/cocktails/dear-mama';
+import DEER_AND_BEER from '$lib/data/cocktails/deer-and-beer';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
 import DR_FUNK from '$lib/data/cocktails/dr-funk';
@@ -60,6 +66,7 @@ import NEGRONI_BIANCO_BERGAMOTTO from '$lib/data/cocktails/negroni-bianco-bergam
 import NORWEIGAN_PARALYSIS from '$lib/data/cocktails/norwegian-paralysis';
 import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
 import OLD_FASHIONED from '$lib/data/cocktails/old-fashioned';
+import OL_OG_SNAPS from '$lib/data/cocktails/ol-og-snaps';
 import PAINKILLER from '$lib/data/cocktails/painkiller';
 import PALOMA from '$lib/data/cocktails/paloma';
 import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
@@ -81,6 +88,7 @@ import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
 import SLAP_N_PICKLE from '$lib/data/cocktails/slap-n-pickle';
 import SPAGHETT from '$lib/data/cocktails/spaghett';
 import SPRITZ from '$lib/data/cocktails/spritz';
+import SURFER_ON_ACID from '$lib/data/cocktails/surfer-on-acid';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
 import TI_PUNCH from '$lib/data/cocktails/ti-punch';
 import TIA_MIA from '$lib/data/cocktails/tia-mia';
@@ -90,11 +98,14 @@ import TRINIDAD_SOUR from '$lib/data/cocktails/trinidad-sour';
 import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
 import WHISKEY_GINGER from '$lib/data/cocktails/whiskey-ginger';
 import WHISKEY_SOUR from '$lib/data/cocktails/whiskey-sour';
+import WIDOWS_KISS from '$lib/data/cocktails/widows-kiss';
 import ZOMBIE from '$lib/data/cocktails/zombie';
 
 // Create array of all cocktails (sorted alphabetically)
 export const allCocktails: Cocktail[] = [
+	ALASKA,
 	AMARETTO_SOUR,
+	AMERICAN_BOILERMAKER,
 	AMERICAN_TRILOGY,
 	AMERICANO,
 	ANCIENT_MARINER,
@@ -104,13 +115,17 @@ export const allCocktails: Cocktail[] = [
 	BRANDY_ALEXANDER,
 	CAIPIRINHA,
 	CARAMEL_APPLE_SPICE,
+	CERVEZA_Y_TEQUILA,
 	CHAMPAGNE_COCKTAIL,
 	CHOCOLATE_COVERED_CHERRIES,
 	COBRAS_FANG,
 	CORN_N_OIL,
 	COSMOPOLITAN,
+	COUNT_MAST,
 	CUBA_LIBRE,
 	DAIQUIRI,
+	DEAR_MAMA,
+	DEER_AND_BEER,
 	DIVISION_BELL,
 	DONGA_PUNCH,
 	DR_FUNK,
@@ -153,6 +168,7 @@ export const allCocktails: Cocktail[] = [
 	NORWEIGAN_PARALYSIS,
 	OAXACA_OLD_FASHIONED,
 	OLD_FASHIONED,
+	OL_OG_SNAPS,
 	PAINKILLER,
 	PALOMA,
 	PAPER_PLANE,
@@ -174,6 +190,7 @@ export const allCocktails: Cocktail[] = [
 	SLAP_N_PICKLE,
 	SPAGHETT,
 	SPRITZ,
+	SURFER_ON_ACID,
 	THREE_DOTS_AND_A_DASH,
 	TI_PUNCH,
 	TIA_MIA,
@@ -183,6 +200,7 @@ export const allCocktails: Cocktail[] = [
 	VIEUX_CARRE,
 	WHISKEY_GINGER,
 	WHISKEY_SOUR,
+	WIDOWS_KISS,
 	ZOMBIE
 ].sort((a, b) => a.title.localeCompare(b.title));
 
