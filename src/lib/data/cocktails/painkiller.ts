@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const PAINKILLER: Cocktail = {
 	title: 'Painkiller',
@@ -14,6 +15,8 @@ const PAINKILLER: Cocktail = {
 	slug: 'painkiller',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.TikiMug,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '2oz',

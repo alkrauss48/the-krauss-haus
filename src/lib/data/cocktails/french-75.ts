@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const FRENCH_75: Cocktail = {
 	title: 'French 75',
@@ -14,6 +15,8 @@ const FRENCH_75: Cocktail = {
 	slug: 'french-75',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.FluteGlass,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '1oz',

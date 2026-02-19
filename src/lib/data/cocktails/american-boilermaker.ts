@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const AMERICAN_BOILERMAKER: Cocktail = {
 	title: 'American Boilermaker',
@@ -14,6 +15,8 @@ const AMERICAN_BOILERMAKER: Cocktail = {
 	slug: 'american-boilermaker',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '1.5oz',

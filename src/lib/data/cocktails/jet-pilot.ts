@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const JET_PILOT: Cocktail = {
 	title: 'Jet Pilot',
@@ -15,6 +16,8 @@ const JET_PILOT: Cocktail = {
 	slug: 'jet-pilot',
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.TikiMug,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '.5oz',

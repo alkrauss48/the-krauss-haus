@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const VIEUX_CARRE: Cocktail = {
 	title: 'Vieux Carré',
@@ -15,6 +16,8 @@ const VIEUX_CARRE: Cocktail = {
 	slug: 'vieux-carre',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.LargeCube,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '.75oz',

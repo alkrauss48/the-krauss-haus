@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const MAI_TAI: Cocktail = {
 	title: 'Mai Tai',
@@ -14,6 +15,8 @@ const MAI_TAI: Cocktail = {
 	slug: 'mai-tai',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '1oz',

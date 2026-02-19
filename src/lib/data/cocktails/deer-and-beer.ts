@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const DEER_AND_BEER: Cocktail = {
 	title: 'Deer and Beer',
@@ -14,6 +15,8 @@ const DEER_AND_BEER: Cocktail = {
 	slug: 'deer-and-beer',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '1.5oz',

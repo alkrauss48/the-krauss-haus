@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const LOST_LAKE: Cocktail = {
 	title: 'Lost Lake',
@@ -15,6 +16,8 @@ const LOST_LAKE: Cocktail = {
 	slug: 'lost-lake',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '1.5oz',

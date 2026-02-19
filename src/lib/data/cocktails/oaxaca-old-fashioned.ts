@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const OAXACA_OLD_FASHIONED: Cocktail = {
 	title: 'Oaxaca Old Fashioned',
@@ -14,6 +15,8 @@ const OAXACA_OLD_FASHIONED: Cocktail = {
 	slug: 'oaxaca-old-fashioned',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.LargeCube,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '1.5oz',

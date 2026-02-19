@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const RUM_BARREL: Cocktail = {
 	title: 'Rum Barrel',
@@ -15,6 +16,8 @@ const RUM_BARREL: Cocktail = {
 	slug: 'rum-barrel',
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.TikiMug,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '.75oz',

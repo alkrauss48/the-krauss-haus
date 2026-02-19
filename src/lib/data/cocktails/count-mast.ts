@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const COUNT_MAST: Cocktail = {
 	title: 'Count Mast',
@@ -14,6 +15,8 @@ const COUNT_MAST: Cocktail = {
 	slug: 'count-mast',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.CoupeGlass,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '1oz',

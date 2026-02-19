@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const DIVISION_BELL: Cocktail = {
 	title: 'Division Bell',
@@ -14,6 +15,8 @@ const DIVISION_BELL: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/division-bell.png',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '1.5oz',

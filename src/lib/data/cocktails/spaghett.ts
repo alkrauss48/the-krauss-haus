@@ -2,6 +2,7 @@ import { CocktailMethod } from '$lib/enums/methods';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const SPAGHETT: Cocktail = {
 	title: 'Spaghett',
@@ -12,6 +13,8 @@ const SPAGHETT: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/spaghett.png',
 	slug: 'spaghett',
 	method: CocktailMethod.Built,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '12oz',

@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const OL_OG_SNAPS: Cocktail = {
 	title: 'Øl og Snaps',
@@ -14,6 +15,8 @@ const OL_OG_SNAPS: Cocktail = {
 	slug: 'ol-og-snaps',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '1.5oz',

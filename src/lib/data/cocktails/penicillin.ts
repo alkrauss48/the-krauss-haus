@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const PENICILLIN: Cocktail = {
 	title: 'Penicillin',
@@ -14,6 +15,8 @@ const PENICILLIN: Cocktail = {
 	slug: 'penicillin',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.LargeCube,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '2oz',

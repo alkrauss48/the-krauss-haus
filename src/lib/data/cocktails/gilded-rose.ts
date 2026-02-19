@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const GILDED_ROSE: Cocktail = {
 	title: 'Gilded Rose',
@@ -15,6 +16,8 @@ const GILDED_ROSE: Cocktail = {
 	slug: 'gilded-rose',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.FluteGlass,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '.5oz',

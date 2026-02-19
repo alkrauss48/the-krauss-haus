@@ -2,6 +2,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const GLUHWEIN: Cocktail = {
 	title: 'Glühwein',
@@ -13,6 +14,8 @@ const GLUHWEIN: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gluhwein.png',
 	slug: 'gluhwein',
 	servedIn: ServedIn.Mug,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '750ml',
