@@ -1,15 +1,18 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import CocktailCard from '$lib/components/CocktailCard.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import FeaturedDrink from '$lib/components/FeaturedDrink.svelte';
 	import { fade, fly } from 'svelte/transition';
-	import { featuredDrinks, categories } from '$lib/data/winter-menu';
+
+	export let data: PageData;
+	const { menu } = data;
 </script>
 
 <svelte:head>
-	<title>Winter Menu - The Krauss Haus</title>
-	<meta name="description" content="Winter cocktail menu at The Krauss Haus" />
+	<title>{menu.title} - The Krauss Haus</title>
+	<meta name="description" content="{menu.title} cocktail menu at The Krauss Haus" />
 	<meta property="og:image" content="https://thekrausshaus.com/images/open-graph/og-root.jpg" />
 </svelte:head>
 
@@ -22,14 +25,16 @@
 		<Breadcrumbs />
 
 		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-			<h1 class="text-4xl font-bold text-gray-800 mb-4">Winter Menu</h1>
-			<p class="text-gray-600">Warming cocktails for the cold season</p>
+			<h1 class="text-4xl font-bold text-gray-800 mb-4">{menu.title}</h1>
+			<p class="text-gray-600">{menu.subtitle}</p>
 		</header>
 
 		<div class="space-y-24">
-			<FeaturedDrink {featuredDrinks} />
+			{#if menu.featuredDrinks}
+				<FeaturedDrink featuredDrinks={menu.featuredDrinks} />
+			{/if}
 
-			{#each categories as category, i (category.title)}
+			{#each menu.categories as category, i (category.title)}
 				<section class="relative" in:fly={{ y: 20, duration: 400, delay: 600 + i * 100 }}>
 					<!-- Category Header with decorative line -->
 					<div class="flex items-center mb-12">
