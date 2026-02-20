@@ -9,10 +9,10 @@ const BITTER_GIUSEPPE: Cocktail = {
 	title: 'Bitter Giuseppe',
 	description: 'Amaro lucano, fernet branca, sweet vermouth, lemon, orange bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/bitter-guiseppe.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/bitter-giuseppe.png',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/bitter-guiseppe.png',
-	slug: 'bitter-guiseppe',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/bitter-giuseppe.png',
+	slug: 'bitter-giuseppe',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,

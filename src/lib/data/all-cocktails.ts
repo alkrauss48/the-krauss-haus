@@ -8,7 +8,7 @@ import AMERICAN_TRILOGY from '$lib/data/cocktails/american-trilogy';
 import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
 import BATANGA from '$lib/data/cocktails/batanga';
-import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-guiseppe';
+import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-giuseppe';
 import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
