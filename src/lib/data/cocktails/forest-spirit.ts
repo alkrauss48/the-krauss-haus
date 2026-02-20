@@ -59,7 +59,7 @@ const FOREST_SPIRIT: Cocktail = {
 		'Garnish: Cocktail umbrella'
 	],
 	notes:
-		'Created as a themed drink for My Neighbor Totoro for our 7th anniversary. Shake all ingredients with ice except the soda water. Strain into a double rocks glass over ice. Top with soda water. Express and discard lemon twist. Garnish with a mint sprig and cocktail umbrella.',
+		'Created as a themed drink for My Neighbor Totoro for our 7th anniversary, as an herbal and floral riff of a Gin and Tonic. Shake all ingredients with ice except the tonic water. Strain into a double rocks glass over ice. Top with tonic water. Express and discard lemon twist. Garnish with a mint sprig and cocktail umbrella.',
 	tags: [
 		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,
