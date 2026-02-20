@@ -4,7 +4,7 @@
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import FeaturedDrink from '$lib/components/FeaturedDrink.svelte';
 	import { fade, fly } from 'svelte/transition';
-	import { featuredDrink, categories } from '$lib/data/winter-menu';
+	import { featuredDrinks, categories } from '$lib/data/winter-menu';
 </script>
 
 <svelte:head>
@@ -27,7 +27,7 @@
 		</header>
 
 		<div class="space-y-24">
-			<FeaturedDrink {featuredDrink} />
+			<FeaturedDrink {featuredDrinks} />
 
 			{#each categories as category, i (category.title)}
 				<section class="relative" in:fly={{ y: 20, duration: 400, delay: 600 + i * 100 }}>

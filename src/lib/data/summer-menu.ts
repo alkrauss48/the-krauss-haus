@@ -15,7 +15,7 @@ import SPRITZ from '$lib/data/cocktails/spritz';
 import DAIQUIRI from './cocktails/daiquiri';
 import SPAGHETT from './cocktails/spaghett';
 
-export const featuredDrink: Cocktail = GILDED_ROSE;
+export const featuredDrinks: Cocktail[] = [GILDED_ROSE];
 
 export const categories: Category[] = [
 	{
