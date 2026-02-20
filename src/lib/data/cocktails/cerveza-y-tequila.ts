@@ -27,8 +27,7 @@ const CERVEZA_Y_TEQUILA: Cocktail = {
 			ingredient: Ingredients.BeerAndWine.TECATE_MEXICAN_LAGER
 		}
 	],
-	notes:
-		'Traditionally served as a shot of tequila followed by a beer chaser.',
+	notes: 'Traditionally served as a shot of tequila followed by a beer chaser.',
 	tags: [
 		Tags.BaseAlcohol.BEER,
 		Tags.BaseAlcohol.TEQUILA,

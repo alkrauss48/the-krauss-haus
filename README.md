@@ -106,6 +106,7 @@ Image Requirements
 
 Output only the finished image (transparent PNG). No text or explanation.
 ```
+
 And then paste the cocktail details, such as the cocktail JSON file.
 
 Example of "Path" images:

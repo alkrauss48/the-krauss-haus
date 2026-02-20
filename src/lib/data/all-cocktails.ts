@@ -22,7 +22,7 @@ import COSMOPOLITAN from '$lib/data/cocktails/cosmopolitan';
 import COUNT_MAST from '$lib/data/cocktails/count-mast';
 import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
-import DEAR_MAMA from '$lib/data/cocktails/dear-mama';
+import DEAR_LUKEY from '$lib/data/cocktails/dear-lukey';
 import DEER_AND_BEER from '$lib/data/cocktails/deer-and-beer';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
@@ -124,7 +124,7 @@ export const allCocktails: Cocktail[] = [
 	COUNT_MAST,
 	CUBA_LIBRE,
 	DAIQUIRI,
-	DEAR_MAMA,
+	DEAR_LUKEY,
 	DEER_AND_BEER,
 	DIVISION_BELL,
 	DONGA_PUNCH,
