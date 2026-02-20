@@ -1,5 +1,5 @@
 import type { CocktailPath } from '$lib/types/cocktail-path';
-import BITTER_GIUSEPPE from '../cocktails/bitter-guiseppe';
+import BITTER_GIUSEPPE from '../cocktails/bitter-giuseppe';
 import COBRAS_FANG from '../cocktails/cobras-fang';
 import JUNGLE_BIRD from '../cocktails/jungle-bird';
 import NEGRONI from '../cocktails/negroni';

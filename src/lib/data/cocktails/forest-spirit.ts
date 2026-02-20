@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const FOREST_SPIRIT: Cocktail = {
 	title: 'Forest Spirit',
@@ -16,6 +17,8 @@ const FOREST_SPIRIT: Cocktail = {
 	slug: 'forest-spirit',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.LargeCube,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '1.5oz',
@@ -56,7 +59,7 @@ const FOREST_SPIRIT: Cocktail = {
 		'Garnish: Cocktail umbrella'
 	],
 	notes:
-		'Created as a themed drink for My Neighbor Totoro for our 7th anniversary. Shake all ingredients with ice except the soda water. Strain into a double rocks glass over ice. Top with soda water. Express and discard lemon twist. Garnish with a mint sprig and cocktail umbrella.',
+		'Created as a themed drink for My Neighbor Totoro for our 7th anniversary, as an herbal and floral riff of a Gin and Tonic. Shake all ingredients with ice except the tonic water. Strain into a double rocks glass over ice. Top with tonic water. Express and discard lemon twist. Garnish with a mint sprig and cocktail umbrella.',
 	tags: [
 		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,

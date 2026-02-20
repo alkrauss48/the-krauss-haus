@@ -91,26 +91,23 @@ Images have been generated with ChatGPT. All cocktail images typically follow th
 An example prompt is:
 
 ```
-Create an artistic painting of [COCKTAIL DESCRIPTION — see section below].
+Create a portrait-oriented watercolor illustration of a cocktail based on the following reference data. Infer the drink’s visual appearance from the information provided (name, ingredients, serving style, glassware, ice, garnish, and overall character). Interpret the data flexibly rather than relying on specific field names.
 
-The cocktail should fill nearly the entire frame, with very minimal padding on all sides, while remaining fully contained within the canvas (no cropping or cut-off elements).
+Image Requirements
+*	Portrait orientation.
+*	Transparent background (PNG).
+*	The cocktail should fill nearly the entire frame with minimal padding.
+*	Entire drink must be fully visible: glass, ice, liquid, garnish, and any accessories (no cropping).
+*	Clean, centered, iconic composition suitable for a standalone menu illustration.
+*	Loose, hand-painted watercolor style with visible brushwork.
+*	Soft, natural edges with gentle color variation and watercolor texture.
+*	Color palette should reflect the drink’s natural appearance and flavor character.
+*	Optional: a subtle, contained watercolor halo or splash behind the drink for emphasis only (must remain contained and not fill the background).
 
-Use loose brushstrokes and an expressive watercolor style, with clear edges and a hand-painted artistic interpretation. The color palette should emphasize tones of [COLOR TONES — see section below].
-
-Output as a completely transparent PNG with no background at all. A subtle, abstract watercolor halo or splash directly behind the cocktail is acceptable only if it helps visually highlight the drink and remains contained around it.
-
-Portrait orientation (taller than wide).
-
-Cocktail description:
-– Cocktail: Planter’s Punch
-– Glassware: Highball glass
-– Ice: Crushed ice
-– Garnish: Mint sprig
-– Accessories: Straw
-
-Color tones:
-– Blend of dark and medium-light brown tones
+Output only the finished image (transparent PNG). No text or explanation.
 ```
+
+And then paste the cocktail details, such as the cocktail JSON file.
 
 Example of "Path" images:
 

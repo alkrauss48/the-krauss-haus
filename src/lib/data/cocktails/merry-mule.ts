@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const MERRY_MULE: Cocktail = {
 	title: 'Merry Mule',
@@ -15,6 +16,8 @@ const MERRY_MULE: Cocktail = {
 	slug: 'merry-mule',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.Mug,
+	ice: Ice.SmallCubes,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '2oz',

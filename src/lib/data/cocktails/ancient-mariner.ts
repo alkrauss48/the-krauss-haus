@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const ANCIENT_MARINER: Cocktail = {
 	title: 'Ancient Mariner',
@@ -15,6 +16,8 @@ const ANCIENT_MARINER: Cocktail = {
 	slug: 'ancient-mariner',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '1oz',

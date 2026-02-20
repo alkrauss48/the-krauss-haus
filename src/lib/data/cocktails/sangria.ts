@@ -2,6 +2,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const SANGRIA: Cocktail = {
 	title: 'Sangria',
@@ -12,6 +13,8 @@ const SANGRIA: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sangria.png',
 	slug: 'sangria',
 	servedIn: ServedIn.HighballGlass,
+	ice: Ice.SmallCubes,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '750mL',

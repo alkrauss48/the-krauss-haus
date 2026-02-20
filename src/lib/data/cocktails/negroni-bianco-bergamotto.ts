@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const NEGRONI_BIANCO_BERGAMOTTO: Cocktail = {
 	title: 'Negroni Bianco Bergamotto',
@@ -14,6 +15,8 @@ const NEGRONI_BIANCO_BERGAMOTTO: Cocktail = {
 	slug: 'negroni-bianco-bergamotto',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.LargeCube,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '1oz',

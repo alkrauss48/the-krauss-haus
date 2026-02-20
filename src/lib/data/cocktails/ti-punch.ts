@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const TI_PUNCH: Cocktail = {
 	title: 'Ti Punch',
@@ -14,6 +15,8 @@ const TI_PUNCH: Cocktail = {
 	slug: 'ti-punch',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.SingleRocksGlass,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '2oz',

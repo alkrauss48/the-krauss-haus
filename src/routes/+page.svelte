@@ -53,19 +53,19 @@
 			</p>
 			<nav class="flex flex-col gap-5" aria-label="Menu Navigation">
 				<a
-					href={resolve('/summer-menu')}
+					href={resolve('/menu/summer')}
 					class="block w-full p-4 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-blue-200/50 hover:border-blue-300 shadow-sm hover:shadow-md backdrop-blur-sm"
 				>
 					<h3 class="text-base font-semibold mb-1 text-gray-800">Summer Menu</h3>
 				</a>
 				<a
-					href={resolve('/tiki-menu')}
+					href={resolve('/menu/tiki')}
 					class="block w-full p-4 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-blue-200/50 hover:border-blue-300 shadow-sm hover:shadow-md backdrop-blur-sm"
 				>
 					<h3 class="text-base font-semibold mb-1 text-gray-800">Tiki Menu</h3>
 				</a>
 				<a
-					href={resolve('/winter-menu')}
+					href={resolve('/menu/winter')}
 					class="block w-full p-4 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-blue-200/50 hover:border-blue-300 shadow-sm hover:shadow-md backdrop-blur-sm"
 				>
 					<h3 class="text-base font-semibold mb-1 text-gray-800">Winter Menu</h3>

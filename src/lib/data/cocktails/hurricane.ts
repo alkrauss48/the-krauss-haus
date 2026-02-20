@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const HURRICANE: Cocktail = {
 	title: 'Hurricane',
@@ -14,6 +15,8 @@ const HURRICANE: Cocktail = {
 	slug: 'hurricane',
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '.75oz',

@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const THREE_DOTS_AND_A_DASH: Cocktail = {
 	title: 'Three Dots and a Dash',
@@ -15,6 +16,8 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 	slug: 'three-dots-and-a-dash',
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.TikiMug,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '1oz',

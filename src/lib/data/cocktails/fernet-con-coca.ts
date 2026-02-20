@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const FERNET_CON_COCA: Cocktail = {
 	title: 'Fernet con Coca',
@@ -14,6 +15,8 @@ const FERNET_CON_COCA: Cocktail = {
 	slug: 'fernet-con-coca',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,
+	ice: Ice.SmallCubes,
+	hasStraw: false,
 	ingredients: [
 		{
 			label: '30% Fernet branca',

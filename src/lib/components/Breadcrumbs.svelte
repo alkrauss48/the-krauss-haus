@@ -28,14 +28,8 @@
 				case 'paths':
 					label = 'Cocktail Paths';
 					break;
-				case 'summer-menu':
-					label = 'Summer Menu';
-					break;
-				case 'winter-menu':
-					label = 'Winter Menu';
-					break;
-				case 'tiki-menu':
-					label = 'Tiki Menu';
+				case 'menu':
+					label = 'Menus';
 					break;
 				case 'recipes':
 					label = 'Recipes';

@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const PLANTERS_PUNCH: Cocktail = {
 	title: "Planter's Punch",
@@ -14,6 +15,8 @@ const PLANTERS_PUNCH: Cocktail = {
 	slug: 'planters-punch',
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.HighballGlass,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '3oz',

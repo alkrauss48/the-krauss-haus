@@ -15,7 +15,7 @@ import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import RATTLE_SKULL from './cocktails/rattle-skull';
 
-export const featuredDrink: Cocktail = CARAMEL_APPLE_SPICE;
+export const featuredDrinks: Cocktail[] = [CARAMEL_APPLE_SPICE];
 
 export const categories: Category[] = [
 	{

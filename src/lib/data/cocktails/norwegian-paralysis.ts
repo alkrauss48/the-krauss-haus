@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const NORWEIGAN_PARALYSIS: Cocktail = {
 	title: 'Norwegian Paralysis',
@@ -14,6 +15,8 @@ const NORWEIGAN_PARALYSIS: Cocktail = {
 	slug: 'norwegian-paralysis',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.HighballGlass,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '1.5oz',

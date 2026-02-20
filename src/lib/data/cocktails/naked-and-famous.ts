@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const NAKED_AND_FAMOUS: Cocktail = {
 	title: 'Naked and Famous',
@@ -14,6 +15,8 @@ const NAKED_AND_FAMOUS: Cocktail = {
 	slug: 'naked-and-famous',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '.75oz',

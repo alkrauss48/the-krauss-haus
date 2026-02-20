@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const CARAMEL_APPLE_SPICE: Cocktail = {
 	title: 'Caramel Apple Spice',
@@ -16,6 +17,8 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	slug: 'caramel-apple-spice',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.Mug,
+	ice: Ice.None,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '.5oz',

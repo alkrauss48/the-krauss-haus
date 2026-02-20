@@ -3,6 +3,7 @@ import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
+import { Ice } from '$lib/enums/ice';
 
 const GODFATHER: Cocktail = {
 	title: 'Godfather',
@@ -14,6 +15,8 @@ const GODFATHER: Cocktail = {
 	slug: 'godfather',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,
+	ice: Ice.LargeCube,
+	hasStraw: false,
 	ingredients: [
 		{
 			amount: '2oz',
