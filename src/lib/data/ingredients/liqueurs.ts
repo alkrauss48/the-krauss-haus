@@ -21,7 +21,8 @@ const APEROL: Ingredient = {
 };
 const CAMPARI: Ingredient = {
 	title: 'Campari',
-	slug: 'campari'
+	slug: 'campari',
+	costPerOz: 0.85
 };
 const FERNET_BRANCA: Ingredient = {
 	title: 'Fernet Branca',

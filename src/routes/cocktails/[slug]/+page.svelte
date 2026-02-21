@@ -8,6 +8,8 @@
 
 	import type { Tag } from '$lib/types/tags';
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
+	import { calculateCocktailCost, formatCost, parseAmountToOz } from '$lib/utils/cost';
+	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
 	const { cocktail, onSummer, onWinter, onTiki, pathsContainingCocktail } = data;
@@ -114,6 +116,16 @@
 																See recipe
 															</a>
 														{/if}
+														{#if $costMode && ingredient.ingredient.costPerOz != null && ingredient.amount}
+															{@const itemCost =
+																ingredient.ingredient.costPerOz *
+																parseAmountToOz(ingredient.amount)}
+															{#if itemCost > 0}
+																<span class="text-xs text-green-700 ml-1.5"
+																	>({formatCost(itemCost)})</span
+																>
+															{/if}
+														{/if}
 													</span>
 												{/if}
 											</li>
@@ -132,6 +144,16 @@
 												Served in: {cocktail.servedIn}
 											</span>
 										</div>
+									{/if}
+									{#if $costMode}
+										{@const totalCost = calculateCocktailCost(cocktail)}
+										{#if totalCost !== null}
+											<div class="mt-4">
+												<span class="text-sm font-medium text-green-700">
+													Estimated cost to make: {formatCost(totalCost)}
+												</span>
+											</div>
+										{/if}
 									{/if}
 								</div>
 							{/if}

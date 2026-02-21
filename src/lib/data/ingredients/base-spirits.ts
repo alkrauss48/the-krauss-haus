@@ -55,7 +55,8 @@ const PLANTERAY_OFTD: Ingredient = {
 const PROBITAS: Ingredient = {
 	title: 'Probitas',
 	slug: 'probitas',
-	group: 'Blended Light Rum'
+	group: 'Blended Light Rum',
+	costPerOz: 1.25
 };
 const SMITH_AND_CROSS: Ingredient = {
 	title: 'Smith and Cross',
@@ -133,7 +134,8 @@ const DEL_MAGUY_VIDA: Ingredient = {
 const FORDS: Ingredient = {
 	title: 'Fords',
 	slug: 'fords',
-	group: 'London Dry Gin'
+	group: 'London Dry Gin',
+	costPerOz: 1.0
 };
 
 // Neutral Spirits

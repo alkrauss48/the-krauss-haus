@@ -18,6 +18,7 @@ export interface Ingredient {
 	slug: string;
 	group?: string;
 	recipe?: Recipe;
+	costPerOz?: number;
 }
 
 export interface IngredientItem {

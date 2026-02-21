@@ -9,6 +9,8 @@
 	import { IngredientType } from '$lib/enums/ingredientType';
 	import type { IngredientCategory, IngredientSubcategory } from '$lib/types/ingredients';
 	import { getIngredientUsageCounts } from '$lib/utils/ingredients';
+	import { formatCost } from '$lib/utils/cost';
+	import { costMode } from '$lib/stores/costMode';
 	import { resolve } from '$app/paths';
 
 	let selectedType: IngredientType | 'homemade' | null = null;
@@ -391,6 +393,11 @@
 														<span>{ingredient.title}</span>
 														{#if usageCount > 0}
 															<span class="text-xs text-gray-400 font-normal">({usageCount})</span>
+														{/if}
+														{#if $costMode && ingredient.costPerOz != null}
+															<span class="text-xs text-green-700 font-normal"
+																>{formatCost(ingredient.costPerOz)}/oz</span
+															>
 														{/if}
 														{#if ingredient.recipe}
 															<a
