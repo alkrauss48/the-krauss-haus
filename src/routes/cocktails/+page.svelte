@@ -39,8 +39,8 @@
 		}
 	}
 
-	const gridClass = 'grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center';
-	$: nameColClass = `col-span-5 md:col-span-3${$costMode ? ' sm:col-span-3' : ''}`;
+	$: gridClass = `grid ${$costMode ? 'grid-cols-9' : 'grid-cols-8'} sm:grid-cols-11 md:grid-cols-12 gap-4 items-center`;
+	$: nameColClass = `${$costMode ? 'col-span-4' : 'col-span-5'} sm:col-span-3 md:col-span-3`;
 	$: descColClass = `hidden md:block${$costMode ? ' col-span-3' : ' col-span-5'}`;
 
 	// Filter cocktails based on search term, selected tags, and selected ingredients
@@ -455,7 +455,7 @@
 						<div class="col-span-3 hidden sm:block md:col-span-2">Method</div>
 						{#if $costMode}
 							<button
-								class="col-span-2 hidden sm:block text-green-700 text-left cursor-pointer hover:text-green-900 transition-colors"
+								class="col-span-2 text-green-700 text-left cursor-pointer hover:text-green-900 transition-colors"
 								on:click={toggleCostSort}
 							>
 								Cost
@@ -531,7 +531,7 @@
 									<!-- Cost -->
 									{#if $costMode}
 										{@const cost = getDisplayCost(cocktail)}
-										<div class="col-span-2 hidden sm:block">
+										<div class="col-span-2">
 											<span class="text-sm text-green-700 font-medium">
 												{cost !== null ? formatCost(cost) : '—'}
 											</span>
@@ -588,7 +588,7 @@
 													<div class="col-span-3 hidden sm:block md:col-span-2"></div>
 													<!-- Empty spacer for cost column -->
 													{#if $costMode}
-														<div class="col-span-2 hidden sm:block"></div>
+														<div class="col-span-2"></div>
 													{/if}
 												</div>
 											{/each}
