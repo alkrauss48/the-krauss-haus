@@ -8,7 +8,7 @@
 
 	import type { Tag } from '$lib/types/tags';
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
-	import { calculateCocktailCost, formatCost, parseAmountToOz } from '$lib/utils/cost';
+	import { calculateCocktailCost, formatCost, parseAmountToOz, applyTax } from '$lib/utils/cost';
 	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
@@ -120,10 +120,11 @@
 															{@const oz = ingredient.amount
 																? parseAmountToOz(ingredient.amount)
 																: 0}
-															{@const itemCost =
+															{@const itemCost = applyTax(
 																oz > 0
 																	? ingredient.ingredient.costPerOz * oz
-																	: ingredient.ingredient.costPerOz}
+																	: ingredient.ingredient.costPerOz
+															)}
 															<span class="text-xs text-green-700 ml-1.5"
 																>({formatCost(itemCost)})</span
 															>
@@ -160,13 +161,13 @@
 											<div class="mt-4">
 												{#if cocktail.servings}
 													<span class="text-sm font-medium text-green-700">
-														Estimated cost to make: {formatCost(totalCost)} total ({formatCost(
-															totalCost / cocktail.servings
+														Estimated cost to make: {formatCost(applyTax(totalCost))} total ({formatCost(
+															applyTax(totalCost / cocktail.servings)
 														)} / serving)
 													</span>
 												{:else}
 													<span class="text-sm font-medium text-green-700">
-														Estimated cost to make: {formatCost(totalCost)}
+														Estimated cost to make: {formatCost(applyTax(totalCost))}
 													</span>
 												{/if}
 											</div>

@@ -1,5 +1,8 @@
 import type { Cocktail } from '$lib/types/cocktails';
 
+// Tax rate applied to all ingredient costs. Update this value to change the rate.
+const TAX_RATE = 0.085;
+
 export function parseAmountToOz(amount: string): number {
 	if (!amount) return 0;
 
@@ -48,6 +51,10 @@ export function calculateCocktailCost(cocktail: Cocktail): number | null {
 	return hasCostData ? total : null;
 }
 
+export function applyTax(cost: number): number {
+	return cost * (1 + TAX_RATE);
+}
+
 export function formatCost(cost: number | null): string {
 	if (cost === null) return '';
 	return `$${cost.toFixed(2)}`;
@@ -56,6 +63,6 @@ export function formatCost(cost: number | null): string {
 export function getDisplayCost(cocktail: Cocktail): number | null {
 	const total = calculateCocktailCost(cocktail);
 	if (total === null) return null;
-	if (cocktail.servings) return total / cocktail.servings;
-	return total;
+	const perServing = cocktail.servings ? total / cocktail.servings : total;
+	return perServing * (1 + TAX_RATE);
 }

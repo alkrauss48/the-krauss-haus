@@ -9,7 +9,7 @@
 	import { IngredientType } from '$lib/enums/ingredientType';
 	import type { IngredientCategory, IngredientSubcategory } from '$lib/types/ingredients';
 	import { getIngredientUsageCounts } from '$lib/utils/ingredients';
-	import { formatCost } from '$lib/utils/cost';
+	import { formatCost, applyTax } from '$lib/utils/cost';
 	import { costMode } from '$lib/stores/costMode';
 	import { resolve } from '$app/paths';
 
@@ -396,7 +396,7 @@
 														{/if}
 														{#if $costMode && ingredient.costPerOz != null}
 															<span class="text-xs text-green-700 font-normal"
-																>{formatCost(ingredient.costPerOz)}/oz</span
+																>{formatCost(applyTax(ingredient.costPerOz))}/oz</span
 															>
 														{/if}
 														{#if ingredient.recipe}
