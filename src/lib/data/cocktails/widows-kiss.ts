@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const WIDOWS_KISS: Cocktail = {
 	title: "Widow's Kiss",
-	description: 'Apple brandy, yellow chartreuse, benedictine, angostura bitters.',
+	description: 'Calvados, yellow chartreuse, benedictine, angostura bitters.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/widows-kiss.png',
 	thumbnailImagePath:

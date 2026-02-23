@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const SURFER_ON_ACID: Cocktail = {
 	title: 'Surfer on Acid',
-	description: 'Jägermeister, light rum, pineapple juice.',
+	description: 'Jägermeister, jamaican rum, pineapple, orgeat, lime.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/surfer-on-acid.png',
 	thumbnailImagePath:
