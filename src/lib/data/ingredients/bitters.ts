@@ -3,35 +3,43 @@ import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
 
 const ANGOSTURA: Ingredient = {
 	title: 'Angostura Bitters',
-	slug: 'angostura-bitters'
+	slug: 'angostura-bitters',
+	costPerOz: 3
 };
 const PEYCHAUDS: Ingredient = {
 	title: "Peychaud's Bitters",
-	slug: 'peychauds-bitters'
+	slug: 'peychauds-bitters',
+	costPerOz: 4
 };
 const ORANGE: Ingredient = {
 	title: 'Orange Bitters',
-	slug: 'orange-bitters'
+	slug: 'orange-bitters',
+	costPerOz: 4
 };
 const CELERY: Ingredient = {
 	title: 'Celery Bitters',
-	slug: 'celery-bitters'
+	slug: 'celery-bitters',
+	costPerOz: 4
 };
 const BLACK_WALNUT: Ingredient = {
 	title: 'Black Walnut Bitters',
-	slug: 'black-walnut-bitters'
+	slug: 'black-walnut-bitters',
+	costPerOz: 4
 };
 const XOCOLATL: Ingredient = {
 	title: 'Xocolatl Bitters',
-	slug: 'xocolatl-bitters'
+	slug: 'xocolatl-bitters',
+	costPerOz: 4
 };
 const HERBSTURA: Ingredient = {
 	title: 'Herbstura',
-	slug: 'herbstura'
+	slug: 'herbstura',
+	costPerOz: 3
 };
 const CHILI: Ingredient = {
 	title: 'Chili Bitters',
-	slug: 'chili-bitters'
+	slug: 'chili-bitters',
+	costPerOz: 4
 };
 
 export const BITTERS: IngredientCategory = {

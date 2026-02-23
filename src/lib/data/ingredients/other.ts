@@ -6,11 +6,13 @@ import TOM_AND_JERRY_BATTER_RECIPE from '$lib/data/recipes/tom-and-jerry-batter'
 const CRANBERRY_CORDIAL: Ingredient = {
 	title: 'Cranberry Cordial',
 	slug: 'cranberry-cordial',
-	recipe: CRANBERRY_CORDIAL_RECIPE
+	recipe: CRANBERRY_CORDIAL_RECIPE,
+	costPerOz: 0.25
 };
 const CREAM_OF_COCONUT: Ingredient = {
 	title: 'Cream of Coconut',
-	slug: 'cream-of-coconut'
+	slug: 'cream-of-coconut',
+	costPerOz: 0.3
 };
 const CUCUMBER: Ingredient = {
 	title: 'Cucumber',
@@ -18,15 +20,18 @@ const CUCUMBER: Ingredient = {
 };
 const EGG: Ingredient = {
 	title: 'Egg',
-	slug: 'egg'
+	slug: 'egg',
+	costPerOz: 0.3
 };
 const HEAVY_CREAM: Ingredient = {
 	title: 'Heavy Cream',
-	slug: 'heavy-cream'
+	slug: 'heavy-cream',
+	costPerOz: 0.3
 };
 const MARASCHINO_CHERRY: Ingredient = {
 	title: 'Maraschino Cherry',
-	slug: 'maraschino-cherry'
+	slug: 'maraschino-cherry',
+	costPerOz: 0.2
 };
 const ORANGE_BLOSSOM_WATER: Ingredient = {
 	title: 'Orange Blossom Water',
@@ -42,12 +47,14 @@ const SUGAR: Ingredient = {
 };
 const ESPRESSO: Ingredient = {
 	title: 'Espresso',
-	slug: 'espresso'
+	slug: 'espresso',
+	costPerOz: 0.2
 };
 const TOM_AND_JERRY_BATTER: Ingredient = {
 	title: 'Tom and Jerry Batter',
 	slug: 'tom-and-jerry-batter',
-	recipe: TOM_AND_JERRY_BATTER_RECIPE
+	recipe: TOM_AND_JERRY_BATTER_RECIPE,
+	costPerOz: 0.35
 };
 
 export const OTHER: IngredientCategory = {

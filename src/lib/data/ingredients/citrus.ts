@@ -3,7 +3,8 @@ import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
 
 const GRAPEFRUIT: Ingredient = {
 	title: 'Grapefruit Juice',
-	slug: 'grapefruit'
+	slug: 'grapefruit',
+	costPerOz: 0.35
 };
 const GRAPEFRUIT_GARNISH: Ingredient = {
 	title: 'Grapefruit Garnish',
@@ -11,7 +12,8 @@ const GRAPEFRUIT_GARNISH: Ingredient = {
 };
 const LIME: Ingredient = {
 	title: 'Lime Juice',
-	slug: 'lime'
+	slug: 'lime',
+	costPerOz: 0.35
 };
 const LIME_GARNISH: Ingredient = {
 	title: 'Lime Garnish',
@@ -19,7 +21,8 @@ const LIME_GARNISH: Ingredient = {
 };
 const LEMON: Ingredient = {
 	title: 'Lemon Juice',
-	slug: 'lemon'
+	slug: 'lemon',
+	costPerOz: 0.5
 };
 const LEMON_GARNISH: Ingredient = {
 	title: 'Lemon Garnish',
@@ -27,7 +30,8 @@ const LEMON_GARNISH: Ingredient = {
 };
 const ORANGE: Ingredient = {
 	title: 'Orange Juice',
-	slug: 'orange'
+	slug: 'orange',
+	costPerOz: 0.5
 };
 const ORANGE_GARNISH: Ingredient = {
 	title: 'Orange Garnish',
@@ -35,7 +39,8 @@ const ORANGE_GARNISH: Ingredient = {
 };
 const PINEAPPLE: Ingredient = {
 	title: 'Pineapple Juice',
-	slug: 'pineapple'
+	slug: 'pineapple',
+	costPerOz: 1 / 8
 };
 const PINEAPPLE_GARNISH: Ingredient = {
 	title: 'Pineapple Garnish',
