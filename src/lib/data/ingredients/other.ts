@@ -16,7 +16,8 @@ const CREAM_OF_COCONUT: Ingredient = {
 };
 const CUCUMBER: Ingredient = {
 	title: 'Cucumber',
-	slug: 'cucumber'
+	slug: 'cucumber',
+	costPerOz: 0.25
 };
 const EGG: Ingredient = {
 	title: 'Egg',
