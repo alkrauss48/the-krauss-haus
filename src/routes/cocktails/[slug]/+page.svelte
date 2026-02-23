@@ -103,7 +103,7 @@
 													{@const displayName = getIngredientDisplayName(ingredient)}
 													{@const recipe = ingredient.ingredient.recipe}
 													<span class="text-gray-700">
-														{#if ingredient.amount}
+														{#if ingredient.amount && !ingredient.label}
 															{ingredient.amount} {displayName}
 														{:else}
 															{displayName}

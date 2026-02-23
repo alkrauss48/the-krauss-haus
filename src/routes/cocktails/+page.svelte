@@ -27,6 +27,21 @@
 	let selectedIngredients: Ingredient[] = data.selectedIngredients || [];
 	let logicMode: LogicMode = data.logicMode || 'AND';
 	let isFilterSidebarOpen = false;
+	let sortColumn: 'cost' | null = null;
+	let sortDirection: 'asc' | 'desc' = 'asc';
+
+	function toggleCostSort(): void {
+		if (sortColumn === 'cost') {
+			sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+		} else {
+			sortColumn = 'cost';
+			sortDirection = 'asc';
+		}
+	}
+
+	const gridClass = 'grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center';
+	$: nameColClass = `col-span-5 md:col-span-3${$costMode ? ' sm:col-span-3' : ''}`;
+	$: descColClass = `hidden md:block${$costMode ? ' col-span-3' : ' col-span-5'}`;
 
 	// Filter cocktails based on search term, selected tags, and selected ingredients
 	$: filteredCocktails = cocktails.filter((cocktail) => {
@@ -56,6 +71,15 @@
 
 		return matchesSearch && matchesTags && matchesIngredients;
 	});
+
+	$: sortedCocktails =
+		sortColumn === 'cost'
+			? [...filteredCocktails].sort((a, b) => {
+					const costA = calculateCocktailCost(a) ?? -Infinity;
+					const costB = calculateCocktailCost(b) ?? -Infinity;
+					return sortDirection === 'asc' ? costA - costB : costB - costA;
+				})
+			: filteredCocktails;
 
 	function navigateToCocktail(slug: string): void {
 		goto(resolve(`/cocktails/${slug}`));
@@ -424,22 +448,30 @@
 			{:else}
 				<!-- Table Header -->
 				<div class="border-b border-gray-200 bg-gray-50 px-6 py-4">
-					<div
-						class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center font-semibold text-gray-700"
-					>
+					<div class="{gridClass} font-semibold text-gray-700">
 						<div class="col-span-3 md:col-span-2">Image</div>
-						<div class="col-span-5 md:col-span-3">Name</div>
-						<div class="col-span-5 hidden md:block">Description</div>
+						<div class={nameColClass}>Name</div>
+						<div class={descColClass}>Description</div>
 						<div class="col-span-3 hidden sm:block md:col-span-2">Method</div>
 						{#if $costMode}
-							<div class="col-span-2 hidden sm:block text-green-700">Cost</div>
+							<button
+								class="col-span-2 hidden sm:block text-green-700 text-left cursor-pointer hover:text-green-900 transition-colors"
+								on:click={toggleCostSort}
+							>
+								Cost
+								{#if sortColumn === 'cost'}
+									{sortDirection === 'asc' ? '↑' : '↓'}
+								{:else}
+									<span class="text-gray-400 font-normal">↕</span>
+								{/if}
+							</button>
 						{/if}
 					</div>
 				</div>
 
 				<!-- Table Body -->
 				<div class="divide-y divide-gray-200">
-					{#each filteredCocktails as cocktail (cocktail.slug)}
+					{#each sortedCocktails as cocktail (cocktail.slug)}
 						<div
 							class="px-6 py-4 hover:bg-gray-50 cursor-pointer transition-colors duration-200 focus-within:bg-gray-50"
 							class:pb-0={cocktail.variations && cocktail.variations.length > 0}
@@ -449,7 +481,7 @@
 							on:keydown={(e) => handleKeydown(e, cocktail.slug)}
 						>
 							<div>
-								<div class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center">
+								<div class={gridClass}>
 									<!-- Image -->
 									<div class="col-span-3 md:col-span-2">
 										<div
@@ -465,7 +497,7 @@
 									</div>
 
 									<!-- Name -->
-									<div class="col-span-5 md:col-span-3">
+									<div class={nameColClass}>
 										<h3 class="font-semibold text-gray-800 text-lg">{cocktail.title}</h3>
 										<!-- Show description under name on mobile only -->
 										<p
@@ -476,7 +508,7 @@
 									</div>
 
 									<!-- Description -->
-									<div class="col-span-5 hidden md:block">
+									<div class={descColClass}>
 										<p class="text-gray-600 text-sm leading-relaxed line-clamp-2">
 											{cocktail.description}
 										</p>
@@ -514,9 +546,7 @@
 									>
 										<div class="space-y-2">
 											{#each cocktail.variations as variant, index (variant.name)}
-												<div
-													class="grid grid-cols-8 sm:grid-cols-11 md:grid-cols-12 gap-4 items-center"
-												>
+												<div class={gridClass}>
 													<!-- Empty spacer for image column -->
 													<div class="col-span-3 md:col-span-2">
 														{#if index === 0}
@@ -528,7 +558,7 @@
 													</div>
 
 													<!-- Variant Name (aligned with cocktail name) -->
-													<div class="col-span-5 md:col-span-3">
+													<div class={nameColClass}>
 														<span class="text-sm font-medium text-gray-500">{variant.name}</span>
 														<!-- Show variant ingredients under name on mobile only -->
 														{#if formatVariantIngredients(variant)}
@@ -541,7 +571,7 @@
 													</div>
 
 													<!-- Variant Ingredients (aligned with cocktail description) -->
-													<div class="col-span-5 hidden md:block">
+													<div class={descColClass}>
 														{#if formatVariantIngredients(variant)}
 															<p class="text-gray-400 italic text-xs leading-relaxed">
 																{formatVariantIngredients(variant)}
@@ -553,6 +583,10 @@
 
 													<!-- Empty spacer for method column -->
 													<div class="col-span-3 hidden sm:block md:col-span-2"></div>
+													<!-- Empty spacer for cost column -->
+													{#if $costMode}
+														<div class="col-span-2 hidden sm:block"></div>
+													{/if}
 												</div>
 											{/each}
 										</div>

@@ -6,24 +6,24 @@ export function parseAmountToOz(amount: string): number {
 	const a = amount.trim().toLowerCase();
 
 	// oz: e.g. "1oz", ".75oz", "1.5oz"
-	const ozMatch = a.match(/^([\d.]+)\s*oz$/);
+	const ozMatch = a.match(/^([\d.]+)\s*oz/i);
 	if (ozMatch) return parseFloat(ozMatch[1]);
 
 	// dashes: e.g. "1 dash", "2 dashes"
-	const dashMatch = a.match(/^([\d.]+)\s*dashes?$/);
-	if (dashMatch) return parseFloat(dashMatch[1]) * (1 / 32);
-
-	// barspoon: e.g. "1 barspoon"
-	const barspoonMatch = a.match(/^([\d.]+)\s*barspoon(?:s)?$/);
-	if (barspoonMatch) return parseFloat(barspoonMatch[1]) * (1 / 6);
+	const dashMatch = a.match(/^([\d.]+)\s*dash/i);
+	if (dashMatch) return parseFloat(dashMatch[1]) * (1 / 48);
 
 	// tsp: e.g. "1 tsp", "2 tsp"
-	const tspMatch = a.match(/^([\d.]+)\s*tsp$/);
+	const tspMatch = a.match(/^([\d.]+)\s*tsp/i);
 	if (tspMatch) return parseFloat(tspMatch[1]) * (1 / 6);
 
 	// tbsp: e.g. "1 tbsp"
-	const tbspMatch = a.match(/^([\d.]+)\s*tbsp$/);
+	const tbspMatch = a.match(/^([\d.]+)\s*tbsp/i);
 	if (tbspMatch) return parseFloat(tbspMatch[1]) * (1 / 2);
+
+	// ml: e.g. "1 ml", "2 ml"
+	const mlMatch = a.match(/^([\d.]+)\s*ml/i);
+	if (mlMatch) return parseFloat(mlMatch[1]) * (1 / 30);
 
 	return 0;
 }
