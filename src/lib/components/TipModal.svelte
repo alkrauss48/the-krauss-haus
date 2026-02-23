@@ -66,7 +66,7 @@
 			</div>
 
 			<p class="text-sm text-gray-600 mb-6">
-				It costs about $3.25 in raw materials to make an average cocktail. If you enjoy our
+				It costs about $3.50 in raw materials to make an average cocktail. If you enjoy our
 				cocktails, consider leaving a tip!
 			</p>
 
