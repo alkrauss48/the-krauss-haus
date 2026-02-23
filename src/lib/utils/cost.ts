@@ -38,13 +38,11 @@ export function calculateCocktailCost(cocktail: Cocktail): number | null {
 		if (typeof item === 'string') continue;
 		const { ingredient, amount } = item;
 		if (ingredient.costPerOz == null) continue;
-		if (!amount) continue;
 
-		const oz = parseAmountToOz(amount);
-		if (oz === 0) continue;
+		const oz = amount ? parseAmountToOz(amount) : 0;
 
 		hasCostData = true;
-		total += ingredient.costPerOz * oz;
+		total += oz > 0 ? ingredient.costPerOz * oz : ingredient.costPerOz;
 	}
 
 	return hasCostData ? total : null;

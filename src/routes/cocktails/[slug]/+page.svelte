@@ -116,15 +116,17 @@
 																See recipe
 															</a>
 														{/if}
-														{#if $costMode && ingredient.ingredient.costPerOz != null && ingredient.amount}
+														{#if $costMode && ingredient.ingredient.costPerOz != null}
+															{@const oz = ingredient.amount
+																? parseAmountToOz(ingredient.amount)
+																: 0}
 															{@const itemCost =
-																ingredient.ingredient.costPerOz *
-																parseAmountToOz(ingredient.amount)}
-															{#if itemCost > 0}
-																<span class="text-xs text-green-700 ml-1.5"
-																	>({formatCost(itemCost)})</span
-																>
-															{/if}
+																oz > 0
+																	? ingredient.ingredient.costPerOz * oz
+																	: ingredient.ingredient.costPerOz}
+															<span class="text-xs text-green-700 ml-1.5"
+																>({formatCost(itemCost)})</span
+															>
 														{/if}
 													</span>
 												{/if}
