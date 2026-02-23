@@ -7,7 +7,7 @@
 	import { methodColors } from '$lib/enums/methods';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
-	import { calculateCocktailCost, formatCost } from '$lib/utils/cost';
+	import { getDisplayCost, formatCost } from '$lib/utils/cost';
 	import { costMode } from '$lib/stores/costMode';
 
 	export let cocktail: Cocktail;
@@ -144,9 +144,11 @@
 		{/if}
 		<p class="text-gray-600 flex-1">{cocktail.description}</p>
 		{#if $costMode}
-			{@const cost = calculateCocktailCost(cocktail)}
+			{@const cost = getDisplayCost(cocktail)}
 			{#if cost !== null}
-				<p class="text-xs text-green-700 mt-2">Est. cost: {formatCost(cost)}</p>
+				<p class="text-xs text-green-700 mt-2">
+					Est. cost: {formatCost(cost)}{cocktail.servings ? ' / serving' : ''}
+				</p>
 			{/if}
 		{/if}
 		{#if showVariations && cocktail.variations && cocktail.variations.length > 0}

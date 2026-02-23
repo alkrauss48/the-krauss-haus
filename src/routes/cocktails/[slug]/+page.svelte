@@ -147,13 +147,28 @@
 											</span>
 										</div>
 									{/if}
+									{#if cocktail.servings}
+										<div class="mt-4">
+											<span class="text-sm font-medium text-gray-600">
+												Makes {cocktail.servings} servings
+											</span>
+										</div>
+									{/if}
 									{#if $costMode}
 										{@const totalCost = calculateCocktailCost(cocktail)}
 										{#if totalCost !== null}
 											<div class="mt-4">
-												<span class="text-sm font-medium text-green-700">
-													Estimated cost to make: {formatCost(totalCost)}
-												</span>
+												{#if cocktail.servings}
+													<span class="text-sm font-medium text-green-700">
+														Estimated cost to make: {formatCost(totalCost)} total ({formatCost(
+															totalCost / cocktail.servings
+														)} / serving)
+													</span>
+												{:else}
+													<span class="text-sm font-medium text-green-700">
+														Estimated cost to make: {formatCost(totalCost)}
+													</span>
+												{/if}
 											</div>
 										{/if}
 									{/if}

@@ -23,6 +23,7 @@ export interface Cocktail {
 	servedIn?: ServedIn;
 	ice?: Ice;
 	hasStraw?: boolean;
+	servings?: number;
 	variations?: CocktailVariant[];
 	notes?: string;
 	tags?: Tag[];

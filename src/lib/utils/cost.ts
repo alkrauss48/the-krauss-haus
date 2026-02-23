@@ -52,3 +52,10 @@ export function formatCost(cost: number | null): string {
 	if (cost === null) return '';
 	return `$${cost.toFixed(2)}`;
 }
+
+export function getDisplayCost(cocktail: Cocktail): number | null {
+	const total = calculateCocktailCost(cocktail);
+	if (total === null) return null;
+	if (cocktail.servings) return total / cocktail.servings;
+	return total;
+}

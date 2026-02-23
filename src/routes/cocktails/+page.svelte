@@ -16,7 +16,7 @@
 	import type { LogicMode } from '$lib/types/filters';
 	import { matchesTagsLogic, matchesIngredientsLogic } from '$lib/utils/filterLogic';
 	import { formatVariantIngredients } from '$lib/utils/ingredients';
-	import { calculateCocktailCost, formatCost } from '$lib/utils/cost';
+	import { getDisplayCost, formatCost } from '$lib/utils/cost';
 	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
@@ -75,8 +75,8 @@
 	$: sortedCocktails =
 		sortColumn === 'cost'
 			? [...filteredCocktails].sort((a, b) => {
-					const costA = calculateCocktailCost(a) ?? -Infinity;
-					const costB = calculateCocktailCost(b) ?? -Infinity;
+					const costA = getDisplayCost(a) ?? -Infinity;
+					const costB = getDisplayCost(b) ?? -Infinity;
 					return sortDirection === 'asc' ? costA - costB : costB - costA;
 				})
 			: filteredCocktails;
@@ -530,11 +530,14 @@
 
 									<!-- Cost -->
 									{#if $costMode}
-										{@const cost = calculateCocktailCost(cocktail)}
+										{@const cost = getDisplayCost(cocktail)}
 										<div class="col-span-2 hidden sm:block">
 											<span class="text-sm text-green-700 font-medium">
 												{cost !== null ? formatCost(cost) : '—'}
 											</span>
+											{#if cost !== null && cocktail.servings}
+												<span class="text-xs text-gray-400">/serving</span>
+											{/if}
 										</div>
 									{/if}
 								</div>
