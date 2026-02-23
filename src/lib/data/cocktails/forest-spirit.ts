@@ -45,7 +45,7 @@ const FOREST_SPIRIT: Cocktail = {
 			ingredient: Ingredients.Bitters.ORANGE
 		},
 		{
-			amount: '3-4 oz',
+			amount: '3 oz',
 			ingredient: Ingredients.Mixers.TONIC_WATER
 		},
 		{

@@ -15,7 +15,7 @@ const COCA_COLA: Ingredient = {
 const GINGER_BEER: Ingredient = {
 	title: 'Ginger Beer',
 	slug: 'ginger-beer',
-	costPerOz: 1 / 4
+	costPerOz: 1 / 6
 };
 const GRAPEFRUIT_SODA: Ingredient = {
 	title: 'Grapefruit Soda',
@@ -30,7 +30,7 @@ const SANPELLEGRINO_LIMONATA: Ingredient = {
 const SODA_WATER: Ingredient = {
 	title: 'Soda Water',
 	slug: 'soda-water',
-	costPerOz: 1 / 8
+	costPerOz: 1 / 10
 };
 const SPICED_TEA: Ingredient = {
 	title: 'Spiced Tea',
@@ -41,7 +41,7 @@ const SPICED_TEA: Ingredient = {
 const TONIC_WATER: Ingredient = {
 	title: 'Tonic Water',
 	slug: 'tonic-water',
-	costPerOz: 1 / 4
+	costPerOz: 1 / 6
 };
 
 export const MIXERS: IngredientCategory = {

@@ -19,11 +19,11 @@ const MIMOSA: Cocktail = {
 	hasStraw: false,
 	ingredients: [
 		{
-			amount: '50%',
+			amount: '4oz',
 			ingredient: Ingredients.BeerAndWine.CHAMPAGNE
 		},
 		{
-			amount: '50%',
+			amount: '4oz',
 			ingredient: Ingredients.Citrus.ORANGE
 		}
 	],

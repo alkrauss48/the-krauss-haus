@@ -19,11 +19,11 @@ const FERNET_CON_COCA: Cocktail = {
 	hasStraw: false,
 	ingredients: [
 		{
-			label: '30% Fernet branca',
+			amount: '2oz',
 			ingredient: Ingredients.Liqueurs.FERNET_BRANCA
 		},
 		{
-			label: '70% Coca cola',
+			amount: '4oz',
 			ingredient: Ingredients.Mixers.COCA_COLA
 		}
 	],

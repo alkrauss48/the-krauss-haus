@@ -8,8 +8,7 @@ import { Ice } from '$lib/enums/ice';
 const CARAMEL_APPLE_SPICE: Cocktail = {
 	title: 'Caramel Apple Spice',
 	subtitle: 'A Krauss Family original',
-	description:
-		'Apple brandy, goldschläger, caramel vodka, apple strudel liqueur, calvados, apple cider.',
+	description: 'Apple brandy, goldschläger, caramel vodka, apple strudel liqueur, apple cider.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/caramel-apple-spice.png',
 	thumbnailImagePath:
@@ -35,10 +34,6 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 		{
 			amount: '.5oz',
 			ingredient: Ingredients.Liqueurs.APPLE_STRUDEL_LIQUEUER
-		},
-		{
-			label: 'Splash of Calvados',
-			ingredient: Ingredients.BaseSpirits.BOULARD_VSOP
 		},
 		{
 			amount: '5oz',

@@ -81,7 +81,7 @@ const DRY_CURACAO: Ingredient = {
 const COINTREAU: Ingredient = {
 	title: 'Cointreau',
 	slug: 'cointreau',
-	costPerOz: 35 / 25
+	costPerOz: 33 / 25
 };
 const CHERRY_HEERING: Ingredient = {
 	title: 'Cherry Heering',

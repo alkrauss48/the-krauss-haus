@@ -22,20 +22,25 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
 		},
-		'.5oz Peach liqueur',
 		{
-			amount: '12',
-			label: 'Large mint leaves',
+			amount: '.25oz',
+			ingredient: Ingredients.Liqueurs.DRY_CURACAO
+		},
+		{
+			label: '12 Large mint leaves',
 			ingredient: Ingredients.HerbsAndSpices.MINT
 		},
 		{
-			amount: '56g (1/4 cup)',
-			label: 'Diced fresh pineapple',
+			label: '56g (1/4 cup) Diced fresh pineapple',
 			ingredient: Ingredients.Citrus.PINEAPPLE_GARNISH
 		},
 		{
 			amount: '1oz',
 			ingredient: Ingredients.Syrups.HONEY_SYRUP
+		},
+		{
+			amount: '.25oz',
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
 		{
 			amount: '.5oz',

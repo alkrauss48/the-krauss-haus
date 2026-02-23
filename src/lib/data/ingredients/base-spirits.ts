@@ -194,7 +194,7 @@ const AQUAVIT: Ingredient = {
 	title: 'Aquavit',
 	slug: 'aquavit',
 	recipe: AQUAVIT_RECIPE,
-	costPerOz: 8 / 33
+	costPerOz: 9 / 33
 };
 
 export const BASE_SPIRITS: IngredientCategory = {

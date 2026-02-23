@@ -27,7 +27,7 @@ const AMERICANO: Cocktail = {
 			ingredient: Ingredients.BeerAndWine.COCCHI_VERMOUTH_DI_TORINO
 		},
 		{
-			amount: '3-4oz',
+			amount: '3oz',
 			ingredient: Ingredients.Mixers.SODA_WATER
 		},
 		{

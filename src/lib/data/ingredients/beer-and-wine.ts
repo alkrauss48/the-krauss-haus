@@ -44,7 +44,7 @@ const DOLIN_VERMOUTH_DRY: Ingredient = {
 const TEMPRANILLO: Ingredient = {
 	title: 'Tempranillo',
 	slug: 'tempranillo',
-	costPerOz: 15 / 25
+	costPerOz: 12 / 25
 };
 
 // Sparkling
