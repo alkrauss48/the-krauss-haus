@@ -43,6 +43,7 @@ const MOJITO: Cocktail = {
 			ingredient: Ingredients.HerbsAndSpices.MINT
 		},
 		{
+			amount: '1 dash',
 			label: 'Garnish: Dash of Angostura bitters',
 			ingredient: Ingredients.Bitters.ANGOSTURA
 		}

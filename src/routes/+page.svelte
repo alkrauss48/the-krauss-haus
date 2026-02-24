@@ -4,6 +4,7 @@
 	import TipModal from '$lib/components/TipModal.svelte';
 	import RandomCocktailModal from '$lib/components/RandomCocktailModal.svelte';
 	import { resolve } from '$app/paths';
+	import { toggleCostMode } from '$lib/stores/costMode';
 
 	let showTipModal = false;
 	let showRandomCocktailModal = false;
@@ -18,6 +19,22 @@
 
 	function handleRandomCocktailOpen() {
 		showRandomCocktailModal = true;
+	}
+
+	let tapCount = 0;
+	let tapTimer: ReturnType<typeof setTimeout>;
+
+	function handleTitleTap() {
+		tapCount++;
+		clearTimeout(tapTimer);
+		if (tapCount >= 3) {
+			tapCount = 0;
+			toggleCostMode();
+		} else {
+			tapTimer = setTimeout(() => {
+				tapCount = 0;
+			}, 500);
+		}
 	}
 </script>
 
@@ -34,8 +51,10 @@
 		class="text-center p-6 bg-white rounded-xl shadow-sm relative overflow-hidden w-full max-w-[320px] sm:max-w-[400px] mt-8 md:mt-0"
 	>
 		<p class="text-lg sm:text-base text-gray-600 m-0 font-normal tracking-wider">Welcome to the</p>
+		<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_noninteractive_element_interactions -->
 		<h1
-			class="text-5xl sm:text-4xl m-2 font-bold bg-[linear-gradient(90deg,#ff0000_0%,#ff7f00_14.28%,#ffff00_28.57%,#00ff00_42.85%,#0000ff_57.14%,#4b0082_71.42%,#8b00ff_85.71%,#ff0000_100%)] bg-[length:400%] animate-rainbow-text bg-clip-text text-transparent tracking-tight drop-shadow-sm"
+			class="text-5xl sm:text-4xl m-2 font-bold bg-[linear-gradient(90deg,#ff0000_0%,#ff7f00_14.28%,#ffff00_28.57%,#00ff00_42.85%,#0000ff_57.14%,#4b0082_71.42%,#8b00ff_85.71%,#ff0000_100%)] bg-[length:400%] animate-rainbow-text bg-clip-text text-transparent tracking-tight drop-shadow-sm cursor-default select-none"
+			on:click={handleTitleTap}
 		>
 			Krauss Haus
 		</h1>

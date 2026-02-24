@@ -15,6 +15,7 @@ const SANGRIA: Cocktail = {
 	servedIn: ServedIn.HighballGlass,
 	ice: Ice.SmallCubes,
 	hasStraw: false,
+	servings: 5,
 	ingredients: [
 		{
 			amount: '750mL',
@@ -29,16 +30,19 @@ const SANGRIA: Cocktail = {
 			ingredient: Ingredients.Liqueurs.COINTREAU
 		},
 		{
+			amount: '2oz',
 			label: '1 Orange, sliced',
-			ingredient: Ingredients.Citrus.ORANGE_GARNISH
+			ingredient: Ingredients.Citrus.ORANGE
 		},
 		{
+			amount: '1oz',
 			label: '1 Lime, sliced',
-			ingredient: Ingredients.Citrus.LIME_GARNISH
+			ingredient: Ingredients.Citrus.LIME
 		},
 		{
+			amount: '1oz',
 			label: '1/2 Lemon, sliced',
-			ingredient: Ingredients.Citrus.LEMON_GARNISH
+			ingredient: Ingredients.Citrus.LEMON
 		},
 		{
 			amount: '2 tbsp',

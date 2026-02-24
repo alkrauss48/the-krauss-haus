@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const AMERICAN_BOILERMAKER: Cocktail = {
 	title: 'American Boilermaker',
-	description: 'Whiskey shot, beer.',
+	description: 'Bourbon, beer.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/american-boilermaker.png',
 	thumbnailImagePath:

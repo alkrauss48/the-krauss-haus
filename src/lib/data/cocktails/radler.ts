@@ -19,11 +19,11 @@ const RADLER: Cocktail = {
 	hasStraw: false,
 	ingredients: [
 		{
-			amount: '50%',
+			amount: '6oz',
 			ingredient: Ingredients.BeerAndWine.WARSTEINER_PILSENER
 		},
 		{
-			amount: '50%',
+			amount: '6oz',
 			ingredient: Ingredients.Mixers.SANPELLEGRINO_LIMONATA
 		}
 	],

@@ -4,36 +4,44 @@ import SPICED_TEA_RECIPE from '$lib/data/recipes/spiced-tea';
 
 const APPLE_CIDER: Ingredient = {
 	title: 'Apple Cider',
-	slug: 'apple-cider'
+	slug: 'apple-cider',
+	costPerOz: 1 / 8
 };
 const COCA_COLA: Ingredient = {
 	title: 'Coca-Cola',
-	slug: 'coca-cola'
+	slug: 'coca-cola',
+	costPerOz: 1 / 8
 };
 const GINGER_BEER: Ingredient = {
 	title: 'Ginger Beer',
-	slug: 'ginger-beer'
+	slug: 'ginger-beer',
+	costPerOz: 1 / 6
 };
 const GRAPEFRUIT_SODA: Ingredient = {
 	title: 'Grapefruit Soda',
-	slug: 'grapefruit-soda'
+	slug: 'grapefruit-soda',
+	costPerOz: 1 / 8
 };
 const SANPELLEGRINO_LIMONATA: Ingredient = {
 	title: 'Sanpellegrino Limonata',
-	slug: 'sanpellegrino-limonata'
+	slug: 'sanpellegrino-limonata',
+	costPerOz: 1 / 6
 };
 const SODA_WATER: Ingredient = {
 	title: 'Soda Water',
-	slug: 'soda-water'
+	slug: 'soda-water',
+	costPerOz: 1 / 10
 };
 const SPICED_TEA: Ingredient = {
 	title: 'Spiced Tea',
 	slug: 'spiced-tea',
-	recipe: SPICED_TEA_RECIPE
+	recipe: SPICED_TEA_RECIPE,
+	costPerOz: 0.1
 };
 const TONIC_WATER: Ingredient = {
 	title: 'Tonic Water',
-	slug: 'tonic-water'
+	slug: 'tonic-water',
+	costPerOz: 1 / 6
 };
 
 export const MIXERS: IngredientCategory = {

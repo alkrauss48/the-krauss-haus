@@ -23,9 +23,9 @@ const CAIPIRINHA: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.LEBLON
 		},
 		{
-			amount: '6',
-			label: 'Lime wedges',
-			ingredient: Ingredients.Citrus.LIME_GARNISH
+			amount: '.75oz',
+			label: '6 Lime wedges',
+			ingredient: Ingredients.Citrus.LIME
 		},
 		{
 			amount: '1 tbsp',

@@ -16,6 +16,7 @@ const GLUHWEIN: Cocktail = {
 	servedIn: ServedIn.Mug,
 	ice: Ice.None,
 	hasStraw: false,
+	servings: 4,
 	ingredients: [
 		{
 			amount: '750ml',

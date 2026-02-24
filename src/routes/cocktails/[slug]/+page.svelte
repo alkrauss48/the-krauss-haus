@@ -8,6 +8,8 @@
 
 	import type { Tag } from '$lib/types/tags';
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
+	import { calculateCocktailCost, formatCost, parseAmountToOz, applyTax } from '$lib/utils/cost';
+	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
 	const { cocktail, onSummer, onWinter, onTiki, pathsContainingCocktail } = data;
@@ -101,7 +103,7 @@
 													{@const displayName = getIngredientDisplayName(ingredient)}
 													{@const recipe = ingredient.ingredient.recipe}
 													<span class="text-gray-700">
-														{#if ingredient.amount}
+														{#if ingredient.amount && !ingredient.label}
 															{ingredient.amount} {displayName}
 														{:else}
 															{displayName}
@@ -113,6 +115,19 @@
 															>
 																See recipe
 															</a>
+														{/if}
+														{#if $costMode && ingredient.ingredient.costPerOz != null}
+															{@const oz = ingredient.amount
+																? parseAmountToOz(ingredient.amount)
+																: 0}
+															{@const itemCost = applyTax(
+																oz > 0
+																	? ingredient.ingredient.costPerOz * oz
+																	: ingredient.ingredient.costPerOz
+															)}
+															<span class="text-xs text-green-700 ml-1.5"
+																>({formatCost(itemCost)})</span
+															>
 														{/if}
 													</span>
 												{/if}
@@ -132,6 +147,31 @@
 												Served in: {cocktail.servedIn}
 											</span>
 										</div>
+									{/if}
+									{#if cocktail.servings}
+										<div class="mt-4">
+											<span class="text-sm font-medium text-gray-600">
+												Makes {cocktail.servings} servings
+											</span>
+										</div>
+									{/if}
+									{#if $costMode}
+										{@const totalCost = calculateCocktailCost(cocktail)}
+										{#if totalCost !== null}
+											<div class="mt-4">
+												{#if cocktail.servings}
+													<span class="text-sm font-medium text-green-700">
+														Estimated cost to make: {formatCost(applyTax(totalCost))} total ({formatCost(
+															applyTax(totalCost / cocktail.servings)
+														)} / serving)
+													</span>
+												{:else}
+													<span class="text-sm font-medium text-green-700">
+														Estimated cost to make: {formatCost(applyTax(totalCost))}
+													</span>
+												{/if}
+											</div>
+										{/if}
 									{/if}
 								</div>
 							{/if}

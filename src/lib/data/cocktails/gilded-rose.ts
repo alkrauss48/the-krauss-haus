@@ -20,7 +20,7 @@ const GILDED_ROSE: Cocktail = {
 	hasStraw: false,
 	ingredients: [
 		{
-			amount: '.5oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Liqueurs.PERSIAN_SPICE_LIQUEUR
 		},
 		{

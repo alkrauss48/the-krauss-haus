@@ -43,6 +43,7 @@ const SEA_LEGS: Cocktail = {
 			ingredient: Ingredients.Other.SALT
 		},
 		{
+			amount: '1 dash',
 			label: 'Garnish: Dash of Angostura bitters',
 			ingredient: Ingredients.Bitters.ANGOSTURA
 		}

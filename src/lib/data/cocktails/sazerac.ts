@@ -27,6 +27,7 @@ const SAZERAC: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.ST_REMY_VSOP
 		},
 		{
+			amount: '1 dash',
 			label: 'Absinthe rinse',
 			ingredient: Ingredients.BaseSpirits.ABSINTHE
 		},
