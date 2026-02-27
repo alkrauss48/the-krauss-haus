@@ -27,7 +27,7 @@ const EGG: Ingredient = {
 const HEAVY_CREAM: Ingredient = {
 	title: 'Heavy Cream',
 	slug: 'heavy-cream',
-	costPerOz: 0.3
+	costPerOz: 4 / 16
 };
 const MARASCHINO_CHERRY: Ingredient = {
 	title: 'Maraschino Cherry',

@@ -19,6 +19,7 @@ import AQUAVIT from '$lib/data/recipes/aquavit';
 import CARAMEL_VODKA from '$lib/data/recipes/caramel-vodka';
 import CITRON_VODKA from '$lib/data/recipes/citron-vodka';
 import CREME_DE_CACAO from '$lib/data/recipes/creme-de-cacao';
+import CREME_DE_MENTHE from '$lib/data/recipes/creme-de-menthe';
 import DRY_CURACAO from '$lib/data/recipes/dry-curacao';
 import FALERNUM from '$lib/data/recipes/falernum';
 import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
@@ -49,6 +50,7 @@ export const infusions: Recipe[] = [
 	CARAMEL_VODKA,
 	CITRON_VODKA,
 	CREME_DE_CACAO,
+	CREME_DE_MENTHE,
 	DRY_CURACAO,
 	FALERNUM,
 	JALAPENO_TEQUILA,

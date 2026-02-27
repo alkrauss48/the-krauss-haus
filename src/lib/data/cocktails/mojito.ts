@@ -48,6 +48,22 @@ const MOJITO: Cocktail = {
 			ingredient: Ingredients.Bitters.ANGOSTURA
 		}
 	],
+	variations: [
+		{
+			name: 'Mintier',
+			ingredients: [
+				{
+					label: 'Sub sugar with .5oz mint syrup.',
+					ingredient: Ingredients.Syrups.MINT_SYRUP
+				},
+				{
+					label: 'Add .25oz crème de menthe.',
+					ingredient: Ingredients.Liqueurs.CREME_DE_MENTHE
+				}
+			],
+			images: []
+		}
+	],
 	notes:
 		'Muddle lime, sugar, and mint lightly in glass. Add rum, then ice cubes. Stir, top with soda water and garnishes.',
 	tags: [
