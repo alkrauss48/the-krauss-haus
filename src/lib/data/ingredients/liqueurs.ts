@@ -1,6 +1,7 @@
 import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
 import CREME_DE_CACAO_RECIPE from '$lib/data/recipes/creme-de-cacao';
+import CREME_DE_MENTHE_RECIPE from '$lib/data/recipes/creme-de-menthe';
 import LIMONCELLO_RECIPE from '$lib/data/recipes/limoncello';
 import FALERNUM_RECIPE from '$lib/data/recipes/falernum';
 import PERSIAN_SPICE_LIQUEUR_RECIPE from '$lib/data/recipes/persian-spice-liqueur';
@@ -39,6 +40,12 @@ const BENEDICTINE: Ingredient = {
 	slug: 'benedictine',
 	costPerOz: 30 / 25
 };
+const CREME_DE_MENTHE: Ingredient = {
+	title: 'Crème de Menthe',
+	slug: 'creme-de-menthe',
+	recipe: CREME_DE_MENTHE_RECIPE,
+	costPerOz: 7 / 24
+};
 const GREEN_CHARTREUSE: Ingredient = {
 	title: 'Green Chartreuse',
 	slug: 'green-chartreuse',
@@ -76,7 +83,7 @@ const DRY_CURACAO: Ingredient = {
 	title: 'Dry Curaçao',
 	slug: 'dry-curacao',
 	recipe: DRY_CURACAO_RECIPE,
-	costPerOz: 14 / 33
+	costPerOz: 12 / 33
 };
 const COINTREAU: Ingredient = {
 	title: 'Cointreau',
@@ -110,7 +117,7 @@ const FALERNUM: Ingredient = {
 	title: 'Falernum',
 	slug: 'falernum',
 	recipe: FALERNUM_RECIPE,
-	costPerOz: 12 / 24
+	costPerOz: 13 / 24
 };
 const FRANGELICO: Ingredient = {
 	title: 'Frangelico',
@@ -128,7 +135,7 @@ const CREME_DE_CACAO: Ingredient = {
 	title: 'Crème de Cacao',
 	slug: 'creme-de-cacao',
 	recipe: CREME_DE_CACAO_RECIPE,
-	costPerOz: 16 / 25
+	costPerOz: 11 / 21
 };
 const EGGNOG: Ingredient = {
 	title: 'Eggnog',
@@ -154,7 +161,7 @@ const PERSIAN_SPICE_LIQUEUR: Ingredient = {
 	title: 'Persian Spice Liqueur',
 	slug: 'persian-spice-liqueur',
 	recipe: PERSIAN_SPICE_LIQUEUR_RECIPE,
-	costPerOz: 11 / 25
+	costPerOz: 8 / 25
 };
 
 export const LIQUEURS: IngredientCategory = {
@@ -168,7 +175,14 @@ export const LIQUEURS: IngredientCategory = {
 		},
 		{
 			label: 'Herbal',
-			ingredients: [BENEDICTINE, GREEN_CHARTREUSE, JAGERMEISTER, PIMMS, YELLOW_CHARTREUSE]
+			ingredients: [
+				BENEDICTINE,
+				CREME_DE_MENTHE,
+				GREEN_CHARTREUSE,
+				JAGERMEISTER,
+				PIMMS,
+				YELLOW_CHARTREUSE
+			]
 		},
 		{
 			label: 'Fruit & Citrus',
@@ -206,6 +220,7 @@ export const INGREDIENTS = {
 	APEROL,
 	BENEDICTINE,
 	CAMPARI,
+	CREME_DE_MENTHE,
 	FERNET_BRANCA,
 	GREEN_CHARTREUSE,
 	JAGERMEISTER,

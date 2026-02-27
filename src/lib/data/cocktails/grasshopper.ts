@@ -5,39 +5,36 @@ import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
 
-const BRANDY_ALEXANDER: Cocktail = {
-	title: 'Brandy Alexander',
-	description: 'Cognac, crème de cacao, heavy cream, nutmeg.',
+const GRASSHOPPER: Cocktail = {
+	title: 'Grasshopper',
+	description: 'Crème de menthe, crème de cacao, heavy cream, nutmeg.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/brandy-alexander.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/grasshopper.png',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/brandy-alexander.png',
-	slug: 'brandy-alexander',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/grasshopper.png',
+	slug: 'grasshopper',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
 	ice: Ice.None,
 	hasStraw: false,
 	ingredients: [
 		{
-			amount: '1.5oz',
-			ingredient: Ingredients.BaseSpirits.ST_REMY_VSOP
-		},
-		{
 			amount: '1oz',
-			ingredient: Ingredients.Liqueurs.CREME_DE_CACAO
+			ingredient: Ingredients.Liqueurs.CREME_DE_MENTHE
 		},
 		{
 			amount: '1oz',
 			ingredient: Ingredients.Other.HEAVY_CREAM
 		},
 		{
-			label: 'Garnish: Grated nutmeg',
-			ingredient: Ingredients.HerbsAndSpices.NUTMEG
+			amount: '1oz',
+			ingredient: Ingredients.Liqueurs.CREME_DE_CACAO
 		}
 	],
+	notes: 'Shake with ice and strain into a chilled coupe glass.',
 	tags: [
-		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.CREAMY,
+		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
 		Tags.Origin.CLASSIC,
 		Tags.ServedIn.COUPE_GLASS,
@@ -46,4 +43,4 @@ const BRANDY_ALEXANDER: Cocktail = {
 	]
 };
 
-export default BRANDY_ALEXANDER;
+export default GRASSHOPPER;

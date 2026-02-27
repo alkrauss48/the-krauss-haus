@@ -13,6 +13,7 @@ import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
+import CANELAZO from '$lib/data/cocktails/canelazo';
 import CERVEZA_Y_TEQUILA from '$lib/data/cocktails/cerveza-y-tequila';
 import CHAMPAGNE_COCKTAIL from '$lib/data/cocktails/champagne-cocktail';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
@@ -37,6 +38,8 @@ import GIN_AND_TONIC from '$lib/data/cocktails/gin-and-tonic';
 import GIN_BASIL_SMASH from '$lib/data/cocktails/gin-basil-smash';
 import GLUHWEIN from '$lib/data/cocktails/gluhwein';
 import GODFATHER from '$lib/data/cocktails/godfather';
+import GRASSHOPPER from '$lib/data/cocktails/grasshopper';
+import HIGHLAND_COFFEE from '$lib/data/cocktails/highland-coffee';
 import HOT_TODDY from '$lib/data/cocktails/hot-toddy';
 import HUGO_SPRITZ from '$lib/data/cocktails/hugo-spritz';
 import HURRICANE from '$lib/data/cocktails/hurricane';
@@ -44,6 +47,7 @@ import IRON_RANGER from '$lib/data/cocktails/iron-ranger';
 import JACK_ROSE from '$lib/data/cocktails/jack-rose';
 import JET_PILOT from '$lib/data/cocktails/jet-pilot';
 import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
+import KING_OF_KINGS from '$lib/data/cocktails/king-of-kings';
 import LAST_WORD from '$lib/data/cocktails/last-word';
 import LEMON_DROP from '$lib/data/cocktails/lemon-drop';
 import LOGGY_CAB from '$lib/data/cocktails/loggy-cab';
@@ -115,6 +119,7 @@ export const allCocktails: Cocktail[] = [
 	BRANDY_ALEXANDER,
 	CAIPIRINHA,
 	CARAMEL_APPLE_SPICE,
+	CANELAZO,
 	CERVEZA_Y_TEQUILA,
 	CHAMPAGNE_COCKTAIL,
 	CHOCOLATE_COVERED_CHERRIES,
@@ -139,6 +144,8 @@ export const allCocktails: Cocktail[] = [
 	GIN_BASIL_SMASH,
 	GLUHWEIN,
 	GODFATHER,
+	GRASSHOPPER,
+	HIGHLAND_COFFEE,
 	HOT_TODDY,
 	HUGO_SPRITZ,
 	HURRICANE,
@@ -146,6 +153,7 @@ export const allCocktails: Cocktail[] = [
 	JACK_ROSE,
 	JET_PILOT,
 	JUNGLE_BIRD,
+	KING_OF_KINGS,
 	LAST_WORD,
 	LEMON_DROP,
 	LOGGY_CAB,
