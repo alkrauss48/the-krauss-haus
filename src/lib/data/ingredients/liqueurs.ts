@@ -1,7 +1,6 @@
 import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
 import CREME_DE_CACAO_RECIPE from '$lib/data/recipes/creme-de-cacao';
-import CREME_DE_MENTHE_RECIPE from '$lib/data/recipes/creme-de-menthe';
 import LIMONCELLO_RECIPE from '$lib/data/recipes/limoncello';
 import FALERNUM_RECIPE from '$lib/data/recipes/falernum';
 import PERSIAN_SPICE_LIQUEUR_RECIPE from '$lib/data/recipes/persian-spice-liqueur';
@@ -39,12 +38,6 @@ const BENEDICTINE: Ingredient = {
 	title: 'Benedictine',
 	slug: 'benedictine',
 	costPerOz: 30 / 25
-};
-const CREME_DE_MENTHE: Ingredient = {
-	title: 'Crème de Menthe',
-	slug: 'creme-de-menthe',
-	recipe: CREME_DE_MENTHE_RECIPE,
-	costPerOz: 7 / 24
 };
 const GREEN_CHARTREUSE: Ingredient = {
 	title: 'Green Chartreuse',
@@ -175,14 +168,7 @@ export const LIQUEURS: IngredientCategory = {
 		},
 		{
 			label: 'Herbal',
-			ingredients: [
-				BENEDICTINE,
-				CREME_DE_MENTHE,
-				GREEN_CHARTREUSE,
-				JAGERMEISTER,
-				PIMMS,
-				YELLOW_CHARTREUSE
-			]
+			ingredients: [BENEDICTINE, GREEN_CHARTREUSE, JAGERMEISTER, PIMMS, YELLOW_CHARTREUSE]
 		},
 		{
 			label: 'Fruit & Citrus',
@@ -220,7 +206,6 @@ export const INGREDIENTS = {
 	APEROL,
 	BENEDICTINE,
 	CAMPARI,
-	CREME_DE_MENTHE,
 	FERNET_BRANCA,
 	GREEN_CHARTREUSE,
 	JAGERMEISTER,

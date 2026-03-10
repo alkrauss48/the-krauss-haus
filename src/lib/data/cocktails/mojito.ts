@@ -55,10 +55,6 @@ const MOJITO: Cocktail = {
 				{
 					label: 'Sub sugar with .5oz mint syrup.',
 					ingredient: Ingredients.Syrups.MINT_SYRUP
-				},
-				{
-					label: 'Add .25oz crème de menthe.',
-					ingredient: Ingredients.Liqueurs.CREME_DE_MENTHE
 				}
 			],
 			images: []
