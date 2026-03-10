@@ -8,7 +8,7 @@ import { Ice } from '$lib/enums/ice';
 const COBRAS_FANG: Cocktail = {
 	title: "Cobra's Fang",
 	description:
-		'Overproof demerara rum, falernum, fassionola, lime, orange, herbstura, mint, cinnamon.',
+		'Overproof demerara rum, jamaican rum, falernum, fassionola, lime, orange, herbstura, mint, cinnamon.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/cobras-fang.png',
 	thumbnailImagePath:
@@ -24,7 +24,11 @@ const COBRAS_FANG: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.HAMILTON_151
 		},
 		{
-			amount: '.25oz',
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+		},
+		{
+			amount: '.5oz',
 			ingredient: Ingredients.Liqueurs.FALERNUM
 		},
 		{
@@ -40,7 +44,7 @@ const COBRAS_FANG: Cocktail = {
 			ingredient: Ingredients.Citrus.ORANGE
 		},
 		{
-			amount: '1 dash',
+			amount: '2 dashes',
 			ingredient: Ingredients.Bitters.HERBSTURA
 		},
 		{

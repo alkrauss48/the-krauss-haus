@@ -20,7 +20,7 @@ const KING_OF_KINGS: Cocktail = {
 	hasStraw: true,
 	ingredients: [
 		{
-			amount: '1.5oz',
+			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.PROBITAS
 		},
 		{
@@ -29,18 +29,18 @@ const KING_OF_KINGS: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
-		},
-		{
-			amount: '.5oz',
 			ingredient: Ingredients.Liqueurs.PERSIAN_SPICE_LIQUEUR
 		},
 		{
-			amount: '.5oz',
-			ingredient: Ingredients.Syrups.ORGEAT
+			amount: '.25oz',
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
 		},
 		{
-			amount: '1oz',
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
+		},
+		{
+			amount: '.75oz',
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
@@ -54,12 +54,15 @@ const KING_OF_KINGS: Cocktail = {
 		{
 			label: 'Garnish: Mint sprig',
 			ingredient: Ingredients.HerbsAndSpices.MINT
+		},
+		{
+			label: 'Garnish: Lime shell',
+			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.BaseAlcohol.BRANDY,
-		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.FLASH_BLENDED,
