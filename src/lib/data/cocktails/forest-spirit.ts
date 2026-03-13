@@ -7,7 +7,6 @@ import { Ice } from '$lib/enums/ice';
 
 const FOREST_SPIRIT: Cocktail = {
 	title: 'Forest Spirit',
-	subtitle: 'A Krauss Family original',
 	description:
 		'Gin, elderflower liqueur, italicus, lemon, honey syrup, orange bitters, tonic water, mint.',
 	imagePath:

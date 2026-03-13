@@ -7,7 +7,6 @@ import { Ice } from '$lib/enums/ice';
 
 const HIGHLAND_COFFEE: Cocktail = {
 	title: 'Highland Coffee',
-	subtitle: 'A Krauss Family original',
 	description: 'Blended scotch, espresso, demerara syrup, hot water, whipped cream.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/highland-coffee.png',

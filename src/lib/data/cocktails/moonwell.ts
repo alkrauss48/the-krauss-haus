@@ -7,7 +7,6 @@ import { Ice } from '$lib/enums/ice';
 
 const MOONWELL: Cocktail = {
 	title: 'Moonwell',
-	subtitle: 'A Krauss Family original',
 	description: 'Light rum, elderflower liqueur, grenadine, celery bitters, lemon, soda water.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/moonwell.png',
