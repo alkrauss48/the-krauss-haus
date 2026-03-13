@@ -8,7 +8,6 @@ import { Ice } from '$lib/enums/ice';
 const GILDED_ROSE: Cocktail = {
 	title: 'Gilded Rose',
 	description: 'Persian spice liqueur, champagne, edible flower.',
-	subtitle: 'A Krauss Family original',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/gilded-rose.png',
 	thumbnailImagePath:

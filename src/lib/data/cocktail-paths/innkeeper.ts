@@ -7,11 +7,11 @@ import RUM_BARREL from '../cocktails/rum-barrel';
 
 export const INNKEEPER: CocktailPath = {
 	title: 'Innkeeper',
-	subtitle: 'Warm. Welcoming. Restorative.',
+	subtitle: 'Hearty. Comforting. Generous.',
 	slug: 'innkeeper',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/innkeeper.jpeg',
 	description:
-		'For travelers in need of warmth, rest, and a generous pour. The Innkeeper serves comforting, low-effort drinks that soothe the body and steady the spirit—some literally warm, others simply strong enough to do the job. Stay long enough, and you might just be offered a story… or a quest.',
+		'Pull up a chair and stay a while. This path greets you with literal warmth, eases into crisp, easy refreshment, adds a touch of bubbly elegance, then dips into centuries-old tradition and finishes with a heavy, generous pour. The longer you stay, the stronger the drinks get.',
 	cocktails: [HOT_TODDY, RADLER, GILDED_ROSE, RATTLE_SKULL, RUM_BARREL]
 };

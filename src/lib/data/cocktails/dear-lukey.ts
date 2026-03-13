@@ -8,7 +8,6 @@ import { Ice } from '$lib/enums/ice';
 const DEAR_LUKEY: Cocktail = {
 	title: 'Dear Lukey',
 	description: 'Amaro Lucano, Italicus, elderflower liqueur, dry vermouth, lime, cinnamon syrup.',
-	subtitle: 'A Krauss Family original',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/dear-lukey.png',
 	thumbnailImagePath:

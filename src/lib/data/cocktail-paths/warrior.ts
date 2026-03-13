@@ -7,11 +7,11 @@ import SAZERAC from '../cocktails/sazerac';
 
 export const WARRIOR: CocktailPath = {
 	title: 'Warrior',
-	subtitle: 'Direct. Powerful. Classic.',
+	subtitle: 'Bold. Spirit-forward. Unyielding.',
 	slug: 'warrior',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/warrior.jpeg',
 	description:
-		'You prefer cocktails where the base spirit stays in command—unmistakable, confident, and clean. This path builds your appreciation of spirit- forward balance, moving from sweetened structure to bold minimalism.',
+		'The spirit leads and everything else falls in line. This path starts with sweetened structure and familiar warmth, then pushes through smoky heat and honeyed spice before arriving at raw, unadorned intensity. Each step strips away a little more, demanding respect for the base spirit.',
 	cocktails: [OLD_FASHIONED, MINT_JULEP, OAXACA_OLD_FASHIONED, PENICILLIN, SAZERAC]
 };

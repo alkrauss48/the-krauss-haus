@@ -5,7 +5,8 @@
 	import type { SectionColor } from '$lib/types/colors';
 	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
 	import { methodColors } from '$lib/enums/methods';
-	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
+	import { Tags } from '$lib/data/all-tags';
+
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
 	import { getDisplayCost, formatCost } from '$lib/utils/cost';
 	import { costMode } from '$lib/stores/costMode';
@@ -134,6 +135,13 @@
 			alt={cocktail.title}
 			class="w-full h-full object-contain p-4 relative z-10"
 		/>
+		{#if cocktail.tags?.includes(Tags.Origin.ORIGINAL)}
+			<div
+				class="absolute top-2 right-2 bg-amber-100 text-amber-700 border border-amber-300 text-xs font-semibold px-2 py-0.5 rounded-full z-20"
+			>
+				★ Original
+			</div>
+		{/if}
 	</div>
 	<div class="p-6 flex-1 flex flex-col">
 		{#if showTitle}
@@ -196,22 +204,13 @@
 		>
 			<div class="flex justify-between items-start mb-6">
 				<div class="flex-1">
-					<div class="flex items-center gap-2 mb-2">
-						<a
-							href={resolve(`/cocktails/${cocktail.slug}`)}
-							class="text-2xl font-bold text-gray-800 hover:text-amber-600 transition-colors cursor-pointer"
-							on:click={navigateToCocktail}
-						>
-							{cocktail.title}
-						</a>
-						<CopyLinkButton
-							url={typeof window !== 'undefined'
-								? `${window.location.origin}/cocktails/${cocktail.slug}`
-								: ''}
-							ariaLabel="Copy link to {cocktail.title}"
-							size="sm"
-						/>
-					</div>
+					<a
+						href={resolve(`/cocktails/${cocktail.slug}`)}
+						class="text-2xl font-bold text-gray-800 underline decoration-dotted underline-offset-2 hover:text-gray-600 transition-colors cursor-pointer mb-2 block"
+						on:click={navigateToCocktail}
+					>
+						{cocktail.title}
+					</a>
 					{#if cocktail.method}
 						<div class="mt-2">
 							<span class="text-xs text-gray-500 mb-2 font-light tracking-wide">Method:</span>

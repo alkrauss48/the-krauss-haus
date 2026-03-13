@@ -7,11 +7,11 @@ import SPRITZ from '../cocktails/spritz';
 
 export const BARD: CocktailPath = {
 	title: 'Bard',
-	subtitle: 'Friendly. Balanced. Crowd-pleasing.',
+	subtitle: 'Vibrant. Approachable. Crowd-pleasing.',
 	slug: 'bard',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/bard.jpeg',
 	description:
-		'You enjoy drinks that make people smile—bright, bubbly, refreshing, and fun. This path teaches balance while staying effortlessly enjoyable.',
+		'The life of the party, one round at a time. This path moves from bright citrus snap to cool herbal freshness, nutty sweetness, breezy bubbles, and a bold caffeinated finish. Nothing too challenging, nothing too obscure—just drinks that make everyone at the table happy.',
 	cocktails: [MARGARITA, MOJITO, AMARETTO_SOUR, SPRITZ, ESPRESSO_MARTINI]
 };

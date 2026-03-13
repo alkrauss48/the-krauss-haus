@@ -7,11 +7,11 @@ import PAPER_PLANE from '../cocktails/paper-plane';
 
 export const MAGE: CocktailPath = {
 	title: 'Mage',
-	subtitle: 'Layered. Thoughtful. Transformative.',
+	subtitle: 'Complex. Aromatic. Masterful.',
 	slug: 'mage',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/mage.jpeg',
 	description:
-		'You appreciate depth—herbs, aromatics, infusions, and old-world structure. This path builds from approachable complexity to iconic minimalism.',
+		'Study the craft of balance and sophistication. This path begins with light, floral brightness, moves through spiced maritime depth, then sharpens into precise equal-parts harmony before arriving at stirred elegance and iconic minimalism. Each step teaches you to find more flavor in fewer ingredients.',
 	cocktails: [MOONWELL, ANCIENT_MARINER, PAPER_PLANE, MANHATTAN, MARTINI]
 };

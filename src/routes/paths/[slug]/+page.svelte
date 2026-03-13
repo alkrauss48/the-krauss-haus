@@ -4,6 +4,8 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import { fade, fly } from 'svelte/transition';
+	import { getPathCost, formatCost } from '$lib/utils/cost';
+	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
 	const { path } = data;
@@ -43,6 +45,12 @@
 			<h1 class="text-5xl font-bold text-gray-800 mb-4">{path.title}</h1>
 			<p class="text-2xl text-gray-600 font-medium mb-4">{path.subtitle}</p>
 			<p class="text-lg text-gray-700 max-w-2xl mx-auto">{path.description}</p>
+			{#if $costMode}
+				{@const cost = getPathCost(path)}
+				{#if cost !== null}
+					<p class="text-sm text-green-700 mt-4">Est. path cost: {formatCost(cost)}</p>
+				{/if}
+			{/if}
 		</header>
 
 		<!-- Cocktails List -->

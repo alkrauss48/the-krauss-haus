@@ -5,6 +5,8 @@
 	import { fade, fly } from 'svelte/transition';
 	import { resolve } from '$app/paths';
 	import { goto } from '$app/navigation';
+	import { getPathCost, formatCost } from '$lib/utils/cost';
+	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
 	const { paths } = data;
@@ -55,6 +57,12 @@
 							{path.title}
 						</h2>
 						<p class="text-gray-600 text-xs sm:text-sm">{path.subtitle}</p>
+						{#if $costMode}
+							{@const cost = getPathCost(path)}
+							{#if cost !== null}
+								<p class="text-xs text-green-700 mt-1">Est. cost: {formatCost(cost)}</p>
+							{/if}
+						{/if}
 					</div>
 				</a>
 			{/each}
