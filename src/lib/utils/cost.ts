@@ -1,4 +1,5 @@
 import type { Cocktail } from '$lib/types/cocktails';
+import type { CocktailPath } from '$lib/types/cocktail-path';
 
 // Tax rate applied to all ingredient costs. Update this value to change the rate.
 const TAX_RATE = 0.085;
@@ -65,4 +66,19 @@ export function getDisplayCost(cocktail: Cocktail): number | null {
 	if (total === null) return null;
 	const perServing = cocktail.servings ? total / cocktail.servings : total;
 	return perServing * (1 + TAX_RATE);
+}
+
+export function getPathCost(path: CocktailPath): number | null {
+	let total = 0;
+	let hasCostData = false;
+
+	for (const cocktail of path.cocktails) {
+		const cost = getDisplayCost(cocktail);
+		if (cost !== null) {
+			hasCostData = true;
+			total += cost;
+		}
+	}
+
+	return hasCostData ? total : null;
 }
