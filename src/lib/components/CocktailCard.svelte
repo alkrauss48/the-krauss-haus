@@ -5,6 +5,7 @@
 	import type { SectionColor } from '$lib/types/colors';
 	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
 	import { methodColors } from '$lib/enums/methods';
+	import { Tags } from '$lib/data/all-tags';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
 	import { getDisplayCost, formatCost } from '$lib/utils/cost';
@@ -134,6 +135,13 @@
 			alt={cocktail.title}
 			class="w-full h-full object-contain p-4 relative z-10"
 		/>
+		{#if cocktail.tags?.includes(Tags.Origin.ORIGINAL)}
+			<div
+				class="absolute top-2 right-2 bg-amber-100 text-amber-700 border border-amber-300 text-xs font-semibold px-2 py-0.5 rounded-full z-20"
+			>
+				★ Original
+			</div>
+		{/if}
 	</div>
 	<div class="p-6 flex-1 flex flex-col">
 		{#if showTitle}

@@ -1,5 +1,5 @@
 import type { CocktailPath } from '$lib/types/cocktail-path';
-import BRANDY_ALEXANDER from '../cocktails/brandy-alexander';
+import KING_OF_KINGS from '../cocktails/king-of-kings';
 import CHOCOLATE_COVERED_CHERRIES from '../cocktails/chocolate-covered-cherries';
 import FRENCH_75 from '../cocktails/french-75';
 import PAINKILLER from '../cocktails/painkiller';
@@ -13,5 +13,5 @@ export const ROYAL: CocktailPath = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/royal.jpeg',
 	description:
 		'For those who savor luxury in every sip. The Royal path celebrates richness, ceremony, and indulgence—creamy textures, elegant spirits, and cocktails worthy of velvet curtains and crystal glassware. These are drinks made to be lingered over, admired, and enjoyed without restraint.',
-	cocktails: [FRENCH_75, PAINKILLER, BRANDY_ALEXANDER, CHOCOLATE_COVERED_CHERRIES, RAMOS_GIN_FIZZ]
+	cocktails: [FRENCH_75, PAINKILLER, KING_OF_KINGS, CHOCOLATE_COVERED_CHERRIES, RAMOS_GIN_FIZZ]
 };

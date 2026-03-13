@@ -5,6 +5,7 @@
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { resolve } from '$app/paths';
 	import { fade, fly } from 'svelte/transition';
+	import { Tags } from '$lib/data/all-tags';
 
 	import type { Tag } from '$lib/types/tags';
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
@@ -73,6 +74,13 @@
 				<header class="mb-8">
 					<div class="flex items-center gap-3 mb-2">
 						<h1 class="text-4xl font-bold text-gray-800">{cocktail.title}</h1>
+						{#if cocktail.tags?.includes(Tags.Origin.ORIGINAL)}
+							<div
+								class="bg-amber-100 text-amber-700 border border-amber-300 text-xs font-semibold px-2 py-0.5 rounded-full"
+							>
+								★ Original
+							</div>
+						{/if}
 						<CopyLinkButton
 							url={typeof window !== 'undefined' ? window.location.href : ''}
 							ariaLabel="Copy link to {cocktail.title}"
