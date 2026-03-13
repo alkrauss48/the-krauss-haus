@@ -15,7 +15,7 @@ const MILLER_HIGH_LIFE: Ingredient = {
 const TECATE_MEXICAN_LAGER: Ingredient = {
 	title: 'Tecate Mexican Lager',
 	slug: 'tecate-mexican-lager',
-	costPerOz: 0.08
+	costPerOz: 16 / 12 / 18
 };
 const WARSTEINER_PILSENER: Ingredient = {
 	title: 'Warsteiner Pilsener',
