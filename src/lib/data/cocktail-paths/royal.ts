@@ -7,11 +7,11 @@ import RAMOS_GIN_FIZZ from '../cocktails/ramos-gin-fizz';
 
 export const ROYAL: CocktailPath = {
 	title: 'Royal',
-	subtitle: 'Decadent. Refined. Indulgent.',
+	subtitle: 'Luxurious. Rich. Showstopping.',
 	slug: 'royal',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/royal.jpeg',
 	description:
-		'For those who savor luxury in every sip. The Royal path celebrates richness, ceremony, and indulgence—creamy textures, elegant spirits, and cocktails worthy of velvet curtains and crystal glassware. These are drinks made to be lingered over, admired, and enjoyed without restraint.',
+		'Every sip should feel like an occasion. This path opens with champagne elegance, drifts into creamy tropical bliss, builds through multi-spirit complexity and dessert-like richness, then closes with a legendary showpiece of technique. These are drinks meant to be lingered over.',
 	cocktails: [FRENCH_75, PAINKILLER, KING_OF_KINGS, CHOCOLATE_COVERED_CHERRIES, RAMOS_GIN_FIZZ]
 };

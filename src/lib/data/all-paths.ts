@@ -1,7 +1,7 @@
 import type { CocktailPath } from '$lib/types/cocktail-path';
 
 // Import all cocktail path data
-import { ALCHEMIST } from '$lib/data/cocktail-paths/alchemist';
+import { WARLOCK } from '$lib/data/cocktail-paths/warlock';
 import { BARD } from '$lib/data/cocktail-paths/bard';
 import { FISHERMAN } from '$lib/data/cocktail-paths/fisherman';
 import { HUNTER } from '$lib/data/cocktail-paths/hunter';
@@ -17,9 +17,9 @@ export const allPaths: CocktailPath[] = [
 	HUNTER,
 	MAGE,
 	BARD,
-	ALCHEMIST,
-	INNKEEPER,
 	ROGUE,
+	WARLOCK,
+	INNKEEPER,
 	FISHERMAN,
 	ROYAL
 ];

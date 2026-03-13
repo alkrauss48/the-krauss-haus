@@ -7,11 +7,11 @@ import MAI_TAI from '../cocktails/mai-tai';
 
 export const HUNTER: CocktailPath = {
 	title: 'Hunter',
-	subtitle: 'Sunny. Juicy. Invigorating.',
+	subtitle: 'Tropical. Rum-soaked. Sun-chasing.',
 	slug: 'hunter',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/hunter.jpeg',
 	description:
-		'If you crave bright citrus and tropical freshness, this path leads you deeper into rum and fruit-forward drinks with rising complexity.',
+		'Chase the sun through rum and tropical fruit. This path opens with easy, fruity sweetness, sharpens into clean citrus balance, then layers in warm spice and unexpected spirit swaps before landing on layered, multi-rum complexity. The deeper you go, the more the tropics reveal.',
 	cocktails: [HURRICANE, DAIQUIRI, DONGA_PUNCH, IRON_RANGER, MAI_TAI]
 };
