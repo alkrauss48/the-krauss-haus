@@ -7,13 +7,13 @@ import MICHELADA from '$lib/data/cocktails/michelada';
 import MOJITO from '$lib/data/cocktails/mojito';
 import MOONWELL from '$lib/data/cocktails/moonwell';
 import NEGRONI from '$lib/data/cocktails/negroni';
-import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
 import SPRITZ from '$lib/data/cocktails/spritz';
-import DAIQUIRI from './cocktails/daiquiri';
 import SPAGHETT from './cocktails/spaghett';
 import SURFER_ON_ACID from './cocktails/surfer-on-acid';
 import SLAP_N_PICKLE from './cocktails/slap-n-pickle';
 import KING_OF_KINGS from './cocktails/king-of-kings';
+import CAIPIRINHA from './cocktails/caipirinha';
+import DEAR_LUKEY from './cocktails/dear-lukey';
 
 export const featuredDrinks: Cocktail[] = [GILDED_ROSE];
 
@@ -31,11 +31,11 @@ export const categories: Category[] = [
 	{
 		title: "Cyrus' Drinks",
 		bgColors: sectionColors.cyrus,
-		cocktails: [KING_OF_KINGS, DAIQUIRI, SLAP_N_PICKLE]
+		cocktails: [KING_OF_KINGS, CAIPIRINHA, SLAP_N_PICKLE]
 	},
 	{
 		title: "Lucas' Drinks",
 		bgColors: sectionColors.lucas,
-		cocktails: [SPAGHETT, SPRITZ, PAPER_PLANE]
+		cocktails: [SPRITZ, DEAR_LUKEY, SPAGHETT]
 	}
 ];

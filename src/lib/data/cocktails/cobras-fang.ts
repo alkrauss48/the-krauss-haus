@@ -20,15 +20,15 @@ const COBRAS_FANG: Cocktail = {
 	hasStraw: true,
 	ingredients: [
 		{
-			amount: '1.5oz',
+			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.HAMILTON_151
 		},
 		{
-			amount: '.5oz',
+			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
 		},
 		{
-			amount: '.5oz',
+			amount: '.25oz',
 			ingredient: Ingredients.Liqueurs.FALERNUM
 		},
 		{
@@ -44,7 +44,11 @@ const COBRAS_FANG: Cocktail = {
 			ingredient: Ingredients.Citrus.ORANGE
 		},
 		{
-			amount: '2 dashes',
+			amount: '.25oz',
+			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
+		},
+		{
+			amount: '1 dash',
 			ingredient: Ingredients.Bitters.HERBSTURA
 		},
 		{

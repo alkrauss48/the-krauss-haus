@@ -8,7 +8,7 @@ import { Ice } from '$lib/enums/ice';
 const KING_OF_KINGS: Cocktail = {
 	title: 'King of Kings',
 	description:
-		'Blended rum, cognac, gin, persian spice liqueur, orgeat, lime, orange, angostura bitters.',
+		'Blended rum, cognac, persian spice liqueur, overproof rum, demerara syrup, lime, orange, angostura bitters.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/king-of-kings.png',
 	thumbnailImagePath:

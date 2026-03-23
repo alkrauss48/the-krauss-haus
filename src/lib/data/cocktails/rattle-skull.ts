@@ -14,13 +14,14 @@ const RATTLE_SKULL: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/rattle-skull.png',
 	slug: 'rattle-skull',
 	method: CocktailMethod.Shaken,
+	servings: 2,
 	servedIn: ServedIn.PintGlass,
 	ice: Ice.None,
 	hasStraw: false,
 	ingredients: [
 		{
 			amount: '12oz',
-			ingredient: Ingredients.BeerAndWine.FULLERS_LONDON_PORTER
+			ingredient: Ingredients.BeerAndWine.GUINNESS_DRAUGHT
 		},
 		{
 			amount: '1oz',
@@ -31,12 +32,16 @@ const RATTLE_SKULL: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.ST_REMY_VSOP
 		},
 		{
-			amount: '.75oz',
+			amount: '.5oz',
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
-			amount: '.5oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Bitters.ANGOSTURA
 		},
 		{
 			label: 'Garnish: Freshly grated nutmeg',
@@ -50,7 +55,6 @@ const RATTLE_SKULL: Cocktail = {
 		Tags.Origin.FOLK,
 		Tags.BaseAlcohol.RUM,
 		Tags.BaseAlcohol.BRANDY,
-		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,

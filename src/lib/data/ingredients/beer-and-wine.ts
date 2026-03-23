@@ -2,10 +2,15 @@ import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
 
 // Beer
-const FULLERS_LONDON_PORTER: Ingredient = {
-	title: "Fuller's London Porter",
-	slug: 'fullers-london-porter',
-	costPerOz: 0.21
+const BITBURGER_PILS: Ingredient = {
+	title: 'Bitburger Pils',
+	slug: 'bitburger-pils',
+	costPerOz: 10 / (12 * 6)
+};
+const GUINNESS_DRAUGHT: Ingredient = {
+	title: 'Guinness Draught',
+	slug: 'guinness-draught',
+	costPerOz: 18 / (8 * 14.9)
 };
 const MILLER_HIGH_LIFE: Ingredient = {
 	title: 'Miller High Life',
@@ -16,11 +21,6 @@ const TECATE_MEXICAN_LAGER: Ingredient = {
 	title: 'Tecate Mexican Lager',
 	slug: 'tecate-mexican-lager',
 	costPerOz: 16 / 12 / 18
-};
-const WARSTEINER_PILSENER: Ingredient = {
-	title: 'Warsteiner Pilsener',
-	slug: 'warsteiner-pilsener',
-	costPerOz: 0.085
 };
 
 // Wine
@@ -66,12 +66,7 @@ export const BEER_AND_WINE: IngredientCategory = {
 	subcategories: [
 		{
 			label: 'Beer',
-			ingredients: [
-				FULLERS_LONDON_PORTER,
-				MILLER_HIGH_LIFE,
-				TECATE_MEXICAN_LAGER,
-				WARSTEINER_PILSENER
-			]
+			ingredients: [BITBURGER_PILS, GUINNESS_DRAUGHT, MILLER_HIGH_LIFE, TECATE_MEXICAN_LAGER]
 		},
 		{
 			label: 'Wine',
@@ -86,10 +81,10 @@ export const BEER_AND_WINE: IngredientCategory = {
 
 export const INGREDIENTS = {
 	// Beer
-	FULLERS_LONDON_PORTER,
+	BITBURGER_PILS,
+	GUINNESS_DRAUGHT,
 	MILLER_HIGH_LIFE,
 	TECATE_MEXICAN_LAGER,
-	WARSTEINER_PILSENER,
 
 	// Wine
 	CABERNET_SAUVIGNON,
