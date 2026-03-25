@@ -24,7 +24,7 @@ const OL_OG_SNAPS: Cocktail = {
 		},
 		{
 			amount: '12oz',
-			ingredient: Ingredients.BeerAndWine.WARSTEINER_PILSENER
+			ingredient: Ingredients.BeerAndWine.BITBURGER_PILS
 		}
 	],
 	notes:

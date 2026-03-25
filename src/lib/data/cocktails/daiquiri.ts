@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const DAIQUIRI: Cocktail = {
 	title: 'Daiquiri',
-	description: 'Light rum, lime, simple syrup.',
+	description: 'Blended light rum, lime, simple syrup.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/daiquiri.png',
 	thumbnailImagePath:

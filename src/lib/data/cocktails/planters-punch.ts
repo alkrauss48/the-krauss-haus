@@ -19,7 +19,7 @@ const PLANTERS_PUNCH: Cocktail = {
 	hasStraw: true,
 	ingredients: [
 		{
-			amount: '3oz',
+			amount: '2oz',
 			ingredient: Ingredients.BaseSpirits.CORUBA
 		},
 		{
@@ -27,11 +27,11 @@ const PLANTERS_PUNCH: Cocktail = {
 			ingredient: Ingredients.Syrups.DEMERARA_SYRUP
 		},
 		{
-			amount: '1oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
-			amount: '4 dashes',
+			amount: '3 dashes',
 			ingredient: Ingredients.Bitters.ANGOSTURA
 		},
 		{
@@ -41,9 +41,8 @@ const PLANTERS_PUNCH: Cocktail = {
 	],
 	tags: [
 		Tags.Style.TIKI,
-		Tags.Origin.CLASSIC,
+		Tags.Origin.FOLK,
 		Tags.BaseAlcohol.RUM,
-		Tags.AlcoholLevel.HIGH,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.FLASH_BLENDED,
 		Tags.ServedIn.HIGHBALL_GLASS

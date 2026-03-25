@@ -17,7 +17,7 @@ import ZOMBIE from '$lib/data/cocktails/zombie';
 import LOST_LAKE from '$lib/data/cocktails/lost-lake';
 import RUM_BARREL from '$lib/data/cocktails/rum-barrel';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
-import PLANTERS_PUNCH from '$lib/data/cocktails/planters-punch';
+import DAIQUIRI from './cocktails/daiquiri';
 
 export const categories: Category[] = [
 	{
@@ -28,7 +28,7 @@ export const categories: Category[] = [
 			tertiary: '#ecfdf5',
 			variationText: '#166534'
 		},
-		cocktails: [PAINKILLER, JUNGLE_BIRD, ANCIENT_MARINER, DONGA_PUNCH, HURRICANE, PLANTERS_PUNCH]
+		cocktails: [DAIQUIRI, PAINKILLER, DONGA_PUNCH, HURRICANE, ANCIENT_MARINER, JUNGLE_BIRD]
 	},
 	{
 		title: 'Bold and Boozy',

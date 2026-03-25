@@ -20,15 +20,14 @@ const RADLER: Cocktail = {
 	ingredients: [
 		{
 			amount: '6oz',
-			ingredient: Ingredients.BeerAndWine.WARSTEINER_PILSENER
+			ingredient: Ingredients.BeerAndWine.BITBURGER_PILS
 		},
 		{
 			amount: '6oz',
 			ingredient: Ingredients.Mixers.SANPELLEGRINO_LIMONATA
 		}
 	],
-	notes:
-		"No need to measure. A 60/40 ratio of beer to lemonade works well too. We're partial to Bitburger Pils.",
+	notes: 'No need to measure. A 60/40 ratio of beer to lemonade works well too.',
 	tags: [
 		Tags.BaseAlcohol.BEER,
 		Tags.FlavorProfile.BUBBLY,

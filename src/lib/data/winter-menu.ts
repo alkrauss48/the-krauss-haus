@@ -13,7 +13,7 @@ import MANHATTAN from '$lib/data/cocktails/manhattan';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import RATTLE_SKULL from './cocktails/rattle-skull';
-import DEAR_LUKEY from './cocktails/dear-lukey';
+import PAPER_PLANE from './cocktails/paper-plane';
 
 export const featuredDrinks: Cocktail[] = [CARAMEL_APPLE_SPICE];
 
@@ -36,6 +36,6 @@ export const categories: Category[] = [
 	{
 		title: "Lucas' Drinks",
 		bgColors: sectionColors.lucas,
-		cocktails: [MANHATTAN, DEAR_LUKEY, ESPRESSO_MARTINI]
+		cocktails: [MANHATTAN, PAPER_PLANE, ESPRESSO_MARTINI]
 	}
 ];
