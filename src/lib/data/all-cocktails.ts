@@ -7,6 +7,7 @@ import AMERICAN_BOILERMAKER from '$lib/data/cocktails/american-boilermaker';
 import AMERICAN_TRILOGY from '$lib/data/cocktails/american-trilogy';
 import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
+import AZALEA from '$lib/data/cocktails/azalea';
 import BATANGA from '$lib/data/cocktails/batanga';
 import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-giuseppe';
 import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
@@ -112,6 +113,7 @@ export const allCocktails: Cocktail[] = [
 	AMERICAN_TRILOGY,
 	AMERICANO,
 	ANCIENT_MARINER,
+	AZALEA,
 	BATANGA,
 	BITTER_GIUSEPPE,
 	BOULEVARDIER,
