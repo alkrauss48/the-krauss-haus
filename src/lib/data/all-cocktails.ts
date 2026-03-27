@@ -24,6 +24,7 @@ import COSMOPOLITAN from '$lib/data/cocktails/cosmopolitan';
 import COUNT_MAST from '$lib/data/cocktails/count-mast';
 import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
+import DARK_N_STORMY from '$lib/data/cocktails/dark-n-stormy';
 import DEAR_LUKEY from '$lib/data/cocktails/dear-lukey';
 import DEER_AND_BEER from '$lib/data/cocktails/deer-and-beer';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
@@ -33,6 +34,7 @@ import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FOREST_SPIRIT from '$lib/data/cocktails/forest-spirit';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
+import HEMINGWAY_DAIQUIRI from '$lib/data/cocktails/hemingway-daiquiri';
 import GILDA from '$lib/data/cocktails/gilda';
 import GILDED_ROSE from '$lib/data/cocktails/gilded-rose';
 import GIN_AND_TONIC from '$lib/data/cocktails/gin-and-tonic';
@@ -130,6 +132,7 @@ export const allCocktails: Cocktail[] = [
 	COUNT_MAST,
 	CUBA_LIBRE,
 	DAIQUIRI,
+	DARK_N_STORMY,
 	DEAR_LUKEY,
 	DEER_AND_BEER,
 	DIVISION_BELL,
@@ -139,6 +142,7 @@ export const allCocktails: Cocktail[] = [
 	FERNET_CON_COCA,
 	FRENCH_75,
 	FOREST_SPIRIT,
+	HEMINGWAY_DAIQUIRI,
 	GILDA,
 	GILDED_ROSE,
 	GIN_AND_TONIC,
