@@ -89,3 +89,9 @@ Run: `npm run test`
 - **No trailing commas**
 - Prettier + ESLint configured (see `.prettierrc`, `eslint.config.js`)
 - **Conventional commits**: `feat(scope):`, `fix(scope):`, `refactor(scope):`, `docs(scope):`, etc.
+
+## Pull Requests
+
+- Use the `gh` CLI tool to create pull requests.
+- Authenticate by reading the GitHub token from the `.env` file and passing it via the `GH_TOKEN` environment variable (e.g., `GH_TOKEN=$(grep GITHUB_TOKEN .env | cut -d '=' -f2) gh pr create ...`).
+- Always create pull requests as **drafts** (`--draft` flag).

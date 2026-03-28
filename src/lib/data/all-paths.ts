@@ -10,6 +10,7 @@ import { ROGUE } from '$lib/data/cocktail-paths/rogue';
 import { WARRIOR } from '$lib/data/cocktail-paths/warrior';
 import { INNKEEPER } from './cocktail-paths/innkeeper';
 import { ROYAL } from './cocktail-paths/royal';
+import { SHAMAN } from './cocktail-paths/shaman';
 
 // Create array of all cocktail paths
 export const allPaths: CocktailPath[] = [
@@ -21,7 +22,8 @@ export const allPaths: CocktailPath[] = [
 	WARLOCK,
 	INNKEEPER,
 	FISHERMAN,
-	ROYAL
+	ROYAL,
+	SHAMAN
 ];
 
 // Create a map of all paths by slug for quick lookups

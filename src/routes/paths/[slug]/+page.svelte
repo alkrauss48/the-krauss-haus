@@ -63,37 +63,34 @@
 							<!-- Cocktail Card -->
 							<CocktailCard {cocktail} bgColors={pathColors} />
 
-							<!-- Path Dots Connector (show between cards, not after last) -->
+							<!-- Arrow Connector (show between cards, not after last) -->
 							{#if index < path.cocktails.length - 1}
 								<div class="flex justify-center items-center my-6">
-									<div class="flex flex-col items-center gap-2">
-										<!-- Trail of dots showing progression -->
-										<svg
-											class="w-6 h-16 text-indigo-400"
-											viewBox="0 0 24 64"
+									<svg
+										class="w-5 h-14 text-indigo-500/80"
+										viewBox="0 0 20 56"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<!-- Tapered line that fades in and widens toward the arrow -->
+										<path
+											d="M10 0 Q10 28, 10 44"
+											stroke="currentColor"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											opacity="0.5"
+										/>
+										<!-- Elegant swept arrowhead -->
+										<path
+											d="M3,40 Q7,46 10,52 Q13,46 17,40"
+											stroke="currentColor"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
 											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<!-- Vertical line connecting dots -->
-											<line
-												x1="12"
-												y1="4"
-												x2="12"
-												y2="60"
-												stroke="currentColor"
-												stroke-width="2"
-												stroke-linecap="round"
-												stroke-dasharray="4 4"
-												opacity="0.4"
-											/>
-											<!-- Dots along the path -->
-											<circle cx="12" cy="8" r="3" fill="currentColor" opacity="0.6" />
-											<circle cx="12" cy="20" r="3.5" fill="currentColor" opacity="0.7" />
-											<circle cx="12" cy="32" r="4" fill="currentColor" opacity="0.8" />
-											<circle cx="12" cy="44" r="3.5" fill="currentColor" opacity="0.7" />
-											<circle cx="12" cy="56" r="3" fill="currentColor" opacity="0.6" />
-										</svg>
-									</div>
+											opacity="0.7"
+										/>
+									</svg>
 								</div>
 							{/if}
 						</div>

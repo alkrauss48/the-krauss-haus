@@ -20,35 +20,35 @@ const SINGAPORE_SLING: Cocktail = {
 	hasStraw: true,
 	ingredients: [
 		{
-			amount: '1.5oz',
+			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.FORDS
 		},
 		{
-			amount: '.5oz',
+			amount: '2 tsp',
 			ingredient: Ingredients.Liqueurs.CHERRY_HEERING
 		},
 		{
-			amount: '.5oz',
+			amount: '2 tsp',
 			ingredient: Ingredients.Liqueurs.BENEDICTINE
 		},
 		{
-			amount: '.5oz',
+			amount: '2 tsp',
 			ingredient: Ingredients.Liqueurs.COINTREAU
 		},
 		{
-			amount: '.5oz',
+			amount: '2 tsp',
 			ingredient: Ingredients.Syrups.GRENADINE
 		},
 		{
-			amount: '3oz',
+			amount: '2oz',
 			ingredient: Ingredients.Citrus.PINEAPPLE
 		},
 		{
-			amount: '.75oz',
+			amount: '.5oz',
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
-			amount: '3 dashes',
+			amount: '2 dashes',
 			ingredient: Ingredients.Bitters.ANGOSTURA
 		},
 		{
