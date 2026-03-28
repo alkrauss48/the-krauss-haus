@@ -12,6 +12,6 @@ export const HUNTER: CocktailPath = {
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/hunter.jpeg',
 	description:
-		'Chase the sun through rum and tropical fruit. This path opens with easy, fruity sweetness, sharpens into clean citrus balance, then layers in warm spice and unexpected spirit swaps before landing on layered, multi-rum complexity. The deeper you go, the more the tropics reveal.',
-	cocktails: [HURRICANE, DAIQUIRI, DONGA_PUNCH, IRON_RANGER, MAI_TAI]
+		'Chase the sun through rum and tropical fruit. This path opens with clean citrus balance, builds into easy fruity sweetness, then layers in warm spice and unexpected spirit swaps before landing on layered, multi-rum complexity. The deeper you go, the more the tropics reveal.',
+	cocktails: [DAIQUIRI, HURRICANE, DONGA_PUNCH, IRON_RANGER, MAI_TAI]
 };
