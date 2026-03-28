@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const HEMINGWAY_DAIQUIRI: Cocktail = {
 	title: 'Hemingway Daiquiri',
-	description: 'Light blended rum, maraschino liqueur, lime, grapefruit.',
+	description: 'Blended light rum, maraschino liqueur, lime, grapefruit.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hemingway-daiquiri.png',
 	thumbnailImagePath:
