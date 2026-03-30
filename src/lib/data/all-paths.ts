@@ -18,12 +18,12 @@ export const allPaths: CocktailPath[] = [
 	HUNTER,
 	MAGE,
 	BARD,
-	ROGUE,
 	WARLOCK,
-	INNKEEPER,
+	ROGUE,
+	SHAMAN,
 	FISHERMAN,
-	ROYAL,
-	SHAMAN
+	INNKEEPER,
+	ROYAL
 ];
 
 // Create a map of all paths by slug for quick lookups

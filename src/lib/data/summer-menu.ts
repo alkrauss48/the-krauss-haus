@@ -14,8 +14,9 @@ import SLAP_N_PICKLE from './cocktails/slap-n-pickle';
 import KING_OF_KINGS from './cocktails/king-of-kings';
 import CAIPIRINHA from './cocktails/caipirinha';
 import DEAR_LUKEY from './cocktails/dear-lukey';
+import LOGGY_CAB from './cocktails/loggy-cab';
 
-export const featuredDrinks: Cocktail[] = [GILDED_ROSE];
+export const featuredDrinks: Cocktail[] = [GILDED_ROSE, LOGGY_CAB];
 
 export const categories: Category[] = [
 	{
