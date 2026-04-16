@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import DICK_BRADSELL from '$lib/data/bartenders/dick-bradsell';
 
 const ESPRESSO_MARTINI: Cocktail = {
 	title: 'Espresso Martini',
@@ -13,6 +14,7 @@ const ESPRESSO_MARTINI: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/espresso-martini.png',
 	slug: 'espresso-martini',
+	createdBy: DICK_BRADSELL,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
 	ice: Ice.None,

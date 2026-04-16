@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import JEFFREY_MORGENTHALER from '$lib/data/bartenders/jeffrey-morgenthaler';
 
 const AMARETTO_SOUR: Cocktail = {
 	title: 'Amaretto Sour',
@@ -13,6 +14,7 @@ const AMARETTO_SOUR: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/amaretto-sour.png',
 	slug: 'amaretto-sour',
+	createdBy: JEFFREY_MORGENTHALER,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.SmallCubes,

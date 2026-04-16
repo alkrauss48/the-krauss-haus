@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import SOGGY_DOLLAR_BAR from '$lib/data/bartenders/soggy-dollar-bar';
 
 const PAINKILLER: Cocktail = {
 	title: 'Painkiller',
@@ -13,6 +14,7 @@ const PAINKILLER: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/painkiller.png',
 	slug: 'painkiller',
+	createdBy: SOGGY_DOLLAR_BAR,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.TikiMug,
 	ice: Ice.Crushed,

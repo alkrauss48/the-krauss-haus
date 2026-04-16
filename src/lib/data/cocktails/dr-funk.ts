@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 
 const DR_FUNK: Cocktail = {
 	title: 'Dr. Funk',
@@ -13,6 +14,7 @@ const DR_FUNK: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/dr-funk.png',
 	slug: 'dr-funk',
+	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.Crushed,

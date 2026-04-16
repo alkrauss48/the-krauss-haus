@@ -4,10 +4,12 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import SAM_ROSS from '$lib/data/bartenders/sam-ross';
 
 const PAPER_PLANE: Cocktail = {
 	title: 'Paper Plane',
 	slug: 'paper-plane',
+	createdBy: SAM_ROSS,
 	description: 'Bourbon, amaro nonino, aperol, lemon.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/paper-plane.png',

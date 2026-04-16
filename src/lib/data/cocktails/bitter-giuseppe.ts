@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import GIUSEPPE_GONZALEZ from '$lib/data/bartenders/giuseppe-gonzalez';
 
 const BITTER_GIUSEPPE: Cocktail = {
 	title: 'Bitter Giuseppe',
@@ -13,6 +14,7 @@ const BITTER_GIUSEPPE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/bitter-giuseppe.png',
 	slug: 'bitter-giuseppe',
+	createdBy: GIUSEPPE_GONZALEZ,
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,

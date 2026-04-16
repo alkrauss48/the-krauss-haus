@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
 
 const HIGHLAND_COFFEE: Cocktail = {
 	title: 'Highland Coffee',
@@ -13,6 +14,7 @@ const HIGHLAND_COFFEE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/highland-coffee.png',
 	slug: 'highland-coffee',
+	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.Mug,
 	ice: Ice.None,

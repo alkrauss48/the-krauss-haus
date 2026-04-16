@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import LA_CAPILLA from '$lib/data/bartenders/la-capilla';
 
 const BATANGA: Cocktail = {
 	title: 'Batanga',
@@ -13,6 +14,7 @@ const BATANGA: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/batanga.png',
 	slug: 'batanga',
+	createdBy: LA_CAPILLA,
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,
 	ice: Ice.SmallCubes,

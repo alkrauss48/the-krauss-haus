@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import CAROUSEL_BAR from '$lib/data/bartenders/carousel-bar';
 
 const VIEUX_CARRE: Cocktail = {
 	title: 'Vieux Carré',
@@ -14,6 +15,7 @@ const VIEUX_CARRE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/vieux-carre.png',
 	slug: 'vieux-carre',
+	createdBy: CAROUSEL_BAR,
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,

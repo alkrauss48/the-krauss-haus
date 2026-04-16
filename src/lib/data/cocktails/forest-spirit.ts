@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
 
 const FOREST_SPIRIT: Cocktail = {
 	title: 'Forest Spirit',
@@ -14,6 +15,7 @@ const FOREST_SPIRIT: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/forest-spirit.png',
 	slug: 'forest-spirit',
+	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,

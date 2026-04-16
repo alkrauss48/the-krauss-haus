@@ -132,6 +132,7 @@
 		<nav class="flex flex-col gap-4" aria-label="Secondary Menu Navigation">
 			<MenuLink href="/ingredients" label="Ingredients" variant="secondary" />
 			<MenuLink href="/parties" label="Cocktail Parties" variant="secondary" />
+			<MenuLink href="/bartenders" label="Bartenders" variant="secondary" />
 			<MenuLink href="/recipes" label="Recipes" variant="secondary" />
 		</nav>
 	</section>

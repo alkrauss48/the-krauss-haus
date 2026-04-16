@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import PHIL_WARD from '$lib/data/bartenders/phil-ward';
 
 const OAXACA_OLD_FASHIONED: Cocktail = {
 	title: 'Oaxaca Old Fashioned',
@@ -13,6 +14,7 @@ const OAXACA_OLD_FASHIONED: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/oaxaca-old-fashioned.png',
 	slug: 'oaxaca-old-fashioned',
+	createdBy: PHIL_WARD,
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,

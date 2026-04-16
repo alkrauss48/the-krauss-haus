@@ -90,6 +90,17 @@
 					{#if cocktail.subtitle}
 						<p class="text-xl text-gray-600 italic mb-4">{cocktail.subtitle}</p>
 					{/if}
+					{#if cocktail.createdBy}
+						<p class="text-sm text-gray-500 italic mb-3">
+							Created by
+							<a
+								href={resolve(`/bartenders/${cocktail.createdBy.slug}`)}
+								class="text-amber-600 hover:text-amber-700 underline decoration-dotted underline-offset-2"
+							>
+								{cocktail.createdBy.name}
+							</a>
+						</p>
+					{/if}
 					<p class="text-lg text-gray-700 leading-relaxed">{cocktail.description}</p>
 				</header>
 

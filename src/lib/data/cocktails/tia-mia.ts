@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import IVY_MIX from '$lib/data/bartenders/ivy-mix';
 
 const TIA_MIA: Cocktail = {
 	title: 'Tia Mia',
@@ -13,6 +14,7 @@ const TIA_MIA: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/tia-mia.png',
 	slug: 'tia-mia',
+	createdBy: IVY_MIX,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.Crushed,

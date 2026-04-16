@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
 
 const GILDED_ROSE: Cocktail = {
 	title: 'Gilded Rose',
@@ -13,6 +14,7 @@ const GILDED_ROSE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gilded-rose.png',
 	slug: 'gilded-rose',
+	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.FluteGlass,
 	ice: Ice.None,

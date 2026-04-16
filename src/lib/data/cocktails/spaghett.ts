@@ -3,6 +3,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import REED_CAHILL from '$lib/data/bartenders/reed-cahill';
 
 const SPAGHETT: Cocktail = {
 	title: 'Spaghett',
@@ -12,6 +13,7 @@ const SPAGHETT: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/spaghett.png',
 	slug: 'spaghett',
+	createdBy: REED_CAHILL,
 	method: CocktailMethod.Built,
 	ice: Ice.None,
 	hasStraw: false,

@@ -4,10 +4,12 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import PHIL_WARD from '$lib/data/bartenders/phil-ward';
 
 const DIVISION_BELL: Cocktail = {
 	title: 'Division Bell',
 	slug: 'division-bell',
+	createdBy: PHIL_WARD,
 	description: 'Mezcal, aperol, maraschino liqueur, lime, grapefruit twist.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/division-bell.png',

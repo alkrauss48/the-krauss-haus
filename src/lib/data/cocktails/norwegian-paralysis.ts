@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import MARTIN_CATE from '$lib/data/bartenders/martin-cate';
 
 const NORWEIGAN_PARALYSIS: Cocktail = {
 	title: 'Norwegian Paralysis',
@@ -13,6 +14,7 @@ const NORWEIGAN_PARALYSIS: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/norwegian-paralysis.png',
 	slug: 'norwegian-paralysis',
+	createdBy: MARTIN_CATE,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.HighballGlass,
 	ice: Ice.Crushed,

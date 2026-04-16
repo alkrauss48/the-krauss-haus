@@ -40,7 +40,7 @@ const DAIQUIRI: Cocktail = {
 			name: '+Funk',
 			ingredients: [
 				{
-					label: 'Sub 1oz of Probitas with .75oz Wray and Nephew.',
+					label: 'Swap 1oz of Probitas with .75oz Wray and Nephew Overproof Jamaican Rum.',
 					ingredient: Ingredients.BaseSpirits.WRAY_AND_NEPHEW
 				}
 			],

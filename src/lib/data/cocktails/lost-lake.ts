@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import PAUL_MCGEE from '$lib/data/bartenders/paul-mcgee';
 
 const LOST_LAKE: Cocktail = {
 	title: 'Lost Lake',
@@ -14,6 +15,7 @@ const LOST_LAKE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/lost-lake.png',
 	slug: 'lost-lake',
+	createdBy: PAUL_MCGEE,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.Crushed,

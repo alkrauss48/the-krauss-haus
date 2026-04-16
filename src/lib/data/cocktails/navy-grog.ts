@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 
 const NAVY_GROG: Cocktail = {
 	title: 'Navy Grog',
@@ -14,6 +15,7 @@ const NAVY_GROG: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/navy-grog.png',
 	slug: 'navy-grog',
+	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,

@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 
 const THREE_DOTS_AND_A_DASH: Cocktail = {
 	title: 'Three Dots and a Dash',
@@ -14,6 +15,7 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/three-dots-and-a-dash.png',
 	slug: 'three-dots-and-a-dash',
+	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.TikiMug,
 	ice: Ice.Crushed,

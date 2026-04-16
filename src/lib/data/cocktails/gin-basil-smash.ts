@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import JORG_MEYER from '$lib/data/bartenders/jorg-meyer';
 
 const GIN_BASIL_SMASH: Cocktail = {
 	title: 'Gin Basil Smash',
@@ -13,6 +14,7 @@ const GIN_BASIL_SMASH: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gin-basil-smash.png',
 	slug: 'gin-basil-smash',
+	createdBy: JORG_MEYER,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.SmallCubes,

@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import JOAQUIN_SIMO from '$lib/data/bartenders/joaquin-simo';
 
 const NAKED_AND_FAMOUS: Cocktail = {
 	title: 'Naked and Famous',
@@ -13,6 +14,7 @@ const NAKED_AND_FAMOUS: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/naked-and-famous.png',
 	slug: 'naked-and-famous',
+	createdBy: JOAQUIN_SIMO,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
 	ice: Ice.None,

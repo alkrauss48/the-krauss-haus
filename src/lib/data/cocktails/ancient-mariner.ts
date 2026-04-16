@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import JEFF_BEACHBUM_BERRY from '$lib/data/bartenders/jeff-beachbum-berry';
 
 const ANCIENT_MARINER: Cocktail = {
 	title: 'Ancient Mariner',
@@ -14,6 +15,7 @@ const ANCIENT_MARINER: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ancient-mariner.png',
 	slug: 'ancient-mariner',
+	createdBy: JEFF_BEACHBUM_BERRY,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.Crushed,

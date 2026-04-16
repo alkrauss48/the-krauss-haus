@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 
 const COBRAS_FANG: Cocktail = {
 	title: "Cobra's Fang",
@@ -14,6 +15,7 @@ const COBRAS_FANG: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/cobras-fang.png',
 	slug: 'cobras-fang',
+	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.TikiMug,
 	ice: Ice.Crushed,

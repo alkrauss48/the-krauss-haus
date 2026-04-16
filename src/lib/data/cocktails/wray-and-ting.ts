@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const WRAY_AND_TING: Cocktail = {
 	title: 'Wray and Ting',
-	description: 'Overproof Jamaican rum, grapefruit soda.',
+	description: 'Overproof jamaican rum, grapefruit soda.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/wray-and-ting.png',
 	thumbnailImagePath:
