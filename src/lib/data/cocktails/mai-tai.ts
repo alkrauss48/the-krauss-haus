@@ -31,11 +31,11 @@ const MAI_TAI: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
 		},
 		{
-			amount: '.5oz',
+			amount: '.4oz',
 			ingredient: Ingredients.Liqueurs.DRY_CURACAO
 		},
 		{
-			amount: '.5oz',
+			amount: '.6oz',
 			ingredient: Ingredients.Syrups.ORGEAT
 		},
 		{
@@ -55,6 +55,8 @@ const MAI_TAI: Cocktail = {
 			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
+	notes:
+		"This uses a custom rum blend that has been tweaked to perfection. With using homemade dry curacao, the orange flavor pops a bit more, so it's reduced from .5oz to .4oz. Just eyeball it based on a .5oz measurement. Same thing with increasing orgeat to .6oz (to balance the curacao changes).",
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
