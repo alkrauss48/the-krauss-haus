@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import RAFFLES_HOTEL_LONG_BAR from '$lib/data/bartenders/raffles-hotel-long-bar';
 
 const SINGAPORE_SLING: Cocktail = {
 	title: 'Singapore Sling',
@@ -14,6 +15,7 @@ const SINGAPORE_SLING: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/singapore-sling.png',
 	slug: 'singapore-sling',
+	createdBy: RAFFLES_HOTEL_LONG_BAR,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.HighballGlass,
 	ice: Ice.SmallCubes,

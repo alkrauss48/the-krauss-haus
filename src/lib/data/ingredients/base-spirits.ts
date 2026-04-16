@@ -73,6 +73,12 @@ const SMITH_AND_CROSS: Ingredient = {
 	group: 'Overproof Jamaican Rum',
 	costPerOz: 30 / 25
 };
+const WRAY_AND_NEPHEW: Ingredient = {
+	title: 'Wray and Nephew',
+	slug: 'wray-and-nephew',
+	group: 'Overproof Jamaican Rum',
+	costPerOz: 28 / 33
+};
 
 // Whiskey
 const ELIJAH_CRAIG: Ingredient = {
@@ -215,7 +221,8 @@ export const BASE_SPIRITS: IngredientCategory = {
 				PLANTERAY_3_STARS,
 				PLANTERAY_OFTD,
 				PROBITAS,
-				SMITH_AND_CROSS
+				SMITH_AND_CROSS,
+				WRAY_AND_NEPHEW
 			]
 		},
 		{
@@ -254,6 +261,7 @@ export const INGREDIENTS = {
 	PLANTERAY_OFTD,
 	PROBITAS,
 	SMITH_AND_CROSS,
+	WRAY_AND_NEPHEW,
 
 	// Whiskey
 	ELIJAH_CRAIG,

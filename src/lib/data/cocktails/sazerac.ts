@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import ANTOINE_PEYCHAUD from '$lib/data/bartenders/antoine-peychaud';
 
 const SAZERAC: Cocktail = {
 	title: 'Sazerac',
@@ -13,6 +14,7 @@ const SAZERAC: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sazerac.png',
 	slug: 'sazerac',
+	createdBy: ANTOINE_PEYCHAUD,
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.SingleRocksGlass,
 	ice: Ice.None,

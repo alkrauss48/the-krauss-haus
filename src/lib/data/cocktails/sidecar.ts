@@ -23,7 +23,7 @@ const SIDECAR: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.ST_REMY_VSOP
 		},
 		{
-			amount: '1oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Liqueurs.DRY_CURACAO
 		},
 		{

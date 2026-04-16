@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import AVIARY_BAR_KUALA_LUMPUR from '$lib/data/bartenders/aviary-bar-kuala-lumpur';
 
 const JUNGLE_BIRD: Cocktail = {
 	title: 'Jungle Bird',
@@ -13,6 +14,7 @@ const JUNGLE_BIRD: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/jungle-bird.png',
 	slug: 'jungle-bird',
+	createdBy: AVIARY_BAR_KUALA_LUMPUR,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,
@@ -41,6 +43,18 @@ const JUNGLE_BIRD: Cocktail = {
 		{
 			label: 'Garnish: Pineapple wedge',
 			ingredient: Ingredients.Citrus.PINEAPPLE_GARNISH
+		}
+	],
+	variations: [
+		{
+			name: '+Funk',
+			ingredients: [
+				{
+					label: 'Add .25oz of Wray and Nephew Overproof Jamaican Rum.',
+					ingredient: Ingredients.BaseSpirits.WRAY_AND_NEPHEW
+				}
+			],
+			images: []
 		}
 	],
 	tags: [

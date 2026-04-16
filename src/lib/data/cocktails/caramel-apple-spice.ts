@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
 
 const CARAMEL_APPLE_SPICE: Cocktail = {
 	title: 'Caramel Apple Spice',
@@ -13,6 +14,7 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/caramel-apple-spice.png',
 	slug: 'caramel-apple-spice',
+	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.Mug,
 	ice: Ice.None,

@@ -4,15 +4,17 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import PAT_OBRIEN from '$lib/data/bartenders/pat-obrien';
 
 const HURRICANE: Cocktail = {
 	title: 'Hurricane',
-	description: 'Jamaican rum, blended rum, fassionola, lemon.',
+	description: 'Jamaican rum blend, fassionola, lemon.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hurricane.png',
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hurricane.png',
 	slug: 'hurricane',
+	createdBy: PAT_OBRIEN,
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.Crushed,
@@ -28,7 +30,7 @@ const HURRICANE: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.BaseSpirits.PROBITAS
+			ingredient: Ingredients.BaseSpirits.WRAY_AND_NEPHEW
 		},
 		{
 			amount: '1oz',

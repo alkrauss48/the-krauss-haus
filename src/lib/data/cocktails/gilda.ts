@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import BRIAN_MILLER from '$lib/data/bartenders/brian-miller';
 
 const GILDA: Cocktail = {
 	title: 'Gilda',
@@ -13,6 +14,7 @@ const GILDA: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gilda.png',
 	slug: 'gilda',
+	createdBy: BRIAN_MILLER,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
 	ice: Ice.None,

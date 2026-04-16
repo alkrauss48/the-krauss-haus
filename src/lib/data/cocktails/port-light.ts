@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import TRADER_VIC from '$lib/data/bartenders/trader-vic';
 
 const PORT_LIGHT: Cocktail = {
 	title: 'Port Light',
@@ -13,6 +14,7 @@ const PORT_LIGHT: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/port-light.png',
 	slug: 'port-light',
+	createdBy: TRADER_VIC,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.Crushed,

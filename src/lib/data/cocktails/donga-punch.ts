@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 
 const DONGA_PUNCH: Cocktail = {
 	title: 'Donga Punch',
@@ -13,6 +14,7 @@ const DONGA_PUNCH: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/donga-punch.png',
 	slug: 'donga-punch',
+	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.Crushed,

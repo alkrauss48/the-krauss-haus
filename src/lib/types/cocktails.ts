@@ -4,6 +4,7 @@ import type { Tag } from './tags';
 import type { IngredientItem } from './ingredients';
 import type { ServedIn } from '$lib/enums/served-in';
 import { Ice } from '../enums/ice';
+import type { Bartender } from './bartenders';
 
 export interface CocktailVariant {
 	name: string;
@@ -27,6 +28,7 @@ export interface Cocktail {
 	variations?: CocktailVariant[];
 	notes?: string;
 	tags?: Tag[];
+	createdBy?: Bartender;
 }
 
 export interface Category {

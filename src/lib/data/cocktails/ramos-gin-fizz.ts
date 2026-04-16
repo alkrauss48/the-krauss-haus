@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import HENRY_C_RAMOS from '$lib/data/bartenders/henry-c-ramos';
 
 const RAMOS_GIN_FIZZ: Cocktail = {
 	title: 'Ramos Gin Fizz',
@@ -14,6 +15,7 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ramos-gin-fizz.png',
 	slug: 'ramos-gin-fizz',
+	createdBy: HENRY_C_RAMOS,
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,
 	ice: Ice.None,

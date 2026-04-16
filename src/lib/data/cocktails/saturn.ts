@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import POPO_GALSINI from '$lib/data/bartenders/popo-galsini';
 
 const SATURN: Cocktail = {
 	title: 'Saturn',
@@ -13,6 +14,7 @@ const SATURN: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/saturn.png',
 	slug: 'saturn',
+	createdBy: POPO_GALSINI,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.Crushed,

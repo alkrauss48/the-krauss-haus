@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import SAM_ROSS from '$lib/data/bartenders/sam-ross';
 
 const PENICILLIN: Cocktail = {
 	title: 'Penicillin',
@@ -13,6 +14,7 @@ const PENICILLIN: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/penicillin.png',
 	slug: 'penicillin',
+	createdBy: SAM_ROSS,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,

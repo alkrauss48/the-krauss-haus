@@ -35,6 +35,18 @@ const DAIQUIRI: Cocktail = {
 			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
+	variations: [
+		{
+			name: '+Funk',
+			ingredients: [
+				{
+					label: 'Swap 1oz of Probitas with .75oz Wray and Nephew Overproof Jamaican Rum.',
+					ingredient: Ingredients.BaseSpirits.WRAY_AND_NEPHEW
+				}
+			],
+			images: []
+		}
+	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,

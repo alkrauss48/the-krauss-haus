@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
 
 const MERRY_MULE: Cocktail = {
 	title: 'Merry Mule',
@@ -14,6 +15,7 @@ const MERRY_MULE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/merry-mule.png',
 	slug: 'merry-mule',
+	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.Mug,
 	ice: Ice.SmallCubes,

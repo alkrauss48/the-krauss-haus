@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import TELLERS from '$lib/data/bartenders/tellers';
 
 const CHOCOLATE_COVERED_CHERRIES: Cocktail = {
 	title: 'Chocolate Covered Cherries',
@@ -15,6 +16,7 @@ const CHOCOLATE_COVERED_CHERRIES: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/chocolate-covered-cherries.png',
 	slug: 'chocolate-covered-cherries',
+	createdBy: TELLERS,
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,

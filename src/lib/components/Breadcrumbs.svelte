@@ -40,6 +40,9 @@
 				case 'parties':
 					label = 'Cocktail Parties';
 					break;
+				case 'bartenders':
+					label = 'Bartenders';
+					break;
 				case 'tiki-party-2025':
 					label = 'Tiki Party 2025';
 					break;

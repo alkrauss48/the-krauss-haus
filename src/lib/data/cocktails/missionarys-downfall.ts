@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 
 const MISSIONARYS_DOWNFALL: Cocktail = {
 	title: "Missionary's Downfall",
@@ -13,6 +14,7 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/missionarys-downfall.png',
 	slug: 'missionarys-downfall',
+	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.Blended,
 	servedIn: ServedIn.HighballGlass,
 	ice: Ice.Crushed,

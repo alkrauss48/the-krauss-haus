@@ -4,6 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
+import TRADER_VIC from '$lib/data/bartenders/trader-vic';
 
 const MAI_TAI: Cocktail = {
 	title: 'Mai Tai',
@@ -13,6 +14,7 @@ const MAI_TAI: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/mai-tai.png',
 	slug: 'mai-tai',
+	createdBy: TRADER_VIC,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.Crushed,
@@ -31,11 +33,11 @@ const MAI_TAI: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
 		},
 		{
-			amount: '.5oz',
+			amount: '.4oz',
 			ingredient: Ingredients.Liqueurs.DRY_CURACAO
 		},
 		{
-			amount: '.5oz',
+			amount: '.6oz',
 			ingredient: Ingredients.Syrups.ORGEAT
 		},
 		{
@@ -55,6 +57,8 @@ const MAI_TAI: Cocktail = {
 			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
+	notes:
+		"This uses a custom rum blend that has been tweaked to perfection. With using homemade dry curacao, the orange flavor pops a bit more, so it's reduced from .5oz to .4oz. Just eyeball it based on a .5oz measurement. Same thing with increasing orgeat to .6oz (to balance the curacao changes).",
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
