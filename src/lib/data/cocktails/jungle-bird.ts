@@ -43,6 +43,18 @@ const JUNGLE_BIRD: Cocktail = {
 			ingredient: Ingredients.Citrus.PINEAPPLE_GARNISH
 		}
 	],
+	variations: [
+		{
+			name: '+Funk',
+			ingredients: [
+				{
+					label: 'Add .25oz of Wray and Nephew Overproof Jamaican Rum.',
+					ingredient: Ingredients.BaseSpirits.WRAY_AND_NEPHEW
+				}
+			],
+			images: []
+		}
+	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.BITTER,

@@ -105,6 +105,7 @@ import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
 import WHISKEY_GINGER from '$lib/data/cocktails/whiskey-ginger';
 import WHISKEY_SOUR from '$lib/data/cocktails/whiskey-sour';
 import WIDOWS_KISS from '$lib/data/cocktails/widows-kiss';
+import WRAY_AND_TING from '$lib/data/cocktails/wray-and-ting';
 import ZOMBIE from '$lib/data/cocktails/zombie';
 
 // Create array of all cocktails (sorted alphabetically)
@@ -213,6 +214,7 @@ export const allCocktails: Cocktail[] = [
 	WHISKEY_GINGER,
 	WHISKEY_SOUR,
 	WIDOWS_KISS,
+	WRAY_AND_TING,
 	ZOMBIE
 ].sort((a, b) => a.title.localeCompare(b.title));
 

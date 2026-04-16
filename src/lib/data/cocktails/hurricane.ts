@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const HURRICANE: Cocktail = {
 	title: 'Hurricane',
-	description: 'Jamaican rum, blended rum, fassionola, lemon.',
+	description: 'Jamaican rum blend, fassionola, lemon.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hurricane.png',
 	thumbnailImagePath:
@@ -28,7 +28,7 @@ const HURRICANE: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.BaseSpirits.PROBITAS
+			ingredient: Ingredients.BaseSpirits.WRAY_AND_NEPHEW
 		},
 		{
 			amount: '1oz',
