@@ -4,8 +4,6 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
-import ALEJANDRO_OLIVARES from '$lib/data/bartenders/alejandro-olivares';
-
 const SEA_LEGS: Cocktail = {
 	title: 'Sea Legs',
 	description: 'Single malt scotch, mezcal, orgeat, lime, celery bitters, angostura bitters, salt.',
@@ -14,7 +12,6 @@ const SEA_LEGS: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sea-legs.png',
 	slug: 'sea-legs',
-	createdBy: ALEJANDRO_OLIVARES,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
 	ice: Ice.None,
