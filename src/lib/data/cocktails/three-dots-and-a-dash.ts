@@ -39,10 +39,10 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.Citrus.ORANGE
+			ingredient: Ingredients.Liqueurs.DRY_CURACAO
 		},
 		{
-			amount: '.5oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{

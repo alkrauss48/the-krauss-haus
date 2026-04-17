@@ -51,7 +51,8 @@ const AZALEA: Cocktail = {
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
 		Tags.Origin.MODERN,
-		Tags.ServedIn.HIGHBALL_GLASS
+		Tags.ServedIn.HIGHBALL_GLASS,
+		Tags.AlcoholLevel.LOW
 	],
 	notes:
 		'The official cocktail of the Masters golf tournament. Typically served with lemonade, but this recipe makes an on-the-fly lemonade with fresh ingredients.'

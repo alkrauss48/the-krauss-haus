@@ -4,7 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
-import AVIARY_BAR_KUALA_LUMPUR from '$lib/data/bartenders/aviary-bar-kuala-lumpur';
+import AVIARY_BAR_KUALA_LUMPUR from '$lib/data/bartenders/aviary-bar';
 
 const JUNGLE_BIRD: Cocktail = {
 	title: 'Jungle Bird',

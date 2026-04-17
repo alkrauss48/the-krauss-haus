@@ -4,7 +4,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
-import TOBY_MALONEY from '$lib/data/bartenders/toby-maloney';
+import ERICK_CASTRO from '$lib/data/bartenders/erick-castro';
 
 const IRON_RANGER: Cocktail = {
 	title: 'Iron Ranger',
@@ -14,7 +14,7 @@ const IRON_RANGER: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/iron-ranger.png',
 	slug: 'iron-ranger',
-	createdBy: TOBY_MALONEY,
+	createdBy: ERICK_CASTRO,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.TikiMug,
 	ice: Ice.Crushed,

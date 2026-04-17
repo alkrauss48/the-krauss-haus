@@ -4,7 +4,7 @@ const BRIAN_MILLER: Bartender = {
 	name: 'Brian Miller',
 	slug: 'brian-miller',
 	description:
-		'A veteran of Death & Co and Pegu Club, Brian Miller is one of the most respected tiki bartenders of his generation. His "Tiki Mondays with Miller" roving residency has introduced countless drinkers to layered rum drinks like the Gilda and Slap N\' Pickle.'
+		'Brian Miller is a veteran of Death & Co and Pegu Club, widely respected for his deep knowledge of tiki and spirit-driven cocktails. His “Tiki Mondays with Miller” roving residency has introduced countless drinkers to inventive drinks like the tequila-based Gilda and the aquavit-forward Slap N’ Pickle.'
 };
 
 export default BRIAN_MILLER;

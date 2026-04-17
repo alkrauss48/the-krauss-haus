@@ -1,9 +1,8 @@
 import type { Bartender } from '$lib/types/bartenders';
 
 import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
-import ALEJANDRO_OLIVARES from '$lib/data/bartenders/alejandro-olivares';
 import ANTOINE_PEYCHAUD from '$lib/data/bartenders/antoine-peychaud';
-import AVIARY_BAR_KUALA_LUMPUR from '$lib/data/bartenders/aviary-bar-kuala-lumpur';
+import AVIARY_BAR_KUALA_LUMPUR from '$lib/data/bartenders/aviary-bar';
 import BRIAN_MILLER from '$lib/data/bartenders/brian-miller';
 import CAROUSEL_BAR from '$lib/data/bartenders/carousel-bar';
 import DICK_BRADSELL from '$lib/data/bartenders/dick-bradsell';
@@ -26,12 +25,11 @@ import REED_CAHILL from '$lib/data/bartenders/reed-cahill';
 import SAM_ROSS from '$lib/data/bartenders/sam-ross';
 import SOGGY_DOLLAR_BAR from '$lib/data/bartenders/soggy-dollar-bar';
 import TELLERS from '$lib/data/bartenders/tellers';
-import TOBY_MALONEY from '$lib/data/bartenders/toby-maloney';
+import ERICK_CASTRO from '$lib/data/bartenders/erick-castro';
 import TRADER_VIC from '$lib/data/bartenders/trader-vic';
 
 export const allBartenders: Bartender[] = [
 	AARON_KRAUSS,
-	ALEJANDRO_OLIVARES,
 	ANTOINE_PEYCHAUD,
 	AVIARY_BAR_KUALA_LUMPUR,
 	BRIAN_MILLER,
@@ -55,8 +53,8 @@ export const allBartenders: Bartender[] = [
 	REED_CAHILL,
 	SAM_ROSS,
 	SOGGY_DOLLAR_BAR,
+	ERICK_CASTRO,
 	TELLERS,
-	TOBY_MALONEY,
 	TRADER_VIC
 ].sort((a, b) => a.name.localeCompare(b.name));
 
