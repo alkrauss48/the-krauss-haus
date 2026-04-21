@@ -9,7 +9,7 @@ import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
 import MAI_TAI from '$lib/data/cocktails/mai-tai';
 import NORWEIGAN_PARALYSIS from '$lib/data/cocktails/norwegian-paralysis';
 import PAINKILLER from '$lib/data/cocktails/painkiller';
-import PORT_LIGHT from '$lib/data/cocktails/port-light';
+import DESERT_DREAMS from '$lib/data/cocktails/desert-dreams';
 import SATURN from '$lib/data/cocktails/saturn';
 import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
@@ -48,6 +48,6 @@ export const categories: Category[] = [
 			tertiary: '#fef3c7',
 			variationText: '#9a3412'
 		},
-		cocktails: [SINGAPORE_SLING, SATURN, GILDA, IRON_RANGER, PORT_LIGHT, NORWEIGAN_PARALYSIS]
+		cocktails: [SINGAPORE_SLING, SATURN, GILDA, IRON_RANGER, DESERT_DREAMS, NORWEIGAN_PARALYSIS]
 	}
 ];

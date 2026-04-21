@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const WRAY_AND_TING: Cocktail = {
 	title: 'Wray and Ting',
-	description: 'Overproof jamaican rum, grapefruit soda.',
+	description: 'Overproof jamaican rum, grapefruit, rich simple, soda water, salt.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/wray-and-ting.png',
 	thumbnailImagePath:
@@ -23,8 +23,20 @@ const WRAY_AND_TING: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.WRAY_AND_NEPHEW
 		},
 		{
-			amount: '4oz',
-			ingredient: Ingredients.Mixers.GRAPEFRUIT_SODA
+			amount: '1oz',
+			ingredient: Ingredients.Citrus.GRAPEFRUIT
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
+		},
+		{
+			amount: '2.5oz',
+			ingredient: Ingredients.Mixers.SODA_WATER
+		},
+		{
+			label: 'Pinch of salt',
+			ingredient: Ingredients.Other.SALT
 		}
 	],
 	tags: [

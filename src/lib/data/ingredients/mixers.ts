@@ -17,11 +17,6 @@ const GINGER_BEER: Ingredient = {
 	slug: 'ginger-beer',
 	costPerOz: 1 / 6
 };
-const GRAPEFRUIT_SODA: Ingredient = {
-	title: 'Grapefruit Soda',
-	slug: 'grapefruit-soda',
-	costPerOz: 1 / 8
-};
 const SANPELLEGRINO_LIMONATA: Ingredient = {
 	title: 'Sanpellegrino Limonata',
 	slug: 'sanpellegrino-limonata',
@@ -55,7 +50,6 @@ export const MIXERS: IngredientCategory = {
 				APPLE_CIDER,
 				COCA_COLA,
 				GINGER_BEER,
-				GRAPEFRUIT_SODA,
 				SANPELLEGRINO_LIMONATA,
 				SODA_WATER,
 				SPICED_TEA,
@@ -69,7 +63,6 @@ export const INGREDIENTS = {
 	APPLE_CIDER,
 	COCA_COLA,
 	GINGER_BEER,
-	GRAPEFRUIT_SODA,
 	SANPELLEGRINO_LIMONATA,
 	SODA_WATER,
 	SPICED_TEA,

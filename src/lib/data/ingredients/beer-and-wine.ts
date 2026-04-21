@@ -5,7 +5,7 @@ import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
 const BITBURGER_PILS: Ingredient = {
 	title: 'Bitburger Pils',
 	slug: 'bitburger-pils',
-	costPerOz: 10 / (12 * 6)
+	costPerOz: 19 / (11.2 * 12)
 };
 const GUINNESS_DRAUGHT: Ingredient = {
 	title: 'Guinness Draught',
@@ -20,7 +20,7 @@ const MILLER_HIGH_LIFE: Ingredient = {
 const TECATE_MEXICAN_LAGER: Ingredient = {
 	title: 'Tecate Mexican Lager',
 	slug: 'tecate-mexican-lager',
-	costPerOz: 16 / 12 / 18
+	costPerOz: 16 / (12 * 18)
 };
 
 // Wine
