@@ -19,6 +19,7 @@ import CERVEZA_Y_TEQUILA from '$lib/data/cocktails/cerveza-y-tequila';
 import CHAMPAGNE_COCKTAIL from '$lib/data/cocktails/champagne-cocktail';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
+import CONFERENCE from '$lib/data/cocktails/conference';
 import CORN_N_OIL from '$lib/data/cocktails/corn-n-oil';
 import COSMOPOLITAN from '$lib/data/cocktails/cosmopolitan';
 import COUNT_MAST from '$lib/data/cocktails/count-mast';
@@ -27,6 +28,7 @@ import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import DARK_N_STORMY from '$lib/data/cocktails/dark-n-stormy';
 import DEAR_LUKEY from '$lib/data/cocktails/dear-lukey';
 import DEER_AND_BEER from '$lib/data/cocktails/deer-and-beer';
+import DESERT_DREAMS from '$lib/data/cocktails/desert-dreams';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
 import DR_FUNK from '$lib/data/cocktails/dr-funk';
@@ -89,6 +91,7 @@ import SANGRIA from '$lib/data/cocktails/sangria';
 import SATURN from '$lib/data/cocktails/saturn';
 import SAZERAC from '$lib/data/cocktails/sazerac';
 import SEA_LEGS from '$lib/data/cocktails/sea-legs';
+import SHARKS_TOOTH from '$lib/data/cocktails/sharks-tooth';
 import SIDECAR from '$lib/data/cocktails/sidecar';
 import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
 import SLAP_N_PICKLE from '$lib/data/cocktails/slap-n-pickle';
@@ -128,6 +131,7 @@ export const allCocktails: Cocktail[] = [
 	CHAMPAGNE_COCKTAIL,
 	CHOCOLATE_COVERED_CHERRIES,
 	COBRAS_FANG,
+	CONFERENCE,
 	CORN_N_OIL,
 	COSMOPOLITAN,
 	COUNT_MAST,
@@ -136,6 +140,7 @@ export const allCocktails: Cocktail[] = [
 	DARK_N_STORMY,
 	DEAR_LUKEY,
 	DEER_AND_BEER,
+	DESERT_DREAMS,
 	DIVISION_BELL,
 	DONGA_PUNCH,
 	DR_FUNK,
@@ -198,6 +203,7 @@ export const allCocktails: Cocktail[] = [
 	SATURN,
 	SAZERAC,
 	SEA_LEGS,
+	SHARKS_TOOTH,
 	SIDECAR,
 	SINGAPORE_SLING,
 	SLAP_N_PICKLE,

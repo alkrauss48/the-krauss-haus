@@ -9,7 +9,7 @@ import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 const THREE_DOTS_AND_A_DASH: Cocktail = {
 	title: 'Three Dots and a Dash',
 	description:
-		'Aged rhum agricole, blended rum, demerara rum, honey, orange, lime, falernum, allspice dram, angostura bitters.',
+		'Aged rhum agricole, blended rum, demerara rum, honey, dry curaçao, lime, falernum, allspice dram, angostura bitters.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/three-dots-and-a-dash.png',
 	thumbnailImagePath:
@@ -35,15 +35,7 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.Syrups.HONEY_SYRUP
-		},
-		{
-			amount: '.5oz',
 			ingredient: Ingredients.Liqueurs.DRY_CURACAO
-		},
-		{
-			amount: '.75oz',
-			ingredient: Ingredients.Citrus.LIME
 		},
 		{
 			amount: '.25oz',
@@ -52,6 +44,14 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 		{
 			amount: '.25oz',
 			ingredient: Ingredients.Liqueurs.ALLSPICE_DRAM
+		},
+		{
+			amount: '.75oz',
+			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.HONEY_SYRUP
 		},
 		{
 			amount: '1 dash',

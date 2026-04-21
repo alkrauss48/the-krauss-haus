@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const PALOMA: Cocktail = {
 	title: 'Paloma',
-	description: 'Tequila, grapefruit soda, lime.',
+	description: 'Blanco tequila, grapefruit, lime, agave, soda water, salt.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/paloma.png',
 	thumbnailImagePath:
@@ -23,19 +23,34 @@ const PALOMA: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.CIMARRON_BLANCO
 		},
 		{
-			amount: '4oz',
-			ingredient: Ingredients.Mixers.GRAPEFRUIT_SODA
+			amount: '1.5oz',
+			ingredient: Ingredients.Citrus.GRAPEFRUIT
 		},
 		{
 			amount: '.5oz',
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
-			label: 'Garnish: Salt rim',
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.AGAVE_NECTAR
+		},
+		{
+			amount: '2oz',
+			ingredient: Ingredients.Mixers.SODA_WATER
+		},
+		{
+			label: 'Pinch of salt',
 			ingredient: Ingredients.Other.SALT
+		},
+		{
+			label: 'Rim: Coarse sea salt',
+			ingredient: Ingredients.Other.SALT
+		},
+		{
+			label: 'Garnish: Grapefruit wedge',
+			ingredient: Ingredients.Citrus.GRAPEFRUIT_GARNISH
 		}
 	],
-	notes: 'Typically unmeasured. Add tequila, then ice, then lime. Top with soda.',
 	tags: [
 		Tags.BaseAlcohol.TEQUILA,
 		Tags.FlavorProfile.BUBBLY,
