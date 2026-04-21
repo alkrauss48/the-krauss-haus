@@ -72,15 +72,17 @@
 			<div class="p-8">
 				<!-- Header -->
 				<header class="mb-8">
-					<div class="flex items-center gap-3 mb-2">
-						<h1 class="text-4xl font-bold text-gray-800">{cocktail.title}</h1>
-						{#if cocktail.tags?.includes(Tags.Origin.ORIGINAL)}
-							<div
-								class="bg-amber-100 text-amber-700 border border-amber-300 text-xs font-semibold px-2 py-0.5 rounded-full"
-							>
-								★ Original
-							</div>
-						{/if}
+					<div class="flex items-start justify-between gap-3 mb-2">
+						<div class="flex flex-wrap items-center gap-3">
+							<h1 class="text-4xl font-bold text-gray-800">{cocktail.title}</h1>
+							{#if cocktail.tags?.includes(Tags.Origin.ORIGINAL)}
+								<div
+									class="bg-amber-100 text-amber-700 border border-amber-300 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap"
+								>
+									★ Original
+								</div>
+							{/if}
+						</div>
 						<CopyLinkButton
 							url={typeof window !== 'undefined' ? window.location.href : ''}
 							ariaLabel="Copy link to {cocktail.title}"
