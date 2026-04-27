@@ -134,6 +134,11 @@
 			<MenuLink href="/parties" label="Cocktail Parties" variant="secondary" />
 			<MenuLink href="/bartenders" label="Bartenders" variant="secondary" />
 			<MenuLink href="/recipes" label="Recipes" variant="secondary" />
+			<MenuLink
+				href="/spirit-dilution-calculator"
+				label="Dilution Calculator"
+				variant="secondary"
+			/>
 		</nav>
 	</section>
 
