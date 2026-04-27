@@ -40,7 +40,17 @@ const ESPRESSO_MARTINI: Cocktail = {
 	],
 	variations: [
 		{
-			name: 'Hazelnut',
+			name: 'Tequila',
+			ingredients: [
+				{
+					label: 'Swap Cognac with Cimarron Reposado Tequila.',
+					ingredient: Ingredients.BaseSpirits.CIMARRON_REPOSADO
+				}
+			],
+			images: []
+		},
+		{
+			name: '+Hazelnut',
 			ingredients: [
 				{
 					label: 'Swap .5oz of Cognac with Frangelico.',
@@ -50,7 +60,7 @@ const ESPRESSO_MARTINI: Cocktail = {
 			images: []
 		},
 		{
-			name: 'Peppermint',
+			name: '+Peppermint',
 			ingredients: [
 				{
 					label: 'Swap .5oz of Cognac with peppermint infused vodka.',
@@ -60,24 +70,10 @@ const ESPRESSO_MARTINI: Cocktail = {
 			images: []
 		},
 		{
-			name: 'Chocolate',
+			name: '+Chocolate',
 			ingredients: [
 				{
 					label: 'Swap .5oz of Cognac with Crème de Cacao.',
-					ingredient: Ingredients.Liqueurs.CREME_DE_CACAO
-				}
-			],
-			images: []
-		},
-		{
-			name: '"Nutella"',
-			ingredients: [
-				{
-					label: 'Swap .25oz of Cognac with Frangelico.',
-					ingredient: Ingredients.Liqueurs.FRANGELICO
-				},
-				{
-					label: 'Swap .25oz of Cognac with Crème de Cacao.',
 					ingredient: Ingredients.Liqueurs.CREME_DE_CACAO
 				}
 			],

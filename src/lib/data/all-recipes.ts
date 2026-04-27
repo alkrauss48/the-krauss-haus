@@ -21,6 +21,7 @@ import CITRON_VODKA from '$lib/data/recipes/citron-vodka';
 import CREME_DE_CACAO from '$lib/data/recipes/creme-de-cacao';
 import DRY_CURACAO from '$lib/data/recipes/dry-curacao';
 import FALERNUM from '$lib/data/recipes/falernum';
+import HOUSE_DARK_BERRY_CREME from '$lib/data/recipes/house-dark-berry-creme';
 import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
 import LIMONCELLO from '$lib/data/recipes/limoncello';
 import PEPPERMINT_VODKA from '$lib/data/recipes/peppermint-vodka';
@@ -51,6 +52,7 @@ export const infusions: Recipe[] = [
 	CREME_DE_CACAO,
 	DRY_CURACAO,
 	FALERNUM,
+	HOUSE_DARK_BERRY_CREME,
 	JALAPENO_TEQUILA,
 	LIMONCELLO,
 	PEPPERMINT_VODKA,
