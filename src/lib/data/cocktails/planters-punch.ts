@@ -45,7 +45,8 @@ const PLANTERS_PUNCH: Cocktail = {
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.FLASH_BLENDED,
-		Tags.ServedIn.HIGHBALL_GLASS
+		Tags.ServedIn.HIGHBALL_GLASS,
+		Tags.PrepTime.SIMPLE_PREP
 	]
 };
 
