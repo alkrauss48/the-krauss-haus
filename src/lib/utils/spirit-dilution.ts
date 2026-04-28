@@ -1,6 +1,7 @@
 export const ML_PER_FL_OZ = 29.575;
 
 const DENSITY_TABLE: ReadonlyArray<readonly [number, number]> = [
+	[20, 0.974],
 	[40, 0.948],
 	[70, 0.867],
 	[95, 0.811],
