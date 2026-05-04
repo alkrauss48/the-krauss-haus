@@ -4,41 +4,37 @@ import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
 import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
-import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
+import DONN_BEACH from '$lib/data/bartenders/donn-beach';
 
 const NAVY_GROG: Cocktail = {
 	title: 'Navy Grog',
 	description:
-		'Jamaican rum, demerara rum, blended light rum, honey syrup, lime, grapefruit, soda water.',
+		'Jamaican rum, demerara rum, honey syrup, lime, grapefruit, angostura bitters, soda water.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/navy-grog.png',
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/navy-grog.png',
 	slug: 'navy-grog',
-	createdBy: DONN_THE_BEACHCOMBER,
+	createdBy: DONN_BEACH,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,
-	ice: Ice.LargeCube,
-	hasStraw: false,
+	ice: Ice.Crushed,
+	hasStraw: true,
 	ingredients: [
 		{
 			amount: '.75oz',
 			ingredient: Ingredients.BaseSpirits.CORUBA
 		},
 		{
-			amount: '.75oz',
-			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
-		},
-		{
-			amount: '.75oz',
+			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.HAMILTON_86
 		},
 		{
-			amount: '.75oz',
-			ingredient: Ingredients.BaseSpirits.PROBITAS
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.SMITH_AND_CROSS
 		},
 		{
-			amount: '1oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Syrups.HONEY_SYRUP
 		},
 		{
@@ -46,8 +42,12 @@ const NAVY_GROG: Cocktail = {
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
-			amount: '.75oz',
+			amount: '1oz',
 			ingredient: Ingredients.Citrus.GRAPEFRUIT
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Bitters.ANGOSTURA
 		},
 		{
 			amount: '1oz',
@@ -59,7 +59,7 @@ const NAVY_GROG: Cocktail = {
 		}
 	],
 	notes:
-		'One of the only classic tiki cocktails not served over crushed ice. Shake all ingredients besides soda water with ice. Strain into a glass over ice block. Top with soda water, serve with a straw, and garnish with mint sprig.',
+		'Shake everything except soda with ice for 10-12 seconds. Strain over crushed or pebble ice in a double rocks glass or tiki mug. Top with soda and give a quick swizzle. Garnish with a mint sprig and optional spent lime shell.',
 	tags: [
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
