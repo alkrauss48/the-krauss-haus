@@ -12,6 +12,6 @@ export const SHAMAN: CocktailPath = {
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/shaman.jpeg',
 	description:
-		'Follow the agave from field to flame. This path opens with the most iconic citrus cocktail on earth, then dreams into passion fruit and a whisper of mezcal, drifts through tropical pineapple warmth, and as mezcal enters alongside rum, the smoke builds until by the final pour it stands alone—balanced, bitter, and modern.',
+		'Follow the agave from field to flame. This path opens with the most iconic tequila citrus, then builds into chili-spiced tropical heat crowned with a float of mezcal, takes a savory beer-and-lime break, returns to mezcal in tiki disguise, and lands on a stirred, spirit-forward marriage of agave and smoke.',
 	cocktails: [MARGARITA, DESERT_DREAMS, MICHELADA, TIA_MIA, OAXACA_OLD_FASHIONED]
 };

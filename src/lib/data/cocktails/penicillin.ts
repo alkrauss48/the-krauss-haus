@@ -38,12 +38,12 @@ const PENICILLIN: Cocktail = {
 		},
 		'Garnish: Candied ginger'
 	],
+	notes: 'Float the single-malt scotch on top after pouring.',
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
-
 		Tags.Style.SOUR,
 		Tags.Origin.MODERN,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS

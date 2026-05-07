@@ -95,7 +95,7 @@ const MARASCHINO_LIQUEUER: Ingredient = {
 	costPerOz: 40 / 25
 };
 const HOUSE_DARK_BERRY_CREME: Ingredient = {
-	title: 'House Dark Berry Crème',
+	title: 'Crème de Baies Noires',
 	slug: 'house-dark-berry-creme',
 	recipe: HOUSE_DARK_BERRY_CREME_RECIPE,
 	costPerOz: 15 / 21.667
