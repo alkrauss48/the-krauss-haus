@@ -13,3 +13,11 @@ export const methodColors = {
 	[CocktailMethod.FlashBlended]: '#fae8ff',
 	[CocktailMethod.Blended]: '#fae8ff'
 };
+
+export const methodLabels: Record<CocktailMethod, string> = {
+	[CocktailMethod.Shaken]: 'Shaken',
+	[CocktailMethod.Stirred]: 'Stirred',
+	[CocktailMethod.Built]: 'Built',
+	[CocktailMethod.FlashBlended]: 'Flash blended',
+	[CocktailMethod.Blended]: 'Blended'
+};
