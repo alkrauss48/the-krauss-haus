@@ -22,7 +22,7 @@ const NAVY_GROG: Cocktail = {
 	hasStraw: true,
 	ingredients: [
 		{
-			amount: '.75oz',
+			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.CORUBA
 		},
 		{
@@ -46,7 +46,7 @@ const NAVY_GROG: Cocktail = {
 			ingredient: Ingredients.Citrus.GRAPEFRUIT
 		},
 		{
-			amount: '1 dash',
+			amount: '2 dashes',
 			ingredient: Ingredients.Bitters.ANGOSTURA
 		},
 		{

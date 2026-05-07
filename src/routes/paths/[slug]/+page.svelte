@@ -3,6 +3,7 @@
 	import CocktailCard from '$lib/components/CocktailCard.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { getPathCost, formatCost } from '$lib/utils/cost';
 	import { costMode } from '$lib/stores/costMode';
@@ -42,7 +43,14 @@
 					class="w-full max-w-xs mx-auto object-contain rounded-xl"
 				/>
 			</div>
-			<h1 class="text-5xl font-bold text-gray-800 mb-4">{path.title}</h1>
+			<div class="flex items-center justify-center gap-3 mb-4">
+				<h1 class="text-5xl font-bold text-gray-800">{path.title}</h1>
+				<CopyLinkButton
+					url={typeof window !== 'undefined' ? window.location.href : ''}
+					ariaLabel="Copy link to {path.title} path"
+					size="md"
+				/>
+			</div>
 			<p class="text-2xl text-gray-600 font-medium mb-4">{path.subtitle}</p>
 			<p class="text-lg text-gray-700 max-w-2xl mx-auto">{path.description}</p>
 			{#if $costMode}

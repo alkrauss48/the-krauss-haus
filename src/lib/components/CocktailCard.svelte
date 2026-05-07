@@ -4,7 +4,6 @@
 	import { resolve } from '$app/paths';
 	import type { SectionColor } from '$lib/types/colors';
 	import type { CocktailVariant, Cocktail } from '$lib/types/cocktails';
-	import { methodColors } from '$lib/enums/methods';
 	import { Tags } from '$lib/data/all-tags';
 
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
@@ -211,19 +210,6 @@
 					>
 						{cocktail.title}
 					</a>
-					{#if cocktail.method}
-						<div class="mt-2">
-							<span class="text-xs text-gray-500 mb-2 font-light tracking-wide">Method:</span>
-							<span
-								class="px-3 py-1 text-xs font-medium rounded-full"
-								style="background-color: {methodColors[
-									cocktail.method as keyof typeof methodColors
-								]}; color: #374151;"
-							>
-								{cocktail.method.charAt(0).toUpperCase() + cocktail.method.slice(1)}
-							</span>
-						</div>
-					{/if}
 				</div>
 				<button
 					class="cursor-pointer text-gray-400 hover:text-gray-600 ml-4"

@@ -22,12 +22,8 @@ const DESERT_DREAMS: Cocktail = {
 	hasStraw: true,
 	ingredients: [
 		{
-			amount: '1.75oz',
+			amount: '2oz',
 			ingredient: Ingredients.BaseSpirits.CIMARRON_BLANCO
-		},
-		{
-			amount: '.25oz',
-			ingredient: Ingredients.BaseSpirits.DEL_MAGUY_VIDA
 		},
 		{
 			amount: '.5oz',
@@ -54,10 +50,15 @@ const DESERT_DREAMS: Cocktail = {
 			ingredient: Ingredients.Other.SALT
 		},
 		{
+			amount: '.25oz',
+			ingredient: Ingredients.BaseSpirits.DEL_MAGUY_VIDA
+		},
+		{
 			label: 'Garnish: Lime shell',
 			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
+	notes: 'Float .25oz of mezcal after pouring.',
 	tags: [
 		Tags.BaseAlcohol.TEQUILA,
 		Tags.BaseAlcohol.MEZCAL,

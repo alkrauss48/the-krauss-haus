@@ -10,10 +10,12 @@
 	import type { Tag } from '$lib/types/tags';
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
 	import { calculateCocktailCost, formatCost, parseAmountToOz, applyTax } from '$lib/utils/cost';
+	import { buildServingSentence } from '$lib/utils/serving';
 	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
 	const { cocktail, onSummer, onWinter, onTiki, pathsContainingCocktail } = data;
+	const servingSentence = buildServingSentence(cocktail);
 
 	const onAnyMenu = onSummer || onWinter || onTiki;
 	const hasMenusOrPaths = onAnyMenu || pathsContainingCocktail.length > 0;
@@ -155,17 +157,10 @@
 											</li>
 										{/each}
 									</ul>
-									{#if cocktail.method}
+									{#if servingSentence}
 										<div class="mt-4">
-											<span class="text-sm font-medium text-gray-600">
-												Method: {cocktail.method}
-											</span>
-										</div>
-									{/if}
-									{#if cocktail.servedIn}
-										<div class="mt-4">
-											<span class="text-sm font-medium text-gray-600">
-												Served in: {cocktail.servedIn}
+											<span class="text-sm font-bold text-gray-700">
+												{servingSentence}
 											</span>
 										</div>
 									{/if}

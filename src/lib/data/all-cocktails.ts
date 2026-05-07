@@ -11,6 +11,7 @@ import AZALEA from '$lib/data/cocktails/azalea';
 import BATANGA from '$lib/data/cocktails/batanga';
 import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-giuseppe';
 import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
+import BRAMBLE from '$lib/data/cocktails/bramble';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
@@ -32,6 +33,7 @@ import DESERT_DREAMS from '$lib/data/cocktails/desert-dreams';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
 import DR_FUNK from '$lib/data/cocktails/dr-funk';
+import EL_DIABLO from '$lib/data/cocktails/el-diablo';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FOREST_SPIRIT from '$lib/data/cocktails/forest-spirit';
@@ -52,6 +54,7 @@ import JACK_ROSE from '$lib/data/cocktails/jack-rose';
 import JET_PILOT from '$lib/data/cocktails/jet-pilot';
 import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
 import KING_OF_KINGS from '$lib/data/cocktails/king-of-kings';
+import KIR_ROYALE from '$lib/data/cocktails/kir-royale';
 import LAST_WORD from '$lib/data/cocktails/last-word';
 import LEMON_DROP from '$lib/data/cocktails/lemon-drop';
 import LOGGY_CAB from '$lib/data/cocktails/loggy-cab';
@@ -86,6 +89,7 @@ import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
 import RUM_BARREL from '$lib/data/cocktails/rum-barrel';
+import RUSSIAN_SPRING_PUNCH from '$lib/data/cocktails/russian-spring-punch';
 import SALTY_DOG from '$lib/data/cocktails/salty-dog';
 import SANGRIA from '$lib/data/cocktails/sangria';
 import SATURN from '$lib/data/cocktails/saturn';
@@ -123,6 +127,7 @@ export const allCocktails: Cocktail[] = [
 	BATANGA,
 	BITTER_GIUSEPPE,
 	BOULEVARDIER,
+	BRAMBLE,
 	BRANDY_ALEXANDER,
 	CAIPIRINHA,
 	CARAMEL_APPLE_SPICE,
@@ -144,6 +149,7 @@ export const allCocktails: Cocktail[] = [
 	DIVISION_BELL,
 	DONGA_PUNCH,
 	DR_FUNK,
+	EL_DIABLO,
 	ESPRESSO_MARTINI,
 	FERNET_CON_COCA,
 	FRENCH_75,
@@ -164,6 +170,7 @@ export const allCocktails: Cocktail[] = [
 	JET_PILOT,
 	JUNGLE_BIRD,
 	KING_OF_KINGS,
+	KIR_ROYALE,
 	LAST_WORD,
 	LEMON_DROP,
 	LOGGY_CAB,
@@ -198,6 +205,7 @@ export const allCocktails: Cocktail[] = [
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,
 	RUM_BARREL,
+	RUSSIAN_SPRING_PUNCH,
 	SALTY_DOG,
 	SANGRIA,
 	SATURN,

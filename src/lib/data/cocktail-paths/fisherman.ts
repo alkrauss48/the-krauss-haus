@@ -12,6 +12,6 @@ export const FISHERMAN: CocktailPath = {
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/fisherman.jpeg',
 	description:
-		'Kick off your shoes and unwind by the water. This path starts with muddled citrus simplicity, drifts into light beer-and-bitter refreshment, picks up fruity tropical notes, then cools down with a savory, spiced sipper before finishing with a true sea-worn cocktail—smoky, bold flavors that echo the ocean itself.',
+		'Kick off your shoes and unwind by the water. This path starts with muddled cachaça simplicity, drifts into a low-ABV bitter-beer cooler, picks up tropical fruit and rum from a sidecar pour, deepens into a bittersweet tiki blend, and finishes with a smoky-briny scotch-and-mezcal sour that tastes of the sea itself.',
 	cocktails: [CAIPIRINHA, SPAGHETT, SHARKS_TOOTH, LOST_LAKE, SEA_LEGS]
 };
