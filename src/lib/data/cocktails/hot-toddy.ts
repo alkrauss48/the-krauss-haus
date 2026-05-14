@@ -15,7 +15,7 @@ const HOT_TODDY: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hot-toddy.png',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.Mug,
-	ice: Ice.None,
+	ice: Ice.Hot,
 	hasStraw: false,
 	ingredients: [
 		{

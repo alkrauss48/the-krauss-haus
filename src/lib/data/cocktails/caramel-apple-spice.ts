@@ -17,7 +17,7 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.Mug,
-	ice: Ice.None,
+	ice: Ice.Hot,
 	hasStraw: false,
 	ingredients: [
 		{

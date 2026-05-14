@@ -40,7 +40,7 @@
 		>
 			<div class="p-8">
 				<header class="mb-4">
-					<div class="flex items-start gap-4">
+					<div class="flex items-center gap-4">
 						{#if bartender.imageUrl}
 							<img
 								src={bartender.imageUrl}

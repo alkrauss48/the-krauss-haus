@@ -1,3 +1,4 @@
+import { CocktailMethod } from '$lib/enums/methods';
 import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
@@ -12,6 +13,7 @@ const SANGRIA: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sangria.png',
 	slug: 'sangria',
+	method: CocktailMethod.Batched,
 	servedIn: ServedIn.HighballGlass,
 	ice: Ice.SmallCubes,
 	hasStraw: false,
@@ -57,8 +59,9 @@ const SANGRIA: Cocktail = {
 		'Makes 4-5 servings. Combine all but soda water in pitcher. Let rest at least 2 hours in refrigerator. Pour with fruit over ice into wine glasses, and top with club soda.',
 	tags: [
 		Tags.BaseAlcohol.WINE,
-		Tags.Origin.FOLK,
 		Tags.BaseAlcohol.BRANDY,
+		Tags.Technique.BATCHED,
+		Tags.Origin.FOLK,
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.FRUITY,
 		Tags.ServedIn.HIGHBALL_GLASS,
