@@ -17,7 +17,7 @@ export const methodColors = {
 export const methodLabels: Record<CocktailMethod, string> = {
 	[CocktailMethod.Shaken]: 'Shaken',
 	[CocktailMethod.Stirred]: 'Stirred',
-	[CocktailMethod.Built]: 'Built',
+	[CocktailMethod.Built]: 'Built in glass',
 	[CocktailMethod.FlashBlended]: 'Flash blended',
 	[CocktailMethod.Blended]: 'Blended'
 };

@@ -7,10 +7,15 @@ const BITBURGER_PILS: Ingredient = {
 	slug: 'bitburger-pils',
 	costPerOz: 19 / (11.2 * 12)
 };
+const ERDINGER_WEISSBIER: Ingredient = {
+	title: 'Erdinger Weißbier',
+	slug: 'erdinger-weissbier',
+	costPerOz: 8 / (16.9 * 4)
+};
 const GUINNESS_DRAUGHT: Ingredient = {
 	title: 'Guinness Draught',
 	slug: 'guinness-draught',
-	costPerOz: 18 / (8 * 14.9)
+	costPerOz: 18 / (14.9 * 8)
 };
 const MILLER_HIGH_LIFE: Ingredient = {
 	title: 'Miller High Life',
@@ -66,7 +71,13 @@ export const BEER_AND_WINE: IngredientCategory = {
 	subcategories: [
 		{
 			label: 'Beer',
-			ingredients: [BITBURGER_PILS, GUINNESS_DRAUGHT, MILLER_HIGH_LIFE, TECATE_MEXICAN_LAGER]
+			ingredients: [
+				BITBURGER_PILS,
+				ERDINGER_WEISSBIER,
+				GUINNESS_DRAUGHT,
+				MILLER_HIGH_LIFE,
+				TECATE_MEXICAN_LAGER
+			]
 		},
 		{
 			label: 'Wine',
@@ -82,6 +93,7 @@ export const BEER_AND_WINE: IngredientCategory = {
 export const INGREDIENTS = {
 	// Beer
 	BITBURGER_PILS,
+	ERDINGER_WEISSBIER,
 	GUINNESS_DRAUGHT,
 	MILLER_HIGH_LIFE,
 	TECATE_MEXICAN_LAGER,
