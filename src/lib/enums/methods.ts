@@ -3,7 +3,8 @@ export enum CocktailMethod {
 	Stirred = 'Stirred',
 	Built = 'Built in Glass',
 	FlashBlended = 'Flash Blended',
-	Blended = 'Blended'
+	Blended = 'Blended',
+	Batched = 'Batched'
 }
 
 export const methodColors = {
@@ -11,7 +12,8 @@ export const methodColors = {
 	[CocktailMethod.Stirred]: '#dbeafe',
 	[CocktailMethod.Built]: '#dcfce7',
 	[CocktailMethod.FlashBlended]: '#fae8ff',
-	[CocktailMethod.Blended]: '#fae8ff'
+	[CocktailMethod.Blended]: '#fae8ff',
+	[CocktailMethod.Batched]: '#fed7aa'
 };
 
 export const methodLabels: Record<CocktailMethod, string> = {
@@ -19,5 +21,6 @@ export const methodLabels: Record<CocktailMethod, string> = {
 	[CocktailMethod.Stirred]: 'Stirred',
 	[CocktailMethod.Built]: 'Built in glass',
 	[CocktailMethod.FlashBlended]: 'Flash blended',
-	[CocktailMethod.Blended]: 'Blended'
+	[CocktailMethod.Blended]: 'Blended',
+	[CocktailMethod.Batched]: 'Batched'
 };

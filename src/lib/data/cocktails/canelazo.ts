@@ -1,3 +1,4 @@
+import { CocktailMethod } from '$lib/enums/methods';
 import { ServedIn } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 import { Ingredients } from '../all-ingredients';
@@ -12,6 +13,7 @@ const CANELAZO: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/canelazo.png',
 	slug: 'canelazo',
+	method: CocktailMethod.Batched,
 	servedIn: ServedIn.Mug,
 	ice: Ice.Hot,
 	hasStraw: false,
@@ -46,6 +48,7 @@ const CANELAZO: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.FlavorProfile.CITRUS,
 		Tags.Temperature.HOT,
+		Tags.Technique.BATCHED,
 		Tags.Origin.FOLK,
 		Tags.AlcoholLevel.LOW,
 		Tags.ServedIn.MUG,
