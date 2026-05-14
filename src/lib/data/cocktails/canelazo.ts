@@ -13,7 +13,7 @@ const CANELAZO: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/canelazo.png',
 	slug: 'canelazo',
 	servedIn: ServedIn.Mug,
-	ice: Ice.None,
+	ice: Ice.Hot,
 	hasStraw: false,
 	servings: 4,
 	ingredients: [

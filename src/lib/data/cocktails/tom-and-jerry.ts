@@ -15,7 +15,7 @@ const TOM_AND_JERRY: Cocktail = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/tom-and-jerry.png',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.Mug,
-	ice: Ice.None,
+	ice: Ice.Hot,
 	hasStraw: false,
 	ingredients: [
 		{
