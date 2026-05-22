@@ -27,6 +27,7 @@ import LIMONCELLO from '$lib/data/recipes/limoncello';
 import PEPPERMINT_VODKA from '$lib/data/recipes/peppermint-vodka';
 import PERSIAN_SPICE_LIQUEUR from '$lib/data/recipes/persian-spice-liqueur';
 import SPICED_TEA from '$lib/data/recipes/spiced-tea';
+import STONE_FRUIT_LIQUEUR from '$lib/data/recipes/stone-fruit-liqueur';
 import CRANBERRY_CORDIAL from '$lib/data/recipes/cranberry-cordial';
 
 // Syrups (excluding Caramel Syrup and Tom and Jerry Batter which go to "Other")
@@ -56,7 +57,8 @@ export const infusions: Recipe[] = [
 	JALAPENO_TEQUILA,
 	LIMONCELLO,
 	PEPPERMINT_VODKA,
-	PERSIAN_SPICE_LIQUEUR
+	PERSIAN_SPICE_LIQUEUR,
+	STONE_FRUIT_LIQUEUR
 ];
 
 // Other recipes (special category for Caramel Syrup and Tom and Jerry Batter)

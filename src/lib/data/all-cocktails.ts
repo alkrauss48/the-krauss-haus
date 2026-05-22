@@ -90,6 +90,7 @@ import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
 import RUM_BARREL from '$lib/data/cocktails/rum-barrel';
+import RUM_RUNNER from '$lib/data/cocktails/rum-runner';
 import RUSSIAN_SPRING_PUNCH from '$lib/data/cocktails/russian-spring-punch';
 import SALTY_DOG from '$lib/data/cocktails/salty-dog';
 import SANGRIA from '$lib/data/cocktails/sangria';
@@ -108,6 +109,7 @@ import TI_PUNCH from '$lib/data/cocktails/ti-punch';
 import TIA_MIA from '$lib/data/cocktails/tia-mia';
 import TOM_AND_JERRY from '$lib/data/cocktails/tom-and-jerry';
 import TORONTO from '$lib/data/cocktails/toronto';
+import TRADEWINDS from '$lib/data/cocktails/tradewinds';
 import TRINIDAD_SOUR from '$lib/data/cocktails/trinidad-sour';
 import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
 import WHISKEY_GINGER from '$lib/data/cocktails/whiskey-ginger';
@@ -207,6 +209,7 @@ export const allCocktails: Cocktail[] = [
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,
 	RUM_BARREL,
+	RUM_RUNNER,
 	RUSSIAN_SPRING_PUNCH,
 	SALTY_DOG,
 	SANGRIA,
@@ -225,6 +228,7 @@ export const allCocktails: Cocktail[] = [
 	TIA_MIA,
 	TOM_AND_JERRY,
 	TORONTO,
+	TRADEWINDS,
 	TRINIDAD_SOUR,
 	VIEUX_CARRE,
 	WHISKEY_GINGER,

@@ -8,7 +8,7 @@ import IVY_MIX from '$lib/data/bartenders/ivy-mix';
 
 const TIA_MIA: Cocktail = {
 	title: 'Tia Mia',
-	description: 'Mezcal, jamaican rum, cointreau, orgeat, lime.',
+	description: 'Mezcal, jamaican rum, dry curaçao, orgeat, lime.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/tia-mia.png',
 	thumbnailImagePath:
@@ -30,7 +30,7 @@ const TIA_MIA: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.Liqueurs.COINTREAU
+			ingredient: Ingredients.Liqueurs.DRY_CURACAO
 		},
 		{
 			amount: '.5oz',

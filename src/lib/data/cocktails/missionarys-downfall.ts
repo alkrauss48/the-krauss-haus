@@ -8,7 +8,7 @@ import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 
 const MISSIONARYS_DOWNFALL: Cocktail = {
 	title: "Missionary's Downfall",
-	description: 'Light rum, peach liqueur, mint, pineapple, honey syrup, lime.',
+	description: 'Light rum, stone fruit liqueur, mint, pineapple, honey syrup, lime.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/missionarys-downfall.png',
 	thumbnailImagePath:
@@ -25,8 +25,8 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
 		},
 		{
-			amount: '.25oz',
-			ingredient: Ingredients.Liqueurs.DRY_CURACAO
+			amount: '.5oz',
+			ingredient: Ingredients.Liqueurs.STONE_FRUIT_LIQUEUR
 		},
 		{
 			label: '12 Large mint leaves',
@@ -39,10 +39,6 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 		{
 			amount: '1oz',
 			ingredient: Ingredients.Syrups.HONEY_SYRUP
-		},
-		{
-			amount: '.25oz',
-			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
 		{
 			amount: '.5oz',
