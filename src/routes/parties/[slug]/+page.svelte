@@ -6,7 +6,7 @@
 	import { fade, fly } from 'svelte/transition';
 
 	export let data: PageData;
-	const { party } = data;
+	$: ({ party } = data);
 
 	// Custom colors for the party theme
 	// TODO: Make this configurable per party if needed

@@ -14,11 +14,11 @@
 	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
-	const { cocktail, onSummer, onWinter, onTiki, pathsContainingCocktail } = data;
-	const servingSentence = buildServingSentence(cocktail);
+	$: ({ cocktail, onSummer, onWinter, onTiki, pathsContainingCocktail } = data);
+	$: servingSentence = buildServingSentence(cocktail);
 
-	const onAnyMenu = onSummer || onWinter || onTiki;
-	const hasMenusOrPaths = onAnyMenu || pathsContainingCocktail.length > 0;
+	$: onAnyMenu = onSummer || onWinter || onTiki;
+	$: hasMenusOrPaths = onAnyMenu || pathsContainingCocktail.length > 0;
 
 	// Helper function to convert category label to URL-friendly key
 	// Handles special characters like & by converting to "and"
