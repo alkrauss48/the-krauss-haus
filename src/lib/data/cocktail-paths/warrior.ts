@@ -13,5 +13,5 @@ export const WARRIOR: CocktailPath = {
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/warrior.jpeg',
 	description:
 		'The spirit leads and everything else falls in line. This path opens on a sweetened bourbon foundation, escalates into three-rum tropical strength, cools through crushed-ice mint and bourbon, warms again with smoke and honeyed ginger, and arrives at austere, anise-tinged power. Each step strips away a little more, demanding respect for the base spirit.',
-	cocktails: [OLD_FASHIONED, NAVY_GROG, MINT_JULEP, PENICILLIN, SAZERAC]
+	cocktails: [OLD_FASHIONED, MINT_JULEP, NAVY_GROG, PENICILLIN, SAZERAC]
 };

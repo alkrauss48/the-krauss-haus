@@ -7,7 +7,7 @@
 	import { fade, fly } from 'svelte/transition';
 
 	export let data: PageData;
-	const { recipe } = data;
+	$: ({ recipe } = data);
 </script>
 
 <svelte:head>

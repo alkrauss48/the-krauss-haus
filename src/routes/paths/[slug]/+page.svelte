@@ -9,7 +9,7 @@
 	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
-	const { path } = data;
+	$: ({ path } = data);
 
 	// Custom colors for the path theme
 	const pathColors = {

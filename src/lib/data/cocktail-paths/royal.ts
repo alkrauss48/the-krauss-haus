@@ -14,9 +14,9 @@ export const ROYAL: CocktailPath = {
 	description:
 		'Every sip should feel like an indulgence. This path opens with a lavish cascade of fruit and liqueur, melts into creamy tropical bliss, deepens through rich multi-spirit warmth and a dessert you can drink, then finishes with a velvety, cream-topped crown jewel. These are drinks that reward you for going all in.',
 	cocktails: [
+		KING_OF_KINGS,
 		SINGAPORE_SLING,
 		PAINKILLER,
-		KING_OF_KINGS,
 		CHOCOLATE_COVERED_CHERRIES,
 		RAMOS_GIN_FIZZ
 	]

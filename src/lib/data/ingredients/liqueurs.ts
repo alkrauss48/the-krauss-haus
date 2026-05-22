@@ -6,6 +6,7 @@ import FALERNUM_RECIPE from '$lib/data/recipes/falernum';
 import PERSIAN_SPICE_LIQUEUR_RECIPE from '$lib/data/recipes/persian-spice-liqueur';
 import DRY_CURACAO_RECIPE from '$lib/data/recipes/dry-curacao';
 import HOUSE_DARK_BERRY_CREME_RECIPE from '$lib/data/recipes/house-dark-berry-creme';
+import STONE_FRUIT_LIQUEUR_RECIPE from '$lib/data/recipes/stone-fruit-liqueur';
 
 // Amaro
 const AMARO_LUCANO: Ingredient = {
@@ -93,6 +94,12 @@ const MARASCHINO_LIQUEUER: Ingredient = {
 	title: 'Maraschino Liqueuer',
 	slug: 'maraschino-liqueuer',
 	costPerOz: 40 / 25
+};
+const STONE_FRUIT_LIQUEUR: Ingredient = {
+	title: 'Stone Fruit Liqueur',
+	slug: 'stone-fruit-liqueur',
+	recipe: STONE_FRUIT_LIQUEUR_RECIPE,
+	costPerOz: 11 / 25
 };
 const HOUSE_DARK_BERRY_CREME: Ingredient = {
 	title: 'Crème de Baies Noires',
@@ -186,7 +193,8 @@ export const LIQUEURS: IngredientCategory = {
 				COINTREAU,
 				CHERRY_HEERING,
 				HOUSE_DARK_BERRY_CREME,
-				MARASCHINO_LIQUEUER
+				MARASCHINO_LIQUEUER,
+				STONE_FRUIT_LIQUEUR
 			]
 		},
 		{
@@ -228,6 +236,7 @@ export const INGREDIENTS = {
 	CHERRY_HEERING,
 	HOUSE_DARK_BERRY_CREME,
 	MARASCHINO_LIQUEUER,
+	STONE_FRUIT_LIQUEUR,
 
 	// Nut & Spice
 	ALLSPICE_DRAM,

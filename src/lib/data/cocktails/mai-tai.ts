@@ -8,7 +8,8 @@ import TRADER_VIC from '$lib/data/bartenders/trader-vic';
 
 const MAI_TAI: Cocktail = {
 	title: 'Mai Tai',
-	description: 'Jamaican rum, blended rum, cachaca, orange curaçao, orgeat, lime, demerara syrup.',
+	description:
+		'Jamaican rum, blended rum, cachaca, dry curaçao, cointreau, orgeat, lime, demerara syrup.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mai-tai.png',
 	thumbnailImagePath:
@@ -33,11 +34,15 @@ const MAI_TAI: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
 		},
 		{
-			amount: '.4oz',
+			amount: '.25oz',
 			ingredient: Ingredients.Liqueurs.DRY_CURACAO
 		},
 		{
-			amount: '.6oz',
+			amount: '.25oz',
+			ingredient: Ingredients.Liqueurs.COINTREAU
+		},
+		{
+			amount: '.5oz',
 			ingredient: Ingredients.Syrups.ORGEAT
 		},
 		{
@@ -58,7 +63,7 @@ const MAI_TAI: Cocktail = {
 		}
 	],
 	notes:
-		"This uses a custom rum blend that has been tweaked to perfection. With using homemade dry curacao, the orange flavor pops a bit more, so it's reduced from .5oz to .4oz. Just eyeball it based on a .5oz measurement. Same thing with increasing orgeat to .6oz (to balance the curacao changes).",
+		'This uses a custom rum blend that has been tweaked to perfection. The orange curaçao is split between homemade dry curaçao (.25oz) and Cointreau (.25oz) to round out the orange flavor.',
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,

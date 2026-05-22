@@ -12,8 +12,8 @@ import PAINKILLER from '$lib/data/cocktails/painkiller';
 import DESERT_DREAMS from '$lib/data/cocktails/desert-dreams';
 import SATURN from '$lib/data/cocktails/saturn';
 import SINGAPORE_SLING from '$lib/data/cocktails/singapore-sling';
+import RUM_BARREL from '$lib/data/cocktails/rum-barrel';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
-import ZOMBIE from '$lib/data/cocktails/zombie';
 import LOST_LAKE from '$lib/data/cocktails/lost-lake';
 import NAVY_GROG from '$lib/data/cocktails/navy-grog';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
@@ -38,7 +38,7 @@ export const categories: Category[] = [
 			tertiary: '#fdf2f8',
 			variationText: '#581c87'
 		},
-		cocktails: [NAVY_GROG, LOST_LAKE, MAI_TAI, THREE_DOTS_AND_A_DASH, COBRAS_FANG, ZOMBIE]
+		cocktails: [NAVY_GROG, LOST_LAKE, MAI_TAI, THREE_DOTS_AND_A_DASH, COBRAS_FANG, RUM_BARREL]
 	},
 	{
 		title: 'Not Just Rum',
