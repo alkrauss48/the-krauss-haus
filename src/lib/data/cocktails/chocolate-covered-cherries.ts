@@ -8,7 +8,6 @@ import TELLERS from '$lib/data/bartenders/tellers';
 
 const CHOCOLATE_COVERED_CHERRIES: Cocktail = {
 	title: 'Chocolate Covered Cherries',
-	subtitle: "A creation from Teller's in OKC",
 	description:
 		'Bourbon, crème de cacao, cherry heering, cherry syrup, xocolatl bitters, maraschino cherry.',
 	imagePath:

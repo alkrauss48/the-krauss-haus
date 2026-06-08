@@ -102,7 +102,7 @@ const STONE_FRUIT_LIQUEUR: Ingredient = {
 	costPerOz: 11 / 25
 };
 const HOUSE_DARK_BERRY_CREME: Ingredient = {
-	title: 'Crème de Baies Noires',
+	title: 'Dark Berry Liqueur',
 	slug: 'house-dark-berry-creme',
 	recipe: HOUSE_DARK_BERRY_CREME_RECIPE,
 	costPerOz: 15 / 21.667
