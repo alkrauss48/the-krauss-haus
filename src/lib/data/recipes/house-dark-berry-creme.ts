@@ -1,7 +1,7 @@
 import type { Recipe } from '$lib/types/recipes';
 
 const HOUSE_DARK_BERRY_CREME: Recipe = {
-	name: 'Crème de Baies Noires',
+	name: 'Dark Berry Liqueur',
 	slug: 'house-dark-berry-creme',
 	description: 'A rich berry liqueur infused with vodka, lemon peel, and Ceylon black tea.',
 	ingredients: [

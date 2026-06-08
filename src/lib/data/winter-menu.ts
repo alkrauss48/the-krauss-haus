@@ -12,17 +12,17 @@ import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
 import MANHATTAN from '$lib/data/cocktails/manhattan';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
-import RATTLE_SKULL from './cocktails/rattle-skull';
-import PAPER_PLANE from './cocktails/paper-plane';
+import NEGRONI from './cocktails/negroni';
+import SLAP_N_PICKLE from './cocktails/slap-n-pickle';
 import JACK_ROSE from './cocktails/jack-rose';
 
-export const featuredDrinks: Cocktail[] = [CARAMEL_APPLE_SPICE, CHOCOLATE_COVERED_CHERRIES];
+export const featuredDrinks: Cocktail[] = [CARAMEL_APPLE_SPICE, MERRY_MULE];
 
 export const categories: Category[] = [
 	{
 		title: "Mommy's Drinks",
 		bgColors: sectionColors.mommy,
-		cocktails: [HOT_TODDY, MERRY_MULE, PENICILLIN]
+		cocktails: [HOT_TODDY, CHOCOLATE_COVERED_CHERRIES, PENICILLIN]
 	},
 	{
 		title: "Daddy's Drinks",
@@ -32,11 +32,11 @@ export const categories: Category[] = [
 	{
 		title: "Cyrus' Drinks",
 		bgColors: sectionColors.cyrus,
-		cocktails: [JACK_ROSE, RATTLE_SKULL, OAXACA_OLD_FASHIONED]
+		cocktails: [JACK_ROSE, SLAP_N_PICKLE, OAXACA_OLD_FASHIONED]
 	},
 	{
 		title: "Lucas' Drinks",
 		bgColors: sectionColors.lucas,
-		cocktails: [MANHATTAN, PAPER_PLANE, ESPRESSO_MARTINI]
+		cocktails: [MANHATTAN, NEGRONI, ESPRESSO_MARTINI]
 	}
 ];
