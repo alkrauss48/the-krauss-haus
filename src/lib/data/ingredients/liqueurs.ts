@@ -7,6 +7,7 @@ import PERSIAN_SPICE_LIQUEUR_RECIPE from '$lib/data/recipes/persian-spice-liqueu
 import DRY_CURACAO_RECIPE from '$lib/data/recipes/dry-curacao';
 import HOUSE_DARK_BERRY_CREME_RECIPE from '$lib/data/recipes/house-dark-berry-creme';
 import STONE_FRUIT_LIQUEUR_RECIPE from '$lib/data/recipes/stone-fruit-liqueur';
+import LAVENDER_LIQUEUR_RECIPE from '$lib/data/recipes/lavender-liqueur';
 
 // Amaro
 const AMARO_LUCANO: Ingredient = {
@@ -158,6 +159,12 @@ const ITALICUS: Ingredient = {
 	slug: 'italicus',
 	costPerOz: 32 / 25
 };
+const LAVENDER_LIQUEUR: Ingredient = {
+	title: 'Lavender Liqueur',
+	slug: 'lavender-liqueur',
+	costPerOz: 1.5 / 7,
+	recipe: LAVENDER_LIQUEUR_RECIPE
+};
 const MR_BLACK: Ingredient = {
 	title: 'Mr. Black',
 	slug: 'mr-black',
@@ -208,6 +215,7 @@ export const LIQUEURS: IngredientCategory = {
 				EGGNOG,
 				ELDERFLOWER_LIQUEUR,
 				ITALICUS,
+				LAVENDER_LIQUEUR,
 				MR_BLACK,
 				PERSIAN_SPICE_LIQUEUR
 			]
@@ -250,6 +258,7 @@ export const INGREDIENTS = {
 	EGGNOG,
 	ELDERFLOWER_LIQUEUR,
 	ITALICUS,
+	LAVENDER_LIQUEUR,
 	MR_BLACK,
 	PERSIAN_SPICE_LIQUEUR
 };
