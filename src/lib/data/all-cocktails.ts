@@ -76,6 +76,7 @@ import NAKED_AND_FAMOUS from '$lib/data/cocktails/naked-and-famous';
 import NAVY_GROG from '$lib/data/cocktails/navy-grog';
 import NEGRONI from '$lib/data/cocktails/negroni';
 import NEGRONI_BIANCO_BERGAMOTTO from '$lib/data/cocktails/negroni-bianco-bergamotto';
+import NIGHT_FLIGHT from '$lib/data/cocktails/night-flight';
 import NORWEIGAN_PARALYSIS from '$lib/data/cocktails/norwegian-paralysis';
 import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
 import OLD_FASHIONED from '$lib/data/cocktails/old-fashioned';
@@ -196,6 +197,7 @@ export const allCocktails: Cocktail[] = [
 	NAVY_GROG,
 	NEGRONI,
 	NEGRONI_BIANCO_BERGAMOTTO,
+	NIGHT_FLIGHT,
 	NORWEIGAN_PARALYSIS,
 	OAXACA_OLD_FASHIONED,
 	OLD_FASHIONED,
