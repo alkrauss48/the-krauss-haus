@@ -45,6 +45,20 @@ const DAIQUIRI: Cocktail = {
 				}
 			],
 			images: []
+		},
+		{
+			name: '+Lavender',
+			ingredients: [
+				{
+					label: 'Swap 1oz of Probitas with 1oz Lavender Liqueur.',
+					ingredient: Ingredients.Liqueurs.LAVENDER_LIQUEUR
+				},
+				{
+					label: 'Reduce rich simple syrup to .25oz.',
+					ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
+				}
+			],
+			images: []
 		}
 	],
 	tags: [

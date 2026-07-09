@@ -23,6 +23,7 @@ import DRY_CURACAO from '$lib/data/recipes/dry-curacao';
 import FALERNUM from '$lib/data/recipes/falernum';
 import HOUSE_DARK_BERRY_CREME from '$lib/data/recipes/house-dark-berry-creme';
 import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
+import LAVENDER_LIQUEUR from '$lib/data/recipes/lavender-liqueur';
 import LIMONCELLO from '$lib/data/recipes/limoncello';
 import PEPPERMINT_VODKA from '$lib/data/recipes/peppermint-vodka';
 import PERSIAN_SPICE_LIQUEUR from '$lib/data/recipes/persian-spice-liqueur';
@@ -55,6 +56,7 @@ export const infusions: Recipe[] = [
 	FALERNUM,
 	HOUSE_DARK_BERRY_CREME,
 	JALAPENO_TEQUILA,
+	LAVENDER_LIQUEUR,
 	LIMONCELLO,
 	PEPPERMINT_VODKA,
 	PERSIAN_SPICE_LIQUEUR,
