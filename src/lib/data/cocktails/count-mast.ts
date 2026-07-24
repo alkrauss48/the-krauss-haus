@@ -20,7 +20,7 @@ const COUNT_MAST: Cocktail = {
 	ingredients: [
 		{
 			amount: '1oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '1oz',

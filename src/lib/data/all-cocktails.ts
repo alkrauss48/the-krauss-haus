@@ -91,6 +91,7 @@ import PORT_LIGHT from '$lib/data/cocktails/port-light';
 import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
+import RUDOLPHS_NOSE from '$lib/data/cocktails/rudolphs-nose';
 import RUM_BARREL from '$lib/data/cocktails/rum-barrel';
 import RUM_RUNNER from '$lib/data/cocktails/rum-runner';
 import RUSSIAN_SPRING_PUNCH from '$lib/data/cocktails/russian-spring-punch';
@@ -212,6 +213,7 @@ export const allCocktails: Cocktail[] = [
 	RADLER,
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,
+	RUDOLPHS_NOSE,
 	RUM_BARREL,
 	RUM_RUNNER,
 	RUSSIAN_SPRING_PUNCH,

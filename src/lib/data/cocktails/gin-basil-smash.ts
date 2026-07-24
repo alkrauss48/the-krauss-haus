@@ -22,7 +22,7 @@ const GIN_BASIL_SMASH: Cocktail = {
 	ingredients: [
 		{
 			amount: '2oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '.75oz',

@@ -22,7 +22,7 @@ const CUCUMBER: Ingredient = {
 const EGG: Ingredient = {
 	title: 'Egg',
 	slug: 'egg',
-	costPerOz: 0.3
+	costPerOz: 5 / 12
 };
 const HEAVY_CREAM: Ingredient = {
 	title: 'Heavy Cream',

@@ -14,15 +14,15 @@ import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import NEGRONI from './cocktails/negroni';
 import SLAP_N_PICKLE from './cocktails/slap-n-pickle';
-import JACK_ROSE from './cocktails/jack-rose';
+import RUDOLPHS_NOSE from './cocktails/rudolphs-nose';
 
-export const featuredDrinks: Cocktail[] = [CARAMEL_APPLE_SPICE, MERRY_MULE];
+export const featuredDrinks: Cocktail[] = [CARAMEL_APPLE_SPICE, RUDOLPHS_NOSE];
 
 export const categories: Category[] = [
 	{
 		title: "Mommy's Drinks",
 		bgColors: sectionColors.mommy,
-		cocktails: [HOT_TODDY, CHOCOLATE_COVERED_CHERRIES, PENICILLIN]
+		cocktails: [HOT_TODDY, CHOCOLATE_COVERED_CHERRIES, MERRY_MULE]
 	},
 	{
 		title: "Daddy's Drinks",
@@ -32,7 +32,7 @@ export const categories: Category[] = [
 	{
 		title: "Cyrus' Drinks",
 		bgColors: sectionColors.cyrus,
-		cocktails: [JACK_ROSE, SLAP_N_PICKLE, OAXACA_OLD_FASHIONED]
+		cocktails: [PENICILLIN, SLAP_N_PICKLE, OAXACA_OLD_FASHIONED]
 	},
 	{
 		title: "Lucas' Drinks",

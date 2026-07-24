@@ -22,7 +22,7 @@ const LOGGY_CAB: Cocktail = {
 	ingredients: [
 		{
 			amount: '2oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '.75oz',

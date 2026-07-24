@@ -159,11 +159,11 @@ const DEL_MAGUY_VIDA: Ingredient = {
 };
 
 // Gin
-const FORDS: Ingredient = {
-	title: 'Fords',
-	slug: 'fords',
+const TANQUERAY: Ingredient = {
+	title: 'Tanqueray',
+	slug: 'tanqueray',
 	group: 'London Dry Gin',
-	costPerOz: 28 / 25
+	costPerOz: 42 / 59
 };
 
 // Neutral Spirits
@@ -239,7 +239,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		},
 		{
 			label: 'Gin',
-			ingredients: [FORDS]
+			ingredients: [TANQUERAY]
 		},
 		{
 			label: 'Neutral Spirits',
@@ -282,7 +282,7 @@ export const INGREDIENTS = {
 	DEL_MAGUY_VIDA,
 
 	// Gin
-	FORDS,
+	TANQUERAY,
 
 	// Neutral Spirits
 	MONOPOLOWA,
