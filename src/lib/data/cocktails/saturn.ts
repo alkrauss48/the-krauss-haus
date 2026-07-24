@@ -22,7 +22,7 @@ const SATURN: Cocktail = {
 	ingredients: [
 		{
 			amount: '1.5oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '.5oz',

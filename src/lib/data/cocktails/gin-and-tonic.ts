@@ -20,7 +20,7 @@ const GIN_AND_TONIC: Cocktail = {
 	ingredients: [
 		{
 			amount: '1.5oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '4oz',

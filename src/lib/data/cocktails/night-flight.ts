@@ -21,30 +21,32 @@ const NIGHT_FLIGHT: Cocktail = {
 	hasStraw: false,
 	ingredients: [
 		{
-			amount: '2oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			amount: '1.5oz',
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '.75oz',
-			ingredient: Ingredients.Citrus.LEMON
-		},
-		{
-			amount: '.25oz',
-			ingredient: Ingredients.Liqueurs.MARASCHINO_LIQUEUER
-		},
-		{
-			amount: '.25oz',
 			ingredient: Ingredients.Liqueurs.LAVENDER_LIQUEUR
 		},
 		{
-			amount: '.25oz',
+			amount: '.5oz',
 			ingredient: Ingredients.Liqueurs.HOUSE_DARK_BERRY_CREME
-		}
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.Bitters.ORANGE
+		},
+		'Garnish: Lavender sprig'
 	],
 	tags: [
 		Tags.BaseAlcohol.GIN,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.FRUITY,
+		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
 		Tags.Origin.ORIGINAL,

@@ -20,7 +20,7 @@ const MARTINI: Cocktail = {
 	ingredients: [
 		{
 			amount: '2oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '1oz',

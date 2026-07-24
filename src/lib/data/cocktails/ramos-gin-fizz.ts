@@ -23,7 +23,7 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 	ingredients: [
 		{
 			amount: '2oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '.5oz',

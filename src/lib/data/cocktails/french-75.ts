@@ -20,7 +20,7 @@ const FRENCH_75: Cocktail = {
 	ingredients: [
 		{
 			amount: '1oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '.5oz',

@@ -20,7 +20,7 @@ const LAST_WORD: Cocktail = {
 	ingredients: [
 		{
 			amount: '.75oz',
-			ingredient: Ingredients.BaseSpirits.FORDS
+			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
 			amount: '.75oz',

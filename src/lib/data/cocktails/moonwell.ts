@@ -70,7 +70,7 @@ const MOONWELL: Cocktail = {
 			ingredients: [
 				{
 					label: 'Sub gin for rum.',
-					ingredient: Ingredients.BaseSpirits.FORDS
+					ingredient: Ingredients.BaseSpirits.TANQUERAY
 				}
 			],
 			images: ['/images/wow/race_nightelf_male.jpg', '/images/wow/class_hunter.jpg']
