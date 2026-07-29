@@ -4,7 +4,7 @@ const CARAMEL_VODKA: Recipe = {
 	name: 'Caramel Vodka',
 	slug: 'caramel-vodka',
 	description: 'Vodka infused with homemade caramel syrup for a sweet, rich flavor.',
-	ingredients: ['1 oz caramel syrup (see recipe)', '3 oz vodka'],
+	ingredients: ['3oz 40% ABV Vodka', '1oz Caramel Syrup (see recipe)'],
 	instructions: 'Mix ingredients together. Easy as that!',
 	notes:
 		'Because the caramel syrup has no fat, this infusion will maintain a nice, translucent color with no separation.'

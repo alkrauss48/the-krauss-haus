@@ -5,8 +5,7 @@ const AQUAVIT: Recipe = {
 	slug: 'aquavit',
 	description: 'Nordic spirit flavored with caraway, dill, and botanicals.',
 	ingredients: [
-		'4oz Everclear (95% ABV grain liquor)',
-		'5oz Distilled Water',
+		'9oz 40% ABV Vodka',
 		'1.25 tsp Caraway seed',
 		'.5 tsp Dill seed',
 		'.5 tsp Coriander seed',

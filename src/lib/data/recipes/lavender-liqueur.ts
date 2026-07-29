@@ -5,15 +5,13 @@ const LAVENDER_LIQUEUR: Recipe = {
 	slug: 'lavender-liqueur',
 	description: 'A floral liqueur made by infusing lavender into grain alcohol.',
 	ingredients: [
-		'2oz Everclear (190 proof)',
-		'3oz Water',
+		'5oz 40% ABV Vodka',
 		'1 tsp dried culinary lavender petals (or 1 tbsp fresh)',
-		'2oz Simple Syrup (1:1)',
-		'Optional: small strip lemon peel (no white pith)'
+		'2oz Simple Syrup (1:1)'
 	],
 	instructions:
-		'Steep everything but the syrup for 12 hours. Strain out the solids, then add the syrup.',
-	notes: 'Makes ~7oz at 27% ABV.'
+		'Steep vodka and lavender for 12 hours. Strain out the solids, then add the simple syrup.',
+	notes: 'Makes ~7oz at 28% ABV.'
 };
 
 export default LAVENDER_LIQUEUR;

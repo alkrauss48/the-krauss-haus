@@ -8,7 +8,7 @@ import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
 
 const NIGHT_FLIGHT: Cocktail = {
 	title: 'Night Flight',
-	description: 'Gin, lemon, maraschino, lavender, and dark berry liqueur.',
+	description: 'Gin, lavender liqueur, dark berry liqueur, lemon, simple syrup, orange bitters.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/night-flight.png',
 	thumbnailImagePath:
@@ -25,7 +25,7 @@ const NIGHT_FLIGHT: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
-			amount: '.75oz',
+			amount: '.5oz',
 			ingredient: Ingredients.Liqueurs.LAVENDER_LIQUEUR
 		},
 		{
@@ -33,8 +33,12 @@ const NIGHT_FLIGHT: Cocktail = {
 			ingredient: Ingredients.Liqueurs.HOUSE_DARK_BERRY_CREME
 		},
 		{
-			amount: '.5oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Citrus.LEMON
+		},
+		{
+			amount: '.25oz',
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
 		},
 		{
 			amount: '1 dash',
