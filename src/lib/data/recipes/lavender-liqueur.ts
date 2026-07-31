@@ -6,7 +6,7 @@ const LAVENDER_LIQUEUR: Recipe = {
 	description: 'A floral liqueur made by infusing lavender into grain alcohol.',
 	ingredients: [
 		'5oz 40% ABV Vodka',
-		'1 tsp dried culinary lavender petals (or 1 tbsp fresh)',
+		'1.5 tsp dried culinary lavender petals (or 1 tbsp fresh)',
 		'2oz Simple Syrup (1:1)'
 	],
 	instructions:
