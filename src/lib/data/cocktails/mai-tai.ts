@@ -8,8 +8,7 @@ import TRADER_VIC from '$lib/data/bartenders/trader-vic';
 
 const MAI_TAI: Cocktail = {
 	title: 'Mai Tai',
-	description:
-		'Jamaican rum, blended rum, cachaca, dry curaçao, cointreau, orgeat, lime, demerara syrup.',
+	description: 'Jamaican rum, rhum agricole, dry curaçao, orgeat, lime, demerara syrup.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mai-tai.png',
 	thumbnailImagePath:
@@ -23,31 +22,27 @@ const MAI_TAI: Cocktail = {
 	ingredients: [
 		{
 			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_12_YEAR
+		},
+		{
+			amount: '.5oz',
 			ingredient: Ingredients.BaseSpirits.SMITH_AND_CROSS
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.BaseSpirits.LEBLON
+			ingredient: Ingredients.BaseSpirits.CLEMENT_SELECT_BARREL
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
-		},
-		{
-			amount: '.25oz',
 			ingredient: Ingredients.Liqueurs.DRY_CURACAO
-		},
-		{
-			amount: '.25oz',
-			ingredient: Ingredients.Liqueurs.COINTREAU
-		},
-		{
-			amount: '.5oz',
-			ingredient: Ingredients.Syrups.ORGEAT
 		},
 		{
 			amount: '1oz',
 			ingredient: Ingredients.Citrus.LIME
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.ORGEAT
 		},
 		{
 			amount: '.25oz',
@@ -62,8 +57,26 @@ const MAI_TAI: Cocktail = {
 			ingredient: Ingredients.Citrus.LIME_GARNISH
 		}
 	],
-	notes:
-		'This uses a custom rum blend that has been tweaked to perfection. The orange curaçao is split between homemade dry curaçao (.25oz) and Cointreau (.25oz) to round out the orange flavor.',
+	variations: [
+		{
+			name: "Aaron's Original",
+			ingredients: [
+				{
+					label: 'Increase Smith and Cross to 1oz.',
+					ingredient: Ingredients.BaseSpirits.SMITH_AND_CROSS
+				},
+				{
+					label: 'Swap the Clement Select Barrel for .5oz Leblon Cachaça.',
+					ingredient: Ingredients.BaseSpirits.LEBLON
+				},
+				{
+					label: 'Swap the Appleton Estate 12-Year for .5oz Planteray OFTD.',
+					ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
+				}
+			],
+			images: []
+		}
+	],
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,

@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const CORN_N_OIL: Cocktail = {
 	title: "Corn 'n Oil",
-	description: 'Jamaican rum blend, falernum, lime, angostura bitters.',
+	description: 'Jamaican rum, falernum, lime, angostura bitters.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/corn-n-oil.png',
 	thumbnailImagePath:
@@ -19,12 +19,8 @@ const CORN_N_OIL: Cocktail = {
 	hasStraw: false,
 	ingredients: [
 		{
-			amount: '1oz',
-			ingredient: Ingredients.BaseSpirits.CORUBA
-		},
-		{
-			amount: '1oz',
-			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+			amount: '2oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_12_YEAR
 		},
 		{
 			amount: '.5oz',

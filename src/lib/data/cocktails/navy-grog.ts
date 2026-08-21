@@ -23,15 +23,19 @@ const NAVY_GROG: Cocktail = {
 	ingredients: [
 		{
 			amount: '1oz',
-			ingredient: Ingredients.BaseSpirits.CORUBA
-		},
-		{
-			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.HAMILTON_86
 		},
 		{
 			amount: '.5oz',
 			ingredient: Ingredients.BaseSpirits.SMITH_AND_CROSS
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.CORUBA
+		},
+		{
+			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
 		},
 		{
 			amount: '.75oz',

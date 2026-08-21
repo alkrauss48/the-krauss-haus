@@ -25,6 +25,7 @@ import HOUSE_DARK_BERRY_CREME from '$lib/data/recipes/house-dark-berry-creme';
 import JALAPENO_TEQUILA from '$lib/data/recipes/jalapeno-tequila';
 import LAVENDER_LIQUEUR from '$lib/data/recipes/lavender-liqueur';
 import LIMONCELLO from '$lib/data/recipes/limoncello';
+import MAMA_JUANA from '$lib/data/recipes/mama-juana';
 import PEPPERMINT_VODKA from '$lib/data/recipes/peppermint-vodka';
 import PERSIAN_SPICE_LIQUEUR from '$lib/data/recipes/persian-spice-liqueur';
 import SPICED_TEA from '$lib/data/recipes/spiced-tea';
@@ -58,6 +59,7 @@ export const infusions: Recipe[] = [
 	JALAPENO_TEQUILA,
 	LAVENDER_LIQUEUR,
 	LIMONCELLO,
+	MAMA_JUANA,
 	PEPPERMINT_VODKA,
 	PERSIAN_SPICE_LIQUEUR,
 	STONE_FRUIT_LIQUEUR

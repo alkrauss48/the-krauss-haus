@@ -7,6 +7,12 @@ import JALAPENO_TEQUILA_RECIPE from '$lib/data/recipes/jalapeno-tequila';
 import PEPPERMINT_VODKA_RECIPE from '$lib/data/recipes/peppermint-vodka';
 
 // Rum
+const APPLETON_ESTATE_12_YEAR: Ingredient = {
+	title: 'Appleton Estate 12-Year',
+	slug: 'appleton-estate-12-year',
+	group: 'Jamaican Rum',
+	costPerOz: 48 / 25
+};
 const APPLETON_ESTATE_SIGNATURE: Ingredient = {
 	title: 'Appleton Estate Signature',
 	slug: 'appleton-estate-signature',
@@ -23,7 +29,7 @@ const CORUBA: Ingredient = {
 	title: 'Coruba',
 	slug: 'coruba',
 	group: 'Jamaican Rum',
-	costPerOz: 20 / 25
+	costPerOz: 20 / 33
 };
 const HAMILTON_151: Ingredient = {
 	title: 'Hamilton 151',
@@ -53,7 +59,7 @@ const PLANTERAY_3_STARS: Ingredient = {
 	title: 'Planteray 3 Stars',
 	slug: 'planteray-3-stars',
 	group: 'Blended Light Rum',
-	costPerOz: 22 / 25
+	costPerOz: 42 / 59
 };
 const PLANTERAY_OFTD: Ingredient = {
 	title: 'Planteray OFTD',
@@ -159,6 +165,12 @@ const DEL_MAGUY_VIDA: Ingredient = {
 };
 
 // Gin
+const BOLS: Ingredient = {
+	title: 'Bols',
+	slug: 'bols',
+	group: 'Genever',
+	costPerOz: 37 / 25
+};
 const TANQUERAY: Ingredient = {
 	title: 'Tanqueray',
 	slug: 'tanqueray',
@@ -211,6 +223,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		{
 			label: 'Rum',
 			ingredients: [
+				APPLETON_ESTATE_12_YEAR,
 				APPLETON_ESTATE_SIGNATURE,
 				CLEMENT_SELECT_BARREL,
 				CORUBA,
@@ -239,7 +252,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		},
 		{
 			label: 'Gin',
-			ingredients: [TANQUERAY]
+			ingredients: [BOLS, TANQUERAY]
 		},
 		{
 			label: 'Neutral Spirits',
@@ -250,6 +263,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 
 export const INGREDIENTS = {
 	// Rum
+	APPLETON_ESTATE_12_YEAR,
 	APPLETON_ESTATE_SIGNATURE,
 	CLEMENT_SELECT_BARREL,
 	CORUBA,
@@ -283,6 +297,7 @@ export const INGREDIENTS = {
 
 	// Gin
 	TANQUERAY,
+	BOLS,
 
 	// Neutral Spirits
 	MONOPOLOWA,

@@ -13,7 +13,7 @@ const PLANTERS_PUNCH: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/planters-punch.png',
 	slug: 'planters-punch',
-	method: CocktailMethod.FlashBlended,
+	method: CocktailMethod.Swizzled,
 	servedIn: ServedIn.HighballGlass,
 	ice: Ice.Crushed,
 	hasStraw: true,
@@ -44,7 +44,7 @@ const PLANTERS_PUNCH: Cocktail = {
 		Tags.Origin.FOLK,
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
-		Tags.Technique.FLASH_BLENDED,
+		Tags.Technique.SWIZZLED,
 		Tags.ServedIn.HIGHBALL_GLASS,
 		Tags.PrepTime.SIMPLE_PREP
 	]
