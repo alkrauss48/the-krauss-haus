@@ -8,6 +8,7 @@ import DRY_CURACAO_RECIPE from '$lib/data/recipes/dry-curacao';
 import HOUSE_DARK_BERRY_CREME_RECIPE from '$lib/data/recipes/house-dark-berry-creme';
 import STONE_FRUIT_LIQUEUR_RECIPE from '$lib/data/recipes/stone-fruit-liqueur';
 import LAVENDER_LIQUEUR_RECIPE from '$lib/data/recipes/lavender-liqueur';
+import MAMA_JUANA_RECIPE from '$lib/data/recipes/mama-juana';
 
 // Amaro
 const AMARO_LUCANO: Ingredient = {
@@ -115,6 +116,12 @@ const ALLSPICE_DRAM: Ingredient = {
 	slug: 'allspice-dram',
 	costPerOz: 30 / 25
 };
+const MAMA_JUANA: Ingredient = {
+	title: 'Mama Juana',
+	slug: 'mama-juana',
+	recipe: MAMA_JUANA_RECIPE,
+	costPerOz: 22 / 16
+};
 const LAZZARONI: Ingredient = {
 	title: 'Lazzaroni',
 	slug: 'lazzaroni',
@@ -206,7 +213,7 @@ export const LIQUEURS: IngredientCategory = {
 		},
 		{
 			label: 'Nut & Spice',
-			ingredients: [ALLSPICE_DRAM, FALERNUM, FRANGELICO, GOLDSCHLAGER, LAZZARONI]
+			ingredients: [ALLSPICE_DRAM, FALERNUM, FRANGELICO, GOLDSCHLAGER, LAZZARONI, MAMA_JUANA]
 		},
 		{
 			label: 'Floral, Coffee & Specialty',
@@ -252,6 +259,7 @@ export const INGREDIENTS = {
 	FRANGELICO,
 	GOLDSCHLAGER,
 	LAZZARONI,
+	MAMA_JUANA,
 
 	// Floral, Coffee & Specialty
 	CREME_DE_CACAO,

@@ -11,7 +11,7 @@ const APPLETON_ESTATE_12_YEAR: Ingredient = {
 	title: 'Appleton Estate 12-Year',
 	slug: 'appleton-estate-12-year',
 	group: 'Jamaican Rum',
-	costPerOz: 40 / 25
+	costPerOz: 48 / 25
 };
 const APPLETON_ESTATE_SIGNATURE: Ingredient = {
 	title: 'Appleton Estate Signature',
@@ -29,7 +29,7 @@ const CORUBA: Ingredient = {
 	title: 'Coruba',
 	slug: 'coruba',
 	group: 'Jamaican Rum',
-	costPerOz: 20 / 25
+	costPerOz: 20 / 33
 };
 const HAMILTON_151: Ingredient = {
 	title: 'Hamilton 151',
@@ -59,7 +59,7 @@ const PLANTERAY_3_STARS: Ingredient = {
 	title: 'Planteray 3 Stars',
 	slug: 'planteray-3-stars',
 	group: 'Blended Light Rum',
-	costPerOz: 22 / 25
+	costPerOz: 42 / 59
 };
 const PLANTERAY_OFTD: Ingredient = {
 	title: 'Planteray OFTD',
