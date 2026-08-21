@@ -159,6 +159,12 @@ const DEL_MAGUY_VIDA: Ingredient = {
 };
 
 // Gin
+const BOLS: Ingredient = {
+	title: 'Bols',
+	slug: 'bols',
+	group: 'Genever',
+	costPerOz: 37 / 25
+};
 const TANQUERAY: Ingredient = {
 	title: 'Tanqueray',
 	slug: 'tanqueray',
@@ -239,7 +245,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		},
 		{
 			label: 'Gin',
-			ingredients: [TANQUERAY]
+			ingredients: [BOLS, TANQUERAY]
 		},
 		{
 			label: 'Neutral Spirits',
@@ -283,6 +289,7 @@ export const INGREDIENTS = {
 
 	// Gin
 	TANQUERAY,
+	BOLS,
 
 	// Neutral Spirits
 	MONOPOLOWA,

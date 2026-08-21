@@ -13,11 +13,13 @@ import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-giuseppe';
 import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
 import BRAMBLE from '$lib/data/cocktails/bramble';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
+import BRANDY_CRUSTA from '$lib/data/cocktails/brandy-crusta';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import CANELAZO from '$lib/data/cocktails/canelazo';
 import CERVEZA_Y_TEQUILA from '$lib/data/cocktails/cerveza-y-tequila';
 import CHAMPAGNE_COCKTAIL from '$lib/data/cocktails/champagne-cocktail';
+import CHARTREUSE_SWIZZLE from '$lib/data/cocktails/chartreuse-swizzle';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
 import CONFERENCE from '$lib/data/cocktails/conference';
@@ -34,6 +36,7 @@ import DIVISION_BELL from '$lib/data/cocktails/division-bell';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
 import DR_FUNK from '$lib/data/cocktails/dr-funk';
 import EL_DIABLO from '$lib/data/cocktails/el-diablo';
+import EL_PRESIDENTE from '$lib/data/cocktails/el-presidente';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FOREST_SPIRIT from '$lib/data/cocktails/forest-spirit';
@@ -47,9 +50,12 @@ import GLUHWEIN from '$lib/data/cocktails/gluhwein';
 import GODFATHER from '$lib/data/cocktails/godfather';
 import GRASSHOPPER from '$lib/data/cocktails/grasshopper';
 import HIGHLAND_COFFEE from '$lib/data/cocktails/highland-coffee';
+import HOLLAND_HOUSE from '$lib/data/cocktails/holland-house';
+import HOTEL_NACIONAL from '$lib/data/cocktails/hotel-nacional';
 import HOT_TODDY from '$lib/data/cocktails/hot-toddy';
 import HUGO_SPRITZ from '$lib/data/cocktails/hugo-spritz';
 import HURRICANE from '$lib/data/cocktails/hurricane';
+import IMPROVED_HOLLAND_GIN_COCKTAIL from '$lib/data/cocktails/improved-holland-gin-cocktail';
 import IRON_RANGER from '$lib/data/cocktails/iron-ranger';
 import JACK_ROSE from '$lib/data/cocktails/jack-rose';
 import JET_PILOT from '$lib/data/cocktails/jet-pilot';
@@ -64,6 +70,7 @@ import LOST_LAKE from '$lib/data/cocktails/lost-lake';
 import MAI_TAI from '$lib/data/cocktails/mai-tai';
 import MANHATTAN from '$lib/data/cocktails/manhattan';
 import MARGARITA from '$lib/data/cocktails/margarita';
+import MARTINEZ from '$lib/data/cocktails/martinez';
 import MARTINI from '$lib/data/cocktails/martini';
 import MERRY_MULE from '$lib/data/cocktails/merry-mule';
 import MICHELADA from '$lib/data/cocktails/michelada';
@@ -86,8 +93,10 @@ import PALOMA from '$lib/data/cocktails/paloma';
 import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
 import PENICILLIN from '$lib/data/cocktails/penicillin';
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
+import PINA_VERDE from '$lib/data/cocktails/pina-verde';
 import PLANTERS_PUNCH from '$lib/data/cocktails/planters-punch';
 import PORT_LIGHT from '$lib/data/cocktails/port-light';
+import QUEENS_PARK_SWIZZLE from '$lib/data/cocktails/queens-park-swizzle';
 import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
@@ -135,11 +144,13 @@ export const allCocktails: Cocktail[] = [
 	BOULEVARDIER,
 	BRAMBLE,
 	BRANDY_ALEXANDER,
+	BRANDY_CRUSTA,
 	CAIPIRINHA,
 	CARAMEL_APPLE_SPICE,
 	CANELAZO,
 	CERVEZA_Y_TEQUILA,
 	CHAMPAGNE_COCKTAIL,
+	CHARTREUSE_SWIZZLE,
 	CHOCOLATE_COVERED_CHERRIES,
 	COBRAS_FANG,
 	CONFERENCE,
@@ -156,6 +167,7 @@ export const allCocktails: Cocktail[] = [
 	DONGA_PUNCH,
 	DR_FUNK,
 	EL_DIABLO,
+	EL_PRESIDENTE,
 	ESPRESSO_MARTINI,
 	FERNET_CON_COCA,
 	FRENCH_75,
@@ -169,9 +181,12 @@ export const allCocktails: Cocktail[] = [
 	GODFATHER,
 	GRASSHOPPER,
 	HIGHLAND_COFFEE,
+	HOLLAND_HOUSE,
+	HOTEL_NACIONAL,
 	HOT_TODDY,
 	HUGO_SPRITZ,
 	HURRICANE,
+	IMPROVED_HOLLAND_GIN_COCKTAIL,
 	IRON_RANGER,
 	JACK_ROSE,
 	JET_PILOT,
@@ -186,6 +201,7 @@ export const allCocktails: Cocktail[] = [
 	MAI_TAI,
 	MANHATTAN,
 	MARGARITA,
+	MARTINEZ,
 	MARTINI,
 	MERRY_MULE,
 	MICHELADA,
@@ -208,8 +224,10 @@ export const allCocktails: Cocktail[] = [
 	PAPER_PLANE,
 	PENICILLIN,
 	PIMMS_CUP,
+	PINA_VERDE,
 	PLANTERS_PUNCH,
 	PORT_LIGHT,
+	QUEENS_PARK_SWIZZLE,
 	RADLER,
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,

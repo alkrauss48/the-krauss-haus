@@ -9,13 +9,15 @@ export const TECHNIQUE: TagCategory = {
 const SHAKEN: Tag = { label: 'Shaken', category: TECHNIQUE, order: 1 };
 const STIRRED: Tag = { label: 'Stirred', category: TECHNIQUE, order: 2 };
 const BUILT: Tag = { label: 'Built in Glass', category: TECHNIQUE, order: 3 };
-const FLASH_BLENDED: Tag = { label: 'Flash Blended', category: TECHNIQUE, order: 4 };
-const BLENDED: Tag = { label: 'Blended', category: TECHNIQUE, order: 5 };
-const BATCHED: Tag = { label: 'Batched', category: TECHNIQUE, order: 6 };
+const SWIZZLED: Tag = { label: 'Swizzled', category: TECHNIQUE, order: 4 };
+const FLASH_BLENDED: Tag = { label: 'Flash Blended', category: TECHNIQUE, order: 5 };
+const BLENDED: Tag = { label: 'Blended', category: TECHNIQUE, order: 6 };
+const BATCHED: Tag = { label: 'Batched', category: TECHNIQUE, order: 7 };
 
 export const TAGS = {
 	STIRRED,
 	SHAKEN,
+	SWIZZLED,
 	FLASH_BLENDED,
 	BLENDED,
 	BUILT,
