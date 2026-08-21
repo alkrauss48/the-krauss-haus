@@ -7,6 +7,12 @@ import JALAPENO_TEQUILA_RECIPE from '$lib/data/recipes/jalapeno-tequila';
 import PEPPERMINT_VODKA_RECIPE from '$lib/data/recipes/peppermint-vodka';
 
 // Rum
+const APPLETON_ESTATE_12_YEAR: Ingredient = {
+	title: 'Appleton Estate 12-Year',
+	slug: 'appleton-estate-12-year',
+	group: 'Jamaican Rum',
+	costPerOz: 40 / 25
+};
 const APPLETON_ESTATE_SIGNATURE: Ingredient = {
 	title: 'Appleton Estate Signature',
 	slug: 'appleton-estate-signature',
@@ -217,6 +223,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		{
 			label: 'Rum',
 			ingredients: [
+				APPLETON_ESTATE_12_YEAR,
 				APPLETON_ESTATE_SIGNATURE,
 				CLEMENT_SELECT_BARREL,
 				CORUBA,
@@ -256,6 +263,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 
 export const INGREDIENTS = {
 	// Rum
+	APPLETON_ESTATE_12_YEAR,
 	APPLETON_ESTATE_SIGNATURE,
 	CLEMENT_SELECT_BARREL,
 	CORUBA,
