@@ -146,8 +146,8 @@ And then paste the cocktail details, such as the cocktail JSON file.
 Generated PNGs need to be converted to WebP before being uploaded to the CDN. The `images:webp`
 script converts every PNG in a local `pngs/` directory into two WebP sizes:
 
-- `dist/full/` — 640px wide, quality 62 (used on cocktail detail pages)
-- `dist/thumb/` — 320px wide, quality 58 (used in menu/list thumbnails)
+- `dist/full/` — 640px wide, quality 50 (used on cocktail detail pages)
+- `dist/thumb/` — 160px wide, quality 55 (used in menu/list thumbnails)
 
 Both `pngs/` and `dist/` are gitignored, so they're safe to use as local scratch directories.
 
@@ -171,13 +171,13 @@ brew install webp
 3. Find the results in `dist/full/` and `dist/thumb/`. Output filenames match the source filenames,
    with the `.png` extension swapped for `.webp` (e.g. `pngs/mai-tai.png` →
    `dist/full/mai-tai.webp` and `dist/thumb/mai-tai.webp`).
-4. Upload the files to the DigitalOcean CDN, keeping the `full/` and `thumb/` directory structure.
+4. Upload the files to the DigitalOcean CDN — `dist/full/` goes to `cocktails/full-webp/`, and
+   `dist/thumb/` goes to `cocktails/thumbnail-webp/`.
+5. Clean up the local output when you're done:
 
-The underlying command, for reference:
-
-```bash
-mkdir -p dist/full dist/thumb && find pngs -maxdepth 1 -name '*.png' -print0 | xargs -0 -P "$(sysctl -n hw.ncpu)" -I{} sh -c 'n=$(basename "{}" .png); cwebp -q 62 -resize 0 640 -m 6 -sharp_yuv -quiet "{}" -o "dist/full/$n.webp"; cwebp -q 58 -resize 0 320 -m 6 -sharp_yuv -quiet "{}" -o "dist/thumb/$n.webp"'
-```
+   ```bash
+   npm run images:clean
+   ```
 
 Example of "Path" images:
 
