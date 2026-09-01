@@ -24,7 +24,6 @@ const AULANI_TROPICAL_MAI_TAI: Cocktail = {
 		},
 		{
 			amount: '1oz',
-			label: 'Coruba, floated',
 			ingredient: Ingredients.BaseSpirits.CORUBA
 		},
 		{
@@ -53,7 +52,7 @@ const AULANI_TROPICAL_MAI_TAI: Cocktail = {
 		}
 	],
 	notes:
-		'Served in the Aulani Tiki Hut tiki mug from the Disney Aulani Resort. Garnish with any additional garnishes, such as edible flowers.',
+		'Float the Coruba on top. Served in the Aulani Tiki Hut tiki mug from the Disney Aulani Resort. Garnish with any additional garnishes, such as edible flowers.',
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.FRUITY,
