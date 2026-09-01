@@ -9,9 +9,9 @@ const CHARTREUSE_SWIZZLE: Cocktail = {
 	title: 'Chartreuse Swizzle',
 	description: 'Green chartreuse, pineapple, lime, falernum, overproof jamaican rum, mint.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/chartreuse-swizzle.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/chartreuse-swizzle.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/chartreuse-swizzle.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/chartreuse-swizzle.webp',
 	slug: 'chartreuse-swizzle',
 	method: CocktailMethod.Swizzled,
 	servedIn: ServedIn.HighballGlass,

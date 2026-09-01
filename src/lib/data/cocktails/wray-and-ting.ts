@@ -9,9 +9,9 @@ const WRAY_AND_TING: Cocktail = {
 	title: 'Wray and Ting',
 	description: 'Overproof jamaican rum, grapefruit, rich simple, soda water, salt.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/wray-and-ting.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/wray-and-ting.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/wray-and-ting.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/wray-and-ting.webp',
 	slug: 'wray-and-ting',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,

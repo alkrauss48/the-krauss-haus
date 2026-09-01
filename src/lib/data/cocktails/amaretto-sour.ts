@@ -10,9 +10,9 @@ const AMARETTO_SOUR: Cocktail = {
 	title: 'Amaretto Sour',
 	description: 'Amaretto, bourbon, lemon, simple syrup, egg white, maraschino cherry.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/amaretto-sour.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/amaretto-sour.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/amaretto-sour.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/amaretto-sour.webp',
 	slug: 'amaretto-sour',
 	createdBy: JEFFREY_MORGENTHALER,
 	method: CocktailMethod.Shaken,

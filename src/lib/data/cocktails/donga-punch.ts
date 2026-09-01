@@ -10,9 +10,9 @@ const DONGA_PUNCH: Cocktail = {
 	title: 'Donga Punch',
 	description: 'Aged rhum agricole, grapefruit, cinnamon syrup, lime.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/donga-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/donga-punch.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/donga-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/donga-punch.webp',
 	slug: 'donga-punch',
 	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.Shaken,

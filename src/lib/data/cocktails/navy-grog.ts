@@ -11,9 +11,9 @@ const NAVY_GROG: Cocktail = {
 	description:
 		'Jamaican rum, demerara rum, honey syrup, lime, grapefruit, angostura bitters, soda water.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/navy-grog.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/navy-grog.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/navy-grog.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/navy-grog.webp',
 	slug: 'navy-grog',
 	createdBy: DONN_BEACH,
 	method: CocktailMethod.Shaken,

@@ -9,9 +9,9 @@ const DARK_N_STORMY: Cocktail = {
 	title: "Dark 'n' Stormy",
 	description: 'Dark rum, ginger beer, lime.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/dark-n-stormy.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/dark-n-stormy.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/dark-n-stormy.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/dark-n-stormy.webp',
 	slug: 'dark-n-stormy',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,

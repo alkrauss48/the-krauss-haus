@@ -9,9 +9,9 @@ const MARGARITA: Cocktail = {
 	title: 'Margarita',
 	description: 'Blanco tequila, cointreau, lime, agave nectar, salt.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/margarita.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/margarita.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/margarita.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/margarita.webp',
 	slug: 'margarita',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

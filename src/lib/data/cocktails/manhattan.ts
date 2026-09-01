@@ -9,9 +9,9 @@ const MANHATTAN: Cocktail = {
 	title: 'Manhattan',
 	description: 'Rye whiskey, sweet vermouth, black walnut bitters, maraschino cherry.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/manhattan.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/manhattan.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/manhattan.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/manhattan.webp',
 	slug: 'manhattan',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.NickAndNoraGlass,

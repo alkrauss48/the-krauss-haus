@@ -9,9 +9,9 @@ const MICHELADA: Cocktail = {
 	title: 'Michelada',
 	description: 'Mexican lager, lime, worcestershire sauce, valentina hot sauce, salt, tajin rim.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/michelada.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/michelada.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/michelada.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/michelada.webp',
 	slug: 'michelada',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,

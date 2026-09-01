@@ -9,9 +9,9 @@ const ALASKA: Cocktail = {
 	title: 'Alaska',
 	description: 'Gin, yellow chartreuse, orange bitters, lemon twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/alaska.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/alaska.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/alaska.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/alaska.webp',
 	slug: 'alaska',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.NickAndNoraGlass,

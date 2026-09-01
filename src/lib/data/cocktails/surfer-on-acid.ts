@@ -9,9 +9,9 @@ const SURFER_ON_ACID: Cocktail = {
 	title: 'Surfer on Acid',
 	description: 'Jägermeister, jamaican rum, pineapple, orgeat, lime.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/surfer-on-acid.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/surfer-on-acid.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/surfer-on-acid.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/surfer-on-acid.webp',
 	slug: 'surfer-on-acid',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,

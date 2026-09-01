@@ -9,9 +9,9 @@ const WHISKEY_SOUR: Cocktail = {
 	title: 'Whiskey Sour',
 	description: 'Whiskey, lemon, simple syrup, egg white.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/whiskey-sour.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/whiskey-sour.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/whiskey-sour.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/whiskey-sour.webp',
 	slug: 'whiskey-sour',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

@@ -10,9 +10,9 @@ const GILDA: Cocktail = {
 	title: 'Gilda',
 	description: 'Blanco tequila, cinnamon syrup, lime, pineapple.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/gilda.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/gilda.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gilda.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/gilda.webp',
 	slug: 'gilda',
 	createdBy: BRIAN_MILLER,
 	method: CocktailMethod.Shaken,

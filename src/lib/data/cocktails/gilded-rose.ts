@@ -10,9 +10,9 @@ const GILDED_ROSE: Cocktail = {
 	title: 'Gilded Rose',
 	description: 'Persian spice liqueur, champagne, edible flower.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/gilded-rose.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/gilded-rose.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gilded-rose.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/gilded-rose.webp',
 	slug: 'gilded-rose',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Built,

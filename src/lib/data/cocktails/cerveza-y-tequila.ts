@@ -9,9 +9,9 @@ const CERVEZA_Y_TEQUILA: Cocktail = {
 	title: 'Cerveza y Tequila',
 	description: 'Mexican lager, blanco tequila.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/cerveza-y-tequila.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/cerveza-y-tequila.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/cerveza-y-tequila.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/cerveza-y-tequila.webp',
 	slug: 'cerveza-y-tequila',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,

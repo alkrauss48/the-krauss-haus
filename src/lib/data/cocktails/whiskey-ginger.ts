@@ -9,9 +9,9 @@ const WHISKEY_GINGER: Cocktail = {
 	title: 'Whiskey Ginger',
 	description: 'Whiskey, ginger beer, lemon, angostura bitters, salt.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/whiskey-ginger.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/whiskey-ginger.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/whiskey-ginger.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/whiskey-ginger.webp',
 	slug: 'whiskey-ginger',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,

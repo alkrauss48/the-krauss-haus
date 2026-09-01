@@ -9,9 +9,9 @@ const CUBA_LIBRE: Cocktail = {
 	title: 'Cuba Libre',
 	description: 'Light rum, coca cola, lime.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/cuba-libre.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/cuba-libre.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/cuba-libre.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/cuba-libre.webp',
 	slug: 'cuba-libre',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,

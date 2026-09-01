@@ -8,6 +8,10 @@ node_modules
 /.svelte-kit
 /build
 
+# Local image conversion (npm run images:webp)
+pngs/
+/dist
+
 # OS
 .DS_Store
 Thumbs.db

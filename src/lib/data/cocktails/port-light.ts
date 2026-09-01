@@ -10,9 +10,9 @@ const PORT_LIGHT: Cocktail = {
 	title: 'Port Light',
 	description: 'Bourbon, honey, lemon, passion fruit.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/port-light.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/port-light.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/port-light.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/port-light.webp',
 	slug: 'port-light',
 	createdBy: TRADER_VIC,
 	method: CocktailMethod.Shaken,

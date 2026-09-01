@@ -10,9 +10,9 @@ const HIGHLAND_COFFEE: Cocktail = {
 	title: 'Highland Coffee',
 	description: 'Blended scotch, espresso, demerara syrup, hot water, whipped cream.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/highland-coffee.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/highland-coffee.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/highland-coffee.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/highland-coffee.webp',
 	slug: 'highland-coffee',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Built,

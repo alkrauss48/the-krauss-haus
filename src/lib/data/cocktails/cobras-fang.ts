@@ -11,9 +11,9 @@ const COBRAS_FANG: Cocktail = {
 	description:
 		'Overproof demerara rum, jamaican rum, falernum, fassionola, lime, orange, herbstura, mint, cinnamon.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/cobras-fang.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/cobras-fang.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/cobras-fang.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/cobras-fang.webp',
 	slug: 'cobras-fang',
 	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.FlashBlended,

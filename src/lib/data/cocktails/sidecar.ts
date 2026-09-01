@@ -9,9 +9,9 @@ const SIDECAR: Cocktail = {
 	title: 'Sidecar',
 	description: 'Cognac, dry curaçao, lemon, orange bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/sidecar.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/sidecar.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sidecar.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/sidecar.webp',
 	slug: 'sidecar',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

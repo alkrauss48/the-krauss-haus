@@ -10,9 +10,9 @@ const TRINIDAD_SOUR: Cocktail = {
 	title: 'Trinidad Sour',
 	description: 'Angostura bitters, rye whiskey, lemon, orgeat, lemon twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/trinidad-sour.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/trinidad-sour.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/trinidad-sour.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/trinidad-sour.webp',
 	slug: 'trinidad-sour',
 	createdBy: GIUSEPPE_GONZALEZ,
 	method: CocktailMethod.Shaken,

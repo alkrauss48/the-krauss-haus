@@ -10,9 +10,9 @@ const IRON_RANGER: Cocktail = {
 	title: 'Iron Ranger',
 	description: 'Bourbon, falernum, demerara syrup, lemon, pineapple, cinnamon, mint.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/iron-ranger.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/iron-ranger.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/iron-ranger.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/iron-ranger.webp',
 	slug: 'iron-ranger',
 	createdBy: ERICK_CASTRO,
 	method: CocktailMethod.Shaken,

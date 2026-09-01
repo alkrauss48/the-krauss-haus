@@ -9,9 +9,9 @@ const FRENCH_75: Cocktail = {
 	title: 'French 75',
 	description: 'Champagne, gin, lemon, simple syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/french-75.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/french-75.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/french-75.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/french-75.webp',
 	slug: 'french-75',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.FluteGlass,

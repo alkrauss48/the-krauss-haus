@@ -10,9 +10,9 @@ const OAXACA_OLD_FASHIONED: Cocktail = {
 	title: 'Oaxaca Old Fashioned',
 	description: 'Reposado tequila, mezcal, agave nectar, xocolatl bitters, smoked orange twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/oaxaca-old-fashioned.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/oaxaca-old-fashioned.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/oaxaca-old-fashioned.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/oaxaca-old-fashioned.webp',
 	slug: 'oaxaca-old-fashioned',
 	createdBy: PHIL_WARD,
 	method: CocktailMethod.Built,

@@ -10,9 +10,9 @@ const EL_DIABLO: Cocktail = {
 	title: 'El Diablo',
 	description: 'Blanco tequila, crème de baies noires, lime, ginger beer.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/el-diablo.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/el-diablo.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/el-diablo.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/el-diablo.webp',
 	slug: 'el-diablo',
 	createdBy: TRADER_VIC,
 	method: CocktailMethod.Built,

@@ -9,9 +9,9 @@ const SANGRIA: Cocktail = {
 	title: 'Sangria',
 	description: 'Spanish red wine, brandy, cointreau, orange, lime, lemon, sugar, club soda.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/sangria.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/sangria.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sangria.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/sangria.webp',
 	slug: 'sangria',
 	method: CocktailMethod.Batched,
 	servedIn: ServedIn.HighballGlass,

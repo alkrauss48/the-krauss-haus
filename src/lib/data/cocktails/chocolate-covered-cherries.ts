@@ -11,9 +11,9 @@ const CHOCOLATE_COVERED_CHERRIES: Cocktail = {
 	description:
 		'Bourbon, crème de cacao, cherry heering, cherry syrup, xocolatl bitters, maraschino cherry.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/chocolate-covered-cherries.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/chocolate-covered-cherries.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/chocolate-covered-cherries.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/chocolate-covered-cherries.webp',
 	slug: 'chocolate-covered-cherries',
 	createdBy: TELLERS,
 	method: CocktailMethod.Stirred,

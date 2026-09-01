@@ -9,9 +9,9 @@ const GIN_AND_TONIC: Cocktail = {
 	title: 'Gin and Tonic',
 	description: 'Gin, tonic water, lime wedge.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/gin-and-tonic.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/gin-and-tonic.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gin-and-tonic.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/gin-and-tonic.webp',
 	slug: 'gin-and-tonic',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,

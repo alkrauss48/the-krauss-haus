@@ -9,9 +9,9 @@ const LAST_WORD: Cocktail = {
 	title: 'Last Word',
 	description: 'Gin, green chartreuse, maraschino liqueur, lime, maraschino cherry.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/last-word.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/last-word.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/last-word.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/last-word.webp',
 	slug: 'last-word',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

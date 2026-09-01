@@ -11,9 +11,9 @@ const DESERT_DREAMS: Cocktail = {
 	description:
 		'Blanco tequila, mezcal, passion fruit, honey-ginger, lime, chili and xocolatl bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/desert-dreams.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/desert-dreams.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/desert-dreams.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/desert-dreams.webp',
 	slug: 'desert-dreams',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.DoubleRocksGlass,

@@ -9,9 +9,9 @@ const AULANI_TROPICAL_MAI_TAI: Cocktail = {
 	title: 'Aulani Tropical Mai Tai',
 	description: 'Light rum, dark rum float, dry curaçao, orgeat, lime, pineapple, passionfruit.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/aulani-tropical-mai-tai.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/aulani-tropical-mai-tai.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/aulani-tropical-mai-tai.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/aulani-tropical-mai-tai.webp',
 	slug: 'aulani-tropical-mai-tai',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.TikiMug,
@@ -24,7 +24,6 @@ const AULANI_TROPICAL_MAI_TAI: Cocktail = {
 		},
 		{
 			amount: '1oz',
-			label: 'Coruba, floated',
 			ingredient: Ingredients.BaseSpirits.CORUBA
 		},
 		{
@@ -53,7 +52,7 @@ const AULANI_TROPICAL_MAI_TAI: Cocktail = {
 		}
 	],
 	notes:
-		'Served in the Aulani Tiki Hut tiki mug from the Disney Aulani Resort. Garnish with any additional garnishes, such as edible flowers.',
+		'Float the Coruba on top. Served in the Aulani Tiki Hut tiki mug from the Disney Aulani Resort. Garnish with any additional garnishes, such as edible flowers.',
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.FRUITY,

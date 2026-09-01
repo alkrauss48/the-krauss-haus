@@ -10,9 +10,9 @@ const PENICILLIN: Cocktail = {
 	title: 'Penicillin',
 	description: 'Blended scotch, single malt scotch, honey-ginger syrup, lemon.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/penicillin.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/penicillin.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/penicillin.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/penicillin.webp',
 	slug: 'penicillin',
 	createdBy: SAM_ROSS,
 	method: CocktailMethod.Shaken,

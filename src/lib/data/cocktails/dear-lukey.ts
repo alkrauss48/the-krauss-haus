@@ -10,9 +10,9 @@ const DEAR_LUKEY: Cocktail = {
 	title: 'Dear Lukey',
 	description: 'Amaro Lucano, Italicus, elderflower liqueur, dry vermouth, lime, cinnamon syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/dear-lukey.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/dear-lukey.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/dear-lukey.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/dear-lukey.webp',
 	slug: 'dear-lukey',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Shaken,

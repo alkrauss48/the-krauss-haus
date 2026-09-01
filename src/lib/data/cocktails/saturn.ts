@@ -10,9 +10,9 @@ const SATURN: Cocktail = {
 	title: 'Saturn',
 	description: 'Gin, passion fruit, lemon, orgeat, falernum.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/saturn.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/saturn.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/saturn.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/saturn.webp',
 	slug: 'saturn',
 	createdBy: POPO_GALSINI,
 	method: CocktailMethod.Shaken,

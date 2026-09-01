@@ -9,9 +9,9 @@ const HOTEL_NACIONAL: Cocktail = {
 	title: 'Hotel Nacional',
 	description: 'Light rum, stone fruit liqueur, pineapple, lime, simple syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hotel-nacional.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/hotel-nacional.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hotel-nacional.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/hotel-nacional.webp',
 	slug: 'hotel-nacional',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

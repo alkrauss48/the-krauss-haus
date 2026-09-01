@@ -10,9 +10,9 @@ const NIGHT_FLIGHT: Cocktail = {
 	title: 'Night Flight',
 	description: 'Gin, lavender liqueur, dark berry liqueur, lemon, simple syrup, orange bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/night-flight.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/night-flight.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/night-flight.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/night-flight.webp',
 	slug: 'night-flight',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Shaken,

@@ -141,6 +141,44 @@ No text, labels, borders, mockups, or explanation.
 
 And then paste the cocktail details, such as the cocktail JSON file.
 
+### Converting PNGs to WebP
+
+Generated PNGs need to be converted to WebP before being uploaded to the CDN. The `images:webp`
+script converts every PNG in a local `pngs/` directory into two WebP sizes:
+
+- `dist/full/` — 640px wide, quality 50 (used on cocktail detail pages)
+- `dist/thumb/` — 160px wide, quality 55 (used in menu/list thumbnails)
+
+Both `pngs/` and `dist/` are gitignored, so they're safe to use as local scratch directories.
+
+**Requirements:** the `cwebp` binary from Google's WebP tools, plus macOS (the script uses `sysctl`
+to parallelize across CPU cores).
+
+```bash
+brew install webp
+```
+
+**Usage:**
+
+1. Create a `pngs/` directory in the project root and drop the source PNGs in it. Only the top level
+   of `pngs/` is scanned — subdirectories are ignored.
+2. Run the conversion:
+
+   ```bash
+   npm run images:webp
+   ```
+
+3. Find the results in `dist/full/` and `dist/thumb/`. Output filenames match the source filenames,
+   with the `.png` extension swapped for `.webp` (e.g. `pngs/mai-tai.png` →
+   `dist/full/mai-tai.webp` and `dist/thumb/mai-tai.webp`).
+4. Upload the files to the DigitalOcean CDN — `dist/full/` goes to `cocktails/full-webp/`, and
+   `dist/thumb/` goes to `cocktails/thumbnail-webp/`.
+5. Clean up the local output when you're done:
+
+   ```bash
+   npm run images:clean
+   ```
+
 Example of "Path" images:
 
 ```

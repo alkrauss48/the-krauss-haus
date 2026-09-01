@@ -10,9 +10,9 @@ const MISSIONARYS_DOWNFALL: Cocktail = {
 	title: "Missionary's Downfall",
 	description: 'Light rum, stone fruit liqueur, mint, pineapple, honey syrup, lime.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/missionarys-downfall.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/missionarys-downfall.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/missionarys-downfall.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/missionarys-downfall.webp',
 	slug: 'missionarys-downfall',
 	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.Blended,

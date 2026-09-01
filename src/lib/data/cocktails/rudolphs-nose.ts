@@ -10,9 +10,9 @@ const RUDOLPHS_NOSE: Cocktail = {
 	title: "Rudolph's Nose",
 	description: 'Light rum, apple brandy, fassionola, falernum, pineapple, lime, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/rudolphs-nose.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/rudolphs-nose.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/rudolphs-nose.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/rudolphs-nose.webp',
 	slug: 'rudolphs-nose',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Shaken,

@@ -11,9 +11,9 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 	description:
 		'Gin, lemon, lime, simple syrup, egg white, heavy cream, soda water, orange blossom water.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/ramos-gin-fizz.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/ramos-gin-fizz.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ramos-gin-fizz.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/ramos-gin-fizz.webp',
 	slug: 'ramos-gin-fizz',
 	createdBy: HENRY_C_RAMOS,
 	method: CocktailMethod.Built,

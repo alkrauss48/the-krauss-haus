@@ -10,9 +10,9 @@ const JINGLE_BIRD: Cocktail = {
 	title: 'Jingle Bird',
 	description: 'Bourbon, Jamaican rum, campari, pineapple, lime, cinnamon, allspice dram, nutmeg.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/jingle-bird.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/jingle-bird.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/jingle-bird.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/jingle-bird.webp',
 	slug: 'jingle-bird',
 	createdBy: JEFF_BEACHBUM_BERRY,
 	method: CocktailMethod.Shaken,

@@ -9,9 +9,9 @@ const HUGO_SPRITZ: Cocktail = {
 	title: 'Hugo Spritz',
 	description: 'Prosecco, elderflower liqueur, soda water, lime wheel, mint sprig.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hugo-spritz.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/hugo-spritz.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hugo-spritz.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/hugo-spritz.webp',
 	slug: 'hugo-spritz',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,

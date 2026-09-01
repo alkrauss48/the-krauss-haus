@@ -10,9 +10,9 @@ const JUNGLE_BIRD: Cocktail = {
 	title: 'Jungle Bird',
 	description: 'Dark rum, campari, pineapple, lime, demarara syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/jungle-bird.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/jungle-bird.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/jungle-bird.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/jungle-bird.webp',
 	slug: 'jungle-bird',
 	createdBy: AVIARY_BAR_KUALA_LUMPUR,
 	method: CocktailMethod.Shaken,

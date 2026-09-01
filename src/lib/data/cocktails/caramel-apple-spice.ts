@@ -10,9 +10,9 @@ const CARAMEL_APPLE_SPICE: Cocktail = {
 	title: 'Caramel Apple Spice',
 	description: 'Apple brandy, goldschläger, caramel vodka, apple strudel liqueur, apple cider.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/caramel-apple-spice.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/caramel-apple-spice.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/caramel-apple-spice.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/caramel-apple-spice.webp',
 	slug: 'caramel-apple-spice',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Built,

@@ -9,9 +9,9 @@ const HOLLAND_HOUSE: Cocktail = {
 	title: 'Holland House',
 	description: 'Genever, dry vermouth, lemon, maraschino.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/holland-house.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/holland-house.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/holland-house.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/holland-house.webp',
 	slug: 'holland-house',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

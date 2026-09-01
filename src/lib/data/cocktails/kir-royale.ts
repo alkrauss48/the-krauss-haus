@@ -9,9 +9,9 @@ const KIR_ROYALE: Cocktail = {
 	title: 'Kir Royale',
 	description: 'Crème de baies noires, champagne.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/kir-royale.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/kir-royale.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/kir-royale.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/kir-royale.webp',
 	slug: 'kir-royale',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.FluteGlass,

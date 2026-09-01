@@ -9,9 +9,9 @@ const IMPROVED_HOLLAND_GIN_COCKTAIL: Cocktail = {
 	title: 'Improved Holland Gin Cocktail',
 	description: 'Genever, maraschino, simple syrup, angostura, absinthe.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/improved-holland-gin-cocktail.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/improved-holland-gin-cocktail.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/improved-holland-gin-cocktail.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/improved-holland-gin-cocktail.webp',
 	slug: 'improved-holland-gin-cocktail',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,

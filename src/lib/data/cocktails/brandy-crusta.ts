@@ -9,9 +9,9 @@ const BRANDY_CRUSTA: Cocktail = {
 	title: 'Brandy Crusta',
 	description: 'Cognac, dry curaçao, maraschino, lemon, angostura, sugar-crusted rim.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/brandy-crusta.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/brandy-crusta.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/brandy-crusta.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/brandy-crusta.webp',
 	slug: 'brandy-crusta',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

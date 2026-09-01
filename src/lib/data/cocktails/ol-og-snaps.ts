@@ -9,9 +9,9 @@ const OL_OG_SNAPS: Cocktail = {
 	title: 'Øl og Snaps',
 	description: 'Aquavit, pilsner lager.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/ol-og-snaps.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/ol-og-snaps.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ol-og-snaps.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/ol-og-snaps.webp',
 	slug: 'ol-og-snaps',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,

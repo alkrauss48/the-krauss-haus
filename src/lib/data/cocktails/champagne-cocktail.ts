@@ -9,9 +9,9 @@ const CHAMPAGNE_COCKTAIL: Cocktail = {
 	title: 'Champagne Cocktail',
 	description: 'Champagne, cognac, demerara syrup, angostura bitters, lemon twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/champagne-cocktail.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/champagne-cocktail.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/champagne-cocktail.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/champagne-cocktail.webp',
 	slug: 'champagne-cocktail',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.FluteGlass,

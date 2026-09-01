@@ -9,9 +9,9 @@ const AMERICANO: Cocktail = {
 	title: 'Americano',
 	description: 'Campari, sweet vermouth, soda water, orange twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/americano.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/americano.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/americano.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/americano.webp',
 	slug: 'americano',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,

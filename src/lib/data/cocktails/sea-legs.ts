@@ -8,9 +8,9 @@ const SEA_LEGS: Cocktail = {
 	title: 'Sea Legs',
 	description: 'Single malt scotch, mezcal, orgeat, lime, celery bitters, angostura bitters, salt.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/sea-legs.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/sea-legs.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sea-legs.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/sea-legs.webp',
 	slug: 'sea-legs',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

@@ -9,9 +9,9 @@ const COUNT_MAST: Cocktail = {
 	title: 'Count Mast',
 	description: 'Gin, jägermeister, sweet vermouth, lemon twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/count-mast.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/count-mast.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/count-mast.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/count-mast.webp',
 	slug: 'count-mast',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.CoupeGlass,

@@ -11,9 +11,9 @@ const LOST_LAKE: Cocktail = {
 	description:
 		'Jamaican rum blend, maraschino liqueur, campari, passion fruit syrup, lime, pineapple, maraschino cherry.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/lost-lake.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/lost-lake.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/lost-lake.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/lost-lake.webp',
 	slug: 'lost-lake',
 	createdBy: PAUL_MCGEE,
 	method: CocktailMethod.Shaken,

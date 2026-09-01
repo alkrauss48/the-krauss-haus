@@ -12,9 +12,9 @@ const PAPER_PLANE: Cocktail = {
 	createdBy: SAM_ROSS,
 	description: 'Bourbon, amaro nonino, aperol, lemon.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/paper-plane.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/paper-plane.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/paper-plane.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/paper-plane.webp',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
 	ice: Ice.None,

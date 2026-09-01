@@ -10,9 +10,9 @@ const YULE_TIDE: Cocktail = {
 	title: 'Yule Tide',
 	description: 'Blanco tequila, apple brandy, lime, cranberry cordial, maple.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/yule-tide.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/yule-tide.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/yule-tide.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/yule-tide.webp',
 	slug: 'yule-tide',
 	createdBy: JEFF_BEACHBUM_BERRY,
 	method: CocktailMethod.Shaken,

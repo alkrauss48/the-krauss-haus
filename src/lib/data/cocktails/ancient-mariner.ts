@@ -11,9 +11,9 @@ const ANCIENT_MARINER: Cocktail = {
 	description:
 		'Demerara rum, blended light rum, blanc rhum agricole, allspice dram, lime, grapefruit, demerara syrup, mint.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/ancient-mariner.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/ancient-mariner.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ancient-mariner.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/ancient-mariner.webp',
 	slug: 'ancient-mariner',
 	createdBy: JEFF_BEACHBUM_BERRY,
 	method: CocktailMethod.Shaken,

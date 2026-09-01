@@ -9,9 +9,9 @@ const QUEENS_PARK_SWIZZLE: Cocktail = {
 	title: "Queen's Park Swizzle",
 	description: 'Demerara rum, mint, lime, demerara syrup, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/queens-park-swizzle.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/queens-park-swizzle.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/queens-park-swizzle.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/queens-park-swizzle.webp',
 	slug: 'queens-park-swizzle',
 	method: CocktailMethod.Swizzled,
 	servedIn: ServedIn.HighballGlass,

@@ -10,9 +10,9 @@ const SLAP_N_PICKLE: Cocktail = {
 	title: "Slap 'N' Pickle",
 	description: 'Aquavit, cucumber, lime, simple syrup, grenadine, celery bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/slap-n-pickle.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/slap-n-pickle.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/slap-n-pickle.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/slap-n-pickle.webp',
 	slug: 'slap-n-pickle',
 	createdBy: BRIAN_MILLER,
 	method: CocktailMethod.Shaken,

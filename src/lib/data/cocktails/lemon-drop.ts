@@ -9,9 +9,9 @@ const LEMON_DROP: Cocktail = {
 	title: 'Lemon Drop',
 	description: 'Citron vodka, cointreau, lemon, simple syrup, sugar rim.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/lemon-drop.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/lemon-drop.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/lemon-drop.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/lemon-drop.webp',
 	slug: 'lemon-drop',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

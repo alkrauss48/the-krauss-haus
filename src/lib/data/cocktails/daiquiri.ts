@@ -9,9 +9,9 @@ const DAIQUIRI: Cocktail = {
 	title: 'Daiquiri',
 	description: 'Blended light rum, lime, simple syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/daiquiri.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/daiquiri.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/daiquiri.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/daiquiri.webp',
 	slug: 'daiquiri',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

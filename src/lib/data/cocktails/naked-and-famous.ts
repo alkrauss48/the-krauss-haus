@@ -10,9 +10,9 @@ const NAKED_AND_FAMOUS: Cocktail = {
 	title: 'Naked and Famous',
 	description: 'Mezcal, yellow chartreuse, aperol, lime.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/naked-and-famous.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/naked-and-famous.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/naked-and-famous.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/naked-and-famous.webp',
 	slug: 'naked-and-famous',
 	createdBy: JOAQUIN_SIMO,
 	method: CocktailMethod.Shaken,

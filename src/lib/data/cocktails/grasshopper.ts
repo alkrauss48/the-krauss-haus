@@ -9,9 +9,9 @@ const GRASSHOPPER: Cocktail = {
 	title: 'Grasshopper',
 	description: 'Vodka, mint syrup, crème de cacao, heavy cream.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/grasshopper.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/grasshopper.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/grasshopper.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/grasshopper.webp',
 	slug: 'grasshopper',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
