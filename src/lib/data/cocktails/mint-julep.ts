@@ -38,6 +38,7 @@ const MINT_JULEP: Cocktail = {
 		Tags.Technique.BUILT,
 		Tags.Origin.FOLK,
 		Tags.ServedIn.JULEP_TIN,
+		Tags.ServedIn.EXCLUSIVE_DRINKWARE,
 		Tags.PrepTime.SIMPLE_PREP
 	]
 };

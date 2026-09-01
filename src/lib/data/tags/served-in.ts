@@ -16,6 +16,11 @@ const TIKI_MUG: Tag = { label: 'Tiki Mug', category: SERVED_IN, order: 7 };
 const PINT_GLASS: Tag = { label: 'Pint Glass', category: SERVED_IN, order: 8 };
 const MUG: Tag = { label: 'Mug', category: SERVED_IN, order: 9 };
 const JULEP_TIN: Tag = { label: 'Julep Tin', category: SERVED_IN, order: 10 };
+const EXCLUSIVE_DRINKWARE: Tag = {
+	label: 'Exclusive Drinkware',
+	category: SERVED_IN,
+	order: 11
+};
 
 export const TAGS = {
 	COUPE_GLASS,
@@ -27,5 +32,6 @@ export const TAGS = {
 	TIKI_MUG,
 	PINT_GLASS,
 	MUG,
-	JULEP_TIN
+	JULEP_TIN,
+	EXCLUSIVE_DRINKWARE
 };

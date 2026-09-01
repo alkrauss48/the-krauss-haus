@@ -57,7 +57,8 @@ const SAZERAC: Cocktail = {
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC,
-		Tags.ServedIn.SINGLE_ROCKS_GLASS
+		Tags.ServedIn.SINGLE_ROCKS_GLASS,
+		Tags.ServedIn.EXCLUSIVE_DRINKWARE
 	]
 };
 

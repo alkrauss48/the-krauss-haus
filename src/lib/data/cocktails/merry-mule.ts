@@ -50,7 +50,8 @@ const MERRY_MULE: Cocktail = {
 		Tags.Technique.BUILT,
 		Tags.Style.HIGHBALL,
 		Tags.Origin.ORIGINAL,
-		Tags.ServedIn.MUG
+		Tags.ServedIn.MUG,
+		Tags.ServedIn.EXCLUSIVE_DRINKWARE
 	]
 };
 
