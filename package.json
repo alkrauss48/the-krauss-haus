@@ -13,7 +13,9 @@
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run",
 		"lint": "eslint . && prettier --check .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"images:webp": "mkdir -p dist/full dist/thumb && find pngs -maxdepth 1 -name '*.png' -print0 | xargs -0 -n 1 -P \"$(sysctl -n hw.ncpu)\" sh -c 'n=$(basename \"$1\" .png); cwebp -q 50 -resize 0 640 -m 6 -sharp_yuv -af -sns 80 -f 70 -pass 8 -alpha_filter best -alpha_q 70 -quiet \"$1\" -o \"dist/full/$n.webp\"; cwebp -q 55 -resize 0 160 -m 6 -sharp_yuv -af -sns 80 -f 70 -pass 8 -alpha_filter best -alpha_q 70 -quiet \"$1\" -o \"dist/thumb/$n.webp\"' _",
+		"images:clean": "rm -rf dist"
 	},
 	"devDependencies": {
 		"@csstools/postcss-oklab-function": "^4.0.10",
