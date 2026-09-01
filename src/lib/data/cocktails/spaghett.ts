@@ -9,9 +9,9 @@ const SPAGHETT: Cocktail = {
 	title: 'Spaghett',
 	description: 'Miller high life, aperol, lemon.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/spaghett.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/spaghett.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/spaghett.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/spaghett.webp',
 	slug: 'spaghett',
 	createdBy: REED_CAHILL,
 	method: CocktailMethod.Built,

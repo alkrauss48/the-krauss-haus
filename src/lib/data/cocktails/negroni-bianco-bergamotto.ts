@@ -9,9 +9,9 @@ const NEGRONI_BIANCO_BERGAMOTTO: Cocktail = {
 	title: 'Negroni Bianco Bergamotto',
 	description: 'Gin, italicus, dry vermouth, lemon twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/negroni-bianco-bergamotto.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/negroni-bianco-bergamotto.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/negroni-bianco-bergamotto.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/negroni-bianco-bergamotto.webp',
 	slug: 'negroni-bianco-bergamotto',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,

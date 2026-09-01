@@ -10,9 +10,9 @@ const RUM_RUNNER: Cocktail = {
 	description:
 		'Jamaican rum blend, stone fruit liqueur, dark berry crème, pineapple, grenadine, lime, orange.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/rum-runner.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/rum-runner.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/rum-runner.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/rum-runner.webp',
 	slug: 'rum-runner',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.HighballGlass,

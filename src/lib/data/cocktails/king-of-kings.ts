@@ -11,9 +11,9 @@ const KING_OF_KINGS: Cocktail = {
 	description:
 		'Blended rum, cognac, persian spice liqueur, overproof rum, demerara syrup, lime, orange, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/king-of-kings.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/king-of-kings.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/king-of-kings.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/king-of-kings.webp',
 	slug: 'king-of-kings',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.FlashBlended,

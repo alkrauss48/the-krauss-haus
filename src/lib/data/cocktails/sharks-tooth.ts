@@ -11,9 +11,9 @@ const SHARKS_TOOTH: Cocktail = {
 	description:
 		'Blended light rum, jamaican rum, lime, pineapple, rich simple syrup, maraschino cherry syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/sharks-tooth.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/sharks-tooth.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sharks-tooth.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/sharks-tooth.webp',
 	slug: 'sharks-tooth',
 	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.FlashBlended,

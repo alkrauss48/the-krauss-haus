@@ -9,9 +9,9 @@ const AMERICAN_TRILOGY: Cocktail = {
 	title: 'American Trilogy',
 	description: 'Rye whiskey, brandy, demerara syrup, orange bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/american-trilogy.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/american-trilogy.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/american-trilogy.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/american-trilogy.webp',
 	slug: 'american-trilogy',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,

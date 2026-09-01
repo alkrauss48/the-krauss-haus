@@ -9,9 +9,9 @@ const CANELAZO: Cocktail = {
 	title: 'Canelazo',
 	description: 'Aquavit, orange, cinnamon, clove, star anise, brown sugar, hot water.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/canelazo.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/canelazo.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/canelazo.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/canelazo.webp',
 	slug: 'canelazo',
 	method: CocktailMethod.Batched,
 	servedIn: ServedIn.Mug,

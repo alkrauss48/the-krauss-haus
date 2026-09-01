@@ -9,9 +9,9 @@ const SALTY_DOG: Cocktail = {
 	title: 'Salty Dog',
 	description: 'Vodka, grapefruit, salt.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/salty-dog.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/salty-dog.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/salty-dog.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/salty-dog.webp',
 	slug: 'salty-dog',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,

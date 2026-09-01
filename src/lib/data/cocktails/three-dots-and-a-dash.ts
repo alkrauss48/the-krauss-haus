@@ -11,9 +11,9 @@ const THREE_DOTS_AND_A_DASH: Cocktail = {
 	description:
 		'Aged rhum agricole, blended rum, demerara rum, honey, dry curaçao, lime, falernum, allspice dram, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/three-dots-and-a-dash.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/three-dots-and-a-dash.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/three-dots-and-a-dash.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/three-dots-and-a-dash.webp',
 	slug: 'three-dots-and-a-dash',
 	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.FlashBlended,

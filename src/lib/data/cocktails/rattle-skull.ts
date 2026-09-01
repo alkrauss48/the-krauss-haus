@@ -9,9 +9,9 @@ const RATTLE_SKULL: Cocktail = {
 	title: 'Rattle Skull',
 	description: 'Porter beer, dark rum, cognac, lime, demerara syrup, nutmeg.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/rattle-skull.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/rattle-skull.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/rattle-skull.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/rattle-skull.webp',
 	slug: 'rattle-skull',
 	method: CocktailMethod.Shaken,
 	servings: 2,

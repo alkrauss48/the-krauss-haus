@@ -9,9 +9,9 @@ const GODFATHER: Cocktail = {
 	title: 'Godfather',
 	description: 'Blended scotch, amaretto, black walnut bitters, orange twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/godfather.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/godfather.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/godfather.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/godfather.webp',
 	slug: 'godfather',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,

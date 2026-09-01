@@ -10,9 +10,9 @@ const RUSSIAN_SPRING_PUNCH: Cocktail = {
 	title: 'Russian Spring Punch',
 	description: 'Vodka, crème de baies noires, champagne, lemon, simple syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/russian-spring-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/russian-spring-punch.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/russian-spring-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/russian-spring-punch.webp',
 	slug: 'russian-spring-punch',
 	createdBy: DICK_BRADSELL,
 	method: CocktailMethod.Shaken,

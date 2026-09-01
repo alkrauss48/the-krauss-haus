@@ -9,9 +9,9 @@ const MINT_JULEP: Cocktail = {
 	title: 'Mint Julep',
 	description: 'Bourbon, mint syrup, mint sprig.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mint-julep.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/mint-julep.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/mint-julep.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/mint-julep.webp',
 	slug: 'mint-julep',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.JulepTin,

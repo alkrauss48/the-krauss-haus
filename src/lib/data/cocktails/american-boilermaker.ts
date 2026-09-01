@@ -9,9 +9,9 @@ const AMERICAN_BOILERMAKER: Cocktail = {
 	title: 'American Boilermaker',
 	description: 'Bourbon, beer.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/american-boilermaker.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/american-boilermaker.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/american-boilermaker.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/american-boilermaker.webp',
 	slug: 'american-boilermaker',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,

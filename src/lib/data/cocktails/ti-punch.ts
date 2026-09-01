@@ -9,9 +9,9 @@ const TI_PUNCH: Cocktail = {
 	title: 'Ti Punch',
 	description: 'Rhum agricole, lime, simple syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/ti-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/ti-punch.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/ti-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/ti-punch.webp',
 	slug: 'ti-punch',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.SingleRocksGlass,

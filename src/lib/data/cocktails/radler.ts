@@ -9,9 +9,9 @@ const RADLER: Cocktail = {
 	title: 'Radler',
 	description: 'Pilsner lager, sparkling lemonade.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/radler.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/radler.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/radler.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/radler.webp',
 	slug: 'radler',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,

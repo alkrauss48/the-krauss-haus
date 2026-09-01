@@ -9,9 +9,9 @@ const PALOMA: Cocktail = {
 	title: 'Paloma',
 	description: 'Blanco tequila, grapefruit, lime, agave, soda water, salt.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/paloma.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/paloma.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/paloma.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/paloma.webp',
 	slug: 'paloma',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,

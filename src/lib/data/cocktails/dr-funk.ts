@@ -10,9 +10,9 @@ const DR_FUNK: Cocktail = {
 	title: 'Dr. Funk',
 	description: 'Blended rum, absinthe, lime, grenadine, simple syrup, mint.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/dr-funk.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/dr-funk.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/dr-funk.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/dr-funk.webp',
 	slug: 'dr-funk',
 	createdBy: DONN_THE_BEACHCOMBER,
 	method: CocktailMethod.FlashBlended,

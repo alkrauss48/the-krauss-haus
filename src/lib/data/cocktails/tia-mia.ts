@@ -10,9 +10,9 @@ const TIA_MIA: Cocktail = {
 	title: 'Tia Mia',
 	description: 'Mezcal, jamaican rum, dry curaçao, orgeat, lime.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/tia-mia.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/tia-mia.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/tia-mia.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/tia-mia.webp',
 	slug: 'tia-mia',
 	createdBy: IVY_MIX,
 	method: CocktailMethod.Shaken,

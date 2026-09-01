@@ -10,9 +10,9 @@ const NORWEIGAN_PARALYSIS: Cocktail = {
 	title: 'Norwegian Paralysis',
 	description: 'Aquavit, orange, pineapple, lemon, demarara syrup, orgeat.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/norwegian-paralysis.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/norwegian-paralysis.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/norwegian-paralysis.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/norwegian-paralysis.webp',
 	slug: 'norwegian-paralysis',
 	createdBy: MARTIN_CATE,
 	method: CocktailMethod.Shaken,

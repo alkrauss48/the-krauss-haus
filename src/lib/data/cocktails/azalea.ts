@@ -10,9 +10,9 @@ const AZALEA: Cocktail = {
 	description:
 		'Vodka, grenadine, lemon, rich simple syrup, water, grenadine, maraschino cherry, orange slice.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/azalea.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/azalea.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/azalea.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/azalea.webp',
 	slug: 'azalea',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.HighballGlass,

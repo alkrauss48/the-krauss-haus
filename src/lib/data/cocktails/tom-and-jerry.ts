@@ -10,9 +10,9 @@ const TOM_AND_JERRY: Cocktail = {
 	slug: 'tom-and-jerry',
 	description: 'Bourbon, dark rum, egg, sugar, nutmeg.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/tom-and-jerry.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/tom-and-jerry.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/tom-and-jerry.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/tom-and-jerry.webp',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.Mug,
 	ice: Ice.Hot,

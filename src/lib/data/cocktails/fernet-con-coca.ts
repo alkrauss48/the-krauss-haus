@@ -9,9 +9,9 @@ const FERNET_CON_COCA: Cocktail = {
 	title: 'Fernet con Coca',
 	description: 'Fernet branca, coca cola, ice.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/fernet-con-coca.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/fernet-con-coca.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/fernet-con-coca.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/fernet-con-coca.webp',
 	slug: 'fernet-con-coca',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,

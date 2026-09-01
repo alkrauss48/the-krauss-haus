@@ -10,9 +10,9 @@ const BRAMBLE: Cocktail = {
 	title: 'Bramble',
 	description: 'Gin, crème de baies noires, lemon, rich simple syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/bramble.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/bramble.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/bramble.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/bramble.webp',
 	slug: 'bramble',
 	createdBy: DICK_BRADSELL,
 	method: CocktailMethod.Shaken,

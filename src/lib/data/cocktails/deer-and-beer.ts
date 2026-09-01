@@ -9,9 +9,9 @@ const DEER_AND_BEER: Cocktail = {
 	title: 'Deer and Beer',
 	description: 'Jägermeister, pilsner lager.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/deer-and-beer.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/deer-and-beer.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/deer-and-beer.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/deer-and-beer.webp',
 	slug: 'deer-and-beer',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,

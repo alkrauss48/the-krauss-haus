@@ -9,9 +9,9 @@ const WIDOWS_KISS: Cocktail = {
 	title: "Widow's Kiss",
 	description: 'Calvados, yellow chartreuse, benedictine, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/widows-kiss.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/widows-kiss.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/widows-kiss.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/widows-kiss.webp',
 	slug: 'widows-kiss',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.NickAndNoraGlass,

@@ -9,9 +9,9 @@ const SPRITZ: Cocktail = {
 	title: 'Spritz',
 	description: 'Prosecco, aperol, soda water, orange wedge.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/spritz.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/spritz.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/spritz.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/spritz.webp',
 	slug: 'spritz',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,

@@ -9,9 +9,9 @@ const EL_PRESIDENTE: Cocktail = {
 	title: 'El Presidente',
 	description: 'Light rum, dry vermouth, dry curaçao, grenadine, orange twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/el-presidente.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/el-presidente.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/el-presidente.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/el-presidente.webp',
 	slug: 'el-presidente',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.NickAndNoraGlass,

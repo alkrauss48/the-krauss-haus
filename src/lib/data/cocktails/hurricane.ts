@@ -10,9 +10,9 @@ const HURRICANE: Cocktail = {
 	title: 'Hurricane',
 	description: 'Jamaican rum blend, fassionola, lemon.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hurricane.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/hurricane.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hurricane.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/hurricane.webp',
 	slug: 'hurricane',
 	createdBy: PAT_OBRIEN,
 	method: CocktailMethod.FlashBlended,

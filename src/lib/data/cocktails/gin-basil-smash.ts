@@ -10,9 +10,9 @@ const GIN_BASIL_SMASH: Cocktail = {
 	title: 'Gin Basil Smash',
 	description: 'Gin, lemon, simple syrup, basil.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/gin-basil-smash.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/gin-basil-smash.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/gin-basil-smash.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/gin-basil-smash.webp',
 	slug: 'gin-basil-smash',
 	createdBy: JORG_MEYER,
 	method: CocktailMethod.Shaken,

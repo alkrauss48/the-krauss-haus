@@ -10,9 +10,9 @@ const PAINKILLER: Cocktail = {
 	title: 'Painkiller',
 	description: 'Demerara rum, pineapple, cream of coconut, orange, nutmeg.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/painkiller.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/painkiller.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/painkiller.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/painkiller.webp',
 	slug: 'painkiller',
 	createdBy: SOGGY_DOLLAR_BAR,
 	method: CocktailMethod.Shaken,

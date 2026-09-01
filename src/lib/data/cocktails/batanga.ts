@@ -10,9 +10,9 @@ const BATANGA: Cocktail = {
 	title: 'Batanga',
 	description: 'Blanco tequila, coca cola, lime, salt.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/batanga.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/batanga.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/batanga.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/batanga.webp',
 	slug: 'batanga',
 	createdBy: LA_CAPILLA,
 	method: CocktailMethod.Built,

@@ -9,9 +9,9 @@ const BOULEVARDIER: Cocktail = {
 	title: 'Boulevardier',
 	description: 'Rye whiskey, campari, sweet vermouth, orange twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/boulevardier.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/boulevardier.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/boulevardier.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/boulevardier.webp',
 	slug: 'boulevardier',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,

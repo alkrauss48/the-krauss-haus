@@ -10,9 +10,9 @@ const PINA_VERDE: Cocktail = {
 	title: 'Piña Verde',
 	description: 'Green chartreuse, pineapple, lime, cream of coconut, mint.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/pina-verde.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/pina-verde.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/pina-verde.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/pina-verde.webp',
 	slug: 'pina-verde',
 	createdBy: ERICK_CASTRO,
 	method: CocktailMethod.Shaken,

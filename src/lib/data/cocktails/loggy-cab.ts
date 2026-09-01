@@ -10,9 +10,9 @@ const LOGGY_CAB: Cocktail = {
 	title: 'Loggy Cab',
 	description: 'Gin, lime, simple syrup, soda water.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/loggy-cab.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/loggy-cab.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/loggy-cab.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/loggy-cab.webp',
 	slug: 'loggy-cab',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Built,

@@ -9,9 +9,9 @@ const JACK_ROSE: Cocktail = {
 	title: 'Jack Rose',
 	description: 'Apple brandy, grenadine, lemon.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/jack-rose.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/jack-rose.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/jack-rose.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/jack-rose.webp',
 	slug: 'jack-rose',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

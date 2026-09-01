@@ -9,9 +9,9 @@ const PLANTERS_PUNCH: Cocktail = {
 	title: "Planter's Punch",
 	description: 'Jamaican rum, demerara syrup, lime, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/planters-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/planters-punch.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/planters-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/planters-punch.webp',
 	slug: 'planters-punch',
 	method: CocktailMethod.Swizzled,
 	servedIn: ServedIn.HighballGlass,

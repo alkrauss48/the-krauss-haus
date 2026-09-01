@@ -10,9 +10,9 @@ const SIPPIN_SANTA: Cocktail = {
 	title: "Sippin' Santa",
 	description: 'Demerara rum, amaro, lemon, orange, honey-ginger, cinnamon, nutmeg.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/sippin-santa.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/sippin-santa.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/sippin-santa.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/sippin-santa.webp',
 	slug: 'sippin-santa',
 	createdBy: JEFF_BEACHBUM_BERRY,
 	method: CocktailMethod.Shaken,

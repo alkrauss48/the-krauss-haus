@@ -10,9 +10,9 @@ const MAI_TAI: Cocktail = {
 	title: 'Mai Tai',
 	description: 'Jamaican rum, rhum agricole, dry curaçao, orgeat, lime, demerara syrup.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mai-tai.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/mai-tai.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/mai-tai.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/mai-tai.webp',
 	slug: 'mai-tai',
 	createdBy: TRADER_VIC,
 	method: CocktailMethod.Shaken,

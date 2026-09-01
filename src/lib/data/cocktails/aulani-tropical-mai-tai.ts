@@ -9,9 +9,9 @@ const AULANI_TROPICAL_MAI_TAI: Cocktail = {
 	title: 'Aulani Tropical Mai Tai',
 	description: 'Light rum, dark rum float, dry curaçao, orgeat, lime, pineapple, passionfruit.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/aulani-tropical-mai-tai.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/aulani-tropical-mai-tai.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/aulani-tropical-mai-tai.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/aulani-tropical-mai-tai.webp',
 	slug: 'aulani-tropical-mai-tai',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.TikiMug,

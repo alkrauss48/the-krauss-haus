@@ -9,9 +9,9 @@ const CAIPIRINHA: Cocktail = {
 	title: 'Caipirinha',
 	description: 'Cachaça, lime, sugar.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/caipirinha.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/caipirinha.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/caipirinha.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/caipirinha.webp',
 	slug: 'caipirinha',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,

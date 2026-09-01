@@ -12,9 +12,9 @@ const DIVISION_BELL: Cocktail = {
 	createdBy: PHIL_WARD,
 	description: 'Mezcal, aperol, maraschino liqueur, lime, grapefruit twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/division-bell.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/division-bell.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/division-bell.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/division-bell.webp',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,
 	ice: Ice.None,

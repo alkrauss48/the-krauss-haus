@@ -9,9 +9,9 @@ const COSMOPOLITAN: Cocktail = {
 	title: 'Cosmopolitan',
 	description: 'Citron vodka, cointreau, lime, cranberry cordial, simple syrup, orange twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/cosmopolitan.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/cosmopolitan.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/cosmopolitan.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/cosmopolitan.webp',
 	slug: 'cosmopolitan',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

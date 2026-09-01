@@ -11,9 +11,9 @@ const SINGAPORE_SLING: Cocktail = {
 	description:
 		'Gin, cherry heering, benedictine, cointreau, grenadine, pineapple, lime, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/singapore-sling.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/singapore-sling.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/singapore-sling.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/singapore-sling.webp',
 	slug: 'singapore-sling',
 	createdBy: RAFFLES_HOTEL_LONG_BAR,
 	method: CocktailMethod.Shaken,

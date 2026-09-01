@@ -9,9 +9,9 @@ const PLUNDERERS_PUNCH: Cocktail = {
 	title: "Plunderer's Punch",
 	description: 'Jamaican rum, dark berry liqueur, lime, vanilla, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/plunderers-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/plunderers-punch.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/plunderers-punch.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/plunderers-punch.webp',
 	slug: 'plunderers-punch',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.TikiMug,

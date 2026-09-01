@@ -11,9 +11,9 @@ const FOREST_SPIRIT: Cocktail = {
 	description:
 		'Gin, elderflower liqueur, italicus, lemon, honey syrup, orange bitters, tonic water, mint.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/forest-spirit.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/forest-spirit.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/forest-spirit.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/forest-spirit.webp',
 	slug: 'forest-spirit',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Shaken,

@@ -9,9 +9,9 @@ const CORN_N_OIL: Cocktail = {
 	title: "Corn 'n Oil",
 	description: 'Jamaican rum, falernum, lime, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/corn-n-oil.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/corn-n-oil.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/corn-n-oil.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/corn-n-oil.webp',
 	slug: 'corn-n-oil',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.DoubleRocksGlass,

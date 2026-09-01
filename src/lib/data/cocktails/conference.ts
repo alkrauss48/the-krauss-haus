@@ -10,9 +10,9 @@ const CONFERENCE: Cocktail = {
 	title: 'Conference',
 	description: 'Bourbon, rye, calvados, cognac, demerara syrup, angostura and xocolatl bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/conference.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/conference.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/conference.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/conference.webp',
 	slug: 'conference',
 	createdBy: BRIAN_MILLER,
 	method: CocktailMethod.Stirred,

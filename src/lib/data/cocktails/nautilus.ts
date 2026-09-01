@@ -10,9 +10,9 @@ const NAUTILUS: Cocktail = {
 	description:
 		'Jamaican rum, rhum agricole, stone fruit liqueur, pineapple, orange, passionfruit, falernum, lime, lemon, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/nautilus.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/nautilus.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/nautilus.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/nautilus.webp',
 	slug: 'nautilus',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.TikiMug,

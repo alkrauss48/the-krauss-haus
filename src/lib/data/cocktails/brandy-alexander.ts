@@ -9,9 +9,9 @@ const BRANDY_ALEXANDER: Cocktail = {
 	title: 'Brandy Alexander',
 	description: 'Cognac, crème de cacao, heavy cream, nutmeg.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/brandy-alexander.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/brandy-alexander.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/brandy-alexander.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/brandy-alexander.webp',
 	slug: 'brandy-alexander',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

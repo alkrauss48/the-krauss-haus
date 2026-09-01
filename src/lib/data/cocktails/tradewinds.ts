@@ -9,9 +9,9 @@ const TRADEWINDS: Cocktail = {
 	title: 'Tradewinds',
 	description: 'Jamaican rum blend, stone fruit liqueur, lemon, coconut cream.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/tradewinds.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/tradewinds.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/tradewinds.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/tradewinds.webp',
 	slug: 'tradewinds',
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.HighballGlass,

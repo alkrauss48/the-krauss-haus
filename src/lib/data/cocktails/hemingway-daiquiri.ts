@@ -9,9 +9,9 @@ const HEMINGWAY_DAIQUIRI: Cocktail = {
 	title: 'Hemingway Daiquiri',
 	description: 'Blended light rum, maraschino liqueur, lime, grapefruit.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/hemingway-daiquiri.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/hemingway-daiquiri.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/hemingway-daiquiri.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/hemingway-daiquiri.webp',
 	slug: 'hemingway-daiquiri',
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.CoupeGlass,

@@ -9,9 +9,9 @@ const MIMOSA: Cocktail = {
 	title: 'Mimosa',
 	description: 'Champagne, orange juice',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mimosa.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/mimosa.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/mimosa.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/mimosa.webp',
 	slug: 'mimosa',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.FluteGlass,

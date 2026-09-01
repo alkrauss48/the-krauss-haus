@@ -9,9 +9,9 @@ const KOLAWEIZEN: Cocktail = {
 	title: 'Kolaweizen',
 	description: 'Hefeweizen, coca-cola.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/kolaweizen.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/kolaweizen.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/kolaweizen.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/kolaweizen.webp',
 	slug: 'kolaweizen',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.PintGlass,

@@ -9,9 +9,9 @@ const MARTINEZ: Cocktail = {
 	title: 'Martinez',
 	description: 'Genever, sweet vermouth, maraschino, angostura, orange bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/martinez.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/martinez.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/martinez.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/martinez.webp',
 	slug: 'martinez',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.NickAndNoraGlass,

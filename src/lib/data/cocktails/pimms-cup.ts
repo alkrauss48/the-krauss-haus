@@ -9,9 +9,9 @@ const PIMMS_CUP: Cocktail = {
 	title: "Pimm's Cup",
 	description: "Pimm's #1, sparkling lemonade, cucumber, orange, strawberry, mint.",
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/pimms-cup.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/pimms-cup.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/pimms-cup.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/pimms-cup.webp',
 	slug: 'pimms-cup',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,

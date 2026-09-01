@@ -9,9 +9,9 @@ const NEGRONI: Cocktail = {
 	title: 'Negroni',
 	description: 'Gin, campari, sweet vermouth, orange twist.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/negroni.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/negroni.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/negroni.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/negroni.webp',
 	slug: 'negroni',
 	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,

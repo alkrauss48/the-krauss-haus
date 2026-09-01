@@ -10,9 +10,9 @@ const RUM_BARREL: Cocktail = {
 	description:
 		'Jamaican rum, demarara rum, overproof rum, lime, pineapple, demerara syrup, allspice dram, falernum, angostura bitters, mint.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/rum-barrel.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/rum-barrel.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/rum-barrel.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/rum-barrel.webp',
 	slug: 'rum-barrel',
 	method: CocktailMethod.FlashBlended,
 	servedIn: ServedIn.TikiMug,

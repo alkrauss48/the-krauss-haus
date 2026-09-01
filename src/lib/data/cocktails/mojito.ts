@@ -9,9 +9,9 @@ const MOJITO: Cocktail = {
 	title: 'Mojito',
 	description: 'Light rum, lime, sugar, mint, angostura bitters.',
 	imagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full/mojito.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/mojito.webp',
 	thumbnailImagePath:
-		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail/mojito.png',
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/mojito.webp',
 	slug: 'mojito',
 	method: CocktailMethod.Built,
 	servedIn: ServedIn.HighballGlass,
