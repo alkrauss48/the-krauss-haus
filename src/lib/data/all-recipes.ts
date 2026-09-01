@@ -12,6 +12,7 @@ import MINT_SYRUP from '$lib/data/recipes/mint-syrup';
 import ORGEAT from '$lib/data/recipes/orgeat';
 import PASSIONFRUIT_SYRUP from '$lib/data/recipes/passionfruit-syrup';
 import RICH_SIMPLE_SYRUP from '$lib/data/recipes/rich-simple-syrup';
+import VANILLA_SYRUP from '$lib/data/recipes/vanilla-syrup';
 import TOM_AND_JERRY_BATTER from '$lib/data/recipes/tom-and-jerry-batter';
 
 // Import all infusion recipes
@@ -44,7 +45,8 @@ export const syrups: Recipe[] = [
 	MINT_SYRUP,
 	ORGEAT,
 	PASSIONFRUIT_SYRUP,
-	RICH_SIMPLE_SYRUP
+	RICH_SIMPLE_SYRUP,
+	VANILLA_SYRUP
 ];
 
 // Infusions

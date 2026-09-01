@@ -86,6 +86,7 @@ const OLD_FASHIONED: Cocktail = {
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
+		Tags.ServedIn.EXCLUSIVE_DRINKWARE,
 		Tags.PrepTime.SIMPLE_PREP
 	]
 };

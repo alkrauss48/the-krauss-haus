@@ -7,6 +7,7 @@ import AMERICAN_BOILERMAKER from '$lib/data/cocktails/american-boilermaker';
 import AMERICAN_TRILOGY from '$lib/data/cocktails/american-trilogy';
 import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
+import AULANI_TROPICAL_MAI_TAI from '$lib/data/cocktails/aulani-tropical-mai-tai';
 import AZALEA from '$lib/data/cocktails/azalea';
 import BATANGA from '$lib/data/cocktails/batanga';
 import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-giuseppe';
@@ -59,6 +60,7 @@ import IMPROVED_HOLLAND_GIN_COCKTAIL from '$lib/data/cocktails/improved-holland-
 import IRON_RANGER from '$lib/data/cocktails/iron-ranger';
 import JACK_ROSE from '$lib/data/cocktails/jack-rose';
 import JET_PILOT from '$lib/data/cocktails/jet-pilot';
+import JINGLE_BIRD from '$lib/data/cocktails/jingle-bird';
 import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
 import KING_OF_KINGS from '$lib/data/cocktails/king-of-kings';
 import KIR_ROYALE from '$lib/data/cocktails/kir-royale';
@@ -80,6 +82,7 @@ import MISSIONARYS_DOWNFALL from '$lib/data/cocktails/missionarys-downfall';
 import MOJITO from '$lib/data/cocktails/mojito';
 import MOONWELL from '$lib/data/cocktails/moonwell';
 import NAKED_AND_FAMOUS from '$lib/data/cocktails/naked-and-famous';
+import NAUTILUS from '$lib/data/cocktails/nautilus';
 import NAVY_GROG from '$lib/data/cocktails/navy-grog';
 import NEGRONI from '$lib/data/cocktails/negroni';
 import NEGRONI_BIANCO_BERGAMOTTO from '$lib/data/cocktails/negroni-bianco-bergamotto';
@@ -95,6 +98,7 @@ import PENICILLIN from '$lib/data/cocktails/penicillin';
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
 import PINA_VERDE from '$lib/data/cocktails/pina-verde';
 import PLANTERS_PUNCH from '$lib/data/cocktails/planters-punch';
+import PLUNDERERS_PUNCH from '$lib/data/cocktails/plunderers-punch';
 import PORT_LIGHT from '$lib/data/cocktails/port-light';
 import QUEENS_PARK_SWIZZLE from '$lib/data/cocktails/queens-park-swizzle';
 import RADLER from '$lib/data/cocktails/radler';
@@ -108,6 +112,7 @@ import SALTY_DOG from '$lib/data/cocktails/salty-dog';
 import SANGRIA from '$lib/data/cocktails/sangria';
 import SATURN from '$lib/data/cocktails/saturn';
 import SAZERAC from '$lib/data/cocktails/sazerac';
+import SIPPIN_SANTA from '$lib/data/cocktails/sippin-santa';
 import SEA_LEGS from '$lib/data/cocktails/sea-legs';
 import SHARKS_TOOTH from '$lib/data/cocktails/sharks-tooth';
 import SIDECAR from '$lib/data/cocktails/sidecar';
@@ -128,6 +133,7 @@ import WHISKEY_GINGER from '$lib/data/cocktails/whiskey-ginger';
 import WHISKEY_SOUR from '$lib/data/cocktails/whiskey-sour';
 import WIDOWS_KISS from '$lib/data/cocktails/widows-kiss';
 import WRAY_AND_TING from '$lib/data/cocktails/wray-and-ting';
+import YULE_TIDE from '$lib/data/cocktails/yule-tide';
 import ZOMBIE from '$lib/data/cocktails/zombie';
 
 // Create array of all cocktails (sorted alphabetically)
@@ -138,6 +144,7 @@ export const allCocktails: Cocktail[] = [
 	AMERICAN_TRILOGY,
 	AMERICANO,
 	ANCIENT_MARINER,
+	AULANI_TROPICAL_MAI_TAI,
 	AZALEA,
 	BATANGA,
 	BITTER_GIUSEPPE,
@@ -190,6 +197,7 @@ export const allCocktails: Cocktail[] = [
 	IRON_RANGER,
 	JACK_ROSE,
 	JET_PILOT,
+	JINGLE_BIRD,
 	JUNGLE_BIRD,
 	KING_OF_KINGS,
 	KIR_ROYALE,
@@ -211,6 +219,7 @@ export const allCocktails: Cocktail[] = [
 	MOJITO,
 	MOONWELL,
 	NAKED_AND_FAMOUS,
+	NAUTILUS,
 	NAVY_GROG,
 	NEGRONI,
 	NEGRONI_BIANCO_BERGAMOTTO,
@@ -226,6 +235,7 @@ export const allCocktails: Cocktail[] = [
 	PIMMS_CUP,
 	PINA_VERDE,
 	PLANTERS_PUNCH,
+	PLUNDERERS_PUNCH,
 	PORT_LIGHT,
 	QUEENS_PARK_SWIZZLE,
 	RADLER,
@@ -242,6 +252,7 @@ export const allCocktails: Cocktail[] = [
 	SEA_LEGS,
 	SHARKS_TOOTH,
 	SIDECAR,
+	SIPPIN_SANTA,
 	SINGAPORE_SLING,
 	SLAP_N_PICKLE,
 	SPAGHETT,
@@ -259,6 +270,7 @@ export const allCocktails: Cocktail[] = [
 	WHISKEY_SOUR,
 	WIDOWS_KISS,
 	WRAY_AND_TING,
+	YULE_TIDE,
 	ZOMBIE
 ].sort((a, b) => a.title.localeCompare(b.title));
 

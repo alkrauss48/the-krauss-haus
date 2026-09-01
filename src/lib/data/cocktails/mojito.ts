@@ -27,8 +27,8 @@ const MOJITO: Cocktail = {
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
-			amount: '1 tbsp',
-			ingredient: Ingredients.Other.SUGAR
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.MINT_SYRUP
 		},
 		{
 			amount: '6-10 leaves',
@@ -48,20 +48,8 @@ const MOJITO: Cocktail = {
 			ingredient: Ingredients.Bitters.ANGOSTURA
 		}
 	],
-	variations: [
-		{
-			name: 'Mintier',
-			ingredients: [
-				{
-					label: 'Sub sugar with .5oz mint syrup.',
-					ingredient: Ingredients.Syrups.MINT_SYRUP
-				}
-			],
-			images: []
-		}
-	],
 	notes:
-		'Muddle lime, sugar, and mint lightly in glass. Add rum, then ice cubes. Stir, top with soda water and garnishes.',
+		'Muddle lime, mint syrup, and mint lightly in glass. Add rum, then ice cubes. Stir, top with soda water and garnishes.',
 	tags: [
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CITRUS,
