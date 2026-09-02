@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const KIR_ROYALE: Cocktail = {
 	title: 'Kir Royale',
-	description: 'Crème de baies noires, champagne.',
+	description: 'Dark berry liqueur, champagne.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/kir-royale.webp',
 	thumbnailImagePath:

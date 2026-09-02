@@ -8,7 +8,7 @@ import JEFF_BEACHBUM_BERRY from '$lib/data/bartenders/jeff-beachbum-berry';
 
 const JINGLE_BIRD: Cocktail = {
 	title: 'Jingle Bird',
-	description: 'Bourbon, Jamaican rum, campari, pineapple, lime, cinnamon, allspice dram, nutmeg.',
+	description: 'Bourbon, jamaican rum, campari, pineapple, lime, cinnamon, allspice dram, nutmeg.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/jingle-bird.webp',
 	thumbnailImagePath:

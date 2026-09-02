@@ -59,8 +59,8 @@ const OLD_FASHIONED: Cocktail = {
 			name: 'Rum',
 			ingredients: [
 				{
-					label: 'Sub aged rhum agricole for bourbon.',
-					ingredient: Ingredients.BaseSpirits.CLEMENT_SELECT_BARREL
+					label: 'Sub aged jamaican rum for bourbon.',
+					ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_12_YEAR
 				}
 			],
 			images: []
