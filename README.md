@@ -141,6 +141,36 @@ No text, labels, borders, mockups, or explanation.
 
 And then paste the cocktail details, such as the cocktail JSON file.
 
+### Building the prompt
+
+The `images:prompt` script assembles that whole prompt for you — it reads the template above
+straight out of this README, then appends the selected cocktail's data as JSON.
+
+```bash
+npm run images:prompt
+```
+
+It opens a type-to-search list of every cocktail in `src/lib/data/cocktails/`. Filter with any
+substring or initials (`mtai` finds Mai Tai), move with ↑/↓, pick with enter, bail with esc. On
+macOS the finished prompt is copied to your clipboard, ready to paste into ChatGPT.
+
+To skip the picker, pass a slug or title:
+
+```bash
+npm run images:prompt -- mai-tai
+```
+
+The prompt is written to stdout and all the interactive output to stderr, so it also pipes cleanly:
+
+```bash
+npm run images:prompt -- mai-tai > mai-tai-prompt.txt
+```
+
+The cocktail is loaded through Vite, so `$lib` imports resolve and shared ingredient, tag, and
+bartender objects are inlined into the JSON — ChatGPT sees the real ingredient names rather than
+`Ingredients.BaseSpirits.SMITH_AND_CROSS`. The image URLs and tag category colors are stripped,
+since neither tells the illustrator anything useful.
+
 ### Converting PNGs to WebP
 
 Generated PNGs need to be converted to WebP before being uploaded to the CDN. The `images:webp`
