@@ -97,6 +97,7 @@ import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
 import PENICILLIN from '$lib/data/cocktails/penicillin';
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
 import PINA_VERDE from '$lib/data/cocktails/pina-verde';
+import PINEAPPLE_POTION from '$lib/data/cocktails/pineapple-potion';
 import PLANTERS_PUNCH from '$lib/data/cocktails/planters-punch';
 import PLUNDERERS_PUNCH from '$lib/data/cocktails/plunderers-punch';
 import PORT_LIGHT from '$lib/data/cocktails/port-light';
@@ -234,6 +235,7 @@ export const allCocktails: Cocktail[] = [
 	PENICILLIN,
 	PIMMS_CUP,
 	PINA_VERDE,
+	PINEAPPLE_POTION,
 	PLANTERS_PUNCH,
 	PLUNDERERS_PUNCH,
 	PORT_LIGHT,
