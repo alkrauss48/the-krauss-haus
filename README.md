@@ -158,6 +158,9 @@ to parallelize across CPU cores).
 brew install webp
 ```
 
+Uploading additionally needs the AWS CLI and a `spaces` profile in `~/.aws/credentials` holding a
+DigitalOcean Spaces access key with write permission on the `personal-k8s-main-space` Space.
+
 **Usage:**
 
 1. Create a `pngs/` directory in the project root and drop the source PNGs in it. Only the top level
@@ -171,8 +174,16 @@ brew install webp
 3. Find the results in `dist/full/` and `dist/thumb/`. Output filenames match the source filenames,
    with the `.png` extension swapped for `.webp` (e.g. `pngs/mai-tai.png` →
    `dist/full/mai-tai.webp` and `dist/thumb/mai-tai.webp`).
-4. Upload the files to the DigitalOcean CDN — `dist/full/` goes to `cocktails/full-webp/`, and
-   `dist/thumb/` goes to `cocktails/thumbnail-webp/`.
+4. Upload the files to the DigitalOcean CDN:
+
+   ```bash
+   npm run images:upload
+   ```
+
+   This syncs `dist/full/` to `cocktails/full-webp/` and `dist/thumb/` to
+   `cocktails/thumbnail-webp/`, uploading each file as `image/webp` with a `public-read` ACL. Files
+   that already exist at those keys are overwritten in place.
+
 5. Clean up the local output when you're done:
 
    ```bash
