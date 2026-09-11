@@ -63,7 +63,6 @@ const CONFERENCE: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };

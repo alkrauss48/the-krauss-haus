@@ -14,7 +14,7 @@
 	import type { LogicMode } from '$lib/types/filters';
 	import { matchesTagsLogic, matchesIngredientsLogic } from '$lib/utils/filterLogic';
 	import { formatVariantIngredients } from '$lib/utils/ingredients';
-	import { getDisplayCost, formatCost } from '$lib/utils/cost';
+	import { getDisplayCost, getDisplayCostPerOz, formatCost } from '$lib/utils/cost';
 	import { costMode } from '$lib/stores/costMode';
 
 	export let cocktails: Cocktail[];
@@ -32,6 +32,7 @@
 	let isFilterSidebarOpen = false;
 	let sortColumn: 'cost' | null = null;
 	let sortDirection: 'asc' | 'desc' = 'asc';
+	let costUnit: 'cocktail' | 'oz' = 'cocktail';
 
 	function toggleCostSort(): void {
 		if (sortColumn === 'cost') {
@@ -71,11 +72,13 @@
 		return matchesSearch && matchesTags && matchesIngredients;
 	});
 
+	$: costFn = costUnit === 'oz' ? getDisplayCostPerOz : getDisplayCost;
+
 	$: sortedCocktails =
 		sortColumn === 'cost'
 			? [...filteredCocktails].sort((a, b) => {
-					const costA = getDisplayCost(a) ?? -Infinity;
-					const costB = getDisplayCost(b) ?? -Infinity;
+					const costA = costFn(a) ?? -Infinity;
+					const costB = costFn(b) ?? -Infinity;
 					return sortDirection === 'asc' ? costA - costB : costB - costA;
 				})
 			: filteredCocktails;
@@ -423,17 +426,45 @@
 				<div class={descColClass}>Description</div>
 				<div class="col-span-3 hidden sm:block md:col-span-2">Method</div>
 				{#if $costMode}
-					<button
-						class="col-span-2 text-green-700 text-left cursor-pointer hover:text-green-900 transition-colors"
-						on:click={toggleCostSort}
-					>
-						Cost
-						{#if sortColumn === 'cost'}
-							{sortDirection === 'asc' ? '↑' : '↓'}
-						{:else}
-							<span class="text-gray-400 font-normal">↕</span>
-						{/if}
-					</button>
+					<div class="col-span-2">
+						<button
+							class="text-green-700 text-left cursor-pointer hover:text-green-900 transition-colors"
+							on:click={toggleCostSort}
+						>
+							Cost
+							{#if sortColumn === 'cost'}
+								{sortDirection === 'asc' ? '↑' : '↓'}
+							{:else}
+								<span class="text-gray-400 font-normal">↕</span>
+							{/if}
+						</button>
+						<div
+							class="mt-1 inline-flex flex-col sm:flex-row rounded-md border border-gray-300 divide-y sm:divide-y-0 sm:divide-x divide-gray-300 overflow-hidden text-[10px] font-medium"
+							role="group"
+							aria-label="Cost unit"
+						>
+							<button
+								class="px-1.5 py-0.5 whitespace-nowrap cursor-pointer transition-colors {costUnit ===
+								'cocktail'
+									? 'bg-green-700 text-white'
+									: 'bg-white text-gray-600 hover:bg-gray-100'}"
+								aria-pressed={costUnit === 'cocktail'}
+								on:click={() => (costUnit = 'cocktail')}
+							>
+								<span class="hidden sm:inline">per&nbsp;</span>cocktail
+							</button>
+							<button
+								class="px-1.5 py-0.5 whitespace-nowrap cursor-pointer transition-colors {costUnit ===
+								'oz'
+									? 'bg-green-700 text-white'
+									: 'bg-white text-gray-600 hover:bg-gray-100'}"
+								aria-pressed={costUnit === 'oz'}
+								on:click={() => (costUnit = 'oz')}
+							>
+								<span class="hidden sm:inline">per&nbsp;</span>oz
+							</button>
+						</div>
+					</div>
 				{/if}
 			</div>
 		</div>
@@ -496,13 +527,17 @@
 
 							<!-- Cost -->
 							{#if $costMode}
-								{@const cost = getDisplayCost(cocktail)}
+								{@const cost = costFn(cocktail)}
 								<div class="col-span-2">
 									<span class="text-sm text-green-700 font-medium">
 										{cost !== null ? formatCost(cost) : '—'}
 									</span>
-									{#if cost !== null && cocktail.servings}
-										<span class="text-xs text-gray-400">/serving</span>
+									{#if cost !== null}
+										{#if costUnit === 'oz'}
+											<span class="text-xs text-gray-400">/oz</span>
+										{:else if cocktail.servings}
+											<span class="text-xs text-gray-400">/serving</span>
+										{/if}
 									{/if}
 								</div>
 							{/if}

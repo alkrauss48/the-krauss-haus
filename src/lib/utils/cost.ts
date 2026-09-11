@@ -68,6 +68,29 @@ export function getDisplayCost(cocktail: Cocktail): number | null {
 	return perServing * (1 + TAX_RATE);
 }
 
+export function getCocktailVolumeOz(cocktail: Cocktail): number {
+	if (!cocktail.ingredients || cocktail.ingredients.length === 0) return 0;
+
+	let volume = 0;
+
+	for (const item of cocktail.ingredients) {
+		if (typeof item === 'string') continue;
+		volume += parseAmountToOz(item.amount ?? '');
+	}
+
+	return volume;
+}
+
+export function getDisplayCostPerOz(cocktail: Cocktail): number | null {
+	const total = calculateCocktailCost(cocktail);
+	if (total === null) return null;
+
+	const volume = getCocktailVolumeOz(cocktail);
+	if (volume <= 0) return null;
+
+	return applyTax(total / volume);
+}
+
 export function getPathCost(path: CocktailPath): number | null {
 	let total = 0;
 	let hasCostData = false;

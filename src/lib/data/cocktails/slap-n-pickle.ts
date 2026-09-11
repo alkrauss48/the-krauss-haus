@@ -56,7 +56,6 @@ const SLAP_N_PICKLE: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };

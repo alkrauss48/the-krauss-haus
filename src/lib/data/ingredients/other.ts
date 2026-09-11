@@ -42,6 +42,11 @@ const SALT: Ingredient = {
 	title: 'Salt',
 	slug: 'salt'
 };
+const STRAWBERRY: Ingredient = {
+	title: 'Strawberry',
+	slug: 'strawberry',
+	costPerOz: 4 / 16
+};
 const SUGAR: Ingredient = {
 	title: 'Sugar',
 	slug: 'sugar'
@@ -75,6 +80,7 @@ export const OTHER: IngredientCategory = {
 				MARASCHINO_CHERRY,
 				ORANGE_BLOSSOM_WATER,
 				SALT,
+				STRAWBERRY,
 				SUGAR,
 				TOM_AND_JERRY_BATTER
 			]
@@ -92,6 +98,7 @@ export const INGREDIENTS = {
 	MARASCHINO_CHERRY,
 	ORANGE_BLOSSOM_WATER,
 	SALT,
+	STRAWBERRY,
 	SUGAR,
 	TOM_AND_JERRY_BATTER
 };

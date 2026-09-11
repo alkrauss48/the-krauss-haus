@@ -34,7 +34,6 @@ const DEER_AND_BEER: Cocktail = {
 		Tags.FlavorProfile.BUBBLY,
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.BUILT,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.PINT_GLASS,
 		Tags.AlcoholLevel.HIGH,
 		Tags.PrepTime.SIMPLE_PREP

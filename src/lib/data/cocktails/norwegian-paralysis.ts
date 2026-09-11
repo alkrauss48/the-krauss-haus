@@ -54,7 +54,6 @@ const NORWEIGAN_PARALYSIS: Cocktail = {
 		Tags.AlcoholLevel.LOW,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.HIGHBALL_GLASS,
 		Tags.PrepTime.COMPLEX_PREP
 	]

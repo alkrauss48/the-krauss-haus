@@ -42,7 +42,6 @@ const COUNT_MAST: Cocktail = {
 		Tags.FlavorProfile.HERBAL,
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.COUPE_GLASS,
 		Tags.AlcoholLevel.HIGH
 	]

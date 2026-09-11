@@ -47,7 +47,6 @@ const GILDA: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.COUPE_GLASS
 	]
 };
