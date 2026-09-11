@@ -79,7 +79,6 @@ const NAUTILUS: Cocktail = {
 		Tags.AlcoholLevel.HIGH,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.TIKI_MUG,
 		Tags.ServedIn.EXCLUSIVE_DRINKWARE,
 		Tags.PrepTime.COMPLEX_PREP

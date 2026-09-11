@@ -54,7 +54,6 @@ const PIRANHA_POOL: Cocktail = {
 		Tags.Technique.BLENDED,
 		Tags.Temperature.FROZEN,
 		Tags.Style.TIKI,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.TIKI_MUG,
 		Tags.ServedIn.EXCLUSIVE_DRINKWARE,
 		Tags.PrepTime.COMPLEX_PREP

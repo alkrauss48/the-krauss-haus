@@ -54,7 +54,6 @@ const YULE_TIDE: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.TIKI_MUG,
 		Tags.ServedIn.EXCLUSIVE_DRINKWARE
 	]

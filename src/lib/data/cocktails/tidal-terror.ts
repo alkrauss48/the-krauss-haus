@@ -61,7 +61,6 @@ const TIDAL_TERROR: Cocktail = {
 		Tags.FlavorProfile.SPICED,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.TIKI_MUG,
 		Tags.ServedIn.EXCLUSIVE_DRINKWARE,
 		Tags.PrepTime.COMPLEX_PREP
