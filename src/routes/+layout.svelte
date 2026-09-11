@@ -57,7 +57,7 @@
 	<button
 		type="button"
 		class="cursor-pointer p-2 rounded-full bg-white/80 backdrop-blur-sm text-gray-500 hover:text-amber-600 hover:bg-white shadow-sm hover:shadow-md transition-all border border-gray-200/60"
-		on:click={openSearch}
+		onclick={openSearch}
 		aria-label="Open search"
 		aria-haspopup="dialog"
 		aria-expanded={showSearch}

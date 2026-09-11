@@ -4,11 +4,6 @@
 	import { fly } from 'svelte/transition';
 
 	export let recipes: Recipe[];
-
-	// Get the recipe slug URL
-	function getRecipeUrl(recipe: Recipe): string {
-		return `/recipes/${recipe.slug}`;
-	}
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -18,7 +13,7 @@
 			in:fly={{ y: 20, duration: 400, delay: i * 50 }}
 		>
 			<a
-				href={resolve(getRecipeUrl(recipe))}
+				href={resolve(`/recipes/${recipe.slug}`)}
 				class="block p-4 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200"
 				data-sveltekit-prefetch
 			>
