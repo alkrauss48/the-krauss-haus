@@ -10,8 +10,6 @@
 
 	export let cocktails: Cocktail[] = [];
 	export let selectedTags: Tag[] = [];
-	export let filteredCocktails: Cocktail[] = [];
-	export let isOpen: boolean = false;
 	export let logicMode: LogicMode = 'AND';
 
 	// Force reactivity when selections or logic mode change

@@ -27,9 +27,9 @@
 	}
 
 	// Generate URL for cocktails page with specific tag filter
-	function getTagFilterUrl(tag: Tag): string {
+	function getTagFilterQuery(tag: Tag): string {
 		const categoryKey = categoryToUrlKey(tag.category.label);
-		return `/cocktails?${categoryKey}=${encodeURIComponent(tag.label)}`;
+		return `?${categoryKey}=${encodeURIComponent(tag.label)}`;
 	}
 
 	// Helper function to convert hex color to rgba
@@ -199,7 +199,7 @@
 									<div class="flex flex-wrap gap-2">
 										{#each cocktail.tags as tag (tag.label)}
 											<a
-												href={resolve(getTagFilterUrl(tag))}
+												href="{resolve('/cocktails')}{getTagFilterQuery(tag)}"
 												class="inline-block px-2 py-1 text-xs font-medium rounded-md transition-all duration-200 hover:scale-105 border border-opacity-20"
 												style="
 													background-color: {hexToRgba(tag.category.color, 0.05)};

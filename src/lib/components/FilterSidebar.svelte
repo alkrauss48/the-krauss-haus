@@ -12,7 +12,6 @@
 	export let cocktails: Cocktail[] = [];
 	export let selectedTags: Tag[] = [];
 	export let selectedIngredients: Ingredient[] = [];
-	export let filteredCocktails: Cocktail[] = [];
 	export let isOpen: boolean = false;
 	export let logicMode: LogicMode = 'AND';
 
@@ -219,8 +218,11 @@
 		<!-- Logic Mode Selector -->
 		<div class="mt-3 pt-3 border-t border-gray-200">
 			<div class="flex items-center gap-2">
-				<label class="text-xs font-medium text-gray-700 whitespace-nowrap">Filter Logic</label>
+				<label for="filter-logic-mode" class="text-xs font-medium text-gray-700 whitespace-nowrap"
+					>Filter Logic</label
+				>
 				<select
+					id="filter-logic-mode"
 					bind:value={logicMode}
 					on:change={() => dispatch('logicModeChanged', logicMode)}
 					class="flex-1 px-2 py-1.5 text-xs border border-gray-300 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent cursor-pointer"
@@ -294,8 +296,6 @@
 			<TagFilter
 				{cocktails}
 				{selectedTags}
-				{filteredCocktails}
-				{isOpen}
 				{logicMode}
 				on:filtersChanged={handleTagsChanged}
 				on:toggleSidebar={() => {}}
@@ -304,8 +304,6 @@
 			<IngredientFilter
 				{cocktails}
 				{selectedIngredients}
-				{filteredCocktails}
-				{isOpen}
 				{logicMode}
 				on:filtersChanged={handleIngredientsChanged}
 				on:toggleSidebar={() => {}}

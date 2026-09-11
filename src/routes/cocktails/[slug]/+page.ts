@@ -13,14 +13,14 @@ export const load: PageLoad = ({ params }) => {
 		throw error(404, `Cocktail "${slug}" not found`);
 	}
 
-	function isOnMenu(menuSlug: string): boolean {
+	const isOnMenu = (menuSlug: string): boolean => {
 		const menu = menuConfig[menuSlug];
 		if (!menu) return false;
 		if (menu.featuredDrinks?.some((d) => d.slug === cocktail.slug)) return true;
 		return menu.categories.some((category) =>
 			category.cocktails.some((c) => c.slug === cocktail.slug)
 		);
-	}
+	};
 
 	const onSummer = isOnMenu('summer');
 	const onWinter = isOnMenu('winter');

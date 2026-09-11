@@ -4,6 +4,7 @@
 	import { methodColors } from '$lib/enums/methods';
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
+	import { toPathname } from '$lib/utils/paths';
 	import { page } from '$app/stores';
 	import { browser } from '$app/environment';
 	import { allTagCategories } from '$lib/data/all-tags';
@@ -205,7 +206,10 @@
 			url.searchParams.set(`ingredient-${categoryKey}`, ingredientSlugs);
 		});
 
-		goto(resolve(`${url.pathname}${url.search}`), { replaceState: true, noScroll: true });
+		goto(resolve(toPathname(`${url.pathname}${url.search}`)), {
+			replaceState: true,
+			noScroll: true
+		});
 	}
 
 	function updateSearchURL(): void {
@@ -373,7 +377,6 @@
 		{cocktails}
 		{selectedTags}
 		{selectedIngredients}
-		{filteredCocktails}
 		{logicMode}
 		isOpen={isFilterSidebarOpen}
 		on:filtersChanged={handleFiltersChanged}

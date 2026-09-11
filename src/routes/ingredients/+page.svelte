@@ -69,13 +69,13 @@
 	}
 
 	// Generate URL for ingredient filter on cocktails page
-	function getIngredientFilterUrl(ingredientSlug: string): string {
+	function getIngredientFilterQuery(ingredientSlug: string): string {
 		const category = findIngredientCategory(ingredientSlug);
 		if (!category) {
-			return '/cocktails';
+			return '';
 		}
 		const categoryKey = categoryToUrlKey(category.label);
-		return `/cocktails?ingredient-${categoryKey}=${encodeURIComponent(ingredientSlug)}`;
+		return `?ingredient-${categoryKey}=${encodeURIComponent(ingredientSlug)}`;
 	}
 
 	// Check if a string contains the search term (case-insensitive)
@@ -375,20 +375,17 @@
 										<div class="flex flex-wrap gap-2">
 											{#each subcategory.ingredients as ingredient (ingredient.slug)}
 												{@const usageCount = ingredientUsageCounts.get(ingredient.slug) || 0}
-												{@const filterUrl = getIngredientFilterUrl(ingredient.slug)}
-												<a
-													href={resolve(filterUrl)}
-													class="inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center transition-colors cursor-pointer border border-transparent"
-													style="background-color: color-mix(in srgb, {category.color} 4%, white); border-color: color-mix(in srgb, {category.color} 12%, transparent);"
-													on:mouseenter={(e) => {
-														e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 6%, white)`;
-														e.currentTarget.style.borderColor = `color-mix(in srgb, ${category.color} 18%, transparent)`;
-													}}
-													on:mouseleave={(e) => {
-														e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 4%, white)`;
-														e.currentTarget.style.borderColor = `color-mix(in srgb, ${category.color} 12%, transparent)`;
-													}}
+												{@const filterQuery = getIngredientFilterQuery(ingredient.slug)}
+												<div
+													class="relative inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center transition-colors cursor-pointer border bg-[var(--chip-bg)] border-[var(--chip-border)] hover:bg-[var(--chip-bg-hover)] hover:border-[var(--chip-border-hover)]"
+													style="--chip-bg: color-mix(in srgb, {category.color} 4%, white); --chip-bg-hover: color-mix(in srgb, {category.color} 6%, white); --chip-border: color-mix(in srgb, {category.color} 12%, transparent); --chip-border-hover: color-mix(in srgb, {category.color} 18%, transparent);"
 												>
+													<!-- Stretched link: covers the whole chip without nesting anchors -->
+													<a
+														href="{resolve('/cocktails')}{filterQuery}"
+														class="absolute inset-0 rounded-md"
+														aria-label="Filter cocktails by {ingredient.title}"
+													></a>
 													<div class="flex items-center flex-wrap gap-x-1.5">
 														<span>{ingredient.title}</span>
 														{#if usageCount > 0}
@@ -402,8 +399,7 @@
 														{#if ingredient.recipe}
 															<a
 																href={resolve(`/recipes/${ingredient.recipe.slug}`)}
-																class="text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors"
-																on:click|stopPropagation
+																class="relative text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors"
 															>
 																See recipe
 															</a>
@@ -419,7 +415,7 @@
 															{ingredient.group}
 														</span>
 													{/if}
-												</a>
+												</div>
 											{/each}
 										</div>
 									</div>
