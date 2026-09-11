@@ -15,4 +15,17 @@ Object.defineProperty(window, 'matchMedia', {
 	}))
 });
 
+// required for jsdom in this environment as it does not provide localStorage
+const storage = new Map<string, string>();
+Object.defineProperty(window, 'localStorage', {
+	writable: true,
+	enumerable: true,
+	value: {
+		getItem: (key: string) => storage.get(key) ?? null,
+		setItem: (key: string, value: string) => storage.set(key, String(value)),
+		removeItem: (key: string) => storage.delete(key),
+		clear: () => storage.clear()
+	}
+});
+
 // add more mocks here if you need them
