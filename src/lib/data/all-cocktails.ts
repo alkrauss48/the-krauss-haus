@@ -98,6 +98,7 @@ import PENICILLIN from '$lib/data/cocktails/penicillin';
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
 import PINA_VERDE from '$lib/data/cocktails/pina-verde';
 import PINEAPPLE_POTION from '$lib/data/cocktails/pineapple-potion';
+import PIRANHA_POOL from '$lib/data/cocktails/piranha-pool';
 import PLANTERS_PUNCH from '$lib/data/cocktails/planters-punch';
 import PLUNDERERS_PUNCH from '$lib/data/cocktails/plunderers-punch';
 import PORT_LIGHT from '$lib/data/cocktails/port-light';
@@ -125,6 +126,7 @@ import SURFER_ON_ACID from '$lib/data/cocktails/surfer-on-acid';
 import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
 import TI_PUNCH from '$lib/data/cocktails/ti-punch';
 import TIA_MIA from '$lib/data/cocktails/tia-mia';
+import TIDAL_TERROR from '$lib/data/cocktails/tidal-terror';
 import TOM_AND_JERRY from '$lib/data/cocktails/tom-and-jerry';
 import TORONTO from '$lib/data/cocktails/toronto';
 import TRADEWINDS from '$lib/data/cocktails/tradewinds';
@@ -236,6 +238,7 @@ export const allCocktails: Cocktail[] = [
 	PIMMS_CUP,
 	PINA_VERDE,
 	PINEAPPLE_POTION,
+	PIRANHA_POOL,
 	PLANTERS_PUNCH,
 	PLUNDERERS_PUNCH,
 	PORT_LIGHT,
@@ -263,6 +266,7 @@ export const allCocktails: Cocktail[] = [
 	THREE_DOTS_AND_A_DASH,
 	TI_PUNCH,
 	TIA_MIA,
+	TIDAL_TERROR,
 	TOM_AND_JERRY,
 	TORONTO,
 	TRADEWINDS,
