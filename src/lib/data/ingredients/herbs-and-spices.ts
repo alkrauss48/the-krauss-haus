@@ -16,7 +16,7 @@ const CLOVE: Ingredient = {
 const MINT: Ingredient = {
 	title: 'Mint',
 	slug: 'mint',
-	costPerOz: 0.25
+	costPerOz: 0.15
 };
 const NUTMEG: Ingredient = {
 	title: 'Nutmeg',

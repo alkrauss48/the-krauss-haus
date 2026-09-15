@@ -8,7 +8,7 @@ import { Ice } from '$lib/enums/ice';
 const RUM_RUNNER: Cocktail = {
 	title: 'Rum Runner',
 	description:
-		'Jamaican rum blend, stone fruit liqueur, dark berry crème, pineapple, grenadine, lime, orange.',
+		'Light rum, dark rum, stone fruit liqueur, dark berry crème, pineapple, grenadine, lime, orange.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/rum-runner.webp',
 	thumbnailImagePath:
@@ -21,15 +21,11 @@ const RUM_RUNNER: Cocktail = {
 	ingredients: [
 		{
 			amount: '1oz',
-			ingredient: Ingredients.BaseSpirits.CORUBA
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
 		},
 		{
-			amount: '.75oz',
+			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
-		},
-		{
-			amount: '.25oz',
-			ingredient: Ingredients.BaseSpirits.WRAY_AND_NEPHEW
 		},
 		{
 			amount: '.5oz',
