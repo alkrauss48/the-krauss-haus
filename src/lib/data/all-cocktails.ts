@@ -32,6 +32,7 @@ import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import DARK_N_STORMY from '$lib/data/cocktails/dark-n-stormy';
 import DEAR_LUKEY from '$lib/data/cocktails/dear-lukey';
 import DEER_AND_BEER from '$lib/data/cocktails/deer-and-beer';
+import DEMERARA_DRY_FLOAT from '$lib/data/cocktails/demerara-dry-float';
 import DESERT_DREAMS from '$lib/data/cocktails/desert-dreams';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
@@ -172,6 +173,7 @@ export const allCocktails: Cocktail[] = [
 	DARK_N_STORMY,
 	DEAR_LUKEY,
 	DEER_AND_BEER,
+	DEMERARA_DRY_FLOAT,
 	DESERT_DREAMS,
 	DIVISION_BELL,
 	DONGA_PUNCH,

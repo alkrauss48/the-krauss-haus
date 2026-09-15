@@ -8,7 +8,7 @@ import { Ice } from '$lib/enums/ice';
 const PINEAPPLE_POTION: Cocktail = {
 	title: 'Pineapple Potion',
 	description:
-		'White rum, demerara rum, coffee liqueur, cream of coconut, lime, pineapple, passionfruit, nutmeg.',
+		'Light rum, demerara rum, coffee liqueur, cream of coconut, lime, pineapple, passionfruit, nutmeg.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/pineapple-potion.webp',
 	thumbnailImagePath:
