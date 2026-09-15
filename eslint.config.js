@@ -31,6 +31,9 @@ export default ts.config(
 				parser: ts.parser,
 				svelteConfig
 			}
-		}
+		},
+		// Svelte reactivity ($: blocks, $effect) reads these assignments on
+		// subsequent runs, which the rule's flow analysis cannot see.
+		rules: { 'no-useless-assignment': 'off' }
 	}
 );
