@@ -6,6 +6,7 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	server: {
+		port: 3000,
 		allowedHosts: [
 			'localhost',
 			'127.0.0.1',
