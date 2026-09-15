@@ -28,4 +28,22 @@ Object.defineProperty(window, 'localStorage', {
 	}
 });
 
+// required for components using svelte transitions, as jsdom does not implement
+// the Web Animations API
+if (!Element.prototype.animate) {
+	Element.prototype.animate = vi.fn().mockImplementation(() => ({
+		cancel: vi.fn(),
+		finish: vi.fn(),
+		play: vi.fn(),
+		pause: vi.fn(),
+		reverse: vi.fn(),
+		addEventListener: vi.fn(),
+		removeEventListener: vi.fn(),
+		onfinish: null,
+		currentTime: 0,
+		playState: 'finished',
+		finished: Promise.resolve()
+	}));
+}
+
 // add more mocks here if you need them

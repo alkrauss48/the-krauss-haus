@@ -147,7 +147,7 @@ const CIMARRON_BLANCO: Ingredient = {
 };
 const JALAPENO_TEQUILA: Ingredient = {
 	title: 'Jalapeño Tequila',
-	slug: 'jalapeño-tequila',
+	slug: 'jalapeno-tequila',
 	recipe: JALAPENO_TEQUILA_RECIPE,
 	costPerOz: 28 / 33
 };
