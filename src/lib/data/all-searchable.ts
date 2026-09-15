@@ -7,13 +7,7 @@ import { menuConfig } from './menu-config';
 import { getIngredientDisplayName } from '$lib/utils/ingredients';
 
 export type SearchableType =
-	| 'cocktail'
-	| 'recipe'
-	| 'path'
-	| 'party'
-	| 'bartender'
-	| 'menu'
-	| 'page';
+	'cocktail' | 'recipe' | 'path' | 'party' | 'bartender' | 'menu' | 'page';
 
 export interface SearchableItem {
 	type: SearchableType;

@@ -21,7 +21,7 @@
 			const href = '/' + segments.slice(0, i + 1).join('/');
 
 			// Map segment names to readable labels
-			let label = segment;
+			let label: string;
 			switch (segment) {
 				case 'cocktails':
 					label = 'Cocktails';
