@@ -16,6 +16,8 @@ const TIKI_PARTY_2025: CocktailParty = {
 	name: 'Tiki Party',
 	description: "Celebrating Aaron's 35th in style with tropical cocktails and good vibes",
 	date: new Date(2025, 7, 9), // August 9, 2025 (month is 0-indexed, so 7 = August)
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/parties/tiki-party-2025.jpg',
 	schedule: [
 		{
 			time: '4:00pm',

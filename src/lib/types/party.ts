@@ -19,6 +19,8 @@ export interface CocktailParty {
 	name: string;
 	description: string;
 	date: Date;
+	/** Absolute URL to the party's open graph image. Falls back to the site default when omitted. */
+	imagePath?: string;
 	schedule: PartyTimeSlot[];
 }
 

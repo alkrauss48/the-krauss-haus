@@ -10,6 +10,8 @@ const RUSHBROOK_COCKTAIL_NIGHT: CocktailParty = {
 	name: 'Rushbrook Cocktail Night',
 	description: 'An evening of classic cocktails with the Rushbrook crew',
 	date: new Date(2026, 9, 3), // October 3, 2026 (month is 0-indexed, so 9 = October)
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/parties/rushbrook-cocktail-night-fall-2026.jpeg',
 	schedule: [
 		{
 			time: '6:15pm',
