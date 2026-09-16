@@ -14,6 +14,7 @@ import { allIngredientCategories } from './all-ingredients';
 import { allTagCategories, tagCategoriesByLabel } from './all-tags';
 import { menuConfig } from './menu-config';
 import { getCocktailIngredientSlugs } from '$lib/utils/ingredients';
+import { isCocktailSlot } from '$lib/types/party';
 import type { Cocktail } from '$lib/types/cocktails';
 import type { Ingredient } from '$lib/types/ingredients';
 
@@ -259,6 +260,7 @@ describe('parties', () => {
 		const missing: string[] = [];
 		for (const party of allParties) {
 			for (const slot of party.schedule) {
+				if (!isCocktailSlot(slot)) continue;
 				if (!cocktailSlugs.has(slot.cocktail.slug))
 					missing.push(`${party.slug} → ${slot.cocktail.slug}`);
 			}

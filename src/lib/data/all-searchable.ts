@@ -5,6 +5,7 @@ import { allParties } from './all-parties';
 import { allBartenders } from './all-bartenders';
 import { menuConfig } from './menu-config';
 import { getIngredientDisplayName } from '$lib/utils/ingredients';
+import { isCocktailSlot } from '$lib/types/party';
 
 export type SearchableType =
 	'cocktail' | 'recipe' | 'path' | 'party' | 'bartender' | 'menu' | 'page';
@@ -71,7 +72,7 @@ function partyItems(): SearchableItem[] {
 		title: p.name,
 		description: p.description,
 		href: `/parties/${p.slug}`,
-		keywords: p.schedule.map((s) => s.cocktail.title)
+		keywords: p.schedule.filter(isCocktailSlot).map((s) => s.cocktail.title)
 	}));
 }
 

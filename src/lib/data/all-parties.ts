@@ -1,10 +1,11 @@
 import type { CocktailParty } from '$lib/types/party';
 
 // Import all party data
+import RUSHBROOK_COCKTAIL_NIGHT from '$lib/data/parties/rushbrook-cocktail-night-fall-2026';
 import TIKI_PARTY_2025 from '$lib/data/parties/tiki-party-2025';
 
 // Create array of all parties
-export const allParties: CocktailParty[] = [TIKI_PARTY_2025].sort(
+export const allParties: CocktailParty[] = [RUSHBROOK_COCKTAIL_NIGHT, TIKI_PARTY_2025].sort(
 	(a, b) => b.date.getTime() - a.date.getTime()
 );
 

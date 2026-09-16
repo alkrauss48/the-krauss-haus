@@ -32,46 +32,43 @@
 			>
 				<!-- Time Badge -->
 				<div
-					class="flex-shrink-0 w-12 h-12 md:w-24 md:h-24 bg-amber-400 rounded-full flex items-center justify-center shadow-lg z-10"
-					style="background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);"
+					class="flex-shrink-0 w-12 h-12 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-lg z-10"
+					style="background: {PartyData.isCocktailSlot(timeSlot)
+						? 'linear-gradient(135deg, #fbbf24 0%, #f97316 100%)'
+						: 'linear-gradient(135deg, #f97316 0%, #ef4444 100%)'};"
 				>
 					<span class="text-white font-bold text-[10px] md:text-sm">{timeSlot.time}</span>
 				</div>
 
 				<!-- Content Card -->
-				<div class="flex-1 bg-white rounded-lg shadow-lg p-6 border border-amber-100">
+				<div
+					class="flex-1 bg-white rounded-lg shadow-lg p-6 border {PartyData.isCocktailSlot(timeSlot)
+						? 'border-amber-100'
+						: 'border-orange-100'}"
+				>
 					<!-- Note Badge -->
-					<div class="mb-4">
-						<span
-							class="inline-block px-3 py-1 text-xs font-medium rounded-full {noteColors[
-								timeSlot.note
-							].bgClass} {noteColors[timeSlot.note].textClass}"
-						>
-							{timeSlot.note}
-						</span>
-					</div>
+					{#if timeSlot.note?.text}
+						<div class="mb-4">
+							<span
+								class="inline-block px-3 py-1 text-xs font-medium rounded-full {noteColors[
+									timeSlot.note.color
+								].bgClass} {noteColors[timeSlot.note.color].textClass}"
+							>
+								{timeSlot.note.text}
+							</span>
+						</div>
+					{/if}
 
-					<!-- Cocktail Card -->
-					<CocktailCard cocktail={timeSlot.cocktail} bgColors={partyColors} />
+					{#if PartyData.isCocktailSlot(timeSlot)}
+						<!-- Cocktail Card -->
+						<CocktailCard cocktail={timeSlot.cocktail} bgColors={partyColors} />
+					{:else}
+						<!-- Message -->
+						<h3 class="text-xl font-bold text-orange-800 mb-2">{timeSlot.title}</h3>
+						<p class="text-orange-600">{timeSlot.message}</p>
+					{/if}
 				</div>
 			</div>
 		{/each}
-	</div>
-
-	<!-- End Marker -->
-	<div
-		class="relative flex items-center gap-8 mt-12"
-		in:fly={{ x: -20, duration: 400, delay: 1500 }}
-	>
-		<div
-			class="flex-shrink-0 w-12 h-12 md:w-24 md:h-24 bg-orange-500 rounded-full flex items-center justify-center shadow-lg z-10"
-			style="background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);"
-		>
-			<span class="text-white font-bold text-[10px] md:text-sm">Next</span>
-		</div>
-		<div class="flex-1 bg-white rounded-lg shadow-lg p-6 border border-orange-100">
-			<h3 class="text-xl font-bold text-orange-800 mb-2">Custom orders!</h3>
-			<p class="text-orange-600">Find something you want to try? Order up!</p>
-		</div>
 	</div>
 </div>
