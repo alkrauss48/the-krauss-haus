@@ -1,9 +1,17 @@
 import type { Cocktail } from '$lib/types/cocktails';
 
-export enum PartyNote {
-	WELCOME = 'Welcome Drink',
-	SMALL_BATCH = 'Small batch, only 4-5 servings',
-	BIG_BATCH = 'Big batch, up to 10 servings'
+export enum NoteColor {
+	PURPLE = 'purple',
+	BLUE = 'blue',
+	GREEN = 'green',
+	AMBER = 'amber',
+	RED = 'red',
+	GRAY = 'gray'
+}
+
+export interface PartyNote {
+	text: string;
+	color: NoteColor;
 }
 
 export interface CocktailParty {
@@ -11,13 +19,29 @@ export interface CocktailParty {
 	name: string;
 	description: string;
 	date: Date;
+	/** Absolute URL to the party's open graph image. Falls back to the site default when omitted. */
+	imagePath?: string;
 	schedule: PartyTimeSlot[];
 }
 
-export interface PartyTimeSlot {
+interface BasePartyTimeSlot {
 	time: string;
+	note?: PartyNote;
+}
+
+export interface CocktailTimeSlot extends BasePartyTimeSlot {
 	cocktail: Cocktail;
-	note: PartyNote;
+}
+
+export interface MessageTimeSlot extends BasePartyTimeSlot {
+	title: string;
+	message: string;
+}
+
+export type PartyTimeSlot = CocktailTimeSlot | MessageTimeSlot;
+
+export function isCocktailSlot(slot: PartyTimeSlot): slot is CocktailTimeSlot {
+	return 'cocktail' in slot;
 }
 
 export interface NoteColorConfig {
@@ -25,17 +49,29 @@ export interface NoteColorConfig {
 	textClass: string;
 }
 
-export const noteColors: Record<PartyNote, NoteColorConfig> = {
-	[PartyNote.WELCOME]: {
+export const noteColors: Record<NoteColor, NoteColorConfig> = {
+	[NoteColor.PURPLE]: {
 		bgClass: 'bg-purple-100',
 		textClass: 'text-purple-800'
 	},
-	[PartyNote.SMALL_BATCH]: {
+	[NoteColor.BLUE]: {
 		bgClass: 'bg-blue-100',
 		textClass: 'text-blue-800'
 	},
-	[PartyNote.BIG_BATCH]: {
+	[NoteColor.GREEN]: {
 		bgClass: 'bg-green-100',
 		textClass: 'text-green-800'
+	},
+	[NoteColor.AMBER]: {
+		bgClass: 'bg-amber-100',
+		textClass: 'text-amber-800'
+	},
+	[NoteColor.RED]: {
+		bgClass: 'bg-red-100',
+		textClass: 'text-red-800'
+	},
+	[NoteColor.GRAY]: {
+		bgClass: 'bg-gray-100',
+		textClass: 'text-gray-800'
 	}
 };

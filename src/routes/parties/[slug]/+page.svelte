@@ -40,7 +40,7 @@
 	<meta name="description" content="{party.description} - {formatDateShort(party.date)}" />
 	<meta
 		property="og:image"
-		content="https://thekrausshaus.com/images/open-graph/tiki-party-2025.jpg"
+		content={party.imagePath ?? 'https://thekrausshaus.com/images/open-graph/og-root.jpg'}
 	/>
 </svelte:head>
 

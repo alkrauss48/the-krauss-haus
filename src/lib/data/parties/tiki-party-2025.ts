@@ -1,5 +1,5 @@
 import type { CocktailParty } from '$lib/types/party';
-import { PartyNote } from '$lib/types/party';
+import { NoteColor } from '$lib/types/party';
 
 import PIMMS_CUP from '$lib/data/cocktails/pimms-cup';
 import HURRICANE from '$lib/data/cocktails/hurricane';
@@ -16,51 +16,58 @@ const TIKI_PARTY_2025: CocktailParty = {
 	name: 'Tiki Party',
 	description: "Celebrating Aaron's 35th in style with tropical cocktails and good vibes",
 	date: new Date(2025, 7, 9), // August 9, 2025 (month is 0-indexed, so 7 = August)
+	imagePath:
+		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/parties/tiki-party-2025.jpg',
 	schedule: [
 		{
 			time: '4:00pm',
 			cocktail: PIMMS_CUP,
-			note: PartyNote.WELCOME
+			note: { text: 'Welcome Drink', color: NoteColor.PURPLE }
 		},
 		{
 			time: '4:30pm',
 			cocktail: HURRICANE,
-			note: PartyNote.SMALL_BATCH
+			note: { text: 'Small batch, only 4-5 servings', color: NoteColor.BLUE }
 		},
 		{
 			time: '5:00pm',
 			cocktail: SATURN,
-			note: PartyNote.SMALL_BATCH
+			note: { text: 'Small batch, only 4-5 servings', color: NoteColor.BLUE }
 		},
 		{
 			time: '5:30pm',
 			cocktail: PAINKILLER,
-			note: PartyNote.BIG_BATCH
+			note: { text: 'Big batch, up to 10 servings', color: NoteColor.GREEN }
 		},
 		{
 			time: '6:00pm',
 			cocktail: ANCIENT_MARINER,
-			note: PartyNote.SMALL_BATCH
+			note: { text: 'Small batch, only 4-5 servings', color: NoteColor.BLUE }
 		},
 		{
 			time: '6:30pm',
 			cocktail: SINGAPORE_SLING,
-			note: PartyNote.SMALL_BATCH
+			note: { text: 'Small batch, only 4-5 servings', color: NoteColor.BLUE }
 		},
 		{
 			time: '7:00pm',
 			cocktail: SPRITZ,
-			note: PartyNote.BIG_BATCH
+			note: { text: 'Big batch, up to 10 servings', color: NoteColor.GREEN }
 		},
 		{
 			time: '7:30pm',
 			cocktail: IRON_RANGER,
-			note: PartyNote.SMALL_BATCH
+			note: { text: 'Small batch, only 4-5 servings', color: NoteColor.BLUE }
 		},
 		{
 			time: '8:00pm',
 			cocktail: MAI_TAI,
-			note: PartyNote.SMALL_BATCH
+			note: { text: 'Small batch, only 4-5 servings', color: NoteColor.BLUE }
+		},
+		{
+			time: 'Next',
+			title: 'Custom orders!',
+			message: 'Find something you want to try? Order up!'
 		}
 	]
 };
