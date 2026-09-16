@@ -1,5 +1,4 @@
 <script lang="ts">
-	import FeaturedEvent from '$lib/components/FeaturedEvent.svelte';
 	import MenuLink from '$lib/components/MenuLink.svelte';
 	import TipButton from '$lib/components/TipButton.svelte';
 	import TipModal from '$lib/components/TipModal.svelte';
@@ -60,16 +59,6 @@
 			Krauss Haus
 		</h1>
 	</header>
-
-	<!-- Featured Event -->
-	<section class="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px]">
-		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Upcoming Event</h2>
-		<FeaturedEvent
-			title="Rushbrook Cocktail Night"
-			subtitle="October 3, 2026"
-			url="/parties/rushbrook-cocktail-night-fall-2026"
-		/>
-	</section>
 
 	<!-- Menus and Explore Grid -->
 	<div
