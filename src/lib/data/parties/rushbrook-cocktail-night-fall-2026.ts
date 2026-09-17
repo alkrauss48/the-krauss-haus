@@ -17,20 +17,20 @@ const RUSHBROOK_COCKTAIL_NIGHT: CocktailParty = {
 			time: '6:15pm',
 			cocktail: JACK_ROSE,
 			note: {
-				text: 'First we start off with a historical American shaken cocktail',
+				text: 'Shaken',
 				color: NoteColor.PURPLE
 			}
 		},
 		{
 			time: '6:45pm',
 			cocktail: OLD_FASHIONED,
-			note: { text: 'Next we move on to a classic stirred cocktail', color: NoteColor.BLUE }
+			note: { text: 'Stirred', color: NoteColor.BLUE }
 		},
 		{
 			time: '7:15pm',
 			cocktail: CAIPIRINHA,
 			note: {
-				text: 'Then we finish off with a Brazilian cocktail built right in the glass',
+				text: 'Built in Glass',
 				color: NoteColor.GREEN
 			}
 		},

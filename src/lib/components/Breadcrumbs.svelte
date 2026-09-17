@@ -39,7 +39,7 @@
 					label = 'Ingredients';
 					break;
 				case 'parties':
-					label = 'Cocktail Parties';
+					label = 'Parties';
 					break;
 				case 'bartenders':
 					label = 'Bartenders';
@@ -68,21 +68,21 @@
 
 {#if !isHomePage}
 	<nav
-		class="mb-8 flex items-center text-sm text-gray-600"
+		class="mb-8 flex min-w-0 items-center text-sm text-gray-600 pr-12 lg:pr-0"
 		aria-label="Breadcrumb navigation"
 		in:fly={{ x: -20, duration: 400, delay: 300 }}
 	>
 		{#each breadcrumbs as breadcrumb, index (breadcrumb.href)}
 			{#if index === breadcrumbs.length - 1}
 				<!-- Current page - not clickable -->
-				<span class="text-gray-800 font-medium">
+				<span class="min-w-0 truncate text-gray-800 font-medium" title={breadcrumb.label}>
 					{breadcrumb.label}
 				</span>
 			{:else}
 				<!-- Clickable breadcrumb link -->
 				<a
 					href={resolve(toPathname(breadcrumb.href))}
-					class="hover:text-amber-600 transition-colors duration-200"
+					class="shrink-0 whitespace-nowrap hover:text-amber-600 transition-colors duration-200"
 					data-sveltekit-prefetch
 				>
 					{breadcrumb.label}
@@ -91,7 +91,7 @@
 				<!-- Separator -->
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="h-4 w-4 mx-2 text-gray-400"
+					class="h-4 w-4 mx-2 shrink-0 text-gray-400"
 					viewBox="0 0 20 20"
 					fill="currentColor"
 				>
