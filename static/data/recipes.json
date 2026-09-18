@@ -1,0 +1,437 @@
+[
+	{
+		"slug": "aquavit",
+		"name": "Aquavit",
+		"url": "/recipes/aquavit",
+		"category": "Infusions",
+		"description": "Nordic spirit flavored with caraway, dill, and botanicals.",
+		"ingredients": [
+			"9oz 40% ABV Vodka",
+			"1.25 tsp Caraway seed",
+			".5 tsp Dill seed",
+			".5 tsp Coriander seed",
+			".5 tsp Fennel",
+			"1\"x2\" strip of lemon peel"
+		],
+		"instructions": "Lightly toast dry spices for 30-45 seconds until fragrant. Cool and gently grind with mortar and pestle. Combine all ingredients together for 24-36 hours. Strain. Let rest for 2-3 days.",
+		"notes": "Makes ~9oz at 43% ABV."
+	},
+	{
+		"slug": "caramel-syrup",
+		"name": "Caramel Syrup",
+		"url": "/recipes/caramel-syrup",
+		"category": "Syrups",
+		"description": "A thick, non-fat caramel syrup.",
+		"ingredients": [
+			"1/2 cup granulated sugar",
+			"1/2 cup water",
+			"1/2 tsp vanilla extract"
+		],
+		"instructions": "Combine 1/4 cup water and all of the sugar in a saucepan. Cook over medium heat until sugar is dissolved. Cover, and continue boiling until sugar turns amber (about 10-15 minutes). Remove from heat cool slightly, and CAREFULLY add the remaining sugar. Stir until dissolved. Add vanilla extract.",
+		"notes": "Used to make caramel vodka, which is used in the Caramel Apple Spice. Recipe makes about 1/2 cup."
+	},
+	{
+		"slug": "caramel-vodka",
+		"name": "Caramel Vodka",
+		"url": "/recipes/caramel-vodka",
+		"category": "Infusions",
+		"description": "Vodka infused with homemade caramel syrup for a sweet, rich flavor.",
+		"ingredients": [
+			"3oz 40% ABV Vodka",
+			"1oz Caramel Syrup (see recipe)"
+		],
+		"instructions": "Mix ingredients together. Easy as that!",
+		"notes": "Because the caramel syrup has no fat, this infusion will maintain a nice, translucent color with no separation."
+	},
+	{
+		"slug": "cinnamon-syrup",
+		"name": "Cinnamon Syrup",
+		"url": "/recipes/cinnamon-syrup",
+		"category": "Syrups",
+		"description": "Infused with cinnamon for a warm, spicy sweetness.",
+		"ingredients": [
+			"1.5 cups granulated sugar",
+			"1 cup water",
+			"4 cinnamon sticks"
+		],
+		"instructions": "Combine sugar, water, and cinnamon sticks in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves. Simmer for 5 minutes to infuse the cinnamon flavor. Remove from heat, pour everything into a mason jar. Let cool for 12 hours. Remove cinnamon sticks.",
+		"notes": "Recipe makes about 1.75 cups."
+	},
+	{
+		"slug": "citron-vodka",
+		"name": "Citron Vodka",
+		"url": "/recipes/citron-vodka",
+		"category": "Infusions",
+		"description": "Vodka infused with lemon peel.",
+		"ingredients": [
+			"8oz 40% ABV Vodka",
+			"Peels of 1 lemon"
+		],
+		"instructions": "Add ingredients to a mason jar and let infuse for 48-72 hours, swirling a few times a day. Strain.",
+		"notes": null
+	},
+	{
+		"slug": "cranberry-cordial",
+		"name": "Cranberry Cordial",
+		"url": "/recipes/cranberry-cordial",
+		"category": "Other",
+		"description": "Fresh cranberry cordial, lightly sweetened and tart.",
+		"ingredients": [
+			"12oz package of cranberries",
+			"2C water",
+			"144g granulated sugar",
+			"1 pinch of salt"
+		],
+		"instructions": "Combine all ingredients in a saucepan. Heat over medium heat, stirring occasionally, until simmering. Simmer for 10 minutes. Remove from heat, and let cool. Press and strain out cranberries.",
+		"notes": "Recipe makes about 2 cups."
+	},
+	{
+		"slug": "creme-de-cacao",
+		"name": "Crème de Cacao",
+		"url": "/recipes/creme-de-cacao",
+		"category": "Infusions",
+		"description": "A chocolate-flavored liqueur made from cacao nibs.",
+		"ingredients": [
+			"4oz (by weight) Cacao Nibs",
+			"6oz 95% ABV Grain Liquor",
+			"7oz Distilled Water",
+			"10oz 1:1 Simple Syrup"
+		],
+		"instructions": "Toast the cacao nibs at 275–300°F for approximately 5 minutes, shaking once, until fragrant. Allow them to cool completely. Combine the cacao nibs, grain liquor, and 4 oz distilled water. Infuse for 7–10 days, shaking gently once daily and tasting beginning around day five. Strain thoroughly without aggressively squeezing the nibs. Add the simple syrup and remaining 3 oz distilled water. Bottle and let rest for 10–14 days.",
+		"notes": "Makes ~20-22oz at ~23-26% ABV. Takes a couple of weeks to make."
+	},
+	{
+		"slug": "demerara-syrup",
+		"name": "Demerara Syrup",
+		"url": "/recipes/demerara-syrup",
+		"category": "Syrups",
+		"description": "Made with demerara sugar for a rich, molasses-like sweetness.",
+		"ingredients": [
+			"2 parts (by weight) demerara sugar",
+			"1 part (by weight) water"
+		],
+		"instructions": "Combine demerara sugar and water in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves completely. Do not boil. Let cool and store in an airtight container in the refrigerator.",
+		"notes": "Demerara sugar adds a rich, caramel-like flavor that works beautifully alongside aged spirits. Turbinado sugar can be substituted for demerara. This syrup will keep for up to 6 months in the refrigerator. "
+	},
+	{
+		"slug": "dry-curacao",
+		"name": "Dry Curaçao",
+		"url": "/recipes/dry-curacao",
+		"category": "Infusions",
+		"description": "Bright, dry orange liqueur with subtle bitterness.",
+		"ingredients": [
+			"Peels from 3 navel oranges, unwaxed (no white pith)",
+			"Peels from 1/2 lemon, unwaxed (no white pith)",
+			"2\"x1\" grapefruit peel, unwaxed (no white pith)",
+			"570mL 50% ABV Vodka",
+			"250mL Brandy",
+			"1/2 tsp coriander seeds, lightly crushed",
+			"1/2 cinnamon stick",
+			"150g Granulated Sugar",
+			"50mL Water"
+		],
+		"instructions": "Infuse orange, lemon, and grapefruit peels with vodka and brandy in a glass jar for 10 days. On day 7, add cinnamon stick and coriander seeds. After the full 10 days, strain. Add the water and sugar to the strained infusion. Seal and shake vigorously. Let stand for 24–48 hours, shaking occasionally until all of the sugar has dissolved. Let rest at least 3 weeks, preferably 4 weeks.",
+		"notes": "Makes approximately 950 mL at ~40% ABV. Best after 3–4 weeks; continues to improve for 2–3 months."
+	},
+	{
+		"slug": "falernum",
+		"name": "Falernum",
+		"url": "/recipes/falernum",
+		"category": "Infusions",
+		"description": "A spiced liqueur with notes of ginger, clove, and lime.",
+		"ingredients": [
+			"8 oz overproof rum (like Planteray OFTD)",
+			"12 limes zested (not juiced)",
+			"24 cloves",
+			"30g ginger, chopped",
+			"1 tsp grated nutmeg",
+			"1 vanilla bean, split and scraped. Include seeds and pot",
+			"16 oz semi-rich (1.5:1) simple syrup made with unsweetened oatmilk",
+			"1 oz amaretto"
+		],
+		"instructions": "Steep all ingredients in rum for 24 hours, besides simple syrup and amaretto. Strain to remove solids. Add simple syrup and amaretto.",
+		"notes": "Makes ~24oz at 23% ABV. Because of its alcohol content, this will keep for up to 2 years refrigerated."
+	},
+	{
+		"slug": "fassionola",
+		"name": "Fassionola",
+		"url": "/recipes/fassionola",
+		"category": "Syrups",
+		"description": "A tropical fruit syrup with a complex blend of flavors.",
+		"ingredients": [
+			"1 lb strawberries, cut in small pieces (~415g)",
+			"1 pint blueberries, lightly muddled (~318g)",
+			"2/3 pineapple, cut in small pieces (~387g)",
+			"2 lemons, peel only",
+			"~2.5 lb sugar",
+			"~10 fl oz passion fruit puree"
+		],
+		"instructions": "In large bowl, add strawberries, blueberries, pineapple, and lemon peel. Add equal amount sugar (by weight) compared to the amount of fruit. Stir and cover with plastic wrap. Stir every few hours (it will be very dry at first, but will start to become more liquidy) for 24 hours. Strain (Should get ~40oz). Add 1/4 of the total strained volume of passion fruit puree (i.e. ~10oz).",
+		"notes": "Recipe makes about 6 cups."
+	},
+	{
+		"slug": "grenadine",
+		"name": "Grenadine",
+		"url": "/recipes/grenadine",
+		"category": "Syrups",
+		"description": "A pomegranate-based syrup with a deep red color and tart sweetness.",
+		"ingredients": [
+			"1 cup pomegranate juice",
+			"1 cup granulated sugar",
+			"1 oz pomegranate molasses",
+			"1/2 tsp orange blossom water"
+		],
+		"instructions": "Combine pomegranate juice and sugar in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves. Remove from heat, add pomegranate molasses and orange blossom water.",
+		"notes": "Recipe makes about 1.5 cups."
+	},
+	{
+		"slug": "honey-ginger-syrup",
+		"name": "Honey-Ginger Syrup",
+		"url": "/recipes/honey-ginger-syrup",
+		"category": "Syrups",
+		"description": "Honey syrup infused with fresh ginger for a spicy kick.",
+		"ingredients": [
+			"1/2 cup honey",
+			"1/2 cup hot water",
+			"4\" x 1\" x 1\" stick of peeled, sliced ginger"
+		],
+		"instructions": "Combine honey, water, and ginger in a saucepan. Heat over medium heat, stirring occasionally, until honey dissolves. Simmer for 5 minutes to infuse the ginger flavor. Remove from heat, pour everything into a mason jar. Let cool for 12 hours. Remove ginger.",
+		"notes": "Use raw honey for the best flavor. Recipe makes 1 cup."
+	},
+	{
+		"slug": "honey-syrup",
+		"name": "Honey Syrup",
+		"url": "/recipes/honey-syrup",
+		"category": "Syrups",
+		"description": "A blend of honey and water for a floral sweetness.",
+		"ingredients": [
+			"1 part (by volume) honey",
+			"1 part (by volume) water"
+		],
+		"instructions": "Combine honey and hot water in a jar or container. Stir until honey dissolves completely. Let cool and store in an airtight container in the refrigerator.",
+		"notes": "Use raw honey for the best flavor."
+	},
+	{
+		"slug": "house-dark-berry-creme",
+		"name": "Dark Berry Liqueur",
+		"url": "/recipes/house-dark-berry-creme",
+		"category": "Infusions",
+		"description": "A rich berry liqueur infused with vodka, lemon peel, and Ceylon black tea.",
+		"ingredients": [
+			"250g blueberries",
+			"250g blackberries",
+			"50g raspberries",
+			"400mL 50% ABV Vodka",
+			"225g granulated sugar",
+			"2 2\"x1\" strips lemon peel (washed, unwaxed, no pith)",
+			"1g Ceylon black tea leaves",
+			"2tsp lemon juice"
+		],
+		"instructions": "Lightly crush all fruit in a jar. Add vodka and lemon peel. Seal and shake. Let macerate for 14 days, shaking occasionally. On day 12, add tea leaves. Strain through fine mesh, then strain again through cheesecloth or a coffee filter. Stir in sugar and lemon juice until fully dissolved. Bottle and rest for 1-2 weeks before using.",
+		"notes": "Store sealed in the refrigerator or a cool, dark place. Best after 2-4 weeks; keeps well for up to 1 year."
+	},
+	{
+		"slug": "jalapeno-tequila",
+		"name": "Jalapeño Tequila",
+		"url": "/recipes/jalapeno-tequila",
+		"category": "Infusions",
+		"description": "Tequila infused with fresh jalapeño for a spicy kick.",
+		"ingredients": [
+			"4oz blanco tequila",
+			"1 medium jalapeño, sliced w/ half seeds"
+		],
+		"instructions": "Add ingredients to a mason jar and let infuse for 24 hours, swirling around every few hours. Strain.",
+		"notes": "Makes 4oz. If you want a spicier infusion, use more seeds."
+	},
+	{
+		"slug": "lavender-liqueur",
+		"name": "Lavender Liqueur",
+		"url": "/recipes/lavender-liqueur",
+		"category": "Infusions",
+		"description": "A floral liqueur made by infusing lavender into grain alcohol.",
+		"ingredients": [
+			"5oz 40% ABV Vodka",
+			"1.5 tsp dried culinary lavender petals (or 1 tbsp fresh)",
+			"2oz Simple Syrup (1:1)"
+		],
+		"instructions": "Steep vodka and lavender for 12 hours. Strain out the solids, then add the simple syrup.",
+		"notes": "Makes ~7oz at 28% ABV."
+	},
+	{
+		"slug": "limoncello",
+		"name": "Limoncello",
+		"url": "/recipes/limoncello",
+		"category": "Infusions",
+		"description": "A classic Italian liqueur made from lemons.",
+		"ingredients": [
+			"Peels from 5 lemons, washed, unwaxed (no white pithe)",
+			"1C 95% ABV Grain Liquor",
+			"1.5C Water",
+			"200g Sugar"
+		],
+		"instructions": "Infuse grain liquor and lemon peels for 3 weeks. Heat water and sugar to make syrup, and let cool. Strain lemon peels out, add syrup. Let rest for 2 weeks.",
+		"notes": "Makes ~24oz at 31% ABV. Traditionally served straight from the freezer."
+	},
+	{
+		"slug": "mama-juana",
+		"name": "Mama Juana",
+		"url": "/recipes/mama-juana",
+		"category": "Infusions",
+		"description": "A Dominican infusion of rum, red wine, and honey steeped over bark and spices.",
+		"ingredients": [
+			"1 pack Don Ramon herbs and spices (750mL size)",
+			"8 oz dark rum (like Brugal Añejo)",
+			"5 oz sweet red wine (like a Spanish Tempranillo)",
+			"3 oz honey"
+		],
+		"instructions": "Add the herbs and spices to an empty 750mL bottle. If the spices are new, condition them first: cover with red wine, let rest for 2 days, then discard the wine. Add the rum, wine, and honey, then let rest for at least a week before pouring. As the bottle empties, top it back up with a fresh blend so the spices always stay wet.",
+		"notes": "Makes a full 750mL bottle at ~24% ABV. A set of spices will last about 10 refills before it needs replacing. You can buy the Don Ramon packet on Amazon (and it's FDA approved)."
+	},
+	{
+		"slug": "mint-syrup",
+		"name": "Mint Syrup",
+		"url": "/recipes/mint-syrup",
+		"category": "Syrups",
+		"description": "Simple syrup infused with fresh mint.",
+		"ingredients": [
+			"20g spearmint, including leaves and stems (bottom half of stems removed)",
+			"240g hot water (heated to 190F)",
+			"~240g granulated sugar"
+		],
+		"instructions": "Steep mint and water for 10 minutes. Strain out mint. Add equal amount of sugar to mint water by weight. Stir until sugar is dissolved.",
+		"notes": "Recipe makes about 1.5 cups."
+	},
+	{
+		"slug": "orgeat",
+		"name": "Orgeat",
+		"url": "/recipes/orgeat",
+		"category": "Syrups",
+		"description": "An almond-flavored syrup with notes of rose and orange blossom water.",
+		"ingredients": [
+			"2 cups unsweetened oat milk",
+			"3 cups granulated sugar",
+			"1/2 tsp rose water",
+			"1 tsp orange blossom water",
+			"1.5 oz amaretto"
+		],
+		"instructions": "Combine oatmilk and sugar in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves. Remove from heat, and add remaining ingredients.",
+		"notes": "Recipe makes about 3.5 cups."
+	},
+	{
+		"slug": "passionfruit-syrup",
+		"name": "Passionfruit Syrup",
+		"url": "/recipes/passionfruit-syrup",
+		"category": "Syrups",
+		"description": "Made from passionfruit for a tart, tropical sweetness.",
+		"ingredients": [
+			"1 part (by weight) passionfruit puree",
+			"2 parts (by volume) rich simple syrup"
+		],
+		"instructions": "Combine passionfruit puree and rich simple syrup (see recipe).",
+		"notes": null
+	},
+	{
+		"slug": "peppermint-vodka",
+		"name": "Peppermint Vodka",
+		"url": "/recipes/peppermint-vodka",
+		"category": "Infusions",
+		"description": "Vodka infused with peppermint candies for a festive, minty spirit.",
+		"ingredients": [
+			"4oz 40% ABV Vodka",
+			"2 hard peppermint candies (the ones with the red swirls)"
+		],
+		"instructions": "Add ingredients to a mason jar and let infuse for 2-3 hours, swirling around every 15-30 minutes. Remove any lingering pieces.",
+		"notes": "Used in the Peppermint Espresso Martini. This infusion will turn a nice pink/red color."
+	},
+	{
+		"slug": "persian-spice-liqueur",
+		"name": "Persian Spice Liqueur",
+		"url": "/recipes/persian-spice-liqueur",
+		"category": "Infusions",
+		"description": "A spiced liqueur with notes of cardamom, rose, and vanilla.",
+		"ingredients": [
+			"2.5C 40% ABV Vodka",
+			"10g edible rose petals",
+			"2 cardamom pods, cracked",
+			"1/2 vanilla bean, split and scraped",
+			"250g sugar",
+			"1/4C distilled water"
+		],
+		"instructions": "Combine the vodka, rose petals, cracked cardamom pods, and vanilla bean—including the scraped seeds—in a mason jar. Seal and steep for 24 hours, swirling every few hours. Strain through a fine-mesh strainer. For a clearer liqueur, strain again through cheesecloth or a coffee filter. Add the sugar and distilled water directly to the strained infusion. Seal and shake thoroughly. Continue shaking periodically until the sugar is completely dissolved, allowing it to sit overnight if necessary. Bottle and let rest for at least 5 days before using.",
+		"notes": "Makes ~750mL at 31% ABV."
+	},
+	{
+		"slug": "rich-simple-syrup",
+		"name": "Rich Simple Syrup",
+		"url": "/recipes/rich-simple-syrup",
+		"category": "Syrups",
+		"description": "A 2:1 ratio of sugar to water, creating a more concentrated sweetness.",
+		"ingredients": [
+			"2 parts (by weight) granulated sugar",
+			"1 part (by weight) water"
+		],
+		"instructions": "Combine sugar and water in a saucepan. Heat over medium heat, stirring occasionally, until sugar dissolves completely. Do not boil. Let cool and store in an airtight container in the refrigerator.",
+		"notes": "The 2:1 ratio makes it more concentrated than regular simple syrup, so you can use less in cocktails. This syrup will keep for up to 6 months in the refrigerator. "
+	},
+	{
+		"slug": "spiced-tea",
+		"name": "Spiced Tea",
+		"url": "/recipes/spiced-tea",
+		"category": "Other",
+		"description": "A simply-spiced black tea.",
+		"ingredients": [
+			"20oz hot water",
+			"5g Ceylon black tea",
+			"3 whole cloves",
+			"1 cinnamon stick"
+		],
+		"instructions": "Steep all together in teapot for 8 minutes, then pour.",
+		"notes": "Makes 20oz of tea."
+	},
+	{
+		"slug": "stone-fruit-liqueur",
+		"name": "Stone Fruit Liqueur",
+		"url": "/recipes/stone-fruit-liqueur",
+		"category": "Infusions",
+		"description": "A house liqueur with notes of ripe peach and apricot.",
+		"ingredients": [
+			"450ml 50% ABV Vodka",
+			"250g peach, chopped, with skin",
+			"150g apricot, chopped, with skin",
+			"300g sugar",
+			".5oz amaretto",
+			"1 2\"x1\" strip lemon peel, washed, unwaxed, with minimal white pith",
+			"2 tsp lemon juice",
+			"Tiny pinch of salt"
+		],
+		"instructions": "In a clean jar, combine the chopped peach, chopped apricot, and sugar, then refrigerate for 24 hours to macerate. Add the vodka, lemon peel, then infuse for 5-8 days, tasting toward the end of that window. Strain and fine-strain the liqueur, then stir in the amaretto, lemon juice, and a tiny pinch of salt. Let rest for 1-2 weeks before using.",
+		"notes": "Refrigerate for best quality."
+	},
+	{
+		"slug": "tom-and-jerry-batter",
+		"name": "Tom & Jerry Batter",
+		"url": "/recipes/tom-and-jerry-batter",
+		"category": "Other",
+		"description": "A batter made with egg and sugar for a rich, creamy flavor.",
+		"ingredients": [
+			"6 eggs",
+			"1lb powdered sugar"
+		],
+		"instructions": "Separate eggs. Beat egg yolks, gradually adding sugar, until thick & creamy. Beat egg whites and until stiff peaks form. Combine yolks and beat until light and creamy.",
+		"notes": "You can freeze the batter and scoop it straight from the freezer."
+	},
+	{
+		"slug": "vanilla-syrup",
+		"name": "Vanilla Syrup",
+		"url": "/recipes/vanilla-syrup",
+		"category": "Syrups",
+		"description": "Rich simple syrup steeped with split vanilla beans.",
+		"ingredients": [
+			"1 cup granulated sugar",
+			"1 cup water",
+			"1 vanilla bean, split and scraped"
+		],
+		"instructions": "Add the water, split vanilla bean, and scraped seeds to a small saucepan. Heat over medium heat until the water is steaming and just beginning to simmer. Remove from the heat and pour everything into a mason jar. Cover and let cool, then steep for 12 hours. Strain the vanilla-infused water through a coffee filter to remove the pod and seeds. Measure the strained liquid and, if necessary, add enough water to bring it back to 1 cup. Return the vanilla-infused water to a saucepan. Add the sugar and heat gently, stirring until completely dissolved. Do not boil. Let cool, then bottle and refrigerate.",
+		"notes": "Recipe makes about 1.5 cups. 2 tsp of vanilla extract can be substituted for the beans."
+	}
+]

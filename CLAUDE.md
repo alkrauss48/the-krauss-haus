@@ -14,6 +14,7 @@ A cocktail menu website for The Krauss Haus, a home bar. Live at [thekrausshaus.
 - `npm run lint` — ESLint + Prettier check
 - `npm run format` — Auto-format with Prettier
 - `npm run check` — Svelte type checking
+- `npm run export:data` — Regenerate `static/data/*.json` from the TypeScript data modules
 
 ## Project Structure
 
@@ -71,6 +72,7 @@ Enums in `src/lib/enums/`: `CocktailMethod`, `IngredientType`, `ServedIn`, `Ice`
 1. Create a new file in `src/lib/data/cocktails/` (e.g., `my-drink.ts`). Follow the pattern in existing files — export a `Cocktail` object as the default export with title, slug, description, image paths, method, servedIn, ice, ingredients, tags, and notes.
 2. Import and add it to the `allCocktails` array in `src/lib/data/all-cocktails.ts` (alphabetical order).
 3. Optionally add it to a menu file (`tiki-menu.ts`, `summer-menu.ts`, `winter-menu.ts`) if it belongs on a themed menu.
+4. Run `npm run export:data` and commit the regenerated `static/data/*.json`.
 
 ## Testing
 
