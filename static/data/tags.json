@@ -1,0 +1,239 @@
+[
+	{
+		"label": "Base Alcohol",
+		"tags": [
+			{
+				"label": "Rum",
+				"order": 1
+			},
+			{
+				"label": "Whiskey",
+				"order": 2
+			},
+			{
+				"label": "Gin",
+				"order": 3
+			},
+			{
+				"label": "Brandy",
+				"order": 4
+			},
+			{
+				"label": "Tequila",
+				"order": 5
+			},
+			{
+				"label": "Mezcal",
+				"order": 6
+			},
+			{
+				"label": "Vodka",
+				"order": 7
+			},
+			{
+				"label": "Beer",
+				"order": 8
+			},
+			{
+				"label": "Wine",
+				"order": 9
+			}
+		]
+	},
+	{
+		"label": "Style",
+		"tags": [
+			{
+				"label": "Tiki",
+				"order": 1
+			},
+			{
+				"label": "Sour",
+				"order": 2
+			},
+			{
+				"label": "Spirit Forward",
+				"order": 3
+			},
+			{
+				"label": "Highball",
+				"order": 4
+			}
+		]
+	},
+	{
+		"label": "Origin",
+		"tags": [
+			{
+				"label": "Original",
+				"order": 1
+			},
+			{
+				"label": "Classic",
+				"order": 2
+			},
+			{
+				"label": "Modern",
+				"order": 3
+			},
+			{
+				"label": "Folk",
+				"order": 4
+			}
+		]
+	},
+	{
+		"label": "Flavor Profile",
+		"tags": [
+			{
+				"label": "Bubbly",
+				"order": 1
+			},
+			{
+				"label": "Spiced",
+				"order": 2
+			},
+			{
+				"label": "Fruity",
+				"order": 3
+			},
+			{
+				"label": "Creamy",
+				"order": 4
+			},
+			{
+				"label": "Herbal",
+				"order": 5
+			},
+			{
+				"label": "Citrus",
+				"order": 6
+			},
+			{
+				"label": "Bitter",
+				"order": 7
+			}
+		]
+	},
+	{
+		"label": "Alcohol Level",
+		"tags": [
+			{
+				"label": "Higher Alcohol",
+				"order": 1
+			},
+			{
+				"label": "Lower Alcohol",
+				"order": 2
+			}
+		]
+	},
+	{
+		"label": "Technique",
+		"tags": [
+			{
+				"label": "Shaken",
+				"order": 1
+			},
+			{
+				"label": "Stirred",
+				"order": 2
+			},
+			{
+				"label": "Built in Glass",
+				"order": 3
+			},
+			{
+				"label": "Swizzled",
+				"order": 4
+			},
+			{
+				"label": "Flash Blended",
+				"order": 5
+			},
+			{
+				"label": "Blended",
+				"order": 6
+			},
+			{
+				"label": "Batched",
+				"order": 7
+			}
+		]
+	},
+	{
+		"label": "Temperature",
+		"tags": [
+			{
+				"label": "Frozen",
+				"order": 1
+			},
+			{
+				"label": "Hot",
+				"order": 2
+			}
+		]
+	},
+	{
+		"label": "Served In",
+		"tags": [
+			{
+				"label": "Coupe Glass",
+				"order": 1
+			},
+			{
+				"label": "Double Rocks Glass",
+				"order": 2
+			},
+			{
+				"label": "Single Rocks Glass",
+				"order": 3
+			},
+			{
+				"label": "Nick & Nora Glass",
+				"order": 4
+			},
+			{
+				"label": "Highball Glass",
+				"order": 5
+			},
+			{
+				"label": "Flute Glass",
+				"order": 6
+			},
+			{
+				"label": "Tiki Mug",
+				"order": 7
+			},
+			{
+				"label": "Pint Glass",
+				"order": 8
+			},
+			{
+				"label": "Mug",
+				"order": 9
+			},
+			{
+				"label": "Julep Tin",
+				"order": 10
+			},
+			{
+				"label": "Exclusive Drinkware",
+				"order": 11
+			}
+		]
+	},
+	{
+		"label": "Prep Time",
+		"tags": [
+			{
+				"label": "Simple Prep",
+				"order": 1
+			},
+			{
+				"label": "Complex Prep",
+				"order": 2
+			}
+		]
+	}
+]

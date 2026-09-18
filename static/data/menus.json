@@ -1,0 +1,132 @@
+[
+	{
+		"slug": "summer",
+		"title": "Summer Menu",
+		"subtitle": "Refreshing cocktails for the warm season",
+		"url": "/menu/summer",
+		"sections": [
+			{
+				"title": "Mommy's Drinks",
+				"cocktail_slugs": [
+					"mojito",
+					"margarita",
+					"gin-basil-smash"
+				]
+			},
+			{
+				"title": "Daddy's Drinks",
+				"cocktail_slugs": [
+					"michelada",
+					"daiquiri",
+					"surfer-on-acid"
+				]
+			},
+			{
+				"title": "Cyrus' Drinks",
+				"cocktail_slugs": [
+					"king-of-kings",
+					"caipirinha",
+					"mint-julep"
+				]
+			},
+			{
+				"title": "Lucas' Drinks",
+				"cocktail_slugs": [
+					"spritz",
+					"dear-lukey",
+					"paper-plane"
+				]
+			}
+		],
+		"featured_slugs": [
+			"gilded-rose",
+			"moonwell"
+		]
+	},
+	{
+		"slug": "tiki",
+		"title": "Tiki Menu",
+		"subtitle": "Exotic cocktails for your tropical escape",
+		"url": "/menu/tiki",
+		"sections": [
+			{
+				"title": "Bright and Tropical",
+				"cocktail_slugs": [
+					"painkiller",
+					"donga-punch",
+					"tradewinds",
+					"ancient-mariner",
+					"jungle-bird",
+					"hurricane"
+				]
+			},
+			{
+				"title": "Bold and Boozy",
+				"cocktail_slugs": [
+					"navy-grog",
+					"lost-lake",
+					"mai-tai",
+					"three-dots-and-a-dash",
+					"cobras-fang",
+					"zombie"
+				]
+			},
+			{
+				"title": "Not Just Rum",
+				"cocktail_slugs": [
+					"singapore-sling",
+					"saturn",
+					"gilda",
+					"iron-ranger",
+					"desert-dreams",
+					"norwegian-paralysis"
+				]
+			}
+		],
+		"featured_slugs": []
+	},
+	{
+		"slug": "winter",
+		"title": "Winter Menu",
+		"subtitle": "Warming cocktails for the cold season",
+		"url": "/menu/winter",
+		"sections": [
+			{
+				"title": "Mommy's Drinks",
+				"cocktail_slugs": [
+					"hot-toddy",
+					"chocolate-covered-cherries",
+					"merry-mule"
+				]
+			},
+			{
+				"title": "Daddy's Drinks",
+				"cocktail_slugs": [
+					"sazerac",
+					"martini",
+					"old-fashioned"
+				]
+			},
+			{
+				"title": "Cyrus' Drinks",
+				"cocktail_slugs": [
+					"penicillin",
+					"slap-n-pickle",
+					"oaxaca-old-fashioned"
+				]
+			},
+			{
+				"title": "Lucas' Drinks",
+				"cocktail_slugs": [
+					"manhattan",
+					"negroni",
+					"espresso-martini"
+				]
+			}
+		],
+		"featured_slugs": [
+			"caramel-apple-spice",
+			"rudolphs-nose"
+		]
+	}
+]

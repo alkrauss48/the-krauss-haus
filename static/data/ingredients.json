@@ -1,0 +1,1312 @@
+[
+	{
+		"slug": "absinthe",
+		"title": "Absinthe",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Base Spirits",
+		"subcategory": "Neutral Spirits",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "agave-nectar",
+		"title": "Agave Nectar",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "allspice-dram",
+		"title": "Allspice Dram",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Nut & Spice",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "amaro-lucano",
+		"title": "Amaro Lucano",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Amaro",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "amaro-nonino",
+		"title": "Amaro Nonino",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Amaro",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "angostura-bitters",
+		"title": "Angostura Bitters",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Bitters",
+		"subcategory": "Default",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "aperol",
+		"title": "Aperol",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Amaro",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "apple-cider",
+		"title": "Apple Cider",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Mixers",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "apple-strudel-liqueuer",
+		"title": "Apple Strudel Liqueuer",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Fruit & Citrus",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "appleton-estate-12-year",
+		"title": "Appleton Estate 12-Year",
+		"url": "/ingredients",
+		"group": "Jamaican Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "appleton-estate-signature",
+		"title": "Appleton Estate Signature",
+		"url": "/ingredients",
+		"group": "Jamaican Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "aquavit",
+		"title": "Aquavit",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Base Spirits",
+		"subcategory": "Neutral Spirits",
+		"type": "Alcoholic",
+		"recipe_slug": "aquavit"
+	},
+	{
+		"slug": "basil",
+		"title": "Basil",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Herbs & Spices",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "benedictine",
+		"title": "Benedictine",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Herbal",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "bitburger-pils",
+		"title": "Bitburger Pils",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Beer & Wine",
+		"subcategory": "Beer",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "black-walnut-bitters",
+		"title": "Black Walnut Bitters",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Bitters",
+		"subcategory": "Default",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "bols",
+		"title": "Bols",
+		"url": "/ingredients",
+		"group": "Genever",
+		"category": "Base Spirits",
+		"subcategory": "Gin",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "boulard-vsop",
+		"title": "Boulard VSOP",
+		"url": "/ingredients",
+		"group": "Calvados",
+		"category": "Base Spirits",
+		"subcategory": "Brandy",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "cabernet-sauvignon",
+		"title": "Cabernet Sauvignon",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Beer & Wine",
+		"subcategory": "Wine",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "campari",
+		"title": "Campari",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Amaro",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "caramel-vodka",
+		"title": "Caramel Vodka",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Base Spirits",
+		"subcategory": "Neutral Spirits",
+		"type": "Alcoholic",
+		"recipe_slug": "caramel-vodka"
+	},
+	{
+		"slug": "celery-bitters",
+		"title": "Celery Bitters",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Bitters",
+		"subcategory": "Default",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "champagne",
+		"title": "Champagne",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Beer & Wine",
+		"subcategory": "Sparkling",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "cherry-heering",
+		"title": "Cherry Heering",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Fruit & Citrus",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "chili-bitters",
+		"title": "Chili Bitters",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Bitters",
+		"subcategory": "Default",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "cimarron-blanco",
+		"title": "Cimarron Blanco",
+		"url": "/ingredients",
+		"group": "Blanco Tequila",
+		"category": "Base Spirits",
+		"subcategory": "Agave",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "cimarron-reposado",
+		"title": "Cimarron Reposado",
+		"url": "/ingredients",
+		"group": "Reposado Tequila",
+		"category": "Base Spirits",
+		"subcategory": "Agave",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "cinnamon",
+		"title": "Cinnamon",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Herbs & Spices",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "cinnamon-syrup",
+		"title": "Cinnamon Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "cinnamon-syrup"
+	},
+	{
+		"slug": "citron-vodka",
+		"title": "Citron Vodka",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Base Spirits",
+		"subcategory": "Neutral Spirits",
+		"type": "Alcoholic",
+		"recipe_slug": "citron-vodka"
+	},
+	{
+		"slug": "clement-select-barrel",
+		"title": "Clement Select Barrel",
+		"url": "/ingredients",
+		"group": "Élevé sous bois Rhum Agricole",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "clove",
+		"title": "Clove",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Herbs & Spices",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "coca-cola",
+		"title": "Coca-Cola",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Mixers",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "cocchi-vermouth-di-torino",
+		"title": "Cocchi Vermouth di Torino",
+		"url": "/ingredients",
+		"group": "Sweet Vermouth",
+		"category": "Beer & Wine",
+		"subcategory": "Wine",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "cointreau",
+		"title": "Cointreau",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Fruit & Citrus",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "coruba",
+		"title": "Coruba",
+		"url": "/ingredients",
+		"group": "Jamaican Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "cranberry-cordial",
+		"title": "Cranberry Cordial",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "cranberry-cordial"
+	},
+	{
+		"slug": "cream-of-coconut",
+		"title": "Cream of Coconut",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "creme-de-cacao",
+		"title": "Crème de Cacao",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Floral, Coffee & Specialty",
+		"type": "Alcoholic",
+		"recipe_slug": "creme-de-cacao"
+	},
+	{
+		"slug": "cucumber",
+		"title": "Cucumber",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "del-maguey-vida",
+		"title": "Del Maguey Vida",
+		"url": "/ingredients",
+		"group": "Mezcal",
+		"category": "Base Spirits",
+		"subcategory": "Agave",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "demerara-syrup",
+		"title": "Demerara Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "demerara-syrup"
+	},
+	{
+		"slug": "dolin-vermouth-dry",
+		"title": "Dolin Vermouth Dry",
+		"url": "/ingredients",
+		"group": "Dry Vermouth",
+		"category": "Beer & Wine",
+		"subcategory": "Wine",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "dry-curacao",
+		"title": "Dry Curaçao",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Fruit & Citrus",
+		"type": "Alcoholic",
+		"recipe_slug": "dry-curacao"
+	},
+	{
+		"slug": "egg",
+		"title": "Egg",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "eggnog",
+		"title": "Eggnog",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Floral, Coffee & Specialty",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "elderflower-liqueur",
+		"title": "Elderflower Liqueur",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Floral, Coffee & Specialty",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "elijah-craig",
+		"title": "Elijah Craig",
+		"url": "/ingredients",
+		"group": "Bourbon",
+		"category": "Base Spirits",
+		"subcategory": "Whiskey",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "erdinger-weissbier",
+		"title": "Erdinger Weißbier",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Beer & Wine",
+		"subcategory": "Beer",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "espresso",
+		"title": "Espresso",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "evan-williams-bib",
+		"title": "Evan Williams Bottled-in-Bond",
+		"url": "/ingredients",
+		"group": "Bourbon",
+		"category": "Base Spirits",
+		"subcategory": "Whiskey",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "falernum",
+		"title": "Falernum",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Nut & Spice",
+		"type": "Alcoholic",
+		"recipe_slug": "falernum"
+	},
+	{
+		"slug": "fassionola",
+		"title": "Fassionola",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "fassionola"
+	},
+	{
+		"slug": "fernet-branca",
+		"title": "Fernet Branca",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Amaro",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "frangelico",
+		"title": "Frangelico",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Nut & Spice",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "ginger-beer",
+		"title": "Ginger Beer",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Mixers",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "goldschlager",
+		"title": "Goldschläger",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Nut & Spice",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "grapefruit",
+		"title": "Grapefruit Juice",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Juice",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "grapefruit-garnish",
+		"title": "Grapefruit Garnish",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Garnish",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "green-chartreuse",
+		"title": "Green Chartreuse",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Herbal",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "grenadine",
+		"title": "Grenadine",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "grenadine"
+	},
+	{
+		"slug": "guinness-draught",
+		"title": "Guinness Draught",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Beer & Wine",
+		"subcategory": "Beer",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "hamilton-151",
+		"title": "Hamilton 151",
+		"url": "/ingredients",
+		"group": "Overproof Demerara Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "hamilton-86",
+		"title": "Hamilton 86",
+		"url": "/ingredients",
+		"group": "Demerara Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "heavy-cream",
+		"title": "Heavy Cream",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "herbstura",
+		"title": "Herbstura",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Bitters",
+		"subcategory": "Default",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "honey-ginger-syrup",
+		"title": "Honey-Ginger Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "honey-ginger-syrup"
+	},
+	{
+		"slug": "honey-syrup",
+		"title": "Honey Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "honey-syrup"
+	},
+	{
+		"slug": "house-dark-berry-creme",
+		"title": "Dark Berry Liqueur",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Fruit & Citrus",
+		"type": "Alcoholic",
+		"recipe_slug": "house-dark-berry-creme"
+	},
+	{
+		"slug": "italicus",
+		"title": "Italicus",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Floral, Coffee & Specialty",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "jagermeister",
+		"title": "Jägermeister Manifest",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Herbal",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "jalapeno-tequila",
+		"title": "Jalapeño Tequila",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Base Spirits",
+		"subcategory": "Agave",
+		"type": "Alcoholic",
+		"recipe_slug": "jalapeno-tequila"
+	},
+	{
+		"slug": "lairds-bib",
+		"title": "Laird's Bottled-in-Bond",
+		"url": "/ingredients",
+		"group": "Apple Brandy",
+		"category": "Base Spirits",
+		"subcategory": "Brandy",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "laphroaig",
+		"title": "Laphroaig",
+		"url": "/ingredients",
+		"group": "Single Malt Scotch Whisky",
+		"category": "Base Spirits",
+		"subcategory": "Whiskey",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "lavender-liqueur",
+		"title": "Lavender Liqueur",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Floral, Coffee & Specialty",
+		"type": "Alcoholic",
+		"recipe_slug": "lavender-liqueur"
+	},
+	{
+		"slug": "lazzaroni",
+		"title": "Lazzaroni",
+		"url": "/ingredients",
+		"group": "Amaretto",
+		"category": "Liqueurs",
+		"subcategory": "Nut & Spice",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "leblon",
+		"title": "Leblon",
+		"url": "/ingredients",
+		"group": "Cachaça",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "lemon",
+		"title": "Lemon Juice",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Juice",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "lemon-garnish",
+		"title": "Lemon Garnish",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Garnish",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "lime",
+		"title": "Lime Juice",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Juice",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "lime-garnish",
+		"title": "Lime Garnish",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Garnish",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "limoncello",
+		"title": "Limoncello",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Fruit & Citrus",
+		"type": "Alcoholic",
+		"recipe_slug": "limoncello"
+	},
+	{
+		"slug": "mama-juana",
+		"title": "Mama Juana",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Nut & Spice",
+		"type": "Alcoholic",
+		"recipe_slug": "mama-juana"
+	},
+	{
+		"slug": "maple-syrup",
+		"title": "Maple Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "maraschino-cherry",
+		"title": "Maraschino Cherry",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "maraschino-cherry-syrup",
+		"title": "Maraschino Cherry Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "maraschino-liqueuer",
+		"title": "Maraschino Liqueuer",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Fruit & Citrus",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "miller-high-life",
+		"title": "Miller High Life",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Beer & Wine",
+		"subcategory": "Beer",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "mint",
+		"title": "Mint",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Herbs & Spices",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "mint-syrup",
+		"title": "Mint Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "mint-syrup"
+	},
+	{
+		"slug": "monkey-shoulder",
+		"title": "Monkey Shoulder",
+		"url": "/ingredients",
+		"group": "Blended Scotch Whisky",
+		"category": "Base Spirits",
+		"subcategory": "Whiskey",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "monopolowa",
+		"title": "Monopolowa",
+		"url": "/ingredients",
+		"group": "Vodka",
+		"category": "Base Spirits",
+		"subcategory": "Neutral Spirits",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "mr-black",
+		"title": "Mr. Black",
+		"url": "/ingredients",
+		"group": "Coffee Liqueur",
+		"category": "Liqueurs",
+		"subcategory": "Floral, Coffee & Specialty",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "neisson-blanc",
+		"title": "Neisson Blanc",
+		"url": "/ingredients",
+		"group": "Blanc Rhum Agricole",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "nutmeg",
+		"title": "Nutmeg",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Herbs & Spices",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "orange",
+		"title": "Orange Juice",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Juice",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "orange-bitters",
+		"title": "Orange Bitters",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Bitters",
+		"subcategory": "Default",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "orange-blossom-water",
+		"title": "Orange Blossom Water",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "orange-garnish",
+		"title": "Orange Garnish",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Garnish",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "orgeat",
+		"title": "Orgeat",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "orgeat"
+	},
+	{
+		"slug": "passionfruit-syrup",
+		"title": "Passionfruit Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "passionfruit-syrup"
+	},
+	{
+		"slug": "peppermint-vodka",
+		"title": "Peppermint Vodka",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Base Spirits",
+		"subcategory": "Neutral Spirits",
+		"type": "Alcoholic",
+		"recipe_slug": "peppermint-vodka"
+	},
+	{
+		"slug": "persian-spice-liqueur",
+		"title": "Persian Spice Liqueur",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Floral, Coffee & Specialty",
+		"type": "Alcoholic",
+		"recipe_slug": "persian-spice-liqueur"
+	},
+	{
+		"slug": "peychauds-bitters",
+		"title": "Peychaud's Bitters",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Bitters",
+		"subcategory": "Default",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "pimms",
+		"title": "Pimm's #1",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Herbal",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "pineapple",
+		"title": "Pineapple Juice",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Juice",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "pineapple-garnish",
+		"title": "Pineapple Garnish",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Citrus",
+		"subcategory": "Garnish",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "planteray-3-stars",
+		"title": "Planteray 3 Stars",
+		"url": "/ingredients",
+		"group": "Blended Light Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "planteray-oftd",
+		"title": "Planteray OFTD",
+		"url": "/ingredients",
+		"group": "Overproof Blended Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "probitas",
+		"title": "Probitas",
+		"url": "/ingredients",
+		"group": "Blended Light Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "prosecco",
+		"title": "Prosecco",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Beer & Wine",
+		"subcategory": "Sparkling",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "rich-simple-syrup",
+		"title": "Rich Simple Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "rich-simple-syrup"
+	},
+	{
+		"slug": "rittenhouse",
+		"title": "Rittenhouse",
+		"url": "/ingredients",
+		"group": "Rye Whiskey",
+		"category": "Base Spirits",
+		"subcategory": "Whiskey",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "salt",
+		"title": "Salt",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "sanpellegrino-limonata",
+		"title": "Sanpellegrino Limonata",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Mixers",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "smith-and-cross",
+		"title": "Smith and Cross",
+		"url": "/ingredients",
+		"group": "Overproof Jamaican Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "soda-water",
+		"title": "Soda Water",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Mixers",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "spiced-tea",
+		"title": "Spiced Tea",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Mixers",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "spiced-tea"
+	},
+	{
+		"slug": "st-remy-vsop",
+		"title": "St-Rémy VSOP",
+		"url": "/ingredients",
+		"group": "Cognac",
+		"category": "Base Spirits",
+		"subcategory": "Brandy",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "stone-fruit-liqueur",
+		"title": "Stone Fruit Liqueur",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Fruit & Citrus",
+		"type": "Alcoholic",
+		"recipe_slug": "stone-fruit-liqueur"
+	},
+	{
+		"slug": "strawberry",
+		"title": "Strawberry",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "sugar",
+		"title": "Sugar",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "tanqueray",
+		"title": "Tanqueray",
+		"url": "/ingredients",
+		"group": "London Dry Gin",
+		"category": "Base Spirits",
+		"subcategory": "Gin",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "tecate-mexican-lager",
+		"title": "Tecate Mexican Lager",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Beer & Wine",
+		"subcategory": "Beer",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "tempranillo",
+		"title": "Tempranillo",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Beer & Wine",
+		"subcategory": "Wine",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "tom-and-jerry-batter",
+		"title": "Tom and Jerry Batter",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Other",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "tom-and-jerry-batter"
+	},
+	{
+		"slug": "tonic-water",
+		"title": "Tonic Water",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Mixers",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "vanilla-syrup",
+		"title": "Vanilla Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "vanilla-syrup"
+	},
+	{
+		"slug": "wray-and-nephew",
+		"title": "Wray and Nephew",
+		"url": "/ingredients",
+		"group": "Overproof Jamaican Rum",
+		"category": "Base Spirits",
+		"subcategory": "Rum",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "xocolatl-bitters",
+		"title": "Xocolatl Bitters",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Bitters",
+		"subcategory": "Default",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "yellow-chartreuse",
+		"title": "Yellow Chartreuse",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Herbal",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	}
+]

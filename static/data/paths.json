@@ -1,0 +1,152 @@
+[
+	{
+		"slug": "bard",
+		"title": "Bard",
+		"subtitle": "Vibrant. Approachable. Crowd-pleasing.",
+		"description": "The life of the party, one round at a time. This path opens with cool minty refreshment, shifts to breezy bubbles, then creamy coconut and pineapple, nutty sweetness, and a bold caffeinated finish. Nothing too challenging, nothing too obscure—just drinks that make everyone at the table happy.",
+		"url": "/paths/bard",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/bard.jpeg",
+		"cocktail_slugs": [
+			"mojito",
+			"spritz",
+			"painkiller",
+			"amaretto-sour",
+			"espresso-martini"
+		]
+	},
+	{
+		"slug": "fisherman",
+		"title": "Fisherman",
+		"subtitle": "Breezy. Refreshing. Shoreline-ready.",
+		"description": "Kick off your shoes and unwind by the water. This path starts with muddled cachaça simplicity, drifts into a low-ABV bitter-beer cooler, picks up tropical fruit and rum from a sidecar pour, deepens into a bittersweet tiki blend, and finishes with a smoky-briny scotch-and-mezcal sour that tastes of the sea itself.",
+		"url": "/paths/fisherman",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/fisherman.jpeg",
+		"cocktail_slugs": [
+			"caipirinha",
+			"spaghett",
+			"sharks-tooth",
+			"lost-lake",
+			"sea-legs"
+		]
+	},
+	{
+		"slug": "hunter",
+		"title": "Hunter",
+		"subtitle": "Tropical. Rum-soaked. Sun-chasing.",
+		"description": "Chase the sun through tropical fruit and unexpected spirits. This path opens with spiced tequila, pineapple, and lime, settles into clean rum-and-citrus balance, builds into easy fruity sweetness, then layers in agricole funk and warm cinnamon before landing on a bourbon-and-falernum tiki swap. The deeper you go, the more the tropics reveal.",
+		"url": "/paths/hunter",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/hunter.jpeg",
+		"cocktail_slugs": [
+			"gilda",
+			"daiquiri",
+			"hurricane",
+			"donga-punch",
+			"iron-ranger"
+		]
+	},
+	{
+		"slug": "innkeeper",
+		"title": "Innkeeper",
+		"subtitle": "Hearty. Comforting. Generous.",
+		"description": "Pull up a chair and stay a while. This path greets you with literal warmth, eases into crisp, easy refreshment, adds a touch of bubbly elegance, then dips into centuries-old tradition and finishes with a heavy, generous pour. The longer you stay, the stronger the drinks get.",
+		"url": "/paths/innkeeper",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/innkeeper.jpeg",
+		"cocktail_slugs": [
+			"hot-toddy",
+			"radler",
+			"gilded-rose",
+			"rattle-skull",
+			"rum-barrel"
+		]
+	},
+	{
+		"slug": "mage",
+		"title": "Mage",
+		"subtitle": "Complex. Aromatic. Masterful.",
+		"description": "Study the craft of balance and sophistication. This path begins with light, floral brightness, moves through spiced maritime depth, then sharpens into precise equal-parts harmony before arriving at stirred elegance and iconic minimalism. Each step teaches you to find more flavor in fewer ingredients.",
+		"url": "/paths/mage",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/mage.jpeg",
+		"cocktail_slugs": [
+			"moonwell",
+			"ancient-mariner",
+			"paper-plane",
+			"manhattan",
+			"martini"
+		]
+	},
+	{
+		"slug": "rogue",
+		"title": "Rogue",
+		"subtitle": "Bitter. Sharp. Uncompromising.",
+		"description": "Learn to love the bitter side. This path eases you in with floral brightness and a bitter tonic backbone, then balances it against tropical sweetness. From there the sweetness fades—amari take the lead, bitter becomes the backbone, and by the end there is nowhere to hide.",
+		"url": "/paths/rogue",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/rogue.jpeg",
+		"cocktail_slugs": [
+			"forest-spirit",
+			"jungle-bird",
+			"dear-lukey",
+			"negroni",
+			"bitter-giuseppe"
+		]
+	},
+	{
+		"slug": "royal",
+		"title": "Royal",
+		"subtitle": "Rich. Indulgent. Decadent.",
+		"description": "Every sip should feel like an indulgence. This path opens on a ruby-red tropical sour, escalates into a lavish multi-spirit tiki blend, moves through a cascade of fruit and liqueur, then dips into a dessert you can drink before finishing with a velvety, cream-topped crown jewel. These are drinks that reward you for going all in.",
+		"url": "/paths/royal",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/royal.jpeg",
+		"cocktail_slugs": [
+			"rudolphs-nose",
+			"king-of-kings",
+			"singapore-sling",
+			"chocolate-covered-cherries",
+			"ramos-gin-fizz"
+		]
+	},
+	{
+		"slug": "shaman",
+		"title": "Shaman",
+		"subtitle": "Earthy. Spirited. Smoke-kissed.",
+		"description": "Follow the agave from field to flame. This path opens with the most iconic tequila citrus, then builds into chili-spiced tropical heat crowned with a float of mezcal, takes a savory beer-and-lime break, returns to mezcal in tiki disguise, and lands on a stirred, spirit-forward marriage of agave and smoke.",
+		"url": "/paths/shaman",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/shaman.jpeg",
+		"cocktail_slugs": [
+			"margarita",
+			"desert-dreams",
+			"michelada",
+			"tia-mia",
+			"oaxaca-old-fashioned"
+		]
+	},
+	{
+		"slug": "warlock",
+		"title": "Warlock",
+		"subtitle": "Exotic. Potent. Otherworldly.",
+		"description": "Unusual ingredients, technical builds, and escalating power. This path opens with approachable tropical intrigue, veers into unfamiliar spirit territory, then descends through honeyed multi-rum depth and overproof bite before something truly legendary claims the final word.",
+		"url": "/paths/warlock",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/warlock.jpeg",
+		"cocktail_slugs": [
+			"saturn",
+			"norwegian-paralysis",
+			"three-dots-and-a-dash",
+			"cobras-fang",
+			"zombie"
+		]
+	},
+	{
+		"slug": "warrior",
+		"title": "Warrior",
+		"subtitle": "Bold. Spirit-forward. Unyielding.",
+		"description": "The spirit leads and everything else falls in line. This path opens on a sweetened bourbon foundation, sharpens into austere, anise-tinged rye and cognac, mellows through smoke and honeyed ginger, swings into honey-tempered high-proof rum, and lands on three-rum tropical strength. Each step demands a little more respect for the base spirit.",
+		"url": "/paths/warrior",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/warrior.jpeg",
+		"cocktail_slugs": [
+			"old-fashioned",
+			"sazerac",
+			"penicillin",
+			"navy-grog",
+			"mai-tai"
+		]
+	}
+]

@@ -66,6 +66,28 @@ yarn preview
 pnpm preview
 ```
 
+## Data Export
+
+All site content is hand-authored TypeScript, and records reference each other by live object
+reference rather than by key, so the data cannot be parsed — it has to be evaluated. `npm run
+export:data` loads each aggregator through Vite and writes flat, slug-referenced JSON to
+`static/data/`, which the site then serves at `/data/*.json`:
+
+```bash
+npm run export:data
+```
+
+It emits `cocktails.json`, `ingredients.json`, `recipes.json`, `bartenders.json`, `paths.json`,
+`tags.json`, `menus.json` and a `manifest.json` carrying the counts and a SHA-256 checksum over
+the other seven. Records refer to each other by slug, never by nesting, so the three menus do not
+each carry a copy of every cocktail on them.
+
+The output is deterministic — collections sorted by slug, a fixed key order, and a `generated_at`
+that only moves when the checksum does — so a re-export with no content change leaves an empty
+`git diff`. Re-run it and commit the result whenever you change anything under `src/lib/data/`;
+`src/lib/data/exported-data.test.ts` fails if the committed JSON has fallen behind the
+TypeScript, or if any slug reference in it no longer resolves.
+
 ## Deployment
 
 ### Docker Deployment

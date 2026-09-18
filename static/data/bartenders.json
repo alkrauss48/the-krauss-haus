@@ -1,0 +1,245 @@
+[
+	{
+		"slug": "aaron-krauss",
+		"name": "Aaron Krauss",
+		"url": "/bartenders/aaron-krauss",
+		"description": "Aaron runs The Krauss Haus out of his home, where the bar is just an extension of the kitchen and friends are always welcome to pull up a stool. His originals — tagged as such on this site — usually start with whatever's in season, a story his family is into at the moment, or an ingredient he couldn't resist picking up. Expect tiki riffs, cozy winter pours, and the occasional pantry experiment.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/bartenders/aaron-krauss.jpeg"
+	},
+	{
+		"slug": "antoine-peychaud",
+		"name": "Antoine Peychaud",
+		"url": "/bartenders/antoine-peychaud",
+		"description": "Antoine Peychaud was a Creole apothecary in 19th-century New Orleans who created Peychaud’s Bitters from a family recipe. He is widely credited with popularizing (if not inventing) the Sazerac, originally made with French cognac before rye whiskey became the standard. His bitters remain indispensable in New Orleans drinking culture today.",
+		"birth_year": 1803,
+		"death_year": 1883,
+		"image_url": null
+	},
+	{
+		"slug": "aviary-bar",
+		"name": "Aviary Bar",
+		"url": "/bartenders/aviary-bar",
+		"description": "The Aviary Bar at the Kuala Lumpur Hilton is credited with the creation of the Jungle Bird in 1978 — a bittersweet tropical drink built on dark rum, pineapple, lime, and Campari. Once a kitschy hotel-bar oddity, it has been elevated into a modern tiki standard.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "brian-miller",
+		"name": "Brian Miller",
+		"url": "/bartenders/brian-miller",
+		"description": "Brian Miller is a veteran of Death & Co and Pegu Club, widely respected for his deep knowledge of tiki and spirit-driven cocktails. His “Tiki Mondays with Miller” roving residency has introduced countless drinkers to inventive drinks like the tequila-based Gilda and the aquavit-forward Slap N’ Pickle.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "carousel-bar",
+		"name": "Carousel Bar",
+		"url": "/bartenders/carousel-bar",
+		"description": "The Carousel Bar & Lounge is a slowly rotating, carousel-themed bar inside the Hotel Monteleone in New Orleans’ French Quarter. It is the birthplace of the Vieux Carré, created in the 1930s by Walter Bergeron as a tribute to the neighborhood’s French, Italian, and American influences.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "dick-bradsell",
+		"name": "Dick Bradsell",
+		"url": "/bartenders/dick-bradsell",
+		"description": "Dick Bradsell is often credited with kick-starting the London cocktail renaissance. In the 1980s at Fred’s Club in Soho, he created the Espresso Martini—reportedly for a supermodel who asked for something to “wake me up, then f*ck me up.” He also invented the Bramble.",
+		"birth_year": 1959,
+		"death_year": 2016,
+		"image_url": null
+	},
+	{
+		"slug": "donn-the-beachcomber",
+		"name": "Donn Beach",
+		"url": "/bartenders/donn-the-beachcomber",
+		"description": "Donn Beach, born Ernest Raymond Beaumont Gantt, is widely considered the father of tiki culture. In 1933, he opened Don the Beachcomber in Hollywood, where he pioneered complex, rum-forward tropical drinks built on layered syrups, fresh citrus, and carefully blended rums. His recipes were famously secret, and many have since been painstakingly reverse-engineered by tiki historians.",
+		"birth_year": 1907,
+		"death_year": 1989,
+		"image_url": null
+	},
+	{
+		"slug": "erick-castro",
+		"name": "Erick Castro",
+		"url": "/bartenders/erick-castro",
+		"description": "Erick Castro is a highly influential American bartender and bar owner known for shaping the modern craft cocktail scene. He co-founded the acclaimed San Diego bar Raised by Wolves and is also behind Polite Provisions. Castro blends classic cocktail techniques with bold, creative flavors, and he’s widely respected for both his hospitality philosophy and his role in popularizing high-quality cocktail culture through projects like the Bartender at Large podcast.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "giuseppe-gonzalez",
+		"name": "Giuseppe Gonzalez",
+		"url": "/bartenders/giuseppe-gonzalez",
+		"description": "Giuseppe Gonzalez is a New York–bred bartender with stints at Flatiron Lounge, Clover Club, and Dutch Kills. He created the Bitter Giuseppe—a Cynar-forward riff on the Manhattan—and the Trinidad Sour, which improbably makes Angostura Bitters the base spirit. His drinks are consistently inventive and lean toward bold, bitter flavors.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "henry-c-ramos",
+		"name": "Henry C. Ramos",
+		"url": "/bartenders/henry-c-ramos",
+		"description": "Henry C. Ramos was a New Orleans bartender who invented the Ramos Gin Fizz at the Imperial Cabinet Saloon in 1888. The drink became so popular that he employed teams of “shaker boys” who would pass each cocktail down a line, each shaking for up to twelve minutes to achieve its signature cloud-like texture.",
+		"birth_year": 1856,
+		"death_year": 1928,
+		"image_url": null
+	},
+	{
+		"slug": "ivy-mix",
+		"name": "Ivy Mix",
+		"url": "/bartenders/ivy-mix",
+		"description": "Ivy Mix is the co-owner of the Brooklyn agave-focused bar Leyenda and author of Spirits of Latin America. She is one of the leading voices on agave spirits in the American bar scene. Her Tia Mia—a mezcal-driven riff on the Mai Tai—is a cornerstone of the modern agave-tiki movement.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "jeff-beachbum-berry",
+		"name": "Jeff \"Beachbum\" Berry",
+		"url": "/bartenders/jeff-beachbum-berry",
+		"description": "Jeff \"Beachbum\" Berry is a tiki historian, author, and owner of Latitude 29. He is responsible for painstakingly reverse-engineering and preserving the lost recipes of Donn Beach and other mid-century tiki pioneers. His books—including Beachbum Berry’s Sippin’ Safari and Potions of the Caribbean—form the foundation of the modern tiki canon.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "jeffrey-morgenthaler",
+		"name": "Jeffrey Morgenthaler",
+		"url": "/bartenders/jeffrey-morgenthaler",
+		"description": "Jeffrey Morgenthaler is a Portland bartender, author of The Bar Book and Drinking Distilled, and longtime bar manager at Clyde Common and Pépé le Moko. He is known for rehabilitating out-of-fashion drinks—most notably the Amaretto Sour, which he refined in 2012 into a version widely respected by bartenders.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "joaquin-simo",
+		"name": "Joaquín Simó",
+		"url": "/bartenders/joaquin-simo",
+		"description": "Joaquín Simó is a Panamanian-born, New York–based bartender and co-owner of Pouring Ribbons. During his time at Death & Co, he created the Naked and Famous—an equal-parts riff on the Last Word that swaps in mezcal and Aperol—which has since become a modern classic in its own right.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "jorg-meyer",
+		"name": "Jörg Meyer",
+		"url": "/bartenders/jorg-meyer",
+		"description": "Jörg Meyer is a German bartender and owner of Le Lion – Bar de Paris. In 2008, he created the Gin Basil Smash, a bright, herbaceous cocktail that quickly spread throughout the cocktail world. Often nicknamed the “Gin Pesto,” it has since become a staple on menus across Europe and North America.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "la-capilla",
+		"name": "La Capilla",
+		"url": "/bartenders/la-capilla",
+		"description": "La Capilla is a tiny, legendary cantina in Tequila, Jalisco, long run by the beloved Don Javier Delgado Corona. There, he created the Batanga—a simple, perfect highball of tequila, lime, and Mexican Coca-Cola—traditionally stirred with a well-worn kitchen knife that doubles as the drink’s swizzle.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "martin-cate",
+		"name": "Martin Cate",
+		"url": "/bartenders/martin-cate",
+		"description": "Martin Cate is the owner of the James Beard Award–winning Smuggler’s Cove and author of Smuggler’s Cove: Exotic Cocktails, Rum, and the Cult of Tiki. He is one of the most respected voices in the tiki revival, blending meticulous rum classification with a deep respect for the Don the Beachcomber tradition.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "pat-obrien",
+		"name": "Pat O'Brien",
+		"url": "/bartenders/pat-obrien",
+		"description": "Pat O'Brien was a French Quarter bar owner whose namesake Pat O’Brien’s is the birthplace of the Hurricane. The drink emerged in the 1940s, when distributors often required bars to purchase large quantities of rum to obtain limited whiskey; O’Brien and his team created the fruity, rum-heavy punch to help move the surplus.",
+		"birth_year": 1900,
+		"death_year": 1983,
+		"image_url": null
+	},
+	{
+		"slug": "paul-mcgee",
+		"name": "Paul McGee",
+		"url": "/bartenders/paul-mcgee",
+		"description": "Paul McGee is a Chicago bartender widely credited with helping revive tiki in the Midwest. He co-founded the acclaimed Lost Lake in Logan Square, which lends its name to his signature cocktail—a bright, modern tiki drink built on pineapple, lime, and passion fruit.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "phil-ward",
+		"name": "Phil Ward",
+		"url": "/bartenders/phil-ward",
+		"description": "Phil Ward is a Death & Co alum and co-founder of the agave-focused Mayahuel in New York. He created the Oaxaca Old Fashioned and the Division Bell, and is widely credited with pioneering the now-ubiquitous blend of tequila and mezcal in stirred, spirit-forward drinks.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "popo-galsini",
+		"name": "J. \"Popo\" Galsini",
+		"url": "/bartenders/popo-galsini",
+		"description": "J. \"Popo\" Galsini was a California bartender who won the 1967 International Bartenders Association World Championship with the Saturn—a bright, citrusy gin cocktail featuring passion fruit, orgeat, falernum, and lemon. The drink has since been embraced as a modern tiki staple, thanks in part to its rediscovery by Jeff Berry.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "raffles-hotel-long-bar",
+		"name": "Raffles Hotel Long Bar",
+		"url": "/bartenders/raffles-hotel-long-bar",
+		"description": "Long Bar at Raffles Hotel is the historic bar at Raffles Hotel Singapore, credited as the birthplace of the Singapore Sling, created around 1915 by Ngiam Tong Boon. The original recipe was lost for decades; today, the Long Bar serves a reconstructed version, still accompanied by complimentary peanuts whose shells guests are encouraged to drop on the floor.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "reed-cahill",
+		"name": "Reed Cahill",
+		"url": "/bartenders/reed-cahill",
+		"description": "Reed Cahill is a Baltimore bartender and creator of the Spaghett—a low-ABV riff built on a cold Miller High Life, a float of Aperol, and a squeeze of lemon. The drink has become a beloved dive-bar staple and a favorite of the cocktail internet for its unpretentious charm.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "sam-ross",
+		"name": "Sam Ross",
+		"url": "/bartenders/sam-ross",
+		"description": "Sam Ross is an Australian-born bartender who cut his teeth at Milk & Honey in New York. He is responsible for two of the most-ordered modern classics—the Penicillin (2005) and the Paper Plane—and later co-founded Attaboy on the Lower East Side. His influence on the modern cocktail renaissance is hard to overstate.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "soggy-dollar-bar",
+		"name": "Soggy Dollar Bar",
+		"url": "/bartenders/soggy-dollar-bar",
+		"description": "Soggy Dollar Bar is a beach bar on Jost Van Dyke in the British Virgin Islands, famous both for the Painkiller—the creamy blend of rum, pineapple, orange, and coconut cream that originated there in the 1970s—and for its name, which comes from the fact that there is no dock, so guests swim ashore and pay in soggy cash.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "tellers",
+		"name": "Tellers",
+		"url": "/bartenders/tellers",
+		"description": "Tellers is a bar and restaurant housed in the historic First National Building in downtown Oklahoma City. Set within the building’s grand former banking hall, it preserves much of the original architecture, including soaring ceilings, marble finishes, and the sense of scale from its early 20th-century origins as a landmark financial institution.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "trader-vic",
+		"name": "Trader Vic",
+		"url": "/bartenders/trader-vic",
+		"description": "Trader Vic, born Victor Jules Bergeron Jr., founded the Trader Vic’s chain of Polynesian-themed restaurants, beginning in Oakland in 1934. He famously claimed to have invented the Mai Tai in 1944 using 17-year-old J. Wray & Nephew Jamaican rum, a claim he defended against Donn Beach for decades. His restaurants helped spread tiki culture across the globe.",
+		"birth_year": 1902,
+		"death_year": 1984,
+		"image_url": null
+	}
+]
