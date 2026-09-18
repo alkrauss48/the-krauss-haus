@@ -13,7 +13,7 @@ import CAIPIRINHA from './cocktails/caipirinha';
 import DEAR_LUKEY from './cocktails/dear-lukey';
 import GIN_BASIL_SMASH from './cocktails/gin-basil-smash';
 import MINT_JULEP from './cocktails/mint-julep';
-import RUM_RUNNER from './cocktails/rum-runner';
+import DAIQUIRI from './cocktails/daiquiri';
 import PAPER_PLANE from './cocktails/paper-plane';
 
 export const featuredDrinks: Cocktail[] = [GILDED_ROSE, MOONWELL];
@@ -27,12 +27,12 @@ export const categories: Category[] = [
 	{
 		title: "Daddy's Drinks",
 		bgColors: sectionColors.daddy,
-		cocktails: [MICHELADA, MINT_JULEP, SURFER_ON_ACID]
+		cocktails: [MICHELADA, DAIQUIRI, SURFER_ON_ACID]
 	},
 	{
 		title: "Cyrus' Drinks",
 		bgColors: sectionColors.cyrus,
-		cocktails: [KING_OF_KINGS, CAIPIRINHA, RUM_RUNNER]
+		cocktails: [KING_OF_KINGS, CAIPIRINHA, MINT_JULEP]
 	},
 	{
 		title: "Lucas' Drinks",
