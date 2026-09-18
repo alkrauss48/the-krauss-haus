@@ -17,7 +17,7 @@ import THREE_DOTS_AND_A_DASH from '$lib/data/cocktails/three-dots-and-a-dash';
 import LOST_LAKE from '$lib/data/cocktails/lost-lake';
 import NAVY_GROG from '$lib/data/cocktails/navy-grog';
 import DONGA_PUNCH from '$lib/data/cocktails/donga-punch';
-import DAIQUIRI from './cocktails/daiquiri';
+import TRADEWINDS from './cocktails/tradewinds';
 
 export const categories: Category[] = [
 	{
@@ -28,7 +28,7 @@ export const categories: Category[] = [
 			tertiary: '#ecfdf5',
 			variationText: '#166534'
 		},
-		cocktails: [DAIQUIRI, PAINKILLER, DONGA_PUNCH, HURRICANE, ANCIENT_MARINER, JUNGLE_BIRD]
+		cocktails: [PAINKILLER, DONGA_PUNCH, TRADEWINDS, ANCIENT_MARINER, JUNGLE_BIRD, HURRICANE]
 	},
 	{
 		title: 'Bold and Boozy',
