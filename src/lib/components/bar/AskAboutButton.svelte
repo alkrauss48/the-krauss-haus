@@ -1,26 +1,29 @@
 <script lang="ts">
 	import { bar } from '$lib/bar/bar.svelte';
 	import { bartenders } from '$lib/bar/bartenders';
+	import Sparkle from './Sparkle.svelte';
 
 	let { title }: { title: string } = $props();
 
 	const who = $derived(bartenders[bar.bartender]);
 </script>
 
+<!--
+	Named and amber rather than a grey "Ask": the guest should know which bartender they are
+	pulling aside, and the sparkle should say the answer gets written on the spot. On small
+	screens the name drops and the sparkle carries it, so the header stays on one line.
+-->
 <button
 	type="button"
 	onclick={() => bar.prefill(`Tell me about the ${title}.`)}
 	aria-label="Ask {who.name} about {title}"
 	aria-haspopup="dialog"
 	title="Ask {who.name} about this one"
-	class="relative cursor-pointer rounded-md p-2 text-gray-400 transition-colors hover:bg-gray-50 hover:text-amber-600"
+	class="group flex cursor-pointer items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 py-1.5 pr-3 pl-2.5 text-sm font-medium whitespace-nowrap text-amber-700 transition-colors hover:border-amber-300 hover:bg-amber-100 hover:text-amber-800"
 >
-	<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-		<path
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			stroke-width="2"
-			d="M5 4h14l-7 8v7m-3 0h6M9 19h6"
-		/>
-	</svg>
+	<Sparkle
+		class="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12"
+	/>
+	<span class="hidden sm:inline">Ask {who.name}</span>
+	<span class="sm:hidden">Ask</span>
 </button>

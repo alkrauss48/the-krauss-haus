@@ -3,6 +3,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { bar } from '$lib/bar/bar.svelte';
+	import { ringer } from '$lib/bar/ring.svelte';
 	import type { BartenderKey } from '$lib/bar/bartenders';
 	import BartenderPlates from './BartenderPlates.svelte';
 	import BarTranscript from './BarTranscript.svelte';
@@ -83,6 +84,12 @@
 		};
 	});
 
+	// The one moment two characters talk to each other. Muted until the guest asks for it.
+	$effect(() => {
+		if (bar.open && bar.activity.kind === 'consulting' && ringer.enabled) ringer.start();
+		else ringer.stop();
+	});
+
 	function send() {
 		void bar.send(bar.draft);
 	}
@@ -119,10 +126,51 @@
 					<div class="flex items-center gap-1">
 						<button
 							type="button"
+							onclick={() => ringer.toggle()}
+							aria-pressed={ringer.enabled}
+							aria-label="Sound when the bartenders call each other"
+							title={ringer.enabled ? 'Sound on' : 'Sound off (muted)'}
+							class="cursor-pointer rounded-md p-1.5 transition-colors hover:bg-white/60 {ringer.enabled
+								? 'text-amber-800'
+								: 'text-gray-400 hover:text-gray-600'}"
+						>
+							<svg
+								class="h-4 w-4"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<!-- The cone, shared by both states. -->
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M11 5L6.5 9H3v6h3.5L11 19V5z"
+								/>
+								{#if ringer.enabled}
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13"
+									/>
+								{:else}
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M15.5 9.5l5 5m0-5l-5 5"
+									/>
+								{/if}
+							</svg>
+						</button>
+						<button
+							type="button"
 							onclick={() => bar.freshTab()}
 							class="cursor-pointer rounded-md px-2 py-1 text-[0.7rem] text-gray-500 transition-colors hover:bg-white/60 hover:text-gray-800"
 						>
-							Fresh tab
+							New chat
 						</button>
 						<button
 							type="button"
@@ -155,19 +203,26 @@
 				items={bar.items}
 				bartender={bar.bartender}
 				{streaming}
+				activity={bar.activity}
+				waiting={bar.waiting}
 				onRetry={(id) => void bar.retry(id)}
+				onStop={() => bar.stop()}
 				onNavigate={() => bar.closePanel()}
 			/>
 
 			<div class="px-3">
-				<BarStatusLine
-					activity={bar.activity}
-					waiting={bar.waiting}
-					bartender={bar.bartender}
-					hasAnswered={bar.hasAnswered}
-					{stopped}
-					onStop={() => bar.stop()}
-				/>
+				<!-- Only the resting line lives down here now; everything mid-answer is said in the
+				     bubble the answer is about to fill. -->
+				{#if !bar.busy}
+					<BarStatusLine
+						activity={bar.activity}
+						waiting={bar.waiting}
+						bartender={bar.bartender}
+						hasAnswered={bar.hasAnswered}
+						{stopped}
+						onStop={() => bar.stop()}
+					/>
+				{/if}
 
 				{#if bar.failure === 'rate-limited'}
 					<p class="pb-2 text-[0.8rem] text-amber-800">

@@ -1,24 +1,45 @@
 <script lang="ts">
 	import { parseMarkdown, plainText } from '$lib/bar/markdown';
 	import { bartenders } from '$lib/bar/bartenders';
-	import { isEmptyAnswer, type Turn } from '$lib/bar/bar.svelte';
+	import { isEmptyAnswer, type Activity, type Turn } from '$lib/bar/bar.svelte';
 	import Markdown from './Markdown.svelte';
 	import ConsultCard from './ConsultCard.svelte';
+	import BarStatusLine from './BarStatusLine.svelte';
 
 	let {
 		turn,
 		streaming = false,
+		activity = { kind: 'idle' },
+		waiting = 0,
 		onRetry,
+		onStop,
 		onNavigate
 	}: {
 		turn: Turn;
 		streaming?: boolean;
+		activity?: Activity;
+		waiting?: number;
 		onRetry?: (id: string) => void;
+		onStop?: () => void;
 		onNavigate?: () => void;
 	} = $props();
 
 	const who = $derived(bartenders[turn.bartender]);
+
+	/**
+	 * What the bartender is doing belongs where the answer will be, not in a footer. While
+	 * they think, reach for a book or pick up the phone, the bubble says so in words — a bare
+	 * blinking caret says nothing at all.
+	 */
+	const status = $derived(
+		streaming &&
+			activity.kind !== 'idle' &&
+			activity.kind !== 'answering' &&
+			activity.kind !== 'error'
+	);
 	const quiet = $derived(!streaming && turn.note === undefined && isEmptyAnswer(turn));
+	/** One signal of life at a time: the caret stands down while the status line speaks. */
+	const caret = $derived(streaming && !status);
 
 	/** The last text part is the only one still growing, so it is the only one with a caret. */
 	function lastTextIndex(t: Turn): number {
@@ -71,7 +92,16 @@
 					{/if}
 				{/each}
 
-				{#if streaming && turn.parts.length === 0}
+				{#if status}
+					<BarStatusLine
+						{activity}
+						{waiting}
+						bartender={turn.bartender}
+						hasAnswered={true}
+						inline
+						{onStop}
+					/>
+				{:else if caret && turn.parts.length === 0}
 					<Markdown blocks={parseMarkdown('', { caret: true })} />
 				{/if}
 

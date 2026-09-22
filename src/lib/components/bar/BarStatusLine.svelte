@@ -16,6 +16,7 @@
 		bartender,
 		hasAnswered,
 		stopped = false,
+		inline = false,
 		onStop
 	}: {
 		activity: Activity;
@@ -23,6 +24,8 @@
 		bartender: BartenderKey;
 		hasAnswered: boolean;
 		stopped?: boolean;
+		/** Rendered inside the answer bubble, where it stands in for the caret. */
+		inline?: boolean;
 		onStop?: () => void;
 	} = $props();
 
@@ -56,7 +59,9 @@
 
 {#if line !== ''}
 	<div
-		class="flex items-center gap-2 px-1 py-2 text-[0.8rem] text-gray-500"
+		class="flex flex-wrap items-center gap-2 text-[0.8rem] text-gray-500 {inline
+			? 'py-0.5'
+			: 'px-1 py-2'}"
 		aria-live="polite"
 		aria-atomic="true"
 	>
@@ -139,7 +144,7 @@
 		<span>{line}</span>
 
 		{#if longHaul}
-			<span class="ml-auto flex items-center gap-2">
+			<span class="flex items-center gap-2 {inline ? '' : 'ml-auto'}">
 				<span class="hidden text-gray-400 sm:inline">This one's gone long.</span>
 				<button
 					type="button"

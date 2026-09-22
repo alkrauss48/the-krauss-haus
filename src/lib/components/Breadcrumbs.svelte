@@ -68,7 +68,7 @@
 
 {#if !isHomePage}
 	<nav
-		class="mb-8 flex min-w-0 items-center text-sm text-gray-600 pr-12 lg:pr-0"
+		class="mb-8 flex min-w-0 items-center text-sm text-gray-600 pr-24 xl:pr-0"
 		aria-label="Breadcrumb navigation"
 		in:fly={{ x: -20, duration: 400, delay: 300 }}
 	>

@@ -5,7 +5,7 @@
  */
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import { render, screen } from '@testing-library/svelte';
+import { render, screen, within } from '@testing-library/svelte';
 
 vi.mock('$app/navigation', () => ({ goto: vi.fn() }));
 
@@ -51,16 +51,29 @@ describe('BarPanel', () => {
 		expect(screen.getByRole('radio', { name: /eddie/i })).toHaveAttribute('aria-checked', 'true');
 	});
 
-	it('never leaves the status line empty while something is happening', async () => {
+	it('says what is happening inside the answer bubble, never as a bare caret', async () => {
 		render(BarPanel);
+		// The pending bartender turn `send()` pushes before the first byte arrives.
+		bar.items = [
+			{ id: 'q', role: 'guest', bartender: 'sasha', parts: [{ kind: 'text', text: 'hi' }], at: 0 },
+			{ id: 'a', role: 'bartender', bartender: 'sasha', parts: [], question: 'hi', at: 0 }
+		];
+
 		for (const activity of [
 			{ kind: 'thinking' } as const,
 			{ kind: 'tool', label: 'running an eye down the menus' } as const,
 			{ kind: 'consulting', label: 'calling Eddie over', other: 'eddie' } as const
 		]) {
 			bar.activity = activity;
-			const status = await screen.findByText(/\S/, { selector: '[aria-live="polite"] span' });
+
+			// Said under Sasha's name, where the answer will land — not in a footer, and never
+			// as a bare caret.
+			const bubble = (await screen.findByText('SASHA', { selector: 'p' })).parentElement!;
+			const status = await within(bubble).findByText(/\S/, {
+				selector: '[aria-live="polite"] span'
+			});
 			expect(status.textContent?.trim()).not.toBe('');
+			expect(within(bubble).queryByText('|')).not.toBeInTheDocument();
 		}
 	});
 

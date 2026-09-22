@@ -68,7 +68,7 @@
 	<meta property="og:url" content="https://thekrausshaus.com{$page.url.pathname}" />
 </svelte:head>
 
-<div class="absolute top-3 right-3 sm:top-4 sm:right-4 z-30">
+<div class="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 flex items-center gap-1.5">
 	<button
 		type="button"
 		class="cursor-pointer p-2 rounded-full bg-white/80 backdrop-blur-sm text-gray-500 hover:text-amber-600 hover:bg-white shadow-sm hover:shadow-md transition-all border border-gray-200/60"
@@ -93,13 +93,14 @@
 			/>
 		</svg>
 	</button>
+
+	<BarLauncher />
 </div>
 
 {@render children()}
 
 <SearchModal bind:isOpen={showSearch} onClose={closeSearch} />
 
-<BarLauncher />
 <BarPanel />
 
 {#if $toastMessage}

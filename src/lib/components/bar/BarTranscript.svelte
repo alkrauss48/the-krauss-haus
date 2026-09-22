@@ -1,19 +1,25 @@
 <script lang="ts">
 	import { bartenders, type BartenderKey } from '$lib/bar/bartenders';
-	import { isTurn, type TranscriptItem } from '$lib/bar/bar.svelte';
+	import { isTurn, type Activity, type TranscriptItem } from '$lib/bar/bar.svelte';
 	import BarMessage from './BarMessage.svelte';
 
 	let {
 		items,
 		bartender,
 		streaming,
+		activity,
+		waiting,
 		onRetry,
+		onStop,
 		onNavigate
 	}: {
 		items: TranscriptItem[];
 		bartender: BartenderKey;
 		streaming: boolean;
+		activity: Activity;
+		waiting: number;
 		onRetry: (id: string) => void;
+		onStop: () => void;
 		onNavigate: () => void;
 	} = $props();
 
@@ -39,6 +45,8 @@
 	$effect(() => {
 		void items.length;
 		void streaming;
+		// The status line grows and shrinks inside the last bubble, so it moves the bottom too.
+		void activity.kind;
 		if (!pinned || !scroller) return;
 		cancelAnimationFrame(frame);
 		frame = requestAnimationFrame(() => {
@@ -64,7 +72,10 @@
 				<BarMessage
 					turn={item}
 					streaming={streaming && item.id === lastId}
+					activity={item.id === lastId ? activity : { kind: 'idle' }}
+					{waiting}
 					{onRetry}
+					{onStop}
 					{onNavigate}
 				/>
 			{:else}
