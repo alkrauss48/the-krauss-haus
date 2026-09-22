@@ -4,6 +4,9 @@
 	import { page } from '$app/stores';
 	import { toggleCostMode, toastMessage } from '$lib/stores/costMode';
 	import SearchModal from '$lib/components/SearchModal.svelte';
+	import BarLauncher from '$lib/components/bar/BarLauncher.svelte';
+	import BarPanel from '$lib/components/bar/BarPanel.svelte';
+	import { bar } from '$lib/bar/bar.svelte';
 
 	let { children } = $props();
 
@@ -31,15 +34,27 @@
 				showSearch = true;
 			}
 
-			// "/" to open search when not typing in a field
-			if (event.key === '/' && !event.metaKey && !event.ctrlKey && !event.altKey) {
+			// Cmd/Ctrl+J to pull up a stool
+			if ((event.metaKey || event.ctrlKey) && !event.shiftKey && event.code === 'KeyJ') {
+				event.preventDefault();
+				bar.openPanel();
+			}
+
+			// "/" to open search, "b" for the bar — neither while typing in a field
+			if (!event.metaKey && !event.ctrlKey && !event.altKey) {
 				const target = event.target as HTMLElement | null;
 				const tag = target?.tagName;
 				const isEditable =
 					tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || target?.isContentEditable;
-				if (!isEditable && !showSearch) {
+
+				if (event.key === '/' && !isEditable && !showSearch) {
 					event.preventDefault();
 					showSearch = true;
+				}
+
+				if (event.key === 'b' && !isEditable && !showSearch && !bar.open) {
+					event.preventDefault();
+					bar.openPanel();
 				}
 			}
 		}
@@ -84,9 +99,12 @@
 
 <SearchModal bind:isOpen={showSearch} onClose={closeSearch} />
 
+<BarLauncher />
+<BarPanel />
+
 {#if $toastMessage}
 	<div
-		class="fixed bottom-4 right-4 z-50 bg-gray-800 text-white text-sm px-4 py-2 rounded-lg shadow-lg"
+		class="fixed bottom-4 left-4 z-50 bg-gray-800 text-white text-sm px-4 py-2 rounded-lg shadow-lg"
 	>
 		{$toastMessage}
 	</div>

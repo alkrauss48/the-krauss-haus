@@ -19,7 +19,7 @@
 
 <button
 	on:click={scrollToTop}
-	class="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:scale-110 cursor-pointer z-30 {showScrollTop
+	class="fixed bottom-20 sm:bottom-28 right-4 sm:right-8 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:scale-110 cursor-pointer z-30 {showScrollTop
 		? 'opacity-100 translate-y-0'
 		: 'opacity-0 translate-y-4 pointer-events-none'}"
 	aria-label="Scroll to top"

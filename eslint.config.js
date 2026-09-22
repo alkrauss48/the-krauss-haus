@@ -35,5 +35,13 @@ export default ts.config(
 		// Svelte reactivity ($: blocks, $effect) reads these assignments on
 		// subsequent runs, which the rule's flow analysis cannot see.
 		rules: { 'no-useless-assignment': 'off' }
+	},
+	{
+		// This component renders links the bartenders wrote, so it handles both kinds: the
+		// internal branch calls resolve(), and the external branch deliberately does not —
+		// resolve() prefixes the app's base path and would corrupt an absolute off-site URL.
+		// Hrefs are whitelisted by `classifyLink` before either branch sees them.
+		files: ['src/lib/components/bar/MarkdownInline.svelte'],
+		rules: { 'svelte/no-navigation-without-resolve': ['error', { ignoreLinks: true }] }
 	}
 );

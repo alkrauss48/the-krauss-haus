@@ -3,6 +3,7 @@
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
+	import AskAboutButton from '$lib/components/bar/AskAboutButton.svelte';
 	import { resolve } from '$app/paths';
 	import { fade, fly } from 'svelte/transition';
 	import { Tags } from '$lib/data/all-tags';
@@ -85,11 +86,14 @@
 								</div>
 							{/if}
 						</div>
-						<CopyLinkButton
-							url={typeof window !== 'undefined' ? window.location.href : ''}
-							ariaLabel="Copy link to {cocktail.title}"
-							size="md"
-						/>
+						<div class="flex shrink-0 items-center gap-1">
+							<AskAboutButton title={cocktail.title} />
+							<CopyLinkButton
+								url={typeof window !== 'undefined' ? window.location.href : ''}
+								ariaLabel="Copy link to {cocktail.title}"
+								size="md"
+							/>
+						</div>
 					</div>
 					{#if cocktail.subtitle}
 						<p class="text-xl text-gray-600 italic mb-4">{cocktail.subtitle}</p>
