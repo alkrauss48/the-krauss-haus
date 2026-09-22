@@ -17,8 +17,21 @@ export type Bartender = {
 	name: string;
 	/** The one-line role, shown on the nameplate under the name. */
 	role: string;
-	/** What they are grounded in — used in the empty state and the picker tooltip. */
+	/** What they are grounded in — used in the picker tooltip. */
 	groundedIn: string;
+	/** The one line that tells a guest whether this is the one to ask. */
+	bestAt: string;
+	/**
+	 * The longer introduction — who they are, not just what they are for. Only shown when a
+	 * guest asks to see it, so it can take its time and sound like a person.
+	 */
+	about: string;
+	/**
+	 * The limit worth saying out loud. Only Eddie has one: he is a historical counterpart and
+	 * genuinely cannot see this site's cocktails, menus or paths, so a guest who asks him for
+	 * them gets nothing useful. Saying so up front is kinder than letting them find out.
+	 */
+	caveat?: string;
 	placeholder: string;
 	/** Nameplate when lit. */
 	plate: string;
@@ -39,6 +52,12 @@ export const bartenders: Record<BartenderKey, Bartender> = {
 		name: 'Sasha',
 		role: 'the house bartender',
 		groundedIn: "the Krauss Haus's own menus",
+		bestAt: 'Anything on this site — the cocktails, the menus, the paths, what to pour tonight.',
+		about:
+			'Sasha runs this bar. She knows the cocktails, the themed menus and the guided paths ' +
+			'because they are hers, and she would rather talk you into the right drink than the one ' +
+			'you walked in asking for. Tell her the mood, the spirit, or what is actually on your ' +
+			'shelf, and she will work from there.',
 		placeholder: 'Ask Sasha…',
 		plate: 'bg-amber-50 border-amber-300 text-amber-900 shadow-sm',
 		plateDim: 'bg-white/60 border-gray-200 text-gray-400',
@@ -53,6 +72,12 @@ export const bartenders: Record<BartenderKey, Bartender> = {
 		name: 'Eddie',
 		role: 'uptown, 1936',
 		groundedIn: 'a shelf of public-domain manuals',
+		bestAt: 'The old books — 1930s specs, forgotten names, how a drink was made back then.',
+		about:
+			'Eddie has been working an uptown bar since 1936 and has not noticed the years since. ' +
+			'He answers out of a shelf of pre-war manuals, so he has the original spec, the name a ' +
+			'drink went by then, and an opinion about who ruined it. He talks like it, too.',
+		caveat: "He's never seen this site's menu. Ask Sasha for that.",
 		placeholder: 'Ask Eddie…',
 		plate: 'bg-emerald-50 border-emerald-700/40 text-emerald-900 shadow-sm',
 		plateDim: 'bg-white/60 border-gray-200 text-gray-400',

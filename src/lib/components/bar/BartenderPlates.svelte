@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { BARTENDER_KEYS, bartenders, type BartenderKey } from '$lib/bar/bartenders';
 
+	/** The hover gloss: what to bring them, and — for Eddie — what not to. */
+	function plateTitle(who: (typeof bartenders)[BartenderKey]): string {
+		return who.caveat ? `${who.bestAt} ${who.caveat}` : who.bestAt;
+	}
+
 	let {
 		active,
 		busy,
@@ -24,7 +29,7 @@
 			role="radio"
 			aria-checked={key === active}
 			disabled={busy && key !== active}
-			title={busy && key !== active ? 'one at a time' : who.groundedIn}
+			title={busy && key !== active ? 'one at a time' : plateTitle(who)}
 			class="flex-1 cursor-pointer rounded-lg border px-3 py-2 text-left transition-all duration-300 disabled:cursor-not-allowed {lit
 				? who.plate
 				: who.plateDim} {busy && key !== active ? 'opacity-50' : ''}"

@@ -11,6 +11,7 @@ vi.mock('$app/navigation', () => ({ goto: vi.fn() }));
 
 import BarPanel from './BarPanel.svelte';
 import { bar } from '$lib/bar/bar.svelte';
+import { bartenders } from '$lib/bar/bartenders';
 
 beforeEach(() => {
 	bar.freshTab();
@@ -42,6 +43,37 @@ describe('BarPanel', () => {
 		expect(screen.getByRole('radio', { name: /sasha/i })).toBeInTheDocument();
 		expect(screen.getByText(/Sasha is behind the bar/i)).toBeInTheDocument();
 		expect(screen.getByPlaceholderText('Ask Sasha…')).toBeInTheDocument();
+	});
+
+	it('introduces both bartenders before the first question', () => {
+		render(BarPanel);
+		// A guest who does not know the difference picks wrong and blames the answer, so the
+		// empty state says what each one is for — including the one thing Eddie cannot do —
+		// without anyone having to open anything.
+		expect(screen.getByText(bartenders.sasha.bestAt)).toBeInTheDocument();
+		expect(screen.getByText(bartenders.eddie.bestAt)).toBeInTheDocument();
+		expect(screen.getByText(bartenders.eddie.caveat!)).toBeInTheDocument();
+		expect(screen.getByText(/call the other over/i)).toBeInTheDocument();
+	});
+
+	it('keeps the longer introductions behind a link', async () => {
+		render(BarPanel);
+
+		// Folded, so the empty state stays prose and one link rather than two more things that
+		// look pressable.
+		expect(screen.queryByText(bartenders.sasha.about)).not.toBeInTheDocument();
+		const opener = screen.getByRole('button', { name: /learn more about the bartenders/i });
+		expect(opener).toHaveAttribute('aria-expanded', 'false');
+
+		opener.click();
+		expect(await screen.findByText(bartenders.sasha.about)).toBeInTheDocument();
+		expect(screen.getByText(bartenders.eddie.about)).toBeInTheDocument();
+		expect(screen.getByText(new RegExp(bartenders.eddie.groundedIn))).toBeInTheDocument();
+	});
+
+	it('says nothing is stored, where a guest sees it before typing', () => {
+		render(BarPanel);
+		expect(screen.getByText(/Nothing you ask here is stored/i)).toBeInTheDocument();
 	});
 
 	it('follows the bartender when the guest switches', async () => {

@@ -5,7 +5,10 @@
 
 	let { title }: { title: string } = $props();
 
-	const who = $derived(bartenders[bar.bartender]);
+	// Always Sasha, whoever is behind the bar at the moment: she is the only one who can see
+	// this site's cocktails, so she is the only one this button can honestly offer. Opening
+	// the panel switches to her to match.
+	const who = bartenders.sasha;
 </script>
 
 <!--
@@ -15,7 +18,7 @@
 -->
 <button
 	type="button"
-	onclick={() => bar.prefill(`Tell me about the ${title}.`)}
+	onclick={() => bar.prefill(`Tell me about the ${title}.`, who.key)}
 	aria-label="Ask {who.name} about {title}"
 	aria-haspopup="dialog"
 	title="Ask {who.name} about this one"

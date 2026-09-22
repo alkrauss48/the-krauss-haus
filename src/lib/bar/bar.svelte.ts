@@ -133,9 +133,14 @@ export class BarChat {
 		this.open = false;
 	}
 
-	/** The cocktail-page on-ramp: open with the drink's name already in the box. */
-	prefill(text: string): void {
+	/**
+	 * The cocktail-page on-ramp: open with the drink's name already in the box. `who` is the
+	 * bartender the button promised — the on-ramp always names Sasha, because she is the only
+	 * one who can see this site's drinks, so landing on Eddie would break that promise.
+	 */
+	prefill(text: string, who?: BartenderKey): void {
 		if (!this.busy) this.draft = text;
+		if (who) this.switchTo(who);
 		this.open = true;
 	}
 
