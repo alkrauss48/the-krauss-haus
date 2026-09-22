@@ -28,6 +28,21 @@ Object.defineProperty(window, 'localStorage', {
 	}
 });
 
+// same for sessionStorage, which the bar chat uses to keep a tab alive across a reload.
+// Reading the property on an opaque origin throws rather than returning undefined, so code
+// that guards with `?? null` still needs this.
+const session = new Map<string, string>();
+Object.defineProperty(window, 'sessionStorage', {
+	writable: true,
+	enumerable: true,
+	value: {
+		getItem: (key: string) => session.get(key) ?? null,
+		setItem: (key: string, value: string) => session.set(key, String(value)),
+		removeItem: (key: string) => session.delete(key),
+		clear: () => session.clear()
+	}
+});
+
 // required for components using svelte transitions, as jsdom does not implement
 // the Web Animations API
 if (!Element.prototype.animate) {
