@@ -9,7 +9,7 @@ Quick reference for Codex and human contributors. This file complements `CLAUDE.
 - Vite 6
 - Tailwind CSS 4 (utility-first; no CSS modules/scoped styles)
 - Vitest (client + server workspaces)
-- Nginx on Alpine Linux for Docker deploys
+- Node SSR (`adapter-node`) on Alpine Linux for Docker deploys, listening on port 3000
 - Montserrat font (Google Fonts)
 
 ## Code Standards

@@ -13,7 +13,7 @@ This repo is live at https://thekrausshaus.com. A digital hub for guests visitin
 
 - **Frontend**: SvelteKit, TailwindCSS
 - **Font**: Montserrat (Google Fonts)
-- **Hosting**: Nginx on Alpine Linux (Docker)
+- **Hosting**: Node SSR via `@sveltejs/adapter-node`, in a Docker container (Alpine)
 - **Design**: TailwindCSS with custom animations
 
 ## Development
@@ -99,7 +99,7 @@ Build and run the container:
 docker build -t krauss-haus -f docker/Dockerfile .
 
 # Run the container
-docker run -p 8080:80 krauss-haus
+docker run -p 8080:3000 krauss-haus
 ```
 
 The site will be available at `http://localhost:8080`
