@@ -20,3 +20,13 @@ Makefile
 # OS files
 .DS_Store
 Thumbs.db 
+
+# Env — the API key buys model inference; keep it out of the build context.
+.env
+.env.*
+!.env.example
+
+# Build output and dependencies
+node_modules
+build
+.svelte-kit

@@ -49,7 +49,9 @@ static/                # Static assets
 
 - **File-based routing** via SvelteKit
 - **Static TypeScript data** — No CMS or database. All cocktail data lives as TS objects in `src/lib/data/cocktails/`
-- **Svelte 5 runes** — Uses `$props()`, `$state()`, etc.
+- **Svelte 5 runes in new code** — `$props()`, `$state()`, `$derived()`. Most older
+  components are still Svelte 4 (`export let`, `$:`, `on:click`); match the file you are
+  editing rather than converting it.
 - **Tailwind-only styling** — No CSS modules or scoped styles
 - **Montserrat font**
 - **Images hosted on DigitalOcean CDN** at `personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/`
@@ -73,6 +75,34 @@ Enums in `src/lib/enums/`: `CocktailMethod`, `IngredientType`, `ServedIn`, `Ice`
 2. Import and add it to the `allCocktails` array in `src/lib/data/all-cocktails.ts` (alphabetical order).
 3. Optionally add it to a menu file (`tiki-menu.ts`, `summer-menu.ts`, `winter-menu.ts`) if it belongs on a themed menu.
 4. Run `npm run export:data` and commit the regenerated `static/data/*.json`.
+
+## The Bar (ask-eddie chat)
+
+A streaming chat panel where two bartenders — **Sasha** (house) and **Eddie** (1930s) —
+answer guest questions, and can call each other over mid-answer. Backed by the separate
+`ask-eddie` Laravel API; the full contract is in `ASK_EDDIE_CLIENT_INTEGRATION.md`.
+
+- `src/routes/api/bar/ask/+server.ts` — the only thing holding `BAR_API_KEY`. Streams the
+  upstream SSE body straight through, unbuffered, with a per-IP rate limit.
+- `src/lib/bar/` — `stream.ts` (SSE parser), `markdown.ts` (tokenizer), `links.ts` (href
+  whitelist), `bar.svelte.ts` (the `BarChat` runes store), `bartenders.ts`, `copy.ts`.
+- `src/lib/components/bar/` — the panel, launcher, transcript and the consult set piece.
+
+Three things that look like details but are not:
+
+- **The API streams Markdown**, despite what the integration doc says. It is parsed into an
+  AST by `markdown.ts` and rendered as Svelte markup — never `@html`, and hrefs are
+  whitelisted by `classifyLink` first, because the model writes them.
+- **Do not pass a timeout `AbortSignal` to the upstream `fetch`.** The signal stays attached
+  to the response body, so it severs a healthy stream when it expires. Bound the wait for
+  headers with a controller you clear once they arrive; `idleGuard` watches the body. Keep
+  its window above the API's own 60s per-provider-call timeout, or we cut the stream before
+  the API can write its `error` frame.
+- **An `error` frame can land on top of a half-streamed answer.** It is appended as a
+  `trouble` part under the prose, never in place of it — the partial answer is the part the
+  guest came for.
+
+Requires `BAR_API_URL` and `BAR_API_KEY` in `.env` (see `.env.example`). Never `PUBLIC_`.
 
 ## Testing
 
