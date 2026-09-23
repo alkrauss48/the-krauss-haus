@@ -53,11 +53,11 @@
 		streaming
 			? ''
 			: turn.parts
-					.map((p) =>
-						p.kind === 'text'
-							? plainText(parseMarkdown(p.text))
-							: `${p.bartender} says: ${plainText(parseMarkdown(p.answer))}`
-					)
+					.map((p) => {
+						if (p.kind === 'text') return plainText(parseMarkdown(p.text));
+						if (p.kind === 'trouble') return p.message;
+						return `${p.bartender} says: ${plainText(parseMarkdown(p.answer))}`;
+					})
 					.join('\n\n')
 	);
 </script>
@@ -81,6 +81,12 @@
 				{#each turn.parts as part, i (i)}
 					{#if part.kind === 'consult'}
 						<ConsultCard bartender={part.bartender} answer={part.answer} {onNavigate} />
+					{:else if part.kind === 'trouble'}
+						<!-- Ruled off only when there is prose above it, so the guest can tell the
+						     apology from the half-answer it interrupted. -->
+						<p class="text-gray-500 italic {i > 0 ? 'mt-2 border-t border-gray-300/70 pt-2' : ''}">
+							{part.message}
+						</p>
 					{:else}
 						<Markdown
 							blocks={parseMarkdown(part.text, {

@@ -33,6 +33,11 @@ function allowed(ip: string, perMinute: number): boolean {
  * Bounds the wait for response headers, then hands off to an idle timer. A wall-clock cap on
  * the whole exchange would cut a stream that is still producing text — punishing exactly the
  * long consult answers this feature exists to show off.
+ *
+ * The idle window must stay comfortably longer than the API's own per-provider-call timeout
+ * (`BAR_ANSWER_TIMEOUT`, 60s). A provider that hangs goes quiet for that full 60s before the
+ * API gives up and writes an `error` frame; if we cut at the same moment we win the race and
+ * the guest gets our generic failure instead of the sentence the API wrote for them.
  */
 function idleGuard(stream: ReadableStream<Uint8Array>, idleMs: number): ReadableStream<Uint8Array> {
 	let timer: ReturnType<typeof setTimeout> | undefined;
@@ -125,7 +130,7 @@ export const POST: RequestHandler = async ({ request, getClientAddress }) => {
 
 	// Returned as-is. Awaiting `.text()` anywhere in this path would buffer the whole answer
 	// and turn a live stream into a thirty-second blank screen.
-	return new Response(idleGuard(upstream.body, Number(env.BAR_IDLE_TIMEOUT_MS ?? 60_000)), {
+	return new Response(idleGuard(upstream.body, Number(env.BAR_IDLE_TIMEOUT_MS ?? 75_000)), {
 		headers: {
 			'Content-Type': 'text/event-stream',
 			'Cache-Control': 'no-cache, no-transform',

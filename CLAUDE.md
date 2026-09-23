@@ -88,14 +88,19 @@ answer guest questions, and can call each other over mid-answer. Backed by the s
   whitelist), `bar.svelte.ts` (the `BarChat` runes store), `bartenders.ts`, `copy.ts`.
 - `src/lib/components/bar/` — the panel, launcher, transcript and the consult set piece.
 
-Two things that look like details but are not:
+Three things that look like details but are not:
 
 - **The API streams Markdown**, despite what the integration doc says. It is parsed into an
   AST by `markdown.ts` and rendered as Svelte markup — never `@html`, and hrefs are
   whitelisted by `classifyLink` first, because the model writes them.
 - **Do not pass a timeout `AbortSignal` to the upstream `fetch`.** The signal stays attached
   to the response body, so it severs a healthy stream when it expires. Bound the wait for
-  headers with a controller you clear once they arrive; `idleGuard` watches the body.
+  headers with a controller you clear once they arrive; `idleGuard` watches the body. Keep
+  its window above the API's own 60s per-provider-call timeout, or we cut the stream before
+  the API can write its `error` frame.
+- **An `error` frame can land on top of a half-streamed answer.** It is appended as a
+  `trouble` part under the prose, never in place of it — the partial answer is the part the
+  guest came for.
 
 Requires `BAR_API_URL` and `BAR_API_KEY` in `.env` (see `.env.example`). Never `PUBLIC_`.
 

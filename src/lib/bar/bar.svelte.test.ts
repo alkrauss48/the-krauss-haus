@@ -70,6 +70,13 @@ function textOf(turn: Turn): string {
 		.join('');
 }
 
+function troubleOf(turn: Turn): string {
+	return turn.parts
+		.filter((p) => p.kind === 'trouble')
+		.map((p) => (p as { message: string }).message)
+		.join('');
+}
+
 describe('BarChat.send', () => {
 	it('shows the question and an empty answer bubble in the same frame', async () => {
 		const chat = make(respond([META('a'), TEXT('Bright'), DONE]) as unknown as typeof fetch);
@@ -117,8 +124,31 @@ describe('BarChat.send', () => {
 		);
 		await chat.send('q');
 
-		expect(textOf(answerOf(chat))).toBe('Eddie could not answer that one, friend.');
+		expect(troubleOf(answerOf(chat))).toBe('Eddie could not answer that one, friend.');
 		expect(answerOf(chat).note).toBe('failed');
+		expect(chat.activity.kind).toBe('idle');
+	});
+
+	// A provider can fail or time out partway through, so the frame arrives on top of text the
+	// guest is already reading. That half-answer is the part they came for — keep it.
+	it('keeps partial text when an error frame lands mid-answer', async () => {
+		const chat = make(
+			respond([
+				META('a'),
+				TEXT('Shake it with '),
+				TEXT('plenty of ice, then'),
+				ERROR('Sorry, friend — I lost my train of thought.'),
+				DONE
+			]) as unknown as typeof fetch
+		);
+		await chat.send('q');
+
+		const answer = answerOf(chat);
+		expect(textOf(answer)).toBe('Shake it with plenty of ice, then');
+		expect(troubleOf(answer)).toBe('Sorry, friend — I lost my train of thought.');
+		// The apology goes under the prose, never before it.
+		expect(answer.parts.map((p) => p.kind)).toEqual(['text', 'trouble']);
+		expect(answer.note).toBe('failed');
 		expect(chat.activity.kind).toBe('idle');
 	});
 

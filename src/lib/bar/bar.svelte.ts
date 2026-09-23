@@ -21,7 +21,9 @@ export type { BartenderKey };
 
 export type AnswerPart =
 	| { kind: 'text'; text: string }
-	| { kind: 'consult'; id: string; bartender: string; answer: string };
+	| { kind: 'consult'; id: string; bartender: string; answer: string }
+	/** An `error` frame's own sentence. Its own kind so it can sit apart from the prose. */
+	| { kind: 'trouble'; message: string };
 
 export type TurnNote = 'failed' | 'stopped';
 
@@ -294,8 +296,10 @@ export class BarChat {
 			}
 
 			case 'error':
-				// Already guest-safe copy, written for a human. Render it as-is.
-				answer.parts = [{ kind: 'text', text: event.message }];
+				// Already guest-safe copy, written for a human. Render it as-is — and append it,
+				// because the frame can arrive after a provider has already streamed half a good
+				// answer. Replacing the parts would throw away the half the guest came for.
+				answer.parts.push({ kind: 'trouble', message: event.message });
 				answer.note = 'failed';
 				break;
 

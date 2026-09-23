@@ -339,7 +339,8 @@ never nest — the guard is server-side and absolute.
 | Bad/missing key | `401` JSON, before the stream | Generic "the bar's not answering right now" + retry. Log loudly; this is a config bug |
 | Question empty, too long, bad bartender | `422` JSON, before the stream | Inline form validation. Prevent it in the textarea instead |
 | Over the per-minute cap | `429` JSON with `Retry-After` | "One at a time, friend" copy + a countdown from `Retry-After` |
-| Provider/model failed mid-answer | `error` frame then `done`, on a 200 | The frame's own sentence, in the bartender's bubble, with a "try again" affordance |
+| Provider/model failed or timed out mid-answer | `error` frame then `done`, on a 200 — possibly **after** some `text` frames | Keep any partial text; put the frame's own sentence under it in the bartender's bubble, with a "try again" affordance |
+| Answer hit the output-token cap | a normal `done`, no `error` — the text simply stops | Nothing to do: indistinguishable from a finished answer by design. The cap is a backstop the API logs, not a state the UI has |
 | Upstream API down / connection refused | `fetch` rejects in the proxy | Same generic "not answering" state |
 | Guest navigated away / hit stop | you abort the reader | Stop cleanly; keep the partial text, mark it "cut short" |
 | Stream ended without `done` | reader closes, no `done` seen | Treat as an error. Never leave the UI in a "thinking" state |
@@ -500,6 +501,12 @@ export const POST: RequestHandler = async ({ request, getClientAddress }) => {
   byte — it will cut a stream that is still producing text at the deadline. 120 seconds is
   generous for an answer with two tool calls and a consult, but if you ever see answers
   truncating at exactly the timeout, that is why.
+- The API's own timeout (`BAR_ANSWER_TIMEOUT`, 60s) is **per provider call**, not per
+  answer — one answer is several calls, so the server will happily run past 120 seconds
+  in the worst case. Your `AbortSignal.timeout()` is therefore the real wall clock on
+  what a guest waits for; when it fires, the stream ends without `done`, which the
+  failure table already treats as an error. Raising the API's timeout does not change
+  what a guest sees — raising this one does.
 
 ### Reading SSE over `fetch`
 
@@ -1083,7 +1090,7 @@ text     …                                    ← Sasha picks it back up
 
 | situation | copy | affordance |
 | --- | --- | --- |
-| `error` frame | the frame's own sentence, in the bartender's bubble | "Ask again" button that resends the same question |
+| `error` frame | the frame's own sentence, in the bartender's bubble — **under** any partial text already streamed, never replacing it | "Ask again" button that resends the same question |
 | 429 from the proxy (per-visitor) | "Easy, friend — one at a time. Back in {n}s." | send disabled, live countdown from `Retry-After` |
 | 429 from upstream (shared key) | same copy | same; and it should be rare once the API limit is raised |
 | 502/503 (API down or unconfigured) | "The bar's not answering right now. Try again in a minute." | "Try again" |
@@ -1257,7 +1264,9 @@ To force an error while building the failure states, point `BAR_API_URL` at a de
 house pages`, `running an eye down the menus`, `calling Sasha over`, `calling Eddie over`.
 
 **Server-side limits:** 2000 chars/question · 12 requests/min/key (raise it) · 120 min tab
-idle · 12 remembered messages · 2 consults per answer.
+idle · 12 remembered messages · 2 consults per answer · 1500 output tokens per model call
+(`BAR_ANSWER_MAX_TOKENS`, silent — logged, never framed) · 60s per provider call
+(`BAR_ANSWER_TIMEOUT`, surfaces as an `error` frame).
 
 **Client env:** `BAR_API_URL=http://localhost:9000`, `BAR_API_KEY=…` — **private, never
 `PUBLIC_`**.
