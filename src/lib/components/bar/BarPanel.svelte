@@ -71,6 +71,29 @@
 		}
 	});
 
+	// Hold the page still while the drawer is up. Without it, a swipe that starts on the header
+	// or composer — or runs past the end of the transcript — scrolls the menu behind instead.
+	// The scrollbar's width is padded back so the page does not jump sideways on desktop.
+	$effect(() => {
+		if (!browser || !bar.open) return;
+		const html = document.documentElement;
+		const body = document.body;
+		const gutter = window.innerWidth - html.clientWidth;
+		const previous = {
+			htmlOverflow: html.style.overflow,
+			bodyOverflow: body.style.overflow,
+			bodyPadding: body.style.paddingRight
+		};
+		html.style.overflow = 'hidden';
+		body.style.overflow = 'hidden';
+		if (gutter > 0) body.style.paddingRight = `${gutter}px`;
+		return () => {
+			html.style.overflow = previous.htmlOverflow;
+			body.style.overflow = previous.bodyOverflow;
+			body.style.paddingRight = previous.bodyPadding;
+		};
+	});
+
 	// A live countdown, so a rate-limited guest sees the door reopening rather than a number
 	// that never moves.
 	$effect(() => {
@@ -105,7 +128,7 @@
 {#if bar.open}
 	<div
 		id={ROOT_ID}
-		class="fixed inset-0 z-50 flex justify-end bg-gray-900/40 backdrop-blur-sm"
+		class="fixed inset-0 z-50 flex touch-manipulation justify-end overscroll-none bg-gray-900/40 backdrop-blur-sm"
 		role="presentation"
 		onclick={(event) => event.target === event.currentTarget && bar.closePanel()}
 		transition:fade={{ duration: 200 }}

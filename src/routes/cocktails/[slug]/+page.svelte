@@ -18,6 +18,7 @@
 	$: ({ cocktail, onSummer, onWinter, onTiki, pathsContainingCocktail } = data);
 	$: servingSentence = buildServingSentence(cocktail);
 
+	$: isOriginal = cocktail.tags?.includes(Tags.Origin.ORIGINAL) ?? false;
 	$: onAnyMenu = onSummer || onWinter || onTiki;
 	$: hasMenusOrPaths = onAnyMenu || pathsContainingCocktail.length > 0;
 
@@ -76,18 +77,8 @@
 				<!-- Header -->
 				<header class="mb-8">
 					<div class="flex items-start justify-between gap-3 mb-2">
-						<div class="flex flex-wrap items-center gap-3">
-							<h1 class="text-4xl font-bold text-gray-800">{cocktail.title}</h1>
-							{#if cocktail.tags?.includes(Tags.Origin.ORIGINAL)}
-								<div
-									class="bg-amber-100 text-amber-700 border border-amber-300 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap"
-								>
-									★ Original
-								</div>
-							{/if}
-						</div>
-						<div class="flex shrink-0 items-center gap-1">
-							<AskAboutButton title={cocktail.title} />
+						<h1 class="min-w-0 text-4xl font-bold text-gray-800">{cocktail.title}</h1>
+						<div class="shrink-0 pt-1">
 							<CopyLinkButton
 								url={typeof window !== 'undefined' ? window.location.href : ''}
 								ariaLabel="Copy link to {cocktail.title}"
@@ -95,19 +86,32 @@
 							/>
 						</div>
 					</div>
+					<!-- Provenance on one quiet line, so it reads as a byline rather than two more badges. -->
+					{#if isOriginal || cocktail.createdBy}
+						<p class="text-sm text-gray-500 mb-3">
+							{#if isOriginal}
+								<span class="font-semibold text-amber-700"
+									><span class="text-amber-500">★</span> Original</span
+								>
+							{/if}
+							{#if isOriginal && cocktail.createdBy}
+								<span class="mx-1 text-gray-300" aria-hidden="true">·</span>
+							{/if}
+							{#if cocktail.createdBy}
+								<span class="italic">
+									{isOriginal ? 'by' : 'Created by'}
+									<a
+										href={resolve(`/bartenders/${cocktail.createdBy.slug}`)}
+										class="text-amber-600 hover:text-amber-700 underline decoration-dotted underline-offset-2"
+									>
+										{cocktail.createdBy.name}
+									</a>
+								</span>
+							{/if}
+						</p>
+					{/if}
 					{#if cocktail.subtitle}
 						<p class="text-xl text-gray-600 italic mb-4">{cocktail.subtitle}</p>
-					{/if}
-					{#if cocktail.createdBy}
-						<p class="text-sm text-gray-500 italic mb-3">
-							Created by
-							<a
-								href={resolve(`/bartenders/${cocktail.createdBy.slug}`)}
-								class="text-amber-600 hover:text-amber-700 underline decoration-dotted underline-offset-2"
-							>
-								{cocktail.createdBy.name}
-							</a>
-						</p>
 					{/if}
 					<p class="text-lg text-gray-700 leading-relaxed">{cocktail.description}</p>
 				</header>
@@ -270,6 +274,20 @@
 						</div>
 					</section>
 				{/if}
+
+				<!--
+					Ask Sasha lives down here rather than in the header: by the end of the recipe the
+					guest has a question to ask, and the top of the page stays about the drink.
+				-->
+				<aside
+					class="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-amber-100 bg-amber-50/60 p-4"
+				>
+					<p class="text-gray-700">
+						<span class="font-semibold text-gray-800">Questions about the {cocktail.title}?</span>
+						<span class="text-gray-600">Swaps, tweaks, and what to try next.</span>
+					</p>
+					<AskAboutButton title={cocktail.title} />
+				</aside>
 
 				<!-- Back to Menu Links and Paths -->
 				{#if hasMenusOrPaths}

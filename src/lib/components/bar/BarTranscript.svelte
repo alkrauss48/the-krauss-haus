@@ -44,6 +44,16 @@
 		scroller?.scrollTo({ top: scroller.scrollHeight, behavior: 'smooth' });
 	}
 
+	// A guest who scrolled up to reread something and then asks again wants to see the new
+	// question go in, so every fresh question pins the transcript back to the bottom.
+	const lastQuestionId = $derived(items.findLast((item) => item.role === 'guest')?.id ?? null);
+	let seenQuestionId: string | null = null;
+	$effect(() => {
+		if (lastQuestionId === seenQuestionId) return;
+		seenQuestionId = lastQuestionId;
+		pinned = true;
+	});
+
 	// Coalesced into a frame: scrolling per delta would be hundreds of forced layouts.
 	$effect(() => {
 		void items.length;
@@ -59,7 +69,11 @@
 </script>
 
 <div class="relative min-h-0 flex-1">
-	<div bind:this={scroller} onscroll={onScroll} class="h-full space-y-3 overflow-y-auto px-3 py-4">
+	<div
+		bind:this={scroller}
+		onscroll={onScroll}
+		class="h-full space-y-3 overflow-y-auto overscroll-contain px-3 py-4"
+	>
 		{#if items.length === 0}
 			<!--
 				The only place the two of them get introduced. A guest who does not know the

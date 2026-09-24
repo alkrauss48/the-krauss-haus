@@ -34,12 +34,27 @@
 		}
 	}
 
+	// Grow with the question up to MAX_HEIGHT, then scroll inside. Reset to auto first so it
+	// also shrinks back when text is deleted or the draft is cleared after sending.
+	const MAX_HEIGHT = 176;
+
+	$effect(() => {
+		void value;
+		if (!textarea) return;
+		textarea.style.height = 'auto';
+		const next = Math.min(textarea.scrollHeight + 2, MAX_HEIGHT);
+		textarea.style.height = `${next}px`;
+		textarea.style.overflowY = textarea.scrollHeight + 2 > MAX_HEIGHT ? 'auto' : 'hidden';
+	});
+
 	export function focus() {
 		textarea?.focus();
 	}
 </script>
 
-<div class="border-t border-gray-200 bg-white/80 px-3 py-2.5 backdrop-blur-sm">
+<div
+	class="border-t border-gray-200 bg-white/80 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-sm"
+>
 	<div class="flex items-end gap-2">
 		<textarea
 			bind:this={textarea}
@@ -50,7 +65,7 @@
 			disabled={blocked}
 			placeholder={who.placeholder}
 			aria-label={who.placeholder}
-			class="max-h-32 min-h-[2.75rem] flex-1 resize-none rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-[0.94rem] text-gray-800 placeholder-gray-400 outline-none focus:border-amber-300 disabled:bg-gray-50"
+			class="min-h-12 flex-1 resize-none overscroll-contain rounded-xl border border-gray-200 bg-white px-4 py-3 text-base leading-snug text-gray-800 placeholder-gray-400 pointer-fine:text-[0.94rem] outline-none focus:border-amber-300 disabled:bg-gray-50"
 		></textarea>
 
 		{#if busy}
@@ -58,7 +73,7 @@
 				type="button"
 				onclick={onStop}
 				aria-label="Stop"
-				class="flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-gray-800 text-white transition-colors hover:bg-gray-900"
+				class="flex h-12 w-12 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-gray-800 text-white transition-colors hover:bg-gray-900"
 			>
 				<span class="h-3 w-3 rounded-[2px] bg-current" aria-hidden="true"></span>
 			</button>
@@ -68,7 +83,7 @@
 				onclick={onSend}
 				disabled={!canSend || blocked}
 				aria-label="Send"
-				class="flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-amber-600 text-white transition-colors hover:bg-amber-700 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
+				class="flex h-12 w-12 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-amber-600 text-white transition-colors hover:bg-amber-700 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
 			>
 				<svg
 					class="h-5 w-5"
