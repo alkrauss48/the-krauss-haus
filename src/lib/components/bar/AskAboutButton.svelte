@@ -12,9 +12,9 @@
 </script>
 
 <!--
-	Named and amber rather than a grey "Ask": the guest should know which bartender they are
-	pulling aside, and the sparkle should say the answer gets written on the spot. On small
-	screens the name drops and the sparkle carries it, so the header stays on one line.
+	Named, because the guest should know which bartender they are pulling aside, and the sparkle
+	says the answer gets written on the spot. A pale pill on purpose: the gradient belongs to the
+	bar launcher in the header, and two of them on one page read as two different things.
 -->
 <button
 	type="button"
@@ -27,6 +27,5 @@
 	<Sparkle
 		class="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12"
 	/>
-	<span class="hidden sm:inline">Ask {who.name}</span>
-	<span class="sm:hidden">Ask</span>
+	<span>Ask {who.name}</span>
 </button>
