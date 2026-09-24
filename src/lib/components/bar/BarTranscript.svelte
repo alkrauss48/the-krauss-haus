@@ -59,7 +59,11 @@
 </script>
 
 <div class="relative min-h-0 flex-1">
-	<div bind:this={scroller} onscroll={onScroll} class="h-full space-y-3 overflow-y-auto px-3 py-4">
+	<div
+		bind:this={scroller}
+		onscroll={onScroll}
+		class="h-full space-y-3 overflow-y-auto overscroll-contain px-3 py-4"
+	>
 		{#if items.length === 0}
 			<!--
 				The only place the two of them get introduced. A guest who does not know the
