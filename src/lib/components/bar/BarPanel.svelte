@@ -17,7 +17,11 @@
 	let countdown = $state<ReturnType<typeof setInterval> | null>(null);
 
 	const streaming = $derived(bar.busy);
-	const calling = $derived(bar.activity.kind === 'consulting' ? bar.activity.other : null);
+	const calling = $derived(
+		bar.activity.kind === 'consulting' || bar.activity.kind === 'overhearing'
+			? bar.activity.other
+			: null
+	);
 	const stopped = $derived.by(() => {
 		const last = bar.items[bar.items.length - 1];
 		return last !== undefined && last.role !== 'divider' && last.note === 'stopped';
@@ -219,7 +223,13 @@
 					</div>
 				</div>
 
-				<BartenderPlates active={bar.bartender} busy={bar.busy} {calling} onSwitch={switchTo} />
+				<BartenderPlates
+					active={bar.bartender}
+					busy={bar.busy}
+					{calling}
+					connected={bar.activity.kind === 'overhearing'}
+					onSwitch={switchTo}
+				/>
 			</header>
 
 			<BarTranscript

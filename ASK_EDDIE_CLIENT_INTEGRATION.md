@@ -57,15 +57,16 @@ proposal — opinionated, but yours to move around.
 - The API is a Laravel app running locally at **`http://localhost:9000`**.
 - Three endpoints, all behind a shared secret in an **`X-Bar-Key`** header:
   `GET /api/bartenders`, `POST /api/ask`, `POST /api/search` (debug only).
-- `POST /api/ask` answers with **Server-Sent Events**. Six event types, listed below.
+- `POST /api/ask` answers with **Server-Sent Events**. Nine event types, listed below.
   There are no other event types, ever.
 - There are two bartenders: **`sasha`** (the house bartender, grounded in the Krauss
   Haus's own menus — **this is the default**) and **`eddie`** (a 1930s uptown bartender,
   grounded in a shelf of public-domain manuals).
 - They can **call each other over** mid-answer. When they do, you get a `tool` frame
-  (`"calling Eddie over"`) and then, once the other one replies, a `consult` frame
-  carrying their name and their prose. This is the thing worth building a small
-  animation for.
+  (`"calling Eddie over"`), then the consult **live**: a `consult_open` frame with the
+  question one bartender put to the other, `consult_tool` frames as the other reaches for
+  their own tools, `consult_text` deltas as they reply, and finally a `consult` frame
+  carrying their finished prose. This is the thing worth building a small animation for.
 - **The API key must never reach the browser.** It buys model inference and costs real
   money. It lives on the SvelteKit Node server; the browser talks to a same-origin proxy
   route that adds the header.
@@ -238,8 +239,8 @@ A successful call answers **200** with `Content-Type: text/event-stream` and
 
 ### The SSE event contract
 
-Six event types. **This list is the whole protocol** — the API source states plainly that
-a seventh invented anywhere would be a frame the site was never told to expect. Parse
+Nine event types. **This list is the whole protocol** — the API source states plainly that
+a tenth invented anywhere would be a frame the site was never told to expect. Parse
 unknown events defensively (ignore them) but do not design for them.
 
 Wire format is standard SSE, one event per frame, `data` always a single-line JSON
@@ -259,7 +260,10 @@ data: {"delta":"That one's "}
 | `meta` | `{"conversation_id": string}` | **always the first frame.** The id to send back on a follow-up |
 | `text` | `{"delta": string}` | one piece of the answer, as the model produces it |
 | `tool` | `{"label": string}` | an in-character note that a tool has *started* |
-| `consult` | `{"bartender": string, "answer": string}` | the other bartender's reply, attributed |
+| `consult_open` | `{"bartender": string, "question": string}` | a consult has started; the question put to `bartender` |
+| `consult_tool` | `{"bartender": string, "label": string}` | the consulted bartender reached for one of their own tools |
+| `consult_text` | `{"bartender": string, "delta": string}` | one piece of the consulted bartender's reply, as it is written |
+| `consult` | `{"bartender": string, "answer": string}` | the other bartender's finished reply, attributed. **Authoritative** |
 | `error` | `{"message": string}` | the answer failed; a sentence naming the bartender |
 | `done` | `{}` | **always the last frame**, whether the answer succeeded or failed |
 
@@ -281,6 +285,16 @@ Guarantees you can build on:
 - **The `error` message is guest-safe copy** ("Eddie could not answer that one, friend.")
   and never the provider's exception, host, model or key. The real exception goes to the
   API's log. You may render this message as-is.
+- **In every `consult_*` frame and in `consult`, `bartender` is whoever is *answering*.**
+  The asker is the bartender you sent the question to.
+- **`consult` always closes a consult, and its `answer` wins.** After a live consult it is
+  normally the `consult_text` deltas joined; replace the streamed text with it rather than
+  appending. It differs only when the other bar went dead half way ("The line to the
+  house bar is dead tonight…"). A **refused** consult (the limit was spent) never sends
+  `consult_open` or `consult_text`: you get a `consult` frame alone, so render one that
+  arrives with no open consult as a finished quote.
+- **The `consult_*` frames are additive.** A client that ignores them still works: it
+  shows the quote when `consult` arrives, as before.
 - **Retrieval payloads never reach the wire.** The API filters tool *results* out of the
   stream on purpose; the consult is the single, deliberate exception, because it is prose
   written for a human. Do not go looking for citations as structured data — Eddie speaks
@@ -300,7 +314,10 @@ Sasha calling Eddie, mid-answer:
   → tool("checking the house pages")
   → text × n            ("Let me see what Eddie's books say…")
   → tool("calling Eddie over")
-  → consult(bartender: "Eddie", answer: "…")
+  → consult_open(bartender: "Eddie", question: "Where does the Sazerac come from?")
+  → consult_tool(bartender: "Eddie", label: "reaching for the books")
+  → consult_text × n    (Eddie's reply, as he writes it)
+  → consult(bartender: "Eddie", answer: "…")   (the finished reply)
   → text × n            (Sasha picking it back up, attributing him)
   → done
 
@@ -521,6 +538,9 @@ export type BarEvent =
 	| { type: 'meta'; conversationId: string }
 	| { type: 'text'; delta: string }
 	| { type: 'tool'; label: string }
+	| { type: 'consult_open'; bartender: string; question: string }
+	| { type: 'consult_tool'; bartender: string; label: string }
+	| { type: 'consult_text'; bartender: string; delta: string }
 	| { type: 'consult'; bartender: string; answer: string }
 	| { type: 'error'; message: string }
 	| { type: 'done' };
@@ -576,6 +596,24 @@ function parseFrame(frame: string): BarEvent | null {
 			return { type: 'text', delta: String(payload.delta ?? '') };
 		case 'tool':
 			return { type: 'tool', label: String(payload.label ?? '') };
+		case 'consult_open':
+			return {
+				type: 'consult_open',
+				bartender: String(payload.bartender ?? ''),
+				question: String(payload.question ?? '')
+			};
+		case 'consult_tool':
+			return {
+				type: 'consult_tool',
+				bartender: String(payload.bartender ?? ''),
+				label: String(payload.label ?? '')
+			};
+		case 'consult_text':
+			return {
+				type: 'consult_text',
+				bartender: String(payload.bartender ?? ''),
+				delta: String(payload.delta ?? '')
+			};
 		case 'consult':
 			return {
 				type: 'consult',
@@ -605,7 +643,17 @@ import { readBarStream, type BarEvent } from './stream';
 
 export type BartenderKey = 'sasha' | 'eddie';
 
-export type Consult = { id: string; bartender: string; answer: string };
+export type Consult = {
+	id: string;
+	bartender: string;
+	/** what the asking bartender put to them; absent on a refused consult */
+	question?: string;
+	answer: string;
+	/** true while the reply is still streaming in */
+	live: boolean;
+	/** the consulted bartender's current tool, while they're using it */
+	label?: string;
+};
 
 export type Turn = {
 	id: string;
@@ -622,6 +670,7 @@ export type Activity =
 	| { kind: 'thinking' }
 	| { kind: 'tool'; label: string }
 	| { kind: 'consulting'; label: string; other: BartenderKey }
+	| { kind: 'overhearing'; other: string }
 	| { kind: 'answering' }
 	| { kind: 'error' };
 
@@ -738,12 +787,44 @@ export class BarChat {
 				this.#enter(other ? { kind: 'consulting', label: event.label, other } : { kind: 'tool', label: event.label });
 				break;
 			}
-			case 'consult':
-				answer.consults = [...answer.consults, { id: crypto.randomUUID(), ...event }];
-				// Mark where the quote belongs in the flowing text.
-				answer.text += `\u0000consult:${answer.consults.length - 1}\u0000`;
+			case 'consult_open':
+				this.#openConsult(answer, {
+					id: crypto.randomUUID(),
+					bartender: event.bartender,
+					question: event.question,
+					answer: '',
+					live: true
+				});
+				this.#enter({ kind: 'overhearing', other: event.bartender });
+				break;
+			case 'consult_tool': {
+				const live = answer.consults.at(-1);
+				if (live?.live) live.label = event.label;
+				break;
+			}
+			case 'consult_text': {
+				const live = answer.consults.at(-1);
+				if (live?.live) {
+					live.answer += event.delta;
+					live.label = undefined;
+				}
+				break;
+			}
+			case 'consult': {
+				const live = answer.consults.at(-1);
+				if (live?.live) {
+					// The finished answer is authoritative: replace, never append.
+					live.answer = event.answer;
+					live.live = false;
+					live.label = undefined;
+				} else {
+					// A refusal: no consult_open came first.
+					this.#openConsult(answer, { id: crypto.randomUUID(), ...event, live: false });
+				}
+				answer.consults = [...answer.consults];
 				this.#enter({ kind: 'answering' });
 				break;
+			}
 			case 'text':
 				answer.text += event.delta;
 				this.#enter({ kind: 'answering' });
@@ -756,6 +837,12 @@ export class BarChat {
 				break;
 		}
 		this.turns = [...this.turns];
+	}
+
+	#openConsult(answer: Turn, consult: Consult) {
+		answer.consults = [...answer.consults, consult];
+		// Mark where the quote belongs in the flowing text.
+		answer.text += `\u0000consult:${answer.consults.length - 1}\u0000`;
 	}
 
 	#enter(next: Activity) {
@@ -1006,10 +1093,12 @@ bartender in 1936.
 **The sequence you will receive:**
 
 ```
-tool     { label: "calling Eddie over" }      ← the phone comes off the hook
-   … several seconds of nothing at all …      ← the other bartender is thinking
-consult  { bartender: "Eddie", answer: "…" }  ← he answers
-text     …                                    ← Sasha picks it back up
+tool          { label: "calling Eddie over" }         ← the phone comes off the hook
+consult_open  { bartender: "Eddie", question: "…" }   ← what Sasha asks him
+consult_tool  { bartender: "Eddie", label: "reaching for the books" }
+consult_text  { bartender: "Eddie", delta: "That one's " } × n   ← he answers, live
+consult       { bartender: "Eddie", answer: "…" }     ← he's done; this text wins
+text          …                                       ← Sasha picks it back up
 ```
 
 **What it should look like:**
@@ -1027,7 +1116,11 @@ text     …                                    ← Sasha picks it back up
    │  └──────────────┘ ·  ·  ·  └─────────────┘ │   a dotted line between
    ```
 
-2. **He answers.** The dotted line goes solid for a beat, then the consult lands as a
+2. **She asks.** On `consult_open`, show the question Sasha put to him: a small line in
+   *her* voice above the card ("☎ Sasha: Where does the Sazerac come from?"). A
+   `consult_tool` frame is a status inside the card ("Eddie's reaching for the books…").
+
+3. **He answers.** The dotted line goes solid for a beat, then the consult lands as a
    **note passed across the bar** — an inset card *nested inside Sasha's answer*, indented
    with a left rule in Eddie's accent colour, not a separate message in the transcript:
 
@@ -1045,10 +1138,12 @@ text     …                                    ← Sasha picks it back up
    │  └──────────────────────────────────────┘  │
    ```
 
-   The card types itself in fast (~15ms/char, or instantly under reduced motion) rather
-   than appearing whole — it reads as someone speaking on the other end of a line.
+   The card fills in from the `consult_text` deltas as he actually writes them, so there's
+   no fake typing effect to add. When `consult` arrives, swap the card's text for its
+   `answer`. A refused consult comes as `consult` alone, with no deltas before it; that
+   card can type itself in quickly (~15ms/char, or instantly under reduced motion).
 
-3. **The line closes.** The dotted line fades, the other nameplate dims back down, and the
+4. **The line closes.** The dotted line fades, the other nameplate dims back down, and the
    status returns to *"Sasha's taking it from here…"* while her remaining text streams.
 
 **Details that matter:**
@@ -1130,7 +1225,7 @@ that.
 - The bartender picker is a radio group (`role="radiogroup"`), not two buttons — it is one
   choice with two states, and Sasha is checked by default.
 - **`prefers-reduced-motion`**: no typing animation, no dotted-line draw, no bubbling dots.
-  The consult card appears whole, the status line still changes text, and the escalation
+  The consult card still fills in as deltas arrive (that's the data, not an animation), the status line still changes text, and the escalation
   ladder still runs. **The information survives; only the movement stops.**
 - Every animation is decoration over a text state. If CSS fails to load, the chat is still
   fully legible.

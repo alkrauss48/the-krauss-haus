@@ -34,6 +34,12 @@ const TEXT = (s: string) => `event: text\ndata: ${JSON.stringify({ delta: s })}\
 const TOOL = (s: string) => `event: tool\ndata: ${JSON.stringify({ label: s })}\n\n`;
 const CONSULT = (who: string, a: string) =>
 	`event: consult\ndata: ${JSON.stringify({ bartender: who, answer: a })}\n\n`;
+const OPEN = (who: string, q: string) =>
+	`event: consult_open\ndata: ${JSON.stringify({ bartender: who, question: q })}\n\n`;
+const CTOOL = (who: string, l: string) =>
+	`event: consult_tool\ndata: ${JSON.stringify({ bartender: who, label: l })}\n\n`;
+const CTEXT = (who: string, d: string) =>
+	`event: consult_text\ndata: ${JSON.stringify({ bartender: who, delta: d })}\n\n`;
 const ERROR = (m: string) => `event: error\ndata: ${JSON.stringify({ message: m })}\n\n`;
 const DONE = 'event: done\ndata: {}\n\n';
 
@@ -215,6 +221,100 @@ describe('BarChat — consults', () => {
 		expect(
 			parts.filter((p) => p.kind === 'consult').map((p) => (p as { answer: string }).answer)
 		).toEqual(['first', 'second']);
+	});
+
+	it('streams a live consult into one card, and lets the closing frame win', async () => {
+		const chat = make(
+			respond([
+				META('a'),
+				TOOL('calling Eddie over'),
+				OPEN('Eddie', 'Where does the Sazerac come from?'),
+				CTOOL('Eddie', 'reaching for the books'),
+				CTEXT('Eddie', 'New '),
+				CTEXT('Eddie', 'Orleans.'),
+				CONSULT('Eddie', 'New Orleans, friend.'),
+				TEXT('So there you have it.'),
+				DONE
+			]) as unknown as typeof fetch
+		);
+		await chat.send('q');
+
+		const parts = answerOf(chat).parts;
+		expect(parts.map((p) => p.kind)).toEqual(['consult', 'text']);
+		expect(parts[0]).toMatchObject({
+			bartender: 'Eddie',
+			question: 'Where does the Sazerac come from?',
+			answer: 'New Orleans, friend.',
+			live: false,
+			label: undefined
+		});
+	});
+
+	it('renders a consult with no consult_open as a finished quote', async () => {
+		const chat = make(
+			respond([
+				META('a'),
+				TOOL('calling Eddie over'),
+				CONSULT('Eddie', 'Not tonight.'),
+				DONE
+			]) as unknown as typeof fetch
+		);
+		await chat.send('q');
+
+		const [part] = answerOf(chat).parts;
+		expect(part).toMatchObject({ kind: 'consult', answer: 'Not tonight.' });
+		expect((part as { live?: boolean }).live).toBeFalsy();
+		expect((part as { question?: string }).question).toBeUndefined();
+	});
+
+	it('closes a live consult when the stream dies mid-reply', async () => {
+		const chat = make(
+			respond([META('a'), OPEN('Eddie', 'q?'), CTEXT('Eddie', 'Half a')]) as unknown as typeof fetch
+		);
+		await chat.send('q');
+
+		const [part] = answerOf(chat).parts;
+		expect(part).toMatchObject({ kind: 'consult', answer: 'Half a', live: false });
+		expect(answerOf(chat).note).toBe('failed');
+	});
+
+	it('overhears the other bartender while the consult streams', async () => {
+		let release!: () => void;
+		const gate = new Promise<void>((resolve) => (release = resolve));
+		const encoder = new TextEncoder();
+
+		const chat = make(
+			vi.fn(
+				async () =>
+					new Response(
+						new ReadableStream({
+							async start(controller) {
+								controller.enqueue(
+									encoder.encode(
+										META('a') +
+											TOOL('calling Eddie over') +
+											OPEN('Eddie', 'q?') +
+											CTEXT('Eddie', 'Hm')
+									)
+								);
+								await gate;
+								controller.enqueue(encoder.encode(CONSULT('Eddie', 'Hm.') + DONE));
+								controller.close();
+							}
+						}),
+						{ status: 200 }
+					)
+			) as unknown as typeof fetch
+		);
+
+		const pending = chat.send('q');
+		await vi.waitFor(() => expect(chat.activity.kind).toBe('overhearing'));
+		expect(chat.activity).toMatchObject({ other: 'eddie' });
+		expect(answerOf(chat).parts[0]).toMatchObject({ answer: 'Hm', live: true });
+
+		release();
+		await pending;
+		expect(chat.activity.kind).toBe('idle');
 	});
 
 	it('enters the consulting state while the phone is off the hook', async () => {

@@ -10,12 +10,15 @@
 		active,
 		busy,
 		calling = null,
+		connected = false,
 		onSwitch
 	}: {
 		active: BartenderKey;
 		busy: boolean;
 		/** Set while a consult is in flight — lights the other plate and draws the line. */
 		calling?: BartenderKey | null;
+		/** The other one picked up: the dotted line goes solid while they talk. */
+		connected?: boolean;
 		onSwitch: (key: BartenderKey) => void;
 	} = $props();
 </script>
@@ -56,7 +59,9 @@
 				aria-hidden="true"
 			>
 				<span
-					class="h-px w-full bg-[repeating-linear-gradient(90deg,currentColor_0_3px,transparent_3px_6px)] text-amber-500 motion-safe:animate-pulse"
+					class="h-px w-full text-amber-500 {connected
+						? 'bg-current'
+						: 'bg-[repeating-linear-gradient(90deg,currentColor_0_3px,transparent_3px_6px)] motion-safe:animate-pulse'}"
 				></span>
 			</span>
 		{/if}

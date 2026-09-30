@@ -2,15 +2,22 @@
  * Server-Sent Events over `fetch`. `EventSource` is not an option: it is GET-only and cannot
  * set the headers this API needs.
  *
- * Six event types, and that is the whole protocol. `meta` is always first and `done` is
+ * Nine event types, and that is the whole protocol. `meta` is always first and `done` is
  * always last, including when an answer fails — so a closed socket with no `done` is an
  * abnormal termination, never a normal ending.
+ *
+ * The `consult_*` frames stream a consult live. In all of them, and in `consult`, `bartender`
+ * is whoever is *answering*. `consult` always closes a consult and its `answer` is
+ * authoritative; a refused consult arrives as `consult` alone.
  */
 
 export type BarEvent =
 	| { type: 'meta'; conversationId: string }
 	| { type: 'text'; delta: string }
 	| { type: 'tool'; label: string }
+	| { type: 'consult_open'; bartender: string; question: string }
+	| { type: 'consult_tool'; bartender: string; label: string }
+	| { type: 'consult_text'; bartender: string; delta: string }
 	| { type: 'consult'; bartender: string; answer: string }
 	| { type: 'error'; message: string }
 	| { type: 'done' };
@@ -84,6 +91,24 @@ export function parseFrame(frame: string): BarEvent | null {
 			return { type: 'text', delta: String(payload.delta ?? '') };
 		case 'tool':
 			return { type: 'tool', label: String(payload.label ?? '') };
+		case 'consult_open':
+			return {
+				type: 'consult_open',
+				bartender: String(payload.bartender ?? ''),
+				question: String(payload.question ?? '')
+			};
+		case 'consult_tool':
+			return {
+				type: 'consult_tool',
+				bartender: String(payload.bartender ?? ''),
+				label: String(payload.label ?? '')
+			};
+		case 'consult_text':
+			return {
+				type: 'consult_text',
+				bartender: String(payload.bartender ?? ''),
+				delta: String(payload.delta ?? '')
+			};
 		case 'consult':
 			return {
 				type: 'consult',

@@ -35,11 +35,14 @@
 		streaming &&
 			activity.kind !== 'idle' &&
 			activity.kind !== 'answering' &&
+			activity.kind !== 'overhearing' &&
 			activity.kind !== 'error'
 	);
 	const quiet = $derived(!streaming && turn.note === undefined && isEmptyAnswer(turn));
 	/** One signal of life at a time: the caret stands down while the status line speaks. */
 	const caret = $derived(streaming && !status);
+	/** While the other bartender talks, the live consult card carries the caret instead. */
+	const overhearing = $derived(streaming && activity.kind === 'overhearing');
 
 	/** The last text part is the only one still growing, so it is the only one with a caret. */
 	function lastTextIndex(t: Turn): number {
@@ -80,7 +83,15 @@
 			<div class="text-[0.94rem] leading-relaxed text-gray-800">
 				{#each turn.parts as part, i (i)}
 					{#if part.kind === 'consult'}
-						<ConsultCard bartender={part.bartender} answer={part.answer} {onNavigate} />
+						<ConsultCard
+							bartender={part.bartender}
+							asker={turn.bartender}
+							question={part.question}
+							answer={part.answer}
+							live={streaming && part.live === true}
+							label={part.label}
+							{onNavigate}
+						/>
 					{:else if part.kind === 'trouble'}
 						<!-- Ruled off only when there is prose above it, so the guest can tell the
 						     apology from the half-answer it interrupted. -->
@@ -91,7 +102,7 @@
 						<Markdown
 							blocks={parseMarkdown(part.text, {
 								partial: streaming && i === lastTextIndex(turn),
-								caret: streaming && i === lastTextIndex(turn)
+								caret: streaming && !overhearing && i === lastTextIndex(turn)
 							})}
 							{onNavigate}
 						/>
@@ -107,7 +118,7 @@
 						inline
 						{onStop}
 					/>
-				{:else if caret && turn.parts.length === 0}
+				{:else if caret && !overhearing && turn.parts.length === 0}
 					<Markdown blocks={parseMarkdown('', { caret: true })} />
 				{/if}
 
