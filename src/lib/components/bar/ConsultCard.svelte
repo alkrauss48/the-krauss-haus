@@ -1,31 +1,53 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import { parseMarkdown } from '$lib/bar/markdown';
-	import { bartenders, isBartenderKey } from '$lib/bar/bartenders';
+	import { bartenders, isBartenderKey, type BartenderKey } from '$lib/bar/bartenders';
 	import Markdown from './Markdown.svelte';
 
 	let {
 		bartender,
+		asker,
+		question,
 		answer,
+		live = false,
+		label,
 		onNavigate
-	}: { bartender: string; answer: string; onNavigate?: () => void } = $props();
+	}: {
+		/** Whoever is answering. */
+		bartender: string;
+		/** Whoever asked — the bartender whose answer this card sits inside. */
+		asker?: BartenderKey;
+		question?: string;
+		answer: string;
+		/** Still streaming in from `consult_text` deltas. */
+		live?: boolean;
+		/** The tool the answering bartender is using right now. */
+		label?: string;
+		onNavigate?: () => void;
+	} = $props();
 
 	const key = $derived(isBartenderKey(bartender.toLowerCase()) ? bartender.toLowerCase() : 'eddie');
-	const who = $derived(bartenders[key as 'sasha' | 'eddie']);
+	const who = $derived(bartenders[key as BartenderKey]);
+	const from = $derived(asker ? bartenders[asker] : null);
 
 	const reduced =
 		typeof window !== 'undefined' &&
 		window.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
 
-	// A consult lands whole while everything around it arrived a character at a time. Typing
-	// it in keeps the pacing of the conversation — it reads as somebody speaking on the other
-	// end of a line rather than a block of text appearing.
+	// A card that streamed in live already had its pacing, so it never types. Only one that
+	// lands whole — a refused consult, or one restored from the saved transcript — does.
+	const arrivedWhole = untrack(() => !live);
+
+	// A consult that lands whole while everything around it arrived a character at a time
+	// reads as a block of text appearing. Typing it in reads as somebody speaking on the other
+	// end of a line.
 	const total = $derived(answer.length);
-	let shown = $state(0);
+	let shown = $state(untrack(() => (live ? Infinity : 0)));
 
 	$effect(() => {
 		// Under reduced motion the card simply appears whole — the information survives, only
 		// the movement stops.
-		if (reduced) {
+		if (reduced || !arrivedWhole) {
 			shown = total;
 			return;
 		}
@@ -40,7 +62,16 @@
 	});
 
 	const typing = $derived(shown < total);
-	const blocks = $derived(parseMarkdown(answer.slice(0, shown), { partial: typing }));
+	const blocks = $derived(
+		parseMarkdown(answer.slice(0, shown), { partial: typing || live, caret: live && total > 0 })
+	);
+
+	/** Said inside the card until the first words arrive, and while a tool is in hand. */
+	const status = $derived.by(() => {
+		if (!live) return '';
+		if (label) return `${who.name}'s ${label}…`;
+		return total === 0 ? `${who.name}'s picking up…` : '';
+	});
 
 	// Eddie's asides run long. Clamped until asked, or a supporting quote swamps the answer
 	// it was supporting.
@@ -49,7 +80,15 @@
 	const isLong = $derived(total > LONG);
 </script>
 
-<figure class="my-3 border-l-2 pl-3 sm:pl-4 {who.accentRule}">
+{#if question && from}
+	<p class="mt-3 mb-1 text-xs {from.accentText}">
+		<span aria-hidden="true">☎</span>
+		<span class="font-semibold">{from.name}:</span>
+		<span class="text-gray-600 italic">{question}</span>
+	</p>
+{/if}
+
+<figure class="{question && from ? 'mt-0 mb-3' : 'my-3'} border-l-2 pl-3 sm:pl-4 {who.accentRule}">
 	<figcaption
 		class="mb-1 flex items-center gap-1.5 text-xs font-semibold tracking-wide {who.accentText}"
 	>
@@ -71,15 +110,21 @@
 		<span class="font-normal text-gray-400">— {who.role}</span>
 	</figcaption>
 
+	{#if status !== ''}
+		<p class="text-[0.8rem] text-gray-500" aria-live="polite">{status}</p>
+	{/if}
+
+	<!-- While he is still talking, a long reply shows its newest lines rather than its first:
+	     clipping the tail would hide the words being written. -->
 	<blockquote
 		class="overflow-hidden text-[0.94rem] leading-relaxed text-gray-700 italic {!expanded && isLong
 			? 'max-h-48'
-			: ''}"
+			: ''} {live && isLong ? 'flex flex-col justify-end' : ''}"
 	>
 		<Markdown {blocks} compact {onNavigate} />
 	</blockquote>
 
-	{#if isLong}
+	{#if isLong && !live}
 		<button
 			type="button"
 			class="mt-1 cursor-pointer text-xs font-medium {who.accentText} hover:underline"

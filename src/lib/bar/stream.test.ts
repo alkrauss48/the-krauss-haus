@@ -24,7 +24,7 @@ async function collect(chunks: string[]): Promise<BarEvent[]> {
 const META = 'event: meta\ndata: {"conversation_id":"01a0c990"}\n\n';
 
 describe('parseFrame', () => {
-	it('parses each of the six event types', () => {
+	it('parses each of the nine event types', () => {
 		expect(parseFrame('event: meta\ndata: {"conversation_id":"abc"}')).toEqual({
 			type: 'meta',
 			conversationId: 'abc'
@@ -37,6 +37,17 @@ describe('parseFrame', () => {
 			type: 'tool',
 			label: 'calling Eddie over'
 		});
+		expect(
+			parseFrame('event: consult_open\ndata: {"bartender":"Eddie","question":"Sazerac?"}')
+		).toEqual({ type: 'consult_open', bartender: 'Eddie', question: 'Sazerac?' });
+		expect(
+			parseFrame(
+				'event: consult_tool\ndata: {"bartender":"Eddie","label":"reaching for the books"}'
+			)
+		).toEqual({ type: 'consult_tool', bartender: 'Eddie', label: 'reaching for the books' });
+		expect(
+			parseFrame('event: consult_text\ndata: {"bartender":"Eddie","delta":"That one"}')
+		).toEqual({ type: 'consult_text', bartender: 'Eddie', delta: 'That one' });
 		expect(
 			parseFrame('event: consult\ndata: {"bartender":"Eddie","answer":"Savoy, 1930."}')
 		).toEqual({ type: 'consult', bartender: 'Eddie', answer: 'Savoy, 1930.' });

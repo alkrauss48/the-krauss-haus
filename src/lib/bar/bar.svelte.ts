@@ -15,15 +15,32 @@
 import { browser } from '$app/environment';
 import { readBarStream, type BarEvent } from './stream';
 import { consultTargetFrom, handoverLine } from './copy';
-import { DEFAULT_BARTENDER, isBartenderKey, type BartenderKey } from './bartenders';
+import { DEFAULT_BARTENDER, isBartenderKey, otherBartender, type BartenderKey } from './bartenders';
 
 export type { BartenderKey };
 
 export type AnswerPart =
 	| { kind: 'text'; text: string }
-	| { kind: 'consult'; id: string; bartender: string; answer: string }
+	| ConsultPart
 	/** An `error` frame's own sentence. Its own kind so it can sit apart from the prose. */
 	| { kind: 'trouble'; message: string };
+
+/**
+ * The other bartender's reply. `bartender` is whoever is answering. Streams in live from
+ * `consult_text` deltas; the closing `consult` frame replaces the text, because it wins.
+ */
+export type ConsultPart = {
+	kind: 'consult';
+	id: string;
+	bartender: string;
+	answer: string;
+	/** What the asking bartender put to them. Absent on a refused consult. */
+	question?: string;
+	/** True while the reply is still streaming in. Absent on older saved transcripts. */
+	live?: boolean;
+	/** The consulted bartender's current tool, while they are using it. */
+	label?: string;
+};
 
 export type TurnNote = 'failed' | 'stopped';
 
@@ -51,6 +68,8 @@ export type Activity =
 	| { kind: 'thinking' }
 	| { kind: 'tool'; label: string }
 	| { kind: 'consulting'; label: string; other: BartenderKey }
+	/** The other one picked up: the consult is streaming into its card. */
+	| { kind: 'overhearing'; other: BartenderKey }
 	| { kind: 'answering' }
 	| { kind: 'error' };
 
@@ -81,6 +100,15 @@ export function isTurn(item: TranscriptItem): item is Turn {
 /** A bartender turn with no prose in it — the "…gone quiet" case. */
 export function isEmptyAnswer(turn: Turn): boolean {
 	return !turn.parts.some((part) => part.kind === 'text' && part.text.trim() !== '');
+}
+
+/** The consult still streaming in, if one is open. */
+function liveConsult(turn: Turn): ConsultPart | null {
+	for (let i = turn.parts.length - 1; i >= 0; i--) {
+		const part = turn.parts[i];
+		if (part.kind === 'consult' && part.live) return part;
+	}
+	return null;
 }
 
 export class BarChat {
@@ -246,6 +274,13 @@ export class BarChat {
 			answer.note = (error as Error)?.name === 'AbortError' ? 'stopped' : 'failed';
 			if (answer.note === 'failed') this.failure = 'unavailable';
 		} finally {
+			// A consult cut off mid-reply has to stop claiming it is still being written.
+			for (const part of answer.parts) {
+				if (part.kind === 'consult' && part.live) {
+					part.live = false;
+					part.label = undefined;
+				}
+			}
 			this.#abort = null;
 			this.#lastSentId = null;
 			this.#enter({ kind: 'idle' });
@@ -275,15 +310,58 @@ export class BarChat {
 				break;
 			}
 
-			case 'consult':
+			case 'consult_open': {
 				answer.parts.push({
 					kind: 'consult',
 					id: this.#uuid(),
 					bartender: event.bartender,
-					answer: event.answer
+					question: event.question,
+					answer: '',
+					live: true
 				});
+				const other = event.bartender.toLowerCase();
+				this.#enter({
+					kind: 'overhearing',
+					other: isBartenderKey(other) ? other : otherBartender(bartender)
+				});
+				break;
+			}
+
+			case 'consult_tool': {
+				const live = liveConsult(answer);
+				if (live) live.label = event.label;
+				break;
+			}
+
+			case 'consult_text': {
+				const live = liveConsult(answer);
+				if (live) {
+					live.answer += event.delta;
+					live.label = undefined;
+				}
+				break;
+			}
+
+			case 'consult': {
+				const live = liveConsult(answer);
+				if (live) {
+					// Authoritative: normally the deltas joined, but it differs when the other bar
+					// went dead half way. Replace, never append.
+					live.answer = event.answer;
+					live.live = false;
+					live.label = undefined;
+				} else {
+					// A refused consult: no `consult_open` came first, so it lands whole.
+					answer.parts.push({
+						kind: 'consult',
+						id: this.#uuid(),
+						bartender: event.bartender,
+						answer: event.answer
+					});
+				}
 				this.#enter({ kind: 'answering' });
 				break;
+			}
 
 			case 'tool': {
 				const other = consultTargetFrom(event.label);
