@@ -51,6 +51,18 @@ const PALOMA: Cocktail = {
 			ingredient: Ingredients.Citrus.GRAPEFRUIT_GARNISH
 		}
 	],
+	variations: [
+		{
+			name: 'Spicy',
+			ingredients: [
+				{
+					label: 'Swap .5oz of tequila with jalepeño infused tequila.',
+					ingredient: Ingredients.BaseSpirits.JALAPENO_TEQUILA
+				}
+			],
+			images: []
+		}
+	],
 	tags: [
 		Tags.BaseAlcohol.TEQUILA,
 		Tags.FlavorProfile.BUBBLY,

@@ -70,6 +70,16 @@ const ESPRESSO_MARTINI: Cocktail = {
 			images: []
 		},
 		{
+			name: '+Caramel',
+			ingredients: [
+				{
+					label: 'Swap .5oz of Cognac with caramel infused vodka.',
+					ingredient: Ingredients.BaseSpirits.CARAMEL_VODKA
+				}
+			],
+			images: []
+		},
+		{
 			name: '+Chocolate',
 			ingredients: [
 				{
