@@ -11,13 +11,13 @@ const APPLETON_ESTATE_12_YEAR: Ingredient = {
 	title: 'Appleton Estate 12-Year',
 	slug: 'appleton-estate-12-year',
 	group: 'Jamaican Rum',
-	costPerOz: 48 / 25
+	costPerOz: 42 / 25
 };
 const APPLETON_ESTATE_SIGNATURE: Ingredient = {
 	title: 'Appleton Estate Signature',
 	slug: 'appleton-estate-signature',
 	group: 'Jamaican Rum',
-	costPerOz: 25 / 25
+	costPerOz: 45 / 59
 };
 const CLEMENT_SELECT_BARREL: Ingredient = {
 	title: 'Clement Select Barrel',
@@ -41,7 +41,7 @@ const HAMILTON_86: Ingredient = {
 	title: 'Hamilton 86',
 	slug: 'hamilton-86',
 	group: 'Demerara Rum',
-	costPerOz: 24 / 25
+	costPerOz: 22 / 25
 };
 const LEBLON: Ingredient = {
 	title: 'Leblon',
@@ -97,7 +97,7 @@ const EVAN_WILLIAMS_BIB: Ingredient = {
 	title: 'Evan Williams Bottled-in-Bond',
 	slug: 'evan-williams-bib',
 	group: 'Bourbon',
-	costPerOz: 18 / 25
+	costPerOz: 30 / 59
 };
 const LAPHROIG: Ingredient = {
 	title: 'Laphroaig',
@@ -109,7 +109,7 @@ const MONKEY_SHOULDER: Ingredient = {
 	title: 'Monkey Shoulder',
 	slug: 'monkey-shoulder',
 	group: 'Blended Scotch Whisky',
-	costPerOz: 37 / 25
+	costPerOz: 35 / 25
 };
 const RITTENHOUSE: Ingredient = {
 	title: 'Rittenhouse',
@@ -129,13 +129,19 @@ const LAIRDS_BIB: Ingredient = {
 	title: "Laird's Bottled-in-Bond",
 	slug: 'lairds-bib',
 	group: 'Apple Brandy',
-	costPerOz: 30 / 25
+	costPerOz: 32 / 25
 };
 const ST_REMY_VSOP: Ingredient = {
 	title: 'St-Rémy VSOP',
 	slug: 'st-remy-vsop',
 	group: 'Cognac',
 	costPerOz: 20 / 33
+};
+const SCHLADERER: Ingredient = {
+	title: 'Schladerer',
+	slug: 'schladerer',
+	group: 'Kirschwaßer',
+	costPerOz: 41 / 25
 };
 
 // Agave
@@ -179,29 +185,28 @@ const TANQUERAY: Ingredient = {
 };
 
 // Neutral Spirits
-const MONOPOLOWA: Ingredient = {
-	title: 'Monopolowa',
-	slug: 'monopolowa',
-	group: 'Vodka',
-	costPerOz: 16 / 25
+const VODKA: Ingredient = {
+	title: 'Vodka',
+	slug: 'vodka',
+	costPerOz: (15 / 59) * 0.8
 };
 const CARAMEL_VODKA: Ingredient = {
 	title: 'Caramel Vodka',
 	slug: 'caramel-vodka',
 	recipe: CARAMEL_VODKA_RECIPE,
-	costPerOz: 13 / 25
+	costPerOz: (15 / 59) * 0.8
 };
 const CITRON_VODKA: Ingredient = {
 	title: 'Citron Vodka',
 	slug: 'citron-vodka',
 	recipe: CITRON_VODKA_RECIPE,
-	costPerOz: 16 / 25
+	costPerOz: (18 / 59) * 0.8
 };
 const PEPPERMINT_VODKA: Ingredient = {
 	title: 'Peppermint Vodka',
 	slug: 'peppermint-vodka',
 	recipe: PEPPERMINT_VODKA_RECIPE,
-	costPerOz: 16 / 25
+	costPerOz: (18 / 59) * 0.8
 };
 const ABSINTHE: Ingredient = {
 	title: 'Absinthe',
@@ -244,7 +249,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		},
 		{
 			label: 'Brandy',
-			ingredients: [BOULARD_VSOP, LAIRDS_BIB, ST_REMY_VSOP]
+			ingredients: [BOULARD_VSOP, LAIRDS_BIB, SCHLADERER, ST_REMY_VSOP]
 		},
 		{
 			label: 'Agave',
@@ -256,7 +261,7 @@ export const BASE_SPIRITS: IngredientCategory = {
 		},
 		{
 			label: 'Neutral Spirits',
-			ingredients: [MONOPOLOWA, CARAMEL_VODKA, CITRON_VODKA, PEPPERMINT_VODKA, ABSINTHE, AQUAVIT]
+			ingredients: [VODKA, CARAMEL_VODKA, CITRON_VODKA, PEPPERMINT_VODKA, ABSINTHE, AQUAVIT]
 		}
 	]
 };
@@ -287,6 +292,7 @@ export const INGREDIENTS = {
 	// Brandy
 	BOULARD_VSOP,
 	LAIRDS_BIB,
+	SCHLADERER,
 	ST_REMY_VSOP,
 
 	// Agave
@@ -300,7 +306,7 @@ export const INGREDIENTS = {
 	BOLS,
 
 	// Neutral Spirits
-	MONOPOLOWA,
+	VODKA,
 	CARAMEL_VODKA,
 	CITRON_VODKA,
 	PEPPERMINT_VODKA,

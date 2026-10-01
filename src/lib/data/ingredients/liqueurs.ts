@@ -139,11 +139,6 @@ const FRANGELICO: Ingredient = {
 	slug: 'frangelico',
 	costPerOz: 26 / 25
 };
-const GOLDSCHLAGER: Ingredient = {
-	title: 'Goldschläger',
-	slug: 'goldschlager',
-	costPerOz: 26 / 25
-};
 
 // Floral, Coffee & Specialty
 const CREME_DE_CACAO: Ingredient = {
@@ -151,10 +146,6 @@ const CREME_DE_CACAO: Ingredient = {
 	slug: 'creme-de-cacao',
 	recipe: CREME_DE_CACAO_RECIPE,
 	costPerOz: 11 / 21
-};
-const EGGNOG: Ingredient = {
-	title: 'Eggnog',
-	slug: 'eggnog'
 };
 const ELDERFLOWER_LIQUEUR: Ingredient = {
 	title: 'Elderflower Liqueur',
@@ -213,13 +204,12 @@ export const LIQUEURS: IngredientCategory = {
 		},
 		{
 			label: 'Nut & Spice',
-			ingredients: [ALLSPICE_DRAM, FALERNUM, FRANGELICO, GOLDSCHLAGER, LAZZARONI, MAMA_JUANA]
+			ingredients: [ALLSPICE_DRAM, FALERNUM, FRANGELICO, LAZZARONI, MAMA_JUANA]
 		},
 		{
 			label: 'Floral, Coffee & Specialty',
 			ingredients: [
 				CREME_DE_CACAO,
-				EGGNOG,
 				ELDERFLOWER_LIQUEUR,
 				ITALICUS,
 				LAVENDER_LIQUEUR,
@@ -257,13 +247,11 @@ export const INGREDIENTS = {
 	ALLSPICE_DRAM,
 	FALERNUM,
 	FRANGELICO,
-	GOLDSCHLAGER,
 	LAZZARONI,
 	MAMA_JUANA,
 
 	// Floral, Coffee & Specialty
 	CREME_DE_CACAO,
-	EGGNOG,
 	ELDERFLOWER_LIQUEUR,
 	ITALICUS,
 	LAVENDER_LIQUEUR,

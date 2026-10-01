@@ -38,13 +38,13 @@ const COCCHI_VERMOUTH_DI_TORINO: Ingredient = {
 	title: 'Cocchi Vermouth di Torino',
 	slug: 'cocchi-vermouth-di-torino',
 	group: 'Sweet Vermouth',
-	costPerOz: 24 / 25
+	costPerOz: 22 / 25
 };
 const DOLIN_VERMOUTH_DRY: Ingredient = {
 	title: 'Dolin Vermouth Dry',
 	slug: 'dolin-vermouth-dry',
 	group: 'Dry Vermouth',
-	costPerOz: 18 / 25
+	costPerOz: 16 / 25
 };
 const TEMPRANILLO: Ingredient = {
 	title: 'Tempranillo',

@@ -604,7 +604,7 @@
 		"ingredients": [
 			{
 				"kind": "ingredient",
-				"slug": "monopolowa",
+				"slug": "vodka",
 				"amount": "1.25oz",
 				"label": null
 			},
@@ -699,7 +699,7 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "coca-cola",
+				"slug": "mexican-coke",
 				"amount": "4oz",
 				"label": null
 			},
@@ -838,6 +838,91 @@
 			},
 			{
 				"label": "Double Rocks Glass",
+				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "black-forest-cake",
+		"title": "Black Forest Cake",
+		"subtitle": null,
+		"description": "Kirschwasser, crème de cacao, cherry heering, cream, raspberry syrup.",
+		"url": "/cocktails/black-forest-cake",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/black-forest-cake.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/black-forest-cake.webp",
+		"method": "Shaken",
+		"served_in": "Coupe Glass",
+		"ice": "None",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": "aaron-krauss",
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "schladerer",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "creme-de-cacao",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "cherry-heering",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "heavy-cream",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "raspberry-syrup",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maraschino-cherry",
+				"amount": null,
+				"label": "Garnish: Maraschino cherry"
+			},
+			{
+				"kind": "text",
+				"text": "Garnish: Grated dark chocolate"
+			}
+		],
+		"tags": [
+			{
+				"label": "Brandy",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Creamy",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Original",
+				"category": "Origin"
+			},
+			{
+				"label": "Coupe Glass",
 				"category": "Served In"
 			}
 		],
@@ -1343,7 +1428,7 @@
 		"slug": "caramel-apple-spice",
 		"title": "Caramel Apple Spice",
 		"subtitle": null,
-		"description": "Apple brandy, goldschläger, caramel vodka, apple strudel liqueur, apple cider.",
+		"description": "Apple brandy, allspice dram, caramel vodka, apple strudel liqueur, apple cider.",
 		"url": "/cocktails/caramel-apple-spice",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/caramel-apple-spice.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/caramel-apple-spice.webp",
@@ -1363,8 +1448,8 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "goldschlager",
-				"amount": ".5oz",
+				"slug": "allspice-dram",
+				"amount": ".25oz",
 				"label": null
 			},
 			{
@@ -1757,6 +1842,79 @@
 			},
 			{
 				"label": "Double Rocks Glass",
+				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "clover-club",
+		"title": "Clover Club",
+		"subtitle": null,
+		"description": "Gin, lemon, raspberry syrup, egg white.",
+		"url": "/cocktails/clover-club",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/clover-club.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/clover-club.webp",
+		"method": "Shaken",
+		"served_in": "Coupe Glass",
+		"ice": "None",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "tanqueray",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "raspberry-syrup",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "egg",
+				"amount": null,
+				"label": "1 Egg white"
+			}
+		],
+		"tags": [
+			{
+				"label": "Gin",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Sour",
+				"category": "Style"
+			},
+			{
+				"label": "Classic",
+				"category": "Origin"
+			},
+			{
+				"label": "Coupe Glass",
 				"category": "Served In"
 			}
 		],
@@ -2235,7 +2393,7 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "coca-cola",
+				"slug": "mexican-coke",
 				"amount": "4oz",
 				"label": null
 			},
@@ -3384,7 +3542,7 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "coca-cola",
+				"slug": "mexican-coke",
 				"amount": "4oz",
 				"label": null
 			}
@@ -4103,7 +4261,7 @@
 		"ingredients": [
 			{
 				"kind": "ingredient",
-				"slug": "monopolowa",
+				"slug": "vodka",
 				"amount": ".5oz",
 				"label": null
 			},
@@ -5553,7 +5711,7 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "coca-cola",
+				"slug": "mexican-coke",
 				"amount": "6oz",
 				"label": null
 			}
@@ -6501,7 +6659,7 @@
 		"ingredients": [
 			{
 				"kind": "ingredient",
-				"slug": "monopolowa",
+				"slug": "vodka",
 				"amount": "2oz",
 				"label": null
 			},
@@ -8042,28 +8200,19 @@
 		],
 		"variations": [
 			{
-				"name": "Smoked",
-				"ingredients": [
-					{
-						"kind": "text",
-						"text": "Served in a smoked glass"
-					}
-				]
-			},
-			{
 				"name": "Muddled",
 				"ingredients": [
 					{
 						"kind": "ingredient",
 						"slug": "orange-garnish",
 						"amount": null,
-						"label": "Muddle extra orange slice."
+						"label": "Muddle an orange slice."
 					},
 					{
 						"kind": "ingredient",
 						"slug": "maraschino-cherry",
 						"amount": null,
-						"label": "Muddle maraschino cherry."
+						"label": "Muddle a maraschino cherry, and garnish with an extra cherry."
 					}
 				]
 			},
@@ -8074,7 +8223,7 @@
 						"kind": "ingredient",
 						"slug": "appleton-estate-12-year",
 						"amount": null,
-						"label": "Sub aged jamaican rum for bourbon."
+						"label": "Sub aged appleton estate 12 year for bourbon."
 					}
 				]
 			},
@@ -8742,7 +8891,7 @@
 		"ingredients": [
 			{
 				"kind": "ingredient",
-				"slug": "monopolowa",
+				"slug": "vodka",
 				"amount": "1.5oz",
 				"label": null
 			},
@@ -8940,8 +9089,14 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "vanilla-syrup",
+				"slug": "rich-simple-syrup",
 				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "vanilla-extract",
+				"amount": "1 dash",
 				"label": null
 			},
 			{
@@ -9447,6 +9602,79 @@
 		"variations": []
 	},
 	{
+		"slug": "rose-cocktail",
+		"title": "Rose Cocktail",
+		"subtitle": null,
+		"description": "Dry vermouth, kirschwasser, raspberry syrup, maraschino cherry.",
+		"url": "/cocktails/rose-cocktail",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/rose-cocktail.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/rose-cocktail.webp",
+		"method": "Stirred",
+		"served_in": "Nick & Nora Glass",
+		"ice": "None",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "dolin-vermouth-dry",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "schladerer",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "raspberry-syrup",
+				"amount": "1 tsp",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maraschino-cherry",
+				"amount": null,
+				"label": "Garnish: Maraschino cherry"
+			}
+		],
+		"tags": [
+			{
+				"label": "Wine",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Brandy",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Stirred",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Classic",
+				"category": "Origin"
+			},
+			{
+				"label": "Nick & Nora Glass",
+				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "rudolphs-nose",
 		"title": "Rudolph's Nose",
 		"subtitle": null,
@@ -9829,7 +10057,7 @@
 		"ingredients": [
 			{
 				"kind": "ingredient",
-				"slug": "monopolowa",
+				"slug": "vodka",
 				"amount": "1.5oz",
 				"label": null
 			},
@@ -9922,7 +10150,7 @@
 		"ingredients": [
 			{
 				"kind": "ingredient",
-				"slug": "monopolowa",
+				"slug": "vodka",
 				"amount": "2oz",
 				"label": null
 			},

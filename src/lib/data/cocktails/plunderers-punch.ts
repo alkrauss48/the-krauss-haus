@@ -32,7 +32,11 @@ const PLUNDERERS_PUNCH: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.Syrups.VANILLA_SYRUP
+			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
+		},
+		{
+			amount: '1 dash',
+			ingredient: Ingredients.HerbsAndSpices.VANILLA_EXTRACT
 		},
 		{
 			amount: '1 dash',

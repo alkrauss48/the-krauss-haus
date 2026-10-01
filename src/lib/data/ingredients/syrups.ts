@@ -9,8 +9,8 @@ import HONEY_GINGER_SYRUP_RECIPE from '$lib/data/recipes/honey-ginger-syrup';
 import MINT_SYRUP_RECIPE from '$lib/data/recipes/mint-syrup';
 import ORGEAT_RECIPE from '$lib/data/recipes/orgeat';
 import PASSIONFRUIT_SYRUP_RECIPE from '$lib/data/recipes/passionfruit-syrup';
+import RASPBERRY_SYRUP_RECIPE from '$lib/data/recipes/raspberry-syrup';
 import RICH_SIMPLE_SYRUP_RECIPE from '$lib/data/recipes/rich-simple-syrup';
-import VANILLA_SYRUP_RECIPE from '$lib/data/recipes/vanilla-syrup';
 
 const CINNAMON_SYRUP: Ingredient = {
 	title: 'Cinnamon Syrup',
@@ -80,17 +80,17 @@ const PASSIONFRUIT_SYRUP: Ingredient = {
 	recipe: PASSIONFRUIT_SYRUP_RECIPE,
 	costPerOz: 0.3
 };
+const RASPBERRY_SYRUP: Ingredient = {
+	title: 'Raspberry Syrup',
+	slug: 'raspberry-syrup',
+	recipe: RASPBERRY_SYRUP_RECIPE,
+	costPerOz: 0.35
+};
 const RICH_SIMPLE_SYRUP: Ingredient = {
 	title: 'Rich Simple Syrup',
 	slug: 'rich-simple-syrup',
 	recipe: RICH_SIMPLE_SYRUP_RECIPE,
 	costPerOz: 0.1
-};
-const VANILLA_SYRUP: Ingredient = {
-	title: 'Vanilla Syrup',
-	slug: 'vanilla-syrup',
-	recipe: VANILLA_SYRUP_RECIPE,
-	costPerOz: 0.2
 };
 
 export const SYRUPS: IngredientCategory = {
@@ -113,8 +113,8 @@ export const SYRUPS: IngredientCategory = {
 				MINT_SYRUP,
 				ORGEAT,
 				PASSIONFRUIT_SYRUP,
-				RICH_SIMPLE_SYRUP,
-				VANILLA_SYRUP
+				RASPBERRY_SYRUP,
+				RICH_SIMPLE_SYRUP
 			]
 		}
 	]
@@ -133,6 +133,6 @@ export const INGREDIENTS = {
 	MINT_SYRUP,
 	ORGEAT,
 	PASSIONFRUIT_SYRUP,
-	RICH_SIMPLE_SYRUP,
-	VANILLA_SYRUP
+	RASPBERRY_SYRUP,
+	RICH_SIMPLE_SYRUP
 };

@@ -11,6 +11,7 @@ import AULANI_TROPICAL_MAI_TAI from '$lib/data/cocktails/aulani-tropical-mai-tai
 import AZALEA from '$lib/data/cocktails/azalea';
 import BATANGA from '$lib/data/cocktails/batanga';
 import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-giuseppe';
+import BLACK_FOREST_CAKE from '$lib/data/cocktails/black-forest-cake';
 import BOULEVARDIER from '$lib/data/cocktails/boulevardier';
 import BRAMBLE from '$lib/data/cocktails/bramble';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
@@ -22,6 +23,7 @@ import CERVEZA_Y_TEQUILA from '$lib/data/cocktails/cerveza-y-tequila';
 import CHAMPAGNE_COCKTAIL from '$lib/data/cocktails/champagne-cocktail';
 import CHARTREUSE_SWIZZLE from '$lib/data/cocktails/chartreuse-swizzle';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
+import CLOVER_CLUB from '$lib/data/cocktails/clover-club';
 import COBRAS_FANG from '$lib/data/cocktails/cobras-fang';
 import CONFERENCE from '$lib/data/cocktails/conference';
 import CORN_N_OIL from '$lib/data/cocktails/corn-n-oil';
@@ -107,6 +109,7 @@ import QUEENS_PARK_SWIZZLE from '$lib/data/cocktails/queens-park-swizzle';
 import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
+import ROSE_COCKTAIL from '$lib/data/cocktails/rose-cocktail';
 import RUDOLPHS_NOSE from '$lib/data/cocktails/rudolphs-nose';
 import RUM_BARREL from '$lib/data/cocktails/rum-barrel';
 import RUM_RUNNER from '$lib/data/cocktails/rum-runner';
@@ -152,6 +155,7 @@ export const allCocktails: Cocktail[] = [
 	AZALEA,
 	BATANGA,
 	BITTER_GIUSEPPE,
+	BLACK_FOREST_CAKE,
 	BOULEVARDIER,
 	BRAMBLE,
 	BRANDY_ALEXANDER,
@@ -163,6 +167,7 @@ export const allCocktails: Cocktail[] = [
 	CHAMPAGNE_COCKTAIL,
 	CHARTREUSE_SWIZZLE,
 	CHOCOLATE_COVERED_CHERRIES,
+	CLOVER_CLUB,
 	COBRAS_FANG,
 	CONFERENCE,
 	CORN_N_OIL,
@@ -248,6 +253,7 @@ export const allCocktails: Cocktail[] = [
 	RADLER,
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,
+	ROSE_COCKTAIL,
 	RUDOLPHS_NOSE,
 	RUM_BARREL,
 	RUM_RUNNER,

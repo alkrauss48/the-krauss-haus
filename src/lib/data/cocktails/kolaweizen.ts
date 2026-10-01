@@ -24,7 +24,7 @@ const KOLAWEIZEN: Cocktail = {
 		},
 		{
 			amount: '6oz',
-			ingredient: Ingredients.Mixers.COCA_COLA
+			ingredient: Ingredients.Mixers.MEXICAN_COKE
 		}
 	],
 	tags: [

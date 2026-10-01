@@ -24,7 +24,7 @@ const FERNET_CON_COCA: Cocktail = {
 		},
 		{
 			amount: '4oz',
-			ingredient: Ingredients.Mixers.COCA_COLA
+			ingredient: Ingredients.Mixers.MEXICAN_COKE
 		}
 	],
 	notes:

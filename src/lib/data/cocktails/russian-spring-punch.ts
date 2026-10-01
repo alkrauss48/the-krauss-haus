@@ -22,7 +22,7 @@ const RUSSIAN_SPRING_PUNCH: Cocktail = {
 	ingredients: [
 		{
 			amount: '1.5oz',
-			ingredient: Ingredients.BaseSpirits.MONOPOLOWA
+			ingredient: Ingredients.BaseSpirits.VODKA
 		},
 		{
 			amount: '.5oz',

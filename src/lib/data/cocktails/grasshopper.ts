@@ -20,7 +20,7 @@ const GRASSHOPPER: Cocktail = {
 	ingredients: [
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.BaseSpirits.MONOPOLOWA
+			ingredient: Ingredients.BaseSpirits.VODKA
 		},
 		{
 			amount: '.75oz',
