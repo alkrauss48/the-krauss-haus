@@ -8,7 +8,7 @@ import TRADER_VIC from '$lib/data/bartenders/trader-vic';
 
 const EL_DIABLO: Cocktail = {
 	title: 'El Diablo',
-	description: 'Blanco tequila, crème de baies noires, lime, ginger beer.',
+	description: 'Reposado tequila, crème de baies noires, lime, ginger beer.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/el-diablo.webp',
 	thumbnailImagePath:
@@ -22,7 +22,7 @@ const EL_DIABLO: Cocktail = {
 	ingredients: [
 		{
 			amount: '1.5oz',
-			ingredient: Ingredients.BaseSpirits.CIMARRON_BLANCO
+			ingredient: Ingredients.BaseSpirits.CIMARRON_REPOSADO
 		},
 		{
 			amount: '.5oz',

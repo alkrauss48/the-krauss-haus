@@ -9,7 +9,7 @@ import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
 const MERRY_MULE: Cocktail = {
 	title: 'Merry Mule',
 	subtitle: "Served as the bride's drink at our wedding",
-	description: 'Vodka, cinnamon, lime, ginger beer, apple.',
+	description: 'Vodka, apple strudel liqueur, lime, ginger beer, cinnamon.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/merry-mule.webp',
 	thumbnailImagePath:
@@ -22,12 +22,12 @@ const MERRY_MULE: Cocktail = {
 	hasStraw: false,
 	ingredients: [
 		{
-			amount: '2oz',
+			amount: '1.5oz',
 			ingredient: Ingredients.BaseSpirits.VODKA
 		},
 		{
-			amount: '.5oz',
-			ingredient: Ingredients.Syrups.CINNAMON_SYRUP
+			amount: '1oz',
+			ingredient: Ingredients.Liqueurs.APPLE_STRUDEL_LIQUEUER
 		},
 		{
 			amount: '.5oz',

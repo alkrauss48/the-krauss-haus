@@ -3234,7 +3234,7 @@
 		"slug": "el-diablo",
 		"title": "El Diablo",
 		"subtitle": null,
-		"description": "Blanco tequila, crème de baies noires, lime, ginger beer.",
+		"description": "Reposado tequila, crème de baies noires, lime, ginger beer.",
 		"url": "/cocktails/el-diablo",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/el-diablo.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/el-diablo.webp",
@@ -3248,7 +3248,7 @@
 		"ingredients": [
 			{
 				"kind": "ingredient",
-				"slug": "cimarron-blanco",
+				"slug": "cimarron-reposado",
 				"amount": "1.5oz",
 				"label": null
 			},
@@ -3506,6 +3506,17 @@
 				]
 			},
 			{
+				"name": "+Caramel",
+				"ingredients": [
+					{
+						"kind": "ingredient",
+						"slug": "caramel-vodka",
+						"amount": null,
+						"label": "Swap .5oz of Cognac with caramel infused vodka."
+					}
+				]
+			},
+			{
 				"name": "+Chocolate",
 				"ingredients": [
 					{
@@ -3634,7 +3645,7 @@
 			{
 				"kind": "ingredient",
 				"slug": "tonic-water",
-				"amount": "3 oz",
+				"amount": "2oz",
 				"label": null
 			},
 			{
@@ -6645,7 +6656,7 @@
 		"slug": "merry-mule",
 		"title": "Merry Mule",
 		"subtitle": "Served as the bride's drink at our wedding",
-		"description": "Vodka, cinnamon, lime, ginger beer, apple.",
+		"description": "Vodka, apple strudel liqueur, lime, ginger beer, cinnamon.",
 		"url": "/cocktails/merry-mule",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/merry-mule.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/merry-mule.webp",
@@ -6660,13 +6671,13 @@
 			{
 				"kind": "ingredient",
 				"slug": "vodka",
-				"amount": "2oz",
+				"amount": "1.5oz",
 				"label": null
 			},
 			{
 				"kind": "ingredient",
-				"slug": "cinnamon-syrup",
-				"amount": ".5oz",
+				"slug": "apple-strudel-liqueuer",
+				"amount": "1oz",
 				"label": null
 			},
 			{
@@ -8428,7 +8439,19 @@
 				"category": "Prep Time"
 			}
 		],
-		"variations": []
+		"variations": [
+			{
+				"name": "Spicy",
+				"ingredients": [
+					{
+						"kind": "ingredient",
+						"slug": "jalapeno-tequila",
+						"amount": null,
+						"label": "Swap .5oz of tequila with jalepeño infused tequila."
+					}
+				]
+			}
+		]
 	},
 	{
 		"slug": "paper-plane",
@@ -9705,7 +9728,7 @@
 			{
 				"kind": "ingredient",
 				"slug": "fassionola",
-				"amount": "1oz",
+				"amount": ".75oz",
 				"label": null
 			},
 			{

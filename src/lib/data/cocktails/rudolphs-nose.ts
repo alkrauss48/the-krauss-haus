@@ -29,7 +29,7 @@ const RUDOLPHS_NOSE: Cocktail = {
 			ingredient: Ingredients.BaseSpirits.LAIRDS_BIB
 		},
 		{
-			amount: '1oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Syrups.FASSIONOLA
 		},
 		{
