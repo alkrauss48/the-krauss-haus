@@ -134,6 +134,27 @@
 		"notes": "Makes approximately 950 mL at ~40% ABV. Best after 3–4 weeks; continues to improve for 2–3 months."
 	},
 	{
+		"slug": "eggnog",
+		"name": "Eggnog",
+		"url": "/recipes/eggnog",
+		"category": "Other",
+		"description": "A rich, boozy aged eggnog with rum, cognac, and bourbon.",
+		"ingredients": [
+			"12 large egg yolks",
+			"1lb granulated sugar",
+			"1 teaspoon freshly grated nutmeg",
+			"1 pint half-and-half",
+			"1 pint whole milk",
+			"1 pint heavy cream",
+			"1 cup Appleton Estate Signature (rum)",
+			"1 cup St. Remy VSOP (cognac)",
+			"1 cup Evan Williams BiB (bourbon)",
+			"1/4 teaspoon kosher salt"
+		],
+		"instructions": "Beat the egg yolks with the sugar and nutmeg in a large mixing bowl until the mixture lightens in color and falls off the whisk in a solid ribbon. Combine everything else in a second bowl or pitcher, then slowly beat it into the egg mixture. Store in jars in the fridge for a minimum of 2 weeks; longer is even better.",
+		"notes": "Serve in mugs or cups topped with a little extra nutmeg grated on top. This is originally Alton Brown's recipe, but with specific liquor bottles called out."
+	},
+	{
 		"slug": "falernum",
 		"name": "Falernum",
 		"url": "/recipes/falernum",
@@ -359,6 +380,21 @@
 		],
 		"instructions": "Combine the vodka, rose petals, cracked cardamom pods, and vanilla bean—including the scraped seeds—in a mason jar. Seal and steep for 24 hours, swirling every few hours. Strain through a fine-mesh strainer. For a clearer liqueur, strain again through cheesecloth or a coffee filter. Add the sugar and distilled water directly to the strained infusion. Seal and shake thoroughly. Continue shaking periodically until the sugar is completely dissolved, allowing it to sit overnight if necessary. Bottle and let rest for at least 5 days before using.",
 		"notes": "Makes ~750mL at 31% ABV."
+	},
+	{
+		"slug": "raspberry-syrup",
+		"name": "Raspberry Syrup",
+		"url": "/recipes/raspberry-syrup",
+		"category": "Syrups",
+		"description": "A bright, jammy syrup made from fresh raspberries.",
+		"ingredients": [
+			"6oz carton of raspberries",
+			"1 cup granulated sugar",
+			"1/2 cup water",
+			"1 teaspoon lemon juice"
+		],
+		"instructions": "Muddle the raspberries with the sugar, and let it sit for 20-30 minutes. Add the water, then cook over low heat for about 5–10 minutes, stirring occasionally. Don't boil it. Remove from heat and let cool. Add the lemon juice.",
+		"notes": "Recipe makes about 1.5 cups. Lasts 1-2 weeks in the fridge."
 	},
 	{
 		"slug": "rich-simple-syrup",

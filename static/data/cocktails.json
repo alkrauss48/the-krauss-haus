@@ -844,6 +844,91 @@
 		"variations": []
 	},
 	{
+		"slug": "black-forest-cake",
+		"title": "Black Forest Cake",
+		"subtitle": null,
+		"description": "Kirschwasser, crème de cacao, cherry heering, cream, raspberry syrup.",
+		"url": "/cocktails/black-forest-cake",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/black-forest-cake.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/black-forest-cake.webp",
+		"method": "Shaken",
+		"served_in": "Coupe Glass",
+		"ice": "None",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": "aaron-krauss",
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "schladerer",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "creme-de-cacao",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "cherry-heering",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "heavy-cream",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "raspberry-syrup",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maraschino-cherry",
+				"amount": null,
+				"label": "Garnish: Maraschino cherry"
+			},
+			{
+				"kind": "text",
+				"text": "Garnish: Grated dark chocolate"
+			}
+		],
+		"tags": [
+			{
+				"label": "Brandy",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Creamy",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Original",
+				"category": "Origin"
+			},
+			{
+				"label": "Coupe Glass",
+				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "boulevardier",
 		"title": "Boulevardier",
 		"subtitle": null,
@@ -1757,6 +1842,79 @@
 			},
 			{
 				"label": "Double Rocks Glass",
+				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "clover-club",
+		"title": "Clover Club",
+		"subtitle": null,
+		"description": "Gin, lemon, raspberry syrup, egg white.",
+		"url": "/cocktails/clover-club",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/clover-club.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/clover-club.webp",
+		"method": "Shaken",
+		"served_in": "Coupe Glass",
+		"ice": "None",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "tanqueray",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "raspberry-syrup",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "egg",
+				"amount": null,
+				"label": "1 Egg white"
+			}
+		],
+		"tags": [
+			{
+				"label": "Gin",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Sour",
+				"category": "Style"
+			},
+			{
+				"label": "Classic",
+				"category": "Origin"
+			},
+			{
+				"label": "Coupe Glass",
 				"category": "Served In"
 			}
 		],
@@ -9438,6 +9596,79 @@
 			},
 			{
 				"label": "Pint Glass",
+				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "rose-cocktail",
+		"title": "Rose Cocktail",
+		"subtitle": null,
+		"description": "Dry vermouth, kirschwasser, raspberry syrup, maraschino cherry.",
+		"url": "/cocktails/rose-cocktail",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/rose-cocktail.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/rose-cocktail.webp",
+		"method": "Stirred",
+		"served_in": "Nick & Nora Glass",
+		"ice": "None",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "dolin-vermouth-dry",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "schladerer",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "raspberry-syrup",
+				"amount": "1 tsp",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maraschino-cherry",
+				"amount": null,
+				"label": "Garnish: Maraschino cherry"
+			}
+		],
+		"tags": [
+			{
+				"label": "Wine",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Brandy",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Stirred",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Classic",
+				"category": "Origin"
+			},
+			{
+				"label": "Nick & Nora Glass",
 				"category": "Served In"
 			}
 		],

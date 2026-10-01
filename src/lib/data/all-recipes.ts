@@ -11,6 +11,7 @@ import HONEY_SYRUP from '$lib/data/recipes/honey-syrup';
 import MINT_SYRUP from '$lib/data/recipes/mint-syrup';
 import ORGEAT from '$lib/data/recipes/orgeat';
 import PASSIONFRUIT_SYRUP from '$lib/data/recipes/passionfruit-syrup';
+import RASPBERRY_SYRUP from '$lib/data/recipes/raspberry-syrup';
 import RICH_SIMPLE_SYRUP from '$lib/data/recipes/rich-simple-syrup';
 import TOM_AND_JERRY_BATTER from '$lib/data/recipes/tom-and-jerry-batter';
 
@@ -32,6 +33,7 @@ import SPICED_TEA from '$lib/data/recipes/spiced-tea';
 import STONE_FRUIT_LIQUEUR from '$lib/data/recipes/stone-fruit-liqueur';
 import VANILLA_EXTRACT from '$lib/data/recipes/vanilla-extract';
 import CRANBERRY_CORDIAL from '$lib/data/recipes/cranberry-cordial';
+import EGGNOG from '$lib/data/recipes/eggnog';
 
 // Syrups (excluding Caramel Syrup and Tom and Jerry Batter which go to "Other")
 export const syrups: Recipe[] = [
@@ -45,6 +47,7 @@ export const syrups: Recipe[] = [
 	MINT_SYRUP,
 	ORGEAT,
 	PASSIONFRUIT_SYRUP,
+	RASPBERRY_SYRUP,
 	RICH_SIMPLE_SYRUP
 ];
 
@@ -68,7 +71,7 @@ export const infusions: Recipe[] = [
 ];
 
 // Other recipes (special category for Caramel Syrup and Tom and Jerry Batter)
-export const other: Recipe[] = [CRANBERRY_CORDIAL, SPICED_TEA, TOM_AND_JERRY_BATTER];
+export const other: Recipe[] = [CRANBERRY_CORDIAL, EGGNOG, SPICED_TEA, TOM_AND_JERRY_BATTER];
 
 /**
  * Recipe filter categories

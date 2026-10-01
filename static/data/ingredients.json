@@ -1080,6 +1080,16 @@
 		"recipe_slug": null
 	},
 	{
+		"slug": "raspberry-syrup",
+		"title": "Raspberry Syrup",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Syrups",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": "raspberry-syrup"
+	},
+	{
 		"slug": "rich-simple-syrup",
 		"title": "Rich Simple Syrup",
 		"url": "/ingredients",
