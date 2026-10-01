@@ -7,15 +7,15 @@ const APPLE_CIDER: Ingredient = {
 	slug: 'apple-cider',
 	costPerOz: 1 / 8
 };
-const COCA_COLA: Ingredient = {
-	title: 'Coca-Cola',
-	slug: 'coca-cola',
-	costPerOz: 1 / 8
-};
 const GINGER_BEER: Ingredient = {
 	title: 'Ginger Beer',
 	slug: 'ginger-beer',
 	costPerOz: 1 / 6
+};
+const MEXICAN_COKE: Ingredient = {
+	title: 'Mexican Coke',
+	slug: 'mexican-coke',
+	costPerOz: 7.69 / 48
 };
 const SANPELLEGRINO_LIMONATA: Ingredient = {
 	title: 'Sanpellegrino Limonata',
@@ -48,8 +48,8 @@ export const MIXERS: IngredientCategory = {
 			label: 'Default',
 			ingredients: [
 				APPLE_CIDER,
-				COCA_COLA,
 				GINGER_BEER,
+				MEXICAN_COKE,
 				SANPELLEGRINO_LIMONATA,
 				SODA_WATER,
 				SPICED_TEA,
@@ -61,8 +61,8 @@ export const MIXERS: IngredientCategory = {
 
 export const INGREDIENTS = {
 	APPLE_CIDER,
-	COCA_COLA,
 	GINGER_BEER,
+	MEXICAN_COKE,
 	SANPELLEGRINO_LIMONATA,
 	SODA_WATER,
 	SPICED_TEA,

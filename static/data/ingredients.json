@@ -320,16 +320,6 @@
 		"recipe_slug": null
 	},
 	{
-		"slug": "coca-cola",
-		"title": "Coca-Cola",
-		"url": "/ingredients",
-		"group": null,
-		"category": "Mixers",
-		"subcategory": "Default",
-		"type": "Non-Alcoholic",
-		"recipe_slug": null
-	},
-	{
 		"slug": "cocchi-vermouth-di-torino",
 		"title": "Cocchi Vermouth di Torino",
 		"url": "/ingredients",
@@ -450,16 +440,6 @@
 		"recipe_slug": null
 	},
 	{
-		"slug": "eggnog",
-		"title": "Eggnog",
-		"url": "/ingredients",
-		"group": null,
-		"category": "Liqueurs",
-		"subcategory": "Floral, Coffee & Specialty",
-		"type": "Alcoholic",
-		"recipe_slug": null
-	},
-	{
 		"slug": "elderflower-liqueur",
 		"title": "Elderflower Liqueur",
 		"url": "/ingredients",
@@ -557,16 +537,6 @@
 		"category": "Mixers",
 		"subcategory": "Default",
 		"type": "Non-Alcoholic",
-		"recipe_slug": null
-	},
-	{
-		"slug": "goldschlager",
-		"title": "Goldschläger",
-		"url": "/ingredients",
-		"group": null,
-		"category": "Liqueurs",
-		"subcategory": "Nut & Spice",
-		"type": "Alcoholic",
 		"recipe_slug": null
 	},
 	{
@@ -720,6 +690,16 @@
 		"recipe_slug": "jalapeno-tequila"
 	},
 	{
+		"slug": "kirschwasser",
+		"title": "Schladerer",
+		"url": "/ingredients",
+		"group": "Kirschwaßer",
+		"category": "Base Spirits",
+		"subcategory": "Brandy",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
 		"slug": "lairds-bib",
 		"title": "Laird's Bottled-in-Bond",
 		"url": "/ingredients",
@@ -870,6 +850,16 @@
 		"recipe_slug": null
 	},
 	{
+		"slug": "mexican-coke",
+		"title": "Mexican Coke",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Mixers",
+		"subcategory": "Default",
+		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
 		"slug": "miller-high-life",
 		"title": "Miller High Life",
 		"url": "/ingredients",
@@ -906,16 +896,6 @@
 		"group": "Blended Scotch Whisky",
 		"category": "Base Spirits",
 		"subcategory": "Whiskey",
-		"type": "Alcoholic",
-		"recipe_slug": null
-	},
-	{
-		"slug": "monopolowa",
-		"title": "Monopolowa",
-		"url": "/ingredients",
-		"group": "Vodka",
-		"category": "Base Spirits",
-		"subcategory": "Neutral Spirits",
 		"type": "Alcoholic",
 		"recipe_slug": null
 	},
@@ -1270,14 +1250,24 @@
 		"recipe_slug": null
 	},
 	{
-		"slug": "vanilla-syrup",
-		"title": "Vanilla Syrup",
+		"slug": "vanilla-extract",
+		"title": "Vanilla Extract",
 		"url": "/ingredients",
 		"group": null,
-		"category": "Syrups",
+		"category": "Herbs & Spices",
 		"subcategory": "Default",
 		"type": "Non-Alcoholic",
-		"recipe_slug": "vanilla-syrup"
+		"recipe_slug": "vanilla-extract"
+	},
+	{
+		"slug": "vodka",
+		"title": "Vodka",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Base Spirits",
+		"subcategory": "Neutral Spirits",
+		"type": "Alcoholic",
+		"recipe_slug": null
 	},
 	{
 		"slug": "wray-and-nephew",

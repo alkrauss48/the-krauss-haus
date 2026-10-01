@@ -23,7 +23,7 @@ const MERRY_MULE: Cocktail = {
 	ingredients: [
 		{
 			amount: '2oz',
-			ingredient: Ingredients.BaseSpirits.MONOPOLOWA
+			ingredient: Ingredients.BaseSpirits.VODKA
 		},
 		{
 			amount: '.5oz',

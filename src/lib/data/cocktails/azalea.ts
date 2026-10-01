@@ -21,7 +21,7 @@ const AZALEA: Cocktail = {
 	ingredients: [
 		{
 			amount: '1.25oz',
-			ingredient: Ingredients.BaseSpirits.MONOPOLOWA
+			ingredient: Ingredients.BaseSpirits.VODKA
 		},
 		{
 			amount: '.5oz',

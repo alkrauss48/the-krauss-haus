@@ -1,5 +1,6 @@
 import { IngredientType } from '$lib/enums/ingredientType';
 import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
+import VANILLA_EXTRACT_RECIPE from '$lib/data/recipes/vanilla-extract';
 
 const BASIL: Ingredient = {
 	title: 'Basil',
@@ -22,6 +23,11 @@ const NUTMEG: Ingredient = {
 	title: 'Nutmeg',
 	slug: 'nutmeg'
 };
+const VANILLA_EXTRACT: Ingredient = {
+	title: 'Vanilla Extract',
+	slug: 'vanilla-extract',
+	recipe: VANILLA_EXTRACT_RECIPE
+};
 
 export const HERBS_AND_SPICES: IngredientCategory = {
 	label: 'Herbs & Spices',
@@ -30,7 +36,7 @@ export const HERBS_AND_SPICES: IngredientCategory = {
 	subcategories: [
 		{
 			label: 'Default',
-			ingredients: [BASIL, CINNAMON, CLOVE, MINT, NUTMEG]
+			ingredients: [BASIL, CINNAMON, CLOVE, MINT, NUTMEG, VANILLA_EXTRACT]
 		}
 	]
 };
@@ -40,5 +46,6 @@ export const INGREDIENTS = {
 	CINNAMON,
 	CLOVE,
 	MINT,
-	NUTMEG
+	NUTMEG,
+	VANILLA_EXTRACT
 };

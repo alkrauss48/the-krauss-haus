@@ -37,19 +37,14 @@ const OLD_FASHIONED: Cocktail = {
 	],
 	variations: [
 		{
-			name: 'Smoked',
-			ingredients: ['Served in a smoked glass'],
-			images: []
-		},
-		{
 			name: 'Muddled',
 			ingredients: [
 				{
-					label: 'Muddle extra orange slice.',
+					label: 'Muddle an orange slice.',
 					ingredient: Ingredients.Citrus.ORANGE_GARNISH
 				},
 				{
-					label: 'Muddle maraschino cherry.',
+					label: 'Muddle a maraschino cherry, and garnish with an extra cherry.',
 					ingredient: Ingredients.Other.MARASCHINO_CHERRY
 				}
 			],
@@ -59,7 +54,7 @@ const OLD_FASHIONED: Cocktail = {
 			name: 'Rum',
 			ingredients: [
 				{
-					label: 'Sub aged jamaican rum for bourbon.',
+					label: 'Sub aged appleton estate 12 year for bourbon.',
 					ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_12_YEAR
 				}
 			],

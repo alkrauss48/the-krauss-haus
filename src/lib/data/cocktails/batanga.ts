@@ -26,7 +26,7 @@ const BATANGA: Cocktail = {
 		},
 		{
 			amount: '4oz',
-			ingredient: Ingredients.Mixers.COCA_COLA
+			ingredient: Ingredients.Mixers.MEXICAN_COKE
 		},
 		{
 			amount: '.5oz',
