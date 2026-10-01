@@ -690,16 +690,6 @@
 		"recipe_slug": "jalapeno-tequila"
 	},
 	{
-		"slug": "kirschwasser",
-		"title": "Schladerer",
-		"url": "/ingredients",
-		"group": "Kirschwaßer",
-		"category": "Base Spirits",
-		"subcategory": "Brandy",
-		"type": "Alcoholic",
-		"recipe_slug": null
-	},
-	{
 		"slug": "lairds-bib",
 		"title": "Laird's Bottled-in-Bond",
 		"url": "/ingredients",
@@ -1127,6 +1117,16 @@
 		"category": "Mixers",
 		"subcategory": "Default",
 		"type": "Non-Alcoholic",
+		"recipe_slug": null
+	},
+	{
+		"slug": "schladerer",
+		"title": "Schladerer",
+		"url": "/ingredients",
+		"group": "Kirschwaßer",
+		"category": "Base Spirits",
+		"subcategory": "Brandy",
+		"type": "Alcoholic",
 		"recipe_slug": null
 	},
 	{

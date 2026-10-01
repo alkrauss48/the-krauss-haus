@@ -139,7 +139,7 @@ const ST_REMY_VSOP: Ingredient = {
 };
 const SCHLADERER: Ingredient = {
 	title: 'Schladerer',
-	slug: 'kirschwasser',
+	slug: 'schladerer',
 	group: 'Kirschwaßer',
 	costPerOz: 41 / 25
 };
