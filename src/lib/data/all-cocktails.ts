@@ -43,7 +43,9 @@ import EL_DIABLO from '$lib/data/cocktails/el-diablo';
 import EL_PRESIDENTE from '$lib/data/cocktails/el-presidente';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
+import FORBIDDEN_FRUIT from '$lib/data/cocktails/forbidden-fruit';
 import FOREST_SPIRIT from '$lib/data/cocktails/forest-spirit';
+import FOXY_BABY from '$lib/data/cocktails/foxy-baby';
 import FRENCH_75 from '$lib/data/cocktails/french-75';
 import HEMINGWAY_DAIQUIRI from '$lib/data/cocktails/hemingway-daiquiri';
 import GILDA from '$lib/data/cocktails/gilda';
@@ -67,6 +69,7 @@ import JINGLE_BIRD from '$lib/data/cocktails/jingle-bird';
 import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
 import KING_OF_KINGS from '$lib/data/cocktails/king-of-kings';
 import KIR_ROYALE from '$lib/data/cocktails/kir-royale';
+import KIRSCHWASSER_PUNCH from '$lib/data/cocktails/kirschwasser-punch';
 import KOLAWEIZEN from '$lib/data/cocktails/kolaweizen';
 import LAST_WORD from '$lib/data/cocktails/last-word';
 import LEMON_DROP from '$lib/data/cocktails/lemon-drop';
@@ -134,6 +137,7 @@ import TIDAL_TERROR from '$lib/data/cocktails/tidal-terror';
 import TOM_AND_JERRY from '$lib/data/cocktails/tom-and-jerry';
 import TORONTO from '$lib/data/cocktails/toronto';
 import TRADEWINDS from '$lib/data/cocktails/tradewinds';
+import TRATTO_LIMONCELLO_COCKTAIL from '$lib/data/cocktails/tratto-limoncello-cocktail';
 import TRINIDAD_SOUR from '$lib/data/cocktails/trinidad-sour';
 import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
 import WHISKEY_GINGER from '$lib/data/cocktails/whiskey-ginger';
@@ -187,7 +191,9 @@ export const allCocktails: Cocktail[] = [
 	EL_PRESIDENTE,
 	ESPRESSO_MARTINI,
 	FERNET_CON_COCA,
+	FOXY_BABY,
 	FRENCH_75,
+	FORBIDDEN_FRUIT,
 	FOREST_SPIRIT,
 	HEMINGWAY_DAIQUIRI,
 	GILDA,
@@ -211,6 +217,7 @@ export const allCocktails: Cocktail[] = [
 	JUNGLE_BIRD,
 	KING_OF_KINGS,
 	KIR_ROYALE,
+	KIRSCHWASSER_PUNCH,
 	KOLAWEIZEN,
 	LAST_WORD,
 	LEMON_DROP,
@@ -278,6 +285,7 @@ export const allCocktails: Cocktail[] = [
 	TOM_AND_JERRY,
 	TORONTO,
 	TRADEWINDS,
+	TRATTO_LIMONCELLO_COCKTAIL,
 	TRINIDAD_SOUR,
 	VIEUX_CARRE,
 	WHISKEY_GINGER,

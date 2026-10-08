@@ -59,6 +59,7 @@ const RUDOLPHS_NOSE: Cocktail = {
 		Tags.FlavorProfile.FRUITY,
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.SPICED,
+		Tags.FlavorProfile.DECADENT,
 		Tags.Technique.SHAKEN,
 		Tags.Style.SOUR,
 		Tags.Style.TIKI,

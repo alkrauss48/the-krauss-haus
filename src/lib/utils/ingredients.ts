@@ -107,14 +107,15 @@ export function formatVariantIngredients(variant: CocktailVariant): string {
 			}
 			// Validate that it's a proper IngredientItem with an ingredient property
 			if (!ingredient || !ingredient.ingredient) {
-				// Fallback: try to use label or amount if available, otherwise skip
+				// Fallback: use the label if available, otherwise skip
 				if (ingredient?.label) {
-					return ingredient.amount ? `${ingredient.amount} ${ingredient.label}` : ingredient.label;
+					return ingredient.label;
 				}
 				return '';
 			}
 			const displayName = getIngredientDisplayName(ingredient);
-			if (ingredient.amount) {
+			// A label overrides the whole line, amount included, as on the cocktail page
+			if (ingredient.amount && !ingredient.label) {
 				return `${ingredient.amount} ${displayName}`;
 			}
 			return displayName;

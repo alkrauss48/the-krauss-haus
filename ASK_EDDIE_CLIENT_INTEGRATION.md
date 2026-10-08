@@ -31,11 +31,13 @@ proposal — opinionated, but yours to move around.
   - [Failure modes](#failure-modes)
   - [Rate limiting — read this one](#rate-limiting--read-this-one)
   - [`POST /api/search`](#post-apisearch-debug-only)
+  - [`POST /api/house/refresh`](#post-apihouserefresh-server-only-on-boot)
 - [Part 2 — Client architecture](#part-2--client-architecture)
   - [Why there must be a server proxy](#why-there-must-be-a-server-proxy)
   - [The proxy route](#the-proxy-route)
   - [Reading SSE over `fetch`](#reading-sse-over-fetch)
   - [The conversation store](#the-conversation-store)
+  - [Refreshing Sasha's menus on boot](#refreshing-sashas-menus-on-boot)
 - [Part 3 — The experience](#part-3--the-experience)
   - [The way in](#the-way-in-subtle-on-purpose)
   - [The panel](#the-panel)
@@ -55,8 +57,10 @@ proposal — opinionated, but yours to move around.
 ## Part 0 — The short version
 
 - The API is a Laravel app running locally at **`http://localhost:9000`**.
-- Three endpoints, all behind a shared secret in an **`X-Bar-Key`** header:
-  `GET /api/bartenders`, `POST /api/ask`, `POST /api/search` (debug only).
+- Four endpoints, all behind a shared secret in an **`X-Bar-Key`** header:
+  `GET /api/bartenders`, `POST /api/ask`, `POST /api/search` (debug only), and
+  `POST /api/house/refresh`, which the SvelteKit server calls **once as it boots** so a
+  redeploy of the site also refreshes what Sasha knows about it.
 - `POST /api/ask` answers with **Server-Sent Events**. Nine event types, listed below.
   There are no other event types, ever.
 - There are two bartenders: **`sasha`** (the house bartender, grounded in the Krauss
@@ -394,6 +398,72 @@ passages with no model involved.
 
 **It answers `404` whenever `APP_DEBUG` is false**, so it does not exist in production.
 Useful for tuning retrieval from a terminal; **do not build UI on it.**
+
+### `POST /api/house/refresh` (server only, on boot)
+
+Sasha answers from the API's own copy of the site's menus, cocktails and flights. That
+copy is pulled from the live site's committed export (`/data/manifest.json` plus the
+datasets beside it) by `php artisan house:refresh`: fetch, import, verify, embed. This
+endpoint runs that command, so **the site tells the API when it has changed** rather than
+anyone remembering to run it after a deploy.
+
+Call it from the SvelteKit **server** as it starts. It never comes from a browser, and it
+uses the same `X-Bar-Key` as everything else.
+
+```http
+POST /api/house/refresh
+X-Bar-Key: <key>
+Content-Type: application/json
+Accept: application/json
+
+{"checksum": "e0d2b9faa3984632a35c7c18f1d053773eb9fe39d34de512943b6a210f7130b2"}
+```
+
+| field | type | notes |
+| --- | --- | --- |
+| `checksum` | 64-char lowercase hex, optional | the `checksum` from **this build's** `static/data/manifest.json` — send it |
+
+**Response, immediately:**
+
+```http
+HTTP/1.1 202 Accepted
+Content-Type: application/json
+
+{"message":"Refreshing the house catalog."}
+```
+
+The work happens **after** the response is sent. 202 means "a refresh is running". You
+get no completion callback, and nothing on this response depends on how the refresh
+goes. A failed refresh is logged on the API side and leaves the previous catalog in place.
+
+**Why send the checksum.** The site calls this while it is booting, and during a rollout
+the public URL can still reach the **old** pod. A refresh run right away would download
+the export being replaced. With a checksum, the API polls `/data/manifest.json` (every
+15 seconds, for up to 5 minutes) until the site serves that checksum, and only then
+refreshes. If the checksum never appears, it refreshes from whatever the site serves by
+then. At worst that run changes nothing. If another deploy has superseded this one, the
+API picks up the newer export instead. Without a checksum it refreshes straight away.
+
+**Behaviours worth knowing:**
+
+- **Calling it twice is safe.** At most one refresh runs at a time. A call that arrives
+  while one is in flight still gets `202`, and the refresh already running absorbs it.
+  Several replicas booting together, or a crash-looping pod, cost nothing extra.
+- **A refresh against an unchanged site does nothing.** Every step is idempotent.
+  If the checksum matches what the API already has, nothing is downloaded, written or
+  embedded. Calling it on every boot is cheap. Re-embedding only happens when content
+  actually changed (minutes when it does).
+- **Not throttled**, and not on the `/api/ask` rate-limit bucket. It never spends the
+  guests' allowance.
+- **No model is called.** Embedding runs on the API's own TEI server and costs nothing
+  per call.
+
+| status | when | what to do |
+| --- | --- | --- |
+| `202` | accepted | nothing; you're done |
+| `401` | missing/wrong key, or the API has no keys configured | configuration problem: log it, don't retry |
+| `422` | `checksum` present but not 64 lowercase hex chars | a bug in how you read the manifest: log it, don't retry |
+| `5xx` / network error | the API is down or mid-deploy itself | retry with backoff (the sketch below does) |
 
 ---
 
@@ -910,6 +980,82 @@ Three notes on that sketch:
   bartender's (still blank) bubble appear in the same frame, so there is never a moment
   where the guest's question is on screen alone.
 
+### Refreshing Sasha's menus on boot
+
+`src/hooks.server.ts` (there isn't one yet). SvelteKit's `init` hook runs once when the
+Node server starts, which covers a redeploy, a restart and a scale-up alike. Do **not**
+`await` the refresh inside `init`: `init` blocks the server from taking requests until it
+resolves, and the site shouldn't wait for the bar.
+
+```ts
+import { building, dev } from '$app/environment';
+import { env } from '$env/dynamic/private';
+import type { ServerInit } from '@sveltejs/kit';
+// Bundled at build time, so it is the checksum of the export *this* build serves.
+import manifest from '../static/data/manifest.json';
+
+const RETRY_DELAYS_MS = [5_000, 15_000, 30_000, 60_000, 120_000];
+
+async function refreshHouse(): Promise<void> {
+	if (!env.BAR_API_URL || !env.BAR_API_KEY) return;
+
+	for (let attempt = 0; attempt <= RETRY_DELAYS_MS.length; attempt++) {
+		try {
+			const res = await fetch(`${env.BAR_API_URL}/api/house/refresh`, {
+				method: 'POST',
+				headers: {
+					'X-Bar-Key': env.BAR_API_KEY,
+					'Content-Type': 'application/json',
+					Accept: 'application/json'
+				},
+				body: JSON.stringify({ checksum: manifest.checksum }),
+				signal: AbortSignal.timeout(10_000)
+			});
+
+			if (res.status === 202) return;
+
+			// 401/422 are configuration bugs: retrying will not fix them.
+			if (res.status < 500) {
+				console.error(`[bar] house refresh refused: ${res.status} ${await res.text()}`);
+				return;
+			}
+		} catch (error) {
+			// The API may be redeploying too; fall through to the retry.
+		}
+
+		const delay = RETRY_DELAYS_MS[attempt];
+		if (delay === undefined) break;
+		await new Promise((resolve) => setTimeout(resolve, delay));
+	}
+
+	console.error('[bar] house refresh: the API never accepted the request');
+}
+
+export const init: ServerInit = () => {
+	// `building` is true while prerendering, when there is no server to speak of;
+	// `dev` because `npm run dev` restarts on every config change.
+	if (building || dev) return;
+
+	void refreshHouse();
+};
+```
+
+Notes:
+
+- **The checksum comes from the build, not from a request.** Import
+  `static/data/manifest.json` (as above) so the value is whatever `npm run export:data`
+  committed for this build. Don't fetch the site's own `/data/manifest.json` over the
+  public URL: mid-rollout, that's the old pod answering, which is the very problem the
+  checksum solves.
+- If TypeScript complains about the JSON import, make sure `resolveJsonModule` is on (it
+  is in SvelteKit's generated tsconfig).
+- To trigger it by hand, from anywhere that holds the key:
+
+  ```bash
+  curl -s -X POST "$BAR_API_URL/api/house/refresh" \
+    -H "X-Bar-Key: $BAR_API_KEY" -H 'Accept: application/json'
+  ```
+
 ---
 
 ## Part 3 — The experience
@@ -1241,6 +1387,7 @@ that.
 ### Suggested files
 
 ```
+src/hooks.server.ts                      init: POST /api/house/refresh on boot
 src/routes/api/bar/ask/+server.ts        proxy: adds the key, streams through
 src/lib/bar/stream.ts                    SSE-over-fetch parser + BarEvent types
 src/lib/bar/bar.svelte.ts                the BarChat runes store
@@ -1346,12 +1493,16 @@ To force an error while building the failure states, point `BAR_API_URL` at a de
 | `GET` | `/api/bartenders` | `{"bartenders":[{key,name,blurb}]}` |
 | `POST` | `/api/ask` | `text/event-stream` — the six frames |
 | `POST` | `/api/search` | raw passages; **404 unless `APP_DEBUG`** |
+| `POST` | `/api/house/refresh` | `202 {"message"}` at once; refresh runs after. Server-only, on boot |
 
 **Request body for `/api/ask`:** `{ question: string (≤2000, non-blank), bartender:
 "sasha" | "eddie", conversation_id?: string | null }`
 
 **Frames:** `meta{conversation_id}` → (`text{delta}` | `tool{label}` |
 `consult{bartender,answer}` | `error{message}`)* → `done{}`
+
+**Request body for `/api/house/refresh`:** `{ checksum?: string (64 lowercase hex, from
+this build's static/data/manifest.json) }`
 
 **Bartender keys:** `sasha` (default), `eddie`.
 

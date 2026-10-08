@@ -38,6 +38,7 @@ const BRANDY_ALEXANDER: Cocktail = {
 	tags: [
 		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.CREAMY,
+		Tags.FlavorProfile.DECADENT,
 		Tags.Technique.SHAKEN,
 		Tags.Origin.CLASSIC,
 		Tags.ServedIn.COUPE_GLASS,

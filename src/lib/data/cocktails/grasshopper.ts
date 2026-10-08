@@ -40,6 +40,7 @@ const GRASSHOPPER: Cocktail = {
 		Tags.BaseAlcohol.VODKA,
 		Tags.FlavorProfile.CREAMY,
 		Tags.FlavorProfile.HERBAL,
+		Tags.FlavorProfile.DECADENT,
 		Tags.Technique.SHAKEN,
 		Tags.Origin.CLASSIC,
 		Tags.ServedIn.COUPE_GLASS,

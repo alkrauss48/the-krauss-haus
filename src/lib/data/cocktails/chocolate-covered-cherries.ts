@@ -52,6 +52,7 @@ const CHOCOLATE_COVERED_CHERRIES: Cocktail = {
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.FlavorProfile.FRUITY,
+		Tags.FlavorProfile.DECADENT,
 		Tags.AlcoholLevel.HIGH,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]

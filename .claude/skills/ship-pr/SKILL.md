@@ -1,6 +1,6 @@
 ---
 name: ship-pr
-description: Ship the staged changes — create a new branch, commit what is staged, push it, and open a draft PR using PERSONAL_GH_TOKEN. Use when the user says /ship-pr or asks to ship, branch-commit-push-PR, or open a PR for the staged work.
+description: Ship the staged changes — create a new branch, commit what is staged, push it, and open a draft PR with gh. Use when the user says /ship-pr or asks to ship, branch-commit-push-PR, or open a PR for the staged work.
 disable-model-invocation: true
 ---
 
@@ -43,12 +43,12 @@ Pass the message through a heredoc (`git commit -F - <<'EOF' … EOF`).
 git push -u origin HEAD
 ```
 
-## 5. Open a draft PR with the personal token
+## 5. Open a draft PR
 
-`PERSONAL_GH_TOKEN` is set in the shell environment. Use it for `gh`, and never print it:
+`gh` is already authenticated. Call it directly, without setting `GH_TOKEN`:
 
 ```bash
-GH_TOKEN="$PERSONAL_GH_TOKEN" gh pr create --draft --base main \
+gh pr create --draft --base main \
   --title "<same as the commit subject>" \
   --body "$(cat <<'EOF'
 ## Summary
@@ -63,7 +63,7 @@ EOF
 ```
 
 - Always open it as a **draft**.
-- If `PERSONAL_GH_TOKEN` is empty, stop and tell the user. Do not fall back to another token.
+- If `gh` reports that it is not authenticated, stop and tell the user to run `gh auth login`.
 - If a PR for this branch already exists, `gh` will say so. Report the existing URL instead of
   opening a second one.
 

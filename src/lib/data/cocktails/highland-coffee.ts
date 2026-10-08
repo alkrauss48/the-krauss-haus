@@ -41,6 +41,7 @@ const HIGHLAND_COFFEE: Cocktail = {
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.CREAMY,
+		Tags.FlavorProfile.DECADENT,
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
 		Tags.Origin.ORIGINAL,

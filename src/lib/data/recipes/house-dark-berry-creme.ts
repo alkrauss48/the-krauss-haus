@@ -12,7 +12,7 @@ const HOUSE_DARK_BERRY_CREME: Recipe = {
 		'225g granulated sugar',
 		'2 2"x1" strips lemon peel (washed, unwaxed, no pith)',
 		'1g Ceylon black tea leaves',
-		'2tsp lemon juice'
+		'1T lemon juice'
 	],
 	instructions:
 		'Lightly crush all fruit in a jar. Add vodka and lemon peel. Seal and shake. Let macerate for 14 days, shaking occasionally. On day 12, add tea leaves. Strain through fine mesh, then strain again through cheesecloth or a coffee filter. Stir in sugar and lemon juice until fully dissolved. Bottle and rest for 1-2 weeks before using.',
