@@ -125,5 +125,4 @@ Run: `npm run test`
 ## Pull Requests
 
 - Use the `gh` CLI tool to create pull requests.
-- Authenticate by reading the `GH_TOKEN` value from the `.env` file and exporting it as the `GH_TOKEN` environment variable (e.g., `GH_TOKEN=$(grep '^GH_TOKEN=' .env | cut -d '=' -f2) gh pr create ...`).
 - Always create pull requests as **drafts** (`--draft` flag).
