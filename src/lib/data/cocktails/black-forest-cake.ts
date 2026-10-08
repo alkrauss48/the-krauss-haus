@@ -50,6 +50,7 @@ const BLACK_FOREST_CAKE: Cocktail = {
 		Tags.BaseAlcohol.BRANDY,
 		Tags.FlavorProfile.CREAMY,
 		Tags.FlavorProfile.FRUITY,
+		Tags.FlavorProfile.DECADENT,
 		Tags.Technique.SHAKEN,
 		Tags.Origin.ORIGINAL,
 		Tags.ServedIn.COUPE_GLASS

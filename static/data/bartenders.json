@@ -9,6 +9,15 @@
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/bartenders/aaron-krauss.jpeg"
 	},
 	{
+		"slug": "aisha-sharpe",
+		"name": "Aisha Sharpe",
+		"url": "/bartenders/aisha-sharpe",
+		"description": "Aisha Sharpe is a New York City bartender and cocktail consultant. She created the Forbidden Fruit in response to a challenge from Liquor.com to fit as many holiday flavors as possible into a single drink.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
 		"slug": "antoine-peychaud",
 		"name": "Antoine Peychaud",
 		"url": "/bartenders/antoine-peychaud",
@@ -40,6 +49,24 @@
 		"name": "Carousel Bar",
 		"url": "/bartenders/carousel-bar",
 		"description": "The Carousel Bar & Lounge is a slowly rotating, carousel-themed bar inside the Hotel Monteleone in New Orleans’ French Quarter. It is the birthplace of the Vieux Carré, created in the 1930s by Walter Bergeron as a tribute to the neighborhood’s French, Italian, and American influences.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": null
+	},
+	{
+		"slug": "clevyr",
+		"name": "Clevyr",
+		"url": "/bartenders/clevyr",
+		"description": "Clevyr is a software company in Oklahoma City, building custom software since 2009 and specializing in custom software development, consulting, AI, DevOps, and more. Its mascot is the fox, and its cocktail was a team effort, built from the memories and stories of the employees who made it together. Learn more at https://clevyr.com/.",
+		"birth_year": null,
+		"death_year": null,
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/bartenders/clevyr.jpeg"
+	},
+	{
+		"slug": "cynthia-tran",
+		"name": "Cynthia Tran",
+		"url": "/bartenders/cynthia-tran",
+		"description": "Cynthia Tran is a bartender who created the Tratto Limoncello Cocktail at Tratto, an Italian restaurant in San Francisco, pairing bottled-in-bond bourbon with limoncello for a bright, spirit-forward stirred drink.",
 		"birth_year": null,
 		"death_year": null,
 		"image_url": null

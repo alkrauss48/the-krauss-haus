@@ -41,6 +41,7 @@ const TOM_AND_JERRY: Cocktail = {
 		Tags.BaseAlcohol.RUM,
 		Tags.FlavorProfile.CREAMY,
 		Tags.FlavorProfile.SPICED,
+		Tags.FlavorProfile.DECADENT,
 		Tags.Temperature.HOT,
 		Tags.Technique.BUILT,
 		Tags.Origin.FOLK,

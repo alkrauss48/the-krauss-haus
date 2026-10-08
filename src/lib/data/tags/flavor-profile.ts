@@ -13,6 +13,7 @@ const CREAMY: Tag = { label: 'Creamy', category: FLAVOR_PROFILE, order: 4 };
 const HERBAL: Tag = { label: 'Herbal', category: FLAVOR_PROFILE, order: 5 };
 const CITRUS: Tag = { label: 'Citrus', category: FLAVOR_PROFILE, order: 6 };
 const BITTER: Tag = { label: 'Bitter', category: FLAVOR_PROFILE, order: 7 };
+const DECADENT: Tag = { label: 'Decadent', category: FLAVOR_PROFILE, order: 8 };
 
 export const TAGS = {
 	BUBBLY,
@@ -21,5 +22,6 @@ export const TAGS = {
 	CREAMY,
 	HERBAL,
 	CITRUS,
-	BITTER
+	BITTER,
+	DECADENT
 };

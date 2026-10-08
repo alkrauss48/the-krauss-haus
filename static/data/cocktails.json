@@ -914,6 +914,10 @@
 				"category": "Flavor Profile"
 			},
 			{
+				"label": "Decadent",
+				"category": "Flavor Profile"
+			},
+			{
 				"label": "Shaken",
 				"category": "Technique"
 			},
@@ -1136,6 +1140,10 @@
 			},
 			{
 				"label": "Creamy",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Decadent",
 				"category": "Flavor Profile"
 			},
 			{
@@ -1834,6 +1842,10 @@
 			},
 			{
 				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Decadent",
 				"category": "Flavor Profile"
 			},
 			{
@@ -3455,6 +3467,10 @@
 				"category": "Base Alcohol"
 			},
 			{
+				"label": "Decadent",
+				"category": "Flavor Profile"
+			},
+			{
 				"label": "Shaken",
 				"category": "Technique"
 			},
@@ -3591,6 +3607,115 @@
 		"variations": []
 	},
 	{
+		"slug": "forbidden-fruit",
+		"title": "Forbidden Fruit",
+		"subtitle": null,
+		"description": "Apple brandy, Pimm's #1, lemon, simple syrup, angostura bitters, peychaud's bitters, ginger beer.",
+		"url": "/cocktails/forbidden-fruit",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/forbidden-fruit.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/forbidden-fruit.webp",
+		"method": "Shaken",
+		"served_in": "Highball Glass",
+		"ice": "Small Cubes",
+		"has_straw": false,
+		"servings": null,
+		"notes": "Shake everything except the ginger beer, strain over ice, then top with the ginger beer. Created by Aisha Sharpe in New York City, in response to a challenge from Liquor.com to fit as many holiday flavors as possible into a single drink.",
+		"bartender_slug": "aisha-sharpe",
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "lairds-bib",
+				"amount": "1.5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "pimms",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rich-simple-syrup",
+				"amount": "1 tsp",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "angostura-bitters",
+				"amount": "2 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "peychauds-bitters",
+				"amount": "2 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "ginger-beer",
+				"amount": "3oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon-garnish",
+				"amount": null,
+				"label": "Garnish: Half lemon wheel"
+			}
+		],
+		"tags": [
+			{
+				"label": "Brandy",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Spiced",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Bubbly",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Highball",
+				"category": "Style"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Lower Alcohol",
+				"category": "Alcohol Level"
+			},
+			{
+				"label": "Highball Glass",
+				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "forest-spirit",
 		"title": "Forest Spirit",
 		"subtitle": null,
@@ -3693,6 +3818,113 @@
 			{
 				"label": "Highball",
 				"category": "Style"
+			},
+			{
+				"label": "Original",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "foxy-baby",
+		"title": "Foxy Baby",
+		"subtitle": null,
+		"description": "Dark rum, jalapeño tequila, elderflower liqueur, orange, chili bitters, orange bitters, limonata.",
+		"url": "/cocktails/foxy-baby",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/foxy-baby.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/foxy-baby.webp",
+		"method": "Shaken",
+		"served_in": "Double Rocks Glass",
+		"ice": "Small Cubes",
+		"has_straw": false,
+		"servings": null,
+		"notes": "Shake everything except the limonata, strain over ice, then top with the limonata. Created by Clevyr, a software company in OKC, as a team exercise during a virtual diaper party over Zoom in the midst of the Covid-19 pandemic. Clevyr's mascot is the fox, hence the name \"Foxy Baby.\" Each employee contributed in some way, with a memory or a story, to the creation of this cocktail.",
+		"bartender_slug": "clevyr",
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "appleton-estate-signature",
+				"amount": "1.25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "jalapeno-tequila",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "elderflower-liqueur",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-bitters",
+				"amount": "3 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "chili-bitters",
+				"amount": "1 dash",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange",
+				"amount": null,
+				"label": "1/2 orange, juiced"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "sanpellegrino-limonata",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-garnish",
+				"amount": null,
+				"label": "Garnish: Orange twist"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maraschino-cherry",
+				"amount": null,
+				"label": "Garnish: Maraschino cherry"
+			}
+		],
+		"tags": [
+			{
+				"label": "Rum",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Spiced",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Bubbly",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
 			},
 			{
 				"label": "Original",
@@ -4309,6 +4541,10 @@
 				"category": "Flavor Profile"
 			},
 			{
+				"label": "Decadent",
+				"category": "Flavor Profile"
+			},
+			{
 				"label": "Shaken",
 				"category": "Technique"
 			},
@@ -4454,6 +4690,10 @@
 			},
 			{
 				"label": "Creamy",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Decadent",
 				"category": "Flavor Profile"
 			},
 			{
@@ -5689,6 +5929,93 @@
 			},
 			{
 				"label": "Flute Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "kirschwasser-punch",
+		"title": "Kirschwasser Punch",
+		"subtitle": null,
+		"description": "Kirschwasser, rich simple syrup, yellow chartreuse, lemon, maraschino cherry.",
+		"url": "/cocktails/kirschwasser-punch",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/kirschwasser-punch.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/kirschwasser-punch.webp",
+		"method": "Built in Glass",
+		"served_in": "Double Rocks Glass",
+		"ice": "Crushed",
+		"has_straw": true,
+		"servings": null,
+		"notes": "Build in the glass: squeeze the lemon wedge in and drop it into the drink, add the rest, then fill with crushed ice. Garnish with a maraschino cherry.",
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "schladerer",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rich-simple-syrup",
+				"amount": "2 tsp",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "yellow-chartreuse",
+				"amount": "1 tsp",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon-garnish",
+				"amount": null,
+				"label": "1 Lemon wedge, squeezed and garnished"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maraschino-cherry",
+				"amount": null,
+				"label": "Garnish: Maraschino cherry"
+			}
+		],
+		"tags": [
+			{
+				"label": "Brandy",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Herbal",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Built in Glass",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Classic",
+				"category": "Origin"
+			},
+			{
+				"label": "Higher Alcohol",
+				"category": "Alcohol Level"
+			},
+			{
+				"label": "Double Rocks Glass",
 				"category": "Served In"
 			},
 			{
@@ -9507,6 +9834,10 @@
 				"category": "Flavor Profile"
 			},
 			{
+				"label": "Decadent",
+				"category": "Flavor Profile"
+			},
+			{
 				"label": "Built in Glass",
 				"category": "Technique"
 			},
@@ -9781,6 +10112,10 @@
 			},
 			{
 				"label": "Spiced",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Decadent",
 				"category": "Flavor Profile"
 			},
 			{
@@ -10893,6 +11228,10 @@
 				"category": "Flavor Profile"
 			},
 			{
+				"label": "Decadent",
+				"category": "Flavor Profile"
+			},
+			{
 				"label": "Shaken",
 				"category": "Technique"
 			},
@@ -11795,6 +12134,10 @@
 				"category": "Flavor Profile"
 			},
 			{
+				"label": "Decadent",
+				"category": "Flavor Profile"
+			},
+			{
 				"label": "Hot",
 				"category": "Temperature"
 			},
@@ -11983,6 +12326,95 @@
 			{
 				"label": "Highball Glass",
 				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "tratto-limoncello-cocktail",
+		"title": "Tratto Limoncello Cocktail",
+		"subtitle": null,
+		"description": "Bourbon, limoncello, dry vermouth, orange bitters, angostura bitters, lemon twist.",
+		"url": "/cocktails/tratto-limoncello-cocktail",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/tratto-limoncello-cocktail.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/tratto-limoncello-cocktail.webp",
+		"method": "Stirred",
+		"served_in": "Double Rocks Glass",
+		"ice": "Large Cube",
+		"has_straw": false,
+		"servings": null,
+		"notes": "Created by Cynthia Tran at Tratto Restaurant in San Francisco.",
+		"bartender_slug": "cynthia-tran",
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "evan-williams-bib",
+				"amount": "1.5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "limoncello",
+				"amount": "1.5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "dolin-vermouth-dry",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-bitters",
+				"amount": "1 dash",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "angostura-bitters",
+				"amount": "1 dash",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon-garnish",
+				"amount": null,
+				"label": "Garnish: Lemon twist"
+			}
+		],
+		"tags": [
+			{
+				"label": "Whiskey",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Stirred",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Higher Alcohol",
+				"category": "Alcohol Level"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
 			}
 		],
 		"variations": []

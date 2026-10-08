@@ -61,6 +61,7 @@ const RAMOS_GIN_FIZZ: Cocktail = {
 		Tags.FlavorProfile.CITRUS,
 		Tags.FlavorProfile.HERBAL,
 		Tags.FlavorProfile.CREAMY,
+		Tags.FlavorProfile.DECADENT,
 		Tags.Technique.BUILT,
 		Tags.Origin.CLASSIC,
 		Tags.ServedIn.HIGHBALL_GLASS,

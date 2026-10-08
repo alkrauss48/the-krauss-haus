@@ -120,7 +120,7 @@
 		"category": "Infusions",
 		"description": "Bright, dry orange liqueur with subtle bitterness.",
 		"ingredients": [
-			"Peels from 3 navel oranges, unwaxed (no white pith)",
+			"Peels from 4 navel oranges, unwaxed (no white pith)",
 			"Peels from 1/2 lemon, unwaxed (no white pith)",
 			"2\"x1\" grapefruit peel, unwaxed (no white pith)",
 			"570mL 50% ABV Vodka",
@@ -130,7 +130,7 @@
 			"150g Granulated Sugar",
 			"50mL Water"
 		],
-		"instructions": "Infuse orange, lemon, and grapefruit peels with vodka and brandy in a glass jar for 10 days. On day 7, add cinnamon stick and coriander seeds. After the full 10 days, strain. Add the water and sugar to the strained infusion. Seal and shake vigorously. Let stand for 24–48 hours, shaking occasionally until all of the sugar has dissolved. Let rest at least 3 weeks, preferably 4 weeks.",
+		"instructions": "Infuse orange, lemon, and grapefruit peels with vodka and brandy in a glass jar for 10 days. On day 8, add cinnamon stick and coriander seeds. After the full 10 days, strain. Add the sugar and water to the strained infusion. Seal and shake vigorously. Let stand for 24–48 hours, shaking occasionally until all of the sugar has dissolved. Let rest at least 3 weeks, preferably 4 weeks.",
 		"notes": "Makes approximately 950 mL at ~40% ABV. Best after 3–4 weeks; continues to improve for 2–3 months."
 	},
 	{
@@ -246,7 +246,7 @@
 			"225g granulated sugar",
 			"2 2\"x1\" strips lemon peel (washed, unwaxed, no pith)",
 			"1g Ceylon black tea leaves",
-			"2tsp lemon juice"
+			"1T lemon juice"
 		],
 		"instructions": "Lightly crush all fruit in a jar. Add vodka and lemon peel. Seal and shake. Let macerate for 14 days, shaking occasionally. On day 12, add tea leaves. Strain through fine mesh, then strain again through cheesecloth or a coffee filter. Stir in sugar and lemon juice until fully dissolved. Bottle and rest for 1-2 weeks before using.",
 		"notes": "Store sealed in the refrigerator or a cool, dark place. Best after 2-4 weeks; keeps well for up to 1 year."
@@ -388,13 +388,13 @@
 		"category": "Syrups",
 		"description": "A bright, jammy syrup made from fresh raspberries.",
 		"ingredients": [
-			"6oz carton of raspberries",
-			"1 cup granulated sugar",
-			"1/2 cup water",
-			"1 teaspoon lemon juice"
+			"12oz carton of raspberries",
+			"400g granulated sugar",
+			"1 cup water",
+			"2 tsp lemon juice"
 		],
-		"instructions": "Muddle the raspberries with the sugar, and let it sit for 20-30 minutes. Add the water, then cook over low heat for about 5–10 minutes, stirring occasionally. Don't boil it. Remove from heat and let cool. Add the lemon juice.",
-		"notes": "Recipe makes about 1.5 cups. Lasts 1-2 weeks in the fridge."
+		"instructions": "Muddle the raspberries with the sugar, and let it sit for 20-30 minutes. Add the water, then heat over low heat for about 5–10 minutes, stirring occasionally. Don't boil it. Remove from heat and let cool. Add the lemon juice. Strain through a fine mesh strainer into a jar or bottle.",
+		"notes": "Recipe makes about 2.5 cups."
 	},
 	{
 		"slug": "rich-simple-syrup",

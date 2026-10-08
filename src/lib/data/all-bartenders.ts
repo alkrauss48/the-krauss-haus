@@ -1,10 +1,13 @@
 import type { Bartender } from '$lib/types/bartenders';
 
 import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
+import AISHA_SHARPE from '$lib/data/bartenders/aisha-sharpe';
 import ANTOINE_PEYCHAUD from '$lib/data/bartenders/antoine-peychaud';
 import AVIARY_BAR_KUALA_LUMPUR from '$lib/data/bartenders/aviary-bar';
 import BRIAN_MILLER from '$lib/data/bartenders/brian-miller';
 import CAROUSEL_BAR from '$lib/data/bartenders/carousel-bar';
+import CLEVYR from '$lib/data/bartenders/clevyr';
+import CYNTHIA_TRAN from '$lib/data/bartenders/cynthia-tran';
 import DICK_BRADSELL from '$lib/data/bartenders/dick-bradsell';
 import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 import GIUSEPPE_GONZALEZ from '$lib/data/bartenders/giuseppe-gonzalez';
@@ -30,10 +33,13 @@ import TRADER_VIC from '$lib/data/bartenders/trader-vic';
 
 export const allBartenders: Bartender[] = [
 	AARON_KRAUSS,
+	AISHA_SHARPE,
 	ANTOINE_PEYCHAUD,
 	AVIARY_BAR_KUALA_LUMPUR,
 	BRIAN_MILLER,
 	CAROUSEL_BAR,
+	CLEVYR,
+	CYNTHIA_TRAN,
 	DICK_BRADSELL,
 	DONN_THE_BEACHCOMBER,
 	GIUSEPPE_GONZALEZ,

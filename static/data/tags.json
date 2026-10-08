@@ -112,6 +112,10 @@
 			{
 				"label": "Bitter",
 				"order": 7
+			},
+			{
+				"label": "Decadent",
+				"order": 8
 			}
 		]
 	},
