@@ -5,14 +5,14 @@ const RASPBERRY_SYRUP: Recipe = {
 	slug: 'raspberry-syrup',
 	description: 'A bright, jammy syrup made from fresh raspberries.',
 	ingredients: [
-		'6oz carton of raspberries',
-		'1 cup granulated sugar',
-		'1/2 cup water',
-		'1 teaspoon lemon juice'
+		'12oz carton of raspberries',
+		'400g granulated sugar',
+		'1 cup water',
+		'2 tsp lemon juice'
 	],
 	instructions:
-		"Muddle the raspberries with the sugar, and let it sit for 20-30 minutes. Add the water, then cook over low heat for about 5–10 minutes, stirring occasionally. Don't boil it. Remove from heat and let cool. Add the lemon juice.",
-	notes: 'Recipe makes about 1.5 cups. Lasts 1-2 weeks in the fridge.'
+		"Muddle the raspberries with the sugar, and let it sit for 20-30 minutes. Add the water, then heat over low heat for about 5–10 minutes, stirring occasionally. Don't boil it. Remove from heat and let cool. Add the lemon juice. Strain through a fine mesh strainer into a jar or bottle.",
+	notes: 'Recipe makes about 2.5 cups.'
 };
 
 export default RASPBERRY_SYRUP;
