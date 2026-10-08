@@ -125,7 +125,13 @@ describe('formatVariantIngredients', () => {
 		const broken = [
 			{ amount: '1oz', label: 'Mystery syrup' }
 		] as unknown as CocktailVariant['ingredients'];
-		expect(formatVariantIngredients(variant(broken))).toBe('1oz Mystery syrup');
+		expect(formatVariantIngredients(variant(broken))).toBe('Mystery syrup');
+	});
+
+	it('shows a label in place of the amount and name', () => {
+		expect(
+			formatVariantIngredients(variant([{ amount: '2oz', label: 'Any aged rum', ingredient: RUM }]))
+		).toBe('Any aged rum');
 	});
 
 	it('drops unusable entries instead of leaving stray spaces', () => {
