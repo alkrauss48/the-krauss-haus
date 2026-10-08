@@ -87,6 +87,9 @@ answer guest questions, and can call each other over mid-answer. Backed by the s
 - `src/lib/bar/` — `stream.ts` (SSE parser), `markdown.ts` (tokenizer), `links.ts` (href
   whitelist), `bar.svelte.ts` (the `BarChat` runes store), `bartenders.ts`, `copy.ts`.
 - `src/lib/components/bar/` — the panel, launcher, transcript and the consult set piece.
+- `src/hooks.server.ts` — on boot, fires `POST /api/house/refresh` (with this build's
+  `static/data/manifest.json` checksum) so a redeploy refreshes what Sasha knows. Never
+  awaited; retry logic lives in `src/lib/server/house-refresh.ts`.
 
 Three things that look like details but are not:
 
