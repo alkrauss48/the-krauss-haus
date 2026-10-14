@@ -17,6 +17,7 @@ import BRAMBLE from '$lib/data/cocktails/bramble';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import BRANDY_CRUSTA from '$lib/data/cocktails/brandy-crusta';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
+import CARAJILLO_OLD_FASHIONED from '$lib/data/cocktails/carajillo-old-fashioned';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import CANELAZO from '$lib/data/cocktails/canelazo';
 import CERVEZA_Y_TEQUILA from '$lib/data/cocktails/cerveza-y-tequila';
@@ -165,6 +166,7 @@ export const allCocktails: Cocktail[] = [
 	BRANDY_ALEXANDER,
 	BRANDY_CRUSTA,
 	CAIPIRINHA,
+	CARAJILLO_OLD_FASHIONED,
 	CARAMEL_APPLE_SPICE,
 	CANELAZO,
 	CERVEZA_Y_TEQUILA,

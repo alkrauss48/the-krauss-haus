@@ -116,6 +116,11 @@ const ALLSPICE_DRAM: Ingredient = {
 	slug: 'allspice-dram',
 	costPerOz: 30 / 25
 };
+const LICOR_43: Ingredient = {
+	title: 'Licor 43',
+	slug: 'licor-43',
+	costPerOz: 30 / 25
+};
 const MAMA_JUANA: Ingredient = {
 	title: 'Mama Juana',
 	slug: 'mama-juana',
@@ -204,7 +209,7 @@ export const LIQUEURS: IngredientCategory = {
 		},
 		{
 			label: 'Nut & Spice',
-			ingredients: [ALLSPICE_DRAM, FALERNUM, FRANGELICO, LAZZARONI, MAMA_JUANA]
+			ingredients: [ALLSPICE_DRAM, FALERNUM, FRANGELICO, LAZZARONI, LICOR_43, MAMA_JUANA]
 		},
 		{
 			label: 'Floral, Coffee & Specialty',
@@ -248,6 +253,7 @@ export const INGREDIENTS = {
 	FALERNUM,
 	FRANGELICO,
 	LAZZARONI,
+	LICOR_43,
 	MAMA_JUANA,
 
 	// Floral, Coffee & Specialty

@@ -26,6 +26,7 @@ import POPO_GALSINI from '$lib/data/bartenders/popo-galsini';
 import RAFFLES_HOTEL_LONG_BAR from '$lib/data/bartenders/raffles-hotel-long-bar';
 import REED_CAHILL from '$lib/data/bartenders/reed-cahill';
 import SAM_ROSS from '$lib/data/bartenders/sam-ross';
+import SEAN_OCONNOR_COMBEE from '$lib/data/bartenders/sean-oconnor-combee';
 import SOGGY_DOLLAR_BAR from '$lib/data/bartenders/soggy-dollar-bar';
 import TELLERS from '$lib/data/bartenders/tellers';
 import ERICK_CASTRO from '$lib/data/bartenders/erick-castro';
@@ -58,6 +59,7 @@ export const allBartenders: Bartender[] = [
 	RAFFLES_HOTEL_LONG_BAR,
 	REED_CAHILL,
 	SAM_ROSS,
+	SEAN_OCONNOR_COMBEE,
 	SOGGY_DOLLAR_BAR,
 	ERICK_CASTRO,
 	TELLERS,

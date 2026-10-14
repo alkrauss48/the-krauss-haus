@@ -7,6 +7,10 @@ import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
 import GODFATHER from '$lib/data/cocktails/godfather';
 import IMPROVED_HOLLAND_GIN_COCKTAIL from '$lib/data/cocktails/improved-holland-gin-cocktail';
 import CORN_N_OIL from '$lib/data/cocktails/corn-n-oil';
+import SAZERAC from '$lib/data/cocktails/sazerac';
+import TORONTO from '$lib/data/cocktails/toronto';
+import TI_PUNCH from '$lib/data/cocktails/ti-punch';
+import CARAJILLO_OLD_FASHIONED from '$lib/data/cocktails/carajillo-old-fashioned';
 
 const OLD_FASHIONEDS: CocktailCollection = {
 	slug: 'old-fashioneds',
@@ -25,7 +29,11 @@ const OLD_FASHIONEDS: CocktailCollection = {
 		OAXACA_OLD_FASHIONED,
 		GODFATHER,
 		IMPROVED_HOLLAND_GIN_COCKTAIL,
-		CORN_N_OIL
+		CORN_N_OIL,
+		SAZERAC,
+		TORONTO,
+		TI_PUNCH,
+		CARAJILLO_OLD_FASHIONED
 	]
 };
 
