@@ -378,6 +378,7 @@
 		{selectedTags}
 		{selectedIngredients}
 		{logicMode}
+		resultCount={filteredCocktails.length}
 		isOpen={isFilterSidebarOpen}
 		on:filtersChanged={handleFiltersChanged}
 		on:logicModeChanged={handleLogicModeChanged}

@@ -116,6 +116,22 @@ describe('CocktailsTable', () => {
 		expect(visibleTitles()).toEqual(['Mai Tai', 'Negroni']);
 	});
 
+	it('closes the filter sidebar from a button that shows the live result count', async () => {
+		renderTable({ showFilters: true });
+		await fireEvent.click(screen.getByRole('button', { name: /^Filters/ }));
+
+		const showButton = screen.getByRole('button', { name: 'Show 2 cocktails' });
+		const sidebar = showButton.closest('.fixed');
+		expect(sidebar).toHaveClass('translate-x-0');
+
+		await search('negroni');
+		expect(screen.getByRole('button', { name: 'Show 1 cocktail' })).toBeInTheDocument();
+
+		await search('absinthe');
+		await fireEvent.click(screen.getByRole('button', { name: 'No matches' }));
+		expect(sidebar).toHaveClass('translate-x-full');
+	});
+
 	it('hides the cost column until cost mode is on', () => {
 		renderTable();
 		expect(screen.queryByRole('button', { name: /Cost/ })).not.toBeInTheDocument();
