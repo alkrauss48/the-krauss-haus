@@ -21,16 +21,19 @@ const TIKI_MUGS: CocktailCollection = {
 		tertiary: '#ecfdf5',
 		variationText: '#166534'
 	},
-	cocktails: [
-		NAUTILUS,
-		TIDAL_TERROR,
-		PIRANHA_POOL,
-		PINEAPPLE_POTION,
-		PLUNDERERS_PUNCH,
-		AULANI_TROPICAL_MAI_TAI,
-		JINGLE_BIRD,
-		SIPPIN_SANTA,
-		YULE_TIDE
+	groups: [
+		{
+			heading: 'Year-round',
+			cocktails: [PLUNDERERS_PUNCH, PIRANHA_POOL, AULANI_TROPICAL_MAI_TAI, NAUTILUS]
+		},
+		{
+			heading: 'Halloween',
+			cocktails: [TIDAL_TERROR, PINEAPPLE_POTION]
+		},
+		{
+			heading: 'Christmas',
+			cocktails: [JINGLE_BIRD, SIPPIN_SANTA, YULE_TIDE]
+		}
 	]
 };
 

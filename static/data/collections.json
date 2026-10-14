@@ -54,16 +54,41 @@
 		"url": "/collections/tiki-mugs",
 		"image_url": null,
 		"cocktail_slugs": [
+			"plunderers-punch",
+			"piranha-pool",
+			"aulani-tropical-mai-tai",
 			"nautilus",
 			"tidal-terror",
-			"piranha-pool",
 			"pineapple-potion",
-			"plunderers-punch",
-			"aulani-tropical-mai-tai",
 			"jingle-bird",
 			"sippin-santa",
 			"yule-tide"
 		],
-		"groups": null
+		"groups": [
+			{
+				"heading": "Year-round",
+				"cocktail_slugs": [
+					"plunderers-punch",
+					"piranha-pool",
+					"aulani-tropical-mai-tai",
+					"nautilus"
+				]
+			},
+			{
+				"heading": "Halloween",
+				"cocktail_slugs": [
+					"tidal-terror",
+					"pineapple-potion"
+				]
+			},
+			{
+				"heading": "Christmas",
+				"cocktail_slugs": [
+					"jingle-bird",
+					"sippin-santa",
+					"yule-tide"
+				]
+			}
+		]
 	}
 ]
