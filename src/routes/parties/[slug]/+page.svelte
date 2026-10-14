@@ -3,6 +3,7 @@
 	import PartyTimeline from '$lib/components/PartyTimeline.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { fade, fly } from 'svelte/transition';
 
 	export let data: PageData;
@@ -54,7 +55,10 @@
 
 		<div class="max-w-4xl mx-auto">
 			<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-				<h1 class="text-5xl font-bold text-amber-800 mb-4">{party.name}</h1>
+				<div class="flex items-center justify-center gap-3 mb-4">
+					<h1 class="text-5xl font-bold text-amber-800">{party.name}</h1>
+					<CopyLinkButton ariaLabel="Copy link to {party.name}" size="md" />
+				</div>
 				<p class="text-2xl text-amber-600 font-medium mb-2">{formatDate(party.date)}</p>
 				<p class="text-xl text-amber-700 font-medium">{party.description}</p>
 			</header>

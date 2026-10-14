@@ -3,6 +3,7 @@
 	import CocktailCard from '$lib/components/CocktailCard.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import FeaturedDrink from '$lib/components/FeaturedDrink.svelte';
 	import { fade, fly } from 'svelte/transition';
 
@@ -25,7 +26,10 @@
 		<Breadcrumbs />
 
 		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-			<h1 class="text-4xl font-bold text-gray-800 mb-4">{menu.title}</h1>
+			<div class="flex items-center justify-center gap-3 mb-4">
+				<h1 class="text-4xl font-bold text-gray-800">{menu.title}</h1>
+				<CopyLinkButton ariaLabel="Copy link to {menu.title}" size="md" />
+			</div>
 			<p class="text-gray-600">{menu.subtitle}</p>
 		</header>
 
