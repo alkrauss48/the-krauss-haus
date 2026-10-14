@@ -3,10 +3,12 @@ import {
 	getIngredientDisplayName,
 	getCocktailIngredientSlugs,
 	getIngredientUsageCounts,
-	formatVariantIngredients
+	formatVariantIngredients,
+	filterIngredientCategoriesBySearch
 } from './ingredients';
 import type { Cocktail, CocktailVariant } from '$lib/types/cocktails';
-import type { Ingredient, IngredientItem } from '$lib/types/ingredients';
+import type { Ingredient, IngredientCategory, IngredientItem } from '$lib/types/ingredients';
+import { IngredientType } from '$lib/enums/ingredientType';
 
 const RUM: Ingredient = { title: 'Appleton Estate Signature', slug: 'appleton-estate' };
 const LIME: Ingredient = { title: 'Lime', slug: 'lime' };
@@ -145,5 +147,49 @@ describe('formatVariantIngredients', () => {
 	it('returns an empty string when the variant lists no ingredients', () => {
 		expect(formatVariantIngredients(variant())).toBe('');
 		expect(formatVariantIngredients(variant([]))).toBe('');
+	});
+});
+
+describe('filterIngredientCategoriesBySearch', () => {
+	const CATEGORIES: IngredientCategory[] = [
+		{
+			label: 'Rum',
+			type: IngredientType.Alcoholic,
+			color: '#000000',
+			subcategories: [
+				{ label: 'Jamaican', ingredients: [RUM] },
+				{ label: 'Overproof', ingredients: [GROUPED] }
+			]
+		},
+		{
+			label: 'Citrus',
+			type: IngredientType.NonAlcoholic,
+			color: '#ffffff',
+			subcategories: [{ label: 'Default', ingredients: [LIME] }]
+		}
+	];
+
+	it('returns every category for a blank search', () => {
+		expect(filterIngredientCategoriesBySearch(CATEGORIES, '  ')).toBe(CATEGORIES);
+	});
+
+	it('matches ingredient titles case-insensitively and drops empty categories', () => {
+		const result = filterIngredientCategoriesBySearch(CATEGORIES, 'LIM');
+		expect(result.map((c) => c.label)).toEqual(['Citrus']);
+		expect(result[0].subcategories[0].ingredients).toEqual([LIME]);
+	});
+
+	it('matches on an ingredient group', () => {
+		const result = filterIngredientCategoriesBySearch(CATEGORIES, 'overproof rum');
+		expect(result[0].subcategories.map((s) => s.ingredients)).toEqual([[GROUPED]]);
+	});
+
+	it('keeps a whole subcategory when its name matches', () => {
+		const result = filterIngredientCategoriesBySearch(CATEGORIES, 'jamaica');
+		expect(result[0].subcategories).toEqual([{ label: 'Jamaican', ingredients: [RUM] }]);
+	});
+
+	it('does not match the "Default" subcategory label', () => {
+		expect(filterIngredientCategoriesBySearch(CATEGORIES, 'default')).toEqual([]);
 	});
 });

@@ -1,4 +1,8 @@
-import type { IngredientItem } from '$lib/types/ingredients';
+import type {
+	IngredientCategory,
+	IngredientItem,
+	IngredientSubcategory
+} from '$lib/types/ingredients';
 import type { Cocktail, CocktailVariant } from '$lib/types/cocktails';
 
 /**
@@ -122,4 +126,56 @@ export function formatVariantIngredients(variant: CocktailVariant): string {
 		})
 		.filter((item) => item !== '') // Remove any empty strings
 		.join(' ');
+}
+
+// Case-insensitive substring match; an empty term matches everything
+function matchesSearch(text: string, term: string): boolean {
+	if (!term) return true;
+	return text.toLowerCase().includes(term.toLowerCase());
+}
+
+/**
+ * Narrow ingredient categories to those matching a search term.
+ * An ingredient matches on its title or group. A subcategory whose own name matches
+ * (other than "Default") keeps all of its ingredients. Empty subcategories and
+ * categories are dropped. A blank term returns the categories unchanged.
+ */
+export function filterIngredientCategoriesBySearch(
+	categories: IngredientCategory[],
+	search: string
+): IngredientCategory[] {
+	const term = search.trim();
+	if (!term) {
+		return categories;
+	}
+
+	return categories
+		.map((category) => {
+			const filteredSubcategories: IngredientSubcategory[] = [];
+
+			for (const subcategory of category.subcategories) {
+				// Skip "Default" subcategory when matching subcategory name
+				const subcategoryMatches =
+					subcategory.label.toLowerCase() !== 'default' && matchesSearch(subcategory.label, term);
+				const filteredIngredients = subcategory.ingredients.filter((ingredient) => {
+					const titleMatches = matchesSearch(ingredient.title, term);
+					const groupMatches = ingredient.group ? matchesSearch(ingredient.group, term) : false;
+					return titleMatches || groupMatches;
+				});
+
+				if (subcategoryMatches || filteredIngredients.length > 0) {
+					filteredSubcategories.push({
+						...subcategory,
+						ingredients: subcategoryMatches ? subcategory.ingredients : filteredIngredients
+					});
+				}
+			}
+
+			if (filteredSubcategories.length > 0) {
+				return { ...category, subcategories: filteredSubcategories };
+			}
+
+			return null;
+		})
+		.filter((category): category is IngredientCategory => category !== null);
 }
