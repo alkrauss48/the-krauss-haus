@@ -22,18 +22,19 @@ const OLD_FASHIONEDS: CocktailCollection = {
 		tertiary: '#fef3c7',
 		variationText: '#9a3412'
 	},
-	cocktails: [
-		OLD_FASHIONED,
-		AMERICAN_TRILOGY,
-		CONFERENCE,
-		OAXACA_OLD_FASHIONED,
-		GODFATHER,
-		IMPROVED_HOLLAND_GIN_COCKTAIL,
-		CORN_N_OIL,
-		SAZERAC,
-		TORONTO,
-		TI_PUNCH,
-		CARAJILLO_OLD_FASHIONED
+	groups: [
+		{
+			heading: 'Whiskey',
+			cocktails: [OLD_FASHIONED, GODFATHER, TORONTO]
+		},
+		{
+			heading: 'Whiskey & Other Spirits',
+			cocktails: [AMERICAN_TRILOGY, CONFERENCE, SAZERAC, CARAJILLO_OLD_FASHIONED]
+		},
+		{
+			heading: 'Other Spirits',
+			cocktails: [OAXACA_OLD_FASHIONED, IMPROVED_HOLLAND_GIN_COCKTAIL, CORN_N_OIL, TI_PUNCH]
+		}
 	]
 };
 

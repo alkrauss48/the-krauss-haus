@@ -10,6 +10,18 @@
 	let { data }: { data: PageData } = $props();
 	let collection = $derived(data.collection);
 
+	// An ungrouped collection is one section with no heading. `offset` keeps the card entrance
+	// stagger running across sections instead of restarting under each heading.
+	let sections = $derived.by(() => {
+		const groups = collection.groups ?? [{ heading: undefined, cocktails: collection.cocktails }];
+		let offset = 0;
+		return groups.map((group) => {
+			const section = { ...group, offset };
+			offset += group.cocktails.length;
+			return section;
+		});
+	});
+
 	const defaultColors: SectionColor = {
 		primary: '#dbeafe',
 		secondary: '#e0e7ff',
@@ -47,11 +59,29 @@
 			<p class="text-gray-600 max-w-2xl mx-auto">{collection.description}</p>
 		</header>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			{#each collection.cocktails as cocktail, index (cocktail.slug)}
-				<div in:fly={{ y: 20, duration: 400, delay: 600 + index * 50 }}>
-					<CocktailCard {cocktail} bgColors={collection.bgColors ?? defaultColors} />
-				</div>
+		<div class="space-y-16">
+			{#each sections as section (section.heading ?? '')}
+				<section>
+					{#if section.heading}
+						<div
+							class="flex items-center mb-10"
+							in:fly={{ y: 20, duration: 400, delay: 600 + section.offset * 50 }}
+						>
+							<div class="flex-1 h-px bg-gray-200"></div>
+							<h2 class="text-xl md:text-2xl font-semibold text-gray-700 text-center px-4 md:px-8">
+								{section.heading}
+							</h2>
+							<div class="flex-1 h-px bg-gray-200"></div>
+						</div>
+					{/if}
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						{#each section.cocktails as cocktail, index (cocktail.slug)}
+							<div in:fly={{ y: 20, duration: 400, delay: 600 + (section.offset + index) * 50 }}>
+								<CocktailCard {cocktail} bgColors={collection.bgColors ?? defaultColors} />
+							</div>
+						{/each}
+					</div>
+				</section>
 			{/each}
 		</div>
 	</div>

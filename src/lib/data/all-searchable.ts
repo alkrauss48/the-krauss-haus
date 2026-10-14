@@ -7,6 +7,7 @@ import { allBartenders } from './all-bartenders';
 import { menuConfig } from './menu-config';
 import { getIngredientDisplayName } from '$lib/utils/ingredients';
 import { isCocktailSlot } from '$lib/types/party';
+import { collectionCocktails } from '$lib/utils/collections';
 
 export type SearchableType =
 	'cocktail' | 'recipe' | 'path' | 'collection' | 'party' | 'bartender' | 'menu' | 'page';
@@ -73,7 +74,10 @@ function collectionItems(): SearchableItem[] {
 		title: l.title,
 		description: l.description,
 		href: `/collections/${l.slug}`,
-		keywords: l.cocktails.map((c) => c.title)
+		keywords: [
+			...(l.groups ?? []).map((g) => g.heading),
+			...collectionCocktails(l).map((c) => c.title)
+		]
 	}));
 }
 

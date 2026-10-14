@@ -8,7 +8,7 @@ import BRIAN_MILLER from '$lib/data/bartenders/brian-miller';
 
 const CONFERENCE: Cocktail = {
 	title: 'Conference',
-	description: 'Bourbon, rye, calvados, cognac, demerara syrup, angostura and xocolatl bitters.',
+	description: 'Bourbon, rye whiskey, calvados, cognac, demerara syrup, angostura and xocolatl bitters.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/conference.webp',
 	thumbnailImagePath:

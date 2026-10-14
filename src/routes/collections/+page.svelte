@@ -4,6 +4,7 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { resolve } from '$app/paths';
+	import { collectionCocktails } from '$lib/utils/collections';
 
 	let { data }: { data: PageData } = $props();
 </script>
@@ -30,6 +31,7 @@
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				{#each data.collections as collection, index (collection.slug)}
+					{@const count = collectionCocktails(collection).length}
 					<a
 						href={resolve(`/collections/${collection.slug}`)}
 						class="group block rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 bg-white"
@@ -39,8 +41,8 @@
 							<div class="flex items-baseline justify-between gap-4 mb-2">
 								<h2 class="text-2xl font-bold text-gray-800">{collection.title}</h2>
 								<p class="shrink-0 text-sm text-gray-500">
-									{collection.cocktails.length}
-									{collection.cocktails.length === 1 ? 'cocktail' : 'cocktails'}
+									{count}
+									{count === 1 ? 'cocktail' : 'cocktails'}
 								</p>
 							</div>
 							<p class="text-gray-600 text-sm">{collection.description}</p>

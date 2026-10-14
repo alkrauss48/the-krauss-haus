@@ -9,6 +9,7 @@ import { allCocktails, cocktailsBySlug } from './all-cocktails';
 import { allRecipes, recipesBySlug } from './all-recipes';
 import { allPaths, pathsBySlug } from './all-paths';
 import { allCollections, collectionsBySlug } from './all-collections';
+import { collectionCocktails } from '$lib/utils/collections';
 import { allParties, partiesBySlug } from './all-parties';
 import { allBartenders, bartendersBySlug } from './all-bartenders';
 import { allIngredientCategories } from './all-ingredients';
@@ -263,7 +264,7 @@ describe('collections', () => {
 	it('links every collection cocktail to a real cocktail page', () => {
 		const missing: string[] = [];
 		for (const collection of allCollections) {
-			for (const cocktail of collection.cocktails) {
+			for (const cocktail of collectionCocktails(collection)) {
 				if (!cocktailSlugs.has(cocktail.slug))
 					missing.push(`${collection.slug} → ${cocktail.slug}`);
 			}
@@ -275,15 +276,35 @@ describe('collections', () => {
 		for (const collection of allCollections) {
 			expect(collection.title, `${collection.slug} has no title`).toBeTruthy();
 			expect(collection.description, `${collection.slug} has no description`).toBeTruthy();
-			expect(collection.cocktails.length, `${collection.slug} has no cocktails`).toBeGreaterThan(0);
+			expect(
+				collectionCocktails(collection).length,
+				`${collection.slug} has no cocktails`
+			).toBeGreaterThan(0);
 		}
 	});
 
 	it('does not repeat a cocktail within one collection', () => {
 		for (const collection of allCollections) {
 			expect(
-				duplicates(collection.cocktails.map((c) => c.slug)),
+				duplicates(collectionCocktails(collection).map((c) => c.slug)),
 				`${collection.slug} repeats`
+			).toEqual([]);
+		}
+	});
+
+	it('gives every group a unique heading and at least one cocktail', () => {
+		for (const collection of allCollections) {
+			if (!collection.groups) continue;
+			for (const group of collection.groups) {
+				expect(group.heading, `${collection.slug} has a group with no heading`).toBeTruthy();
+				expect(
+					group.cocktails.length,
+					`${collection.slug} → ${group.heading} has no cocktails`
+				).toBeGreaterThan(0);
+			}
+			expect(
+				duplicates(collection.groups.map((g) => g.heading)),
+				`${collection.slug} repeats a heading`
 			).toEqual([]);
 		}
 	});

@@ -19,6 +19,7 @@ import type { Bartender } from '$lib/types/bartenders';
 import type { CocktailPath } from '$lib/types/cocktail-path';
 import type { CocktailCollection } from '$lib/types/cocktail-collection';
 import type { Tag, TagCategory } from '$lib/types/tags';
+import { collectionCocktails } from '$lib/utils/collections';
 
 /** Written in this order, and concatenated in this order to form the checksum. */
 export const DATASET_NAMES = [
@@ -114,6 +115,8 @@ export interface ExportedCollection {
 	image_url: string | null;
 	/** In the collection's authored order, which is the order the page shows them in. */
 	cocktail_slugs: string[];
+	/** The headed groups the page splits `cocktail_slugs` into, or null for a single flat list. */
+	groups: { heading: string; cocktail_slugs: string[] }[] | null;
 }
 
 export interface ExportedTagCategory {
@@ -329,7 +332,12 @@ function buildCollections(allCollections: CocktailCollection[]): ExportedCollect
 		description: collection.description,
 		url: `/collections/${collection.slug}`,
 		image_url: collection.imagePath ?? null,
-		cocktail_slugs: collection.cocktails.map((cocktail) => cocktail.slug)
+		cocktail_slugs: collectionCocktails(collection).map((cocktail) => cocktail.slug),
+		groups:
+			collection.groups?.map((group) => ({
+				heading: group.heading,
+				cocktail_slugs: group.cocktails.map((cocktail) => cocktail.slug)
+			})) ?? null
 	}));
 
 	return assertUniqueSlugs(records.sort(bySlug), 'collection');

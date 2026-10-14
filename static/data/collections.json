@@ -7,16 +7,44 @@
 		"image_url": null,
 		"cocktail_slugs": [
 			"old-fashioned",
+			"godfather",
+			"toronto",
 			"american-trilogy",
 			"conference",
+			"sazerac",
+			"carajillo-old-fashioned",
 			"oaxaca-old-fashioned",
-			"godfather",
 			"improved-holland-gin-cocktail",
 			"corn-n-oil",
-			"sazerac",
-			"toronto",
-			"ti-punch",
-			"carajillo-old-fashioned"
+			"ti-punch"
+		],
+		"groups": [
+			{
+				"heading": "Whiskey",
+				"cocktail_slugs": [
+					"old-fashioned",
+					"godfather",
+					"toronto"
+				]
+			},
+			{
+				"heading": "Whiskey & Other Spirits",
+				"cocktail_slugs": [
+					"american-trilogy",
+					"conference",
+					"sazerac",
+					"carajillo-old-fashioned"
+				]
+			},
+			{
+				"heading": "Other Spirits",
+				"cocktail_slugs": [
+					"oaxaca-old-fashioned",
+					"improved-holland-gin-cocktail",
+					"corn-n-oil",
+					"ti-punch"
+				]
+			}
 		]
 	},
 	{
@@ -35,6 +63,7 @@
 			"jingle-bird",
 			"sippin-santa",
 			"yule-tide"
-		]
+		],
+		"groups": null
 	}
 ]
