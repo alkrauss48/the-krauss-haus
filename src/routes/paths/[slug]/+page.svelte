@@ -27,85 +27,87 @@
 </svelte:head>
 
 <main
-	class="min-h-screen p-6 bg-[#f8f9fa] overflow-y-auto"
+	class="flex-1 p-6 bg-[#f8f9fa] overflow-y-auto"
 	in:fly={{ y: 20, duration: 400, delay: 200 }}
 	out:fade={{ duration: 200 }}
 >
-	<div class="max-w-4xl mx-auto pb-8">
+	<div class="max-w-7xl mx-auto pb-8">
 		<Breadcrumbs />
 
-		<!-- Path Header -->
-		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-			<div class="mb-8">
-				<img
-					src={path.imagePath}
-					alt={path.title}
-					class="w-full max-w-xs mx-auto object-contain rounded-xl"
-				/>
-			</div>
-			<div class="flex items-center justify-center gap-3 mb-4">
-				<h1 class="text-5xl font-bold text-gray-800">{path.title}</h1>
-				<CopyLinkButton
-					url={typeof window !== 'undefined' ? window.location.href : ''}
-					ariaLabel="Copy link to {path.title} path"
-					size="md"
-				/>
-			</div>
-			<p class="text-2xl text-gray-600 font-medium mb-4">{path.subtitle}</p>
-			<p class="text-lg text-gray-700 max-w-2xl mx-auto">{path.description}</p>
-			{#if $costMode}
-				{@const cost = getPathCost(path)}
-				{#if cost !== null}
-					<p class="text-sm text-green-700 mt-4">Est. path cost: {formatCost(cost)}</p>
-				{/if}
-			{/if}
-		</header>
-
-		<!-- Cocktails List -->
-		<section class="mb-12">
-			<h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Cocktails</h2>
-			<div class="relative max-w-md mx-auto">
-				<div class="space-y-8">
-					{#each path.cocktails as cocktail, index (cocktail.slug)}
-						<div class="relative" in:fly={{ y: 20, duration: 400, delay: 600 + index * 100 }}>
-							<!-- Cocktail Card -->
-							<CocktailCard {cocktail} bgColors={pathColors} />
-
-							<!-- Arrow Connector (show between cards, not after last) -->
-							{#if index < path.cocktails.length - 1}
-								<div class="flex justify-center items-center my-6">
-									<svg
-										class="w-5 h-14 text-indigo-500/80"
-										viewBox="0 0 20 56"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<!-- Tapered line that fades in and widens toward the arrow -->
-										<path
-											d="M10 0 Q10 28, 10 44"
-											stroke="currentColor"
-											stroke-width="1.5"
-											stroke-linecap="round"
-											opacity="0.5"
-										/>
-										<!-- Elegant swept arrowhead -->
-										<path
-											d="M3,40 Q7,46 10,52 Q13,46 17,40"
-											stroke="currentColor"
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											fill="none"
-											opacity="0.7"
-										/>
-									</svg>
-								</div>
-							{/if}
-						</div>
-					{/each}
+		<div class="max-w-4xl mx-auto">
+			<!-- Path Header -->
+			<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
+				<div class="mb-8">
+					<img
+						src={path.imagePath}
+						alt={path.title}
+						class="w-full max-w-xs mx-auto object-contain rounded-xl"
+					/>
 				</div>
-			</div>
-		</section>
+				<div class="flex items-center justify-center gap-3 mb-4">
+					<h1 class="text-5xl font-bold text-gray-800">{path.title}</h1>
+					<CopyLinkButton
+						url={typeof window !== 'undefined' ? window.location.href : ''}
+						ariaLabel="Copy link to {path.title} path"
+						size="md"
+					/>
+				</div>
+				<p class="text-2xl text-gray-600 font-medium mb-4">{path.subtitle}</p>
+				<p class="text-lg text-gray-700 max-w-2xl mx-auto">{path.description}</p>
+				{#if $costMode}
+					{@const cost = getPathCost(path)}
+					{#if cost !== null}
+						<p class="text-sm text-green-700 mt-4">Est. path cost: {formatCost(cost)}</p>
+					{/if}
+				{/if}
+			</header>
+
+			<!-- Cocktails List -->
+			<section class="mb-12">
+				<h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Cocktails</h2>
+				<div class="relative max-w-md mx-auto">
+					<div class="space-y-8">
+						{#each path.cocktails as cocktail, index (cocktail.slug)}
+							<div class="relative" in:fly={{ y: 20, duration: 400, delay: 600 + index * 100 }}>
+								<!-- Cocktail Card -->
+								<CocktailCard {cocktail} bgColors={pathColors} />
+
+								<!-- Arrow Connector (show between cards, not after last) -->
+								{#if index < path.cocktails.length - 1}
+									<div class="flex justify-center items-center my-6">
+										<svg
+											class="w-5 h-14 text-indigo-500/80"
+											viewBox="0 0 20 56"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<!-- Tapered line that fades in and widens toward the arrow -->
+											<path
+												d="M10 0 Q10 28, 10 44"
+												stroke="currentColor"
+												stroke-width="1.5"
+												stroke-linecap="round"
+												opacity="0.5"
+											/>
+											<!-- Elegant swept arrowhead -->
+											<path
+												d="M3,40 Q7,46 10,52 Q13,46 17,40"
+												stroke="currentColor"
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												fill="none"
+												opacity="0.7"
+											/>
+										</svg>
+									</div>
+								{/if}
+							</div>
+						{/each}
+					</div>
+				</div>
+			</section>
+		</div>
 	</div>
 
 	<ScrollToTop />

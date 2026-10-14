@@ -28,7 +28,7 @@
 </svelte:head>
 
 <main
-	class="min-h-screen p-6 bg-[#f8f9fa] overflow-y-auto"
+	class="flex-1 p-6 bg-[#f8f9fa] overflow-y-auto"
 	in:fly={{ y: 20, duration: 400, delay: 200 }}
 	out:fade={{ duration: 200 }}
 >

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import MenuLink from '$lib/components/MenuLink.svelte';
 	import TipButton from '$lib/components/TipButton.svelte';
 	import TipModal from '$lib/components/TipModal.svelte';
 	import RandomCocktailModal from '$lib/components/RandomCocktailModal.svelte';
@@ -45,10 +44,10 @@
 </svelte:head>
 
 <main
-	class="min-h-screen flex flex-col items-center gap-10 p-6 sm:p-4 md:p-6 font-['Montserrat'] bg-[#f8f9fa] md:justify-center"
+	class="flex-1 flex flex-col items-center gap-10 p-6 sm:p-4 md:p-6 font-['Montserrat'] bg-[#f8f9fa] md:justify-center"
 >
 	<header
-		class="text-center p-6 bg-white rounded-xl shadow-sm relative overflow-hidden w-full max-w-[320px] sm:max-w-[400px] mt-8 md:mt-0"
+		class="text-center p-6 bg-white rounded-xl shadow-sm relative overflow-hidden w-full max-w-[320px] sm:max-w-[400px]"
 	>
 		<p class="text-lg sm:text-base text-gray-600 m-0 font-normal tracking-wider">Welcome to the</p>
 		<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_noninteractive_element_interactions -->
@@ -126,28 +125,6 @@
 			Or, pick a random cocktail
 		</button>
 	</div>
-
-	<section class="w-full max-w-[320px] sm:max-w-[400px]">
-		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Content</h2>
-		<nav class="flex flex-col gap-4" aria-label="Content Navigation">
-			<MenuLink href="/ingredients" label="Ingredients" variant="secondary" />
-			<MenuLink href="/recipes" label="Recipes" variant="secondary" />
-			<MenuLink href="/bartenders" label="Bartenders" variant="secondary" />
-		</nav>
-	</section>
-
-	<section class="w-full max-w-[320px] sm:max-w-[400px]">
-		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Extras</h2>
-		<nav class="flex flex-col gap-4" aria-label="Secondary Menu Navigation">
-			<MenuLink href="/parties" label="Cocktail Parties" variant="secondary" />
-			<MenuLink href="/collections" label="Cocktail Collections" variant="secondary" />
-			<MenuLink
-				href="/spirit-dilution-calculator"
-				label="Dilution Calculator"
-				variant="secondary"
-			/>
-		</nav>
-	</section>
 
 	<footer class="mt-auto pt-8 text-center text-sm text-gray-400">
 		<div class="mb-6">

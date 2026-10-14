@@ -45,21 +45,23 @@
 </svelte:head>
 
 <main
-	class="min-h-screen p-6 bg-gradient-to-br from-amber-50 to-orange-50 overflow-y-auto"
+	class="flex-1 p-6 bg-gradient-to-br from-amber-50 to-orange-50 overflow-y-auto"
 	in:fly={{ y: 20, duration: 400, delay: 200 }}
 	out:fade={{ duration: 200 }}
 >
-	<div class="max-w-4xl mx-auto pb-8">
+	<div class="max-w-7xl mx-auto pb-8">
 		<Breadcrumbs />
 
-		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-			<h1 class="text-5xl font-bold text-amber-800 mb-4">{party.name}</h1>
-			<p class="text-2xl text-amber-600 font-medium mb-2">{formatDate(party.date)}</p>
-			<p class="text-xl text-amber-700 font-medium">{party.description}</p>
-		</header>
+		<div class="max-w-4xl mx-auto">
+			<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
+				<h1 class="text-5xl font-bold text-amber-800 mb-4">{party.name}</h1>
+				<p class="text-2xl text-amber-600 font-medium mb-2">{formatDate(party.date)}</p>
+				<p class="text-xl text-amber-700 font-medium">{party.description}</p>
+			</header>
 
-		<!-- Timeline -->
-		<PartyTimeline partySchedule={party.schedule} {partyColors} />
+			<!-- Timeline -->
+			<PartyTimeline partySchedule={party.schedule} {partyColors} />
+		</div>
 	</div>
 
 	<ScrollToTop />

@@ -15,37 +15,39 @@
 </svelte:head>
 
 <main
-	class="min-h-screen p-6 bg-[#f8f9fa] overflow-y-auto"
+	class="flex-1 p-6 bg-[#f8f9fa] overflow-y-auto"
 	in:fly={{ y: 20, duration: 400, delay: 200 }}
 	out:fade={{ duration: 200 }}
 >
-	<div class="max-w-5xl mx-auto pb-8">
+	<div class="max-w-7xl mx-auto pb-8">
 		<Breadcrumbs />
 
-		<header class="text-center mb-12" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-			<h1 class="text-4xl font-bold text-gray-800 mb-4">Cocktail Collections</h1>
-			<p class="text-gray-600">Handpicked sets of cocktails that belong together</p>
-		</header>
+		<div class="max-w-5xl mx-auto">
+			<header class="text-center mb-12" in:fly={{ y: 20, duration: 400, delay: 400 }}>
+				<h1 class="text-4xl font-bold text-gray-800 mb-4">Cocktail Collections</h1>
+				<p class="text-gray-600">Handpicked sets of cocktails that belong together</p>
+			</header>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			{#each data.collections as collection, index (collection.slug)}
-				<a
-					href={resolve(`/collections/${collection.slug}`)}
-					class="group block rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 bg-white"
-					in:fly={{ y: 20, duration: 400, delay: 600 + index * 100 }}
-				>
-					<div class="p-6">
-						<div class="flex items-baseline justify-between gap-4 mb-2">
-							<h2 class="text-2xl font-bold text-gray-800">{collection.title}</h2>
-							<p class="shrink-0 text-sm text-gray-500">
-								{collection.cocktails.length}
-								{collection.cocktails.length === 1 ? 'cocktail' : 'cocktails'}
-							</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				{#each data.collections as collection, index (collection.slug)}
+					<a
+						href={resolve(`/collections/${collection.slug}`)}
+						class="group block rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 bg-white"
+						in:fly={{ y: 20, duration: 400, delay: 600 + index * 100 }}
+					>
+						<div class="p-6">
+							<div class="flex items-baseline justify-between gap-4 mb-2">
+								<h2 class="text-2xl font-bold text-gray-800">{collection.title}</h2>
+								<p class="shrink-0 text-sm text-gray-500">
+									{collection.cocktails.length}
+									{collection.cocktails.length === 1 ? 'cocktail' : 'cocktails'}
+								</p>
+							</div>
+							<p class="text-gray-600 text-sm">{collection.description}</p>
 						</div>
-						<p class="text-gray-600 text-sm">{collection.description}</p>
-					</div>
-				</a>
-			{/each}
+					</a>
+				{/each}
+			</div>
 		</div>
 	</div>
 

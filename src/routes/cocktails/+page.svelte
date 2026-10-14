@@ -15,25 +15,27 @@
 </svelte:head>
 
 <main
-	class="min-h-screen p-6 bg-[#f8f9fa] overflow-y-auto"
+	class="flex-1 p-6 bg-[#f8f9fa] overflow-y-auto"
 	in:fly={{ y: 20, duration: 400, delay: 200 }}
 	out:fade={{ duration: 200 }}
 >
-	<div class="max-w-6xl mx-auto pb-8">
+	<div class="max-w-7xl mx-auto pb-8">
 		<Breadcrumbs />
 
-		<header class="text-center mb-8" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-			<h1 class="text-4xl font-bold text-gray-800 mb-4">All Cocktails</h1>
-			<p class="text-gray-600">Browse our complete collection of cocktail recipes</p>
-		</header>
+		<div class="max-w-6xl mx-auto">
+			<header class="text-center mb-8" in:fly={{ y: 20, duration: 400, delay: 400 }}>
+				<h1 class="text-4xl font-bold text-gray-800 mb-4">All Cocktails</h1>
+				<p class="text-gray-600">Browse our complete collection of cocktail recipes</p>
+			</header>
 
-		<CocktailsTable
-			cocktails={data.cocktails}
-			initialSearchTerm={data.searchTerm}
-			initialSelectedTags={data.selectedTags}
-			initialSelectedIngredients={data.selectedIngredients}
-			initialLogicMode={data.logicMode}
-		/>
+			<CocktailsTable
+				cocktails={data.cocktails}
+				initialSearchTerm={data.searchTerm}
+				initialSelectedTags={data.selectedTags}
+				initialSelectedIngredients={data.selectedIngredients}
+				initialLogicMode={data.logicMode}
+			/>
+		</div>
 	</div>
 
 	<ScrollToTop />
