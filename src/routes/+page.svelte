@@ -140,6 +140,7 @@
 		<h2 class="text-sm text-center font-medium text-gray-500 mb-3">Extras</h2>
 		<nav class="flex flex-col gap-4" aria-label="Secondary Menu Navigation">
 			<MenuLink href="/parties" label="Cocktail Parties" variant="secondary" />
+			<MenuLink href="/collections" label="Cocktail Collections" variant="secondary" />
 			<MenuLink
 				href="/spirit-dilution-calculator"
 				label="Dilution Calculator"

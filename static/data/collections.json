@@ -1,0 +1,36 @@
+[
+	{
+		"slug": "old-fashioneds",
+		"title": "Old Fashioneds",
+		"description": "Spirit, sugar, and bitters: the original cocktail, and the riffs that build on it.",
+		"url": "/collections/old-fashioneds",
+		"image_url": null,
+		"cocktail_slugs": [
+			"old-fashioned",
+			"american-trilogy",
+			"conference",
+			"oaxaca-old-fashioned",
+			"godfather",
+			"improved-holland-gin-cocktail",
+			"corn-n-oil"
+		]
+	},
+	{
+		"slug": "tiki-mugs",
+		"title": "Tiki Mugs",
+		"description": "Drinks made for specific mugs in our collection, each one served in its own tiki mug.",
+		"url": "/collections/tiki-mugs",
+		"image_url": null,
+		"cocktail_slugs": [
+			"nautilus",
+			"tidal-terror",
+			"piranha-pool",
+			"pineapple-potion",
+			"plunderers-punch",
+			"aulani-tropical-mai-tai",
+			"jingle-bird",
+			"sippin-santa",
+			"yule-tide"
+		]
+	}
+]

@@ -31,7 +31,8 @@ const SOURCES = {
 	'all-paths': ['allPaths'],
 	// `allTagCategories` holds only the nine categories; the tags live in the `Tags` namespace.
 	'all-tags': ['allTagCategories', 'Tags'],
-	'menu-config': ['menuConfig']
+	'menu-config': ['menuConfig'],
+	'all-collections': ['allCollections']
 };
 
 /**

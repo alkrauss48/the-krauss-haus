@@ -16,6 +16,7 @@ import { allIngredientCategories } from './all-ingredients';
 import { allRecipes, RECIPE_CATEGORIES } from './all-recipes';
 import { allBartenders } from './all-bartenders';
 import { allPaths } from './all-paths';
+import { allCollections } from './all-collections';
 import { allTagCategories, Tags } from './all-tags';
 import { menuConfig } from './menu-config';
 import {
@@ -45,7 +46,8 @@ const built = buildDatasets({
 	allPaths,
 	allTagCategories,
 	Tags,
-	menuConfig
+	menuConfig,
+	allCollections
 });
 
 /** What is actually committed under static/data. */
@@ -183,6 +185,18 @@ describe('exported references', () => {
 		for (const cocktailPath of exported.paths) {
 			for (const slug of cocktailPath.cocktail_slugs) {
 				if (!cocktailSlugs.has(slug)) missing.push(`${cocktailPath.slug} → ${slug}`);
+			}
+		}
+
+		expect(missing).toEqual([]);
+	});
+
+	it('lists only real cocktails in a collection', () => {
+		const missing: string[] = [];
+
+		for (const collection of exported.collections) {
+			for (const slug of collection.cocktail_slugs) {
+				if (!cocktailSlugs.has(slug)) missing.push(`${collection.slug} → ${slug}`);
 			}
 		}
 

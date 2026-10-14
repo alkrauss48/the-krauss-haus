@@ -8,6 +8,7 @@ import { describe, it, expect } from 'vitest';
 import { allCocktails, cocktailsBySlug } from './all-cocktails';
 import { allRecipes, recipesBySlug } from './all-recipes';
 import { allPaths, pathsBySlug } from './all-paths';
+import { allCollections, collectionsBySlug } from './all-collections';
 import { allParties, partiesBySlug } from './all-parties';
 import { allBartenders, bartendersBySlug } from './all-bartenders';
 import { allIngredientCategories } from './all-ingredients';
@@ -45,6 +46,7 @@ describe('slugs', () => {
 		['cocktail', () => allCocktails.map((c) => c.slug)],
 		['recipe', () => allRecipes.map((r) => r.slug)],
 		['path', () => allPaths.map((p) => p.slug)],
+		['collection', () => allCollections.map((l) => l.slug)],
 		['party', () => allParties.map((p) => p.slug)],
 		['bartender', () => allBartenders.map((b) => b.slug)],
 		['ingredient', () => registeredIngredients.map((i) => i.slug)]
@@ -57,6 +59,7 @@ describe('slugs', () => {
 		['cocktail', () => allCocktails.map((c) => c.slug)],
 		['recipe', () => allRecipes.map((r) => r.slug)],
 		['path', () => allPaths.map((p) => p.slug)],
+		['collection', () => allCollections.map((l) => l.slug)],
 		['party', () => allParties.map((p) => p.slug)],
 		['bartender', () => allBartenders.map((b) => b.slug)],
 		['ingredient', () => registeredIngredients.map((i) => i.slug)]
@@ -69,6 +72,7 @@ describe('slugs', () => {
 		['cocktail', () => allCocktails.length, () => cocktailsBySlug.size],
 		['recipe', () => allRecipes.length, () => recipesBySlug.size],
 		['path', () => allPaths.length, () => pathsBySlug.size],
+		['collection', () => allCollections.length, () => collectionsBySlug.size],
 		['party', () => allParties.length, () => partiesBySlug.size],
 		['bartender', () => allBartenders.length, () => bartendersBySlug.size]
 	])('exposes every %s through its lookup map', (_label, listSize, mapSize) => {
@@ -251,6 +255,36 @@ describe('paths', () => {
 	it('does not repeat a cocktail within one path', () => {
 		for (const path of allPaths) {
 			expect(duplicates(path.cocktails.map((c) => c.slug)), `${path.slug} repeats`).toEqual([]);
+		}
+	});
+});
+
+describe('collections', () => {
+	it('links every collection cocktail to a real cocktail page', () => {
+		const missing: string[] = [];
+		for (const collection of allCollections) {
+			for (const cocktail of collection.cocktails) {
+				if (!cocktailSlugs.has(cocktail.slug))
+					missing.push(`${collection.slug} → ${cocktail.slug}`);
+			}
+		}
+		expect(missing).toEqual([]);
+	});
+
+	it('gives every collection the fields its card and page render', () => {
+		for (const collection of allCollections) {
+			expect(collection.title, `${collection.slug} has no title`).toBeTruthy();
+			expect(collection.description, `${collection.slug} has no description`).toBeTruthy();
+			expect(collection.cocktails.length, `${collection.slug} has no cocktails`).toBeGreaterThan(0);
+		}
+	});
+
+	it('does not repeat a cocktail within one collection', () => {
+		for (const collection of allCollections) {
+			expect(
+				duplicates(collection.cocktails.map((c) => c.slug)),
+				`${collection.slug} repeats`
+			).toEqual([]);
 		}
 	});
 });

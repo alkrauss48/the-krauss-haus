@@ -1,6 +1,7 @@
 import { allCocktails } from './all-cocktails';
 import { allRecipes } from './all-recipes';
 import { allPaths } from './all-paths';
+import { allCollections } from './all-collections';
 import { allParties } from './all-parties';
 import { allBartenders } from './all-bartenders';
 import { menuConfig } from './menu-config';
@@ -8,7 +9,7 @@ import { getIngredientDisplayName } from '$lib/utils/ingredients';
 import { isCocktailSlot } from '$lib/types/party';
 
 export type SearchableType =
-	'cocktail' | 'recipe' | 'path' | 'party' | 'bartender' | 'menu' | 'page';
+	'cocktail' | 'recipe' | 'path' | 'collection' | 'party' | 'bartender' | 'menu' | 'page';
 
 export interface SearchableItem {
 	type: SearchableType;
@@ -62,6 +63,17 @@ function pathItems(): SearchableItem[] {
 		keywords: [p.subtitle, ...p.cocktails.map((c) => c.title)].filter((k): k is string =>
 			Boolean(k)
 		)
+	}));
+}
+
+function collectionItems(): SearchableItem[] {
+	return allCollections.map((l) => ({
+		type: 'collection',
+		typeLabel: 'Collection',
+		title: l.title,
+		description: l.description,
+		href: `/collections/${l.slug}`,
+		keywords: l.cocktails.map((c) => c.title)
 	}));
 }
 
@@ -131,6 +143,13 @@ function pageItems(): SearchableItem[] {
 		{
 			type: 'page',
 			typeLabel: 'Page',
+			title: 'Cocktail Collections',
+			description: 'Handpicked sets of cocktails that belong together',
+			href: '/collections'
+		},
+		{
+			type: 'page',
+			typeLabel: 'Page',
 			title: 'Parties',
 			description: 'Past and upcoming cocktail parties',
 			href: '/parties'
@@ -164,6 +183,7 @@ export const allSearchable: SearchableItem[] = [
 	...pageItems(),
 	...menuItems(),
 	...pathItems(),
+	...collectionItems(),
 	...cocktailItems(),
 	...recipeItems(),
 	...partyItems(),
@@ -189,10 +209,11 @@ const typeRank: Record<SearchableType, number> = {
 	cocktail: 0,
 	menu: 1,
 	path: 2,
-	recipe: 3,
-	bartender: 4,
-	party: 5,
-	page: 6
+	collection: 3,
+	recipe: 4,
+	bartender: 5,
+	party: 6,
+	page: 7
 };
 
 export interface SearchResult {

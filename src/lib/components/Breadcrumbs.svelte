@@ -38,6 +38,9 @@
 				case 'ingredients':
 					label = 'Ingredients';
 					break;
+				case 'collections':
+					label = 'Cocktail Collections';
+					break;
 				case 'parties':
 					label = 'Parties';
 					break;
