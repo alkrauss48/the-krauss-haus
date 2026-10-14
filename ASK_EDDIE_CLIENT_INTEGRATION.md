@@ -51,6 +51,14 @@ proposal — opinionated, but yours to move around.
   - [Accessibility, motion and mobile](#accessibility-motion-and-mobile)
 - [Part 4 — File plan, tests, runbook](#part-4--file-plan-tests-runbook)
 - [Part 5 — Decisions left to you](#part-5--decisions-left-to-you)
+- [Part 6 — For `ask-eddie`: cocktail collections](#part-6--for-ask-eddie-cocktail-collections)
+  - [What a collection is](#what-a-collection-is)
+  - [The export changed, and the checksum with it](#the-export-changed-and-the-checksum-with-it)
+  - [`collections.json`](#collectionsjson)
+  - [Ship the API first](#ship-the-api-first)
+  - [The changes, file by file](#the-changes-file-by-file)
+  - [What Sasha should do with them](#what-sasha-should-do-with-them)
+  - [Done when](#done-when)
 
 ---
 
@@ -1483,6 +1491,335 @@ To force an error while building the failure states, point `BAR_API_URL` at a de
 
 ---
 
+## Part 6 — For `ask-eddie`: cocktail collections
+
+**This part runs the other way.** Everything above was written by the API for the site.
+This part is written by the site for the API. Hand it to `ask-eddie` as-is. The site has
+a new kind of record, and Sasha should know about it. The export that `house:refresh`
+pulls now carries an eighth dataset, and **that alone breaks `house:fetch` until the API
+is updated**. Read [the export changed](#the-export-changed-and-the-checksum-with-it)
+before anything else.
+
+### What a collection is
+
+A **collection** is a handpicked set of cocktails that belong together, published at
+`/collections/<slug>` and listed at `/collections`. There are two today:
+
+| slug | title | shape |
+| --- | --- | --- |
+| `old-fashioneds` | Old Fashioneds | 11 drinks in three groups, by base spirit: *Whiskey*, *Whiskey & Other Spirits*, *Other Spirits* |
+| `tiki-mugs` | Tiki Mugs | 9 drinks in three groups, by season: *Year-round*, *Halloween*, *Christmas* |
+
+A collection is either **one flat list** or **split into headed groups**. The page shows
+each group as its own section under its heading. Order is authored and meaningful in both
+shapes: it is the order the page shows the drinks in.
+
+Structurally a collection is very close to what the API already calls a menu. It has a
+title, a description, an ordered list of cocktail slugs and optional section headings, but
+no featured list and no subtitle. It differs from a menu and a flight in what it is *for*.
+A menu is what's pouring this season. A flight is a guided walk. A collection is a set:
+*every drink we serve in a tiki mug*, *every Old Fashioned riff we make*.
+
+> **Naming clash.** The API already uses "collection" for *any* curated list: the
+> `house_collections` table, `HouseCollection`, `HouseCollectionKind`, `importCollections()`.
+> The site's collection is one specific kind of curated list. The suggestion below adds it
+> as a third `kind` beside `menu` and `path`, named `collection` because that is the site's
+> URL and the word a guest uses ("the tiki mug collection"). Expect
+> `HouseCollection::where('kind', 'collection')` to read a little oddly, and leave a comment
+> where it does.
+
+### The export changed, and the checksum with it
+
+The site's exporter (`src/lib/data/export.ts`, `DATASET_NAMES`) now writes **eight**
+datasets, with `collections` appended **last**:
+
+```
+cocktails, ingredients, recipes, bartenders, paths, tags, menus, collections
+```
+
+The manifest checksum is still sha256 over the raw bytes of every dataset file,
+concatenated in that order. **It now covers `collections.json` too.** The manifest's
+`counts` also gains a `collections` key:
+
+```json
+{
+	"generated_at": "2026-10-14T16:11:28.056Z",
+	"counts": {
+		"cocktails": 146,
+		"ingredients": 132,
+		"recipes": 31,
+		"bartenders": 31,
+		"paths": 10,
+		"tag_categories": 9,
+		"tags": 49,
+		"menus": 3,
+		"collections": 2
+	},
+	"checksum": "…"
+}
+```
+
+`HouseExport::DATASETS` still lists seven names, so today's API would do the following
+against the new export:
+
+| step | what happens |
+| --- | --- |
+| `house:fetch` | downloads seven files, hashes seven, and fails with *"The downloaded files do not reproduce the manifest checksum … Nothing was written."* |
+| `RefreshHouse` | logs `house:refresh failed.` and returns. The previous catalog stays in place |
+| `house:import --verify` (local bind mount) | reports *"the export's manifest records checksum … but the files on disk hash to …"* |
+| `counts` check | silent. `actualCounts()` has no `collections` key, so the `null` guard skips it |
+
+Nothing crashes and no guest sees an error. Sasha keeps answering from the last good
+export. She also stops learning anything new, including new cocktails, until the API
+hashes eight files.
+
+### `collections.json`
+
+An array, sorted by `slug` (code-unit order, as every other dataset is). One record:
+
+```json
+{
+	"slug": "old-fashioneds",
+	"title": "Old Fashioneds",
+	"description": "Spirit, sugar, and bitters: the original cocktail, and the riffs that build on it.",
+	"url": "/collections/old-fashioneds",
+	"image_url": null,
+	"cocktail_slugs": [
+		"old-fashioned",
+		"godfather",
+		"toronto",
+		"american-trilogy",
+		"conference",
+		"sazerac",
+		"carajillo-old-fashioned",
+		"oaxaca-old-fashioned",
+		"improved-holland-gin-cocktail",
+		"corn-n-oil",
+		"ti-punch"
+	],
+	"groups": [
+		{ "heading": "Whiskey", "cocktail_slugs": ["old-fashioned", "godfather", "toronto"] },
+		{
+			"heading": "Whiskey & Other Spirits",
+			"cocktail_slugs": ["american-trilogy", "conference", "sazerac", "carajillo-old-fashioned"]
+		},
+		{
+			"heading": "Other Spirits",
+			"cocktail_slugs": ["oaxaca-old-fashioned", "improved-holland-gin-cocktail", "corn-n-oil", "ti-punch"]
+		}
+	]
+}
+```
+
+*(The real file is tab-indented, one slug per line. It is reformatted here for reading.
+The checksum is over the real bytes, never over a re-encoding.)*
+
+| field | type | notes |
+| --- | --- | --- |
+| `slug` | string | lowercase kebab-case, unique among collections |
+| `title` | string | never empty |
+| `description` | string | never empty. One sentence of what holds the set together |
+| `url` | string | site-relative, always `/collections/<slug>`. Make it absolute with `HouseUrl`, as for every other record |
+| `image_url` | string \| null | absolute URL to an open-graph image, or null. Nothing the API needs |
+| `cocktail_slugs` | string[] | **every** drink in the collection, in page order, **always present**, whatever the shape |
+| `groups` | `{heading, cocktail_slugs}[]` \| null | null for a flat collection. Otherwise the groups in page order |
+
+**What the site guarantees** (enforced by `src/lib/data/data-integrity.test.ts`, which
+gates every commit):
+
+- Every slug in `cocktail_slugs` and in `groups[].cocktail_slugs` exists in
+  `cocktails.json`.
+- A collection has at least one cocktail and never repeats one.
+- When `groups` is non-null, concatenating the groups' `cocktail_slugs` in order gives
+  exactly `cocktail_slugs`. Every group has a non-empty heading and at least one cocktail,
+  and headings are unique within a collection.
+- A cocktail **can** sit in several collections, and in a collection and on a menu.
+
+There is **no `subtitle`** and **no featured list**. Don't invent either.
+
+### Ship the API first
+
+The two halves can't land atomically, so the order matters:
+
+1. **Deploy the `ask-eddie` change first.** Until the site ships, the live export has no
+   `collections.json`. Any refresh in that window fails on a 404 for it and changes
+   nothing. That's the same harmless failure as above, just the other way round. Nothing
+   triggers a refresh in that window unless you run one.
+2. **Then merge and deploy the site** (`feat/cocktail-lists`). Its boot calls
+   `POST /api/house/refresh` with the new checksum. The API waits for the site to serve
+   it, then fetches eight files, imports and embeds. Nobody runs anything by hand.
+
+If it goes the other way round, it still recovers. Once the API is deployed, run
+`php artisan house:refresh` once, or restart a site pod to fire the boot refresh again.
+
+Want the API to tolerate both shapes, so the order stops mattering? Read the dataset list
+from somewhere instead of hard-coding it. The manifest doesn't carry one today; ask the
+site to add a `datasets` array. That's probably not worth it for a one-time change.
+
+### The changes, file by file
+
+A suggestion, not a spec. It follows the shapes the API already has, and keeps a
+collection in the existing `house_collections` table as a third kind. **No migration is
+needed.** `house_collections.kind` and `house_chunks.source_type` are plain strings, and
+`unique(kind, slug)` already keeps a collection apart from a menu or flight with the same
+slug.
+
+**`app/Services/House/HouseExport.php`**
+
+- Append `'collections'` to `DATASETS`, **last**. The order is the checksum.
+- Add a `collections()` accessor beside `menus()`.
+- Add `'collections' => count($this->collections())` to `actualCounts()`, so the manifest's
+  new count is actually checked.
+
+**`app/Enums/HouseCollectionKind.php`** and **`app/Enums/HouseSourceType.php`**
+
+- Add `case Collection = 'collection';` to both, with label `'Collection'`, and map
+  `HouseCollectionKind::Collection->sourceType()` to `HouseSourceType::Collection`.
+- Update the docblocks: "the two shapes of curated list" is now three.
+
+**`app/Services/House/HouseImporter.php` — `importCollections()`**
+
+Add a third loop after paths. A grouped collection maps onto the pivot exactly the way a
+menu's sections do. `heading` becomes `section_title`:
+
+```php
+foreach ($this->export->collections() as $position => $record) {
+    $collection = $this->saveCollection($report, HouseCollectionKind::Collection, $record, $position);
+    $seen[] = [HouseCollectionKind::Collection->value, $collection->slug];
+
+    // Groups carry the headings; cocktail_slugs is the same drinks, flattened. Read
+    // one or the other, never both, or every grouped drink is attached twice.
+    $members = $record['groups'] === null
+        ? array_map(
+            fn (string $slug): array => ['slug' => $slug, 'section_title' => null, 'is_featured' => false],
+            $record['cocktail_slugs'] ?? [],
+        )
+        : array_merge(...array_map(
+            fn (array $group): array => array_map(
+                fn (string $slug): array => ['slug' => $slug, 'section_title' => $group['heading'], 'is_featured' => false],
+                $group['cocktail_slugs'] ?? [],
+            ),
+            $record['groups'],
+        ));
+
+    $this->syncMembers($report, $collection, $members, $cocktails);
+}
+```
+
+`saveCollection()` already reads `subtitle` with a `?? null` and `description` as given,
+so it needs no change. `syncMembers()` already throws on a slug the export does not
+contain. The prune at the end already keys on `kind|slug`, so a collection deleted on the
+site is deleted here.
+
+**`app/Services/House/HouseRenderer.php`**
+
+- `renderCollection()` needs **no change**. It already groups by `pivot->section_title`
+  and writes `Heading: Drink, Drink.` lines, which is the right passage for a grouped
+  collection. A flat one gets a single unheaded line. The kind's `label()` lands in the
+  keywords on its own.
+- `membershipSentence()` **does** need a change. It decides between "menu" and "flight"
+  by `label() === 'Menu'`, so a cocktail in a collection would currently read *"On the
+  Tiki Mugs flight."* Make it a `match` on the kind:
+
+  ```php
+  ->map(fn (HouseCollection $collection): string => match ($collection->kind) {
+      HouseCollectionKind::Menu => $collection->title,
+      HouseCollectionKind::Path => $collection->title.' flight',
+      HouseCollectionKind::Collection => $collection->title.' collection',
+  })
+  ```
+
+  *"On the Summer Menu, Tiki Mugs collection."* is a little stiff but accurate. Phrase it
+  however you like, as long as the collection's title is in the sentence. "what goes in
+  a tiki mug" should reach the drinks through the dense channel and not only through the
+  collection's own chunk.
+- `VERSION` doesn't strictly need a bump. Every cocktail whose sentence changes is one
+  that just joined a collection, so its content hash moves anyway. Bump it if you
+  rephrase how menus or flights read while you're in there.
+
+**`app/Services/Retrieval/MenuBrowser.php`**
+
+`whereCollectionIs()` matches any kind by slug or title, so *"what's in the Old Fashioneds
+collection"* already filters correctly with no code change. Two things are worth a look:
+
+- A guest will say *"the tiki mug collection"* or *"tiki mugs"*, and the title is
+  `Tiki Mugs`. Exact title and slug matching handles the second but not the first. If the
+  menu tool already strips a trailing "menu" or "flight" before matching, strip
+  "collection" too.
+- Update the comment that says "Menus and flights share a table". There are three now.
+
+**Tool and prompt copy**
+
+- `app/Tools/BrowseTheMenus.php`: the `menu` parameter's description ("Only drinks on a
+  particular menu or flight") should say *menu, flight or collection*, or the model won't
+  think to pass a collection name.
+- `app/Tools/SearchTheHouse.php`: add collections to the description and the query
+  parameter's list ("a menu, a flight, a collection, …").
+- `app/Agents/SashaAgent.php`: in *# The house*, "its menus and its flights" becomes "its
+  menus, its flights and its collections". One sentence on what a collection *is* helps,
+  because Sasha has to tell a guest the difference: *a menu is what's pouring this season,
+  a flight is a walk, a collection is a set — every drink that goes in a tiki mug.*
+- `app/Services/Retrieval/CocktailSummary.php`: the `$collections` docblock ("the menus
+  and flights this drink is on").
+
+**`app/Console/Commands/House/StatusCommand.php`**
+
+Add a row beside menus and flights:
+
+```php
+['collections', (string) HouseCollection::query()->where('kind', 'collection')->count(), $this->expected($counts, 'collections')],
+```
+
+**`tests/Fixtures/House/`**
+
+The fixture export needs a `collections.json`, and its `manifest.json` checksum
+recomputed over all eight files, or `HouseFetchCommandTest` and `HouseImporterTest` fail
+on the mismatch first. Include **one flat and one grouped** collection in the fixture, so
+both import branches are exercised. Worth adding:
+
+- **Importer:** a grouped collection writes pivot rows with `section_title` set to each
+  heading, in order, and no duplicates. A flat one writes `section_title = null`. A
+  collection naming an unknown cocktail throws. A collection removed from the export is
+  pruned.
+- **Renderer:** a grouped collection renders `Heading: …` lines. A cocktail in a
+  collection says *collection*, not *flight*.
+- **Fetch:** the checksum is taken over eight files in `DATASETS` order.
+- **Browse tool:** filtering by a collection's title returns its drinks.
+
+### What Sasha should do with them
+
+Questions collections answer that nothing else did:
+
+- *"What do you serve in a tiki mug?"* → the Tiki Mugs collection.
+- *"Got anything spooky?"* / *"What's the Christmas tiki drink?"* → the *Halloween* and
+  *Christmas* groups. The headings carry meaning: season for Tiki Mugs, base spirit for
+  Old Fashioneds. They are worth saying out loud.
+- *"I love an Old Fashioned. What else is like it but not whiskey?"* → the *Other Spirits*
+  group: Oaxaca Old Fashioned, Improved Holland Gin Cocktail, Corn 'n Oil, Ti Punch.
+  It's a negation, so it's the menu tool's job, filtered to the collection with whiskey
+  ruled out.
+
+Link the collection page the way she links everything else:
+`https://thekrausshaus.com/collections/<slug>`. The site's link whitelist
+(`src/lib/bar/links.ts`) already treats any `thekrausshaus.com` path as an internal
+navigation, so no site change is needed for those links to work.
+
+### Done when
+
+- [ ] `php artisan house:fetch --from=<a build of feat/cocktail-lists>` writes nine
+      files and the checksum matches.
+- [ ] `php artisan house:import --verify` passes with no failures, and `house:status`
+      shows 2 collections expected and 2 imported.
+- [ ] `house_chunks` has a `collection` row for `old-fashioneds` and one for `tiki-mugs`,
+      and `house:embed --verify` passes.
+- [ ] The Nautilus's cocktail chunk mentions the Tiki Mugs collection.
+- [ ] Asked *"what do you pour in a tiki mug?"*, Sasha names drinks from the collection
+      and links `/collections/tiki-mugs`.
+- [ ] Asked *"an Old Fashioned, but no whiskey"*, Sasha answers from the *Other Spirits*
+      group.
+
+---
+
 ## Appendix — everything in one place
 
 **Endpoints** (base `http://localhost:9000`, header `X-Bar-Key`):
@@ -1503,6 +1840,9 @@ To force an error while building the failure states, point `BAR_API_URL` at a de
 
 **Request body for `/api/house/refresh`:** `{ checksum?: string (64 lowercase hex, from
 this build's static/data/manifest.json) }`
+
+**House export datasets** (checksum order): `cocktails`, `ingredients`, `recipes`,
+`bartenders`, `paths`, `tags`, `menus`, `collections`, plus `manifest.json` beside them.
 
 **Bartender keys:** `sasha` (default), `eddie`.
 
