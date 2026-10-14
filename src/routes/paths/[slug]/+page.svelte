@@ -46,11 +46,7 @@
 				</div>
 				<div class="flex items-center justify-center gap-3 mb-4">
 					<h1 class="text-5xl font-bold text-gray-800">{path.title}</h1>
-					<CopyLinkButton
-						url={typeof window !== 'undefined' ? window.location.href : ''}
-						ariaLabel="Copy link to {path.title} path"
-						size="md"
-					/>
+					<CopyLinkButton ariaLabel="Copy link to {path.title} path" size="md" />
 				</div>
 				<p class="text-2xl text-gray-600 font-medium mb-4">{path.subtitle}</p>
 				<p class="text-lg text-gray-700 max-w-2xl mx-auto">{path.description}</p>

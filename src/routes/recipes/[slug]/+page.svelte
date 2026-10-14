@@ -36,11 +36,7 @@
 					<header class="mb-8">
 						<div class="flex items-center gap-3 mb-2">
 							<h1 class="text-4xl font-bold text-gray-800">{recipe.name}</h1>
-							<CopyLinkButton
-								url={typeof window !== 'undefined' ? window.location.href : ''}
-								ariaLabel="Copy link to {recipe.name} recipe"
-								size="md"
-							/>
+							<CopyLinkButton ariaLabel="Copy link to {recipe.name} recipe" size="md" />
 						</div>
 						{#if recipe.description}
 							<p class="text-lg text-gray-700 leading-relaxed">{recipe.description}</p>

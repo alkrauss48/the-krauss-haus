@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let url: string;
+	// Defaults to the current location, read at click time. Page components are reused across
+	// client-side navigation, so a href captured at render would go stale.
+	export let url: string | undefined = undefined;
 	export let ariaLabel: string = 'Copy link';
 	export let size: 'sm' | 'md' = 'md';
 
@@ -10,7 +12,7 @@
 		event.stopPropagation();
 
 		try {
-			await navigator.clipboard.writeText(url);
+			await navigator.clipboard.writeText(url ?? window.location.href);
 			showCopyFeedback = true;
 			setTimeout(() => {
 				showCopyFeedback = false;

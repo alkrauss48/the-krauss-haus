@@ -52,11 +52,7 @@
 							<div class="flex-1">
 								<div class="flex items-center gap-3 mb-1">
 									<h1 class="text-4xl font-bold text-gray-800">{bartender.name}</h1>
-									<CopyLinkButton
-										url={typeof window !== 'undefined' ? window.location.href : ''}
-										ariaLabel="Copy link to {bartender.name}"
-										size="md"
-									/>
+									<CopyLinkButton ariaLabel="Copy link to {bartender.name}" size="md" />
 								</div>
 								{#if bartender.birthYear || bartender.deathYear}
 									<p class="text-sm text-gray-500 mb-2">
