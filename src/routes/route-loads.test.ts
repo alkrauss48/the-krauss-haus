@@ -9,6 +9,8 @@ import { load as loadBartenders } from './bartenders/+page';
 import { load as loadRecipe } from './recipes/[slug]/+page';
 import { load as loadPath } from './paths/[slug]/+page';
 import { load as loadPaths } from './paths/+page';
+import { load as loadCollection } from './collections/[slug]/+page';
+import { load as loadCollections } from './collections/+page';
 import { load as loadParty } from './parties/[slug]/+page';
 import { load as loadParties } from './parties/+page';
 import { load as loadMenu } from './menu/[slug]/+page';
@@ -16,6 +18,7 @@ import { load as loadMenuIndex } from './menu/+page';
 import { allCocktails } from '$lib/data/all-cocktails';
 import { allRecipes } from '$lib/data/all-recipes';
 import { allPaths } from '$lib/data/all-paths';
+import { allCollections } from '$lib/data/all-collections';
 import { allParties } from '$lib/data/all-parties';
 import { allBartenders } from '$lib/data/all-bartenders';
 import { menuConfig } from '$lib/data/menu-config';
@@ -29,6 +32,7 @@ const notFound = expect.objectContaining({ status: 404 });
 describe.each([
 	['recipe', withSlug(loadRecipe), () => allRecipes[0].slug, 'recipe'],
 	['path', withSlug(loadPath), () => allPaths[0].slug, 'path'],
+	['collection', withSlug(loadCollection), () => allCollections[0].slug, 'collection'],
 	['party', withSlug(loadParty), () => allParties[0].slug, 'party'],
 	['bartender', withSlug(loadBartender), () => allBartenders[0].slug, 'bartender']
 ])('/%ss/[slug] load', (label, run, knownSlug, key) => {
@@ -128,6 +132,11 @@ describe('index loads', () => {
 	it('/paths returns every path', () => {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((loadPaths as any)().paths).toBe(allPaths);
+	});
+
+	it('/collections returns every collection', () => {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		expect((loadCollections as any)().collections).toBe(allCollections);
 	});
 
 	it('/parties returns every party, newest first', () => {

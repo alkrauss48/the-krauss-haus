@@ -199,239 +199,242 @@
 </svelte:head>
 
 <main
-	class="min-h-screen p-6 bg-[#f8f9fa] overflow-y-auto"
+	class="flex-1 p-6 bg-[#f8f9fa] overflow-y-auto"
 	in:fly={{ y: 20, duration: 400, delay: 200 }}
 	out:fade={{ duration: 200 }}
 >
-	<div class="max-w-6xl mx-auto pb-8">
+	<div class="max-w-7xl mx-auto pb-8">
 		<Breadcrumbs />
 
-		<header class="text-center mb-12" in:fly={{ y: 20, duration: 400, delay: 400 }}>
-			<h1 class="text-4xl font-bold text-gray-800 mb-4">Ingredients</h1>
-			<p class="text-gray-600">Explore all ingredients used in our cocktails</p>
-		</header>
+		<div class="max-w-6xl mx-auto">
+			<header class="text-center mb-12" in:fly={{ y: 20, duration: 400, delay: 400 }}>
+				<h1 class="text-4xl font-bold text-gray-800 mb-4">Ingredients</h1>
+				<p class="text-gray-600">Explore all ingredients used in our cocktails</p>
+			</header>
 
-		<!-- Search Bar -->
-		<div class="mb-8 max-w-2xl mx-auto" in:fly={{ y: 20, duration: 400, delay: 500 }}>
-			<div class="relative">
-				<input
-					type="text"
-					bind:value={searchTerm}
-					placeholder="Search ingredients..."
-					class="w-full px-4 py-3 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent text-gray-700"
-				/>
-				<svg
-					class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
-					fill="none"
-					stroke="currentColor"
-					viewBox="0 0 24 24"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+			<!-- Search Bar -->
+			<div class="mb-8 max-w-2xl mx-auto" in:fly={{ y: 20, duration: 400, delay: 500 }}>
+				<div class="relative">
+					<input
+						type="text"
+						bind:value={searchTerm}
+						placeholder="Search ingredients..."
+						class="w-full px-4 py-3 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent text-gray-700"
 					/>
-				</svg>
-				{#if searchTerm}
-					<button
-						class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer"
-						on:click={() => (searchTerm = '')}
-						aria-label="Clear search"
+					<svg
+						class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
 					>
-						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M6 18L18 6M6 6l12 12"
-							/>
-						</svg>
-					</button>
-				{/if}
-			</div>
-		</div>
-
-		<!-- Type Filter Tabs -->
-		<div
-			class="mb-12 flex justify-center gap-3 sm:gap-4 flex-wrap"
-			in:fly={{ y: 20, duration: 400, delay: 600 }}
-		>
-			<button
-				class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
-				null
-					? 'bg-gray-800 text-white shadow-md'
-					: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
-				on:click={() => (selectedType = null)}
-			>
-				All
-			</button>
-			<button
-				class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
-				IngredientType.Alcoholic
-					? 'bg-gray-800 text-white shadow-md'
-					: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
-				on:click={() => (selectedType = IngredientType.Alcoholic)}
-			>
-				{IngredientType.Alcoholic}
-			</button>
-			<button
-				class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
-				IngredientType.NonAlcoholic
-					? 'bg-gray-800 text-white shadow-md'
-					: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
-				on:click={() => (selectedType = IngredientType.NonAlcoholic)}
-			>
-				{IngredientType.NonAlcoholic}
-			</button>
-			<button
-				class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
-				'homemade'
-					? 'bg-gray-800 text-white shadow-md'
-					: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
-				on:click={() => (selectedType = 'homemade')}
-			>
-				Homemade
-			</button>
-		</div>
-
-		<!-- Expand/Collapse Controls -->
-		{#if filteredCategories.length > 0}
-			<div class="mb-6 flex justify-end gap-2">
-				<button
-					class="text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200 cursor-pointer underline decoration-dotted underline-offset-2"
-					on:click={expandAll}
-				>
-					Expand all
-				</button>
-				<span class="text-gray-400">|</span>
-				<button
-					class="text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200 cursor-pointer underline decoration-dotted underline-offset-2"
-					on:click={collapseAll}
-				>
-					Collapse all
-				</button>
-			</div>
-		{/if}
-
-		<!-- Ingredient Categories -->
-		<div class="space-y-4">
-			{#each filteredCategories as category (category.label)}
-				{@const isExpanded = expandedCategories.has(category.label)}
-				{@const totalCount = getTotalIngredientCount(category)}
-				<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-					<!-- Category Header -->
-					<button
-						class="w-full px-6 py-4 flex items-center justify-between text-left transition-colors duration-200 cursor-pointer border-l-4"
-						style="border-left-color: {category.color}; background-color: {isExpanded
-							? `color-mix(in srgb, ${category.color} 3%, white)`
-							: 'white'};"
-						on:mouseenter={(e) => {
-							if (!isExpanded) {
-								e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 5%, white)`;
-							}
-						}}
-						on:mouseleave={(e) => {
-							if (!isExpanded) {
-								e.currentTarget.style.backgroundColor = 'white';
-							} else {
-								e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 3%, white)`;
-							}
-						}}
-						on:click={() => toggleCategory(category.label)}
-					>
-						<h2 class="text-xl font-semibold text-gray-800">{category.label}</h2>
-						<div class="flex items-center gap-3">
-							<span class="text-xs sm:text-sm text-gray-500 font-medium text-right">
-								{totalCount}
-								{totalCount === 1 ? 'ingredient' : 'ingredients'}
-							</span>
-							<svg
-								class="w-5 h-5 text-gray-400 transition-transform duration-200"
-								class:rotate-180={isExpanded}
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+						/>
+					</svg>
+					{#if searchTerm}
+						<button
+							class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer"
+							on:click={() => (searchTerm = '')}
+							aria-label="Clear search"
+						>
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path
 									stroke-linecap="round"
 									stroke-linejoin="round"
 									stroke-width="2"
-									d="M19 9l-7 7-7-7"
+									d="M6 18L18 6M6 6l12 12"
 								/>
 							</svg>
-						</div>
-					</button>
+						</button>
+					{/if}
+				</div>
+			</div>
 
-					<!-- Category Content (Subcategories and Ingredients) -->
-					{#if isExpanded}
-						<div class="px-6 pb-6 pt-2 border-t border-gray-100" transition:slide>
-							<div class="space-y-8 mt-4">
-								{#each category.subcategories as subcategory (subcategory.label)}
-									<div>
-										{#if subcategory.label.toLowerCase() !== 'default'}
-											<h3 class="text-lg font-medium text-gray-700 mb-4">{subcategory.label}</h3>
-										{/if}
-										<div class="flex flex-wrap gap-2">
-											{#each subcategory.ingredients as ingredient (ingredient.slug)}
-												{@const usageCount = ingredientUsageCounts.get(ingredient.slug) || 0}
-												{@const filterQuery = getIngredientFilterQuery(ingredient.slug)}
-												<div
-													class="relative inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center transition-colors cursor-pointer border bg-[var(--chip-bg)] border-[var(--chip-border)] hover:bg-[var(--chip-bg-hover)] hover:border-[var(--chip-border-hover)]"
-													style="--chip-bg: color-mix(in srgb, {category.color} 4%, white); --chip-bg-hover: color-mix(in srgb, {category.color} 6%, white); --chip-border: color-mix(in srgb, {category.color} 12%, transparent); --chip-border-hover: color-mix(in srgb, {category.color} 18%, transparent);"
-												>
-													<!-- Stretched link: covers the whole chip without nesting anchors -->
-													<a
-														href="{resolve('/cocktails')}{filterQuery}"
-														class="absolute inset-0 rounded-md"
-														aria-label="Filter cocktails by {ingredient.title}"
-													></a>
-													<div class="flex items-center flex-wrap gap-x-1.5">
-														<span>{ingredient.title}</span>
-														{#if usageCount > 0}
-															<span class="text-xs text-gray-400 font-normal">({usageCount})</span>
-														{/if}
-														{#if $costMode && ingredient.costPerOz != null}
-															<span class="text-xs text-green-700 font-normal"
-																>{formatCost(applyTax(ingredient.costPerOz))}/oz</span
-															>
-														{/if}
-														{#if ingredient.recipe}
-															<a
-																href={resolve(`/recipes/${ingredient.recipe.slug}`)}
-																class="relative text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors"
-															>
-																See recipe
-															</a>
-														{/if}
+			<!-- Type Filter Tabs -->
+			<div
+				class="mb-12 flex justify-center gap-3 sm:gap-4 flex-wrap"
+				in:fly={{ y: 20, duration: 400, delay: 600 }}
+			>
+				<button
+					class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
+					null
+						? 'bg-gray-800 text-white shadow-md'
+						: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
+					on:click={() => (selectedType = null)}
+				>
+					All
+				</button>
+				<button
+					class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
+					IngredientType.Alcoholic
+						? 'bg-gray-800 text-white shadow-md'
+						: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
+					on:click={() => (selectedType = IngredientType.Alcoholic)}
+				>
+					{IngredientType.Alcoholic}
+				</button>
+				<button
+					class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
+					IngredientType.NonAlcoholic
+						? 'bg-gray-800 text-white shadow-md'
+						: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
+					on:click={() => (selectedType = IngredientType.NonAlcoholic)}
+				>
+					{IngredientType.NonAlcoholic}
+				</button>
+				<button
+					class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-base sm:text-base font-medium transition-all duration-200 cursor-pointer {selectedType ===
+					'homemade'
+						? 'bg-gray-800 text-white shadow-md'
+						: 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'}"
+					on:click={() => (selectedType = 'homemade')}
+				>
+					Homemade
+				</button>
+			</div>
+
+			<!-- Expand/Collapse Controls -->
+			{#if filteredCategories.length > 0}
+				<div class="mb-6 flex justify-end gap-2">
+					<button
+						class="text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200 cursor-pointer underline decoration-dotted underline-offset-2"
+						on:click={expandAll}
+					>
+						Expand all
+					</button>
+					<span class="text-gray-400">|</span>
+					<button
+						class="text-sm text-gray-600 hover:text-gray-800 transition-colors duration-200 cursor-pointer underline decoration-dotted underline-offset-2"
+						on:click={collapseAll}
+					>
+						Collapse all
+					</button>
+				</div>
+			{/if}
+
+			<!-- Ingredient Categories -->
+			<div class="space-y-4">
+				{#each filteredCategories as category (category.label)}
+					{@const isExpanded = expandedCategories.has(category.label)}
+					{@const totalCount = getTotalIngredientCount(category)}
+					<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+						<!-- Category Header -->
+						<button
+							class="w-full px-6 py-4 flex items-center justify-between text-left transition-colors duration-200 cursor-pointer border-l-4"
+							style="border-left-color: {category.color}; background-color: {isExpanded
+								? `color-mix(in srgb, ${category.color} 3%, white)`
+								: 'white'};"
+							on:mouseenter={(e) => {
+								if (!isExpanded) {
+									e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 5%, white)`;
+								}
+							}}
+							on:mouseleave={(e) => {
+								if (!isExpanded) {
+									e.currentTarget.style.backgroundColor = 'white';
+								} else {
+									e.currentTarget.style.backgroundColor = `color-mix(in srgb, ${category.color} 3%, white)`;
+								}
+							}}
+							on:click={() => toggleCategory(category.label)}
+						>
+							<h2 class="text-xl font-semibold text-gray-800">{category.label}</h2>
+							<div class="flex items-center gap-3">
+								<span class="text-xs sm:text-sm text-gray-500 font-medium text-right">
+									{totalCount}
+									{totalCount === 1 ? 'ingredient' : 'ingredients'}
+								</span>
+								<svg
+									class="w-5 h-5 text-gray-400 transition-transform duration-200"
+									class:rotate-180={isExpanded}
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</div>
+						</button>
+
+						<!-- Category Content (Subcategories and Ingredients) -->
+						{#if isExpanded}
+							<div class="px-6 pb-6 pt-2 border-t border-gray-100" transition:slide>
+								<div class="space-y-8 mt-4">
+									{#each category.subcategories as subcategory (subcategory.label)}
+										<div>
+											{#if subcategory.label.toLowerCase() !== 'default'}
+												<h3 class="text-lg font-medium text-gray-700 mb-4">{subcategory.label}</h3>
+											{/if}
+											<div class="flex flex-wrap gap-2">
+												{#each subcategory.ingredients as ingredient (ingredient.slug)}
+													{@const usageCount = ingredientUsageCounts.get(ingredient.slug) || 0}
+													{@const filterQuery = getIngredientFilterQuery(ingredient.slug)}
+													<div
+														class="relative inline-block px-3 py-1.5 rounded-md text-sm flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center transition-colors cursor-pointer border bg-[var(--chip-bg)] border-[var(--chip-border)] hover:bg-[var(--chip-bg-hover)] hover:border-[var(--chip-border-hover)]"
+														style="--chip-bg: color-mix(in srgb, {category.color} 4%, white); --chip-bg-hover: color-mix(in srgb, {category.color} 6%, white); --chip-border: color-mix(in srgb, {category.color} 12%, transparent); --chip-border-hover: color-mix(in srgb, {category.color} 18%, transparent);"
+													>
+														<!-- Stretched link: covers the whole chip without nesting anchors -->
+														<a
+															href="{resolve('/cocktails')}{filterQuery}"
+															class="absolute inset-0 rounded-md"
+															aria-label="Filter cocktails by {ingredient.title}"
+														></a>
+														<div class="flex items-center flex-wrap gap-x-1.5">
+															<span>{ingredient.title}</span>
+															{#if usageCount > 0}
+																<span class="text-xs text-gray-400 font-normal">({usageCount})</span
+																>
+															{/if}
+															{#if $costMode && ingredient.costPerOz != null}
+																<span class="text-xs text-green-700 font-normal"
+																	>{formatCost(applyTax(ingredient.costPerOz))}/oz</span
+																>
+															{/if}
+															{#if ingredient.recipe}
+																<a
+																	href={resolve(`/recipes/${ingredient.recipe.slug}`)}
+																	class="relative text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors"
+																>
+																	See recipe
+																</a>
+															{/if}
+															{#if ingredient.group}
+																<span class="text-xs text-gray-400 font-normal hidden sm:inline">
+																	<span class="mx-1.5">·</span>{ingredient.group}
+																</span>
+															{/if}
+														</div>
 														{#if ingredient.group}
-															<span class="text-xs text-gray-400 font-normal hidden sm:inline">
-																<span class="mx-1.5">·</span>{ingredient.group}
+															<span class="text-xs text-gray-400 font-normal sm:hidden mt-0.5">
+																{ingredient.group}
 															</span>
 														{/if}
 													</div>
-													{#if ingredient.group}
-														<span class="text-xs text-gray-400 font-normal sm:hidden mt-0.5">
-															{ingredient.group}
-														</span>
-													{/if}
-												</div>
-											{/each}
+												{/each}
+											</div>
 										</div>
-									</div>
-								{/each}
+									{/each}
+								</div>
 							</div>
-						</div>
-					{/if}
-				</div>
-			{/each}
-		</div>
-
-		{#if filteredCategories.length === 0}
-			<div class="text-center py-12">
-				<p class="text-gray-500">No ingredients found for the selected filter.</p>
+						{/if}
+					</div>
+				{/each}
 			</div>
-		{/if}
+
+			{#if filteredCategories.length === 0}
+				<div class="text-center py-12">
+					<p class="text-gray-500">No ingredients found for the selected filter.</p>
+				</div>
+			{/if}
+		</div>
 	</div>
 
 	<ScrollToTop />

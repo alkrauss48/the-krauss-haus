@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import { toggleCostMode, toastMessage } from '$lib/stores/costMode';
 	import SearchModal from '$lib/components/SearchModal.svelte';
-	import BarLauncher from '$lib/components/bar/BarLauncher.svelte';
+	import SiteNav from '$lib/components/SiteNav.svelte';
 	import BarPanel from '$lib/components/bar/BarPanel.svelte';
 	import { bar } from '$lib/bar/bar.svelte';
 
@@ -68,36 +68,11 @@
 	<meta property="og:url" content="https://thekrausshaus.com{$page.url.pathname}" />
 </svelte:head>
 
-<div class="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 flex items-center gap-1.5">
-	<button
-		type="button"
-		class="cursor-pointer p-2 rounded-full bg-white/80 backdrop-blur-sm text-gray-500 hover:text-amber-600 hover:bg-white shadow-sm hover:shadow-md transition-all border border-gray-200/60"
-		onclick={openSearch}
-		aria-label="Open search"
-		aria-haspopup="dialog"
-		aria-expanded={showSearch}
-	>
-		<svg
-			class="h-5 w-5"
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-			aria-hidden="true"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15z"
-			/>
-		</svg>
-	</button>
+<div class="flex min-h-dvh flex-col">
+	<SiteNav onSearch={openSearch} searchOpen={showSearch} />
 
-	<BarLauncher />
+	{@render children()}
 </div>
-
-{@render children()}
 
 <SearchModal bind:isOpen={showSearch} onClose={closeSearch} />
 

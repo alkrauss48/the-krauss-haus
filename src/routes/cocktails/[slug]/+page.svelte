@@ -52,283 +52,285 @@
 </svelte:head>
 
 <main
-	class="min-h-screen p-6 bg-[#f8f9fa] overflow-y-auto"
+	class="flex-1 p-6 bg-[#f8f9fa] overflow-y-auto"
 	in:fly={{ y: 20, duration: 400, delay: 200 }}
 	out:fade={{ duration: 200 }}
 >
-	<div class="max-w-4xl mx-auto pb-8">
+	<div class="max-w-7xl mx-auto pb-8">
 		<Breadcrumbs />
 
-		<div
-			class="bg-white rounded-lg shadow-lg overflow-hidden"
-			in:fly={{ y: 20, duration: 400, delay: 400 }}
-		>
-			<!-- Hero Image Section -->
-			<div class="relative h-96 bg-orange-50 bg-gradient-to-br from-amber-50 to-orange-50">
-				<img
-					src={cocktail.imagePath}
-					alt={cocktail.title}
-					class="w-full h-full object-contain p-8"
-				/>
-			</div>
+		<div class="max-w-4xl mx-auto">
+			<div
+				class="bg-white rounded-lg shadow-lg overflow-hidden"
+				in:fly={{ y: 20, duration: 400, delay: 400 }}
+			>
+				<!-- Hero Image Section -->
+				<div class="relative h-96 bg-orange-50 bg-gradient-to-br from-amber-50 to-orange-50">
+					<img
+						src={cocktail.imagePath}
+						alt={cocktail.title}
+						class="w-full h-full object-contain p-8"
+					/>
+				</div>
 
-			<!-- Content Section -->
-			<div class="p-8">
-				<!-- Header -->
-				<header class="mb-8">
-					<div class="flex items-start justify-between gap-3 mb-2">
-						<h1 class="min-w-0 text-4xl font-bold text-gray-800">{cocktail.title}</h1>
-						<div class="shrink-0 pt-1">
-							<CopyLinkButton
-								url={typeof window !== 'undefined' ? window.location.href : ''}
-								ariaLabel="Copy link to {cocktail.title}"
-								size="md"
-							/>
+				<!-- Content Section -->
+				<div class="p-8">
+					<!-- Header -->
+					<header class="mb-8">
+						<div class="flex items-start justify-between gap-3 mb-2">
+							<h1 class="min-w-0 text-4xl font-bold text-gray-800">{cocktail.title}</h1>
+							<div class="shrink-0 pt-1">
+								<CopyLinkButton
+									url={typeof window !== 'undefined' ? window.location.href : ''}
+									ariaLabel="Copy link to {cocktail.title}"
+									size="md"
+								/>
+							</div>
 						</div>
-					</div>
-					<!-- Provenance on one quiet line, so it reads as a byline rather than two more badges. -->
-					{#if isOriginal || cocktail.createdBy}
-						<p class="text-sm text-gray-500 mb-3">
-							{#if isOriginal}
-								<span class="font-semibold text-amber-700"
-									><span class="text-amber-500">★</span> Original</span
-								>
-							{/if}
-							{#if isOriginal && cocktail.createdBy}
-								<span class="mx-1 text-gray-300" aria-hidden="true">·</span>
-							{/if}
-							{#if cocktail.createdBy}
-								<span class="italic">
-									{isOriginal ? 'by' : 'Created by'}
-									<a
-										href={resolve(`/bartenders/${cocktail.createdBy.slug}`)}
-										class="text-amber-600 hover:text-amber-700 underline decoration-dotted underline-offset-2"
+						<!-- Provenance on one quiet line, so it reads as a byline rather than two more badges. -->
+						{#if isOriginal || cocktail.createdBy}
+							<p class="text-sm text-gray-500 mb-3">
+								{#if isOriginal}
+									<span class="font-semibold text-amber-700"
+										><span class="text-amber-500">★</span> Original</span
 									>
-										{cocktail.createdBy.name}
-									</a>
-								</span>
-							{/if}
-						</p>
-					{/if}
-					{#if cocktail.subtitle}
-						<p class="text-xl text-gray-600 italic mb-4">{cocktail.subtitle}</p>
-					{/if}
-					<p class="text-lg text-gray-700 leading-relaxed">{cocktail.description}</p>
-				</header>
+								{/if}
+								{#if isOriginal && cocktail.createdBy}
+									<span class="mx-1 text-gray-300" aria-hidden="true">·</span>
+								{/if}
+								{#if cocktail.createdBy}
+									<span class="italic">
+										{isOriginal ? 'by' : 'Created by'}
+										<a
+											href={resolve(`/bartenders/${cocktail.createdBy.slug}`)}
+											class="text-amber-600 hover:text-amber-700 underline decoration-dotted underline-offset-2"
+										>
+											{cocktail.createdBy.name}
+										</a>
+									</span>
+								{/if}
+							</p>
+						{/if}
+						{#if cocktail.subtitle}
+							<p class="text-xl text-gray-600 italic mb-4">{cocktail.subtitle}</p>
+						{/if}
+						<p class="text-lg text-gray-700 leading-relaxed">{cocktail.description}</p>
+					</header>
 
-				<!-- Ingredients and Tags Section -->
-				{#if (cocktail.ingredients && cocktail.ingredients.length > 0) || (cocktail.tags && cocktail.tags.length > 0)}
-					<section class="mb-8">
-						<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-							<!-- Ingredients (Left/Main) -->
-							{#if cocktail.ingredients && cocktail.ingredients.length > 0}
-								<div class="lg:col-span-2">
-									<h2 class="text-2xl font-bold text-gray-800 mb-4">Ingredients</h2>
-									<ul class="space-y-2">
-										{#each cocktail.ingredients as ingredient (ingredient)}
-											<li class="flex items-start">
-												<span class="text-amber-600 mr-2 mt-1">•</span>
-												{#if typeof ingredient === 'string'}
-													<span class="text-gray-700">{ingredient}</span>
-												{:else}
-													{@const displayName = getIngredientDisplayName(ingredient)}
-													{@const recipe = ingredient.ingredient.recipe}
-													<span class="text-gray-700">
-														{#if ingredient.amount && !ingredient.label}
-															{ingredient.amount} {displayName}
-														{:else}
-															{displayName}
-														{/if}
-														{#if recipe}
-															<a
-																href={resolve(`/recipes/${recipe.slug}`)}
-																class="text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors ml-1.5"
-															>
-																See recipe
-															</a>
-														{/if}
-														{#if $costMode && ingredient.ingredient.costPerOz != null}
-															{@const oz = ingredient.amount
-																? parseAmountToOz(ingredient.amount)
-																: 0}
-															{@const itemCost = applyTax(
-																oz > 0
-																	? ingredient.ingredient.costPerOz * oz
-																	: ingredient.ingredient.costPerOz
-															)}
-															<span class="text-xs text-green-700 ml-1.5"
-																>({formatCost(itemCost)})</span
-															>
-														{/if}
-													</span>
-												{/if}
-											</li>
-										{/each}
-									</ul>
-									{#if servingSentence}
-										<div class="mt-4">
-											<span class="text-sm font-bold text-gray-700">
-												{servingSentence}
-											</span>
-										</div>
-									{/if}
-									{#if cocktail.servings}
-										<div class="mt-4">
-											<span class="text-sm font-medium text-gray-600">
-												Makes {cocktail.servings} servings
-											</span>
-										</div>
-									{/if}
-									{#if $costMode}
-										{@const totalCost = calculateCocktailCost(cocktail)}
-										{#if totalCost !== null}
+					<!-- Ingredients and Tags Section -->
+					{#if (cocktail.ingredients && cocktail.ingredients.length > 0) || (cocktail.tags && cocktail.tags.length > 0)}
+						<section class="mb-8">
+							<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+								<!-- Ingredients (Left/Main) -->
+								{#if cocktail.ingredients && cocktail.ingredients.length > 0}
+									<div class="lg:col-span-2">
+										<h2 class="text-2xl font-bold text-gray-800 mb-4">Ingredients</h2>
+										<ul class="space-y-2">
+											{#each cocktail.ingredients as ingredient (ingredient)}
+												<li class="flex items-start">
+													<span class="text-amber-600 mr-2 mt-1">•</span>
+													{#if typeof ingredient === 'string'}
+														<span class="text-gray-700">{ingredient}</span>
+													{:else}
+														{@const displayName = getIngredientDisplayName(ingredient)}
+														{@const recipe = ingredient.ingredient.recipe}
+														<span class="text-gray-700">
+															{#if ingredient.amount && !ingredient.label}
+																{ingredient.amount} {displayName}
+															{:else}
+																{displayName}
+															{/if}
+															{#if recipe}
+																<a
+																	href={resolve(`/recipes/${recipe.slug}`)}
+																	class="text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 font-normal transition-colors ml-1.5"
+																>
+																	See recipe
+																</a>
+															{/if}
+															{#if $costMode && ingredient.ingredient.costPerOz != null}
+																{@const oz = ingredient.amount
+																	? parseAmountToOz(ingredient.amount)
+																	: 0}
+																{@const itemCost = applyTax(
+																	oz > 0
+																		? ingredient.ingredient.costPerOz * oz
+																		: ingredient.ingredient.costPerOz
+																)}
+																<span class="text-xs text-green-700 ml-1.5"
+																	>({formatCost(itemCost)})</span
+																>
+															{/if}
+														</span>
+													{/if}
+												</li>
+											{/each}
+										</ul>
+										{#if servingSentence}
 											<div class="mt-4">
-												{#if cocktail.servings}
-													<span class="text-sm font-medium text-green-700">
-														Estimated cost to make: {formatCost(applyTax(totalCost))} total ({formatCost(
-															applyTax(totalCost / cocktail.servings)
-														)} / serving)
-													</span>
-												{:else}
-													<span class="text-sm font-medium text-green-700">
-														Estimated cost to make: {formatCost(applyTax(totalCost))}
-													</span>
-												{/if}
+												<span class="text-sm font-bold text-gray-700">
+													{servingSentence}
+												</span>
 											</div>
 										{/if}
-									{/if}
-								</div>
-							{/if}
+										{#if cocktail.servings}
+											<div class="mt-4">
+												<span class="text-sm font-medium text-gray-600">
+													Makes {cocktail.servings} servings
+												</span>
+											</div>
+										{/if}
+										{#if $costMode}
+											{@const totalCost = calculateCocktailCost(cocktail)}
+											{#if totalCost !== null}
+												<div class="mt-4">
+													{#if cocktail.servings}
+														<span class="text-sm font-medium text-green-700">
+															Estimated cost to make: {formatCost(applyTax(totalCost))} total ({formatCost(
+																applyTax(totalCost / cocktail.servings)
+															)} / serving)
+														</span>
+													{:else}
+														<span class="text-sm font-medium text-green-700">
+															Estimated cost to make: {formatCost(applyTax(totalCost))}
+														</span>
+													{/if}
+												</div>
+											{/if}
+										{/if}
+									</div>
+								{/if}
 
-							<!-- Tags Sidebar (Right) -->
-							{#if cocktail.tags && cocktail.tags.length > 0}
-								<div class="lg:col-span-1">
-									<h3 class="text-lg font-semibold text-gray-600 mb-3">Tags</h3>
-									<div class="flex flex-wrap gap-2">
-										{#each cocktail.tags as tag (tag.label)}
-											<a
-												href="{resolve('/cocktails')}{getTagFilterQuery(tag)}"
-												class="inline-block px-2 py-1 text-xs font-medium rounded-md transition-all duration-200 hover:scale-105 border border-opacity-20"
-												style="
+								<!-- Tags Sidebar (Right) -->
+								{#if cocktail.tags && cocktail.tags.length > 0}
+									<div class="lg:col-span-1">
+										<h3 class="text-lg font-semibold text-gray-600 mb-3">Tags</h3>
+										<div class="flex flex-wrap gap-2">
+											{#each cocktail.tags as tag (tag.label)}
+												<a
+													href="{resolve('/cocktails')}{getTagFilterQuery(tag)}"
+													class="inline-block px-2 py-1 text-xs font-medium rounded-md transition-all duration-200 hover:scale-105 border border-opacity-20"
+													style="
 													background-color: {hexToRgba(tag.category.color, 0.05)};
 													border-color: {hexToRgba(tag.category.color, 0.2)};
 													color: {tag.category.color};
 												"
-												on:mouseenter={(e) => {
-													e.currentTarget.style.backgroundColor = hexToRgba(
-														tag.category.color,
-														0.08
-													);
-													e.currentTarget.style.borderColor = hexToRgba(tag.category.color, 0.3);
-												}}
-												on:mouseleave={(e) => {
-													e.currentTarget.style.backgroundColor = hexToRgba(
-														tag.category.color,
-														0.05
-													);
-													e.currentTarget.style.borderColor = hexToRgba(tag.category.color, 0.2);
-												}}
-											>
-												{tag.label}
-											</a>
-										{/each}
-									</div>
-								</div>
-							{/if}
-						</div>
-					</section>
-				{/if}
-
-				<!-- Notes Section -->
-				{#if cocktail.notes}
-					<section class="mb-8">
-						<h2 class="text-2xl font-bold text-gray-800 mb-4">Notes</h2>
-						<p class="text-gray-700 leading-relaxed">{cocktail.notes}</p>
-					</section>
-				{/if}
-
-				<!-- Variations Section -->
-				{#if cocktail.variations && cocktail.variations.length > 0}
-					<section class="mb-8">
-						<h2 class="text-2xl font-bold text-gray-800 mb-4">Variations</h2>
-						<div class="grid gap-4 md:grid-cols-2">
-							{#each cocktail.variations as variation (variation.name)}
-								<div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
-									<h3 class="font-semibold text-gray-800 mb-2">{variation.name}</h3>
-									{#if formatVariantIngredients(variation)}
-										<p class="text-gray-600 text-sm">{formatVariantIngredients(variation)}</p>
-									{/if}
-									{#if variation.images && variation.images.length > 0}
-										<div class="flex gap-2 mt-3">
-											{#each variation.images as image (image)}
-												<img
-													src={image}
-													alt="{variation.name} variation"
-													class="w-8 h-8 rounded-full object-cover"
-												/>
+													on:mouseenter={(e) => {
+														e.currentTarget.style.backgroundColor = hexToRgba(
+															tag.category.color,
+															0.08
+														);
+														e.currentTarget.style.borderColor = hexToRgba(tag.category.color, 0.3);
+													}}
+													on:mouseleave={(e) => {
+														e.currentTarget.style.backgroundColor = hexToRgba(
+															tag.category.color,
+															0.05
+														);
+														e.currentTarget.style.borderColor = hexToRgba(tag.category.color, 0.2);
+													}}
+												>
+													{tag.label}
+												</a>
 											{/each}
 										</div>
-									{/if}
-								</div>
-							{/each}
-						</div>
-					</section>
-				{/if}
+									</div>
+								{/if}
+							</div>
+						</section>
+					{/if}
 
-				<!--
+					<!-- Notes Section -->
+					{#if cocktail.notes}
+						<section class="mb-8">
+							<h2 class="text-2xl font-bold text-gray-800 mb-4">Notes</h2>
+							<p class="text-gray-700 leading-relaxed">{cocktail.notes}</p>
+						</section>
+					{/if}
+
+					<!-- Variations Section -->
+					{#if cocktail.variations && cocktail.variations.length > 0}
+						<section class="mb-8">
+							<h2 class="text-2xl font-bold text-gray-800 mb-4">Variations</h2>
+							<div class="grid gap-4 md:grid-cols-2">
+								{#each cocktail.variations as variation (variation.name)}
+									<div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+										<h3 class="font-semibold text-gray-800 mb-2">{variation.name}</h3>
+										{#if formatVariantIngredients(variation)}
+											<p class="text-gray-600 text-sm">{formatVariantIngredients(variation)}</p>
+										{/if}
+										{#if variation.images && variation.images.length > 0}
+											<div class="flex gap-2 mt-3">
+												{#each variation.images as image (image)}
+													<img
+														src={image}
+														alt="{variation.name} variation"
+														class="w-8 h-8 rounded-full object-cover"
+													/>
+												{/each}
+											</div>
+										{/if}
+									</div>
+								{/each}
+							</div>
+						</section>
+					{/if}
+
+					<!--
 					Ask Sasha lives down here rather than in the header: by the end of the recipe the
 					guest has a question to ask, and the top of the page stays about the drink.
 				-->
-				<aside
-					class="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-amber-100 bg-amber-50/60 p-4"
-				>
-					<p class="text-gray-700">
-						<span class="font-semibold text-gray-800">Questions about the {cocktail.title}?</span>
-						<span class="text-gray-600">Swaps, tweaks, and what to try next.</span>
-					</p>
-					<AskAboutButton title={cocktail.title} />
-				</aside>
+					<aside
+						class="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-amber-100 bg-amber-50/60 p-4"
+					>
+						<p class="text-gray-700">
+							<span class="font-semibold text-gray-800">Questions about the {cocktail.title}?</span>
+							<span class="text-gray-600">Swaps, tweaks, and what to try next.</span>
+						</p>
+						<AskAboutButton title={cocktail.title} />
+					</aside>
 
-				<!-- Back to Menu Links and Paths -->
-				{#if hasMenusOrPaths}
-					<section class="pt-8 border-t border-gray-200">
-						<h2 class="text-xl font-semibold text-gray-800 mb-4">Find this cocktail on:</h2>
-						<div class="flex flex-wrap gap-3">
-							{#if onSummer}
-								<a
-									href={resolve('/menu/summer')}
-									class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
-								>
-									Summer Menu
-								</a>
-							{/if}
-							{#if onWinter}
-								<a
-									href={resolve('/menu/winter')}
-									class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors"
-								>
-									Winter Menu
-								</a>
-							{/if}
-							{#if onTiki}
-								<a
-									href={resolve('/menu/tiki')}
-									class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
-								>
-									Tiki Menu
-								</a>
-							{/if}
-							{#each pathsContainingCocktail as path (path.slug)}
-								<a
-									href={resolve(`/paths/${path.slug}`)}
-									class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors"
-								>
-									{path.title} Path
-								</a>
-							{/each}
-						</div>
-					</section>
-				{/if}
+					<!-- Back to Menu Links and Paths -->
+					{#if hasMenusOrPaths}
+						<section class="pt-8 border-t border-gray-200">
+							<h2 class="text-xl font-semibold text-gray-800 mb-4">Find this cocktail on:</h2>
+							<div class="flex flex-wrap gap-3">
+								{#if onSummer}
+									<a
+										href={resolve('/menu/summer')}
+										class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
+									>
+										Summer Menu
+									</a>
+								{/if}
+								{#if onWinter}
+									<a
+										href={resolve('/menu/winter')}
+										class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors"
+									>
+										Winter Menu
+									</a>
+								{/if}
+								{#if onTiki}
+									<a
+										href={resolve('/menu/tiki')}
+										class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
+									>
+										Tiki Menu
+									</a>
+								{/if}
+								{#each pathsContainingCocktail as path (path.slug)}
+									<a
+										href={resolve(`/paths/${path.slug}`)}
+										class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors"
+									>
+										{path.title} Path
+									</a>
+								{/each}
+							</div>
+						</section>
+					{/if}
+				</div>
 			</div>
 		</div>
 	</div>

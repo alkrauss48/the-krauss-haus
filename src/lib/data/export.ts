@@ -17,7 +17,9 @@ import type { IngredientCategory, IngredientItem } from '$lib/types/ingredients'
 import type { Recipe, RecipeCategory } from '$lib/types/recipes';
 import type { Bartender } from '$lib/types/bartenders';
 import type { CocktailPath } from '$lib/types/cocktail-path';
+import type { CocktailCollection } from '$lib/types/cocktail-collection';
 import type { Tag, TagCategory } from '$lib/types/tags';
+import { collectionCocktails } from '$lib/utils/collections';
 
 /** Written in this order, and concatenated in this order to form the checksum. */
 export const DATASET_NAMES = [
@@ -27,7 +29,8 @@ export const DATASET_NAMES = [
 	'bartenders',
 	'paths',
 	'tags',
-	'menus'
+	'menus',
+	'collections'
 ] as const;
 
 export type DatasetName = (typeof DATASET_NAMES)[number];
@@ -104,6 +107,18 @@ export interface ExportedPath {
 	cocktail_slugs: string[];
 }
 
+export interface ExportedCollection {
+	slug: string;
+	title: string;
+	description: string;
+	url: string;
+	image_url: string | null;
+	/** In the collection's authored order, which is the order the page shows them in. */
+	cocktail_slugs: string[];
+	/** The headed groups the page splits `cocktail_slugs` into, or null for a single flat list. */
+	groups: { heading: string; cocktail_slugs: string[] }[] | null;
+}
+
 export interface ExportedTagCategory {
 	label: string;
 	tags: { label: string; order: number }[];
@@ -126,6 +141,7 @@ export interface Datasets {
 	paths: ExportedPath[];
 	tags: ExportedTagCategory[];
 	menus: ExportedMenu[];
+	collections: ExportedCollection[];
 }
 
 export interface Manifest {
@@ -145,6 +161,7 @@ export interface SourceModules {
 	allTagCategories: TagCategory[];
 	Tags: Record<string, Record<string, Tag>>;
 	menuConfig: Record<string, { title: string; subtitle?: string; categories: Category[] }>;
+	allCollections: CocktailCollection[];
 }
 
 /** Code-unit ordering, so the sort does not depend on the exporting machine's locale. */
@@ -308,6 +325,24 @@ function buildPaths(allPaths: CocktailPath[]): ExportedPath[] {
 	return assertUniqueSlugs(records.sort(bySlug), 'path');
 }
 
+function buildCollections(allCollections: CocktailCollection[]): ExportedCollection[] {
+	const records = allCollections.map((collection) => ({
+		slug: collection.slug,
+		title: collection.title,
+		description: collection.description,
+		url: `/collections/${collection.slug}`,
+		image_url: collection.imagePath ?? null,
+		cocktail_slugs: collectionCocktails(collection).map((cocktail) => cocktail.slug),
+		groups:
+			collection.groups?.map((group) => ({
+				heading: group.heading,
+				cocktail_slugs: group.cocktails.map((cocktail) => cocktail.slug)
+			})) ?? null
+	}));
+
+	return assertUniqueSlugs(records.sort(bySlug), 'collection');
+}
+
 /**
  * `allTagCategories` carries only the nine categories — the tags themselves live in the `Tags`
  * namespace and name their category by reference. Categories keep their authored order, and each
@@ -366,7 +401,7 @@ function buildMenus(menuConfig: SourceModules['menuConfig']): ExportedMenu[] {
 	return assertUniqueSlugs(records.sort(bySlug), 'menu');
 }
 
-/** Flattens the resolved modules into the seven slug-referenced datasets. */
+/** Flattens the resolved modules into the eight slug-referenced datasets. */
 export function buildDatasets(modules: SourceModules): Datasets {
 	return {
 		cocktails: buildCocktails(modules.allCocktails),
@@ -375,7 +410,8 @@ export function buildDatasets(modules: SourceModules): Datasets {
 		bartenders: buildBartenders(modules.allBartenders),
 		paths: buildPaths(modules.allPaths),
 		tags: buildTags(modules.allTagCategories, modules.Tags),
-		menus: buildMenus(modules.menuConfig)
+		menus: buildMenus(modules.menuConfig),
+		collections: buildCollections(modules.allCollections)
 	};
 }
 
@@ -398,7 +434,8 @@ export function countsOf(datasets: Datasets): Record<string, number> {
 		paths: datasets.paths.length,
 		tag_categories: datasets.tags.length,
 		tags: datasets.tags.reduce((total, category) => total + category.tags.length, 0),
-		menus: datasets.menus.length
+		menus: datasets.menus.length,
+		collections: datasets.collections.length
 	};
 }
 

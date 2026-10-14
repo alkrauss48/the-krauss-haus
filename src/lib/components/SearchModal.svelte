@@ -162,6 +162,8 @@
 				return 'bg-emerald-100 text-emerald-800';
 			case 'path':
 				return 'bg-purple-100 text-purple-800';
+			case 'collection':
+				return 'bg-teal-100 text-teal-800';
 			case 'party':
 				return 'bg-pink-100 text-pink-800';
 			case 'bartender':
@@ -253,7 +255,8 @@
 			<div class="overflow-y-auto" aria-live="polite" aria-atomic="false">
 				{#if query.trim().length === 0}
 					<p class="px-4 py-8 text-sm text-center text-gray-500">
-						Start typing to search cocktails, recipes, paths, parties, bartenders, menus, and pages.
+						Start typing to search cocktails, recipes, paths, collections, parties, bartenders,
+						menus, and pages.
 					</p>
 				{:else if results.length === 0}
 					<p class="px-4 py-8 text-sm text-center text-gray-500">

@@ -1433,6 +1433,79 @@
 		"variations": []
 	},
 	{
+		"slug": "carajillo-old-fashioned",
+		"title": "Carajillo Old Fashioned",
+		"subtitle": null,
+		"description": "Cognac, rye whiskey, licor 43, coffee liqueur, coffee beans.",
+		"url": "/cocktails/carajillo-old-fashioned",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/carajillo-old-fashioned.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/carajillo-old-fashioned.webp",
+		"method": "Stirred",
+		"served_in": "Double Rocks Glass",
+		"ice": "Large Cube",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": "sean-oconnor-combee",
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "st-remy-vsop",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rittenhouse",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "licor-43",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "mr-black",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "text",
+				"text": "Garnish: 3 coffee beans"
+			}
+		],
+		"tags": [
+			{
+				"label": "Brandy",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Whiskey",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Stirred",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "caramel-apple-spice",
 		"title": "Caramel Apple Spice",
 		"subtitle": null,
@@ -2057,7 +2130,7 @@
 		"slug": "conference",
 		"title": "Conference",
 		"subtitle": null,
-		"description": "Bourbon, rye, calvados, cognac, demerara syrup, angostura and xocolatl bitters.",
+		"description": "Bourbon, rye whiskey, calvados, cognac, demerara syrup, angostura and xocolatl bitters.",
 		"url": "/cocktails/conference",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/conference.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/conference.webp",

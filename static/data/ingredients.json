@@ -760,6 +760,16 @@
 		"recipe_slug": null
 	},
 	{
+		"slug": "licor-43",
+		"title": "Licor 43",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Nut & Spice",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
 		"slug": "lime",
 		"title": "Lime Juice",
 		"url": "/ingredients",

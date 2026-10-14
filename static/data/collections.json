@@ -1,0 +1,94 @@
+[
+	{
+		"slug": "old-fashioneds",
+		"title": "Old Fashioneds",
+		"description": "Spirit, sugar, and bitters: the original cocktail, and the riffs that build on it.",
+		"url": "/collections/old-fashioneds",
+		"image_url": null,
+		"cocktail_slugs": [
+			"old-fashioned",
+			"godfather",
+			"toronto",
+			"american-trilogy",
+			"conference",
+			"sazerac",
+			"carajillo-old-fashioned",
+			"oaxaca-old-fashioned",
+			"improved-holland-gin-cocktail",
+			"corn-n-oil",
+			"ti-punch"
+		],
+		"groups": [
+			{
+				"heading": "Whiskey",
+				"cocktail_slugs": [
+					"old-fashioned",
+					"godfather",
+					"toronto"
+				]
+			},
+			{
+				"heading": "Whiskey & Other Spirits",
+				"cocktail_slugs": [
+					"american-trilogy",
+					"conference",
+					"sazerac",
+					"carajillo-old-fashioned"
+				]
+			},
+			{
+				"heading": "Other Spirits",
+				"cocktail_slugs": [
+					"oaxaca-old-fashioned",
+					"improved-holland-gin-cocktail",
+					"corn-n-oil",
+					"ti-punch"
+				]
+			}
+		]
+	},
+	{
+		"slug": "tiki-mugs",
+		"title": "Tiki Mugs",
+		"description": "Drinks made for specific mugs in our collection, each one served in its own tiki mug.",
+		"url": "/collections/tiki-mugs",
+		"image_url": null,
+		"cocktail_slugs": [
+			"plunderers-punch",
+			"piranha-pool",
+			"aulani-tropical-mai-tai",
+			"nautilus",
+			"tidal-terror",
+			"pineapple-potion",
+			"jingle-bird",
+			"sippin-santa",
+			"yule-tide"
+		],
+		"groups": [
+			{
+				"heading": "Year-round",
+				"cocktail_slugs": [
+					"plunderers-punch",
+					"piranha-pool",
+					"aulani-tropical-mai-tai",
+					"nautilus"
+				]
+			},
+			{
+				"heading": "Halloween",
+				"cocktail_slugs": [
+					"tidal-terror",
+					"pineapple-potion"
+				]
+			},
+			{
+				"heading": "Christmas",
+				"cocktail_slugs": [
+					"jingle-bird",
+					"sippin-santa",
+					"yule-tide"
+				]
+			}
+		]
+	}
+]

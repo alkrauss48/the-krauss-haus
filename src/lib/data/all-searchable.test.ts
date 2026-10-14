@@ -3,6 +3,7 @@ import { allSearchable, searchAll, type SearchableItem } from './all-searchable'
 import { allCocktails } from './all-cocktails';
 import { allRecipes } from './all-recipes';
 import { allPaths } from './all-paths';
+import { allCollections } from './all-collections';
 import { allParties } from './all-parties';
 import { allBartenders } from './all-bartenders';
 import { menuConfig } from './menu-config';
@@ -15,7 +16,7 @@ function haystack(item: SearchableItem): string {
 }
 
 describe('allSearchable', () => {
-	it('indexes every cocktail, recipe, path, party, bartender and menu', () => {
+	it('indexes every cocktail, recipe, path, collection, party, bartender and menu', () => {
 		const counts = allSearchable.reduce<Record<string, number>>((acc, item) => {
 			acc[item.type] = (acc[item.type] ?? 0) + 1;
 			return acc;
@@ -24,6 +25,7 @@ describe('allSearchable', () => {
 		expect(counts.cocktail).toBe(allCocktails.length);
 		expect(counts.recipe).toBe(allRecipes.length);
 		expect(counts.path).toBe(allPaths.length);
+		expect(counts.collection).toBe(allCollections.length);
 		expect(counts.party).toBe(allParties.length);
 		expect(counts.bartender).toBe(allBartenders.length);
 		expect(counts.menu).toBe(Object.keys(menuConfig).length);

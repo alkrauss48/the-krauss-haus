@@ -29,3 +29,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+/* Keep in-page anchors clear of the sticky site nav (h-14) */
+html {
+	scroll-padding-top: 3.5rem;
+}
