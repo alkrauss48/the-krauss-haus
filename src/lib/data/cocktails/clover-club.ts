@@ -27,7 +27,7 @@ const CLOVER_CLUB: Cocktail = {
 			ingredient: Ingredients.Citrus.LEMON
 		},
 		{
-			amount: '.5oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Syrups.RASPBERRY_SYRUP
 		},
 		{
