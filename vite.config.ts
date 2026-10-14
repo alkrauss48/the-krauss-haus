@@ -11,6 +11,7 @@ export default defineConfig({
 			'localhost',
 			'127.0.0.1',
 			'0.0.0.0',
+			'host.docker.internal',
 			'.ngrok-free.app',
 			'.ngrok.io',
 			'.ngrok.app'
