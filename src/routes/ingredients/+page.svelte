@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type { PageData } from './$types';
+	import { browser } from '$app/environment';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { slide } from 'svelte/transition';
 	import { fade, fly } from 'svelte/transition';
@@ -13,8 +15,32 @@
 	import { costMode } from '$lib/stores/costMode';
 	import { resolve } from '$app/paths';
 
+	export let data: PageData;
+
 	let selectedType: IngredientType | 'homemade' | null = null;
-	let searchTerm = '';
+	let searchTerm = data.searchTerm;
+
+	// Keep ?search= in sync with the search bar, without adding history entries
+	function updateSearchURL(term: string): void {
+		if (!browser) return;
+
+		const url = new URL(window.location.href);
+		if (term.trim()) {
+			url.searchParams.set('search', term.trim());
+		} else {
+			url.searchParams.delete('search');
+		}
+
+		const newUrl = `${url.pathname}${url.search}${url.hash}`;
+		if (newUrl === `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+			return;
+		}
+		const currentState = window.history.state || {};
+		window.history.replaceState(currentState, '', newUrl);
+	}
+
+	// Runs on typing and on the clear button
+	$: updateSearchURL(searchTerm);
 
 	// Track which categories are expanded
 	let expandedCategories = new SvelteSet<string>();
