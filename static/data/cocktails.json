@@ -1963,7 +1963,7 @@
 			{
 				"kind": "ingredient",
 				"slug": "raspberry-syrup",
-				"amount": ".5oz",
+				"amount": ".75oz",
 				"label": null
 			},
 			{
@@ -7709,7 +7709,7 @@
 				"ingredients": [
 					{
 						"kind": "text",
-						"text": "TBD"
+						"text": "Sub Mountain Dew for soda water."
 					}
 				]
 			}

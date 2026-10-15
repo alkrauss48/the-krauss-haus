@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type { PageData } from './$types';
+	import { browser } from '$app/environment';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { slide } from 'svelte/transition';
 	import { fade, fly } from 'svelte/transition';
@@ -7,14 +9,41 @@
 	import { allIngredientCategories } from '$lib/data/all-ingredients';
 	import { allCocktails } from '$lib/data/all-cocktails';
 	import { IngredientType } from '$lib/enums/ingredientType';
-	import type { IngredientCategory, IngredientSubcategory } from '$lib/types/ingredients';
-	import { getIngredientUsageCounts } from '$lib/utils/ingredients';
+	import type { IngredientCategory } from '$lib/types/ingredients';
+	import {
+		filterIngredientCategoriesBySearch,
+		getIngredientUsageCounts
+	} from '$lib/utils/ingredients';
 	import { formatCost, applyTax } from '$lib/utils/cost';
 	import { costMode } from '$lib/stores/costMode';
 	import { resolve } from '$app/paths';
 
+	export let data: PageData;
+
 	let selectedType: IngredientType | 'homemade' | null = null;
-	let searchTerm = '';
+	let searchTerm = data.searchTerm;
+
+	// Keep ?search= in sync with the search bar, without adding history entries
+	function updateSearchURL(term: string): void {
+		if (!browser) return;
+
+		const url = new URL(window.location.href);
+		if (term.trim()) {
+			url.searchParams.set('search', term.trim());
+		} else {
+			url.searchParams.delete('search');
+		}
+
+		const newUrl = `${url.pathname}${url.search}${url.hash}`;
+		if (newUrl === `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+			return;
+		}
+		const currentState = window.history.state || {};
+		window.history.replaceState(currentState, '', newUrl);
+	}
+
+	// Runs on typing and on the clear button
+	$: updateSearchURL(searchTerm);
 
 	// Track which categories are expanded
 	let expandedCategories = new SvelteSet<string>();
@@ -78,60 +107,6 @@
 		return `?ingredient-${categoryKey}=${encodeURIComponent(ingredientSlug)}`;
 	}
 
-	// Check if a string contains the search term (case-insensitive)
-	function matchesSearch(text: string, term: string): boolean {
-		if (!term) return true;
-		return text.toLowerCase().includes(term.toLowerCase());
-	}
-
-	// Filter categories based on search term
-	function filterCategoriesBySearch(
-		categories: IngredientCategory[],
-		search: string
-	): IngredientCategory[] {
-		if (!search.trim()) {
-			return categories;
-		}
-
-		return categories
-			.map((category) => {
-				const filteredSubcategories: IngredientSubcategory[] = [];
-
-				for (const subcategory of category.subcategories) {
-					// Skip "Default" subcategory when matching subcategory name
-					const subcategoryMatches =
-						subcategory.label.toLowerCase() !== 'default' &&
-						matchesSearch(subcategory.label, search);
-					const filteredIngredients = subcategory.ingredients.filter((ingredient) => {
-						const titleMatches = matchesSearch(ingredient.title, search);
-						const groupMatches = ingredient.group ? matchesSearch(ingredient.group, search) : false;
-						return titleMatches || groupMatches;
-					});
-
-					// Include subcategory if:
-					// - Subcategory name matches (show all its ingredients)
-					// - Any ingredient in subcategory matches
-					if (subcategoryMatches || filteredIngredients.length > 0) {
-						filteredSubcategories.push({
-							...subcategory,
-							ingredients: subcategoryMatches ? subcategory.ingredients : filteredIngredients
-						});
-					}
-				}
-
-				// Only include category if it has matching subcategories
-				if (filteredSubcategories.length > 0) {
-					return {
-						...category,
-						subcategories: filteredSubcategories
-					};
-				}
-
-				return null;
-			})
-			.filter((category): category is IngredientCategory => category !== null);
-	}
-
 	// Filter categories by selected type or homemade filter
 	$: typeFilteredCategories = (() => {
 		if (selectedType === 'homemade') {
@@ -163,7 +138,7 @@
 	})();
 
 	// Then filter by search term
-	$: filteredCategories = filterCategoriesBySearch(typeFilteredCategories, searchTerm);
+	$: filteredCategories = filterIngredientCategoriesBySearch(typeFilteredCategories, searchTerm);
 
 	// Calculate ingredient usage counts (computed once)
 	const ingredientUsageCounts = getIngredientUsageCounts(allCocktails);

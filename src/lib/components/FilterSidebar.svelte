@@ -14,6 +14,7 @@
 	export let selectedIngredients: Ingredient[] = [];
 	export let isOpen: boolean = false;
 	export let logicMode: LogicMode = 'AND';
+	export let resultCount: number = cocktails.length;
 
 	type FilterMode = 'tags' | 'ingredients';
 	let filterMode: FilterMode = 'tags';
@@ -309,5 +310,18 @@
 				on:toggleSidebar={() => {}}
 			/>
 		{/if}
+	</div>
+
+	<!-- Footer: filters apply live, so this button only closes the sidebar -->
+	<div class="bg-white border-t border-gray-200 px-6 py-4 flex-shrink-0">
+		<p class="text-xs text-gray-500 text-center mb-2">Filters apply as you pick them.</p>
+		<button
+			on:click={closeSidebar}
+			class="w-full px-3 py-2 text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors cursor-pointer"
+		>
+			{resultCount === 0
+				? 'No matches'
+				: `Show ${resultCount} cocktail${resultCount === 1 ? '' : 's'}`}
+		</button>
 	</div>
 </div>

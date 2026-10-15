@@ -87,7 +87,7 @@ const MOONWELL: Cocktail = {
 		},
 		{
 			name: "Tippindeg's",
-			ingredients: ['TBD'],
+			ingredients: ['Sub Mountain Dew for soda water.'],
 			images: ['/images/wow/race_dwarf_male.jpg', '/images/wow/class_priest.jpg']
 		}
 	],

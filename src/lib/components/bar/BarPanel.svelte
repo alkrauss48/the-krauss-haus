@@ -3,7 +3,6 @@
 	import { fade, fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { bar } from '$lib/bar/bar.svelte';
-	import { ringer } from '$lib/bar/ring.svelte';
 	import type { BartenderKey } from '$lib/bar/bartenders';
 	import BartenderPlates from './BartenderPlates.svelte';
 	import BarTranscript from './BarTranscript.svelte';
@@ -111,12 +110,6 @@
 		};
 	});
 
-	// The one moment two characters talk to each other. Muted until the guest asks for it.
-	$effect(() => {
-		if (bar.open && bar.activity.kind === 'consulting' && ringer.enabled) ringer.start();
-		else ringer.stop();
-	});
-
 	function send() {
 		void bar.send(bar.draft);
 	}
@@ -151,47 +144,6 @@
 				<div class="mb-2.5 flex items-center justify-between">
 					<h2 class="text-[0.7rem] font-bold tracking-[0.2em] text-amber-900/70">THE BAR</h2>
 					<div class="flex items-center gap-1">
-						<button
-							type="button"
-							onclick={() => ringer.toggle()}
-							aria-pressed={ringer.enabled}
-							aria-label="Sound when the bartenders call each other"
-							title={ringer.enabled ? 'Sound on' : 'Sound off (muted)'}
-							class="cursor-pointer rounded-md p-1.5 transition-colors hover:bg-white/60 {ringer.enabled
-								? 'text-amber-800'
-								: 'text-gray-400 hover:text-gray-600'}"
-						>
-							<svg
-								class="h-4 w-4"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-								aria-hidden="true"
-							>
-								<!-- The cone, shared by both states. -->
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M11 5L6.5 9H3v6h3.5L11 19V5z"
-								/>
-								{#if ringer.enabled}
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13"
-									/>
-								{:else}
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M15.5 9.5l5 5m0-5l-5 5"
-									/>
-								{/if}
-							</svg>
-						</button>
 						<button
 							type="button"
 							onclick={() => bar.freshTab()}

@@ -18,7 +18,7 @@
 		targetABV > 0 &&
 		sourceABV > 0 &&
 		finalVolume > 0 &&
-		targetABV < sourceABV &&
+		targetABV <= sourceABV &&
 		sourceABV <= 100 &&
 		targetABV <= 100;
 
@@ -39,7 +39,7 @@
 		if (finalVolume! <= 0) return 'Volume must be greater than zero.';
 		if (targetABV <= 0 || sourceABV <= 0) return 'ABV values must be greater than zero.';
 		if (targetABV > 100 || sourceABV > 100) return 'ABV values cannot exceed 100%.';
-		if (targetABV >= sourceABV) return 'Target ABV must be lower than source ABV.';
+		if (targetABV > sourceABV) return 'Target ABV cannot be higher than source ABV.';
 		return '';
 	}
 

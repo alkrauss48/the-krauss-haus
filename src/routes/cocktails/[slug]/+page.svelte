@@ -80,11 +80,7 @@
 						<div class="flex items-start justify-between gap-3 mb-2">
 							<h1 class="min-w-0 text-4xl font-bold text-gray-800">{cocktail.title}</h1>
 							<div class="shrink-0 pt-1">
-								<CopyLinkButton
-									url={typeof window !== 'undefined' ? window.location.href : ''}
-									ariaLabel="Copy link to {cocktail.title}"
-									size="md"
-								/>
+								<CopyLinkButton ariaLabel="Copy link to {cocktail.title}" size="md" />
 							</div>
 						</div>
 						<!-- Provenance on one quiet line, so it reads as a byline rather than two more badges. -->

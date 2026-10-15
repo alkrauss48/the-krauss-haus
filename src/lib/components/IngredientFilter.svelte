@@ -11,7 +11,10 @@
 	import type { LogicMode } from '$lib/types/filters';
 	import { allIngredientCategories } from '$lib/data/all-ingredients';
 	import { matchesIngredientsLogic } from '$lib/utils/filterLogic';
-	import { getCocktailIngredientSlugs } from '$lib/utils/ingredients';
+	import {
+		filterIngredientCategoriesBySearch,
+		getCocktailIngredientSlugs
+	} from '$lib/utils/ingredients';
 
 	export let cocktails: Cocktail[] = [];
 	export let selectedIngredients: Ingredient[] = [];
@@ -57,6 +60,35 @@
 		}
 		return map;
 	})();
+
+	let searchTerm = '';
+
+	// Categories to render: matching the search, pruned to ingredients used in cocktails
+	$: visibleCategories = filterIngredientCategoriesBySearch(allIngredientCategories, searchTerm)
+		.map((category) => ({
+			...category,
+			subcategories: category.subcategories
+				.map((subcategory) => ({
+					...subcategory,
+					ingredients: subcategory.ingredients.filter((ingredient) =>
+						allIngredientSlugs.has(ingredient.slug)
+					)
+				}))
+				.filter((subcategory) => subcategory.ingredients.length > 0)
+		}))
+		.filter((category) => category.subcategories.length > 0);
+
+	// Expand every match while searching; collapse back when the search is cleared
+	let previousSearchTerm = '';
+	$: {
+		const currentSearch = searchTerm.trim();
+		if (currentSearch !== previousSearchTerm) {
+			manuallyExpandedCategories = new SvelteSet(
+				currentSearch ? visibleCategories.map((category) => category.label) : []
+			);
+			previousSearchTerm = currentSearch;
+		}
+	}
 
 	// Get all ingredients used in cocktails for a subcategory (uses cached data)
 	function getIngredientsForSubcategory(
@@ -238,8 +270,50 @@
 	}
 </script>
 
+<!-- Search -->
+<div class="px-6 pt-4">
+	<div class="relative">
+		<input
+			type="text"
+			bind:value={searchTerm}
+			placeholder="Search ingredients..."
+			aria-label="Search ingredients"
+			class="w-full px-3 py-2 pl-9 pr-9 text-sm rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-700"
+		/>
+		<svg
+			class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+			fill="none"
+			stroke="currentColor"
+			viewBox="0 0 24 24"
+		>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+			/>
+		</svg>
+		{#if searchTerm}
+			<button
+				class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer"
+				on:click={() => (searchTerm = '')}
+				aria-label="Clear search"
+			>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M6 18L18 6M6 6l12 12"
+					/>
+				</svg>
+			</button>
+		{/if}
+	</div>
+</div>
+
 <!-- Expand/Collapse All Controls -->
-<div class="px-6 pt-4 pb-2 border-b border-gray-100 flex justify-end gap-2">
+<div class="px-6 pt-3 pb-2 border-b border-gray-100 flex justify-end gap-2">
 	<button
 		class="text-xs text-gray-600 hover:text-gray-800 transition-colors duration-200 cursor-pointer underline decoration-dotted underline-offset-2"
 		on:click={expandAllCategories}
@@ -257,144 +331,140 @@
 
 <!-- Filter Categories -->
 <div class="px-6 py-4 space-y-6">
-	{#each allIngredientCategories as category (`${category.label}-${selectedIngredientsKey}`)}
+	{#each visibleCategories as category (`${category.label}-${selectedIngredientsKey}`)}
 		{@const isCategoryExpanded = expandedCategories.has(category.label)}
 		{@const selectedCount = getSelectedIngredientsCount(category)}
-		{@const hasIngredients = category.subcategories.some(
-			(sub) => getIngredientsForSubcategory(category, sub).length > 0
-		)}
 
-		{#if hasIngredients}
-			<div class="space-y-3">
-				<!-- Category Header -->
-				<div class="flex items-center justify-between">
-					<button
-						class="flex items-center gap-2 text-left group cursor-pointer"
-						on:click={() => toggleCategory(category.label)}
+		<div class="space-y-3">
+			<!-- Category Header -->
+			<div class="flex items-center justify-between">
+				<button
+					class="flex items-center gap-2 text-left group cursor-pointer"
+					on:click={() => toggleCategory(category.label)}
+				>
+					<div
+						class="w-4 h-4 rounded-sm border-2 flex items-center justify-center transition-all duration-200"
+						style="border-color: {category.color}; background-color: {selectedCount > 0
+							? category.color
+							: 'transparent'};"
 					>
-						<div
-							class="w-4 h-4 rounded-sm border-2 flex items-center justify-center transition-all duration-200"
-							style="border-color: {category.color}; background-color: {selectedCount > 0
-								? category.color
-								: 'transparent'};"
-						>
-							{#if selectedCount > 0}
-								<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-									<path
-										fill-rule="evenodd"
-										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-										clip-rule="evenodd"
-									/>
-								</svg>
+						{#if selectedCount > 0}
+							<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+								<path
+									fill-rule="evenodd"
+									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						{/if}
+					</div>
+					<h3 class="text-sm font-semibold text-gray-800 group-hover:text-gray-600">
+						{category.label}
+						{#if selectedCount > 0}
+							<span class="text-xs text-gray-500">({selectedCount})</span>
+						{/if}
+					</h3>
+					<svg
+						class="w-4 h-4 text-gray-400 transition-transform duration-200"
+						class:rotate-180={isCategoryExpanded}
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M19 9l-7 7-7-7"
+						/>
+					</svg>
+				</button>
+			</div>
+
+			<!-- Grouped Flat Layout: Subcategories as Headers, Ingredients Below -->
+			{#if isCategoryExpanded}
+				<div class="pl-6 space-y-4" transition:slide>
+					{#each category.subcategories as subcategory (`${category.label}-${subcategory.label}-${selectedIngredientsKey}`)}
+						<div class="space-y-2">
+							<!-- Subcategory Header (sticky when scrolling) -->
+							{#if subcategory.label.toLowerCase() !== 'default'}
+								<h4
+									class="text-xs font-medium text-gray-700 mb-2 sticky top-0 bg-white py-1.5 z-20 border-b border-gray-100 -mx-6 px-6"
+								>
+									{subcategory.label}
+								</h4>
 							{/if}
-						</div>
-						<h3 class="text-sm font-semibold text-gray-800 group-hover:text-gray-600">
-							{category.label}
-							{#if selectedCount > 0}
-								<span class="text-xs text-gray-500">({selectedCount})</span>
-							{/if}
-						</h3>
-						<svg
-							class="w-4 h-4 text-gray-400 transition-transform duration-200"
-							class:rotate-180={isCategoryExpanded}
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M19 9l-7 7-7-7"
-							/>
-						</svg>
-					</button>
-				</div>
 
-				<!-- Grouped Flat Layout: Subcategories as Headers, Ingredients Below -->
-				{#if isCategoryExpanded}
-					<div class="pl-6 space-y-4" transition:slide>
-						{#each category.subcategories as subcategory (`${category.label}-${subcategory.label}-${selectedIngredientsKey}`)}
-							{@const subcategoryIngredients = getIngredientsForSubcategory(category, subcategory)}
+							<!-- Ingredients (indented under subcategory) -->
+							<div class="flex flex-wrap gap-2 pl-0">
+								{#each subcategory.ingredients as ingredient (`${ingredient.slug}-${selectedIngredientsKey}`)}
+									{@const count = getIngredientCount(ingredient)}
+									{@const selected = isIngredientSelected(ingredient)}
+									{@const disabled = isIngredientDisabled(ingredient)}
+									{@const styling = getIngredientStyling(
+										category.color,
+										ingredient,
+										selected,
+										disabled
+									)}
 
-							{#if subcategoryIngredients.length > 0}
-								<div class="space-y-2">
-									<!-- Subcategory Header (sticky when scrolling) -->
-									{#if subcategory.label.toLowerCase() !== 'default'}
-										<h4
-											class="text-xs font-medium text-gray-700 mb-2 sticky top-0 bg-white py-1.5 z-20 border-b border-gray-100 -mx-6 px-6"
-										>
-											{subcategory.label}
-										</h4>
-									{/if}
-
-									<!-- Ingredients (indented under subcategory) -->
-									<div class="flex flex-wrap gap-2 pl-0">
-										{#each subcategoryIngredients as ingredient (`${ingredient.slug}-${selectedIngredientsKey}`)}
-											{@const count = getIngredientCount(ingredient)}
-											{@const selected = isIngredientSelected(ingredient)}
-											{@const disabled = isIngredientDisabled(ingredient)}
-											{@const styling = getIngredientStyling(
-												category.color,
-												ingredient,
-												selected,
-												disabled
-											)}
-
-											<button
-												class="inline-flex items-center gap-1.5 rounded-lg border-2 transition-all duration-300 transform group relative overflow-hidden py-1.5 px-2.5 text-xs"
-												class:cursor-pointer={!disabled}
-												class:cursor-not-allowed={disabled}
-												class:hover:scale-[1.02]={!disabled && !selected}
-												class:hover:shadow-lg={!disabled}
-												class:shadow-md={selected}
-												class:scale-[0.98]={disabled}
-												class:opacity-50={disabled}
-												style="
+									<button
+										class="inline-flex items-center gap-1.5 rounded-lg border-2 transition-all duration-300 transform group relative overflow-hidden py-1.5 px-2.5 text-xs"
+										class:cursor-pointer={!disabled}
+										class:cursor-not-allowed={disabled}
+										class:hover:scale-[1.02]={!disabled && !selected}
+										class:hover:shadow-lg={!disabled}
+										class:shadow-md={selected}
+										class:scale-[0.98]={disabled}
+										class:opacity-50={disabled}
+										style="
 													background-color: {styling.background};
 													border-color: {styling.border};
 													color: {styling.color};
 												"
-												{disabled}
-												on:click={(e) => toggleIngredient(ingredient, e)}
-												on:mouseenter={!disabled && !selected
-													? (e) => {
-															e.currentTarget.style.backgroundColor =
-																styling.hoverBackground || styling.background;
-															e.currentTarget.style.borderColor =
-																styling.hoverBorder || styling.border;
-														}
-													: undefined}
-												on:mouseleave={!disabled && !selected
-													? (e) => {
-															e.currentTarget.style.backgroundColor = styling.background;
-															e.currentTarget.style.borderColor = styling.border;
-														}
-													: undefined}
-											>
-												<!-- Background gradient overlay for selected state -->
-												{#if selected}
-													<div
-														class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-10"
-													></div>
-												{/if}
+										{disabled}
+										on:click={(e) => toggleIngredient(ingredient, e)}
+										on:mouseenter={!disabled && !selected
+											? (e) => {
+													e.currentTarget.style.backgroundColor =
+														styling.hoverBackground || styling.background;
+													e.currentTarget.style.borderColor = styling.hoverBorder || styling.border;
+												}
+											: undefined}
+										on:mouseleave={!disabled && !selected
+											? (e) => {
+													e.currentTarget.style.backgroundColor = styling.background;
+													e.currentTarget.style.borderColor = styling.border;
+												}
+											: undefined}
+									>
+										<!-- Background gradient overlay for selected state -->
+										{#if selected}
+											<div
+												class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-10"
+											></div>
+										{/if}
 
-												<span class="font-medium relative z-10">{ingredient.title}</span>
-												<span
-													class="text-xs px-1.5 py-0.5 rounded-full font-semibold relative z-10"
-													style="background-color: rgba(255, 255, 255, 0.2); color: inherit;"
-												>
-													{count}
-												</span>
-											</button>
-										{/each}
-									</div>
-								</div>
-							{/if}
-						{/each}
-					</div>
-				{/if}
-			</div>
-		{/if}
+										<span class="font-medium relative z-10">{ingredient.title}</span>
+										<span
+											class="text-xs px-1.5 py-0.5 rounded-full font-semibold relative z-10"
+											style="background-color: rgba(255, 255, 255, 0.2); color: inherit;"
+										>
+											{count}
+										</span>
+									</button>
+								{/each}
+							</div>
+						</div>
+					{/each}
+				</div>
+			{/if}
+		</div>
 	{/each}
+
+	{#if visibleCategories.length === 0}
+		<p class="text-sm text-gray-500 text-center py-8">
+			{searchTerm.trim() ? `No ingredients match "${searchTerm.trim()}".` : 'No ingredients found.'}
+		</p>
+	{/if}
 </div>

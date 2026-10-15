@@ -224,17 +224,17 @@
 			{#if showIntro}
 				<div class="text-center" in:fade={{ duration: 300 }}>
 					<h2 id="modal-title" class="text-xl md:text-3xl font-bold text-gray-800 mb-4">
-						Random Cocktail Picker
+						Bartender's Choice
 					</h2>
 					<p class="text-gray-600 mb-8 text-md md:text-lg leading-relaxed">
-						Ready to discover something new? We'll pick a random cocktail from our collection!
+						Can't decide? Let us pick something from the menu for you.
 					</p>
 					<button
 						class="cursor-pointer px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
 						style="background: linear-gradient(135deg, #fb923c 0%, #ef4444 50%, #ec4899 100%);"
 						on:click={startCountdown}
 					>
-						Pick my Cocktail
+						Surprise Me
 					</button>
 				</div>
 			{/if}
@@ -343,7 +343,7 @@
 						style="background: linear-gradient(135deg, #9333ea 0%, #be123c 50%, #ec4899 100%);"
 						on:click={pickAnother}
 					>
-						Pick Another
+						Try Another
 					</button>
 				</div>
 			{/if}

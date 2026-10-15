@@ -50,11 +50,7 @@
 		<header class="text-center mb-16" in:fly={{ y: 20, duration: 400, delay: 400 }}>
 			<div class="flex items-center justify-center gap-3 mb-4">
 				<h1 class="text-4xl font-bold text-gray-800">{collection.title}</h1>
-				<CopyLinkButton
-					url={typeof window !== 'undefined' ? window.location.href : ''}
-					ariaLabel="Copy link to {collection.title} collection"
-					size="md"
-				/>
+				<CopyLinkButton ariaLabel="Copy link to {collection.title} collection" size="md" />
 			</div>
 			<p class="text-gray-600 max-w-2xl mx-auto">{collection.description}</p>
 		</header>
