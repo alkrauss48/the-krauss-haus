@@ -109,6 +109,7 @@ import PIRANHA_POOL from '$lib/data/cocktails/piranha-pool';
 import PLANTERS_PUNCH from '$lib/data/cocktails/planters-punch';
 import PLUNDERERS_PUNCH from '$lib/data/cocktails/plunderers-punch';
 import PORT_LIGHT from '$lib/data/cocktails/port-light';
+import PUMPKIN_BUGGY from '$lib/data/cocktails/pumpkin-buggy';
 import QUEENS_PARK_SWIZZLE from '$lib/data/cocktails/queens-park-swizzle';
 import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
@@ -258,6 +259,7 @@ export const allCocktails: Cocktail[] = [
 	PLANTERS_PUNCH,
 	PLUNDERERS_PUNCH,
 	PORT_LIGHT,
+	PUMPKIN_BUGGY,
 	QUEENS_PARK_SWIZZLE,
 	RADLER,
 	RAMOS_GIN_FIZZ,
