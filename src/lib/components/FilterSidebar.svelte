@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onDestroy } from 'svelte';
+	import { browser } from '$app/environment';
 	import { fade } from 'svelte/transition';
 	import TagFilter from './TagFilter.svelte';
 	import IngredientFilter from './IngredientFilter.svelte';
@@ -8,6 +9,7 @@
 	import type { Cocktail } from '$lib/types/cocktails';
 	import type { LogicMode } from '$lib/types/filters';
 	import { allIngredientCategories } from '$lib/data/all-ingredients';
+	import { lockPageScroll } from '$lib/utils/scroll-lock';
 
 	export let cocktails: Cocktail[] = [];
 	export let selectedTags: Tag[] = [];
@@ -45,6 +47,21 @@
 	$: if (!isOpen) {
 		hasInitializedMode = false;
 	}
+
+	// Hold the page still while the sidebar is open, so swipes on it never scroll the cocktails behind
+	let unlockPageScroll: (() => void) | null = null;
+	$: if (browser) syncPageScrollLock(isOpen);
+
+	function syncPageScrollLock(open: boolean): void {
+		if (open && !unlockPageScroll) {
+			unlockPageScroll = lockPageScroll();
+		} else if (!open && unlockPageScroll) {
+			unlockPageScroll();
+			unlockPageScroll = null;
+		}
+	}
+
+	onDestroy(() => unlockPageScroll?.());
 
 	// Handle mode change and clear the other filter type
 	function setFilterMode(mode: FilterMode): void {
@@ -129,7 +146,7 @@
 <!-- Backdrop -->
 {#if isOpen}
 	<div
-		class="fixed inset-0 bg-black/50 z-40 cursor-pointer"
+		class="fixed inset-0 bg-black/50 z-40 cursor-pointer overscroll-none touch-none"
 		role="button"
 		tabindex="-1"
 		aria-label="Close filter sidebar"
@@ -141,7 +158,7 @@
 
 <!-- Sidebar -->
 <div
-	class="fixed top-0 right-0 h-full w-96 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 flex flex-col"
+	class="fixed top-0 right-0 h-[100dvh] w-96 max-w-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 flex flex-col"
 	class:translate-x-0={isOpen}
 	class:translate-x-full={!isOpen}
 	inert={!isOpen}
@@ -292,7 +309,7 @@
 	{/if}
 
 	<!-- Filter Content -->
-	<div class="flex-1 overflow-y-auto" bind:this={filterContentElement}>
+	<div class="flex-1 overflow-y-auto overscroll-contain" bind:this={filterContentElement}>
 		{#if filterMode === 'tags'}
 			<TagFilter
 				{cocktails}
@@ -313,7 +330,9 @@
 	</div>
 
 	<!-- Footer: filters apply live, so this button only closes the sidebar -->
-	<div class="bg-white border-t border-gray-200 px-6 py-4 flex-shrink-0">
+	<div
+		class="bg-white border-t border-gray-200 px-6 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] flex-shrink-0"
+	>
 		<p class="text-xs text-gray-500 text-center mb-2">Filters apply as you pick them.</p>
 		<button
 			on:click={closeSidebar}

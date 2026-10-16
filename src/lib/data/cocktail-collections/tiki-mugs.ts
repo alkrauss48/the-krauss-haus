@@ -9,6 +9,7 @@ import AULANI_TROPICAL_MAI_TAI from '$lib/data/cocktails/aulani-tropical-mai-tai
 import JINGLE_BIRD from '$lib/data/cocktails/jingle-bird';
 import SIPPIN_SANTA from '$lib/data/cocktails/sippin-santa';
 import YULE_TIDE from '$lib/data/cocktails/yule-tide';
+import PUMPKIN_BUGGY from '$lib/data/cocktails/pumpkin-buggy';
 
 const TIKI_MUGS: CocktailCollection = {
 	slug: 'tiki-mugs',
@@ -28,7 +29,7 @@ const TIKI_MUGS: CocktailCollection = {
 		},
 		{
 			heading: 'Halloween',
-			cocktails: [TIDAL_TERROR, PINEAPPLE_POTION]
+			cocktails: [TIDAL_TERROR, PINEAPPLE_POTION, PUMPKIN_BUGGY]
 		},
 		{
 			heading: 'Christmas',

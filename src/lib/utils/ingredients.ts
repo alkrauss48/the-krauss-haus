@@ -48,13 +48,20 @@ function extractIngredientSlugs(ingredients: (string | IngredientItem)[] | undef
 	return slugs;
 }
 
+// Cocktail data is static, so each cocktail's slug set is built once. The filters sidebar asks
+// for it once per cocktail for every ingredient pill it renders.
+const cocktailIngredientSlugsCache = new WeakMap<Cocktail, ReadonlySet<string>>();
+
 /**
  * Get all ingredient slugs from a cocktail (including variants).
  * Returns a Set of unique ingredient slugs.
  * This ensures we don't double count an ingredient if it appears in both
  * the main ingredients and a variant.
  */
-export function getCocktailIngredientSlugs(cocktail: Cocktail): Set<string> {
+export function getCocktailIngredientSlugs(cocktail: Cocktail): ReadonlySet<string> {
+	const cached = cocktailIngredientSlugsCache.get(cocktail);
+	if (cached) return cached;
+
 	const slugs = new Set<string>();
 
 	// Add slugs from main ingredients
@@ -69,6 +76,7 @@ export function getCocktailIngredientSlugs(cocktail: Cocktail): Set<string> {
 		}
 	}
 
+	cocktailIngredientSlugsCache.set(cocktail, slugs);
 	return slugs;
 }
 

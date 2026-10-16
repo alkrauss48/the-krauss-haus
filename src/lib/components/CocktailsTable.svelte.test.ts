@@ -132,6 +132,26 @@ describe('CocktailsTable', () => {
 		expect(sidebar).toHaveClass('translate-x-full');
 	});
 
+	it('holds the page still while the filter sidebar is open', async () => {
+		document.body.style.overflow = 'auto';
+		const { unmount } = renderTable({ showFilters: true });
+		const filtersButton = screen.getByRole('button', { name: /^Filters/ });
+
+		await fireEvent.click(filtersButton);
+		expect(document.documentElement.style.overflow).toBe('hidden');
+		expect(document.body.style.overflow).toBe('hidden');
+
+		await fireEvent.click(screen.getByRole('button', { name: 'Close filters' }));
+		expect(document.documentElement.style.overflow).toBe('');
+		expect(document.body.style.overflow).toBe('auto');
+
+		// Leaving the page with the sidebar open must not strand the page unscrollable
+		await fireEvent.click(filtersButton);
+		unmount();
+		expect(document.body.style.overflow).toBe('auto');
+		document.body.style.overflow = '';
+	});
+
 	it('hides the cost column until cost mode is on', () => {
 		renderTable();
 		expect(screen.queryByRole('button', { name: /Cost/ })).not.toBeInTheDocument();

@@ -60,6 +60,7 @@
 			"nautilus",
 			"tidal-terror",
 			"pineapple-potion",
+			"pumpkin-buggy",
 			"jingle-bird",
 			"sippin-santa",
 			"yule-tide"
@@ -78,7 +79,8 @@
 				"heading": "Halloween",
 				"cocktail_slugs": [
 					"tidal-terror",
-					"pineapple-potion"
+					"pineapple-potion",
+					"pumpkin-buggy"
 				]
 			},
 			{

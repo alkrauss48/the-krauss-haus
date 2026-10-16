@@ -20,9 +20,6 @@
 	export let selectedIngredients: Ingredient[] = [];
 	export let logicMode: LogicMode = 'AND';
 
-	// Force reactivity when selections or logic mode change
-	$: selectedIngredientsKey = `${selectedIngredients.map((i) => i.slug).join(',')}-${logicMode}`;
-
 	const dispatch = createEventDispatcher<{
 		filtersChanged: { ingredients: Ingredient[] };
 		toggleSidebar: void;
@@ -121,14 +118,22 @@
 		return result;
 	})();
 
-	// Calculate cocktail count for an ingredient given current filter state
-	function getIngredientCount(ingredient: Ingredient): number {
-		// If this ingredient is already selected, calculate count with current logic mode
-		if (selectedIngredientSlugs.has(ingredient.slug)) {
-			// Recalculate filtered cocktails with current logic mode to ensure reactivity
-			return cocktails.filter((cocktail) => {
-				return matchesIngredientsLogic(cocktail, selectedIngredients, logicMode);
-			}).length;
+	// Cocktails matching the current selection: the count shown on every selected ingredient
+	$: currentCount = cocktails.filter((cocktail) =>
+		matchesIngredientsLogic(cocktail, selectedIngredients, logicMode)
+	).length;
+
+	// Calculate cocktail count for an ingredient given current filter state. The filter state is
+	// passed in rather than read from the component, so the template re-runs it when it changes.
+	function getIngredientCount(
+		ingredient: Ingredient,
+		cocktails: Cocktail[],
+		selectedIngredients: Ingredient[],
+		logicMode: LogicMode
+	): number {
+		// If this ingredient is already selected, it shows the current result
+		if (selectedIngredients.some((selected) => selected.slug === ingredient.slug)) {
+			return currentCount;
 		}
 
 		// If not selected, show what the count would be if we added this ingredient
@@ -152,7 +157,7 @@
 		}
 
 		// Check what would happen if we added this ingredient to the current selection
-		return getIngredientCount(ingredient) === 0;
+		return getIngredientCount(ingredient, cocktails, selectedIngredients, logicMode) === 0;
 	}
 
 	// Toggle ingredient selection
@@ -188,11 +193,16 @@
 	}
 
 	// Get count of selected ingredients in category
-	function getSelectedIngredientsCount(category: IngredientCategory): number {
+	function getSelectedIngredientsCount(
+		category: IngredientCategory,
+		selectedIngredientSlugs: Set<string>
+	): number {
 		let count = 0;
 		for (const subcategory of category.subcategories) {
 			const ingredients = getIngredientsForSubcategory(category, subcategory);
-			count += ingredients.filter((ingredient) => isIngredientSelected(ingredient)).length;
+			count += ingredients.filter((ingredient) =>
+				selectedIngredientSlugs.has(ingredient.slug)
+			).length;
 		}
 		return count;
 	}
@@ -278,7 +288,7 @@
 			bind:value={searchTerm}
 			placeholder="Search ingredients..."
 			aria-label="Search ingredients"
-			class="w-full px-3 py-2 pl-9 pr-9 text-sm rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-700"
+			class="w-full px-3 py-2 pl-9 pr-9 text-base pointer-fine:text-sm rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-700"
 		/>
 		<svg
 			class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
@@ -331,9 +341,9 @@
 
 <!-- Filter Categories -->
 <div class="px-6 py-4 space-y-6">
-	{#each visibleCategories as category (`${category.label}-${selectedIngredientsKey}`)}
+	{#each visibleCategories as category (category.label)}
 		{@const isCategoryExpanded = expandedCategories.has(category.label)}
-		{@const selectedCount = getSelectedIngredientsCount(category)}
+		{@const selectedCount = getSelectedIngredientsCount(category, selectedIngredientSlugs)}
 
 		<div class="space-y-3">
 			<!-- Category Header -->
@@ -384,7 +394,7 @@
 			<!-- Grouped Flat Layout: Subcategories as Headers, Ingredients Below -->
 			{#if isCategoryExpanded}
 				<div class="pl-6 space-y-4" transition:slide>
-					{#each category.subcategories as subcategory (`${category.label}-${subcategory.label}-${selectedIngredientsKey}`)}
+					{#each category.subcategories as subcategory (subcategory.label)}
 						<div class="space-y-2">
 							<!-- Subcategory Header (sticky when scrolling) -->
 							{#if subcategory.label.toLowerCase() !== 'default'}
@@ -397,10 +407,15 @@
 
 							<!-- Ingredients (indented under subcategory) -->
 							<div class="flex flex-wrap gap-2 pl-0">
-								{#each subcategory.ingredients as ingredient (`${ingredient.slug}-${selectedIngredientsKey}`)}
-									{@const count = getIngredientCount(ingredient)}
-									{@const selected = isIngredientSelected(ingredient)}
-									{@const disabled = isIngredientDisabled(ingredient)}
+								{#each subcategory.ingredients as ingredient (ingredient.slug)}
+									{@const count = getIngredientCount(
+										ingredient,
+										cocktails,
+										selectedIngredients,
+										logicMode
+									)}
+									{@const selected = selectedIngredientSlugs.has(ingredient.slug)}
+									{@const disabled = !selected && count === 0}
 									{@const styling = getIngredientStyling(
 										category.color,
 										ingredient,

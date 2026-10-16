@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { SvelteSet } from 'svelte/reactivity';
+	import { SvelteSet, SvelteMap } from 'svelte/reactivity';
 	import { slide } from 'svelte/transition';
-	import type { Tag, TagCategory } from '$lib/types/tags';
+	import type { Tag } from '$lib/types/tags';
 	import type { Cocktail } from '$lib/types/cocktails';
 	import type { LogicMode } from '$lib/types/filters';
 	import { allTagCategories } from '$lib/data/all-tags';
@@ -11,9 +11,6 @@
 	export let cocktails: Cocktail[] = [];
 	export let selectedTags: Tag[] = [];
 	export let logicMode: LogicMode = 'AND';
-
-	// Force reactivity when selections or logic mode change
-	$: selectedTagsKey = `${selectedTags.map((t) => t.label).join(',')}-${logicMode}`;
 
 	const dispatch = createEventDispatcher<{
 		filtersChanged: { tags: Tag[] };
@@ -29,48 +26,63 @@
 		allDisplayCategories.length > 0 ? allDisplayCategories.map((cat) => cat.label) : []
 	);
 
-	// Get tags for a category, sorted by order
-	function getTagsForCategory(category: TagCategory): Tag[] {
-		const allTags = cocktails.flatMap((cocktail) => cocktail.tags || []);
-		const categoryTags = allTags.filter((tag) => tag.category.label === category.label);
+	// Tags used by the cocktails, grouped by category label and sorted by order.
+	// Computed once when cocktails change.
+	$: tagsByCategory = groupTagsByCategory(cocktails);
 
-		// Remove duplicates and sort by order
-		const uniqueTags = Array.from(new Map(categoryTags.map((tag) => [tag.label, tag])).values());
-		return uniqueTags.sort((a, b) => a.order - b.order);
-	}
-
-	// Calculate cocktail count for a tag given current filter state
-	function getTagCount(tag: Tag): number {
-		// If this tag is already selected, calculate count with current logic mode
-		if (selectedTags.find((t) => t.label === tag.label)) {
-			// Recalculate filtered cocktails with current logic mode to ensure reactivity
-			return cocktails.filter((cocktail) => {
-				return matchesTagsLogic(cocktail, selectedTags, logicMode);
-			}).length;
+	function groupTagsByCategory(cocktails: Cocktail[]): Map<string, Tag[]> {
+		const uniqueTags = new SvelteMap<string, Tag>();
+		for (const cocktail of cocktails) {
+			for (const tag of cocktail.tags || []) uniqueTags.set(tag.label, tag);
 		}
 
-		// If not selected, show what the count would be if we added this tag
-		const hypotheticalTags = [...selectedTags, tag];
-
-		return cocktails.filter((cocktail) => {
-			return matchesTagsLogic(cocktail, hypotheticalTags, logicMode);
-		}).length;
+		const groups = new SvelteMap<string, Tag[]>();
+		for (const tag of [...uniqueTags.values()].sort((a, b) => a.order - b.order)) {
+			const group = groups.get(tag.category.label) ?? [];
+			group.push(tag);
+			groups.set(tag.category.label, group);
+		}
+		return groups;
 	}
 
-	// Check if a tag is selected
-	function isTagSelected(tag: Tag): boolean {
-		return selectedTags.some((selectedTag) => selectedTag.label === tag.label);
+	$: selectedTagLabels = new Set(selectedTags.map((tag) => tag.label));
+
+	// Cocktail count per tag label: the current result for a selected tag, or what the result
+	// would be if an unselected tag were added. Computed once per selection or logic change.
+	$: tagCounts = countTags(cocktails, tagsByCategory, selectedTags, logicMode);
+
+	function countTags(
+		cocktails: Cocktail[],
+		tagsByCategory: Map<string, Tag[]>,
+		selectedTags: Tag[],
+		logicMode: LogicMode
+	): Map<string, number> {
+		const currentCount = cocktails.filter((cocktail) =>
+			matchesTagsLogic(cocktail, selectedTags, logicMode)
+		).length;
+		const selectedLabels = new Set(selectedTags.map((tag) => tag.label));
+
+		const counts = new SvelteMap<string, number>();
+		for (const tags of tagsByCategory.values()) {
+			for (const tag of tags) {
+				if (selectedLabels.has(tag.label)) {
+					counts.set(tag.label, currentCount);
+					continue;
+				}
+				const hypotheticalTags = [...selectedTags, tag];
+				counts.set(
+					tag.label,
+					cocktails.filter((cocktail) => matchesTagsLogic(cocktail, hypotheticalTags, logicMode))
+						.length
+				);
+			}
+		}
+		return counts;
 	}
 
 	// Check if a tag should be disabled (no cocktails would remain if selected)
 	function isTagDisabled(tag: Tag): boolean {
-		// If this tag is already selected, it should never be disabled
-		if (isTagSelected(tag)) {
-			return false;
-		}
-
-		// Check what would happen if we added this tag to the current selection
-		return getTagCount(tag) === 0;
+		return !selectedTagLabels.has(tag.label) && (tagCounts.get(tag.label) ?? 0) === 0;
 	}
 
 	// Toggle tag selection
@@ -80,7 +92,7 @@
 			return;
 		}
 
-		if (isTagSelected(tag)) {
+		if (selectedTagLabels.has(tag.label)) {
 			selectedTags = selectedTags.filter((selectedTag) => selectedTag.label !== tag.label);
 		} else {
 			selectedTags = [...selectedTags, tag];
@@ -98,12 +110,6 @@
 
 		// Note: shouldn't have to reassign it here, but it doesn't work unless I do
 		expandedCategories = new SvelteSet(expandedCategories);
-	}
-
-	// Get count of selected tags in category
-	function getSelectedTagsCount(category: TagCategory): number {
-		const categoryTags = getTagsForCategory(category);
-		return categoryTags.filter((tag) => isTagSelected(tag)).length;
 	}
 
 	// Helper function to convert hex color to rgba
@@ -146,10 +152,10 @@
 
 <!-- Filter Categories -->
 <div class="px-6 py-4 space-y-6">
-	{#each allDisplayCategories as category (`${category.label}-${selectedTagsKey}`)}
+	{#each allDisplayCategories as category (category.label)}
 		{@const isExpanded = expandedCategories.has(category.label)}
-		{@const categoryTags = getTagsForCategory(category)}
-		{@const selectedCount = getSelectedTagsCount(category)}
+		{@const categoryTags = tagsByCategory.get(category.label) ?? []}
+		{@const selectedCount = categoryTags.filter((tag) => selectedTagLabels.has(tag.label)).length}
 
 		{#if categoryTags.length > 0}
 			<div class="space-y-3">
@@ -201,10 +207,10 @@
 				<!-- Category Items (Tags) -->
 				{#if isExpanded}
 					<div class="flex flex-wrap gap-2 pl-6" transition:slide>
-						{#each categoryTags as tag (`${tag.label}-${selectedTagsKey}`)}
-							{@const count = getTagCount(tag)}
-							{@const selected = isTagSelected(tag)}
-							{@const disabled = isTagDisabled(tag)}
+						{#each categoryTags as tag (tag.label)}
+							{@const count = tagCounts.get(tag.label) ?? 0}
+							{@const selected = selectedTagLabels.has(tag.label)}
+							{@const disabled = !selected && count === 0}
 							{@const styling = getTagStyling(tag, selected, disabled)}
 
 							<button
