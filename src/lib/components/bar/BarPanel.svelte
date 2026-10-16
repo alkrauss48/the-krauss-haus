@@ -3,6 +3,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { bar } from '$lib/bar/bar.svelte';
+	import { lockPageScroll } from '$lib/utils/scroll-lock';
 	import type { BartenderKey } from '$lib/bar/bartenders';
 	import BartenderPlates from './BartenderPlates.svelte';
 	import BarTranscript from './BarTranscript.svelte';
@@ -74,27 +75,11 @@
 		}
 	});
 
-	// Hold the page still while the drawer is up. Without it, a swipe that starts on the header
-	// or composer — or runs past the end of the transcript — scrolls the menu behind instead.
-	// The scrollbar's width is padded back so the page does not jump sideways on desktop.
+	// Hold the page still while the drawer is up, so a swipe on the header or composer — or past
+	// the end of the transcript — does not scroll the menu behind.
 	$effect(() => {
 		if (!browser || !bar.open) return;
-		const html = document.documentElement;
-		const body = document.body;
-		const gutter = window.innerWidth - html.clientWidth;
-		const previous = {
-			htmlOverflow: html.style.overflow,
-			bodyOverflow: body.style.overflow,
-			bodyPadding: body.style.paddingRight
-		};
-		html.style.overflow = 'hidden';
-		body.style.overflow = 'hidden';
-		if (gutter > 0) body.style.paddingRight = `${gutter}px`;
-		return () => {
-			html.style.overflow = previous.htmlOverflow;
-			body.style.overflow = previous.bodyOverflow;
-			body.style.paddingRight = previous.bodyPadding;
-		};
+		return lockPageScroll();
 	});
 
 	// A live countdown, so a rate-limited guest sees the door reopening rather than a number
