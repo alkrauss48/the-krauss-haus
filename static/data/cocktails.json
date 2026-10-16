@@ -9662,7 +9662,7 @@
 		"slug": "pumpkin-buggy",
 		"title": "Pumpkin Buggy",
 		"subtitle": null,
-		"description": "Jamaican rum, apple strudel liqueur, apple cider, lemon, dark berry liqueur, licor 43, black walnut.",
+		"description": "Jamaican rum, blended rum, apple strudel liqueur, apple cider, lemon, dark berry liqueur, licor 43, black walnut.",
 		"url": "/cocktails/pumpkin-buggy",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/pumpkin-buggy.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/pumpkin-buggy.webp",
@@ -9682,6 +9682,12 @@
 			},
 			{
 				"kind": "ingredient",
+				"slug": "planteray-oftd",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
 				"slug": "apple-strudel-liqueuer",
 				"amount": ".5oz",
 				"label": null
@@ -9689,7 +9695,7 @@
 			{
 				"kind": "ingredient",
 				"slug": "apple-cider",
-				"amount": "1oz",
+				"amount": "2oz",
 				"label": null
 			},
 			{

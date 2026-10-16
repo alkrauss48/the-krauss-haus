@@ -9,7 +9,7 @@ import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
 const PUMPKIN_BUGGY: Cocktail = {
 	title: 'Pumpkin Buggy',
 	description:
-		'Jamaican rum, apple strudel liqueur, apple cider, lemon, dark berry liqueur, licor 43, black walnut.',
+		'Jamaican rum, blended rum, apple strudel liqueur, apple cider, lemon, dark berry liqueur, licor 43, black walnut.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/pumpkin-buggy.webp',
 	thumbnailImagePath:
@@ -27,10 +27,14 @@ const PUMPKIN_BUGGY: Cocktail = {
 		},
 		{
 			amount: '.5oz',
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
+		},
+		{
+			amount: '.5oz',
 			ingredient: Ingredients.Liqueurs.APPLE_STRUDEL_LIQUEUER
 		},
 		{
-			amount: '1oz',
+			amount: '2oz',
 			ingredient: Ingredients.Mixers.APPLE_CIDER
 		},
 		{
