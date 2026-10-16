@@ -16,7 +16,7 @@
 
 	let header: HTMLElement;
 	let menuToggle: HTMLButtonElement;
-	const triggers: Record<string, HTMLButtonElement> = {};
+	const triggers = $state<Record<string, HTMLButtonElement>>({});
 
 	function closeAll() {
 		openGroup = null;
