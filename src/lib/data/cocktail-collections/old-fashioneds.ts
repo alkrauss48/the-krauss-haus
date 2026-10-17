@@ -11,6 +11,12 @@ import SAZERAC from '$lib/data/cocktails/sazerac';
 import TORONTO from '$lib/data/cocktails/toronto';
 import TI_PUNCH from '$lib/data/cocktails/ti-punch';
 import CARAJILLO_OLD_FASHIONED from '$lib/data/cocktails/carajillo-old-fashioned';
+import FANCY_FREE from '$lib/data/cocktails/fancy-free';
+import REVOLVER from '$lib/data/cocktails/revolver';
+import MONTE_CARLO from '$lib/data/cocktails/monte-carlo';
+import JAGER_OLD_FASHIONED from '$lib/data/cocktails/jager-old-fashioned';
+import WISCONSIN_OLD_FASHIONED from '$lib/data/cocktails/wisconsin-old-fashioned';
+import RUM_OLD_FASHIONED from '$lib/data/cocktails/rum-old-fashioned';
 
 const OLD_FASHIONEDS: CocktailCollection = {
 	slug: 'old-fashioneds',
@@ -25,15 +31,28 @@ const OLD_FASHIONEDS: CocktailCollection = {
 	groups: [
 		{
 			heading: 'Whiskey',
-			cocktails: [OLD_FASHIONED, GODFATHER, TORONTO]
+			cocktails: [OLD_FASHIONED, FANCY_FREE, REVOLVER, MONTE_CARLO, GODFATHER, TORONTO]
 		},
 		{
 			heading: 'Whiskey & Other Spirits',
-			cocktails: [AMERICAN_TRILOGY, CONFERENCE, SAZERAC, CARAJILLO_OLD_FASHIONED]
+			cocktails: [
+				AMERICAN_TRILOGY,
+				CONFERENCE,
+				SAZERAC,
+				CARAJILLO_OLD_FASHIONED,
+				JAGER_OLD_FASHIONED
+			]
 		},
 		{
 			heading: 'Other Spirits',
-			cocktails: [OAXACA_OLD_FASHIONED, IMPROVED_HOLLAND_GIN_COCKTAIL, CORN_N_OIL, TI_PUNCH]
+			cocktails: [
+				RUM_OLD_FASHIONED,
+				WISCONSIN_OLD_FASHIONED,
+				OAXACA_OLD_FASHIONED,
+				IMPROVED_HOLLAND_GIN_COCKTAIL,
+				CORN_N_OIL,
+				TI_PUNCH
+			]
 		}
 	]
 };

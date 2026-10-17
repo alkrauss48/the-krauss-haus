@@ -35,46 +35,6 @@ const OLD_FASHIONED: Cocktail = {
 			ingredient: Ingredients.Citrus.ORANGE_GARNISH
 		}
 	],
-	variations: [
-		{
-			name: 'Muddled',
-			ingredients: [
-				{
-					label: 'Muddle an orange slice.',
-					ingredient: Ingredients.Citrus.ORANGE_GARNISH
-				},
-				{
-					label: 'Muddle a maraschino cherry, and garnish with an extra cherry.',
-					ingredient: Ingredients.Other.MARASCHINO_CHERRY
-				}
-			],
-			images: []
-		},
-		{
-			name: 'Rum',
-			ingredients: [
-				{
-					label: 'Sub aged appleton estate 12 year for bourbon.',
-					ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_12_YEAR
-				}
-			],
-			images: []
-		},
-		{
-			name: 'Spiced',
-			ingredients: [
-				{
-					label: 'Sub rye whiskey for bourbon.',
-					ingredient: Ingredients.BaseSpirits.RITTENHOUSE
-				},
-				{
-					label: 'Add 1/4oz of allspice dram.',
-					ingredient: Ingredients.Liqueurs.ALLSPICE_DRAM
-				}
-			],
-			images: []
-		}
-	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.Technique.BUILT,

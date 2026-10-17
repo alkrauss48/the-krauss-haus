@@ -7,12 +7,18 @@
 		"image_url": null,
 		"cocktail_slugs": [
 			"old-fashioned",
+			"fancy-free",
+			"revolver",
+			"monte-carlo",
 			"godfather",
 			"toronto",
 			"american-trilogy",
 			"conference",
 			"sazerac",
 			"carajillo-old-fashioned",
+			"jager-old-fashioned",
+			"rum-old-fashioned",
+			"wisconsin-old-fashioned",
 			"oaxaca-old-fashioned",
 			"improved-holland-gin-cocktail",
 			"corn-n-oil",
@@ -23,6 +29,9 @@
 				"heading": "Whiskey",
 				"cocktail_slugs": [
 					"old-fashioned",
+					"fancy-free",
+					"revolver",
+					"monte-carlo",
 					"godfather",
 					"toronto"
 				]
@@ -33,12 +42,15 @@
 					"american-trilogy",
 					"conference",
 					"sazerac",
-					"carajillo-old-fashioned"
+					"carajillo-old-fashioned",
+					"jager-old-fashioned"
 				]
 			},
 			{
 				"heading": "Other Spirits",
 				"cocktail_slugs": [
+					"rum-old-fashioned",
+					"wisconsin-old-fashioned",
 					"oaxaca-old-fashioned",
 					"improved-holland-gin-cocktail",
 					"corn-n-oil",
