@@ -119,7 +119,7 @@ const ALLSPICE_DRAM: Ingredient = {
 const LICOR_43: Ingredient = {
 	title: 'Licor 43',
 	slug: 'licor-43',
-	costPerOz: 30 / 25
+	costPerOz: 35 / 25
 };
 const MAMA_JUANA: Ingredient = {
 	title: 'Mama Juana',

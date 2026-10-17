@@ -1,5 +1,5 @@
 import { iceLabels } from '$lib/enums/ice';
-import { methodLabels } from '$lib/enums/methods';
+import { CocktailMethod, methodLabels } from '$lib/enums/methods';
 import { servedInLabels } from '$lib/enums/served-in';
 import type { Cocktail } from '$lib/types/cocktails';
 
@@ -10,20 +10,26 @@ export function buildServingSentence(cocktail: Cocktail): string | null {
 		parts.push(methodLabels[cocktail.method]);
 	}
 
+	// A blended drink's ice goes into the blender, so the method label already covers it and
+	// the glass reads as a continuation of it ("Fully blended with ice, in a tiki mug").
+	const isBlended = cocktail.method === CocktailMethod.Blended;
+
 	const servingPieces: string[] = [];
-	if (cocktail.ice) {
+	if (cocktail.ice && !isBlended) {
 		servingPieces.push(iceLabels[cocktail.ice]);
 	}
 	if (cocktail.servedIn) {
 		servingPieces.push(`in ${servedInLabels[cocktail.servedIn]}`);
 	}
 
+	if (cocktail.hasStraw) {
+		servingPieces.push('with a straw');
+	}
+
 	let servingClause = '';
 	if (servingPieces.length > 0) {
-		servingClause = `served ${servingPieces.join(' ')}`;
-	}
-	if (cocktail.hasStraw) {
-		servingClause = servingClause ? `${servingClause} with a straw` : 'served with a straw';
+		const pieces = servingPieces.join(' ');
+		servingClause = isBlended ? pieces : `served ${pieces}`;
 	}
 
 	if (servingClause) {

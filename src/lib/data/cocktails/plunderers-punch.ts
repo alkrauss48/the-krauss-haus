@@ -7,7 +7,7 @@ import { Ice } from '$lib/enums/ice';
 
 const PLUNDERERS_PUNCH: Cocktail = {
 	title: "Plunderer's Punch",
-	description: 'Jamaican rum, dark berry liqueur, lime, vanilla, angostura bitters.',
+	description: 'Jamaican rum, dark berry liqueur, lime, licor 43, vanilla, angostura bitters.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/plunderers-punch.webp',
 	thumbnailImagePath:
@@ -31,8 +31,8 @@ const PLUNDERERS_PUNCH: Cocktail = {
 			ingredient: Ingredients.Citrus.LIME
 		},
 		{
-			amount: '.5oz',
-			ingredient: Ingredients.Syrups.RICH_SIMPLE_SYRUP
+			amount: '.25oz',
+			ingredient: Ingredients.Liqueurs.LICOR_43
 		},
 		{
 			amount: '1 dash',
