@@ -1433,6 +1433,63 @@
 		"variations": []
 	},
 	{
+		"slug": "carajillo",
+		"title": "Carajillo",
+		"subtitle": null,
+		"description": "Licor 43, espresso.",
+		"url": "/cocktails/carajillo",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/carajillo.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/carajillo.webp",
+		"method": "Shaken",
+		"served_in": "Double Rocks Glass",
+		"ice": "Large Cube",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "licor-43",
+				"amount": "1.5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "espresso",
+				"amount": "1.5oz",
+				"label": null
+			}
+		],
+		"tags": [
+			{
+				"label": "Decadent",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Folk",
+				"category": "Origin"
+			},
+			{
+				"label": "Lower Alcohol",
+				"category": "Alcohol Level"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Complex Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "carajillo-old-fashioned",
 		"title": "Carajillo Old Fashioned",
 		"subtitle": null,
