@@ -35,7 +35,7 @@ const PIRANHA_POOL: Cocktail = {
 			ingredient: Ingredients.Other.CREAM_OF_COCONUT
 		},
 		{
-			label: '4 Strawberries',
+			label: '4 Strawberries (medium-sized)',
 			ingredient: Ingredients.Other.STRAWBERRY
 		},
 		{

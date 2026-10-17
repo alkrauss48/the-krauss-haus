@@ -17,6 +17,7 @@ import BRAMBLE from '$lib/data/cocktails/bramble';
 import BRANDY_ALEXANDER from '$lib/data/cocktails/brandy-alexander';
 import BRANDY_CRUSTA from '$lib/data/cocktails/brandy-crusta';
 import CAIPIRINHA from '$lib/data/cocktails/caipirinha';
+import CARAJILLO from '$lib/data/cocktails/carajillo';
 import CARAJILLO_OLD_FASHIONED from '$lib/data/cocktails/carajillo-old-fashioned';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import CANELAZO from '$lib/data/cocktails/canelazo';
@@ -43,6 +44,7 @@ import DR_FUNK from '$lib/data/cocktails/dr-funk';
 import EL_DIABLO from '$lib/data/cocktails/el-diablo';
 import EL_PRESIDENTE from '$lib/data/cocktails/el-presidente';
 import ESPRESSO_MARTINI from '$lib/data/cocktails/espresso-martini';
+import FANCY_FREE from '$lib/data/cocktails/fancy-free';
 import FERNET_CON_COCA from '$lib/data/cocktails/fernet-con-coca';
 import FORBIDDEN_FRUIT from '$lib/data/cocktails/forbidden-fruit';
 import FOREST_SPIRIT from '$lib/data/cocktails/forest-spirit';
@@ -65,6 +67,7 @@ import HURRICANE from '$lib/data/cocktails/hurricane';
 import IMPROVED_HOLLAND_GIN_COCKTAIL from '$lib/data/cocktails/improved-holland-gin-cocktail';
 import IRON_RANGER from '$lib/data/cocktails/iron-ranger';
 import JACK_ROSE from '$lib/data/cocktails/jack-rose';
+import JAGER_OLD_FASHIONED from '$lib/data/cocktails/jager-old-fashioned';
 import JET_PILOT from '$lib/data/cocktails/jet-pilot';
 import JINGLE_BIRD from '$lib/data/cocktails/jingle-bird';
 import JUNGLE_BIRD from '$lib/data/cocktails/jungle-bird';
@@ -87,6 +90,7 @@ import MIMOSA from '$lib/data/cocktails/mimosa';
 import MINT_JULEP from '$lib/data/cocktails/mint-julep';
 import MISSIONARYS_DOWNFALL from '$lib/data/cocktails/missionarys-downfall';
 import MOJITO from '$lib/data/cocktails/mojito';
+import MONTE_CARLO from '$lib/data/cocktails/monte-carlo';
 import MOONWELL from '$lib/data/cocktails/moonwell';
 import NAKED_AND_FAMOUS from '$lib/data/cocktails/naked-and-famous';
 import NAUTILUS from '$lib/data/cocktails/nautilus';
@@ -114,9 +118,11 @@ import QUEENS_PARK_SWIZZLE from '$lib/data/cocktails/queens-park-swizzle';
 import RADLER from '$lib/data/cocktails/radler';
 import RAMOS_GIN_FIZZ from '$lib/data/cocktails/ramos-gin-fizz';
 import RATTLE_SKULL from '$lib/data/cocktails/rattle-skull';
+import REVOLVER from '$lib/data/cocktails/revolver';
 import ROSE_COCKTAIL from '$lib/data/cocktails/rose-cocktail';
 import RUDOLPHS_NOSE from '$lib/data/cocktails/rudolphs-nose';
 import RUM_BARREL from '$lib/data/cocktails/rum-barrel';
+import RUM_OLD_FASHIONED from '$lib/data/cocktails/rum-old-fashioned';
 import RUM_RUNNER from '$lib/data/cocktails/rum-runner';
 import RUSSIAN_SPRING_PUNCH from '$lib/data/cocktails/russian-spring-punch';
 import SALTY_DOG from '$lib/data/cocktails/salty-dog';
@@ -145,6 +151,7 @@ import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
 import WHISKEY_GINGER from '$lib/data/cocktails/whiskey-ginger';
 import WHISKEY_SOUR from '$lib/data/cocktails/whiskey-sour';
 import WIDOWS_KISS from '$lib/data/cocktails/widows-kiss';
+import WISCONSIN_OLD_FASHIONED from '$lib/data/cocktails/wisconsin-old-fashioned';
 import WRAY_AND_TING from '$lib/data/cocktails/wray-and-ting';
 import YULE_TIDE from '$lib/data/cocktails/yule-tide';
 import ZOMBIE from '$lib/data/cocktails/zombie';
@@ -167,6 +174,7 @@ export const allCocktails: Cocktail[] = [
 	BRANDY_ALEXANDER,
 	BRANDY_CRUSTA,
 	CAIPIRINHA,
+	CARAJILLO,
 	CARAJILLO_OLD_FASHIONED,
 	CARAMEL_APPLE_SPICE,
 	CANELAZO,
@@ -193,6 +201,7 @@ export const allCocktails: Cocktail[] = [
 	EL_DIABLO,
 	EL_PRESIDENTE,
 	ESPRESSO_MARTINI,
+	FANCY_FREE,
 	FERNET_CON_COCA,
 	FOXY_BABY,
 	FRENCH_75,
@@ -215,6 +224,7 @@ export const allCocktails: Cocktail[] = [
 	IMPROVED_HOLLAND_GIN_COCKTAIL,
 	IRON_RANGER,
 	JACK_ROSE,
+	JAGER_OLD_FASHIONED,
 	JET_PILOT,
 	JINGLE_BIRD,
 	JUNGLE_BIRD,
@@ -237,6 +247,7 @@ export const allCocktails: Cocktail[] = [
 	MINT_JULEP,
 	MISSIONARYS_DOWNFALL,
 	MOJITO,
+	MONTE_CARLO,
 	MOONWELL,
 	NAKED_AND_FAMOUS,
 	NAUTILUS,
@@ -264,9 +275,11 @@ export const allCocktails: Cocktail[] = [
 	RADLER,
 	RAMOS_GIN_FIZZ,
 	RATTLE_SKULL,
+	REVOLVER,
 	ROSE_COCKTAIL,
 	RUDOLPHS_NOSE,
 	RUM_BARREL,
+	RUM_OLD_FASHIONED,
 	RUM_RUNNER,
 	RUSSIAN_SPRING_PUNCH,
 	SALTY_DOG,
@@ -295,6 +308,7 @@ export const allCocktails: Cocktail[] = [
 	WHISKEY_GINGER,
 	WHISKEY_SOUR,
 	WIDOWS_KISS,
+	WISCONSIN_OLD_FASHIONED,
 	WRAY_AND_TING,
 	YULE_TIDE,
 	ZOMBIE

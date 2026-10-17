@@ -24,6 +24,6 @@ export const methodLabels: Record<CocktailMethod, string> = {
 	[CocktailMethod.Built]: 'Built in glass',
 	[CocktailMethod.Swizzled]: 'Swizzled',
 	[CocktailMethod.FlashBlended]: 'Flash blended',
-	[CocktailMethod.Blended]: 'Blended',
+	[CocktailMethod.Blended]: 'Fully blended with ice',
 	[CocktailMethod.Batched]: 'Batched'
 };

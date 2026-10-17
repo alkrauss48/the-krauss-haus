@@ -53,6 +53,24 @@ describe('buildServingSentence', () => {
 		);
 	});
 
+	it('leaves the ice out of a blended drink and drops "served"', () => {
+		const sentence = buildServingSentence(
+			cocktail({
+				method: CocktailMethod.Blended,
+				ice: Ice.Crushed,
+				servedIn: ServedIn.TikiMug,
+				hasStraw: true
+			})
+		);
+		expect(sentence).toBe('Fully blended with ice, in a tiki mug with a straw.');
+		expect(
+			buildServingSentence(cocktail({ method: CocktailMethod.Blended, ice: Ice.Crushed }))
+		).toBe('Fully blended with ice.');
+		expect(buildServingSentence(cocktail({ method: CocktailMethod.Blended, hasStraw: true }))).toBe(
+			'Fully blended with ice, with a straw.'
+		);
+	});
+
 	it('returns null when the cocktail carries no serving information at all', () => {
 		expect(buildServingSentence(cocktail())).toBeNull();
 	});

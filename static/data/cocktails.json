@@ -1433,6 +1433,63 @@
 		"variations": []
 	},
 	{
+		"slug": "carajillo",
+		"title": "Carajillo",
+		"subtitle": null,
+		"description": "Licor 43, espresso.",
+		"url": "/cocktails/carajillo",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/carajillo.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/carajillo.webp",
+		"method": "Shaken",
+		"served_in": "Double Rocks Glass",
+		"ice": "Large Cube",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "licor-43",
+				"amount": "1.5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "espresso",
+				"amount": "1.5oz",
+				"label": null
+			}
+		],
+		"tags": [
+			{
+				"label": "Decadent",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Folk",
+				"category": "Origin"
+			},
+			{
+				"label": "Lower Alcohol",
+				"category": "Alcohol Level"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Complex Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "carajillo-old-fashioned",
 		"title": "Carajillo Old Fashioned",
 		"subtitle": null,
@@ -3619,6 +3676,81 @@
 		]
 	},
 	{
+		"slug": "fancy-free",
+		"title": "Fancy Free",
+		"subtitle": null,
+		"description": "Bourbon, maraschino liqueur, aromatic and orange bitters, orange twist.",
+		"url": "/cocktails/fancy-free",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/fancy-free.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/fancy-free.webp",
+		"method": "Built in Glass",
+		"served_in": "Double Rocks Glass",
+		"ice": "Large Cube",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "elijah-craig",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maraschino-liqueuer",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "angostura-bitters",
+				"amount": "2 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-bitters",
+				"amount": "2 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-garnish",
+				"amount": null,
+				"label": "Garnish: Orange twist"
+			}
+		],
+		"tags": [
+			{
+				"label": "Whiskey",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Built in Glass",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Classic",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "fernet-con-coca",
 		"title": "Fernet con Coca",
 		"subtitle": null,
@@ -5488,6 +5620,85 @@
 			{
 				"label": "Coupe Glass",
 				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "jager-old-fashioned",
+		"title": "Jäger Old Fashioned",
+		"subtitle": null,
+		"description": "Jägermeister, rye whiskey, maple syrup, aromatic bitters, orange twist.",
+		"url": "/cocktails/jager-old-fashioned",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/jager-old-fashioned.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/jager-old-fashioned.webp",
+		"method": "Built in Glass",
+		"served_in": "Double Rocks Glass",
+		"ice": "Large Cube",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "jagermeister",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rittenhouse",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maple-syrup",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "angostura-bitters",
+				"amount": "1 dash",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-garnish",
+				"amount": null,
+				"label": "Garnish: Orange twist"
+			}
+		],
+		"tags": [
+			{
+				"label": "Whiskey",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Herbal",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Built in Glass",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -7565,6 +7776,79 @@
 		"variations": []
 	},
 	{
+		"slug": "monte-carlo",
+		"title": "Monte Carlo",
+		"subtitle": null,
+		"description": "Rye whiskey, Bénédictine, aromatic bitters, lemon twist.",
+		"url": "/cocktails/monte-carlo",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/monte-carlo.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/monte-carlo.webp",
+		"method": "Built in Glass",
+		"served_in": "Double Rocks Glass",
+		"ice": "Large Cube",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "rittenhouse",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "benedictine",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "angostura-bitters",
+				"amount": "1-2 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon-garnish",
+				"amount": null,
+				"label": "Garnish: Lemon twist"
+			}
+		],
+		"tags": [
+			{
+				"label": "Whiskey",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Herbal",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Built in Glass",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Classic",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "moonwell",
 		"title": "Moonwell",
 		"subtitle": null,
@@ -8609,53 +8893,7 @@
 				"category": "Prep Time"
 			}
 		],
-		"variations": [
-			{
-				"name": "Muddled",
-				"ingredients": [
-					{
-						"kind": "ingredient",
-						"slug": "orange-garnish",
-						"amount": null,
-						"label": "Muddle an orange slice."
-					},
-					{
-						"kind": "ingredient",
-						"slug": "maraschino-cherry",
-						"amount": null,
-						"label": "Muddle a maraschino cherry, and garnish with an extra cherry."
-					}
-				]
-			},
-			{
-				"name": "Rum",
-				"ingredients": [
-					{
-						"kind": "ingredient",
-						"slug": "appleton-estate-12-year",
-						"amount": null,
-						"label": "Sub aged appleton estate 12 year for bourbon."
-					}
-				]
-			},
-			{
-				"name": "Spiced",
-				"ingredients": [
-					{
-						"kind": "ingredient",
-						"slug": "rittenhouse",
-						"amount": null,
-						"label": "Sub rye whiskey for bourbon."
-					},
-					{
-						"kind": "ingredient",
-						"slug": "allspice-dram",
-						"amount": null,
-						"label": "Add 1/4oz of allspice dram."
-					}
-				]
-			}
-		]
+		"variations": []
 	},
 	{
 		"slug": "painkiller",
@@ -9340,7 +9578,7 @@
 				"kind": "ingredient",
 				"slug": "strawberry",
 				"amount": null,
-				"label": "4 Strawberries"
+				"label": "4 Strawberries (medium-sized)"
 			},
 			{
 				"kind": "ingredient",
@@ -9480,7 +9718,7 @@
 		"slug": "plunderers-punch",
 		"title": "Plunderer's Punch",
 		"subtitle": null,
-		"description": "Jamaican rum, dark berry liqueur, lime, vanilla, angostura bitters.",
+		"description": "Jamaican rum, dark berry liqueur, lime, licor 43, vanilla, angostura bitters.",
 		"url": "/cocktails/plunderers-punch",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/plunderers-punch.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/plunderers-punch.webp",
@@ -9512,8 +9750,8 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "rich-simple-syrup",
-				"amount": ".5oz",
+				"slug": "licor-43",
+				"amount": ".25oz",
 				"label": null
 			},
 			{
@@ -10138,6 +10376,81 @@
 		"variations": []
 	},
 	{
+		"slug": "revolver",
+		"title": "Revolver",
+		"subtitle": null,
+		"description": "Bourbon, rye whiskey, coffee liqueur, orange bitters, flamed orange twist.",
+		"url": "/cocktails/revolver",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/revolver.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/revolver.webp",
+		"method": "Built in Glass",
+		"served_in": "Double Rocks Glass",
+		"ice": "Large Cube",
+		"has_straw": false,
+		"servings": null,
+		"notes": "Originally made with Bulleit, a higher-rye bourbon, hence the name \"Revolver\".",
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "elijah-craig",
+				"amount": "1.5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rittenhouse",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "mr-black",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-bitters",
+				"amount": "2 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-garnish",
+				"amount": null,
+				"label": "Garnish: Flamed orange twist"
+			}
+		],
+		"tags": [
+			{
+				"label": "Whiskey",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Built in Glass",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "rose-cocktail",
 		"title": "Rose Cocktail",
 		"subtitle": null,
@@ -10457,6 +10770,81 @@
 			},
 			{
 				"label": "Complex Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "rum-old-fashioned",
+		"title": "Rum Old Fashioned",
+		"subtitle": null,
+		"description": "Aged Jamaican rum, demerara syrup, aromatic and orange bitters, orange twist.",
+		"url": "/cocktails/rum-old-fashioned",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/rum-old-fashioned.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/rum-old-fashioned.webp",
+		"method": "Built in Glass",
+		"served_in": "Double Rocks Glass",
+		"ice": "Large Cube",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "appleton-estate-12-year",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "demerara-syrup",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "angostura-bitters",
+				"amount": "2 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-bitters",
+				"amount": "1 dash",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-garnish",
+				"amount": null,
+				"label": "Garnish: Orange twist"
+			}
+		],
+		"tags": [
+			{
+				"label": "Rum",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Built in Glass",
+				"category": "Technique"
+			},
+			{
+				"label": "Spirit Forward",
+				"category": "Style"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
 				"category": "Prep Time"
 			}
 		],
@@ -13022,6 +13410,99 @@
 			{
 				"label": "Higher Alcohol",
 				"category": "Alcohol Level"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "wisconsin-old-fashioned",
+		"title": "Wisconsin Old Fashioned",
+		"subtitle": null,
+		"description": "Cognac, muddled orange and cherry, simple syrup, aromatic bitters, soda water.",
+		"url": "/cocktails/wisconsin-old-fashioned",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/wisconsin-old-fashioned.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/wisconsin-old-fashioned.webp",
+		"method": "Built in Glass",
+		"served_in": "Double Rocks Glass",
+		"ice": "Small Cubes",
+		"has_straw": false,
+		"servings": null,
+		"notes": "Muddle the orange slice and maraschino cherry first, then add the cognac, simple syrup, and bitters. Stir, add ice, and top with soda water and garnishes.",
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "st-remy-vsop",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rich-simple-syrup",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "angostura-bitters",
+				"amount": "5 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maraschino-cherry",
+				"amount": null,
+				"label": "1 Maraschino cherry, muddled"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-garnish",
+				"amount": null,
+				"label": "1 Orange slice, muddled"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "soda-water",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "maraschino-cherry",
+				"amount": null,
+				"label": "Garnish: Maraschino cherry"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "orange-garnish",
+				"amount": null,
+				"label": "Garnish: Orange twist"
+			}
+		],
+		"tags": [
+			{
+				"label": "Brandy",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Built in Glass",
+				"category": "Technique"
+			},
+			{
+				"label": "Folk",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
 			}
 		],
 		"variations": []
