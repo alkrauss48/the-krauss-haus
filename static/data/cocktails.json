@@ -3683,7 +3683,7 @@
 		"url": "/cocktails/fancy-free",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/fancy-free.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/fancy-free.webp",
-		"method": "Built in Glass",
+		"method": "Stirred",
 		"served_in": "Double Rocks Glass",
 		"ice": "Large Cube",
 		"has_straw": false,
@@ -3728,7 +3728,7 @@
 				"category": "Base Alcohol"
 			},
 			{
-				"label": "Built in Glass",
+				"label": "Stirred",
 				"category": "Technique"
 			},
 			{
@@ -5632,7 +5632,7 @@
 		"url": "/cocktails/jager-old-fashioned",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/jager-old-fashioned.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/jager-old-fashioned.webp",
-		"method": "Built in Glass",
+		"method": "Stirred",
 		"served_in": "Double Rocks Glass",
 		"ice": "Large Cube",
 		"has_straw": false,
@@ -5681,7 +5681,7 @@
 				"category": "Flavor Profile"
 			},
 			{
-				"label": "Built in Glass",
+				"label": "Stirred",
 				"category": "Technique"
 			},
 			{
@@ -7783,7 +7783,7 @@
 		"url": "/cocktails/monte-carlo",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/monte-carlo.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/monte-carlo.webp",
-		"method": "Built in Glass",
+		"method": "Stirred",
 		"served_in": "Double Rocks Glass",
 		"ice": "Large Cube",
 		"has_straw": false,
@@ -7826,7 +7826,7 @@
 				"category": "Flavor Profile"
 			},
 			{
-				"label": "Built in Glass",
+				"label": "Stirred",
 				"category": "Technique"
 			},
 			{
@@ -10383,7 +10383,7 @@
 		"url": "/cocktails/revolver",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/revolver.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/revolver.webp",
-		"method": "Built in Glass",
+		"method": "Stirred",
 		"served_in": "Double Rocks Glass",
 		"ice": "Large Cube",
 		"has_straw": false,
@@ -10428,7 +10428,7 @@
 				"category": "Base Alcohol"
 			},
 			{
-				"label": "Built in Glass",
+				"label": "Stirred",
 				"category": "Technique"
 			},
 			{

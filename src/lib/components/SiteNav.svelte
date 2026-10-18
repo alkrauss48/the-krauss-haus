@@ -228,9 +228,11 @@
 			class="max-h-[calc(100dvh-3.5rem)] overflow-y-auto overscroll-contain border-t border-gray-200 bg-white px-3 pb-6 md:hidden"
 			transition:slide={{ duration: 200 }}
 		>
-			{#each siteNav as group (group.label)}
-				<section class="mt-4">
-					<h2 class="mb-1 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+			<!-- Groups get a full-bleed rule and an amber heading so they read as stronger breaks than
+			     the faint dividers between sections inside a group. -->
+			{#each siteNav as group, i (group.label)}
+				<section class={i > 0 ? '-mx-3 mt-5 border-t border-gray-200 px-3 pt-5' : 'mt-5'}>
+					<h2 class="mb-2 px-3 text-xs font-bold uppercase tracking-wider text-amber-600">
 						{group.label}
 					</h2>
 					{@render groupItems(group)}

@@ -25,7 +25,7 @@
 		<div class="max-w-6xl mx-auto">
 			<header class="text-center mb-8" in:fly={{ y: 20, duration: 400, delay: 400 }}>
 				<h1 class="text-4xl font-bold text-gray-800 mb-4">All Cocktails</h1>
-				<p class="text-gray-600">Browse our complete collection of cocktail recipes</p>
+				<p class="text-gray-600">Browse every cocktail recipe we make</p>
 			</header>
 
 			<CocktailsTable

@@ -13,7 +13,7 @@ const FANCY_FREE: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/fancy-free.webp',
 	slug: 'fancy-free',
-	method: CocktailMethod.Built,
+	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,
 	hasStraw: false,
@@ -41,7 +41,7 @@ const FANCY_FREE: Cocktail = {
 	],
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
-		Tags.Technique.BUILT,
+		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
