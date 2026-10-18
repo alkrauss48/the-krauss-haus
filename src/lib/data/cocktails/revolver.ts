@@ -13,7 +13,7 @@ const REVOLVER: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/revolver.webp',
 	slug: 'revolver',
-	method: CocktailMethod.Built,
+	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,
 	hasStraw: false,
@@ -42,7 +42,7 @@ const REVOLVER: Cocktail = {
 	notes: 'Originally made with Bulleit, a higher-rye bourbon, hence the name "Revolver".',
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
-		Tags.Technique.BUILT,
+		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.MODERN,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS,

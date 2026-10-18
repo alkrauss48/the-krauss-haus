@@ -13,7 +13,7 @@ const JAGER_OLD_FASHIONED: Cocktail = {
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/jager-old-fashioned.webp',
 	slug: 'jager-old-fashioned',
-	method: CocktailMethod.Built,
+	method: CocktailMethod.Stirred,
 	servedIn: ServedIn.DoubleRocksGlass,
 	ice: Ice.LargeCube,
 	hasStraw: false,
@@ -42,7 +42,7 @@ const JAGER_OLD_FASHIONED: Cocktail = {
 	tags: [
 		Tags.BaseAlcohol.WHISKEY,
 		Tags.FlavorProfile.HERBAL,
-		Tags.Technique.BUILT,
+		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.MODERN,
 		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
