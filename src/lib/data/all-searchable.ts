@@ -127,7 +127,7 @@ function pageItems(): SearchableItem[] {
 			type: 'page',
 			typeLabel: 'Page',
 			title: 'All Cocktails',
-			description: 'Browse the complete collection of cocktails',
+			description: 'Browse every cocktail we make',
 			href: '/cocktails'
 		},
 		{

@@ -95,7 +95,7 @@
 		<section class="w-full bg-white rounded-2xl p-6 shadow-sm border-2 border-purple-200">
 			<h2 class="text-lg text-center font-medium text-purple-800 mb-3">Explore</h2>
 			<p class="text-sm text-center text-gray-600 mb-6 leading-relaxed">
-				Discover cocktails through guided paths or search and filter our entire collection
+				Discover cocktails through guided paths or search and filter every cocktail we make
 			</p>
 			<nav class="flex flex-col gap-5" aria-label="Explore Navigation">
 				<a
@@ -110,7 +110,7 @@
 					class="block w-full p-5 text-center rounded-xl transition-all duration-200 bg-white/80 hover:bg-white text-gray-800 border border-purple-200/50 hover:border-purple-300 shadow-sm hover:shadow-md backdrop-blur-sm"
 				>
 					<h3 class="text-base font-semibold mb-1 text-gray-800">All Cocktails</h3>
-					<p class="text-xs text-gray-600">Browse our complete collection</p>
+					<p class="text-xs text-gray-600">Every cocktail we make</p>
 				</a>
 			</nav>
 		</section>
