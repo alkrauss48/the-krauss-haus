@@ -6,8 +6,8 @@ const HONEY_GINGER_SYRUP: Recipe = {
 	description: 'Honey syrup infused with fresh ginger for a spicy kick.',
 	ingredients: ['1/2 cup honey', '1/2 cup water', '4" x 1" x 1" stick of peeled, sliced ginger'],
 	instructions:
-		'Combine water and ginger in a saucepan. Heat over medium heat and simmer for 5 minutes to infuse the ginger flavor. Remove from heat, add honey, and stir until it dissolves. Pour everything into a mason jar and let cool for 12 hours. Remove ginger and store in an airtight container in the refrigerator.',
-	notes: 'Use raw honey for the best flavor. Recipe makes 1 cup.'
+		'Combine water and ginger in a saucepan. Heat over medium heat and simmer for 5 minutes to infuse the ginger flavor. Remove from heat, add honey, and stir until it dissolves. Pour everything into a mason jar and store in refrigerator for 12 hours. Remove ginger.',
+	notes: 'Recipe makes 1 cup.'
 };
 
 export default HONEY_GINGER_SYRUP;

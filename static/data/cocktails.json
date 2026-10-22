@@ -4855,7 +4855,7 @@
 				"kind": "ingredient",
 				"slug": "tanqueray",
 				"amount": ".75oz",
-				"label": "Gin (Plymouth or Tanqueray)"
+				"label": null
 			},
 			{
 				"kind": "ingredient",
@@ -4885,7 +4885,7 @@
 				"kind": "ingredient",
 				"slug": "cream-of-coconut",
 				"amount": ".75oz",
-				"label": "Cream of Coconut (Coco López)"
+				"label": null
 			},
 			{
 				"kind": "ingredient",
@@ -4932,10 +4932,6 @@
 			{
 				"label": "Tiki",
 				"category": "Style"
-			},
-			{
-				"label": "Modern",
-				"category": "Origin"
 			},
 			{
 				"label": "Tiki Mug",

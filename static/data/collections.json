@@ -67,10 +67,10 @@
 		"image_url": null,
 		"cocktail_slugs": [
 			"plunderers-punch",
-			"piranha-pool",
-			"aulani-tropical-mai-tai",
-			"nautilus",
 			"tidal-terror",
+			"piranha-pool",
+			"nautilus",
+			"aulani-tropical-mai-tai",
 			"pineapple-potion",
 			"pumpkin-buggy",
 			"hex-appeal",
@@ -80,18 +80,18 @@
 		],
 		"groups": [
 			{
-				"heading": "Year-round",
+				"heading": "Disney",
 				"cocktail_slugs": [
 					"plunderers-punch",
+					"tidal-terror",
 					"piranha-pool",
-					"aulani-tropical-mai-tai",
-					"nautilus"
+					"nautilus",
+					"aulani-tropical-mai-tai"
 				]
 			},
 			{
 				"heading": "Halloween",
 				"cocktail_slugs": [
-					"tidal-terror",
 					"pineapple-potion",
 					"pumpkin-buggy",
 					"hex-appeal"

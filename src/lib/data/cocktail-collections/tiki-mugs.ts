@@ -25,12 +25,12 @@ const TIKI_MUGS: CocktailCollection = {
 	},
 	groups: [
 		{
-			heading: 'Year-round',
-			cocktails: [PLUNDERERS_PUNCH, PIRANHA_POOL, AULANI_TROPICAL_MAI_TAI, NAUTILUS]
+			heading: 'Disney',
+			cocktails: [PLUNDERERS_PUNCH, TIDAL_TERROR, PIRANHA_POOL, NAUTILUS, AULANI_TROPICAL_MAI_TAI]
 		},
 		{
 			heading: 'Halloween',
-			cocktails: [TIDAL_TERROR, PINEAPPLE_POTION, PUMPKIN_BUGGY, HEX_APPEAL]
+			cocktails: [PINEAPPLE_POTION, PUMPKIN_BUGGY, HEX_APPEAL]
 		},
 		{
 			heading: 'Christmas',

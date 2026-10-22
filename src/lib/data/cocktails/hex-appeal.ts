@@ -20,7 +20,6 @@ const HEX_APPEAL: Cocktail = {
 	ingredients: [
 		{
 			amount: '.75oz',
-			label: 'Gin (Plymouth or Tanqueray)',
 			ingredient: Ingredients.BaseSpirits.TANQUERAY
 		},
 		{
@@ -41,7 +40,6 @@ const HEX_APPEAL: Cocktail = {
 		},
 		{
 			amount: '.75oz',
-			label: 'Cream of Coconut (Coco López)',
 			ingredient: Ingredients.Other.CREAM_OF_COCONUT
 		},
 		{
@@ -63,7 +61,6 @@ const HEX_APPEAL: Cocktail = {
 		Tags.FlavorProfile.BITTER,
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
-		Tags.Origin.MODERN,
 		Tags.ServedIn.TIKI_MUG,
 		Tags.ServedIn.EXCLUSIVE_DRINKWARE,
 		Tags.PrepTime.COMPLEX_PREP
