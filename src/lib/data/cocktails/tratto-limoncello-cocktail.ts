@@ -53,8 +53,7 @@ const TRATTO_LIMONCELLO_COCKTAIL: Cocktail = {
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.MODERN,
 		Tags.AlcoholLevel.HIGH,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
-		Tags.PrepTime.SIMPLE_PREP
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

@@ -1896,10 +1896,6 @@
 			{
 				"label": "Highball Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -3538,10 +3534,6 @@
 			{
 				"label": "Nick & Nora Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -5197,10 +5189,6 @@
 			{
 				"label": "Lower Alcohol",
 				"category": "Alcohol Level"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -9071,10 +9059,6 @@
 			{
 				"label": "Highball Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": [
@@ -9411,10 +9395,6 @@
 			{
 				"label": "Highball Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -10086,10 +10066,6 @@
 			{
 				"label": "Highball Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": [
@@ -12981,10 +12957,6 @@
 			{
 				"label": "Double Rocks Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -13499,10 +13471,6 @@
 			{
 				"label": "Double Rocks Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []

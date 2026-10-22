@@ -64,8 +64,7 @@ const QUEENS_PARK_SWIZZLE: Cocktail = {
 		Tags.Technique.SWIZZLED,
 		Tags.Style.TIKI,
 		Tags.Origin.CLASSIC,
-		Tags.ServedIn.HIGHBALL_GLASS,
-		Tags.PrepTime.SIMPLE_PREP
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 

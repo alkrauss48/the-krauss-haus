@@ -46,8 +46,7 @@ const EL_PRESIDENTE: Cocktail = {
 		Tags.Technique.STIRRED,
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC,
-		Tags.ServedIn.NICK_AND_NORA_GLASS,
-		Tags.PrepTime.SIMPLE_PREP
+		Tags.ServedIn.NICK_AND_NORA_GLASS
 	]
 };
 
