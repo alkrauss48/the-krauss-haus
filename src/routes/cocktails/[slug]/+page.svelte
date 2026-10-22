@@ -15,12 +15,20 @@
 	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
-	$: ({ cocktail, onSummer, onWinter, onTiki, pathsContainingCocktail } = data);
+	$: ({
+		cocktail,
+		onSummer,
+		onWinter,
+		onTiki,
+		pathsContainingCocktail,
+		collectionsContainingCocktail
+	} = data);
 	$: servingSentence = buildServingSentence(cocktail);
 
 	$: isOriginal = cocktail.tags?.includes(Tags.Origin.ORIGINAL) ?? false;
 	$: onAnyMenu = onSummer || onWinter || onTiki;
-	$: hasMenusOrPaths = onAnyMenu || pathsContainingCocktail.length > 0;
+	$: isListedAnywhere =
+		onAnyMenu || pathsContainingCocktail.length > 0 || collectionsContainingCocktail.length > 0;
 
 	// Helper function to convert category label to URL-friendly key
 	// Handles special characters like & by converting to "and"
@@ -286,8 +294,8 @@
 						<AskAboutButton title={cocktail.title} />
 					</aside>
 
-					<!-- Back to Menu Links and Paths -->
-					{#if hasMenusOrPaths}
+					<!-- Back to Menu, Path and Collection Links -->
+					{#if isListedAnywhere}
 						<section class="pt-8 border-t border-gray-200">
 							<h2 class="text-xl font-semibold text-gray-800 mb-4">Find this cocktail on:</h2>
 							<div class="flex flex-wrap gap-3">
@@ -321,6 +329,14 @@
 										class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors"
 									>
 										{path.title} Path
+									</a>
+								{/each}
+								{#each collectionsContainingCocktail as collection (collection.slug)}
+									<a
+										href={resolve(`/collections/${collection.slug}`)}
+										class="px-4 py-2 bg-teal-100 text-teal-800 rounded-full text-sm font-medium hover:bg-teal-200 transition-colors"
+									>
+										{collection.title} Collection
 									</a>
 								{/each}
 							</div>
