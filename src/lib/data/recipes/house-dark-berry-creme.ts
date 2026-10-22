@@ -16,8 +16,7 @@ const HOUSE_DARK_BERRY_CREME: Recipe = {
 	],
 	instructions:
 		'Lightly crush all fruit in a jar. Add vodka and lemon peel. Seal and shake. Let macerate for 14 days, shaking occasionally. After 14 days, add tea leaves, and macerate another 2 days. Strain through fine mesh, then strain again through cheesecloth or a coffee filter. Stir in sugar and lemon juice until fully dissolved. Bottle and rest for 2 weeks before using.',
-	notes:
-		'Makes ~650mL. Store sealed in a cool, dark place. Best after 2-4 weeks.'
+	notes: 'Makes ~650mL. Store sealed in a cool, dark place. Best after 2-4 weeks.'
 };
 
 export default HOUSE_DARK_BERRY_CREME;
