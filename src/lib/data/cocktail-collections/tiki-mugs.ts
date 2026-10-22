@@ -10,6 +10,7 @@ import JINGLE_BIRD from '$lib/data/cocktails/jingle-bird';
 import SIPPIN_SANTA from '$lib/data/cocktails/sippin-santa';
 import YULE_TIDE from '$lib/data/cocktails/yule-tide';
 import PUMPKIN_BUGGY from '$lib/data/cocktails/pumpkin-buggy';
+import HEX_APPEAL from '$lib/data/cocktails/hex-appeal';
 
 const TIKI_MUGS: CocktailCollection = {
 	slug: 'tiki-mugs',
@@ -29,7 +30,7 @@ const TIKI_MUGS: CocktailCollection = {
 		},
 		{
 			heading: 'Halloween',
-			cocktails: [TIDAL_TERROR, PINEAPPLE_POTION, PUMPKIN_BUGGY]
+			cocktails: [TIDAL_TERROR, PINEAPPLE_POTION, PUMPKIN_BUGGY, HEX_APPEAL]
 		},
 		{
 			heading: 'Christmas',

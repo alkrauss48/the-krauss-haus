@@ -73,6 +73,7 @@
 			"tidal-terror",
 			"pineapple-potion",
 			"pumpkin-buggy",
+			"hex-appeal",
 			"jingle-bird",
 			"sippin-santa",
 			"yule-tide"
@@ -92,7 +93,8 @@
 				"cocktail_slugs": [
 					"tidal-terror",
 					"pineapple-potion",
-					"pumpkin-buggy"
+					"pumpkin-buggy",
+					"hex-appeal"
 				]
 			},
 			{

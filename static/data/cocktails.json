@@ -4836,6 +4836,123 @@
 		"variations": []
 	},
 	{
+		"slug": "hex-appeal",
+		"title": "Hex Appeal",
+		"subtitle": null,
+		"description": "Gin, rye, cachaça, Campari, lemon, cream of coconut, licor 43, celery bitters.",
+		"url": "/cocktails/hex-appeal",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/hex-appeal.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/hex-appeal.webp",
+		"method": "Shaken",
+		"served_in": "Tiki Mug",
+		"ice": "Crushed",
+		"has_straw": true,
+		"servings": null,
+		"notes": "Served in the Cauldron tiki mug from The Haunting popup-bar.",
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "tanqueray",
+				"amount": ".75oz",
+				"label": "Gin (Plymouth or Tanqueray)"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rittenhouse",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "leblon",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "campari",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "cream-of-coconut",
+				"amount": ".75oz",
+				"label": "Cream of Coconut (Coco López)"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "licor-43",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "celery-bitters",
+				"amount": "2 dashes",
+				"label": null
+			}
+		],
+		"tags": [
+			{
+				"label": "Gin",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Whiskey",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Rum",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Creamy",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Bitter",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Tiki",
+				"category": "Style"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Tiki Mug",
+				"category": "Served In"
+			},
+			{
+				"label": "Exclusive Drinkware",
+				"category": "Served In"
+			},
+			{
+				"label": "Complex Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "highland-coffee",
 		"title": "Highland Coffee",
 		"subtitle": null,
