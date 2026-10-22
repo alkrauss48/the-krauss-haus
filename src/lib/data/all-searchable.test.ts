@@ -67,16 +67,32 @@ describe('searchAll', () => {
 		expect(searchAll(`${firstWord} qqqzzzxxnotathing`)).toEqual([]);
 	});
 
-	it('only returns entries whose searchable text contains every token', () => {
+	it('ranks entries containing every token verbatim above fuzzy matches', () => {
 		for (const query of ['rum lime', 'gin', 'tiki menu', 'syrup']) {
 			const tokens = query.split(' ');
-			for (const { item } of searchAll(query)) {
-				const text = haystack(item);
-				for (const token of tokens) {
-					expect(text, `"${item.title}" matched "${query}" without "${token}"`).toContain(token);
-				}
+			const verbatim = searchAll(query, Infinity).map(({ item }) =>
+				tokens.every((token) => haystack(item).includes(token))
+			);
+			const firstFuzzy = verbatim.indexOf(false);
+			if (firstFuzzy >= 0) {
+				expect(verbatim.slice(firstFuzzy), `"${query}" ranked a fuzzy match early`).not.toContain(
+					true
+				);
 			}
 		}
+	});
+
+	it.each([
+		['sip san', 'sippin-santa'],
+		['sips', 'sippin-santa'],
+		['mrtin', 'martini'],
+		['matrini', 'martini'],
+		['margrita', 'margarita'],
+		['pina verde', 'pina-verde'],
+		['queens park', 'queens-park-swizzle']
+	])('forgives "%s" and still finds /cocktails/%s near the top', (query, slug) => {
+		const hrefs = searchAll(query, 5).map((r) => r.item.href);
+		expect(hrefs).toContain(`/cocktails/${slug}`);
 	});
 
 	it('matches case-insensitively', () => {

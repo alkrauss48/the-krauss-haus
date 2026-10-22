@@ -15,6 +15,7 @@
 	import type { LogicMode } from '$lib/types/filters';
 	import { matchesTagsLogic, matchesIngredientsLogic } from '$lib/utils/filterLogic';
 	import { formatVariantIngredients } from '$lib/utils/ingredients';
+	import { fuzzyScore, fuzzyTarget, tokenize } from '$lib/utils/fuzzy';
 	import { getDisplayCost, getDisplayCostPerOz, formatCost } from '$lib/utils/cost';
 	import { costMode } from '$lib/stores/costMode';
 
@@ -48,30 +49,36 @@
 	$: nameColClass = `${$costMode ? 'col-span-4' : 'col-span-5'} sm:col-span-3 md:col-span-3`;
 	$: descColClass = `hidden md:block${$costMode ? ' col-span-3' : ' col-span-5'}`;
 
-	$: filteredCocktails = cocktails.filter((cocktail) => {
-		const searchLower = searchTerm.toLowerCase();
-		const matchesTitle = cocktail.title.toLowerCase().includes(searchLower);
-		const matchesDescription = cocktail.description.toLowerCase().includes(searchLower);
+	$: searchTargets = new Map(
+		cocktails.map((cocktail) => [
+			cocktail,
+			fuzzyTarget(cocktail.title, [
+				cocktail.description,
+				...(cocktail.variations ?? []).flatMap((variant) => [
+					variant.name,
+					formatVariantIngredients(variant)
+				])
+			])
+		])
+	);
+	$: searchTokens = showSearch ? tokenize(searchTerm) : [];
 
-		let matchesVariants = false;
-		if (cocktail.variations && cocktail.variations.length > 0) {
-			matchesVariants = cocktail.variations.some((variant) => {
-				const matchesVariantName = variant.name.toLowerCase().includes(searchLower);
-				const variantIngredients = formatVariantIngredients(variant);
-				const matchesVariantIngredients = variantIngredients.toLowerCase().includes(searchLower);
-				return matchesVariantName || matchesVariantIngredients;
-			});
-		}
+	// With a search term, the best matches lead; ties keep the order they were passed in.
+	$: filteredCocktails = cocktails
+		.map((cocktail) => ({
+			cocktail,
+			score: searchTokens.length ? fuzzyScore(searchTokens, searchTargets.get(cocktail)!) : 1
+		}))
+		.filter(({ cocktail, score }) => {
+			const matchesTags = showFilters ? matchesTagsLogic(cocktail, selectedTags, logicMode) : true;
+			const matchesIngredients = showFilters
+				? matchesIngredientsLogic(cocktail, selectedIngredients, logicMode)
+				: true;
 
-		const matchesSearch = showSearch ? matchesTitle || matchesDescription || matchesVariants : true;
-
-		const matchesTags = showFilters ? matchesTagsLogic(cocktail, selectedTags, logicMode) : true;
-		const matchesIngredients = showFilters
-			? matchesIngredientsLogic(cocktail, selectedIngredients, logicMode)
-			: true;
-
-		return matchesSearch && matchesTags && matchesIngredients;
-	});
+			return score > 0 && matchesTags && matchesIngredients;
+		})
+		.sort((a, b) => b.score - a.score)
+		.map(({ cocktail }) => cocktail);
 
 	$: costFn = costUnit === 'oz' ? getDisplayCostPerOz : getDisplayCost;
 

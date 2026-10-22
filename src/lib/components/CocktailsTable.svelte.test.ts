@@ -1,7 +1,7 @@
 /**
- * The table's search box is the only filtering rule that lives in a component rather
- * than in $lib/utils — it matches on title, description and variant text — so it needs
- * a rendered test. Tag/ingredient logic is covered by filterLogic.test.ts.
+ * The table's search box decides what text it matches on — title, description and variant
+ * text — and orders results by how well they match, so it needs a rendered test. The
+ * matching itself is covered by fuzzy.test.ts. Tag/ingredient logic is covered by filterLogic.test.ts.
  */
 import { describe, it, expect, vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
@@ -89,6 +89,23 @@ describe('CocktailsTable', () => {
 		renderTable();
 		await search('pineapple');
 		expect(visibleTitles()).toEqual(['Mai Tai']);
+	});
+
+	it('forgives misspelled and abbreviated searches', async () => {
+		renderTable();
+		await search('ngroni');
+		expect(visibleTitles()).toEqual(['Negroni']);
+		await search('mtai');
+		expect(visibleTitles()).toEqual(['Mai Tai']);
+		await search('campri');
+		expect(visibleTitles()).toEqual(['Negroni']);
+	});
+
+	it('puts title matches ahead of drinks that only mention the term', async () => {
+		const ginMaiTai = { ...MAI_TAI, title: 'Gin Mai Tai', slug: 'gin-mai-tai' };
+		render(CocktailsTable, { cocktails: [NEGRONI, ginMaiTai], showFilters: false });
+		await search('gin');
+		expect(visibleTitles()).toEqual(['Gin Mai Tai', 'Negroni']);
 	});
 
 	it('shows an empty state naming the search term when nothing matches', async () => {

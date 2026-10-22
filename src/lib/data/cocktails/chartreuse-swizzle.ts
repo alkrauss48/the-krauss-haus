@@ -56,8 +56,7 @@ const CHARTREUSE_SWIZZLE: Cocktail = {
 		Tags.Style.TIKI,
 		Tags.Origin.MODERN,
 		Tags.AlcoholLevel.HIGH,
-		Tags.ServedIn.HIGHBALL_GLASS,
-		Tags.PrepTime.SIMPLE_PREP
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 

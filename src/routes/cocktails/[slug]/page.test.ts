@@ -2,6 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { load } from './+page';
 import { allCocktails } from '$lib/data/all-cocktails';
 import { allPaths } from '$lib/data/all-paths';
+import { allCollections } from '$lib/data/all-collections';
+import { collectionCocktails } from '$lib/utils/collections';
 import { menuConfig } from '$lib/data/menu-config';
 import type { Cocktail } from '$lib/types/cocktails';
 
@@ -70,5 +72,29 @@ describe('/cocktails/[slug] load', () => {
 		const offPath = allCocktails.find((c) => !onAPath.has(c.slug));
 		expect(offPath, 'every cocktail is on a path — adjust this test').toBeDefined();
 		expect(run(offPath!.slug).pathsContainingCocktail).toEqual([]);
+	});
+
+	it('returns every collection that contains the cocktail, grouped or not', () => {
+		for (const collection of allCollections) {
+			const drink = collectionCocktails(collection).at(-1)!;
+			const expected = allCollections
+				.filter((l) => collectionCocktails(l).some((c) => c.slug === drink.slug))
+				.map((l) => l.slug);
+
+			const slugs = run(drink.slug).collectionsContainingCocktail.map(
+				(l: { slug: string }) => l.slug
+			);
+			expect(slugs).toContain(collection.slug);
+			expect(slugs).toEqual(expected);
+		}
+	});
+
+	it('returns no collections for a cocktail that is in none', () => {
+		const inACollection = new Set(
+			allCollections.flatMap((l) => collectionCocktails(l).map((c) => c.slug))
+		);
+		const outside = allCocktails.find((c) => !inACollection.has(c.slug));
+		expect(outside, 'every cocktail is in a collection — adjust this test').toBeDefined();
+		expect(run(outside!.slug).collectionsContainingCocktail).toEqual([]);
 	});
 });

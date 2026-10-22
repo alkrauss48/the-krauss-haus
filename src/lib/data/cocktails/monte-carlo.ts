@@ -27,7 +27,7 @@ const MONTE_CARLO: Cocktail = {
 			ingredient: Ingredients.Liqueurs.BENEDICTINE
 		},
 		{
-			amount: '1-2 dashes',
+			amount: '2 dashes',
 			ingredient: Ingredients.Bitters.ANGOSTURA
 		},
 		{

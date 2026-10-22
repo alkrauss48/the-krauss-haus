@@ -158,71 +158,6 @@
 		"variations": []
 	},
 	{
-		"slug": "american-boilermaker",
-		"title": "American Boilermaker",
-		"subtitle": null,
-		"description": "Bourbon, beer.",
-		"url": "/cocktails/american-boilermaker",
-		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/american-boilermaker.webp",
-		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/american-boilermaker.webp",
-		"method": "Built in Glass",
-		"served_in": "Pint Glass",
-		"ice": "None",
-		"has_straw": false,
-		"servings": null,
-		"notes": "Traditionally served as a shot of whiskey followed by a beer chaser. Can also be consumed by dropping the shot into the beer (depth charge) or alternating sips.",
-		"bartender_slug": null,
-		"ingredients": [
-			{
-				"kind": "ingredient",
-				"slug": "elijah-craig",
-				"amount": "1.5oz",
-				"label": null
-			},
-			{
-				"kind": "ingredient",
-				"slug": "miller-high-life",
-				"amount": "12oz",
-				"label": null
-			}
-		],
-		"tags": [
-			{
-				"label": "Beer",
-				"category": "Base Alcohol"
-			},
-			{
-				"label": "Whiskey",
-				"category": "Base Alcohol"
-			},
-			{
-				"label": "Bubbly",
-				"category": "Flavor Profile"
-			},
-			{
-				"label": "Built in Glass",
-				"category": "Technique"
-			},
-			{
-				"label": "Folk",
-				"category": "Origin"
-			},
-			{
-				"label": "Pint Glass",
-				"category": "Served In"
-			},
-			{
-				"label": "Higher Alcohol",
-				"category": "Alcohol Level"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
-			}
-		],
-		"variations": []
-	},
-	{
 		"slug": "american-trilogy",
 		"title": "American Trilogy",
 		"subtitle": null,
@@ -1658,71 +1593,6 @@
 		"variations": []
 	},
 	{
-		"slug": "cerveza-y-tequila",
-		"title": "Cerveza y Tequila",
-		"subtitle": null,
-		"description": "Mexican lager, blanco tequila.",
-		"url": "/cocktails/cerveza-y-tequila",
-		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/cerveza-y-tequila.webp",
-		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/cerveza-y-tequila.webp",
-		"method": "Built in Glass",
-		"served_in": "Pint Glass",
-		"ice": "None",
-		"has_straw": false,
-		"servings": null,
-		"notes": "Traditionally served as a shot of tequila followed by a beer chaser.",
-		"bartender_slug": null,
-		"ingredients": [
-			{
-				"kind": "ingredient",
-				"slug": "cimarron-blanco",
-				"amount": "1.5oz",
-				"label": null
-			},
-			{
-				"kind": "ingredient",
-				"slug": "tecate-mexican-lager",
-				"amount": "12oz",
-				"label": null
-			}
-		],
-		"tags": [
-			{
-				"label": "Beer",
-				"category": "Base Alcohol"
-			},
-			{
-				"label": "Tequila",
-				"category": "Base Alcohol"
-			},
-			{
-				"label": "Bubbly",
-				"category": "Flavor Profile"
-			},
-			{
-				"label": "Built in Glass",
-				"category": "Technique"
-			},
-			{
-				"label": "Folk",
-				"category": "Origin"
-			},
-			{
-				"label": "Pint Glass",
-				"category": "Served In"
-			},
-			{
-				"label": "Higher Alcohol",
-				"category": "Alcohol Level"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
-			}
-		],
-		"variations": []
-	},
-	{
 		"slug": "champagne-cocktail",
 		"title": "Champagne Cocktail",
 		"subtitle": null,
@@ -1896,10 +1766,6 @@
 			{
 				"label": "Highball Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -2863,67 +2729,6 @@
 		"variations": []
 	},
 	{
-		"slug": "deer-and-beer",
-		"title": "Deer and Beer",
-		"subtitle": null,
-		"description": "Jägermeister, pilsner lager.",
-		"url": "/cocktails/deer-and-beer",
-		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/deer-and-beer.webp",
-		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/deer-and-beer.webp",
-		"method": "Built in Glass",
-		"served_in": "Pint Glass",
-		"ice": "None",
-		"has_straw": false,
-		"servings": null,
-		"notes": "A play on the classic boilermaker, substituting Jägermeister for whiskey. The herbal notes of Jägermeister pair surprisingly well with crisp lager.",
-		"bartender_slug": null,
-		"ingredients": [
-			{
-				"kind": "ingredient",
-				"slug": "jagermeister",
-				"amount": "1.5oz",
-				"label": null
-			},
-			{
-				"kind": "ingredient",
-				"slug": "bitburger-pils",
-				"amount": "12oz",
-				"label": null
-			}
-		],
-		"tags": [
-			{
-				"label": "Beer",
-				"category": "Base Alcohol"
-			},
-			{
-				"label": "Bubbly",
-				"category": "Flavor Profile"
-			},
-			{
-				"label": "Herbal",
-				"category": "Flavor Profile"
-			},
-			{
-				"label": "Built in Glass",
-				"category": "Technique"
-			},
-			{
-				"label": "Pint Glass",
-				"category": "Served In"
-			},
-			{
-				"label": "Higher Alcohol",
-				"category": "Alcohol Level"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
-			}
-		],
-		"variations": []
-	},
-	{
 		"slug": "demerara-dry-float",
 		"title": "Demerara Dry Float",
 		"subtitle": null,
@@ -3538,10 +3343,6 @@
 			{
 				"label": "Nick & Nora Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -4844,6 +4645,119 @@
 		"variations": []
 	},
 	{
+		"slug": "hex-appeal",
+		"title": "Hex Appeal",
+		"subtitle": null,
+		"description": "Gin, rye, cachaça, Campari, lemon, cream of coconut, licor 43, celery bitters.",
+		"url": "/cocktails/hex-appeal",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/hex-appeal.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/hex-appeal.webp",
+		"method": "Shaken",
+		"served_in": "Tiki Mug",
+		"ice": "Crushed",
+		"has_straw": true,
+		"servings": null,
+		"notes": "Served in the Cauldron tiki mug from The Haunting popup-bar.",
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "tanqueray",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rittenhouse",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "leblon",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "campari",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "cream-of-coconut",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "licor-43",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "celery-bitters",
+				"amount": "2 dashes",
+				"label": null
+			}
+		],
+		"tags": [
+			{
+				"label": "Gin",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Whiskey",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Rum",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Creamy",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Bitter",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Tiki",
+				"category": "Style"
+			},
+			{
+				"label": "Tiki Mug",
+				"category": "Served In"
+			},
+			{
+				"label": "Exclusive Drinkware",
+				"category": "Served In"
+			},
+			{
+				"label": "Complex Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "highland-coffee",
 		"title": "Highland Coffee",
 		"subtitle": null,
@@ -5197,10 +5111,6 @@
 			{
 				"label": "Lower Alcohol",
 				"category": "Alcohol Level"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -7806,7 +7716,7 @@
 			{
 				"kind": "ingredient",
 				"slug": "angostura-bitters",
-				"amount": "1-2 dashes",
+				"amount": "2 dashes",
 				"label": null
 			},
 			{
@@ -8758,71 +8668,6 @@
 		"variations": []
 	},
 	{
-		"slug": "ol-og-snaps",
-		"title": "Øl og Snaps",
-		"subtitle": null,
-		"description": "Aquavit, pilsner lager.",
-		"url": "/cocktails/ol-og-snaps",
-		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/ol-og-snaps.webp",
-		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/ol-og-snaps.webp",
-		"method": "Built in Glass",
-		"served_in": "Pint Glass",
-		"ice": "None",
-		"has_straw": false,
-		"servings": null,
-		"notes": "A Danish tradition. \"Øl og Snaps\" means \"beer and snaps\" in Danish. Traditionally enjoyed with pickled herring or other smørrebrød. Sip the aquavit, then chase with beer.",
-		"bartender_slug": null,
-		"ingredients": [
-			{
-				"kind": "ingredient",
-				"slug": "aquavit",
-				"amount": "1.5oz",
-				"label": null
-			},
-			{
-				"kind": "ingredient",
-				"slug": "bitburger-pils",
-				"amount": "12oz",
-				"label": null
-			}
-		],
-		"tags": [
-			{
-				"label": "Beer",
-				"category": "Base Alcohol"
-			},
-			{
-				"label": "Bubbly",
-				"category": "Flavor Profile"
-			},
-			{
-				"label": "Herbal",
-				"category": "Flavor Profile"
-			},
-			{
-				"label": "Built in Glass",
-				"category": "Technique"
-			},
-			{
-				"label": "Folk",
-				"category": "Origin"
-			},
-			{
-				"label": "Pint Glass",
-				"category": "Served In"
-			},
-			{
-				"label": "Higher Alcohol",
-				"category": "Alcohol Level"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
-			}
-		],
-		"variations": []
-	},
-	{
 		"slug": "old-fashioned",
 		"title": "Old Fashioned",
 		"subtitle": null,
@@ -9071,10 +8916,6 @@
 			{
 				"label": "Highball Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": [
@@ -9411,10 +9252,6 @@
 			{
 				"label": "Highball Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -10086,10 +9923,6 @@
 			{
 				"label": "Highball Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": [
@@ -12981,10 +12814,6 @@
 			{
 				"label": "Double Rocks Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -13499,10 +13328,6 @@
 			{
 				"label": "Double Rocks Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []

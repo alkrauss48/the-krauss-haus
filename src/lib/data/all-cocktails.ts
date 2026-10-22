@@ -3,7 +3,6 @@ import type { Cocktail } from '$lib/types/cocktails';
 // Import all cocktail data
 import ALASKA from '$lib/data/cocktails/alaska';
 import AMARETTO_SOUR from '$lib/data/cocktails/amaretto-sour';
-import AMERICAN_BOILERMAKER from '$lib/data/cocktails/american-boilermaker';
 import AMERICAN_TRILOGY from '$lib/data/cocktails/american-trilogy';
 import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
@@ -21,7 +20,6 @@ import CARAJILLO from '$lib/data/cocktails/carajillo';
 import CARAJILLO_OLD_FASHIONED from '$lib/data/cocktails/carajillo-old-fashioned';
 import CARAMEL_APPLE_SPICE from '$lib/data/cocktails/caramel-apple-spice';
 import CANELAZO from '$lib/data/cocktails/canelazo';
-import CERVEZA_Y_TEQUILA from '$lib/data/cocktails/cerveza-y-tequila';
 import CHAMPAGNE_COCKTAIL from '$lib/data/cocktails/champagne-cocktail';
 import CHARTREUSE_SWIZZLE from '$lib/data/cocktails/chartreuse-swizzle';
 import CHOCOLATE_COVERED_CHERRIES from '$lib/data/cocktails/chocolate-covered-cherries';
@@ -35,7 +33,6 @@ import CUBA_LIBRE from '$lib/data/cocktails/cuba-libre';
 import DAIQUIRI from '$lib/data/cocktails/daiquiri';
 import DARK_N_STORMY from '$lib/data/cocktails/dark-n-stormy';
 import DEAR_LUKEY from '$lib/data/cocktails/dear-lukey';
-import DEER_AND_BEER from '$lib/data/cocktails/deer-and-beer';
 import DEMERARA_DRY_FLOAT from '$lib/data/cocktails/demerara-dry-float';
 import DESERT_DREAMS from '$lib/data/cocktails/desert-dreams';
 import DIVISION_BELL from '$lib/data/cocktails/division-bell';
@@ -58,6 +55,7 @@ import GIN_BASIL_SMASH from '$lib/data/cocktails/gin-basil-smash';
 import GLUHWEIN from '$lib/data/cocktails/gluhwein';
 import GODFATHER from '$lib/data/cocktails/godfather';
 import GRASSHOPPER from '$lib/data/cocktails/grasshopper';
+import HEX_APPEAL from '$lib/data/cocktails/hex-appeal';
 import HIGHLAND_COFFEE from '$lib/data/cocktails/highland-coffee';
 import HOLLAND_HOUSE from '$lib/data/cocktails/holland-house';
 import HOTEL_NACIONAL from '$lib/data/cocktails/hotel-nacional';
@@ -101,7 +99,6 @@ import NIGHT_FLIGHT from '$lib/data/cocktails/night-flight';
 import NORWEIGAN_PARALYSIS from '$lib/data/cocktails/norwegian-paralysis';
 import OAXACA_OLD_FASHIONED from '$lib/data/cocktails/oaxaca-old-fashioned';
 import OLD_FASHIONED from '$lib/data/cocktails/old-fashioned';
-import OL_OG_SNAPS from '$lib/data/cocktails/ol-og-snaps';
 import PAINKILLER from '$lib/data/cocktails/painkiller';
 import PALOMA from '$lib/data/cocktails/paloma';
 import PAPER_PLANE from '$lib/data/cocktails/paper-plane';
@@ -160,7 +157,6 @@ import ZOMBIE from '$lib/data/cocktails/zombie';
 export const allCocktails: Cocktail[] = [
 	ALASKA,
 	AMARETTO_SOUR,
-	AMERICAN_BOILERMAKER,
 	AMERICAN_TRILOGY,
 	AMERICANO,
 	ANCIENT_MARINER,
@@ -178,7 +174,6 @@ export const allCocktails: Cocktail[] = [
 	CARAJILLO_OLD_FASHIONED,
 	CARAMEL_APPLE_SPICE,
 	CANELAZO,
-	CERVEZA_Y_TEQUILA,
 	CHAMPAGNE_COCKTAIL,
 	CHARTREUSE_SWIZZLE,
 	CHOCOLATE_COVERED_CHERRIES,
@@ -192,7 +187,6 @@ export const allCocktails: Cocktail[] = [
 	DAIQUIRI,
 	DARK_N_STORMY,
 	DEAR_LUKEY,
-	DEER_AND_BEER,
 	DEMERARA_DRY_FLOAT,
 	DESERT_DREAMS,
 	DIVISION_BELL,
@@ -215,6 +209,7 @@ export const allCocktails: Cocktail[] = [
 	GLUHWEIN,
 	GODFATHER,
 	GRASSHOPPER,
+	HEX_APPEAL,
 	HIGHLAND_COFFEE,
 	HOLLAND_HOUSE,
 	HOTEL_NACIONAL,
@@ -258,7 +253,6 @@ export const allCocktails: Cocktail[] = [
 	NORWEIGAN_PARALYSIS,
 	OAXACA_OLD_FASHIONED,
 	OLD_FASHIONED,
-	OL_OG_SNAPS,
 	PAINKILLER,
 	PALOMA,
 	PAPER_PLANE,

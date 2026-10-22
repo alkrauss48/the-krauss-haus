@@ -48,8 +48,7 @@ const PINA_VERDE: Cocktail = {
 		Tags.Technique.SHAKEN,
 		Tags.Style.TIKI,
 		Tags.Origin.MODERN,
-		Tags.ServedIn.HIGHBALL_GLASS,
-		Tags.PrepTime.SIMPLE_PREP
+		Tags.ServedIn.HIGHBALL_GLASS
 	]
 };
 

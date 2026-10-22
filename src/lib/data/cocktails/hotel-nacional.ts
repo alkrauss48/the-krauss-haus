@@ -51,8 +51,7 @@ const HOTEL_NACIONAL: Cocktail = {
 		Tags.Style.SOUR,
 		Tags.Origin.CLASSIC,
 		Tags.ServedIn.COUPE_GLASS,
-		Tags.AlcoholLevel.LOW,
-		Tags.PrepTime.SIMPLE_PREP
+		Tags.AlcoholLevel.LOW
 	]
 };
 

@@ -58,8 +58,7 @@ const WISCONSIN_OLD_FASHIONED: Cocktail = {
 		Tags.FlavorProfile.FRUITY,
 		Tags.Technique.BUILT,
 		Tags.Origin.FOLK,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
-		Tags.PrepTime.SIMPLE_PREP
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

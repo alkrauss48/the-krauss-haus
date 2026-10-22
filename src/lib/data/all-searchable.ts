@@ -8,6 +8,7 @@ import { menuConfig } from './menu-config';
 import { getIngredientDisplayName } from '$lib/utils/ingredients';
 import { isCocktailSlot } from '$lib/types/party';
 import { collectionCocktails } from '$lib/utils/collections';
+import { fuzzyScore, fuzzyTarget, tokenize } from '$lib/utils/fuzzy';
 
 export type SearchableType =
 	'cocktail' | 'recipe' | 'path' | 'collection' | 'party' | 'bartender' | 'menu' | 'page';
@@ -194,20 +195,10 @@ export const allSearchable: SearchableItem[] = [
 	...bartenderItems()
 ];
 
-function tokenize(query: string): string[] {
-	return query
-		.toLowerCase()
-		.trim()
-		.split(/\s+/)
-		.filter((t) => t.length > 0);
-}
-
-function itemHaystack(item: SearchableItem): string {
-	return [item.title, item.description, ...(item.keywords ?? [])]
-		.filter(Boolean)
-		.join(' ')
-		.toLowerCase();
-}
+const searchIndex = allSearchable.map((item) => ({
+	item,
+	target: fuzzyTarget(item.title, [item.description, ...(item.keywords ?? [])])
+}));
 
 const typeRank: Record<SearchableType, number> = {
 	cocktail: 0,
@@ -230,23 +221,9 @@ export function searchAll(query: string, limit = 40): SearchResult[] {
 	if (tokens.length === 0) return [];
 
 	const results: SearchResult[] = [];
-	for (const item of allSearchable) {
-		const haystack = itemHaystack(item);
-		const title = item.title.toLowerCase();
-
-		let score = 0;
-		let matchedAll = true;
-		for (const token of tokens) {
-			if (!haystack.includes(token)) {
-				matchedAll = false;
-				break;
-			}
-			if (title.startsWith(token)) score += 100;
-			else if (title.includes(token)) score += 50;
-			else score += 10;
-		}
-		if (!matchedAll) continue;
-		results.push({ item, score });
+	for (const { item, target } of searchIndex) {
+		const score = fuzzyScore(tokens, target);
+		if (score > 0) results.push({ item, score });
 	}
 
 	results.sort((a, b) => {
