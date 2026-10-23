@@ -6,15 +6,15 @@ import { Tags } from '../all-tags';
 import { Ice } from '$lib/enums/ice';
 import AARON_KRAUSS from '$lib/data/bartenders/aaron-krauss';
 
-const PUMPKIN_BUGGY: Cocktail = {
-	title: 'Pumpkin Buggy',
+const MIDNIGHT_CARRIAGE: Cocktail = {
+	title: 'Midnight Carriage',
 	description:
-		'Jamaican rum, blended rum, apple strudel liqueur, apple cider, lemon, dark berry liqueur, licor 43, black walnut.',
+		'Cachaça, blended rum, apple strudel liqueur, lemon, honey-ginger syrup, black walnut.',
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/pumpkin-buggy.webp',
 	thumbnailImagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/pumpkin-buggy.webp',
-	slug: 'pumpkin-buggy',
+	slug: 'midnight-carriage',
 	createdBy: AARON_KRAUSS,
 	method: CocktailMethod.Shaken,
 	servedIn: ServedIn.TikiMug,
@@ -22,32 +22,24 @@ const PUMPKIN_BUGGY: Cocktail = {
 	hasStraw: true,
 	ingredients: [
 		{
-			amount: '1.5oz',
-			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+			amount: '1oz',
+			ingredient: Ingredients.BaseSpirits.LEBLON
 		},
 		{
-			amount: '.5oz',
+			amount: '1oz',
 			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
 		},
 		{
-			amount: '.5oz',
+			amount: '.75oz',
 			ingredient: Ingredients.Liqueurs.APPLE_STRUDEL_LIQUEUER
 		},
 		{
-			amount: '2oz',
-			ingredient: Ingredients.Mixers.APPLE_CIDER
-		},
-		{
-			amount: '.75oz',
+			amount: '1oz',
 			ingredient: Ingredients.Citrus.LEMON
 		},
 		{
-			amount: '.25oz',
-			ingredient: Ingredients.Liqueurs.HOUSE_DARK_BERRY_CREME
-		},
-		{
-			amount: '.25oz',
-			ingredient: Ingredients.Liqueurs.LICOR_43
+			amount: '.75oz',
+			ingredient: Ingredients.Syrups.HONEY_GINGER_SYRUP
 		},
 		{
 			amount: '2 dashes',
@@ -69,4 +61,4 @@ const PUMPKIN_BUGGY: Cocktail = {
 	]
 };
 
-export default PUMPKIN_BUGGY;
+export default MIDNIGHT_CARRIAGE;
