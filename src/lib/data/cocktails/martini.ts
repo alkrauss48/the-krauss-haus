@@ -32,6 +32,27 @@ const MARTINI: Cocktail = {
 		},
 		'Garnish: 3 Olives'
 	],
+	variations: [
+		{
+			name: '5:1',
+			ingredients: [
+				{
+					label: 'Increase gin to 2.5oz.',
+					ingredient: Ingredients.BaseSpirits.TANQUERAY
+				},
+				{
+					label: 'Reduce dry vermouth to .5oz.',
+					ingredient: Ingredients.BeerAndWine.DOLIN_VERMOUTH_DRY
+				}
+			],
+			images: []
+		},
+		{
+			name: 'Dirty',
+			ingredients: ['Add .5oz of olive brine.'],
+			images: []
+		}
+	],
 	tags: [
 		Tags.BaseAlcohol.GIN,
 		Tags.BaseAlcohol.WINE,

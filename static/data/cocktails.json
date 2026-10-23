@@ -7171,7 +7171,34 @@
 				"category": "Served In"
 			}
 		],
-		"variations": []
+		"variations": [
+			{
+				"name": "5:1",
+				"ingredients": [
+					{
+						"kind": "ingredient",
+						"slug": "tanqueray",
+						"amount": null,
+						"label": "Increase gin to 2.5oz."
+					},
+					{
+						"kind": "ingredient",
+						"slug": "dolin-vermouth-dry",
+						"amount": null,
+						"label": "Reduce dry vermouth to .5oz."
+					}
+				]
+			},
+			{
+				"name": "Dirty",
+				"ingredients": [
+					{
+						"kind": "text",
+						"text": "Add .5oz of olive brine."
+					}
+				]
+			}
+		]
 	},
 	{
 		"slug": "merry-mule",
