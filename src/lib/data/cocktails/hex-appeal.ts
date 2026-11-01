@@ -43,8 +43,8 @@ const HEX_APPEAL: Cocktail = {
 			ingredient: Ingredients.Other.CREAM_OF_COCONUT
 		},
 		{
-			amount: '.25oz',
-			ingredient: Ingredients.Liqueurs.LICOR_43
+			amount: '.5oz',
+			ingredient: Ingredients.Syrups.ORGEAT
 		},
 		{
 			amount: '2 dashes',

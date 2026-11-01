@@ -46,7 +46,7 @@ const BENEDICTINE: Ingredient = {
 const GREEN_CHARTREUSE: Ingredient = {
 	title: 'Green Chartreuse',
 	slug: 'green-chartreuse',
-	costPerOz: 70 / 25
+	costPerOz: 80 / 23.67
 };
 const JAGERMEISTER: Ingredient = {
 	title: 'Jägermeister Manifest',
@@ -61,7 +61,7 @@ const PIMMS: Ingredient = {
 const YELLOW_CHARTREUSE: Ingredient = {
 	title: 'Yellow Chartreuse',
 	slug: 'yellow-chartreuse',
-	costPerOz: 70 / 25
+	costPerOz: 80 / 23.67
 };
 
 // Fruit & Citrus

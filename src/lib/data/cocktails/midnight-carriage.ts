@@ -22,11 +22,15 @@ const MIDNIGHT_CARRIAGE: Cocktail = {
 	hasStraw: true,
 	ingredients: [
 		{
-			amount: '1oz',
+			amount: '.75oz',
 			ingredient: Ingredients.BaseSpirits.LEBLON
 		},
 		{
-			amount: '1oz',
+			amount: '.75oz',
+			ingredient: Ingredients.BaseSpirits.APPLETON_ESTATE_SIGNATURE
+		},
+		{
+			amount: '.5oz',
 			ingredient: Ingredients.BaseSpirits.PLANTERAY_OFTD
 		},
 		{

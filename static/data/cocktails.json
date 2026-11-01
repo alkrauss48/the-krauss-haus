@@ -4371,8 +4371,8 @@
 			{
 				"kind": "ingredient",
 				"slug": "clove",
-				"amount": "6",
-				"label": "Cloves"
+				"amount": null,
+				"label": "6 Cloves"
 			},
 			{
 				"kind": "ingredient",
@@ -4698,8 +4698,8 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "licor-43",
-				"amount": ".25oz",
+				"slug": "orgeat",
+				"amount": ".5oz",
 				"label": null
 			},
 			{
@@ -6211,10 +6211,6 @@
 			{
 				"label": "Double Rocks Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -7399,13 +7395,19 @@
 			{
 				"kind": "ingredient",
 				"slug": "leblon",
-				"amount": "1oz",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "appleton-estate-signature",
+				"amount": ".75oz",
 				"label": null
 			},
 			{
 				"kind": "ingredient",
 				"slug": "planteray-oftd",
-				"amount": "1oz",
+				"amount": ".5oz",
 				"label": null
 			},
 			{
