@@ -73,6 +73,109 @@
 		"variations": []
 	},
 	{
+		"slug": "aloe-black",
+		"title": "Aloe Black",
+		"subtitle": null,
+		"description": "Blanco tequila, Chareau, dark berry liqueur, lemon, rich simple syrup, cucumber.",
+		"url": "/cocktails/aloe-black",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/aloe-black.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/aloe-black.webp",
+		"method": "Shaken",
+		"served_in": "Double Rocks Glass",
+		"ice": "Small Cubes",
+		"has_straw": false,
+		"servings": null,
+		"notes": "Shake all ingredients hard for six to eight seconds, then strain over fresh ice. Garnish with pink salt, an edible flower, or both.",
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "cimarron-blanco",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "chareau",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "house-dark-berry-creme",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rich-simple-syrup",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "cucumber",
+				"amount": "4 slices",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "salt",
+				"amount": null,
+				"label": "Garnish: Sprinkle of pink salt"
+			},
+			{
+				"kind": "text",
+				"text": "Garnish: Small pink or purple edible flower"
+			}
+		],
+		"tags": [
+			{
+				"label": "Tequila",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Herbal",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Sour",
+				"category": "Style"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "amalfi-spritz",
 		"title": "Amalfi Spritz",
 		"subtitle": null,
@@ -12981,6 +13084,105 @@
 			{
 				"label": "Coupe Glass",
 				"category": "Served In"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "veracruz",
+		"title": "Veracruz",
+		"subtitle": null,
+		"description": "Mezcal, Chareau, dry vermouth, lime, rich simple syrup, chili bitters, cucumber.",
+		"url": "/cocktails/veracruz",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/veracruz.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/veracruz.webp",
+		"method": "Shaken",
+		"served_in": "Double Rocks Glass",
+		"ice": "Small Cubes",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "del-maguey-vida",
+				"amount": "1.5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lime",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "chareau",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "dolin-vermouth-dry",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rich-simple-syrup",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "chili-bitters",
+				"amount": "2 dashes",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "cucumber",
+				"amount": null,
+				"label": "Garnish: Cucumber spear"
+			}
+		],
+		"tags": [
+			{
+				"label": "Mezcal",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Herbal",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Spiced",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Sour",
+				"category": "Style"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
 			}
 		],
 		"variations": []
