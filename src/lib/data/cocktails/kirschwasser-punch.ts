@@ -49,8 +49,7 @@ const KIRSCHWASSER_PUNCH: Cocktail = {
 		Tags.Style.SPIRIT_FORWARD,
 		Tags.Origin.CLASSIC,
 		Tags.AlcoholLevel.HIGH,
-		Tags.ServedIn.DOUBLE_ROCKS_GLASS,
-		Tags.PrepTime.SIMPLE_PREP
+		Tags.ServedIn.DOUBLE_ROCKS_GLASS
 	]
 };
 

@@ -46,10 +46,10 @@ const BENEDICTINE: Ingredient = {
 const GREEN_CHARTREUSE: Ingredient = {
 	title: 'Green Chartreuse',
 	slug: 'green-chartreuse',
-	costPerOz: 70 / 25
+	costPerOz: 80 / 23.67
 };
 const JAGERMEISTER: Ingredient = {
-	title: 'Jägermeister Manifest',
+	title: 'Jägermeister',
 	slug: 'jagermeister',
 	costPerOz: 22 / 25
 };
@@ -61,7 +61,7 @@ const PIMMS: Ingredient = {
 const YELLOW_CHARTREUSE: Ingredient = {
 	title: 'Yellow Chartreuse',
 	slug: 'yellow-chartreuse',
-	costPerOz: 70 / 25
+	costPerOz: 80 / 23.67
 };
 
 // Fruit & Citrus
@@ -146,6 +146,11 @@ const FRANGELICO: Ingredient = {
 };
 
 // Floral, Coffee & Specialty
+const CHAREAU: Ingredient = {
+	title: 'Chareau',
+	slug: 'chareau',
+	costPerOz: 35 / 25
+};
 const CREME_DE_CACAO: Ingredient = {
 	title: 'Crème de Cacao',
 	slug: 'creme-de-cacao',
@@ -214,6 +219,7 @@ export const LIQUEURS: IngredientCategory = {
 		{
 			label: 'Floral, Coffee & Specialty',
 			ingredients: [
+				CHAREAU,
 				CREME_DE_CACAO,
 				ELDERFLOWER_LIQUEUR,
 				ITALICUS,
@@ -257,6 +263,7 @@ export const INGREDIENTS = {
 	MAMA_JUANA,
 
 	// Floral, Coffee & Specialty
+	CHAREAU,
 	CREME_DE_CACAO,
 	ELDERFLOWER_LIQUEUR,
 	ITALICUS,

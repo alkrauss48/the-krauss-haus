@@ -135,7 +135,7 @@ const ST_REMY_VSOP: Ingredient = {
 	title: 'St-Rémy VSOP',
 	slug: 'st-remy-vsop',
 	group: 'Cognac',
-	costPerOz: 20 / 33
+	costPerOz: 28 / 59
 };
 const SCHLADERER: Ingredient = {
 	title: 'Schladerer',

@@ -2,12 +2,15 @@ import type { Cocktail } from '$lib/types/cocktails';
 
 // Import all cocktail data
 import ALASKA from '$lib/data/cocktails/alaska';
+import ALOE_BLACK from '$lib/data/cocktails/aloe-black';
+import AMALFI_SPRITZ from '$lib/data/cocktails/amalfi-spritz';
 import AMARETTO_SOUR from '$lib/data/cocktails/amaretto-sour';
 import AMERICAN_TRILOGY from '$lib/data/cocktails/american-trilogy';
 import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
 import AULANI_TROPICAL_MAI_TAI from '$lib/data/cocktails/aulani-tropical-mai-tai';
 import AZALEA from '$lib/data/cocktails/azalea';
+import BARREL_OF_MISCHIEF from '$lib/data/cocktails/barrel-of-mischief';
 import BATANGA from '$lib/data/cocktails/batanga';
 import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-giuseppe';
 import BLACK_FOREST_CAKE from '$lib/data/cocktails/black-forest-cake';
@@ -144,6 +147,7 @@ import TORONTO from '$lib/data/cocktails/toronto';
 import TRADEWINDS from '$lib/data/cocktails/tradewinds';
 import TRATTO_LIMONCELLO_COCKTAIL from '$lib/data/cocktails/tratto-limoncello-cocktail';
 import TRINIDAD_SOUR from '$lib/data/cocktails/trinidad-sour';
+import VERACRUZ from '$lib/data/cocktails/veracruz';
 import VIEUX_CARRE from '$lib/data/cocktails/vieux-carre';
 import WHISKEY_GINGER from '$lib/data/cocktails/whiskey-ginger';
 import WHISKEY_SOUR from '$lib/data/cocktails/whiskey-sour';
@@ -156,12 +160,15 @@ import ZOMBIE from '$lib/data/cocktails/zombie';
 // Create array of all cocktails (sorted alphabetically)
 export const allCocktails: Cocktail[] = [
 	ALASKA,
+	ALOE_BLACK,
+	AMALFI_SPRITZ,
 	AMARETTO_SOUR,
 	AMERICAN_TRILOGY,
 	AMERICANO,
 	ANCIENT_MARINER,
 	AULANI_TROPICAL_MAI_TAI,
 	AZALEA,
+	BARREL_OF_MISCHIEF,
 	BATANGA,
 	BITTER_GIUSEPPE,
 	BLACK_FOREST_CAKE,
@@ -298,6 +305,7 @@ export const allCocktails: Cocktail[] = [
 	TRADEWINDS,
 	TRATTO_LIMONCELLO_COCKTAIL,
 	TRINIDAD_SOUR,
+	VERACRUZ,
 	VIEUX_CARRE,
 	WHISKEY_GINGER,
 	WHISKEY_SOUR,

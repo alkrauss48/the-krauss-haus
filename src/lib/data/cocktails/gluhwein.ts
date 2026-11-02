@@ -37,8 +37,7 @@ const GLUHWEIN: Cocktail = {
 			ingredient: Ingredients.HerbsAndSpices.CINNAMON
 		},
 		{
-			amount: '6',
-			label: 'Cloves',
+			label: '6 Cloves',
 			ingredient: Ingredients.HerbsAndSpices.CLOVE
 		},
 		{
