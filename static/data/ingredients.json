@@ -230,6 +230,16 @@
 		"recipe_slug": null
 	},
 	{
+		"slug": "chareau",
+		"title": "Chareau",
+		"url": "/ingredients",
+		"group": null,
+		"category": "Liqueurs",
+		"subcategory": "Floral, Coffee & Specialty",
+		"type": "Alcoholic",
+		"recipe_slug": null
+	},
+	{
 		"slug": "cherry-heering",
 		"title": "Cherry Heering",
 		"url": "/ingredients",
@@ -671,7 +681,7 @@
 	},
 	{
 		"slug": "jagermeister",
-		"title": "Jägermeister Manifest",
+		"title": "Jägermeister",
 		"url": "/ingredients",
 		"group": null,
 		"category": "Liqueurs",

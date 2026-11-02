@@ -73,6 +73,89 @@
 		"variations": []
 	},
 	{
+		"slug": "amalfi-spritz",
+		"title": "Amalfi Spritz",
+		"subtitle": null,
+		"description": "Prosecco, limoncello, soda water, lemon wheel, mint sprig.",
+		"url": "/cocktails/amalfi-spritz",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/amalfi-spritz.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/amalfi-spritz.webp",
+		"method": "Built in Glass",
+		"served_in": "Double Rocks Glass",
+		"ice": "Small Cubes",
+		"has_straw": false,
+		"servings": null,
+		"notes": null,
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "prosecco",
+				"amount": "3oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "limoncello",
+				"amount": "2oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "soda-water",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon-garnish",
+				"amount": null,
+				"label": "Garnish: Lemon wheel"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "mint",
+				"amount": null,
+				"label": "Garnish: Mint sprig"
+			}
+		],
+		"tags": [
+			{
+				"label": "Wine",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Bubbly",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Lower Alcohol",
+				"category": "Alcohol Level"
+			},
+			{
+				"label": "Built in Glass",
+				"category": "Technique"
+			},
+			{
+				"label": "Modern",
+				"category": "Origin"
+			},
+			{
+				"label": "Double Rocks Glass",
+				"category": "Served In"
+			},
+			{
+				"label": "Simple Prep",
+				"category": "Prep Time"
+			}
+		],
+		"variations": []
+	},
+	{
 		"slug": "amaretto-sour",
 		"title": "Amaretto Sour",
 		"subtitle": null,
@@ -12002,19 +12085,7 @@
 				"category": "Prep Time"
 			}
 		],
-		"variations": [
-			{
-				"name": "Limoncello",
-				"ingredients": [
-					{
-						"kind": "ingredient",
-						"slug": "limoncello",
-						"amount": null,
-						"label": "Swap Aperol with Limoncello."
-					}
-				]
-			}
-		]
+		"variations": []
 	},
 	{
 		"slug": "surfer-on-acid",

@@ -2,6 +2,7 @@ import type { Cocktail } from '$lib/types/cocktails';
 
 // Import all cocktail data
 import ALASKA from '$lib/data/cocktails/alaska';
+import AMALFI_SPRITZ from '$lib/data/cocktails/amalfi-spritz';
 import AMARETTO_SOUR from '$lib/data/cocktails/amaretto-sour';
 import AMERICAN_TRILOGY from '$lib/data/cocktails/american-trilogy';
 import AMERICANO from '$lib/data/cocktails/americano';
@@ -156,6 +157,7 @@ import ZOMBIE from '$lib/data/cocktails/zombie';
 // Create array of all cocktails (sorted alphabetically)
 export const allCocktails: Cocktail[] = [
 	ALASKA,
+	AMALFI_SPRITZ,
 	AMARETTO_SOUR,
 	AMERICAN_TRILOGY,
 	AMERICANO,
