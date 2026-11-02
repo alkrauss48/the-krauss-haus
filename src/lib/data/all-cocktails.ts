@@ -10,6 +10,7 @@ import AMERICANO from '$lib/data/cocktails/americano';
 import ANCIENT_MARINER from '$lib/data/cocktails/ancient-mariner';
 import AULANI_TROPICAL_MAI_TAI from '$lib/data/cocktails/aulani-tropical-mai-tai';
 import AZALEA from '$lib/data/cocktails/azalea';
+import BARREL_OF_MISCHIEF from '$lib/data/cocktails/barrel-of-mischief';
 import BATANGA from '$lib/data/cocktails/batanga';
 import BITTER_GIUSEPPE from '$lib/data/cocktails/bitter-giuseppe';
 import BLACK_FOREST_CAKE from '$lib/data/cocktails/black-forest-cake';
@@ -167,6 +168,7 @@ export const allCocktails: Cocktail[] = [
 	ANCIENT_MARINER,
 	AULANI_TROPICAL_MAI_TAI,
 	AZALEA,
+	BARREL_OF_MISCHIEF,
 	BATANGA,
 	BITTER_GIUSEPPE,
 	BLACK_FOREST_CAKE,

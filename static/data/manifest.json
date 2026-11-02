@@ -1,7 +1,7 @@
 {
-	"generated_at": "2026-11-02T04:12:03.243Z",
+	"generated_at": "2026-11-02T15:12:02.464Z",
 	"counts": {
-		"cocktails": 154,
+		"cocktails": 155,
 		"ingredients": 133,
 		"recipes": 31,
 		"bartenders": 31,
@@ -11,5 +11,5 @@
 		"menus": 3,
 		"collections": 2
 	},
-	"checksum": "8eb306510eb7482ae6ca8c97161145610b3b2949e5995f35847ffc5d7d99ddd4"
+	"checksum": "e88593b489ce767a8fd60bd7145f4e1a76c3a098e6999fa3bd3bcac81f5db286"
 }

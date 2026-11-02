@@ -76,7 +76,7 @@
 		"slug": "aloe-black",
 		"title": "Aloe Black",
 		"subtitle": null,
-		"description": "Blanco tequila, Chareau, dark berry liqueur, lemon, rich simple syrup, cucumber.",
+		"description": "Blanco tequila, chareau, dark berry liqueur, lemon, rich simple syrup, cucumber.",
 		"url": "/cocktails/aloe-black",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/aloe-black.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/aloe-black.webp",
@@ -85,7 +85,7 @@
 		"ice": "Small Cubes",
 		"has_straw": false,
 		"servings": null,
-		"notes": "Shake all ingredients hard for six to eight seconds, then strain over fresh ice. Garnish with pink salt, an edible flower, or both.",
+		"notes": null,
 		"bartender_slug": null,
 		"ingredients": [
 			{
@@ -121,7 +121,7 @@
 			{
 				"kind": "ingredient",
 				"slug": "cucumber",
-				"amount": "4 slices",
+				"amount": "5 slices",
 				"label": null
 			},
 			{
@@ -132,7 +132,7 @@
 			},
 			{
 				"kind": "text",
-				"text": "Garnish: Small pink or purple edible flower"
+				"text": "Garnish: Edible flower"
 			}
 		],
 		"tags": [
@@ -167,10 +167,6 @@
 			{
 				"label": "Double Rocks Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -792,6 +788,131 @@
 			{
 				"label": "Lower Alcohol",
 				"category": "Alcohol Level"
+			}
+		],
+		"variations": []
+	},
+	{
+		"slug": "barrel-of-mischief",
+		"title": "Barrel of Mischief",
+		"subtitle": null,
+		"description": "Gin, jamaican rum, italicus, chareau, stone fruit liqueur, amaro lucano, lemon, rich simple syrup, mint.",
+		"url": "/cocktails/barrel-of-mischief",
+		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/barrel-of-mischief.webp",
+		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/barrel-of-mischief.webp",
+		"method": "Shaken",
+		"served_in": "Tiki Mug",
+		"ice": "Crushed",
+		"has_straw": true,
+		"servings": null,
+		"notes": "Served in the Trader Sam's 15th Anniversary Laughing Hyena tiki mug.",
+		"bartender_slug": null,
+		"ingredients": [
+			{
+				"kind": "ingredient",
+				"slug": "tanqueray",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "smith-and-cross",
+				"amount": ".75oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "italicus",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "chareau",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "stone-fruit-liqueur",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "amaro-lucano",
+				"amount": ".25oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "rich-simple-syrup",
+				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "mint",
+				"amount": null,
+				"label": "Garnish: Mint sprig"
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lemon-garnish",
+				"amount": null,
+				"label": "Garnish: Lemon wheel"
+			}
+		],
+		"tags": [
+			{
+				"label": "Gin",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Rum",
+				"category": "Base Alcohol"
+			},
+			{
+				"label": "Fruity",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Herbal",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Citrus",
+				"category": "Flavor Profile"
+			},
+			{
+				"label": "Higher Alcohol",
+				"category": "Alcohol Level"
+			},
+			{
+				"label": "Shaken",
+				"category": "Technique"
+			},
+			{
+				"label": "Tiki",
+				"category": "Style"
+			},
+			{
+				"label": "Tiki Mug",
+				"category": "Served In"
+			},
+			{
+				"label": "Exclusive Drinkware",
+				"category": "Served In"
+			},
+			{
+				"label": "Complex Prep",
+				"category": "Prep Time"
 			}
 		],
 		"variations": []
@@ -13092,7 +13213,7 @@
 		"slug": "veracruz",
 		"title": "Veracruz",
 		"subtitle": null,
-		"description": "Mezcal, Chareau, dry vermouth, lime, rich simple syrup, chili bitters, cucumber.",
+		"description": "Mezcal, chareau, dry vermouth, lime, rich simple syrup, chili bitters, cucumber.",
 		"url": "/cocktails/veracruz",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/veracruz.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/veracruz.webp",
@@ -13112,12 +13233,6 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "lime",
-				"amount": ".75oz",
-				"label": null
-			},
-			{
-				"kind": "ingredient",
 				"slug": "chareau",
 				"amount": ".5oz",
 				"label": null
@@ -13126,6 +13241,12 @@
 				"kind": "ingredient",
 				"slug": "dolin-vermouth-dry",
 				"amount": ".5oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
+				"slug": "lime",
+				"amount": ".75oz",
 				"label": null
 			},
 			{
@@ -13157,10 +13278,6 @@
 				"category": "Flavor Profile"
 			},
 			{
-				"label": "Spiced",
-				"category": "Flavor Profile"
-			},
-			{
 				"label": "Citrus",
 				"category": "Flavor Profile"
 			},
@@ -13173,16 +13290,8 @@
 				"category": "Style"
 			},
 			{
-				"label": "Modern",
-				"category": "Origin"
-			},
-			{
 				"label": "Double Rocks Glass",
 				"category": "Served In"
-			},
-			{
-				"label": "Simple Prep",
-				"category": "Prep Time"
 			}
 		],
 		"variations": []

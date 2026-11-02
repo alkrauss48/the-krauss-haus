@@ -3,6 +3,7 @@ import type { CocktailCollection } from '$lib/types/cocktail-collection';
 import NAUTILUS from '$lib/data/cocktails/nautilus';
 import TIDAL_TERROR from '$lib/data/cocktails/tidal-terror';
 import PIRANHA_POOL from '$lib/data/cocktails/piranha-pool';
+import BARREL_OF_MISCHIEF from '$lib/data/cocktails/barrel-of-mischief';
 import PINEAPPLE_POTION from '$lib/data/cocktails/pineapple-potion';
 import PLUNDERERS_PUNCH from '$lib/data/cocktails/plunderers-punch';
 import AULANI_TROPICAL_MAI_TAI from '$lib/data/cocktails/aulani-tropical-mai-tai';
@@ -26,7 +27,14 @@ const TIKI_MUGS: CocktailCollection = {
 	groups: [
 		{
 			heading: 'Disney',
-			cocktails: [PLUNDERERS_PUNCH, TIDAL_TERROR, PIRANHA_POOL, NAUTILUS, AULANI_TROPICAL_MAI_TAI]
+			cocktails: [
+				PLUNDERERS_PUNCH,
+				TIDAL_TERROR,
+				PIRANHA_POOL,
+				BARREL_OF_MISCHIEF,
+				NAUTILUS,
+				AULANI_TROPICAL_MAI_TAI
+			]
 		},
 		{
 			heading: 'Halloween',
