@@ -18,14 +18,14 @@
 		"slug": "fisherman",
 		"title": "Fisherman",
 		"subtitle": "Breezy. Refreshing. Shoreline-ready.",
-		"description": "Kick off your shoes and unwind by the water. This path starts with muddled cachaça simplicity, drifts into a low-ABV bitter-beer cooler, picks up tropical fruit and rum from a sidecar pour, deepens into a bittersweet tiki blend, and finishes with a smoky-briny scotch-and-mezcal sour that tastes of the sea itself.",
+		"description": "Kick off your shoes and unwind by the water. This path starts with muddled cachaça simplicity, drifts into a low-ABV bitter-beer cooler, deepens into a bittersweet tiki blend, cracks open a savory, chili-spiked beer on ice, and finishes with a smoky-briny scotch-and-mezcal sour that tastes of the sea itself.",
 		"url": "/paths/fisherman",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/fisherman.jpeg",
 		"cocktail_slugs": [
 			"caipirinha",
 			"spaghett",
-			"sharks-tooth",
 			"lost-lake",
+			"michelada",
 			"sea-legs"
 		]
 	},
@@ -33,30 +33,30 @@
 		"slug": "hunter",
 		"title": "Hunter",
 		"subtitle": "Tropical. Rum-soaked. Sun-chasing.",
-		"description": "Chase the sun through tropical fruit and unexpected spirits. This path opens with spiced tequila, pineapple, and lime, settles into clean rum-and-citrus balance, builds into easy fruity sweetness, then layers in agricole funk and warm cinnamon before landing on a bourbon-and-falernum tiki swap. The deeper you go, the more the tropics reveal.",
+		"description": "Chase the sun through tropical fruit and unexpected spirits. This path opens with a bourbon-and-falernum tiki swap, trades it for cinnamon-spiced tequila and pineapple, settles into clean rum-and-citrus balance, deepens into dark Jamaican rum and demerara, and lands on a fruity, full-tilt Jamaican rum blend. The deeper you go, the more the tropics reveal.",
 		"url": "/paths/hunter",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/hunter.jpeg",
 		"cocktail_slugs": [
+			"iron-ranger",
 			"gilda",
 			"daiquiri",
-			"hurricane",
-			"donga-punch",
-			"iron-ranger"
+			"planters-punch",
+			"hurricane"
 		]
 	},
 	{
 		"slug": "innkeeper",
 		"title": "Innkeeper",
 		"subtitle": "Hearty. Comforting. Generous.",
-		"description": "Pull up a chair and stay a while. This path greets you with literal warmth, eases into crisp, easy refreshment, adds a touch of bubbly elegance, then dips into centuries-old tradition and finishes with a heavy, generous pour. The longer you stay, the stronger the drinks get.",
+		"description": "Pull up a chair and stay a while. This path greets you with literal warmth, adds a touch of bubbly elegance, pulls a German beer-hall pint of hefeweizen and cola, pours a heavy, generous measure of rum, then settles in by the fire with a centuries-old tavern tradition of porter, rum, and cognac. The longer you stay, the stronger the drinks get.",
 		"url": "/paths/innkeeper",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/innkeeper.jpeg",
 		"cocktail_slugs": [
 			"hot-toddy",
-			"radler",
 			"gilded-rose",
-			"rattle-skull",
-			"rum-barrel"
+			"kolaweizen",
+			"rum-barrel",
+			"rattle-skull"
 		]
 	},
 	{
@@ -108,29 +108,29 @@
 		"slug": "shaman",
 		"title": "Shaman",
 		"subtitle": "Earthy. Spirited. Smoke-kissed.",
-		"description": "Follow the agave from field to flame. This path opens with the most iconic tequila citrus, then builds into chili-spiced tropical heat crowned with a float of mezcal, takes a savory beer-and-lime break, returns to mezcal in tiki disguise, and lands on a stirred, spirit-forward marriage of agave and smoke.",
+		"description": "Follow the agave from field to flame. This path opens with the most iconic tequila citrus, then builds into chili-spiced tropical heat crowned with a float of mezcal, slows down for a stirred, spirit-forward marriage of agave and smoke, returns to mezcal in tiki disguise, and lands on a bright, herbal mezcal sour cooled with cucumber and warmed with chili.",
 		"url": "/paths/shaman",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/shaman.jpeg",
 		"cocktail_slugs": [
 			"margarita",
 			"desert-dreams",
-			"michelada",
+			"oaxaca-old-fashioned",
 			"tia-mia",
-			"oaxaca-old-fashioned"
+			"veracruz"
 		]
 	},
 	{
 		"slug": "warlock",
 		"title": "Warlock",
 		"subtitle": "Exotic. Potent. Otherworldly.",
-		"description": "Unusual ingredients, technical builds, and escalating power. This path opens with approachable tropical intrigue, veers into unfamiliar spirit territory, then descends through honeyed multi-rum depth and overproof bite before something truly legendary claims the final word.",
+		"description": "Unusual ingredients, technical builds, and escalating power. This path opens with approachable tropical intrigue, veers into unfamiliar spirit territory, then descends through a mint-chilled demerara swizzle and honeyed multi-rum depth before something truly legendary, overproof and all, claims the final word.",
 		"url": "/paths/warlock",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/paths/warlock.jpeg",
 		"cocktail_slugs": [
 			"saturn",
 			"norwegian-paralysis",
+			"queens-park-swizzle",
 			"three-dots-and-a-dash",
-			"cobras-fang",
 			"zombie"
 		]
 	},

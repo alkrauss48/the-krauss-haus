@@ -92,13 +92,13 @@
 		"category": "Infusions",
 		"description": "A chocolate-flavored liqueur made from cacao nibs.",
 		"ingredients": [
-			"4oz (by weight) Cacao Nibs",
-			"6oz 95% ABV Grain Liquor",
-			"7oz Distilled Water",
-			"10oz 1:1 Simple Syrup"
+			"4oz (by weight) Cacao nibs",
+			"12oz 50% ABV Vodka",
+			"215g Water",
+			"185g Sugar"
 		],
-		"instructions": "Toast the cacao nibs at 275–300°F for approximately 5 minutes, shaking once, until fragrant. Allow them to cool completely. Combine the cacao nibs, grain liquor, and 4 oz distilled water. Infuse for 7–10 days, shaking gently once daily and tasting beginning around day five. Strain thoroughly without aggressively squeezing the nibs. Add the simple syrup and remaining 3 oz distilled water. Bottle and let rest for 10–14 days.",
-		"notes": "Makes ~20-22oz at ~23-26% ABV. Takes a couple of weeks to make."
+		"instructions": "Toast the cacao nibs at 275°F for 5 minutes, shaking once, until fragrant. Allow them to cool completely. Combine the cacao nibs and vodka, and infuse for 7 days, shaking gently once daily. Strain thoroughly without aggressively squeezing the nibs. Add the water and sugar. The sugar will dissolve over 1-2 days with period shaking. Bottle and let rest at least 2 weeks. Flavors improve over months.",
+		"notes": "Makes ~21oz at ~25% ABV. I prefer to use Navitas Organics - Unsweetened Organic Cacao Nibs for this recipe."
 	},
 	{
 		"slug": "demerara-syrup",
@@ -436,12 +436,12 @@
 			"150g apricot, chopped, with skin",
 			"300g sugar",
 			".5oz amaretto",
-			"1 2\"x1\" strip lemon peel, washed, unwaxed, with minimal white pith",
+			"2\"x1\" strip lemon peel, washed, unwaxed, with minimal white pith",
 			"2 tsp lemon juice",
 			"Tiny pinch of salt"
 		],
-		"instructions": "In a clean jar, combine the chopped peach, chopped apricot, and sugar, then refrigerate for 24 hours to macerate. Add the vodka, lemon peel, then infuse for 5-8 days, tasting toward the end of that window. Strain and fine-strain the liqueur, then stir in the amaretto, lemon juice, and a tiny pinch of salt. Let rest for 1-2 weeks before using.",
-		"notes": "Refrigerate for best quality."
+		"instructions": "In a clean jar, combine the chopped peach, chopped apricot, and sugar, then refrigerate for 24 hours to macerate. Add the vodka, lemon peel, then infuse for 8 days, shaking gently once daily. Strain and fine-strain. Stir in the amaretto, lemon juice, and a tiny pinch of salt. Let rest for 2 weeks.",
+		"notes": "Yields approximately 750–800 ml at ~28% ABV."
 	},
 	{
 		"slug": "tom-and-jerry-batter",
