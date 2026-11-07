@@ -11,7 +11,7 @@ const APPLETON_ESTATE_12_YEAR: Ingredient = {
 	title: 'Appleton Estate 12-Year',
 	slug: 'appleton-estate-12-year',
 	group: 'Jamaican Rum',
-	costPerOz: 42 / 25
+	costPerOz: 40 / 25
 };
 const APPLETON_ESTATE_SIGNATURE: Ingredient = {
 	title: 'Appleton Estate Signature',

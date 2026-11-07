@@ -9,7 +9,7 @@ import DONN_THE_BEACHCOMBER from '$lib/data/bartenders/donn-beach';
 const ZOMBIE: Cocktail = {
 	title: 'Zombie',
 	description:
-		"Blended light rum, Jamaican rum, overproof rum, falernum, Donn's Mix, lime, grenadine, herbstura.",
+		"Jamaican rum, blended light rum,  overproof rum, falernum, Donn's Mix, lime, grenadine, herbstura.",
 	imagePath:
 		'https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/zombie.webp',
 	thumbnailImagePath:
@@ -27,7 +27,7 @@ const ZOMBIE: Cocktail = {
 		},
 		{
 			amount: '.5oz',
-			ingredient: Ingredients.BaseSpirits.PROBITAS
+			ingredient: Ingredients.BaseSpirits.PLANTERAY_3_STARS
 		},
 		{
 			amount: '.5oz',
