@@ -35,7 +35,7 @@ const PALOMA: Cocktail = {
 			ingredient: Ingredients.Syrups.AGAVE_NECTAR
 		},
 		{
-			amount: '2oz',
+			amount: '3oz',
 			ingredient: Ingredients.Mixers.SODA_WATER
 		},
 		{

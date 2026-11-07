@@ -5924,7 +5924,7 @@
 		"slug": "jet-pilot",
 		"title": "Jet Pilot",
 		"subtitle": null,
-		"description": "Jamaican rum, overproof demerara rum, falernum, cinnamon syrup, lime, grapefruit, herbstura, maraschino cherry.",
+		"description": "Jamaican rum, blended rum, overproof demerara rum, falernum, cinnamon syrup, lime, grapefruit, herbstura, maraschino cherry.",
 		"url": "/cocktails/jet-pilot",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/jet-pilot.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/jet-pilot.webp",
@@ -5938,19 +5938,13 @@
 		"ingredients": [
 			{
 				"kind": "ingredient",
-				"slug": "smith-and-cross",
-				"amount": ".5oz",
-				"label": null
-			},
-			{
-				"kind": "ingredient",
 				"slug": "coruba",
-				"amount": ".5oz",
+				"amount": "1oz",
 				"label": null
 			},
 			{
 				"kind": "ingredient",
-				"slug": "appleton-estate-signature",
+				"slug": "planteray-3-stars",
 				"amount": ".75oz",
 				"label": null
 			},
@@ -8566,6 +8560,12 @@
 		"ingredients": [
 			{
 				"kind": "ingredient",
+				"slug": "appleton-estate-12-year",
+				"amount": "1oz",
+				"label": null
+			},
+			{
+				"kind": "ingredient",
 				"slug": "hamilton-86",
 				"amount": "1oz",
 				"label": null
@@ -8573,18 +8573,6 @@
 			{
 				"kind": "ingredient",
 				"slug": "smith-and-cross",
-				"amount": ".5oz",
-				"label": null
-			},
-			{
-				"kind": "ingredient",
-				"slug": "coruba",
-				"amount": ".5oz",
-				"label": null
-			},
-			{
-				"kind": "ingredient",
-				"slug": "appleton-estate-signature",
 				"amount": ".5oz",
 				"label": null
 			},
@@ -9299,7 +9287,7 @@
 			{
 				"kind": "ingredient",
 				"slug": "soda-water",
-				"amount": "2oz",
+				"amount": "3oz",
 				"label": null
 			},
 			{
@@ -13911,7 +13899,7 @@
 		"slug": "zombie",
 		"title": "Zombie",
 		"subtitle": null,
-		"description": "Blended light rum, Jamaican rum, overproof rum, falernum, Donn's Mix, lime, grenadine, herbstura.",
+		"description": "Jamaican rum, blended light rum,  overproof rum, falernum, Donn's Mix, lime, grenadine, herbstura.",
 		"url": "/cocktails/zombie",
 		"image_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/full-webp/zombie.webp",
 		"thumbnail_url": "https://personal-k8s-main-space.nyc3.cdn.digitaloceanspaces.com/thekrausshaus.com/images/cocktails/thumbnail-webp/zombie.webp",
@@ -13931,7 +13919,7 @@
 			},
 			{
 				"kind": "ingredient",
-				"slug": "probitas",
+				"slug": "planteray-3-stars",
 				"amount": ".5oz",
 				"label": null
 			},
