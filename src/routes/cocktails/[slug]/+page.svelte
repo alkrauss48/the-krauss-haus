@@ -12,6 +12,7 @@
 	import { getIngredientDisplayName, formatVariantIngredients } from '$lib/utils/ingredients';
 	import { calculateCocktailCost, formatCost, parseAmountToOz, applyTax } from '$lib/utils/cost';
 	import { buildServingSentence } from '$lib/utils/serving';
+	import { canBatch } from '$lib/utils/batch';
 	import { costMode } from '$lib/stores/costMode';
 
 	export let data: PageData;
@@ -24,6 +25,7 @@
 		collectionsContainingCocktail
 	} = data);
 	$: servingSentence = buildServingSentence(cocktail);
+	$: batchable = canBatch(cocktail);
 
 	$: isOriginal = cocktail.tags?.includes(Tags.Origin.ORIGINAL) ?? false;
 	$: onAnyMenu = onSummer || onWinter || onTiki;
@@ -344,6 +346,27 @@
 					{/if}
 				</div>
 			</div>
+
+			<!-- Outside the card on purpose: batching is a next step, not the recipe. -->
+			{#if batchable}
+				<!-- The path is resolved; the rule can't see through the query string. -->
+				<!-- eslint-disable svelte/no-navigation-without-resolve -->
+				<div
+					class="mt-8 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white p-4"
+				>
+					<p class="text-gray-700">
+						<span class="font-semibold text-gray-800">Making these for a crowd?</span>
+						<span class="text-gray-600">Scale the {cocktail.title} up into a batch.</span>
+					</p>
+					<a
+						href={resolve('/batch-calculator') + `?cocktail=${cocktail.slug}`}
+						class="text-sm font-medium text-amber-700 hover:text-amber-800 underline decoration-dotted underline-offset-2 transition-colors"
+					>
+						Batch this for a crowd →
+					</a>
+				</div>
+				<!-- eslint-enable svelte/no-navigation-without-resolve -->
+			{/if}
 		</div>
 	</div>
 

@@ -5,26 +5,31 @@ import type { IngredientCategory, Ingredient } from '$lib/types/ingredients';
 const BITBURGER_PILS: Ingredient = {
 	title: 'Bitburger Pils',
 	slug: 'bitburger-pils',
+	carbonated: true,
 	costPerOz: 19 / (11.2 * 12)
 };
 const ERDINGER_WEISSBIER: Ingredient = {
 	title: 'Erdinger Weißbier',
 	slug: 'erdinger-weissbier',
+	carbonated: true,
 	costPerOz: 8 / (16.9 * 4)
 };
 const GUINNESS_DRAUGHT: Ingredient = {
 	title: 'Guinness Draught',
 	slug: 'guinness-draught',
+	carbonated: true,
 	costPerOz: 18 / (14.9 * 8)
 };
 const MILLER_HIGH_LIFE: Ingredient = {
 	title: 'Miller High Life',
 	slug: 'miller-high-life',
+	carbonated: true,
 	costPerOz: 0.1
 };
 const TECATE_MEXICAN_LAGER: Ingredient = {
 	title: 'Tecate Mexican Lager',
 	slug: 'tecate-mexican-lager',
+	carbonated: true,
 	costPerOz: 16 / (12 * 18)
 };
 
@@ -56,11 +61,13 @@ const TEMPRANILLO: Ingredient = {
 const CHAMPAGNE: Ingredient = {
 	title: 'Champagne',
 	slug: 'champagne',
+	carbonated: true,
 	costPerOz: 5 / 25
 };
 const PROSECCO: Ingredient = {
 	title: 'Prosecco',
 	slug: 'prosecco',
+	carbonated: true,
 	costPerOz: 5 / 25
 };
 
