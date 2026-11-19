@@ -1624,8 +1624,8 @@
 			{
 				"kind": "ingredient",
 				"slug": "clove",
-				"amount": "4",
-				"label": "Cloves"
+				"amount": null,
+				"label": "4 Cloves"
 			},
 			{
 				"kind": "text",
