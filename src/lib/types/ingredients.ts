@@ -19,6 +19,8 @@ export interface Ingredient {
 	group?: string;
 	recipe?: Recipe;
 	costPerOz?: number;
+	/** Fizzy (soda, beer, sparkling wine): added at service, never batched or frozen. */
+	carbonated?: boolean;
 }
 
 export interface IngredientItem {

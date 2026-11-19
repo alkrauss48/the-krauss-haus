@@ -10,21 +10,25 @@ const APPLE_CIDER: Ingredient = {
 const GINGER_BEER: Ingredient = {
 	title: 'Ginger Beer',
 	slug: 'ginger-beer',
+	carbonated: true,
 	costPerOz: 1 / 6
 };
 const MEXICAN_COKE: Ingredient = {
 	title: 'Mexican Coke',
 	slug: 'mexican-coke',
+	carbonated: true,
 	costPerOz: 7.69 / 48
 };
 const SANPELLEGRINO_LIMONATA: Ingredient = {
 	title: 'Sanpellegrino Limonata',
 	slug: 'sanpellegrino-limonata',
+	carbonated: true,
 	costPerOz: 1 / 6
 };
 const SODA_WATER: Ingredient = {
 	title: 'Soda Water',
 	slug: 'soda-water',
+	carbonated: true,
 	costPerOz: 1 / 10
 };
 const SPICED_TEA: Ingredient = {
@@ -36,6 +40,7 @@ const SPICED_TEA: Ingredient = {
 const TONIC_WATER: Ingredient = {
 	title: 'Tonic Water',
 	slug: 'tonic-water',
+	carbonated: true,
 	costPerOz: 1 / 6
 };
 

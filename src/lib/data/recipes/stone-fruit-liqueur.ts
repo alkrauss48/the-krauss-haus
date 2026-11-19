@@ -7,7 +7,7 @@ const STONE_FRUIT_LIQUEUR: Recipe = {
 	ingredients: [
 		'450ml 50% ABV Vodka',
 		'250g peach, chopped, with skin',
-		'150g apricot, chopped, with skin',
+		'50g dried apricot, chopped',
 		'300g sugar',
 		'.5oz amaretto',
 		'2"x1" strip lemon peel, washed, unwaxed, with minimal white pith',
@@ -15,7 +15,7 @@ const STONE_FRUIT_LIQUEUR: Recipe = {
 		'Tiny pinch of salt'
 	],
 	instructions:
-		'In a clean jar, combine the chopped peach, chopped apricot, and sugar, then refrigerate for 24 hours to macerate. Add the vodka, lemon peel, then infuse for 8 days, shaking gently once daily. Strain and fine-strain. Stir in the amaretto, lemon juice, and a tiny pinch of salt. Let rest for 2 weeks.',
+		'In a clean jar, combine the chopped peach and sugar, then refrigerate for 24 hours to macerate. Add the vodka, dried apricot, lemon peel, then infuse for 10 days, shaking gently once daily. Strain and fine-strain. Stir in the amaretto, lemon juice, and a tiny pinch of salt. Let rest for 2 weeks.',
 	notes: 'Yields approximately 750–800 ml at ~28% ABV.'
 };
 

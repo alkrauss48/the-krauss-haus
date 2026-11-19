@@ -58,6 +58,7 @@ export const siteNav: NavGroup[] = [
 			],
 			[
 				{ label: 'Cocktail Parties', href: '/parties' },
+				{ label: 'Batch Calculator', href: '/batch-calculator' },
 				{ label: 'Dilution Calculator', href: '/spirit-dilution-calculator' }
 			]
 		]
