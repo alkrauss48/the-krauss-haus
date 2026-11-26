@@ -34,8 +34,7 @@ const CANELAZO: Cocktail = {
 			ingredient: Ingredients.HerbsAndSpices.CINNAMON
 		},
 		{
-			amount: '4',
-			label: 'Cloves',
+			label: '4 Cloves',
 			ingredient: Ingredients.HerbsAndSpices.CLOVE
 		},
 		'2 whole star anise pods',

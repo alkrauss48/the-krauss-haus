@@ -180,6 +180,14 @@ function pageItems(): SearchableItem[] {
 			description: 'Calculate dilution and ABV for batched spirits',
 			href: '/spirit-dilution-calculator',
 			keywords: ['abv', 'proof', 'calculator', 'dilution']
+		},
+		{
+			type: 'page',
+			typeLabel: 'Page',
+			title: 'Batch Calculator',
+			description: 'Scale any cocktail for a crowd or the freezer',
+			href: '/batch-calculator',
+			keywords: ['batch', 'scale', 'party', 'freezer', 'calculator', 'large format']
 		}
 	];
 }
